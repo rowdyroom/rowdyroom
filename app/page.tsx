@@ -1,3 +1,5 @@
+import { MissionChat } from "../components/MissionChat";
+
 const providers = [
   { name: "ChatGPT", status: "Ready for key", route: "Planning + tools" },
   { name: "Claude", status: "Ready for key", route: "Code + review" },
@@ -26,7 +28,7 @@ export default function HomePage() {
           </p>
           <div className="heroActions">
             <a href="#providers">Provider Status</a>
-            <a href="#agents">Agent Stack</a>
+            <a href="#chat-console">Open Chat Console</a>
           </div>
         </div>
         <div className="pulseOrb" aria-hidden="true">
@@ -81,15 +83,7 @@ export default function HomePage() {
           </div>
         </article>
 
-        <article className="panel commandPanel">
-          <div className="panelHeader">
-            <p className="eyebrow">Next Build Step</p>
-            <h2>Live Chat Console</h2>
-          </div>
-          <p>
-            The next layer is the actual chat box that sends messages through the AI router and returns provider responses.
-          </p>
-        </article>
+        <MissionChat />
       </section>
     </main>
   );
