@@ -1,59 +1,95 @@
 const providers = [
-  { name: "ChatGPT / OpenAI", env: "OPENAI_API_KEY", use: "planning, tools, general assistant" },
-  { name: "Claude", env: "ANTHROPIC_API_KEY", use: "coding, review, refactoring" },
-  { name: "Grok", env: "XAI_API_KEY", use: "stream host, live room energy" },
-  { name: "Gemini", env: "GEMINI_API_KEY", use: "research, vision, large context" },
-  { name: "Ollama", env: "OLLAMA_BASE_URL", use: "private local fallback" },
+  { name: "ChatGPT", status: "Ready for key", route: "Planning + tools" },
+  { name: "Claude", status: "Ready for key", route: "Code + review" },
+  { name: "Grok", status: "Ready for key", route: "Stream host" },
+  { name: "Gemini", status: "Ready for key", route: "Research + vision" },
 ];
 
-const modules = [
+const agents = [
   "Executive AI",
+  "Mission Control",
   "Connector SDK",
   "AI Router",
   "Stream Host AI",
-  "Voice AI",
   "Supabase Memory",
 ];
 
 export default function HomePage() {
   return (
-    <main className="shell">
-      <section className="hero">
-        <p className="eyebrow">Rowdy Room Enterprise Engine</p>
-        <h1>Mission Control</h1>
-        <p className="lead">
-          Local dashboard for the Rowdy Room AI operating system. This page confirms the dev server is alive at localhost.
-        </p>
+    <main className="dashboard">
+      <section className="heroPanel">
+        <div className="heroCopy">
+          <p className="eyebrow">Rowdy Room Enterprise Engine</p>
+          <h1>AI Mission Control</h1>
+          <p className="lead">
+            Your local command center for ChatGPT, Grok, Claude, Gemini, stream tools, memory, and automation.
+          </p>
+          <div className="heroActions">
+            <a href="#providers">Provider Status</a>
+            <a href="#agents">Agent Stack</a>
+          </div>
+        </div>
+        <div className="pulseOrb" aria-hidden="true">
+          <span>RR</span>
+        </div>
       </section>
 
-      <section className="grid">
-        <div className="card wide">
-          <h2>System Status</h2>
-          <p className="status">Online</p>
-          <p>Next.js is running. The provider router and connector framework are being wired underneath this dashboard.</p>
+      <section className="statusBar">
+        <div>
+          <span className="label">Local Server</span>
+          <strong>Online</strong>
         </div>
-
-        <div className="card">
-          <h2>Modules</h2>
-          <ul>
-            {modules.map((module) => (
-              <li key={module}>{module}</li>
-            ))}
-          </ul>
+        <div>
+          <span className="label">Dashboard</span>
+          <strong>Loaded</strong>
         </div>
+        <div>
+          <span className="label">Mode</span>
+          <strong>Development</strong>
+        </div>
+      </section>
 
-        <div className="card wide">
-          <h2>Provider Setup</h2>
-          <div className="providerList">
+      <section className="contentGrid">
+        <article className="panel large" id="providers">
+          <div className="panelHeader">
+            <p className="eyebrow">AI Providers</p>
+            <h2>Router Targets</h2>
+          </div>
+          <div className="providerGrid">
             {providers.map((provider) => (
-              <div className="provider" key={provider.name}>
+              <div className="providerCard" key={provider.name}>
                 <strong>{provider.name}</strong>
-                <span>{provider.env}</span>
-                <p>{provider.use}</p>
+                <span>{provider.status}</span>
+                <p>{provider.route}</p>
               </div>
             ))}
           </div>
-        </div>
+        </article>
+
+        <article className="panel" id="agents">
+          <div className="panelHeader">
+            <p className="eyebrow">Core Agents</p>
+            <h2>System Stack</h2>
+          </div>
+          <div className="agentList">
+            {agents.map((agent) => (
+              <div className="agentRow" key={agent}>
+                <span />
+                {agent}
+              </div>
+            ))}
+          </div>
+        </article>
+
+        <article className="panel commandPanel">
+          <div className="panelHeader">
+            <p className="eyebrow">Next Build Step</p>
+            <h2>Live Chat Console</h2>
+          </div>
+          <p>
+            The next layer is the actual chat box that sends messages through the AI router and returns provider responses.
+          </p>
+        </article>
       </section>
     </main>
   );
