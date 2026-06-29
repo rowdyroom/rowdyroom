@@ -1,0 +1,82 @@
+.panel {
+  grid-column: 1 / -1;
+  border-color: rgba(255, 74, 120, 0.28);
+  background: radial-gradient(circle at top left, rgba(139, 92, 246, 0.16), transparent 36%), linear-gradient(135deg, rgba(18, 10, 42, 0.96), rgba(5, 3, 15, 0.96));
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.card h3 {
+  margin: 0 0 12px;
+  color: #20e7ff;
+  font-size: 1.05rem;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #efe8ff;
+  line-height: 1.55;
+}
+
+.card li + li {
+  margin-top: 7px;
+}
+
+.warning {
+  margin-top: 16px;
+  border: 1px solid rgba(247, 208, 70, 0.28);
+  border-radius: 16px;
+  padding: 14px;
+  color: #f7d046;
+  background: rgba(247, 208, 70, 0.055);
+  line-height: 1.5;
+}
+
+.deck {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.key {
+  min-height: 76px;
+  border: 1px solid rgba(32, 231, 255, 0.18);
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #f7f2ff;
+  background: rgba(32, 231, 255, 0.055);
+  padding: 10px;
+  font-weight: 800;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .deck {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .deck {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
