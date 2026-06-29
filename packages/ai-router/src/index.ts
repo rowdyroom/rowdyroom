@@ -5,3 +5,4 @@ export * from "./provider-registry.js";
 export * from "./provider-config.js";
 export * from "./routed-completion.js";
 export * from "./openai-compatible-transport.js";
+export * from "./anthropic-transport.js";
