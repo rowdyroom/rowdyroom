@@ -15,6 +15,14 @@ const deckKeys = [
   "Like Count",
 ];
 
+const freeActionSlots = [
+  "Watch Points",
+  "Any Gift",
+  "Amped Up",
+  "Money Gun",
+  "Follow Alert",
+];
+
 export function TikTokControlPlan() {
   return (
     <article className={`panel ${styles.panel}`} id="tiktok-control-plan">
@@ -54,6 +62,48 @@ export function TikTokControlPlan() {
             <li>Avoid links. Use social names and plain wording.</li>
             <li>If a message disappears, type it manually and ask viewers if they can see it.</li>
             <li>Rephrase filtered commands instead of fighting TikTok filters.</li>
+          </ul>
+        </section>
+      </div>
+
+      <div className={styles.gridTwo}>
+        <section className={styles.card}>
+          <h3>Free Plan Action Slots</h3>
+          <ul>
+            {freeActionSlots.map((slot) => <li key={slot}>{slot}</li>)}
+          </ul>
+        </section>
+
+        <section className={styles.card}>
+          <h3>Money Gun Action</h3>
+          <ul>
+            <li>Action name: Money Gun.</li>
+            <li>Use Show Animation, Play Audio, and Show Alert.</li>
+            <li>Overlay screen: Screen 1.</li>
+            <li>Fade in/out on.</li>
+            <li>Global cooldown: 5 seconds minimum after testing.</li>
+            <li>User cooldown: 15 seconds minimum after testing.</li>
+          </ul>
+        </section>
+
+        <section className={styles.card}>
+          <h3>Command Event Template</h3>
+          <ul>
+            <li>Trigger: Commenting a command.</li>
+            <li>Command example: !boost.</li>
+            <li>Required TikTok team level: 0 while testing.</li>
+            <li>Required TikFinity points level: 0 while testing.</li>
+            <li>Trigger all of these actions: Amped Up.</li>
+          </ul>
+        </section>
+
+        <section className={styles.card}>
+          <h3>Overlay Screen Fix</h3>
+          <ul>
+            <li>Your overlay screens are offline until their URL is added to OBS or LIVE Studio.</li>
+            <li>Add Screen 1 URL as a Browser Source or Link Source.</li>
+            <li>After adding it, TikFinity should change Screen 1 from Offline to Ready.</li>
+            <li>Use one overlay screen first. Do not configure all eight until Screen 1 works.</li>
           </ul>
         </section>
       </div>
