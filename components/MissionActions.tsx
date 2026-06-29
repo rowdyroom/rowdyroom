@@ -21,6 +21,14 @@ type DiagnosticCheck = {
   detail: string;
 };
 
+type MissionLogEntry = {
+  id: string;
+  createdAt: string;
+  title: string;
+  kind: string;
+  content: string;
+};
+
 type ActionResult = {
   ok: boolean;
   provider?: string;
@@ -34,6 +42,7 @@ type ActionResult = {
   cwd?: string;
   node?: string;
   summary?: string;
+  entries?: MissionLogEntry[];
 };
 
 const actions: ActionDefinition[] = [
@@ -131,16 +140,26 @@ function diagnosticsText(result: ActionResult): string {
   return lines.filter(Boolean).join("\n");
 }
 
+function resultText(result: ActionResult | null): string {
+  if (!result) return "";
+  if (result.checks) return diagnosticsText(result);
+  if (result.providers) return statusText(result);
+  return result.text ?? result.error ?? "No result text.";
+}
+
 export function MissionActions() {
   const [context, setContext] = useState("Paste errors, goals, or notes here before clicking a button.");
   const [running, setRunning] = useState<string | null>(null);
   const [activeAction, setActiveAction] = useState<ActionDefinition | null>(null);
   const [result, setResult] = useState<ActionResult | null>(null);
+  const [logEntries, setLogEntries] = useState<MissionLogEntry[]>([]);
+  const [logMessage, setLogMessage] = useState<string | null>(null);
 
   async function runAction(action: ActionDefinition) {
     setRunning(action.id);
     setActiveAction(action);
     setResult(null);
+    setLogMessage(null);
 
     try {
       if (action.task === "status") {
@@ -176,6 +195,47 @@ export function MissionActions() {
     }
   }
 
+  async function copyResult() {
+    const text = resultText(result);
+    if (!text) return;
+    await navigator.clipboard.writeText(text);
+    setLogMessage("Copied result to clipboard.");
+  }
+
+  async function saveResult() {
+    const text = resultText(result);
+    if (!text) return;
+
+    const response = await fetch("/api/mission-log", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        title: activeAction?.label ?? "Mission result",
+        kind: activeAction?.id ?? "result",
+        content: text,
+      }),
+    });
+    const json = (await response.json()) as ActionResult;
+    setLogEntries(json.entries ?? []);
+    setLogMessage(json.ok ? "Saved to Mission Log." : json.error ?? "Save failed.");
+  }
+
+  async function loadLog() {
+    const response = await fetch("/api/mission-log");
+    const json = (await response.json()) as ActionResult;
+    setLogEntries(json.entries ?? []);
+    setLogMessage("Mission Log loaded.");
+  }
+
+  async function clearLog() {
+    const response = await fetch("/api/mission-log", { method: "DELETE" });
+    const json = (await response.json()) as ActionResult;
+    setLogEntries(json.entries ?? []);
+    setLogMessage("Mission Log cleared.");
+  }
+
+  const visibleResultText = resultText(result);
+
   return (
     <article className={`panel ${styles.actionsPanel}`} id="action-center">
       <div className="panelHeader">
@@ -210,10 +270,37 @@ export function MissionActions() {
             <span>{activeAction?.label ?? "Result"}</span>
             {result.provider ? <strong>{result.provider} / {result.model}</strong> : null}
           </div>
-          <p className={`${styles.resultText} ${result.ok === false ? styles.errorText : ""}`}>
-            {result.checks ? diagnosticsText(result) : result.providers ? statusText(result) : result.text ?? result.error}
-          </p>
+          <p className={`${styles.resultText} ${result.ok === false ? styles.errorText : ""}`}>{visibleResultText}</p>
           {result.hint ? <small>{result.hint}</small> : null}
+          <div className={styles.resultTools}>
+            <button className={styles.toolButton} type="button" onClick={copyResult}>Copy Result</button>
+            <button className={styles.toolButton} type="button" onClick={saveResult}>Save to Mission Log</button>
+            <button className={styles.toolButton} type="button" onClick={loadLog}>Load Mission Log</button>
+          </div>
+        </div>
+      ) : null}
+
+      <div className={styles.resultTools}>
+        <button className={styles.toolButton} type="button" onClick={loadLog}>View Saved Log</button>
+        <button className={styles.toolButton} type="button" onClick={clearLog}>Clear Saved Log</button>
+        {logMessage ? <span className={styles.resultText}>{logMessage}</span> : null}
+      </div>
+
+      {logEntries.length ? (
+        <div className={styles.logBox}>
+          <div className={styles.logHeader}>
+            <span>Saved Mission Log</span>
+            <span>{logEntries.length} shown</span>
+          </div>
+          <div className={styles.logList}>
+            {logEntries.map((entry) => (
+              <div className={styles.logEntry} key={entry.id}>
+                <strong>{entry.title}</strong>
+                <span>{entry.content.slice(0, 700)}{entry.content.length > 700 ? "..." : ""}</span>
+                <small>{new Date(entry.createdAt).toLocaleString()} / {entry.kind}</small>
+              </div>
+            ))}
+          </div>
         </div>
       ) : null}
     </article>
