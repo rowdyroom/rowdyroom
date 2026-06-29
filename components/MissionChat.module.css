@@ -1,0 +1,148 @@
+.console {
+  grid-column: 1 / -1;
+  border-color: rgba(32, 231, 255, 0.28);
+  background: linear-gradient(135deg, rgba(23, 14, 54, 0.95), rgba(5, 3, 17, 0.95));
+}
+
+.intro {
+  margin: 12px 0 0;
+  color: #b8acd8;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.tab {
+  min-height: 92px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  color: #f7f2ff;
+  background: rgba(255, 255, 255, 0.045);
+  text-align: left;
+  padding: 14px;
+}
+
+.tab strong,
+.tab span {
+  display: block;
+}
+
+.tab strong {
+  font-size: 1.05rem;
+}
+
+.tab span {
+  margin-top: 7px;
+  color: #b8acd8;
+  font-size: 0.88rem;
+}
+
+.active {
+  border-color: rgba(32, 231, 255, 0.58);
+  background: rgba(32, 231, 255, 0.11);
+  box-shadow: 0 0 24px rgba(32, 231, 255, 0.12);
+}
+
+.label {
+  color: #20e7ff;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 150px;
+  border: 1px solid rgba(139, 92, 246, 0.42);
+  border-radius: 18px;
+  padding: 16px;
+  color: #f7f2ff;
+  background: rgba(0, 0, 0, 0.32);
+  outline: none;
+}
+
+.textarea:focus {
+  border-color: rgba(32, 231, 255, 0.78);
+  box-shadow: 0 0 0 3px rgba(32, 231, 255, 0.1);
+}
+
+.send {
+  width: fit-content;
+  min-height: 48px;
+  cursor: pointer;
+  border: 1px solid rgba(32, 231, 255, 0.6);
+  border-radius: 999px;
+  color: #031016;
+  background: #20e7ff;
+  padding: 0 22px;
+  font-weight: 900;
+  box-shadow: 0 0 26px rgba(32, 231, 255, 0.2);
+}
+
+.send:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.result {
+  margin-top: 18px;
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.success {
+  border-color: rgba(32, 231, 255, 0.34);
+}
+
+.error {
+  border-color: rgba(255, 92, 138, 0.45);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #20e7ff;
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.meta strong {
+  color: #f7f2ff;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.result p {
+  margin: 0;
+  color: #efe8ff;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+.result small {
+  display: block;
+  margin-top: 12px;
+  color: #f7d046;
+}
+
+@media (max-width: 860px) {
+  .tabs {
+    grid-template-columns: 1fr;
+  }
+}
