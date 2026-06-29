@@ -1,0 +1,105 @@
+.panel {
+  grid-column: 1 / -1;
+  border-color: rgba(32, 231, 255, 0.3);
+  background: linear-gradient(135deg, rgba(5, 18, 30, 0.96), rgba(12, 5, 30, 0.96));
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.box {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.box h3 {
+  margin: 0 0 12px;
+  color: #20e7ff;
+}
+
+.box p,
+.box li {
+  color: #efe8ff;
+  line-height: 1.55;
+}
+
+.box ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.button {
+  cursor: pointer;
+  border: 1px solid rgba(32, 231, 255, 0.52);
+  border-radius: 999px;
+  color: #031016;
+  background: #20e7ff;
+  padding: 10px 14px;
+  font-weight: 900;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.statusList {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.statusRow {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.statusRow strong {
+  color: #f7f2ff;
+}
+
+.statusRow span {
+  color: #b8acd8;
+}
+
+.good {
+  color: #4ade80 !important;
+}
+
+.bad {
+  color: #ff9fba !important;
+}
+
+.warn {
+  margin-top: 14px;
+  border: 1px solid rgba(247, 208, 70, 0.28);
+  border-radius: 16px;
+  padding: 14px;
+  color: #f7d046;
+  background: rgba(247, 208, 70, 0.055);
+  line-height: 1.5;
+}
+
+@media (max-width: 860px) {
+  .grid,
+  .statusRow {
+    grid-template-columns: 1fr;
+  }
+}
