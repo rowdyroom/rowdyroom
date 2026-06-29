@@ -1,5 +1,6 @@
 import { MissionActions } from "../components/MissionActions";
 import { MissionChat } from "../components/MissionChat";
+import { TikTokControlPlan } from "../components/TikTokControlPlan";
 
 const providers = [
   { name: "ChatGPT", status: "Ready for key", route: "Planning + tools" },
@@ -28,6 +29,7 @@ export default function HomePage() {
             Your local command center for ChatGPT, Grok, Claude, Gemini, stream tools, memory, and automation.
           </p>
           <div className="heroActions">
+            <a href="#tiktok-control-plan">TikTok Control</a>
             <a href="#action-center">Action Center</a>
             <a href="#chat-console">Open Chat Console</a>
           </div>
@@ -53,6 +55,7 @@ export default function HomePage() {
       </section>
 
       <section className="contentGrid">
+        <TikTokControlPlan />
         <MissionActions />
 
         <article className="panel large" id="providers">
