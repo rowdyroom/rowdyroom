@@ -1,3 +1,4 @@
+import { ApiReliabilityPanel } from "../components/ApiReliabilityPanel";
 import { MissionActions } from "../components/MissionActions";
 import { MissionChat } from "../components/MissionChat";
 import { TikTokControlPlan } from "../components/TikTokControlPlan";
@@ -29,6 +30,7 @@ export default function HomePage() {
             Your local command center for ChatGPT, Grok, Claude, Gemini, stream tools, memory, and automation.
           </p>
           <div className="heroActions">
+            <a href="#api-reliability">API Health</a>
             <a href="#tiktok-control-plan">TikTok Control</a>
             <a href="#action-center">Action Center</a>
             <a href="#chat-console">Open Chat Console</a>
@@ -55,6 +57,7 @@ export default function HomePage() {
       </section>
 
       <section className="contentGrid">
+        <ApiReliabilityPanel />
         <TikTokControlPlan />
         <MissionActions />
 
