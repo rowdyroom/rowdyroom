@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
+import styles from "./MissionChat.module.css";
 
 type TaskKind = "planning" | "coding" | "review" | "research" | "streamHost" | "vision" | "voice" | "privateLocal";
 
@@ -57,19 +58,19 @@ export function MissionChat() {
   }
 
   return (
-    <article className="panel chatConsole" id="chat-console">
+    <article className={`panel ${styles.console}`} id="chat-console">
       <div className="panelHeader">
         <p className="eyebrow">Live Console</p>
         <h2>AI Router Chat</h2>
-        <p className="panelIntro">Type once. Mission Control sends the request to the selected route.</p>
+        <p className={styles.intro}>Type once. Mission Control sends the request to the selected route.</p>
       </div>
 
-      <form className="chatForm" onSubmit={submit}>
-        <div className="taskTabs" role="tablist" aria-label="AI route selector">
+      <form className={styles.form} onSubmit={submit}>
+        <div className={styles.tabs} role="tablist" aria-label="AI route selector">
           {taskOptions.map((option) => (
             <button
               type="button"
-              className={option.value === task ? "taskTab active" : "taskTab"}
+              className={option.value === task ? `${styles.tab} ${styles.active}` : styles.tab}
               key={option.value}
               onClick={() => setTask(option.value)}
             >
@@ -79,10 +80,11 @@ export function MissionChat() {
           ))}
         </div>
 
-        <label className="chatLabel" htmlFor="mission-message">
+        <label className={styles.label} htmlFor="mission-message">
           Message to {selected?.label ?? "AI"}
         </label>
         <textarea
+          className={styles.textarea}
           id="mission-message"
           value={message}
           onChange={(event) => setMessage(event.target.value)}
@@ -90,14 +92,14 @@ export function MissionChat() {
           placeholder="Ask Mission Control something..."
         />
 
-        <button className="sendButton" type="submit" disabled={loading}>
+        <button className={styles.send} type="submit" disabled={loading}>
           {loading ? "Routing..." : "Send Through Router"}
         </button>
       </form>
 
       {result ? (
-        <div className={result.ok ? "chatResult success" : "chatResult error"}>
-          <div className="resultMeta">
+        <div className={`${styles.result} ${result.ok ? styles.success : styles.error}`}>
+          <div className={styles.meta}>
             <span>{result.ok ? "Response" : "Provider Error"}</span>
             {result.provider ? <strong>{result.provider} / {result.model}</strong> : null}
           </div>
