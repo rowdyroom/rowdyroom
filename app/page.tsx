@@ -1,3 +1,4 @@
+import { MissionActions } from "../components/MissionActions";
 import { MissionChat } from "../components/MissionChat";
 
 const providers = [
@@ -27,7 +28,7 @@ export default function HomePage() {
             Your local command center for ChatGPT, Grok, Claude, Gemini, stream tools, memory, and automation.
           </p>
           <div className="heroActions">
-            <a href="#providers">Provider Status</a>
+            <a href="#action-center">Action Center</a>
             <a href="#chat-console">Open Chat Console</a>
           </div>
         </div>
@@ -52,6 +53,8 @@ export default function HomePage() {
       </section>
 
       <section className="contentGrid">
+        <MissionActions />
+
         <article className="panel large" id="providers">
           <div className="panelHeader">
             <p className="eyebrow">AI Providers</p>
