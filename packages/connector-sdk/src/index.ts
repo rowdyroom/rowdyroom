@@ -4,3 +4,5 @@ export * from "./connector-registry.js";
 export * from "./action-bus.js";
 export * from "./event-bus.js";
 export * from "./health-monitor.js";
+export * from "./permission-manager.js";
+export * from "./secret-vault.js";
