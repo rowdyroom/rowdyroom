@@ -106,6 +106,74 @@
   color: #ff9fba;
 }
 
+.resultTools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0 0;
+}
+
+.toolButton {
+  cursor: pointer;
+  border: 1px solid rgba(32, 231, 255, 0.38);
+  border-radius: 999px;
+  color: #f7f2ff;
+  background: rgba(32, 231, 255, 0.08);
+  padding: 9px 13px;
+  font-weight: 800;
+}
+
+.toolButton:hover {
+  border-color: rgba(32, 231, 255, 0.72);
+}
+
+.logBox {
+  margin-top: 18px;
+  border: 1px solid rgba(247, 208, 70, 0.25);
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(247, 208, 70, 0.045);
+}
+
+.logHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #f7d046;
+  font-weight: 900;
+}
+
+.logList {
+  display: grid;
+  gap: 10px;
+}
+
+.logEntry {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.logEntry strong,
+.logEntry span,
+.logEntry small {
+  display: block;
+}
+
+.logEntry span {
+  margin-top: 6px;
+  color: #b8acd8;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.logEntry small {
+  margin-top: 8px;
+  color: #20e7ff;
+}
+
 @media (max-width: 1000px) {
   .buttonGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
