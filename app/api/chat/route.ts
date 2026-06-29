@@ -13,15 +13,21 @@ type ProviderRoute = {
   model: string;
 };
 
-const routes: Record<TaskKind, ProviderRoute> = {
-  planning: { provider: "openai", model: "gpt-4.1-mini" },
-  coding: { provider: "anthropic", model: "claude-opus-4.1" },
-  review: { provider: "anthropic", model: "claude-opus-4.1" },
-  research: { provider: "gemini", model: "gemini-2.5-pro" },
-  streamHost: { provider: "xai", model: "grok-4" },
-  vision: { provider: "gemini", model: "gemini-2.5-pro" },
-  voice: { provider: "xai", model: "grok-4" },
-  privateLocal: { provider: "ollama", model: "llama3.1" },
+type RouteTemplate = {
+  provider: ProviderId;
+  fallbackModel: string;
+  modelEnv?: string;
+};
+
+const routeTemplates: Record<TaskKind, RouteTemplate> = {
+  planning: { provider: "openai", fallbackModel: "gpt-4.1-mini", modelEnv: "OPENAI_MODEL" },
+  coding: { provider: "anthropic", fallbackModel: "claude-opus-4.1", modelEnv: "ANTHROPIC_MODEL" },
+  review: { provider: "anthropic", fallbackModel: "claude-opus-4.1", modelEnv: "ANTHROPIC_MODEL" },
+  research: { provider: "gemini", fallbackModel: "gemini-2.5-pro", modelEnv: "GEMINI_MODEL" },
+  streamHost: { provider: "xai", fallbackModel: "grok-4", modelEnv: "XAI_MODEL" },
+  vision: { provider: "gemini", fallbackModel: "gemini-2.5-pro", modelEnv: "GEMINI_MODEL" },
+  voice: { provider: "xai", fallbackModel: "grok-4", modelEnv: "XAI_MODEL" },
+  privateLocal: { provider: "ollama", fallbackModel: "llama3.1", modelEnv: "OLLAMA_MODEL" },
 };
 
 const providerEnv: Record<ProviderId, string | null> = {
@@ -32,11 +38,19 @@ const providerEnv: Record<ProviderId, string | null> = {
   ollama: null,
 };
 
-const allowedTasks = new Set<TaskKind>(Object.keys(routes) as TaskKind[]);
+const allowedTasks = new Set<TaskKind>(Object.keys(routeTemplates) as TaskKind[]);
 
 function normalizeTask(value: unknown): TaskKind {
   if (typeof value === "string" && allowedTasks.has(value as TaskKind)) return value as TaskKind;
   return "planning";
+}
+
+function resolveRoute(task: TaskKind): ProviderRoute {
+  const route = routeTemplates[task];
+  return {
+    provider: route.provider,
+    model: route.modelEnv ? process.env[route.modelEnv] || route.fallbackModel : route.fallbackModel,
+  };
 }
 
 function getApiKey(provider: ProviderId): string | undefined {
@@ -49,6 +63,15 @@ function missingKeyMessage(provider: ProviderId): string | null {
   const envName = providerEnv[provider];
   if (!envName) return null;
   return `Missing ${envName}. Add it to your local environment file and restart the server.`;
+}
+
+function parseJson(text: string) {
+  if (!text) return {};
+  try {
+    return JSON.parse(text);
+  } catch {
+    return { raw: text };
+  }
 }
 
 function extractOpenAiText(json: any): string {
@@ -85,10 +108,10 @@ async function callOpenAiCompatible(args: {
   });
 
   const text = await response.text();
-  const json = text ? JSON.parse(text) : {};
+  const json = parseJson(text);
 
   if (!response.ok) {
-    throw new Error(json?.error?.message ?? text ?? `${args.provider} request failed.`);
+    throw new Error(json?.error?.message ?? json?.raw ?? text ?? `${args.provider} request failed.`);
   }
 
   return extractOpenAiText(json);
@@ -120,10 +143,10 @@ async function callAnthropic(args: { apiKey: string; model: string; messages: Ch
   });
 
   const text = await response.text();
-  const json = text ? JSON.parse(text) : {};
+  const json = parseJson(text);
 
   if (!response.ok) {
-    throw new Error(json?.error?.message ?? text ?? "Anthropic request failed.");
+    throw new Error(json?.error?.message ?? json?.raw ?? text ?? "Anthropic request failed.");
   }
 
   return extractAnthropicText(json);
@@ -165,7 +188,7 @@ export async function POST(request: Request) {
   const body = (await request.json().catch(() => null)) as { message?: unknown; task?: unknown } | null;
   const userMessage = typeof body?.message === "string" ? body.message.trim() : "";
   const task = normalizeTask(body?.task);
-  const route = routes[task];
+  const route = resolveRoute(task);
 
   if (!userMessage) {
     return Response.json({ ok: false, error: "Message is required." }, { status: 400 });
@@ -203,7 +226,7 @@ export async function POST(request: Request) {
         provider: route.provider,
         model: route.model,
         error: errorText,
-        hint: missingKey ? "Create or update your local .env.local file, then restart npm run dev." : "Check the terminal output and provider setup.",
+        hint: missingKey ? "Create or update your local .env.local file, then restart npm run dev." : "Check the API Health panel and provider setup.",
       },
       { status: missingKey ? 400 : 500 }
     );
