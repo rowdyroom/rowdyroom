@@ -1,0 +1,25 @@
+{
+  "name": "rowdyroom-enterprise-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Modular AI operating system for Rowdy Room.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test dist/**/*.test.js"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "connectors/*",
+    "agents/*"
+  ],
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^22.9.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
