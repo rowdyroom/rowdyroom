@@ -1,6 +1,7 @@
 import type { ProviderConfig } from "./provider-client.js";
 import { ProviderRegistry } from "./provider-registry.js";
 import { OpenAiCompatibleTransport } from "./openai-compatible-transport.js";
+import { AnthropicTransport } from "./anthropic-transport.js";
 
 export const defaultProviderConfigs: ProviderConfig[] = [
   {
@@ -41,6 +42,8 @@ export function buildDefaultProviderRegistry(): ProviderRegistry {
       })
     );
   }
+
+  registry.register(new AnthropicTransport());
 
   return registry;
 }
