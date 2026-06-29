@@ -5,8 +5,10 @@
   "description": "Modular AI operating system for Rowdy Room.",
   "type": "module",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "dev": "next dev",
+    "build": "next build",
     "typecheck": "tsc -p tsconfig.json --noEmit",
+    "engine:build": "tsc -p tsconfig.json",
     "test": "node --test dist/**/*.test.js"
   },
   "workspaces": [
@@ -15,9 +17,16 @@
     "connectors/*",
     "agents/*"
   ],
+  "dependencies": {
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
   "devDependencies": {
     "typescript": "^5.6.3",
-    "@types/node": "^22.9.0"
+    "@types/node": "^22.9.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
   },
   "engines": {
     "node": ">=20"
