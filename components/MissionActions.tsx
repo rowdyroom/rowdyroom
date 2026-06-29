@@ -5,12 +5,20 @@ import styles from "./MissionActions.module.css";
 
 type TaskKind = "planning" | "coding" | "review" | "research" | "streamHost" | "vision" | "voice" | "privateLocal";
 
+type ActionTask = TaskKind | "status" | "diagnostics";
+
 type ActionDefinition = {
   id: string;
   label: string;
   detail: string;
-  task: TaskKind | "status";
+  task: ActionTask;
   prompt: string;
+};
+
+type DiagnosticCheck = {
+  name: string;
+  ok: boolean;
+  detail: string;
 };
 
 type ActionResult = {
@@ -21,9 +29,21 @@ type ActionResult = {
   error?: string;
   hint?: string;
   providers?: Array<{ id: string; name: string; env: string; configured: boolean }>;
+  configuredProviders?: Array<{ name: string; env: string; configured: boolean }>;
+  checks?: DiagnosticCheck[];
+  cwd?: string;
+  node?: string;
+  summary?: string;
 };
 
 const actions: ActionDefinition[] = [
+  {
+    id: "diagnostics",
+    label: "Local Diagnostics",
+    detail: "Check files, Node, scripts, lockfiles, and local keys.",
+    task: "diagnostics",
+    prompt: "",
+  },
   {
     id: "analyze",
     label: "Analyze System",
@@ -37,6 +57,13 @@ const actions: ActionDefinition[] = [
     detail: "Paste an error and get a direct repair plan.",
     task: "coding",
     prompt: "Act as the Rowdy Room developer. Diagnose this error and give exact steps and code-level fixes.",
+  },
+  {
+    id: "repair-commands",
+    label: "Repair Commands",
+    detail: "Turn the current problem into exact Windows commands.",
+    task: "coding",
+    prompt: "Create exact Windows Command Prompt repair commands for this Rowdy Room problem. Keep it short and avoid explaining unless necessary.",
   },
   {
     id: "build-next",
@@ -89,6 +116,21 @@ function statusText(result: ActionResult): string {
     .join("\n");
 }
 
+function diagnosticsText(result: ActionResult): string {
+  const lines = [
+    result.summary ?? "Diagnostics complete",
+    result.cwd ? `Folder: ${result.cwd}` : "",
+    result.node ? `Node: ${result.node}` : "",
+    "",
+    ...(result.checks ?? []).map((check) => `${check.ok ? "PASS" : "FIX"} - ${check.name}: ${check.detail}`),
+    "",
+    "Provider keys:",
+    ...(result.configuredProviders ?? []).map((provider) => `${provider.configured ? "PASS" : "FIX"} - ${provider.name}: ${provider.configured ? "configured" : `missing ${provider.env}`}`),
+  ];
+
+  return lines.filter(Boolean).join("\n");
+}
+
 export function MissionActions() {
   const [context, setContext] = useState("Paste errors, goals, or notes here before clicking a button.");
   const [running, setRunning] = useState<string | null>(null);
@@ -103,6 +145,12 @@ export function MissionActions() {
     try {
       if (action.task === "status") {
         const response = await fetch("/api/status");
+        setResult((await response.json()) as ActionResult);
+        return;
+      }
+
+      if (action.task === "diagnostics") {
+        const response = await fetch("/api/diagnostics");
         setResult((await response.json()) as ActionResult);
         return;
       }
@@ -163,7 +211,7 @@ export function MissionActions() {
             {result.provider ? <strong>{result.provider} / {result.model}</strong> : null}
           </div>
           <p className={`${styles.resultText} ${result.ok === false ? styles.errorText : ""}`}>
-            {result.providers ? statusText(result) : result.text ?? result.error}
+            {result.checks ? diagnosticsText(result) : result.providers ? statusText(result) : result.text ?? result.error}
           </p>
           {result.hint ? <small>{result.hint}</small> : null}
         </div>
