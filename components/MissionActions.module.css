@@ -27,14 +27,56 @@
   outline: none;
 }
 
+.primaryRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.primaryAction {
+  min-height: 82px;
+  cursor: pointer;
+  border: 1px solid rgba(247, 208, 70, 0.62);
+  border-radius: 20px;
+  color: #140d00;
+  background: #f7d046;
+  padding: 18px;
+  text-align: left;
+  box-shadow: 0 0 28px rgba(247, 208, 70, 0.18);
+}
+
+.primaryAction strong,
+.primaryAction span {
+  display: block;
+}
+
+.primaryAction strong {
+  font-size: 1.22rem;
+  font-weight: 1000;
+}
+
+.primaryAction span {
+  margin-top: 6px;
+  color: rgba(20, 13, 0, 0.78);
+  line-height: 1.4;
+  font-weight: 800;
+}
+
+.primaryAction:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+}
+
 .buttonGrid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
+  margin-top: 14px;
 }
 
 .actionButton {
-  min-height: 112px;
+  min-height: 92px;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
@@ -92,7 +134,7 @@
 }
 
 .resultText {
-  margin: 0;
+  margin: 16px 0 0;
   white-space: pre-wrap;
   color: #efe8ff;
   line-height: 1.65;
@@ -175,13 +217,8 @@
 }
 
 @media (max-width: 1000px) {
-  .buttonGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 640px) {
-  .buttonGrid {
+  .buttonGrid,
+  .primaryRow {
     grid-template-columns: 1fr;
   }
 }
