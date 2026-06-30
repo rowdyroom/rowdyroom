@@ -45,76 +45,35 @@ type ActionResult = {
   entries?: MissionLogEntry[];
 };
 
-const actions: ActionDefinition[] = [
+const autoPilotAction: ActionDefinition = {
+  id: "autopilot",
+  label: "Run Auto Pilot",
+  detail: "Analyze the current situation, pick the next move, and save the result.",
+  task: "planning",
+  prompt: "Follow the Rowdy Room Operator Law. Analyze the current Mission Control context, pick the single best next action, and give a direct implementation plan. Keep it practical and execution-first.",
+};
+
+const quickActions: ActionDefinition[] = [
   {
     id: "diagnostics",
-    label: "Local Diagnostics",
-    detail: "Check files, Node, scripts, lockfiles, and local keys.",
+    label: "Diagnostics",
+    detail: "Check local setup.",
     task: "diagnostics",
     prompt: "",
   },
   {
-    id: "analyze",
-    label: "Analyze System",
-    detail: "Find weak spots, missing pieces, and next fixes.",
-    task: "planning",
-    prompt: "Analyze the Rowdy Room Enterprise Engine and list the top problems, missing pieces, and next fixes in priority order.",
-  },
-  {
-    id: "fix-error",
-    label: "Fix Error",
-    detail: "Paste an error and get a direct repair plan.",
-    task: "coding",
-    prompt: "Act as the Rowdy Room developer. Diagnose this error and give exact steps and code-level fixes.",
-  },
-  {
-    id: "repair-commands",
-    label: "Repair Commands",
-    detail: "Turn the current problem into exact Windows commands.",
-    task: "coding",
-    prompt: "Create exact Windows Command Prompt repair commands for this Rowdy Room problem. Keep it short and avoid explaining unless necessary.",
-  },
-  {
-    id: "build-next",
-    label: "Build Next",
-    detail: "Plan the next feature without guessing.",
-    task: "planning",
-    prompt: "Decide the next Rowdy Room feature to build and break it into direct implementation steps.",
-  },
-  {
     id: "provider-check",
-    label: "Check Keys",
-    detail: "See which AI providers are configured locally.",
+    label: "Key Check",
+    detail: "Check saved providers.",
     task: "status",
     prompt: "",
   },
   {
-    id: "stream-host",
-    label: "Stream Host",
-    detail: "Create live room lines, hype, and flow.",
-    task: "streamHost",
-    prompt: "Create Rowdy Room stream-host ideas, live lines, audience prompts, and ways to keep singers and viewers engaged.",
-  },
-  {
-    id: "review-ui",
-    label: "Review UI",
-    detail: "Critique the dashboard and website direction.",
-    task: "review",
-    prompt: "Review the Rowdy Room Mission Control UI. Give direct improvements for layout, clarity, user flow, and missing controls.",
-  },
-  {
-    id: "memory-plan",
-    label: "Memory Plan",
-    detail: "Design the Supabase memory layer.",
-    task: "research",
-    prompt: "Design the Rowdy Room Supabase memory layer for users, songs, scores, queue history, agent memory, and audit logs.",
-  },
-  {
-    id: "emergency-repair",
-    label: "Emergency Repair",
-    detail: "Get out of a broken local setup fast.",
+    id: "fix-error",
+    label: "Fix Error",
+    detail: "Paste error first.",
     task: "coding",
-    prompt: "Create a minimal emergency repair plan for a broken local Next.js app on Windows. Prioritize exact commands and likely causes.",
+    prompt: "Act as the Rowdy Room developer. Diagnose this error and give exact code-level fixes. Prefer actions the assistant can perform through GitHub, Mission Control, or the local bridge.",
   },
 ];
 
@@ -147,13 +106,28 @@ function resultText(result: ActionResult | null): string {
   return result.text ?? result.error ?? "No result text.";
 }
 
+async function saveToMemory(title: string, kind: string, content: string) {
+  const response = await fetch("/api/memory", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      kind: kind === "diagnostics" ? "error" : "task",
+      title,
+      content,
+      source: "action-center",
+    }),
+  });
+  return response.ok;
+}
+
 export function MissionActions() {
-  const [context, setContext] = useState("Paste errors, goals, or notes here before clicking a button.");
+  const [context, setContext] = useState("Paste the current goal, error, or situation here. Then press Auto Pilot.");
   const [running, setRunning] = useState<string | null>(null);
   const [activeAction, setActiveAction] = useState<ActionDefinition | null>(null);
   const [result, setResult] = useState<ActionResult | null>(null);
   const [logEntries, setLogEntries] = useState<MissionLogEntry[]>([]);
   const [logMessage, setLogMessage] = useState<string | null>(null);
+  const [showAdvanced, setShowAdvanced] = useState(false);
 
   async function runAction(action: ActionDefinition) {
     setRunning(action.id);
@@ -162,28 +136,33 @@ export function MissionActions() {
     setLogMessage(null);
 
     try {
+      let json: ActionResult;
+
       if (action.task === "status") {
         const response = await fetch("/api/status");
-        setResult((await response.json()) as ActionResult);
-        return;
-      }
-
-      if (action.task === "diagnostics") {
+        json = (await response.json()) as ActionResult;
+      } else if (action.task === "diagnostics") {
         const response = await fetch("/api/diagnostics");
-        setResult((await response.json()) as ActionResult);
-        return;
+        json = (await response.json()) as ActionResult;
+      } else {
+        const response = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            task: action.task,
+            message: `${action.prompt}\n\nContext from Mission Control:\n${context}`,
+          }),
+        });
+        json = (await response.json()) as ActionResult;
       }
 
-      const response = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({
-          task: action.task,
-          message: `${action.prompt}\n\nContext from Mission Control:\n${context}`,
-        }),
-      });
+      setResult(json);
 
-      setResult((await response.json()) as ActionResult);
+      const text = resultText(json);
+      if (text && json.ok !== false) {
+        const saved = await saveToMemory(action.label, action.id, text);
+        setLogMessage(saved ? "Saved to Mission Memory." : "Result shown, but memory save failed.");
+      }
     } catch (error) {
       setResult({
         ok: false,
@@ -206,32 +185,15 @@ export function MissionActions() {
     const text = resultText(result);
     if (!text) return;
 
-    const response = await fetch("/api/mission-log", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        title: activeAction?.label ?? "Mission result",
-        kind: activeAction?.id ?? "result",
-        content: text,
-      }),
-    });
-    const json = (await response.json()) as ActionResult;
-    setLogEntries(json.entries ?? []);
-    setLogMessage(json.ok ? "Saved to Mission Log." : json.error ?? "Save failed.");
+    const saved = await saveToMemory(activeAction?.label ?? "Mission result", activeAction?.id ?? "result", text);
+    setLogMessage(saved ? "Saved to Mission Memory." : "Save failed.");
   }
 
   async function loadLog() {
-    const response = await fetch("/api/mission-log");
+    const response = await fetch("/api/memory");
     const json = (await response.json()) as ActionResult;
     setLogEntries(json.entries ?? []);
-    setLogMessage("Mission Log loaded.");
-  }
-
-  async function clearLog() {
-    const response = await fetch("/api/mission-log", { method: "DELETE" });
-    const json = (await response.json()) as ActionResult;
-    setLogEntries(json.entries ?? []);
-    setLogMessage("Mission Log cleared.");
+    setLogMessage("Mission Memory loaded.");
   }
 
   const visibleResultText = resultText(result);
@@ -240,29 +202,41 @@ export function MissionActions() {
     <article className={`panel ${styles.actionsPanel}`} id="action-center">
       <div className="panelHeader">
         <p className="eyebrow">Action Center</p>
-        <h2>One-Click Fix, Analyze, Build</h2>
-        <p className="panelIntro">Use these buttons instead of typing the same command prompts over and over.</p>
+        <h2>Auto Pilot</h2>
+        <p className="panelIntro">One main button. Advanced actions stay hidden unless needed.</p>
       </div>
 
       <div className={styles.contextBox}>
-        <label htmlFor="action-context">Context / error / goal</label>
+        <label htmlFor="action-context">Current goal / error / situation</label>
         <textarea id="action-context" value={context} onChange={(event) => setContext(event.target.value)} />
       </div>
 
-      <div className={styles.buttonGrid}>
-        {actions.map((action) => (
-          <button
-            className={styles.actionButton}
-            key={action.id}
-            type="button"
-            disabled={Boolean(running)}
-            onClick={() => runAction(action)}
-          >
-            <strong>{running === action.id ? "Running..." : action.label}</strong>
-            <span>{action.detail}</span>
-          </button>
-        ))}
+      <div className={styles.primaryRow}>
+        <button className={styles.primaryAction} type="button" disabled={Boolean(running)} onClick={() => runAction(autoPilotAction)}>
+          <strong>{running === autoPilotAction.id ? "Running..." : autoPilotAction.label}</strong>
+          <span>{autoPilotAction.detail}</span>
+        </button>
+        <button className={styles.toolButton} type="button" onClick={() => setShowAdvanced((value) => !value)}>
+          {showAdvanced ? "Hide Advanced" : "Show Advanced"}
+        </button>
       </div>
+
+      {showAdvanced ? (
+        <div className={styles.buttonGrid}>
+          {quickActions.map((action) => (
+            <button
+              className={styles.actionButton}
+              key={action.id}
+              type="button"
+              disabled={Boolean(running)}
+              onClick={() => runAction(action)}
+            >
+              <strong>{running === action.id ? "Running..." : action.label}</strong>
+              <span>{action.detail}</span>
+            </button>
+          ))}
+        </div>
+      ) : null}
 
       {result ? (
         <div className={`${styles.resultBox} ${result.ok === false ? styles.error : ""}`}>
@@ -273,23 +247,19 @@ export function MissionActions() {
           <p className={`${styles.resultText} ${result.ok === false ? styles.errorText : ""}`}>{visibleResultText}</p>
           {result.hint ? <small>{result.hint}</small> : null}
           <div className={styles.resultTools}>
-            <button className={styles.toolButton} type="button" onClick={copyResult}>Copy Result</button>
-            <button className={styles.toolButton} type="button" onClick={saveResult}>Save to Mission Log</button>
-            <button className={styles.toolButton} type="button" onClick={loadLog}>Load Mission Log</button>
+            <button className={styles.toolButton} type="button" onClick={copyResult}>Copy</button>
+            <button className={styles.toolButton} type="button" onClick={saveResult}>Save Memory</button>
+            <button className={styles.toolButton} type="button" onClick={loadLog}>View Memory</button>
           </div>
         </div>
       ) : null}
 
-      <div className={styles.resultTools}>
-        <button className={styles.toolButton} type="button" onClick={loadLog}>View Saved Log</button>
-        <button className={styles.toolButton} type="button" onClick={clearLog}>Clear Saved Log</button>
-        {logMessage ? <span className={styles.resultText}>{logMessage}</span> : null}
-      </div>
+      {logMessage ? <p className={styles.resultText}>{logMessage}</p> : null}
 
       {logEntries.length ? (
         <div className={styles.logBox}>
           <div className={styles.logHeader}>
-            <span>Saved Mission Log</span>
+            <span>Mission Memory</span>
             <span>{logEntries.length} shown</span>
           </div>
           <div className={styles.logList}>
