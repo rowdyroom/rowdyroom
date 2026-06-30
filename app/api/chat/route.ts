@@ -38,6 +38,16 @@ const providerEnv: Record<ProviderId, string | null> = {
   ollama: null,
 };
 
+const operatorLaw = `Rowdy Room Operator Law:
+- When Roger asks for something to be done, first decide whether the available tools can do it directly.
+- If it can be done directly, do the work first and keep chat output short.
+- Do not turn executable tasks into repeated manual instructions.
+- Do not ask for approval again after Roger has already said continue, proceed, do it, fix it, build it, or approve it.
+- Prefer creating or fixing files, code, scripts, docs, configs, and repo changes over explaining how Roger can do them manually.
+- Reduce buttons, modes, clutter, and repeated steps. Default to the simplest working interface.
+- Use safe connected access where available. Do not print, expose, or commit private secrets.
+- If something cannot be done with available access, say that directly and give the smallest possible local script or next step.`;
+
 const allowedTasks = new Set<TaskKind>(Object.keys(routeTemplates) as TaskKind[]);
 
 function normalizeTask(value: unknown): TaskKind {
@@ -197,7 +207,7 @@ export async function POST(request: Request) {
   const messages: ChatMessage[] = [
     {
       role: "system",
-      content: "You are Rowdy Room Mission Control. Be direct, practical, and focused on helping operate the Rowdy Room AI engine.",
+      content: `You are Rowdy Room Mission Control. Be direct, practical, and focused on operating the Rowdy Room AI engine.\n\n${operatorLaw}`,
     },
     {
       role: "user",
