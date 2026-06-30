@@ -13,6 +13,8 @@ type BridgeState = {
   error?: string;
 };
 
+const AUTO_FIX_KEY = "rowdyroom-pc-helper-autofix-v2";
+
 async function bridge(action: string, body: Record<string, unknown> = {}) {
   const response = await fetch("/api/local-bridge", {
     method: "POST",
@@ -33,30 +35,45 @@ export function LocalBridgePanel() {
       const json = (await response.json()) as BridgeState;
       setState(json);
       setMessage(json.ok ? "Local bridge is connected." : json.error ?? "Local bridge is not ready.");
+      return json;
     } catch (error) {
-      setMessage(error instanceof Error ? error.message : "Local bridge check failed.");
+      const fallback = { ok: false, error: error instanceof Error ? error.message : "Local bridge check failed." };
+      setMessage(fallback.error);
+      return fallback;
     }
   }
 
-  useEffect(() => {
-    check();
-  }, []);
-
-  async function fixLocalSetup() {
+  async function fixLocalSetup(auto = false) {
     setBusy(true);
-    setMessage("Refreshing code and restarting local app...");
+    setMessage(auto ? "Auto-fix started. Pulling latest code and opening a fresh Mission Control on port 3001." : "Refreshing code and opening a fresh local app on port 3001...");
     try {
       await bridge("refreshProject");
-      await bridge("stopServer");
-      await bridge("startServer", { port: 3000 });
+      await bridge("startServer", { port: 3001 });
       await check();
-      setMessage("Done. Rowdy Room was refreshed from GitHub and restarted on port 3000.");
+      setMessage("Done. A fresh Mission Control window is starting on port 3001. This avoids killing the app you are currently using.");
+      window.setTimeout(() => {
+        window.location.href = "http://localhost:3001/#local-bridge";
+      }, 7000);
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "Local setup repair failed.");
     } finally {
       setBusy(false);
     }
   }
+
+  useEffect(() => {
+    async function boot() {
+      const json = await check();
+      const shouldAutoFix = window.location.hash === "#local-bridge" || window.location.search.includes("autorepair=1");
+      const alreadyRan = window.sessionStorage.getItem(AUTO_FIX_KEY);
+      const alreadyFreshPort = window.location.port === "3001";
+      if (json.ok && shouldAutoFix && !alreadyRan && !alreadyFreshPort) {
+        window.sessionStorage.setItem(AUTO_FIX_KEY, new Date().toISOString());
+        await fixLocalSetup(true);
+      }
+    }
+    boot();
+  }, []);
 
   const approved = state?.approvedRoots?.join("\n") ?? "Desktop, D drive, F drive, and RowdyRoom config when available.";
 
@@ -75,7 +92,7 @@ export function LocalBridgePanel() {
         <div className={styles.stat}><span>Storage</span><strong>{state?.storageRoot ?? "D/F fallback"}</strong></div>
       </div>
 
-      <button className={styles.button} disabled={busy} type="button" onClick={fixLocalSetup}>
+      <button className={styles.button} disabled={busy} type="button" onClick={() => fixLocalSetup(false)}>
         {busy ? "Working..." : "Fix Local Setup"}
       </button>
 
