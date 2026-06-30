@@ -7,6 +7,13 @@ type StatusItem = {
   href?: string;
 };
 
+type Provider = {
+  id: string;
+  name: string;
+  env: string;
+  configured: boolean;
+};
+
 async function localJson(origin: string, path: string) {
   const response = await fetch(`${origin}${path}`, { cache: "no-store" });
   if (!response.ok) throw new Error(`${path} returned ${response.status}`);
@@ -40,6 +47,19 @@ export async function GET(request: Request) {
       const ready = Boolean(json.supabase?.ok);
       return { ok: ready, detail: ready ? "Supabase sync ready" : json.supabase?.error ?? "Local memory only" };
     }),
+    safeCheck("AI Provider Keys", "#api-reliability", async () => {
+      const json = await localJson(origin, "/api/api-health");
+      const providers = (Array.isArray(json.providers) ? json.providers : []) as Provider[];
+      const aiProviders = providers.filter((provider) => provider.id !== "youtube");
+      const ready = aiProviders.filter((provider) => provider.configured).length;
+      return { ok: ready > 0, detail: `${ready}/${aiProviders.length} AI providers configured` };
+    }),
+    safeCheck("YouTube Key", "#api-reliability", async () => {
+      const json = await localJson(origin, "/api/api-health");
+      const providers = (Array.isArray(json.providers) ? json.providers : []) as Provider[];
+      const youtube = providers.find((provider) => provider.id === "youtube");
+      return { ok: Boolean(youtube?.configured), detail: youtube?.configured ? "YouTube key saved" : "Missing YOUTUBE_API_KEY" };
+    }),
     safeCheck("Songfinder", "#songfinder-guard", async () => {
       const json = await localJson(origin, "/api/songfinder");
       const entries = Array.isArray(json.entries) ? json.entries.length : 0;
@@ -53,7 +73,7 @@ export async function GET(request: Request) {
   ]);
 
   const okCount = checks.filter((check) => check.ok).length;
-  const overall = okCount === checks.length ? "ready" : okCount >= 3 ? "usable" : "needs-attention";
+  const overall = okCount === checks.length ? "ready" : okCount >= Math.ceil(checks.length / 2) ? "usable" : "needs-attention";
 
   return Response.json({
     ok: overall !== "needs-attention",
