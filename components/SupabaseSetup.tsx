@@ -11,6 +11,17 @@ type EnvStatus = {
   error?: string;
 };
 
+type MemoryHealth = {
+  ok: boolean;
+  localMemory: boolean;
+  supabase?: {
+    ok: boolean;
+    configured: boolean;
+    status?: number;
+    error?: string;
+  };
+};
+
 async function bridge(action: string, body: Record<string, unknown> = {}) {
   const response = await fetch("/api/local-bridge", {
     method: "POST",
@@ -23,6 +34,7 @@ async function bridge(action: string, body: Record<string, unknown> = {}) {
 export function SupabaseSetup() {
   const [status, setStatus] = useState<EnvStatus | null>(null);
   const [serviceValue, setServiceValue] = useState("");
+  const [memoryHealth, setMemoryHealth] = useState<MemoryHealth | null>(null);
   const [message, setMessage] = useState("Supabase Memory table is created. Save the local URL and service value here, not in chat.");
   const [busy, setBusy] = useState(false);
 
@@ -66,6 +78,26 @@ export function SupabaseSetup() {
     }
   }
 
+  async function testMemory() {
+    setBusy(true);
+    try {
+      const response = await fetch("/api/memory/health");
+      const json = (await response.json()) as MemoryHealth;
+      setMemoryHealth(json);
+      if (json.supabase?.ok) {
+        setMessage("Mission Memory can reach Supabase.");
+      } else if (json.supabase?.configured) {
+        setMessage(`Supabase values are saved, but the memory check failed: ${json.supabase.error ?? json.supabase.status ?? "unknown error"}`);
+      } else {
+        setMessage("Local memory works. Supabase values are not loaded by this running server yet. Restart fresh after saving them.");
+      }
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : "Memory health check failed.");
+    } finally {
+      setBusy(false);
+    }
+  }
+
   async function restartFresh() {
     setBusy(true);
     try {
@@ -104,6 +136,7 @@ export function SupabaseSetup() {
           <div className={styles.buttons}>
             <button className={styles.button} disabled={busy} type="button" onClick={saveUrl}>Save URL</button>
             <button className={styles.button} disabled={busy} type="button" onClick={saveService}>Save Service Value</button>
+            <button className={styles.buttonAlt} disabled={busy} type="button" onClick={testMemory}>Test Memory</button>
             <button className={styles.buttonAlt} disabled={busy} type="button" onClick={restartFresh}>Restart Fresh</button>
           </div>
           <p className={message.toLowerCase().includes("fail") || message.toLowerCase().includes("not ready") ? styles.error : styles.note}>{message}</p>
@@ -115,6 +148,7 @@ export function SupabaseSetup() {
             <div className={styles.statusRow}><span>Bridge</span><strong>{status?.ok ? "Ready" : "Not Ready"}</strong></div>
             <div className={styles.statusRow}><span>SUPABASE_URL</span><strong>{env.SUPABASE_URL ? "Saved" : "Missing"}</strong></div>
             <div className={styles.statusRow}><span>SUPABASE_SERVICE_ROLE_KEY</span><strong>{env.SUPABASE_SERVICE_ROLE_KEY ? "Saved" : "Missing"}</strong></div>
+            <div className={styles.statusRow}><span>Memory Sync</span><strong>{memoryHealth?.supabase?.ok ? "Ready" : memoryHealth ? "Not Ready" : "Untested"}</strong></div>
           </div>
           <p className={styles.note}>The service value is written to your local environment file through the bridge. It is not committed to GitHub.</p>
         </section>
