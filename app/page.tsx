@@ -4,6 +4,7 @@ import { MissionActions } from "../components/MissionActions";
 import { MissionChat } from "../components/MissionChat";
 import { MissionMemory } from "../components/MissionMemory";
 import { SongfinderGuardFinal } from "../components/SongfinderGuardFinal";
+import { SupabaseSetup } from "../components/SupabaseSetup";
 import { TikTokControlPlan } from "../components/TikTokControlPlan";
 
 const providers = [
@@ -34,6 +35,7 @@ export default function HomePage() {
           </p>
           <div className="heroActions">
             <a href="#local-bridge">PC Helper</a>
+            <a href="#supabase-setup">Supabase</a>
             <a href="#mission-memory">Memory</a>
             <a href="#songfinder-guard">Songfinder Guard</a>
             <a href="#api-reliability">API Health</a>
@@ -63,6 +65,7 @@ export default function HomePage() {
 
       <section className="contentGrid">
         <LocalBridgePanel />
+        <SupabaseSetup />
         <MissionMemory />
         <SongfinderGuardFinal />
         <ApiReliabilityPanel />
