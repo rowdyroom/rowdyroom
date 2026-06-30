@@ -24,10 +24,10 @@ const defaults: RunSheetState = {
   preshow: "Check audio, camera, links, queue, TikFinity, and Show Mode gate.",
   opening: "Welcome everyone, explain sing/vote/boost/connect, and pin the key links.",
   warmup: "First singers get the room moving. Keep voting simple and chat active.",
-  mainSet: "Run the queue, call next singers early, push votes after each performance.",
-  rumble: "Only activate Rumble when ready. Explain rules before starting.",
-  break: "Short reset. Remind chat to stay, vote, boost, and sign up.",
-  finalPush: "Call out leaders, Main 4 movement, best performances, and last-chance votes.",
+  mainSet: "Run the queue, call next singers early, push votes after each performance, and let the audience shape the pace.",
+  rumble: "Rumble is not scheduled. Only activate it when the room/audience creates the right moment, then explain rules before starting.",
+  break: "Short reset when needed. Remind chat to stay, vote, boost, and sign up.",
+  finalPush: "Call out leaders, Main 4 movement, best performances, and last-chance votes when the room is ready.",
   close: "Thank singers, call next show, push Discord/Rowdy Bunch, and save After-Show Recap.",
 };
 
@@ -36,12 +36,13 @@ function buildReport(state: RunSheetState) {
   return [
     `${state.showName || "Rowdy Room Live"} Run Sheet`,
     `Start: ${start}`,
+    "Audience note: Rumble has no set timer and no fixed slot. It is only available when activated and should be shaped by the audience and room energy.",
     "",
     `Pre-show: ${state.preshow}`,
     `Opening: ${state.opening}`,
     `Warmup: ${state.warmup}`,
     `Main set: ${state.mainSet}`,
-    `Rumble: ${state.rumble}`,
+    `Rumble option: ${state.rumble}`,
     `Break: ${state.break}`,
     `Final push: ${state.finalPush}`,
     `Close: ${state.close}`,
@@ -54,7 +55,7 @@ function steps(state: RunSheetState) {
     ["Opening", state.opening],
     ["Warmup", state.warmup],
     ["Main set", state.mainSet],
-    ["Rumble", state.rumble],
+    ["Rumble option", state.rumble],
     ["Break", state.break],
     ["Final push", state.finalPush],
     ["Close", state.close],
@@ -77,7 +78,7 @@ async function saveMemory(content: string) {
 
 export function RunSheetPanel() {
   const [state, setState] = useState<RunSheetState>(defaults);
-  const [message, setMessage] = useState("Build the order of the show before going live.");
+  const [message, setMessage] = useState("Build the flexible show flow before going live. Rumble is optional and audience-shaped, not timed.");
   const [busy, setBusy] = useState(false);
 
   useEffect(() => {
@@ -120,7 +121,7 @@ export function RunSheetPanel() {
 
   function reset() {
     setState(defaults);
-    setMessage("Run sheet reset to default flow.");
+    setMessage("Run sheet reset to the audience-shaped default flow.");
   }
 
   return (
@@ -128,7 +129,7 @@ export function RunSheetPanel() {
       <div className="panelHeader">
         <p className="eyebrow">Live Operations</p>
         <h2>Run Sheet</h2>
-        <p className="panelIntro">Plan the flow of the show so the room does not drift once singers, votes, and chat start moving.</p>
+        <p className="panelIntro">Plan a flexible show flow. Rumble is an optional activation, not a scheduled segment.</p>
       </div>
 
       <div className={styles.grid}>
@@ -141,7 +142,7 @@ export function RunSheetPanel() {
             <label className={styles.field}><span>Opening</span><textarea value={state.opening} onChange={(event) => update("opening", event.target.value)} /></label>
             <label className={styles.field}><span>Warmup</span><textarea value={state.warmup} onChange={(event) => update("warmup", event.target.value)} /></label>
             <label className={styles.field}><span>Main set</span><textarea value={state.mainSet} onChange={(event) => update("mainSet", event.target.value)} /></label>
-            <label className={styles.field}><span>Rumble</span><textarea value={state.rumble} onChange={(event) => update("rumble", event.target.value)} /></label>
+            <label className={styles.field}><span>Rumble option</span><textarea value={state.rumble} onChange={(event) => update("rumble", event.target.value)} /></label>
             <label className={styles.field}><span>Break</span><textarea value={state.break} onChange={(event) => update("break", event.target.value)} /></label>
             <label className={styles.field}><span>Final push</span><textarea value={state.finalPush} onChange={(event) => update("finalPush", event.target.value)} /></label>
             <label className={styles.field}><span>Close</span><textarea value={state.close} onChange={(event) => update("close", event.target.value)} /></label>
