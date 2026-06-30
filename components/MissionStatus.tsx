@@ -24,6 +24,12 @@ function badgeClass(overall?: MissionStatusState["overall"]) {
   return `${styles.badge} ${styles.badgeBad}`;
 }
 
+function scrollToTarget(href?: string) {
+  if (!href) return;
+  const target = document.querySelector(href);
+  target?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 export function MissionStatus() {
   const [state, setState] = useState<MissionStatusState | null>(null);
   const [busy, setBusy] = useState(false);
@@ -42,6 +48,8 @@ export function MissionStatus() {
     load();
   }, []);
 
+  const nextFix = state?.checks.find((check) => !check.ok);
+
   return (
     <article className={`panel ${styles.panel}`} id="mission-status">
       <div className={styles.top}>
@@ -49,10 +57,12 @@ export function MissionStatus() {
           <p className="eyebrow">Command Center</p>
           <h2>Mission Status</h2>
           <p className={styles.summary}>{state?.summary ?? "Checking Mission Control systems..."}</p>
+          {nextFix ? <p className={styles.next}>Next fix: {nextFix.name} — {nextFix.detail}</p> : <p className={styles.next}>All tracked systems are ready.</p>}
         </div>
-        <div>
+        <div className={styles.controls}>
           <div className={badgeClass(state?.overall)}>{state?.overall ?? "checking"}</div>
           <button className={styles.button} disabled={busy} type="button" onClick={load}>{busy ? "Checking..." : "Refresh"}</button>
+          <button className={styles.primaryButton} disabled={!nextFix} type="button" onClick={() => scrollToTarget(nextFix?.href)}>{nextFix ? "Fix Next" : "Ready"}</button>
         </div>
       </div>
 
