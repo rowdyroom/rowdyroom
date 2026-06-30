@@ -30,15 +30,42 @@ function scrollToTarget(href?: string) {
   target?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+async function bridge(action: string, body: Record<string, unknown> = {}) {
+  const response = await fetch("/api/local-bridge", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ action, ...body }),
+  });
+  return response.json();
+}
+
 export function MissionStatus() {
   const [state, setState] = useState<MissionStatusState | null>(null);
   const [busy, setBusy] = useState(false);
+  const [updateMessage, setUpdateMessage] = useState<string | null>(null);
 
   async function load() {
     setBusy(true);
     try {
       const response = await fetch("/api/mission-status", { cache: "no-store" });
       setState((await response.json()) as MissionStatusState);
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function updateAndRelaunch() {
+    setBusy(true);
+    setUpdateMessage("Pulling latest code and starting a fresh Mission Control on port 3001...");
+    try {
+      await bridge("refreshProject");
+      await bridge("startServer", { port: 3001 });
+      setUpdateMessage("Fresh Mission Control is starting. Opening it now.");
+      window.setTimeout(() => {
+        window.location.href = "http://localhost:3001/#mission-status";
+      }, 7000);
+    } catch (error) {
+      setUpdateMessage(error instanceof Error ? error.message : "Update and relaunch failed.");
     } finally {
       setBusy(false);
     }
@@ -63,8 +90,11 @@ export function MissionStatus() {
           <div className={badgeClass(state?.overall)}>{state?.overall ?? "checking"}</div>
           <button className={styles.button} disabled={busy} type="button" onClick={load}>{busy ? "Checking..." : "Refresh"}</button>
           <button className={styles.primaryButton} disabled={!nextFix} type="button" onClick={() => scrollToTarget(nextFix?.href)}>{nextFix ? "Fix Next" : "Ready"}</button>
+          <button className={styles.updateButton} disabled={busy} type="button" onClick={updateAndRelaunch}>Update App</button>
         </div>
       </div>
+
+      {updateMessage ? <p className={styles.notice}>{updateMessage}</p> : null}
 
       <div className={styles.grid}>
         {(state?.checks ?? []).map((check) => (
