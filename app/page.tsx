@@ -7,6 +7,7 @@ import { MissionActions } from "../components/MissionActions";
 import { MissionChat } from "../components/MissionChat";
 import { MissionMemory } from "../components/MissionMemory";
 import { MissionStatus } from "../components/MissionStatus";
+import { RunSheetPanel } from "../components/RunSheetPanel";
 import { ShowModePanel } from "../components/ShowModePanel";
 import { SongfinderGuardFinal } from "../components/SongfinderGuardFinal";
 import { SupabaseSetup } from "../components/SupabaseSetup";
@@ -41,6 +42,7 @@ export default function HomePage() {
           <div className="heroActions">
             <a href="#mission-status">Status</a>
             <a href="#show-mode">Show Mode</a>
+            <a href="#run-sheet">Run Sheet</a>
             <a href="#host-console">Host Console</a>
             <a href="#live-links">Live Links</a>
             <a href="#after-show">After Show</a>
@@ -75,6 +77,7 @@ export default function HomePage() {
       <section className="contentGrid">
         <MissionStatus />
         <ShowModePanel />
+        <RunSheetPanel />
         <HostConsolePanel />
         <LiveLinksPanel />
         <AfterShowPanel />
