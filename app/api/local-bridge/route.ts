@@ -1,9 +1,17 @@
 export const runtime = "nodejs";
 
-type BridgeAction = "health" | "envStatus" | "setEnv" | "refreshProject" | "stopServer" | "startServer";
-
-const bridgeUrl = process.env.ROWDYROOM_BRIDGE_URL || "http://127.0.0.1:4777";
-const bridgeToken = process.env.ROWDYROOM_BRIDGE_TOKEN || "";
+type BridgeAction =
+  | "health"
+  | "roots"
+  | "envStatus"
+  | "setEnv"
+  | "refreshProject"
+  | "stopServer"
+  | "startServer"
+  | "fileList"
+  | "fileRead"
+  | "fileWrite"
+  | "fileMkdir";
 
 const allowedEnvNames = new Set([
   "OPENAI_API_KEY",
@@ -20,25 +28,40 @@ const allowedEnvNames = new Set([
   "XAI_MODEL",
   "GEMINI_MODEL",
   "OLLAMA_BASE_URL",
+  "ROWDYROOM_BRIDGE_URL",
+  "ROWDYROOM_STORAGE_ROOT",
 ]);
+
+function bridgeUrl() {
+  return process.env.ROWDYROOM_BRIDGE_URL || "http://127.0.0.1:4777";
+}
+
+function bridgeToken() {
+  return process.env.ROWDYROOM_BRIDGE_TOKEN || "";
+}
 
 function pathFor(action: BridgeAction) {
   if (action === "health") return "/health";
+  if (action === "roots") return "/roots";
   if (action === "envStatus") return "/env/status";
   if (action === "setEnv") return "/env/set";
   if (action === "refreshProject") return "/project/refresh";
   if (action === "stopServer") return "/server/stop";
   if (action === "startServer") return "/server/start";
+  if (action === "fileList") return "/file/list";
+  if (action === "fileRead") return "/file/read";
+  if (action === "fileWrite") return "/file/write";
+  if (action === "fileMkdir") return "/file/mkdir";
   return "/health";
 }
 
 async function callBridge(action: BridgeAction, body?: Record<string, unknown>) {
-  const isGet = action === "health" || action === "envStatus";
-  const response = await fetch(`${bridgeUrl}${pathFor(action)}`, {
+  const isGet = action === "health" || action === "envStatus" || action === "roots";
+  const response = await fetch(`${bridgeUrl()}${pathFor(action)}`, {
     method: isGet ? "GET" : "POST",
     headers: {
       "content-type": "application/json",
-      "x-rowdyroom-token": bridgeToken,
+      "x-rowdyroom-token": bridgeToken(),
     },
     body: isGet ? undefined : JSON.stringify(body ?? {}),
   });
@@ -57,11 +80,11 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
-  const body = (await request.json().catch(() => null)) as { action?: unknown; name?: unknown; value?: unknown; port?: unknown } | null;
+  const body = (await request.json().catch(() => null)) as { action?: unknown; name?: unknown; value?: unknown; port?: unknown; path?: unknown; content?: unknown } | null;
   const action = typeof body?.action === "string" ? body.action as BridgeAction : "health";
 
   try {
-    if (!bridgeToken && action !== "health") {
+    if (!bridgeToken() && action !== "health") {
       return Response.json({ ok: false, error: "ROWDYROOM_BRIDGE_TOKEN is missing from local .env.local." }, { status: 400 });
     }
 
@@ -79,7 +102,18 @@ export async function POST(request: Request) {
       return await callBridge("startServer", { port });
     }
 
-    if (["health", "envStatus", "refreshProject", "stopServer"].includes(action)) {
+    if (["fileList", "fileRead", "fileMkdir"].includes(action)) {
+      const path = typeof body?.path === "string" ? body.path : "";
+      return await callBridge(action, { path });
+    }
+
+    if (action === "fileWrite") {
+      const path = typeof body?.path === "string" ? body.path : "";
+      const content = typeof body?.content === "string" ? body.content : "";
+      return await callBridge("fileWrite", { path, content });
+    }
+
+    if (["health", "roots", "envStatus", "refreshProject", "stopServer"].includes(action)) {
       return await callBridge(action);
     }
 
