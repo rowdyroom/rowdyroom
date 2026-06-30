@@ -41,6 +41,38 @@ function gateClass(overall?: MissionStatusState["overall"], manualReady = false)
   return `${styles.gate} ${styles.warn}`;
 }
 
+function buildShowReport(args: { status: MissionStatusState | null; checked: Record<string, boolean>; manualReady: boolean }) {
+  const manualLines = manualItems.map((item) => `${args.checked[item.id] ? "PASS" : "FIX"} - ${item.label}`);
+  const systemLines = (args.status?.checks ?? []).map((check) => `${check.ok ? "PASS" : "FIX"} - ${check.name}: ${check.detail}`);
+  return [
+    `Show Mode Pre-Show Check`,
+    `Created: ${new Date().toLocaleString()}`,
+    `Gate: ${args.status?.overall ?? "not checked"}`,
+    `Manual ready: ${args.manualReady ? "yes" : "no"}`,
+    `Next action: ${args.status?.nextAction ?? "Run pre-show check"}`,
+    "",
+    "Manual checklist:",
+    ...manualLines,
+    "",
+    "System checks:",
+    ...(systemLines.length ? systemLines : ["No system check run yet."]),
+  ].join("\n");
+}
+
+async function saveMemory(content: string) {
+  const response = await fetch("/api/memory", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      kind: "task",
+      title: "Show Mode Pre-Show Check",
+      content,
+      source: "show-mode",
+    }),
+  });
+  return response.ok;
+}
+
 export function ShowModePanel() {
   const [status, setStatus] = useState<MissionStatusState | null>(null);
   const [checked, setChecked] = useState<Record<string, boolean>>({});
@@ -73,15 +105,29 @@ export function ShowModePanel() {
       const response = await fetch("/api/mission-status", { cache: "no-store" });
       const json = (await response.json()) as MissionStatusState;
       setStatus(json);
+      const report = buildShowReport({ status: json, checked, manualReady });
+      await saveMemory(report);
       if (json.overall === "ready" && manualReady) {
-        setMessage("Go-live gate is clear.");
+        setMessage("Go-live gate is clear. Pre-show check saved to Mission Memory.");
       } else if (json.overall === "needs-attention") {
-        setMessage(`Fix ${json.nextAction} before going live.`);
+        setMessage(`Fix ${json.nextAction} before going live. Pre-show check saved to Mission Memory.`);
       } else {
-        setMessage("System is usable. Finish the manual show checklist before going live.");
+        setMessage("System is usable. Finish the manual show checklist before going live. Pre-show check saved to Mission Memory.");
       }
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "Pre-show check failed.");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function saveCurrentReport() {
+    setBusy(true);
+    try {
+      const saved = await saveMemory(buildShowReport({ status, checked, manualReady }));
+      setMessage(saved ? "Current Show Mode report saved to Mission Memory." : "Show report save failed.");
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : "Show report save failed.");
     } finally {
       setBusy(false);
     }
@@ -115,6 +161,7 @@ export function ShowModePanel() {
 
       <div className={styles.buttons}>
         <button className={styles.button} disabled={busy} type="button" onClick={runCheck}>{busy ? "Checking..." : "Run Pre-Show Check"}</button>
+        <button className={styles.buttonAlt} disabled={busy} type="button" onClick={saveCurrentReport}>Save Show Report</button>
         <button className={styles.buttonAlt} type="button" onClick={reset}>Reset Checklist</button>
         <a className={styles.buttonAlt} href="#tiktok-control-plan">TikTok Setup</a>
         <a className={styles.buttonAlt} href="#songfinder-guard">Songfinder</a>
