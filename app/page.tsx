@@ -1,6 +1,7 @@
 import { ApiReliabilityPanel } from "../components/ApiReliabilityPanel";
 import { MissionActions } from "../components/MissionActions";
 import { MissionChat } from "../components/MissionChat";
+import { SongfinderGuard } from "../components/SongfinderGuard";
 import { TikTokControlPlan } from "../components/TikTokControlPlan";
 
 const providers = [
@@ -30,6 +31,7 @@ export default function HomePage() {
             Your local command center for ChatGPT, Grok, Claude, Gemini, stream tools, memory, and automation.
           </p>
           <div className="heroActions">
+            <a href="#songfinder-guard">Songfinder Guard</a>
             <a href="#api-reliability">API Health</a>
             <a href="#tiktok-control-plan">TikTok Control</a>
             <a href="#action-center">Action Center</a>
@@ -57,6 +59,7 @@ export default function HomePage() {
       </section>
 
       <section className="contentGrid">
+        <SongfinderGuard />
         <ApiReliabilityPanel />
         <TikTokControlPlan />
         <MissionActions />
