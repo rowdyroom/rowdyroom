@@ -2,6 +2,7 @@ import { ApiReliabilityPanel } from "../components/ApiReliabilityPanel";
 import { LocalBridgePanel } from "../components/LocalBridgePanel";
 import { MissionActions } from "../components/MissionActions";
 import { MissionChat } from "../components/MissionChat";
+import { MissionMemory } from "../components/MissionMemory";
 import { SongfinderGuardFinal } from "../components/SongfinderGuardFinal";
 import { TikTokControlPlan } from "../components/TikTokControlPlan";
 
@@ -33,10 +34,10 @@ export default function HomePage() {
           </p>
           <div className="heroActions">
             <a href="#local-bridge">PC Helper</a>
+            <a href="#mission-memory">Memory</a>
             <a href="#songfinder-guard">Songfinder Guard</a>
             <a href="#api-reliability">API Health</a>
             <a href="#tiktok-control-plan">TikTok Control</a>
-            <a href="#action-center">Action Center</a>
             <a href="#chat-console">Open Chat Console</a>
           </div>
         </div>
@@ -62,6 +63,7 @@ export default function HomePage() {
 
       <section className="contentGrid">
         <LocalBridgePanel />
+        <MissionMemory />
         <SongfinderGuardFinal />
         <ApiReliabilityPanel />
         <TikTokControlPlan />
