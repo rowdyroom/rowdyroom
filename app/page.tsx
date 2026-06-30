@@ -3,6 +3,7 @@ import { LocalBridgePanel } from "../components/LocalBridgePanel";
 import { MissionActions } from "../components/MissionActions";
 import { MissionChat } from "../components/MissionChat";
 import { MissionMemory } from "../components/MissionMemory";
+import { MissionStatus } from "../components/MissionStatus";
 import { SongfinderGuardFinal } from "../components/SongfinderGuardFinal";
 import { SupabaseSetup } from "../components/SupabaseSetup";
 import { TikTokControlPlan } from "../components/TikTokControlPlan";
@@ -34,13 +35,13 @@ export default function HomePage() {
             Your local command center for ChatGPT, Grok, Claude, Gemini, stream tools, memory, and automation.
           </p>
           <div className="heroActions">
+            <a href="#mission-status">Status</a>
+            <a href="#action-center">Auto Pilot</a>
             <a href="#local-bridge">PC Helper</a>
             <a href="#supabase-setup">Supabase</a>
             <a href="#mission-memory">Memory</a>
             <a href="#songfinder-guard">Songfinder Guard</a>
-            <a href="#api-reliability">API Health</a>
-            <a href="#tiktok-control-plan">TikTok Control</a>
-            <a href="#chat-console">Open Chat Console</a>
+            <a href="#chat-console">Chat Console</a>
           </div>
         </div>
         <div className="pulseOrb" aria-hidden="true">
@@ -64,13 +65,14 @@ export default function HomePage() {
       </section>
 
       <section className="contentGrid">
+        <MissionStatus />
+        <MissionActions />
         <LocalBridgePanel />
         <SupabaseSetup />
         <MissionMemory />
         <SongfinderGuardFinal />
         <ApiReliabilityPanel />
         <TikTokControlPlan />
-        <MissionActions />
 
         <article className="panel large" id="providers">
           <div className="panelHeader">
