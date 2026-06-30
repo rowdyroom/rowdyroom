@@ -1,4 +1,5 @@
 import { ApiReliabilityPanel } from "../components/ApiReliabilityPanel";
+import { HostConsolePanel } from "../components/HostConsolePanel";
 import { LiveLinksPanel } from "../components/LiveLinksPanel";
 import { LocalBridgePanel } from "../components/LocalBridgePanel";
 import { MissionActions } from "../components/MissionActions";
@@ -39,6 +40,7 @@ export default function HomePage() {
           <div className="heroActions">
             <a href="#mission-status">Status</a>
             <a href="#show-mode">Show Mode</a>
+            <a href="#host-console">Host Console</a>
             <a href="#live-links">Live Links</a>
             <a href="#action-center">Auto Pilot</a>
             <a href="#local-bridge">PC Helper</a>
@@ -71,6 +73,7 @@ export default function HomePage() {
       <section className="contentGrid">
         <MissionStatus />
         <ShowModePanel />
+        <HostConsolePanel />
         <LiveLinksPanel />
         <MissionActions />
         <LocalBridgePanel />
