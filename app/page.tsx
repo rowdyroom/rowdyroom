@@ -1,7 +1,7 @@
 import { ApiReliabilityPanel } from "../components/ApiReliabilityPanel";
 import { MissionActions } from "../components/MissionActions";
 import { MissionChat } from "../components/MissionChat";
-import { SongfinderGuard } from "../components/SongfinderGuard";
+import { SongfinderGuardFinal } from "../components/SongfinderGuardFinal";
 import { TikTokControlPlan } from "../components/TikTokControlPlan";
 
 const providers = [
@@ -59,7 +59,7 @@ export default function HomePage() {
       </section>
 
       <section className="contentGrid">
-        <SongfinderGuard />
+        <SongfinderGuardFinal />
         <ApiReliabilityPanel />
         <TikTokControlPlan />
         <MissionActions />
