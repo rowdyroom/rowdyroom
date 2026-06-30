@@ -4,6 +4,7 @@ import { MissionActions } from "../components/MissionActions";
 import { MissionChat } from "../components/MissionChat";
 import { MissionMemory } from "../components/MissionMemory";
 import { MissionStatus } from "../components/MissionStatus";
+import { ShowModePanel } from "../components/ShowModePanel";
 import { SongfinderGuardFinal } from "../components/SongfinderGuardFinal";
 import { SupabaseSetup } from "../components/SupabaseSetup";
 import { TikTokControlPlan } from "../components/TikTokControlPlan";
@@ -36,6 +37,7 @@ export default function HomePage() {
           </p>
           <div className="heroActions">
             <a href="#mission-status">Status</a>
+            <a href="#show-mode">Show Mode</a>
             <a href="#action-center">Auto Pilot</a>
             <a href="#local-bridge">PC Helper</a>
             <a href="#supabase-setup">Supabase</a>
@@ -66,6 +68,7 @@ export default function HomePage() {
 
       <section className="contentGrid">
         <MissionStatus />
+        <ShowModePanel />
         <MissionActions />
         <LocalBridgePanel />
         <SupabaseSetup />
