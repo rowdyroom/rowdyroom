@@ -1,3 +1,4 @@
+import { AfterShowPanel } from "../components/AfterShowPanel";
 import { ApiReliabilityPanel } from "../components/ApiReliabilityPanel";
 import { HostConsolePanel } from "../components/HostConsolePanel";
 import { LiveLinksPanel } from "../components/LiveLinksPanel";
@@ -42,6 +43,7 @@ export default function HomePage() {
             <a href="#show-mode">Show Mode</a>
             <a href="#host-console">Host Console</a>
             <a href="#live-links">Live Links</a>
+            <a href="#after-show">After Show</a>
             <a href="#action-center">Auto Pilot</a>
             <a href="#local-bridge">PC Helper</a>
             <a href="#supabase-setup">Supabase</a>
@@ -75,6 +77,7 @@ export default function HomePage() {
         <ShowModePanel />
         <HostConsolePanel />
         <LiveLinksPanel />
+        <AfterShowPanel />
         <MissionActions />
         <LocalBridgePanel />
         <SupabaseSetup />
