@@ -1,4 +1,5 @@
 import { ApiReliabilityPanel } from "../components/ApiReliabilityPanel";
+import { LocalBridgePanel } from "../components/LocalBridgePanel";
 import { MissionActions } from "../components/MissionActions";
 import { MissionChat } from "../components/MissionChat";
 import { SongfinderGuardFinal } from "../components/SongfinderGuardFinal";
@@ -31,6 +32,7 @@ export default function HomePage() {
             Your local command center for ChatGPT, Grok, Claude, Gemini, stream tools, memory, and automation.
           </p>
           <div className="heroActions">
+            <a href="#local-bridge">PC Helper</a>
             <a href="#songfinder-guard">Songfinder Guard</a>
             <a href="#api-reliability">API Health</a>
             <a href="#tiktok-control-plan">TikTok Control</a>
@@ -59,6 +61,7 @@ export default function HomePage() {
       </section>
 
       <section className="contentGrid">
+        <LocalBridgePanel />
         <SongfinderGuardFinal />
         <ApiReliabilityPanel />
         <TikTokControlPlan />
