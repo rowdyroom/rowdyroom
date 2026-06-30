@@ -22,10 +22,28 @@ const taskOptions: Array<{ value: TaskKind; label: string; detail: string }> = [
   { value: "research", label: "Gemini", detail: "Research + large context" },
 ];
 
+async function saveChatMemory(args: { task: TaskKind; message: string; result: ChatResult }) {
+  if (!args.result.ok || !args.result.text) return false;
+
+  const response = await fetch("/api/memory", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      kind: "note",
+      title: `AI Router ${args.task}: ${args.message.slice(0, 80)}`,
+      content: `User request:\n${args.message}\n\nProvider:\n${args.result.provider ?? "unknown"} / ${args.result.model ?? "unknown"}\n\nResponse:\n${args.result.text}`,
+      source: "ai-router-chat",
+    }),
+  });
+
+  return response.ok;
+}
+
 export function MissionChat() {
   const [task, setTask] = useState<TaskKind>("planning");
   const [message, setMessage] = useState("What should Rowdy Room build next?");
   const [result, setResult] = useState<ChatResult | null>(null);
+  const [memorySaved, setMemorySaved] = useState<boolean | null>(null);
   const [loading, setLoading] = useState(false);
 
   const selected = useMemo(() => taskOptions.find((option) => option.value === task), [task]);
@@ -33,19 +51,26 @@ export function MissionChat() {
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    if (!message.trim()) return;
+    const requestText = message.trim();
+    if (!requestText) return;
 
     setLoading(true);
     setResult(null);
+    setMemorySaved(null);
 
     try {
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ message, task }),
+        body: JSON.stringify({ message: requestText, task }),
       });
       const json = (await response.json()) as ChatResult;
       setResult(json);
+
+      if (json.ok && json.text) {
+        const saved = await saveChatMemory({ task, message: requestText, result: json });
+        setMemorySaved(saved);
+      }
     } catch (error) {
       setResult({
         ok: false,
@@ -62,7 +87,7 @@ export function MissionChat() {
       <div className="panelHeader">
         <p className="eyebrow">Live Console</p>
         <h2>AI Router Chat</h2>
-        <p className={styles.intro}>Type once. Mission Control sends the request to the selected route.</p>
+        <p className={styles.intro}>Type once. Mission Control sends the request to the selected route and saves useful answers to Mission Memory.</p>
       </div>
 
       <form className={styles.form} onSubmit={submit}>
@@ -104,6 +129,7 @@ export function MissionChat() {
             {result.provider ? <strong>{result.provider} / {result.model}</strong> : null}
           </div>
           <p>{result.text ?? result.error}</p>
+          {memorySaved !== null ? <small>{memorySaved ? "Saved to Mission Memory." : "Response shown, but memory save failed."}</small> : null}
           {result.hint ? <small>{result.hint}</small> : null}
         </div>
       ) : null}
