@@ -30,7 +30,8 @@ function assertProperTvMode(source) {
     }
   }
 
-  const markupStart = source.indexOf('page.innerHTML=`');
+  const tvBlockStart = source.indexOf(TV_PREREQUISITE);
+  const markupStart = source.indexOf('page.innerHTML=`', tvBlockStart);
   const markupEnd = markupStart >= 0 ? source.indexOf('`;', markupStart + 16) : -1;
   if (markupStart < 0 || markupEnd < 0) {
     throw new Error('TV mode markup could not be verified. No file was changed.');
