@@ -71,8 +71,15 @@ Stop rebuilding. Repair one isolated defect at a time.
    - Live deployment status: **not yet deployed** for the same server-access reason.
    - Live order: apply and verify items 1 → 2 → 3 → 4 → 5 → 6 before item 7 is deployed.
 
-7. **Fix wheel video/animation trigger**
-   - Game action must actually trigger wheel display/overlay.
+7. **Fix wheel video/animation trigger — CODE FIX VERIFIED**
+   - Root cause: `punchAttack()` applied a random local result but never sent the current player or team to the separate wheel display.
+   - Repair: post the active player and Fire/Ice team to `/api/rumble-wheel.php?action=spin`; use the returned `result_key` as the authoritative in-game effect; query `action=state` if the spin response omits its result; and fall back locally without blocking play if the display API is unavailable.
+   - Supported result keys include miss, skip turn, five-second timer, and power punch in underscore or hyphen variants.
+   - Automated tests: 9 passed, 0 failed.
+   - Rollback-safe patcher: `tools/rumble/fix-wheel-trigger.mjs`.
+   - Safety: the patch requires item 6, is idempotent, refuses an unexpected Punch Wheel implementation, records synchronization errors, and does not modify buzzer behavior, TV mode, question-bank UI, scoring, or layout.
+   - Live deployment status: **not yet deployed** for the same server-access reason; the live wheel endpoint could not be queried from this environment because the domain did not resolve.
+   - Live order: apply and verify items 1 → 2 → 3 → 4 → 5 → 6 → 7 before item 8 is deployed.
 
 8. **Fix buzzer video/animation trigger**
    - Strike, strike 3, steal, and strike+steal states must display correctly.
@@ -91,7 +98,11 @@ Stop rebuilding. Repair one isolated defect at a time.
 
 ## Stream launch-readiness checkpoint
 
-Before the system is called stream-ready, verify the normal karaoke workflow separately from Rumble:
+The Supabase karaoke queue core has been hardened and passed transactional tests for sign-up, duplicate rejection, deterministic ordering, one current performer, one open performance, switching, completion, self-removal, line skips, Boost Point movement, wallet accounting, and ledger entries.
+
+The full show is **not yet labeled stream-ready** because the deployed Mission Control/Companion stack appears to use a separate PHP/MySQL queue whose source is not in GitHub and cannot be inspected or live-tested through the current access. GitHub issue #11 tracks that blocker.
+
+Before the full system is called stream-ready, verify the actual production workflow:
 
 - public performer sign-up submits successfully
 - duplicate and invalid sign-ups are handled safely
