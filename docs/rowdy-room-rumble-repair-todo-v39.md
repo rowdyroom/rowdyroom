@@ -104,9 +104,16 @@ Stop rebuilding. Repair one isolated defect at a time.
    - Live deployment status: **not yet deployed** for the same server-access reason; the default QR image currently uses an external QR image service unless a local image override is configured.
    - Live order: apply and verify items 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 before item 10 is deployed.
 
-10. **Remove question upload UI**
-   - Saved built-in question list.
-   - Random question selection.
+10. **Remove question upload UI — CODE FIX VERIFIED**
+   - Root cause: the setup page still exposed the legacy `Question Bank (Max 2000)` bulk-import textarea, count, file/input variants, and Load/Clear Questions controls even though the compact game already used its separate built-in bank.
+   - Repair: physically remove known legacy controls and heading from the file; remove known dynamic variants if another script recreates them; and expose `window.ROWDY_QUESTION_MODE='built_in_only'`.
+   - The patch requires and preserves the built-in `QUESTION_BANK`, the unused-index filter, and the exhaustion reset that permits a new random cycle only after every question has been used.
+   - Unrelated setup controls and the host `Next Question` action remain intact.
+   - Automated tests: 15 passed, 0 failed.
+   - Rollback-safe patcher: `tools/rumble/fix-built-in-question-bank.mjs`.
+   - Safety: the patch requires item 9, refuses a missing or unexpected built-in question engine, is idempotent, and does not alter questions, answers, points, random selection, scoring, timer, turn rules, wheel, buzzer, or TV mode.
+   - Live deployment status: **not yet deployed** for the same server-access reason.
+   - Live order: apply and verify items 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 → 10 before item 11 is deployed.
 
 11. **9:16 cleanup**
    - Clean, simple, large, phone-readable.
