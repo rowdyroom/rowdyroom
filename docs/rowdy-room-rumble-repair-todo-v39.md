@@ -13,12 +13,19 @@ Stop rebuilding. Repair one isolated defect at a time.
    - Automated tests: 3 passed, 0 failed.
    - Rollback-safe patcher: `tools/rumble/fix-setup-focus.mjs`.
    - Live deployment status: **not yet deployed** because this session has no direct cPanel/server write connector and the repository has no production deployment workflow.
-   - Do not move to item 2 until the live file passes `--check`, the patch is applied with its automatic backup, and browser typing is verified.
+   - Live order: item 1 must be applied and browser-tested before item 2 is applied.
    - Do not change timer, TV, wheel, buzzer, or layout while fixing.
 
-2. **Fix Start Rumble/setup flow**
+2. **Fix Start Rumble/setup flow — CODE FIX VERIFIED**
    - Start opens setup.
-   - Setup accepts players normally.
+   - Setup accepts players normally after item 1 is installed.
+   - Root cause: `goSetup()` changed `state.page` but only called the content renderer. It never called the page router, so the intro could remain visible.
+   - Repair: clear the host hash, call `renderPage()` to switch the visible section, then persist state with `saveState(false)` to avoid a second render.
+   - Automated tests: 5 passed, 0 failed.
+   - Rollback-safe patcher: `tools/rumble/fix-start-setup-flow.mjs`.
+   - Safety: the patch refuses to run until item 1 is present and refuses an unexpected `goSetup()` implementation.
+   - Live deployment status: **not yet deployed** for the same server-access reason.
+   - Do not begin item 3 live work until items 1 and 2 are applied in order and pass browser testing.
 
 3. **Fix coin flip carryover**
    - Coin flip winner team and first player carry into the game screen.
@@ -52,4 +59,4 @@ Stop rebuilding. Repair one isolated defect at a time.
 
 ## Enforcement
 
-Do not move to the next item until the current item passes live browser testing. Every fix must update the Bible, Supabase, and GitHub and include a tested rollback path.
+Do not move to the next item in production until the current item passes live browser testing. Code preparation may continue in GitHub, but deployment must stay ordered. Every fix must update the Bible, Supabase, and GitHub and include a tested rollback path.
