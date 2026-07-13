@@ -20,6 +20,7 @@
     "test:rumble-buzzer": "node --test tools/rumble/fix-buzzer-trigger.test.mjs",
     "test:rumble-tv": "node --test tools/rumble/fix-tv-mode.test.mjs",
     "test:rumble-questions": "node --test tools/rumble/fix-built-in-question-bank.test.mjs",
+    "test:rumble-vertical": "node --test tools/rumble/fix-vertical-layout.test.mjs",
     "rumble:focus:check": "node tools/rumble/fix-setup-focus.mjs --check",
     "rumble:focus:patch": "node tools/rumble/fix-setup-focus.mjs --apply",
     "rumble:focus:restore": "node tools/rumble/fix-setup-focus.mjs --restore",
@@ -49,7 +50,10 @@
     "rumble:tv:restore": "node tools/rumble/fix-tv-mode.mjs --restore",
     "rumble:questions:check": "node tools/rumble/fix-built-in-question-bank.mjs --check",
     "rumble:questions:patch": "node tools/rumble/fix-built-in-question-bank.mjs --apply",
-    "rumble:questions:restore": "node tools/rumble/fix-built-in-question-bank.mjs --restore"
+    "rumble:questions:restore": "node tools/rumble/fix-built-in-question-bank.mjs --restore",
+    "rumble:vertical:check": "node tools/rumble/fix-vertical-layout.mjs --check",
+    "rumble:vertical:patch": "node tools/rumble/fix-vertical-layout.mjs --apply",
+    "rumble:vertical:restore": "node tools/rumble/fix-vertical-layout.mjs --restore"
   },
   "workspaces": [
     "apps/*",
