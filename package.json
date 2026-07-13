@@ -16,6 +16,7 @@
     "test:rumble-turn-display": "node --test tools/rumble/fix-current-turn-display.test.mjs",
     "test:rumble-timer": "node --test tools/rumble/fix-timer-lifecycle.test.mjs",
     "test:rumble-turn-advancement": "node --test tools/rumble/fix-turn-advancement.test.mjs",
+    "test:rumble-wheel": "node --test tools/rumble/fix-wheel-trigger.test.mjs",
     "rumble:focus:check": "node tools/rumble/fix-setup-focus.mjs --check",
     "rumble:focus:patch": "node tools/rumble/fix-setup-focus.mjs --apply",
     "rumble:focus:restore": "node tools/rumble/fix-setup-focus.mjs --restore",
@@ -33,7 +34,10 @@
     "rumble:timer:restore": "node tools/rumble/fix-timer-lifecycle.mjs --restore",
     "rumble:turn-advancement:check": "node tools/rumble/fix-turn-advancement.mjs --check",
     "rumble:turn-advancement:patch": "node tools/rumble/fix-turn-advancement.mjs --apply",
-    "rumble:turn-advancement:restore": "node tools/rumble/fix-turn-advancement.mjs --restore"
+    "rumble:turn-advancement:restore": "node tools/rumble/fix-turn-advancement.mjs --restore",
+    "rumble:wheel:check": "node tools/rumble/fix-wheel-trigger.mjs --check",
+    "rumble:wheel:patch": "node tools/rumble/fix-wheel-trigger.mjs --apply",
+    "rumble:wheel:restore": "node tools/rumble/fix-wheel-trigger.mjs --restore"
   },
   "workspaces": [
     "apps/*",
