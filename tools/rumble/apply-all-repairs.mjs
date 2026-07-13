@@ -5,7 +5,7 @@ import { basename, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { applyRumbleSetupFocusFix } from './fix-setup-focus.mjs';
-import { applyRumbleStartSetupFlowFix } from './fix-start-setup-flow.mjs';
+import { applyRumbleStartSetupFix } from './fix-start-setup-flow.mjs';
 import { applyRumbleCoinCarryoverFix } from './fix-coin-carryover.mjs';
 import { applyRumbleCurrentTurnDisplayFix } from './fix-current-turn-display.mjs';
 import { applyRumbleTimerLifecycleFix } from './fix-timer-lifecycle.mjs';
@@ -18,7 +18,7 @@ import { applyRumbleVerticalLayoutFix } from './fix-vertical-layout.mjs';
 
 export const DEFAULT_REPAIRS = Object.freeze([
   { number: 1, name: 'setup-focus', apply: applyRumbleSetupFocusFix },
-  { number: 2, name: 'start-setup-routing', apply: applyRumbleStartSetupFlowFix },
+  { number: 2, name: 'start-setup-routing', apply: applyRumbleStartSetupFix },
   { number: 3, name: 'coin-carryover', apply: applyRumbleCoinCarryoverFix },
   { number: 4, name: 'current-turn-display', apply: applyRumbleCurrentTurnDisplayFix },
   { number: 5, name: 'timer-lifecycle', apply: applyRumbleTimerLifecycleFix },
