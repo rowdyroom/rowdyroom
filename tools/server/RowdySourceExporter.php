@@ -13,7 +13,7 @@ final class RowdySourceExporter
     /** @var list<string> */
     private array $forbiddenBasenames = [
         '.env', '.env.local', '.htpasswd', 'config.php', 'config.local.php',
-        'secrets.php', 'credentials.php', 'database.php', 'wp-config.php',
+        'secrets.php', 'credentials.php', 'wp-config.php',
     ];
 
     public function __construct(
@@ -210,7 +210,7 @@ final class RowdySourceExporter
             $content
         ) ?? $content;
 
-        $secretNames = '(?:password|passwd|pass|secret|token|api[_-]?key|admin[_-]?key|client[_-]?secret|private[_-]?key)';
+        $secretNames = '(?:password|passwd|pass|db[_-]?pass(?:word)?|mysql[_-]?pass(?:word)?|database[_-]?pass(?:word)?|secret|token|api[_-]?key|admin[_-]?key|client[_-]?secret|private[_-]?key)';
         $patterns = [
             '/([\'\"]?' . $secretNames . '[\'\"]?\s*=>\s*)([\'\"])(.*?)(\2)/i',
             '/(\b' . $secretNames . '\b\s*[:=]\s*)([\'\"])(.*?)(\2)/i',
