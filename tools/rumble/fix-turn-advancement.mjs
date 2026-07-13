@@ -18,7 +18,7 @@ const TURN_HELPERS_AND_REVEAL_AFTER = `function turnPlayers(team=state.currentTe
   const active=players.filter(Boolean);
   if(active.length) return active;
   const count=Math.max(1,Number(state.matchSize)||1);
-  return Array.from({length:count},(_,i)=>\`${team==='red'?'Red':'Blue'} \${i+1}\`);
+  return Array.from({length:count},(_,i)=>(team==='red'?'Red':'Blue')+' '+(i+1));
 }
 function ensureTurnIndexes(){
   state.turnIndexes=state.turnIndexes||{red:0,blue:0};
