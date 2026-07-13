@@ -92,10 +92,17 @@ Stop rebuilding. Repair one isolated defect at a time.
    - Live deployment status: **not yet deployed** for the same server-access reason; the endpoint contract was recovered from prior deployed-source records but could not be queried live because the domain did not resolve.
    - Live order: apply and verify items 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 before item 9 is deployed.
 
-9. **Fix TV mode**
-   - Full-screen QR/queue/banner mode.
-   - No host controls.
-   - No Rumble rules panel.
+9. **Fix TV mode — CODE FIX VERIFIED**
+   - Adds a dedicated `#tv` route that shows only the Rowdy Room title, join QR/URL, current and next player, Fire/Ice player queues, and a rotating banner.
+   - The display contains no host controls, answer key, or Rumble rules panel.
+   - The existing render path keeps the TV screen synchronized with state and BroadcastChannel/local-storage updates.
+   - The host dashboard receives one navigation shortcut that opens TV mode in a separate window; `Alt+T` is also supported.
+   - The default QR points to `/companion/`; the join URL, QR image, banners, and rotation interval can be overridden through `window.ROWDY_TV_*` settings.
+   - Automated tests: 12 passed, 0 failed.
+   - Rollback-safe patcher: `tools/rumble/fix-tv-mode.mjs`.
+   - Safety: the patch requires item 8, inserts one isolated script at a guarded closing marker, is idempotent, and does not change game scoring, timer, turn rules, wheel, buzzer, or question bank.
+   - Live deployment status: **not yet deployed** for the same server-access reason; the default QR image currently uses an external QR image service unless a local image override is configured.
+   - Live order: apply and verify items 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 before item 10 is deployed.
 
 10. **Remove question upload UI**
    - Saved built-in question list.
