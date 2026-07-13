@@ -9,7 +9,11 @@
     "build": "next build",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "engine:build": "tsc -p tsconfig.json",
-    "test": "node --test dist/**/*.test.js"
+    "test": "node --test dist/**/*.test.js",
+    "test:rumble-focus": "node --test tools/rumble/fix-setup-focus.test.mjs",
+    "rumble:focus:check": "node tools/rumble/fix-setup-focus.mjs --check",
+    "rumble:focus:patch": "node tools/rumble/fix-setup-focus.mjs --apply",
+    "rumble:focus:restore": "node tools/rumble/fix-setup-focus.mjs --restore"
   },
   "workspaces": [
     "apps/*",
