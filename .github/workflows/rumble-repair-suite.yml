@@ -1,0 +1,57 @@
+name: Rumble Repair Suite
+
+on:
+  pull_request:
+    paths:
+      - 'tools/rumble/**'
+      - '.github/workflows/rumble-repair-suite.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'tools/rumble/**'
+      - '.github/workflows/rumble-repair-suite.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rumble-repairs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run complete Rumble repair suite
+        id: tests
+        shell: bash
+        run: |
+          set +e
+          node --test tools/rumble/*.test.mjs 2>&1 | tee rumble-test-output.txt
+          test_exit=${PIPESTATUS[0]}
+          echo "exit_code=${test_exit}" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Upload complete Rumble test log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rumble-test-output
+          path: rumble-test-output.txt
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Enforce test result
+        shell: bash
+        run: |
+          if [ "${{ steps.tests.outputs.exit_code }}" != "0" ]; then
+            echo "Rumble repair suite failed. Download the rumble-test-output artifact for the complete log."
+            exit 1
+          fi
