@@ -45,6 +45,7 @@ function rr_remove_tree(string $path): void
 $root = rr_temp_dir();
 try {
     rr_write($root, 'src/QueueService.php', "<?php\n\$password = 'bad-secret';\n\$jwt='eyJabcdefghijk.eyJabcdefghijk.abcdefghijklm';\n");
+    rr_write($root, 'src/Database.php', "<?php\n\$db_pass = 'database-secret';\n");
     rr_write($root, 'src/config.php', "<?php return ['password'=>'must-not-export'];");
     rr_write($root, 'src/logo.png', 'binary');
     rr_write($root, 'public_html/api/index.php', "<?php\n\$api_key = \"top-secret\";\n");
@@ -57,6 +58,7 @@ try {
     $paths = array_column($inspection['files'], 'relative_path');
 
     rr_assert(in_array('src/QueueService.php', $paths, true), 'Queue source was not collected.');
+    rr_assert(in_array('src/Database.php', $paths, true), 'Database abstraction was incorrectly excluded.');
     rr_assert(in_array('public_html/api/index.php', $paths, true), 'API source was not collected.');
     rr_assert(in_array('public_html/companion/app.js', $paths, true), 'Companion source was not collected.');
     rr_assert(!in_array('src/config.php', $paths, true), 'Forbidden config file was exported.');
@@ -71,11 +73,17 @@ try {
     rr_assert(!str_contains($queueFile['content'], 'eyJabcdefghijk'), 'JWT was not redacted.');
     rr_assert($queueFile['redacted'] === true, 'Redaction flag was not set.');
 
+    $databaseFile = array_values(array_filter(
+        $inspection['files'],
+        static fn(array $file): bool => $file['relative_path'] === 'src/Database.php'
+    ))[0];
+    rr_assert(!str_contains($databaseFile['content'], 'database-secret'), 'Database source credential was not redacted.');
+
     if (class_exists(ZipArchive::class)) {
         $zipPath = $root . '/export.zip';
         $manifest = $exporter->exportToZip($zipPath);
         rr_assert(is_file($zipPath), 'ZIP was not created.');
-        rr_assert(count($manifest['files']) === 3, 'Unexpected exported file count.');
+        rr_assert(count($manifest['files']) === 4, 'Unexpected exported file count.');
         rr_assert($manifest['security']['row_data_exported'] === false, 'Manifest incorrectly reports row data.');
 
         $zip = new ZipArchive();
@@ -85,6 +93,9 @@ try {
         $exportedQueue = $zip->getFromName('source/src/QueueService.php');
         rr_assert(is_string($exportedQueue) && str_contains($exportedQueue, '[REDACTED]'), 'Redacted source missing from ZIP.');
         rr_assert(!str_contains((string) $exportedQueue, 'bad-secret'), 'Secret leaked into ZIP.');
+        $exportedDatabase = $zip->getFromName('source/src/Database.php');
+        rr_assert(is_string($exportedDatabase), 'Database source missing from ZIP.');
+        rr_assert(!str_contains((string) $exportedDatabase, 'database-secret'), 'Database credential leaked into ZIP.');
         $zip->close();
     } else {
         echo "ZipArchive unavailable locally; archive assertions skipped.\n";
