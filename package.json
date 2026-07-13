@@ -11,9 +11,13 @@
     "engine:build": "tsc -p tsconfig.json",
     "test": "node --test dist/**/*.test.js",
     "test:rumble-focus": "node --test tools/rumble/fix-setup-focus.test.mjs",
+    "test:rumble-start-setup": "node --test tools/rumble/fix-start-setup-flow.test.mjs",
     "rumble:focus:check": "node tools/rumble/fix-setup-focus.mjs --check",
     "rumble:focus:patch": "node tools/rumble/fix-setup-focus.mjs --apply",
-    "rumble:focus:restore": "node tools/rumble/fix-setup-focus.mjs --restore"
+    "rumble:focus:restore": "node tools/rumble/fix-setup-focus.mjs --restore",
+    "rumble:start-setup:check": "node tools/rumble/fix-start-setup-flow.mjs --check",
+    "rumble:start-setup:patch": "node tools/rumble/fix-start-setup-flow.mjs --apply",
+    "rumble:start-setup:restore": "node tools/rumble/fix-start-setup-flow.mjs --restore"
   },
   "workspaces": [
     "apps/*",
