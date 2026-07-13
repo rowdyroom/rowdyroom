@@ -1,0 +1,36 @@
+name: Server Source Recovery
+
+on:
+  pull_request:
+    paths:
+      - 'tools/server/**'
+      - '.github/workflows/server-source-recovery.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'tools/server/**'
+      - '.github/workflows/server-source-recovery.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-recovery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install PHP ZIP support
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y php-cli php-zip
+      - name: Lint recovery tools
+        run: |
+          php -l tools/server/RowdySourceExporter.php
+          php -l tools/server/rowdy-source-export.php
+          php -l tools/server/rowdy-source-export-config.example.php
+          php -l tools/server/verify-source-export.php
+      - name: Run source recovery tests
+        run: php tools/server/RowdySourceExporterTest.php
