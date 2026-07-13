@@ -12,9 +12,47 @@ import { applyRumbleTimerLifecycleFix } from './fix-timer-lifecycle.mjs';
 import { applyRumbleTurnAdvancementFix } from './fix-turn-advancement.mjs';
 import { applyRumbleWheelTriggerFix } from './fix-wheel-trigger.mjs';
 import { applyRumbleBuzzerTriggerFix } from './fix-buzzer-trigger.mjs';
+import { applyRumbleBuzzerStrikeLevelsFix } from './fix-buzzer-strike-levels.mjs';
 import { applyRumbleTvModeFix } from './fix-tv-mode.mjs';
+import { applyRumbleTvModeHardeningFix } from './fix-tv-mode-hardening.mjs';
 import { applyRumbleBuiltInQuestionBankFix } from './fix-built-in-question-bank.mjs';
 import { applyRumbleVerticalLayoutFix } from './fix-vertical-layout.mjs';
+
+function composeRepairSteps(...repairs) {
+  return function applyComposedRepair(source) {
+    let working = source;
+    let changed = false;
+    const statuses = [];
+
+    for (const repair of repairs) {
+      const result = repair(working);
+      if (!result || typeof result.source !== 'string') {
+        throw new Error('Composed Rumble repair returned an invalid result.');
+      }
+      working = result.source;
+      changed ||= Boolean(result.changed);
+      statuses.push(result.status || (result.changed ? 'patched' : 'already-patched'));
+    }
+
+    return {
+      source: working,
+      changed,
+      status: changed ? 'patched' : statuses.every((status) => status === 'already-patched')
+        ? 'already-patched'
+        : statuses.join('+'),
+    };
+  };
+}
+
+const applyRumbleBuzzerStep = composeRepairSteps(
+  applyRumbleBuzzerTriggerFix,
+  applyRumbleBuzzerStrikeLevelsFix,
+);
+
+const applyRumbleTvStep = composeRepairSteps(
+  applyRumbleTvModeFix,
+  applyRumbleTvModeHardeningFix,
+);
 
 export const DEFAULT_REPAIRS = Object.freeze([
   { number: 1, name: 'setup-focus', apply: applyRumbleSetupFocusFix },
@@ -24,8 +62,8 @@ export const DEFAULT_REPAIRS = Object.freeze([
   { number: 5, name: 'timer-lifecycle', apply: applyRumbleTimerLifecycleFix },
   { number: 6, name: 'turn-advancement', apply: applyRumbleTurnAdvancementFix },
   { number: 7, name: 'wheel-trigger', apply: applyRumbleWheelTriggerFix },
-  { number: 8, name: 'buzzer-trigger', apply: applyRumbleBuzzerTriggerFix },
-  { number: 9, name: 'tv-mode', apply: applyRumbleTvModeFix },
+  { number: 8, name: 'buzzer-trigger', apply: applyRumbleBuzzerStep },
+  { number: 9, name: 'tv-mode', apply: applyRumbleTvStep },
   { number: 10, name: 'built-in-question-bank', apply: applyRumbleBuiltInQuestionBankFix },
   { number: 11, name: 'vertical-layout', apply: applyRumbleVerticalLayoutFix },
 ]);
