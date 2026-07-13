@@ -81,8 +81,16 @@ Stop rebuilding. Repair one isolated defect at a time.
    - Live deployment status: **not yet deployed** for the same server-access reason; the live wheel endpoint could not be queried from this environment because the domain did not resolve.
    - Live order: apply and verify items 1 → 2 → 3 → 4 → 5 → 6 → 7 before item 8 is deployed.
 
-8. **Fix buzzer video/animation trigger**
-   - Strike, strike 3, steal, and strike+steal states must display correctly.
+8. **Fix buzzer video/animation trigger — CODE FIX VERIFIED**
+   - Root cause: strike and steal state changes stayed inside the compact game and never triggered the separate buzzer display.
+   - Repair: send player, Fire/Ice team, and normalized buzzer event to `/api/rumble-buzzer.php?action=trigger`; fall back to direct `strike`, `steal`, or `strike_steal` actions if the trigger action is unavailable; and never block game progression when the display is offline.
+   - Ordinary first and second strikes remain local. A third strike from a Punch effect triggers the Strike 3 video. A normal third wrong answer that transfers control triggers the combined Strike 3 + Steal Opportunity video. The standalone steal helper triggers the Steal Opportunity video.
+   - Supported normalized event keys: `strike`, `steal`, and `strike_steal`, including known aliases.
+   - Automated tests: 12 passed, 0 failed.
+   - Rollback-safe patcher: `tools/rumble/fix-buzzer-trigger.mjs`.
+   - Safety: the patch requires item 7, preserves item 6 turn logic, is idempotent, refuses unexpected strike logic, records `state.buzzerSyncError`, and does not modify TV mode, scoring, question-bank UI, or layout.
+   - Live deployment status: **not yet deployed** for the same server-access reason; the endpoint contract was recovered from prior deployed-source records but could not be queried live because the domain did not resolve.
+   - Live order: apply and verify items 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 before item 9 is deployed.
 
 9. **Fix TV mode**
    - Full-screen QR/queue/banner mode.
