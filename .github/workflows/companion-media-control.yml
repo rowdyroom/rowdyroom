@@ -1,0 +1,27 @@
+name: Companion Media Control
+
+on:
+  pull_request:
+    paths:
+      - 'deploy/companion-media/**'
+      - 'tools/companion-media/**'
+      - 'supabase/migrations/20260713_companion_room_explanation_media_control.sql'
+      - 'supabase/rollback/20260713_companion_room_explanation_media_control_rollback.sql'
+      - 'docs/bible/2026-07-13-companion-room-explanation-control-law.md'
+      - '.github/workflows/companion-media-control.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'deploy/companion-media/**'
+      - 'tools/companion-media/**'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run Companion media tests
+        run: node --test tools/companion-media/*.test.mjs
