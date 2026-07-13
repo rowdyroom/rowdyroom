@@ -12,12 +12,16 @@
     "test": "node --test dist/**/*.test.js",
     "test:rumble-focus": "node --test tools/rumble/fix-setup-focus.test.mjs",
     "test:rumble-start-setup": "node --test tools/rumble/fix-start-setup-flow.test.mjs",
+    "test:rumble-coin": "node --test tools/rumble/fix-coin-carryover.test.mjs",
     "rumble:focus:check": "node tools/rumble/fix-setup-focus.mjs --check",
     "rumble:focus:patch": "node tools/rumble/fix-setup-focus.mjs --apply",
     "rumble:focus:restore": "node tools/rumble/fix-setup-focus.mjs --restore",
     "rumble:start-setup:check": "node tools/rumble/fix-start-setup-flow.mjs --check",
     "rumble:start-setup:patch": "node tools/rumble/fix-start-setup-flow.mjs --apply",
-    "rumble:start-setup:restore": "node tools/rumble/fix-start-setup-flow.mjs --restore"
+    "rumble:start-setup:restore": "node tools/rumble/fix-start-setup-flow.mjs --restore",
+    "rumble:coin:check": "node tools/rumble/fix-coin-carryover.mjs --check",
+    "rumble:coin:patch": "node tools/rumble/fix-coin-carryover.mjs --apply",
+    "rumble:coin:restore": "node tools/rumble/fix-coin-carryover.mjs --restore"
   },
   "workspaces": [
     "apps/*",
