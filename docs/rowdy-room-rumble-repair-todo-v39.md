@@ -25,10 +25,17 @@ Stop rebuilding. Repair one isolated defect at a time.
    - Rollback-safe patcher: `tools/rumble/fix-start-setup-flow.mjs`.
    - Safety: the patch refuses to run until item 1 is present and refuses an unexpected `goSetup()` implementation.
    - Live deployment status: **not yet deployed** for the same server-access reason.
-   - Do not begin item 3 live work until items 1 and 2 are applied in order and pass browser testing.
+   - Live order: item 2 must be applied and browser-tested after item 1 and before item 3.
 
-3. **Fix coin flip carryover**
+3. **Fix coin flip carryover — CODE FIX VERIFIED**
    - Coin flip winner team and first player carry into the game screen.
+   - Root cause: the coin flip chose only a team, hard-coded `currentIndex` to `0`, displayed no player name, and the coin-page **LET’S GO** action bypassed full match initialization.
+   - Repair: choose a random player from the winning team, store the selected index, display `TEAM — Player`, route the coin page correctly, preserve/clamp the selected index during initialization, and make `showGame()` delegate to `startMatch()`.
+   - Automated tests: 7 passed, 0 failed.
+   - Rollback-safe patcher: `tools/rumble/fix-coin-carryover.mjs`.
+   - Safety: the patch requires items 1 and 2, is idempotent, and refuses unexpected coin, start, or game-transition implementations.
+   - Live deployment status: **not yet deployed** for the same server-access reason.
+   - Live order: apply and verify items 1 → 2 → 3 before item 4 is deployed.
 
 4. **Fix current player/team display**
    - Keep wording simple: `Turn: Name — Team`.
