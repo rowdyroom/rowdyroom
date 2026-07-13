@@ -58,8 +58,18 @@ Stop rebuilding. Repair one isolated defect at a time.
    - Live deployment status: **not yet deployed** for the same server-access reason.
    - Live order: apply and verify items 1 → 2 → 3 → 4 → 5 before item 6 is deployed.
 
-6. **Fix automatic turn advancement**
-   - Correct/wrong/question outcomes advance to proper next player/team under rules.
+6. **Fix automatic turn advancement — CODE FIX VERIFIED**
+   - Correct answers advance to the next player on the same team unless the board is cleared.
+   - Ordinary wrong answers and timer expiry add a strike and advance to the next player on the same team.
+   - A third strike resets team strikes and transfers the turn to the opposing team’s first player.
+   - Manual next-question actions advance the active team rotation and restart the timer.
+   - New rounds alternate the starting team and advance that team’s rotation.
+   - Per-team rotation indexes are preserved independently and one-player teams wrap safely.
+   - Automated tests: 12 passed, 0 failed.
+   - Rollback-safe patcher: `tools/rumble/fix-turn-advancement.mjs`.
+   - Safety: the patch requires item 5, is idempotent, refuses unexpected outcome implementations, and does not modify wheel, buzzer animation, TV mode, question-bank UI, scoring, or layout.
+   - Live deployment status: **not yet deployed** for the same server-access reason.
+   - Live order: apply and verify items 1 → 2 → 3 → 4 → 5 → 6 before item 7 is deployed.
 
 7. **Fix wheel video/animation trigger**
    - Game action must actually trigger wheel display/overlay.
@@ -78,6 +88,21 @@ Stop rebuilding. Repair one isolated defect at a time.
 
 11. **9:16 cleanup**
    - Clean, simple, large, phone-readable.
+
+## Stream launch-readiness checkpoint
+
+Before the system is called stream-ready, verify the normal karaoke workflow separately from Rumble:
+
+- public performer sign-up submits successfully
+- duplicate and invalid sign-ups are handled safely
+- approved sign-ups enter the active queue
+- rotation order is deterministic and preserved
+- current performer and next performer agree across host and viewer screens
+- complete, skip, remove, requeue, and line-skip actions produce the expected next order
+- queue survives refresh/reconnect without losing active state
+- host controls and companion/viewer queue remain synchronized
+
+Code inspection alone is not sufficient for the live-ready label. Production endpoint and browser verification are required.
 
 ## Enforcement
 
