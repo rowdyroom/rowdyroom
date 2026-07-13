@@ -17,6 +17,7 @@
     "test:rumble-timer": "node --test tools/rumble/fix-timer-lifecycle.test.mjs",
     "test:rumble-turn-advancement": "node --test tools/rumble/fix-turn-advancement.test.mjs",
     "test:rumble-wheel": "node --test tools/rumble/fix-wheel-trigger.test.mjs",
+    "test:rumble-buzzer": "node --test tools/rumble/fix-buzzer-trigger.test.mjs",
     "rumble:focus:check": "node tools/rumble/fix-setup-focus.mjs --check",
     "rumble:focus:patch": "node tools/rumble/fix-setup-focus.mjs --apply",
     "rumble:focus:restore": "node tools/rumble/fix-setup-focus.mjs --restore",
@@ -37,7 +38,10 @@
     "rumble:turn-advancement:restore": "node tools/rumble/fix-turn-advancement.mjs --restore",
     "rumble:wheel:check": "node tools/rumble/fix-wheel-trigger.mjs --check",
     "rumble:wheel:patch": "node tools/rumble/fix-wheel-trigger.mjs --apply",
-    "rumble:wheel:restore": "node tools/rumble/fix-wheel-trigger.mjs --restore"
+    "rumble:wheel:restore": "node tools/rumble/fix-wheel-trigger.mjs --restore",
+    "rumble:buzzer:check": "node tools/rumble/fix-buzzer-trigger.mjs --check",
+    "rumble:buzzer:patch": "node tools/rumble/fix-buzzer-trigger.mjs --apply",
+    "rumble:buzzer:restore": "node tools/rumble/fix-buzzer-trigger.mjs --restore"
   },
   "workspaces": [
     "apps/*",
