@@ -23,8 +23,11 @@ Rowdy Room is a live karaoke, audience-participation, competition, community, an
 
 - [Rowdy Room Project Bible](docs/ROWDY_ROOM_BIBLE.md)
 - [Progress Status — 2026-07-13](docs/PROJECT_STATUS_2026-07-13.md)
+- [Supabase Security Audit — 2026-07-13](docs/SUPABASE_SECURITY_AUDIT_2026-07-13.md)
 - [Supabase Bible sync](supabase/seed/20260713_rowdy_room_bible_sync.sql)
-- [Supabase sync rollback](supabase/rollback/20260713_rowdy_room_bible_sync_rollback.sql)
+- [Supabase Bible sync rollback](supabase/rollback/20260713_rowdy_room_bible_sync_rollback.sql)
+- [Supabase security-audit record](supabase/seed/20260713_security_audit_record.sql)
+- [Supabase security-audit record rollback](supabase/rollback/20260713_security_audit_record_rollback.sql)
 
 ## Operating rule
 
