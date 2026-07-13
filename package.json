@@ -13,6 +13,7 @@
     "test:rumble-focus": "node --test tools/rumble/fix-setup-focus.test.mjs",
     "test:rumble-start-setup": "node --test tools/rumble/fix-start-setup-flow.test.mjs",
     "test:rumble-coin": "node --test tools/rumble/fix-coin-carryover.test.mjs",
+    "test:rumble-turn-display": "node --test tools/rumble/fix-current-turn-display.test.mjs",
     "rumble:focus:check": "node tools/rumble/fix-setup-focus.mjs --check",
     "rumble:focus:patch": "node tools/rumble/fix-setup-focus.mjs --apply",
     "rumble:focus:restore": "node tools/rumble/fix-setup-focus.mjs --restore",
@@ -21,7 +22,10 @@
     "rumble:start-setup:restore": "node tools/rumble/fix-start-setup-flow.mjs --restore",
     "rumble:coin:check": "node tools/rumble/fix-coin-carryover.mjs --check",
     "rumble:coin:patch": "node tools/rumble/fix-coin-carryover.mjs --apply",
-    "rumble:coin:restore": "node tools/rumble/fix-coin-carryover.mjs --restore"
+    "rumble:coin:restore": "node tools/rumble/fix-coin-carryover.mjs --restore",
+    "rumble:turn-display:check": "node tools/rumble/fix-current-turn-display.mjs --check",
+    "rumble:turn-display:patch": "node tools/rumble/fix-current-turn-display.mjs --apply",
+    "rumble:turn-display:restore": "node tools/rumble/fix-current-turn-display.mjs --restore"
   },
   "workspaces": [
     "apps/*",

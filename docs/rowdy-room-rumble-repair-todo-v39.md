@@ -37,8 +37,16 @@ Stop rebuilding. Repair one isolated defect at a time.
    - Live deployment status: **not yet deployed** for the same server-access reason.
    - Live order: apply and verify items 1 → 2 → 3 before item 4 is deployed.
 
-4. **Fix current player/team display**
+4. **Fix current player/team display — CODE FIX VERIFIED**
    - Keep wording simple: `Turn: Name — Team`.
+   - Root cause: the game displayed only `CURRENT: Name`, leaving the active team ambiguous.
+   - Repair: read the active team’s selected player without changing state and display `Turn: Player — Red Team` or `Turn: Player — Blue Team`.
+   - Missing-name fallback: `Red N` or `Blue N` based on the current index.
+   - Automated tests: 7 passed, 0 failed.
+   - Rollback-safe patcher: `tools/rumble/fix-current-turn-display.mjs`.
+   - Safety: the patch requires item 3, is idempotent, refuses an unexpected display implementation, and verifies that turn state is unchanged.
+   - Live deployment status: **not yet deployed** for the same server-access reason.
+   - Live order: apply and verify items 1 → 2 → 3 → 4 before item 5 is deployed.
 
 5. **Fix timer**
    - 40-second timer starts, ticks, pauses, resumes, resets, and triggers wrong answer at zero.
