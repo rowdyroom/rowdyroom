@@ -6,8 +6,14 @@ Stop rebuilding. Repair one isolated defect at a time.
 
 ## Ordered repair list
 
-1. **Fix setup/player name input focus**
+1. **Fix setup/player name input focus — CODE FIX VERIFIED**
    - Typing player names must not lose focus after one character.
+   - Root cause: each input keystroke called `saveState()`, which triggered a full render and rebuilt the setup inputs.
+   - Repair: setup inputs now persist state without requesting a render; all other state saves keep normal rendering.
+   - Automated tests: 3 passed, 0 failed.
+   - Rollback-safe patcher: `tools/rumble/fix-setup-focus.mjs`.
+   - Live deployment status: **not yet deployed** because this session has no direct cPanel/server write connector and the repository has no production deployment workflow.
+   - Do not move to item 2 until the live file passes `--check`, the patch is applied with its automatic backup, and browser typing is verified.
    - Do not change timer, TV, wheel, buzzer, or layout while fixing.
 
 2. **Fix Start Rumble/setup flow**
@@ -46,4 +52,4 @@ Stop rebuilding. Repair one isolated defect at a time.
 
 ## Enforcement
 
-Do not move to the next item until the current item passes testing. Every fix must update the Bible, Supabase, and GitHub.
+Do not move to the next item until the current item passes live browser testing. Every fix must update the Bible, Supabase, and GitHub and include a tested rollback path.
