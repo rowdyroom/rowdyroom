@@ -48,8 +48,15 @@ Stop rebuilding. Repair one isolated defect at a time.
    - Live deployment status: **not yet deployed** for the same server-access reason.
    - Live order: apply and verify items 1 → 2 → 3 → 4 before item 5 is deployed.
 
-5. **Fix timer**
+5. **Fix timer — CODE FIX VERIFIED**
    - 40-second timer starts, ticks, pauses, resumes, resets, and triggers wrong answer at zero.
+   - Root cause: the old interval reached zero without calling `wrongAnswer()`, cleared only on a later tick, left a stale interval handle, and was not reliably started by match/question/reset paths.
+   - Repair: start on match initialization, new question, round continuation, and match restart; preserve remaining time on pause/resume; reset an expired timer to 40; set zero exactly; null the interval handle; call `wrongAnswer(currentTeam)` once; and keep the timer stopped when a match completes.
+   - Automated tests: 8 passed, 0 failed.
+   - Rollback-safe patcher: `tools/rumble/fix-timer-lifecycle.mjs`.
+   - Safety: the patch requires item 4, is idempotent, refuses unexpected timer/start/reset implementations, and does not add automatic player advancement.
+   - Live deployment status: **not yet deployed** for the same server-access reason.
+   - Live order: apply and verify items 1 → 2 → 3 → 4 → 5 before item 6 is deployed.
 
 6. **Fix automatic turn advancement**
    - Correct/wrong/question outcomes advance to proper next player/team under rules.
