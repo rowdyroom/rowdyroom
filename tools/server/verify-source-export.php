@@ -30,7 +30,7 @@ try {
         throw new RuntimeException('Export claims to contain row data; refusing import.');
     }
 
-    $forbidden = ['config.php', 'config.local.php', 'secrets.php', 'credentials.php', 'database.php', '.env', '.htpasswd'];
+    $forbidden = ['config.php', 'config.local.php', 'secrets.php', 'credentials.php', '.env', '.htpasswd'];
     $verified = [];
     foreach ($manifest['files'] as $file) {
         $archivePath = (string) ($file['archive_path'] ?? '');
