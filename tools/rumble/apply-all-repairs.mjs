@@ -15,6 +15,7 @@ import { applyRumbleBuzzerTriggerFix } from './fix-buzzer-trigger.mjs';
 import { applyRumbleBuzzerStrikeLevelsFix } from './fix-buzzer-strike-levels.mjs';
 import { applyRumbleBuiltInQuestionBankFix } from './fix-built-in-question-bank.mjs';
 import { applyRumbleVerticalLayoutFix } from './fix-vertical-layout.mjs';
+import { applyRumbleHostDashboardV2Fix } from './fix-host-dashboard-v2.mjs';
 
 function composeRepairSteps(...repairs) {
   return function applyComposedRepair(source) {
@@ -58,6 +59,7 @@ export const DEFAULT_REPAIRS = Object.freeze([
   { number: 8, name: 'buzzer-trigger', apply: applyRumbleBuzzerStep },
   { number: 9, name: 'built-in-question-bank', apply: applyRumbleBuiltInQuestionBankFix },
   { number: 10, name: 'vertical-layout', apply: applyRumbleVerticalLayoutFix },
+  { number: 11, name: 'host-dashboard-v2', apply: applyRumbleHostDashboardV2Fix },
 ]);
 
 function validateRepairs(repairs) {

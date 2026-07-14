@@ -32,15 +32,15 @@ function fakeRepairs() {
   ];
 }
 
-test('default repair list contains the 10 ordered Rumble repairs', () => {
-  assert.equal(DEFAULT_REPAIRS.length, 10);
-  assert.deepEqual(DEFAULT_REPAIRS.map((step) => step.number), [1,2,3,4,5,6,7,8,9,10]);
+test('default repair list contains the 11 ordered Rumble repairs', () => {
+  assert.equal(DEFAULT_REPAIRS.length, 11);
+  assert.deepEqual(DEFAULT_REPAIRS.map((step) => step.number), [1,2,3,4,5,6,7,8,9,10,11]);
   assert.deepEqual(
     DEFAULT_REPAIRS.map((step) => step.name),
     [
       'setup-focus','start-setup-routing','coin-carryover','current-turn-display',
       'timer-lifecycle','turn-advancement','wheel-trigger','buzzer-trigger',
-      'built-in-question-bank','vertical-layout',
+      'built-in-question-bank','vertical-layout','host-dashboard-v2',
     ],
   );
   DEFAULT_REPAIRS.forEach((step) => assert.equal(typeof step.apply, 'function'));
@@ -102,7 +102,6 @@ test('creates one original backup and atomically installs the complete result', 
     repairs: fakeRepairs(),
     backupPath: backup,
   });
-
   assert.equal(result.status, 'installed');
   assert.equal(result.backupPath, backup);
   assert.equal(readFileSync(target, 'utf8'), 'base[first][second]');
@@ -147,7 +146,7 @@ test('restores an installed target from the suite backup', () => {
   assert.equal(readFileSync(target, 'utf8'), 'base');
 });
 
-test('the complete default suite can verify an already-patched source', () => {
-  assert.equal(DEFAULT_REPAIRS.length, 10);
+test('the complete default suite exposes all 11 repair functions', () => {
+  assert.equal(DEFAULT_REPAIRS.length, 11);
   DEFAULT_REPAIRS.forEach((step) => assert.equal(typeof step.apply, 'function'));
 });

@@ -20,6 +20,7 @@
     "test:rumble-buzzer": "node --test tools/rumble/fix-buzzer-trigger.test.mjs",
     "test:rumble-questions": "node --test tools/rumble/fix-built-in-question-bank.test.mjs",
     "test:rumble-vertical": "node --test tools/rumble/fix-vertical-layout.test.mjs",
+    "test:rumble-host": "node --test tools/rumble/fix-host-dashboard-v2.test.mjs",
     "rumble:focus:check": "node tools/rumble/fix-setup-focus.mjs --check",
     "rumble:focus:patch": "node tools/rumble/fix-setup-focus.mjs --apply",
     "rumble:focus:restore": "node tools/rumble/fix-setup-focus.mjs --restore",
@@ -49,7 +50,10 @@
     "rumble:questions:restore": "node tools/rumble/fix-built-in-question-bank.mjs --restore",
     "rumble:vertical:check": "node tools/rumble/fix-vertical-layout.mjs --check",
     "rumble:vertical:patch": "node tools/rumble/fix-vertical-layout.mjs --apply",
-    "rumble:vertical:restore": "node tools/rumble/fix-vertical-layout.mjs --restore"
+    "rumble:vertical:restore": "node tools/rumble/fix-vertical-layout.mjs --restore",
+    "rumble:host:check": "node tools/rumble/fix-host-dashboard-v2.mjs --check",
+    "rumble:host:patch": "node tools/rumble/fix-host-dashboard-v2.mjs --apply",
+    "rumble:host:restore": "node tools/rumble/fix-host-dashboard-v2.mjs --restore"
   },
   "workspaces": [
     "apps/*",
