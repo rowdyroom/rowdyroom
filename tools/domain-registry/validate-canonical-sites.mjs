@@ -28,6 +28,10 @@ function fail(message) {
   errors.push(message);
 }
 
+if (registry.schema_version < 2) {
+  fail('Registry schema version must include standalone TV-display ownership rules.');
+}
+
 if (registry.account_home !== '/home/ef39cr6m1vih') {
   fail('Account home must remain /home/ef39cr6m1vih unless the registry and Bible are deliberately changed.');
 }
@@ -37,7 +41,7 @@ if (registry.public_html !== '/home/ef39cr6m1vih/public_html') {
 }
 
 if (!Array.isArray(registry.domains) || registry.domains.length !== expectedHosts.length) {
-  fail(`Registry must contain exactly ${expectedHosts.length} cPanel domains.`);
+  fail(`Registry must contain exactly ${expectedHosts.length} currently registered cPanel domains.`);
 }
 
 const seen = new Set();
@@ -91,14 +95,72 @@ if (companion?.canonical_public_url !== 'https://companion.rowdyroom.site/') {
 }
 
 const game = registry.domains?.find(entry => entry.hostname === 'game.rowdyroom.site');
-const tvMode = game?.route_modes?.find(entry => entry.route === '#tv');
-if (tvMode?.public_url !== 'https://game.rowdyroom.site/#tv') {
-  fail('Rumble TV mode must remain a hash mode under https://game.rowdyroom.site/#tv.');
+if (game?.role !== 'rowdy_room_rumble_game_only') {
+  fail('game.rowdyroom.site must remain Rumble-game-only.');
+}
+if (Array.isArray(game?.route_modes) && game.route_modes.some(entry => entry?.route === '#tv')) {
+  fail('The standalone TV display must not be registered as a #tv game route.');
+}
+if (!Array.isArray(game?.prohibited_roles) || !game.prohibited_roles.includes('live_show_tv_display')) {
+  fail('The game registry must explicitly prohibit ownership of the live-show TV display.');
+}
+
+const tv = registry.planned_domains?.find(entry => entry.hostname === 'tv.rowdyroom.site');
+if (!tv) {
+  fail('Missing reserved standalone TV domain tv.rowdyroom.site.');
+} else {
+  if (tv.desired_public_url !== 'https://tv.rowdyroom.site/') {
+    fail('Standalone TV desired public URL must be https://tv.rowdyroom.site/.');
+  }
+  if (tv.desired_document_root !== '/home/ef39cr6m1vih/public_html/tv.rowdyroom.site') {
+    fail('Standalone TV desired document root must be /home/ef39cr6m1vih/public_html/tv.rowdyroom.site.');
+  }
+  if (tv.status !== 'pending_cpanel_creation_and_live_deployment') {
+    fail('Standalone TV must remain pending until cPanel creation and live verification are complete.');
+  }
+  if (tv.role !== 'standalone_live_show_tv_display') {
+    fail('tv.rowdyroom.site must be registered as the standalone live-show TV display.');
+  }
+
+  const requiredFields = [
+    'signup_qr_code',
+    'rotating_information_banner',
+    'now_performing',
+    'up_next',
+    'next_five_performers',
+    'estimated_wait_time'
+  ];
+  for (const field of requiredFields) {
+    if (!tv.allowed_display_fields?.includes(field)) {
+      fail(`Standalone TV allowed-display contract is missing ${field}.`);
+    }
+  }
+
+  const forbiddenFields = [
+    'game_rules',
+    'rumble_scores',
+    'fire_team',
+    'ice_team',
+    'strikes',
+    'steal_status',
+    'wheel_results',
+    'buzzer_events',
+    'game_host_controls',
+    'answer_board'
+  ];
+  for (const field of forbiddenFields) {
+    if (!tv.forbidden_display_fields?.includes(field)) {
+      fail(`Standalone TV forbidden-display contract is missing ${field}.`);
+    }
+  }
 }
 
 const pathOnlyNames = new Set((registry.registered_path_only_surfaces ?? []).map(entry => entry.name));
 for (const required of ['mission_control', 'rumble_wheel_display', 'rumble_buzzer_display']) {
   if (!pathOnlyNames.has(required)) fail(`Missing registered path-only surface: ${required}`);
+}
+if (pathOnlyNames.has('tv_display') || pathOnlyNames.has('audience_screen')) {
+  fail('The standalone TV display must not be registered as a path-only product.');
 }
 
 const forbiddenAliases = [
@@ -111,7 +173,8 @@ const forbiddenAliases = [
   'https://rowdyroom.site/render',
   'https://rowdyroom.site/songfinder',
   'https://rowdyroom.site/videomaker',
-  'https://rowdyroom.site/privacypolicy'
+  'https://rowdyroom.site/privacypolicy',
+  'https://game.rowdyroom.site/#tv'
 ];
 
 const scannableExtensions = new Set([
@@ -121,6 +184,7 @@ const scannableExtensions = new Set([
 const scanExclusions = [
   'config/canonical-sites.json',
   'docs/bible/2026-07-14-canonical-domain-and-document-root-law.md',
+  'docs/bible/2026-07-14-standalone-tv-display-law.md',
   'docs/operations/2026-07-14-cpanel-site-inventory.md',
   'tools/domain-registry/validate-canonical-sites.mjs',
   '.github/workflows/domain-registry.yml'
@@ -150,7 +214,7 @@ function scanChangedFiles(baseRef) {
     const text = readFileSync(file, 'utf8');
     for (const alias of forbiddenAliases) {
       if (text.includes(alias)) {
-        fail(`${file} introduces noncanonical public URL ${alias}. Use the registered subdomain instead.`);
+        fail(`${file} introduces prohibited or noncanonical public URL ${alias}. Use the registry-defined product address instead.`);
       }
     }
   }
@@ -169,4 +233,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Canonical domain registry valid: ${expectedHosts.length} domains and ${pathOnlyNames.size} path-only surfaces.`);
+console.log(`Canonical domain registry valid: ${expectedHosts.length} active domains, ${pathOnlyNames.size} path-only surfaces, and standalone TV reserved independently.`);
