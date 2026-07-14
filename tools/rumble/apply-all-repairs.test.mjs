@@ -32,15 +32,15 @@ function fakeRepairs() {
   ];
 }
 
-test('default repair list contains the 11 ordered Rumble repairs', () => {
-  assert.equal(DEFAULT_REPAIRS.length, 11);
-  assert.deepEqual(DEFAULT_REPAIRS.map((step) => step.number), [1,2,3,4,5,6,7,8,9,10,11]);
+test('default repair list contains the 10 ordered Rumble repairs', () => {
+  assert.equal(DEFAULT_REPAIRS.length, 10);
+  assert.deepEqual(DEFAULT_REPAIRS.map((step) => step.number), [1,2,3,4,5,6,7,8,9,10]);
   assert.deepEqual(
     DEFAULT_REPAIRS.map((step) => step.name),
     [
       'setup-focus','start-setup-routing','coin-carryover','current-turn-display',
       'timer-lifecycle','turn-advancement','wheel-trigger','buzzer-trigger',
-      'tv-mode','built-in-question-bank','vertical-layout',
+      'built-in-question-bank','vertical-layout',
     ],
   );
   DEFAULT_REPAIRS.forEach((step) => assert.equal(typeof step.apply, 'function'));
@@ -148,6 +148,6 @@ test('restores an installed target from the suite backup', () => {
 });
 
 test('the complete default suite can verify an already-patched source', () => {
-  assert.equal(DEFAULT_REPAIRS.length, 11);
+  assert.equal(DEFAULT_REPAIRS.length, 10);
   DEFAULT_REPAIRS.forEach((step) => assert.equal(typeof step.apply, 'function'));
 });

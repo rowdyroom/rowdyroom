@@ -13,8 +13,6 @@ import { applyRumbleTurnAdvancementFix } from './fix-turn-advancement.mjs';
 import { applyRumbleWheelTriggerFix } from './fix-wheel-trigger.mjs';
 import { applyRumbleBuzzerTriggerFix } from './fix-buzzer-trigger.mjs';
 import { applyRumbleBuzzerStrikeLevelsFix } from './fix-buzzer-strike-levels.mjs';
-import { applyRumbleTvModeFix } from './fix-tv-mode.mjs';
-import { applyRumbleTvModeHardeningFix } from './fix-tv-mode-hardening.mjs';
 import { applyRumbleBuiltInQuestionBankFix } from './fix-built-in-question-bank.mjs';
 import { applyRumbleVerticalLayoutFix } from './fix-vertical-layout.mjs';
 
@@ -49,11 +47,6 @@ const applyRumbleBuzzerStep = composeRepairSteps(
   applyRumbleBuzzerStrikeLevelsFix,
 );
 
-const applyRumbleTvStep = composeRepairSteps(
-  applyRumbleTvModeFix,
-  applyRumbleTvModeHardeningFix,
-);
-
 export const DEFAULT_REPAIRS = Object.freeze([
   { number: 1, name: 'setup-focus', apply: applyRumbleSetupFocusFix },
   { number: 2, name: 'start-setup-routing', apply: applyRumbleStartSetupFix },
@@ -63,9 +56,8 @@ export const DEFAULT_REPAIRS = Object.freeze([
   { number: 6, name: 'turn-advancement', apply: applyRumbleTurnAdvancementFix },
   { number: 7, name: 'wheel-trigger', apply: applyRumbleWheelTriggerFix },
   { number: 8, name: 'buzzer-trigger', apply: applyRumbleBuzzerStep },
-  { number: 9, name: 'tv-mode', apply: applyRumbleTvStep },
-  { number: 10, name: 'built-in-question-bank', apply: applyRumbleBuiltInQuestionBankFix },
-  { number: 11, name: 'vertical-layout', apply: applyRumbleVerticalLayoutFix },
+  { number: 9, name: 'built-in-question-bank', apply: applyRumbleBuiltInQuestionBankFix },
+  { number: 10, name: 'vertical-layout', apply: applyRumbleVerticalLayoutFix },
 ]);
 
 function validateRepairs(repairs) {

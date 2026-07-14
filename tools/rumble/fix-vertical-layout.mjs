@@ -4,7 +4,7 @@ import { copyFileSync, readFileSync, renameSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const ITEM_TEN_PREREQUISITE = 'id="rowdy-built-in-question-bank-repair"';
+const ITEM_NINE_PREREQUISITE = 'id="rowdy-built-in-question-bank-repair"';
 const BODY_MARKER = '</body>\n</html>';
 const HEAD_MARKER = '<head>';
 const VIEWPORT_CONTENT = 'width=device-width, initial-scale=1, viewport-fit=cover';
@@ -179,7 +179,7 @@ html.rowdy-rumble-responsive #strikesBox{
     white-space:normal;
     line-height:1.1;
   }
-  html.rowdy-rumble-responsive [id*="overlay" i]:not(#tvPage),
+  html.rowdy-rumble-responsive [id*="overlay" i],
   html.rowdy-rumble-responsive [class*="overlay" i]{
     box-sizing:border-box;
     max-width:100vw;
@@ -259,8 +259,8 @@ export function applyRumbleVerticalLayoutFix(source) {
   if (source.includes('id="rowdy-vertical-layout-repair"')) {
     return { source, changed: false, status: 'already-patched' };
   }
-  if (!source.includes(ITEM_TEN_PREREQUISITE)) {
-    throw new Error('Prerequisite missing: apply Rumble repair items 1 through 10 before item 11. No file was changed.');
+  if (!source.includes(ITEM_NINE_PREREQUISITE)) {
+    throw new Error('Prerequisite missing: apply Rumble repair items 1 through 9 before item 10. No file was changed.');
   }
 
   const markerCount = source.split(BODY_MARKER).length - 1;

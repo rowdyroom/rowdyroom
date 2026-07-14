@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { applyRumbleVerticalLayoutFix } from './fix-vertical-layout.mjs';
 
+const forbiddenTvPageSelector = '#' + 'tvPage';
 const gameLogic = `function wrongAnswer(team=state.currentTeam){state.overlay='STRIKE';saveState();}
 function pickQuestion(){return QUESTION_BANK[0];}
 function punchAttack(){return 'POWER PUNCH';}`;
@@ -102,17 +103,17 @@ test('uses safe-area padding and a guarded dynamic viewport height', () => {
   assert.match(result.source, /Math\.max\(window\.innerHeight\|\|0,320\)\+'px'/);
 });
 
-test('constrains overlays so full-screen messages cannot clip', () => {
+test('constrains game overlays so full-screen messages cannot clip', () => {
   const result = applyRumbleVerticalLayoutFix(fixture);
-  assert.match(result.source, /\[id\*="overlay" i\]:not\(#tvPage\),/);
+  assert.match(result.source, /\[id\*="overlay" i\],/);
   assert.match(result.source, /max-height:var\(--rr-viewport-height\)/);
   assert.match(result.source, /overflow:auto/);
 });
 
-test('preserves hidden sections and does not rewrite the dedicated TV page', () => {
+test('preserves hidden game sections without TV-specific selectors', () => {
   const result = applyRumbleVerticalLayoutFix(fixture);
   assert.match(result.source, /#app>section\.hidden\{\s*display:none!important;/);
-  assert.doesNotMatch(result.source, /#tvPage:not\(\.hidden\)/);
+  assert.equal(result.source.includes(forbiddenTvPageSelector), false);
 });
 
 test('includes a compact fallback for shorter portrait screens', () => {
@@ -149,7 +150,7 @@ test('is idempotent after the patch is applied', () => {
   assert.equal(twice.source, once.source);
 });
 
-test('refuses to run before repair item 10', () => {
+test('refuses to run before repair item 9', () => {
   const source = fixture.replace('<script id="rowdy-built-in-question-bank-repair"></script>', '');
   assert.throws(() => applyRumbleVerticalLayoutFix(source), /Prerequisite missing/);
 });

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { execFileSync } from 'node:child_process';
-import { readFileSync, statSync } from 'node:fs';
+import { existsSync, readFileSync, statSync } from 'node:fs';
 import { extname, resolve } from 'node:path';
 
 const registryPath = resolve('config/canonical-sites.json');
@@ -163,6 +163,21 @@ if (pathOnlyNames.has('tv_display') || pathOnlyNames.has('audience_screen')) {
   fail('The standalone TV display must not be registered as a path-only product.');
 }
 
+const retiredRumbleTvPaths = [
+  'tools/rumble/fix-tv-mode.mjs',
+  'tools/rumble/fix-tv-mode.test.mjs',
+  'tools/rumble/fix-tv-mode-hardening.mjs',
+  'tools/rumble/fix-tv-mode-hardening.test.mjs',
+  'docs/bible/2026-07-13-rumble-tv-mode-repair.md',
+  'supabase/seed/20260713_rumble_tv_mode_repair.sql',
+  'supabase/rollback/20260713_rumble_tv_mode_repair_rollback.sql'
+];
+for (const path of retiredRumbleTvPaths) {
+  if (existsSync(resolve(path))) {
+    fail(`Retired game-owned TV file must remain absent: ${path}`);
+  }
+}
+
 const forbiddenAliases = [
   'https://rowdyroom.site/companion',
   'https://rowdyroom.site/game',
@@ -177,6 +192,15 @@ const forbiddenAliases = [
   'https://game.rowdyroom.site/#tv'
 ];
 
+const forbiddenRumbleTvMarkers = [
+  'rowdy-tv-mode-repair',
+  'rowdy-tv-mode-hardening',
+  'OPEN TV MODE',
+  '#tvPage',
+  "location.hash==='#tv'",
+  "location.hash === '#tv'"
+];
+
 const scannableExtensions = new Set([
   '.html', '.htm', '.js', '.mjs', '.cjs', '.jsx', '.ts', '.tsx', '.php', '.md', '.json', '.yaml', '.yml'
 ]);
@@ -186,6 +210,7 @@ const scanExclusions = [
   'docs/bible/2026-07-14-canonical-domain-and-document-root-law.md',
   'docs/bible/2026-07-14-standalone-tv-display-law.md',
   'docs/operations/2026-07-14-cpanel-site-inventory.md',
+  'docs/operations/2026-07-14-cleanup-batch-1-rumble-tv-retirement.md',
   'tools/domain-registry/validate-canonical-sites.mjs',
   '.github/workflows/domain-registry.yml'
 ];
@@ -217,6 +242,14 @@ function scanChangedFiles(baseRef) {
         fail(`${file} introduces prohibited or noncanonical public URL ${alias}. Use the registry-defined product address instead.`);
       }
     }
+
+    if (file.startsWith('tools/rumble/')) {
+      for (const marker of forbiddenRumbleTvMarkers) {
+        if (text.includes(marker)) {
+          fail(`${file} reintroduces prohibited game-owned TV marker ${marker}. Rumble and the standalone TV display must remain separate.`);
+        }
+      }
+    }
   }
 }
 
@@ -233,4 +266,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Canonical domain registry valid: ${expectedHosts.length} active domains, ${pathOnlyNames.size} path-only surfaces, and standalone TV reserved independently.`);
+console.log(`Canonical domain registry valid: ${expectedHosts.length} active domains, ${pathOnlyNames.size} path-only surfaces, standalone TV reserved independently, and game-owned TV source retired.`);

@@ -1,10 +1,13 @@
-# Rumble Buzzer and TV Mode Law
+# Rumble Buzzer Law
 
 **Status:** Active source-of-truth amendment  
 **Date:** 2026-07-13  
-**Applies to:** Rumble game, buzzer API, buzzer display, video assets, TV display, installer, tests, deployment, and rollback
+**Updated:** 2026-07-14  
+**Applies to:** Rumble game, buzzer API, buzzer display, video assets, tests, deployment, and rollback
 
-This amendment corrects the prior incomplete buzzer contract. It is part of the Rowdy Room Bible and must be followed by every future Rumble implementation.
+> Historical filename retained so existing references do not break. All former TV-mode provisions in this document were superseded and removed. The standalone TV display is governed only by `docs/bible/2026-07-14-standalone-tv-display-law.md` and is independent from Rumble.
+
+This amendment defines the required Rumble buzzer contract. It is part of the Rowdy Room Bible and must be followed by every future Rumble implementation.
 
 ## 1. Non-negotiable buzzer sequence
 
@@ -62,38 +65,18 @@ For a normal third wrong answer:
 
 This ordering prevents the combined animation from replacing or hiding the Strike 3 animation.
 
-## 5. TV mode law
+## 5. TV separation law
 
-Rumble must provide one separate viewer-facing TV route:
+Rumble does not own, host, route, launch, or control the standalone Rowdy Room TV display.
 
-```text
-#tv
-```
+The following are prohibited in Rumble source and deployment tooling:
 
-The host dashboard must include an **OPEN TV MODE** control that opens this route in a separate window.
+- a `#tv` game route
+- an `OPEN TV MODE` game control
+- karaoke signup or rotation panels embedded in the game
+- dependencies on the standalone TV site
 
-TV mode must:
-
-- fill the entire display
-- hide every other game/host section
-- contain no host controls
-- contain no answer key
-- contain no rules panel
-- show current player and team
-- show next player and team
-- show Fire and Ice player queues with the active player highlighted
-- show the rotating Rowdy Room banner
-- show a QR code and readable URL for the production Companion page
-- update whenever the game state changes
-- remain suitable for Window Capture or Browser Capture in TikTok LIVE Studio
-
-The default Companion destination is exactly:
-
-```text
-https://rowdyroom.site/companion/
-```
-
-It must not inherit the `game.rowdyroom.site` origin.
+Rumble may continue to use its dedicated Wheel and Buzzer displays because those are game effects. They are not the standalone live-show TV display.
 
 ## 6. Verification law
 
@@ -104,7 +87,7 @@ No change may be described as working or stream-ready until all applicable level
 3. required video-asset check
 4. rollback verification
 5. deployment verification
-6. browser test of Strike 1, Strike 2, Strike 3, Strike 3 + Steal, standalone Steal, and TV mode
+6. browser test of Strike 1, Strike 2, Strike 3, Strike 3 + Steal, and standalone Steal
 
 Code verification alone is not live deployment or browser verification.
 

@@ -4,7 +4,7 @@ import { copyFileSync, readFileSync, renameSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const ITEM_NINE_PREREQUISITE = 'id="rowdy-tv-mode-repair"';
+const ITEM_EIGHT_PREREQUISITE = 'function buzzerStrikeEvent(count){';
 const BODY_MARKER = '</body>\n</html>';
 const LEGACY_IDS = [
   'bulkQuestions',
@@ -116,8 +116,8 @@ export function applyRumbleBuiltInQuestionBankFix(source) {
   if (source.includes('id="rowdy-built-in-question-bank-repair"')) {
     return { source, changed: false, status: 'already-patched' };
   }
-  if (!source.includes(ITEM_NINE_PREREQUISITE)) {
-    throw new Error('Prerequisite missing: apply Rumble repair items 1 through 9 before item 10. No file was changed.');
+  if (!source.includes(ITEM_EIGHT_PREREQUISITE)) {
+    throw new Error('Prerequisite missing: apply Rumble repair items 1 through 8 before item 9. No file was changed.');
   }
   assertBuiltInQuestionBank(source);
 
