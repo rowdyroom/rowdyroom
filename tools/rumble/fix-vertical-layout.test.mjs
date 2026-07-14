@@ -102,17 +102,17 @@ test('uses safe-area padding and a guarded dynamic viewport height', () => {
   assert.match(result.source, /Math\.max\(window\.innerHeight\|\|0,320\)\+'px'/);
 });
 
-test('constrains overlays so full-screen messages cannot clip', () => {
+test('constrains game overlays so full-screen messages cannot clip', () => {
   const result = applyRumbleVerticalLayoutFix(fixture);
-  assert.match(result.source, /\[id\*="overlay" i\]:not\(#tvPage\),/);
+  assert.match(result.source, /\[id\*="overlay" i\],/);
   assert.match(result.source, /max-height:var\(--rr-viewport-height\)/);
   assert.match(result.source, /overflow:auto/);
 });
 
-test('preserves hidden sections and does not rewrite the dedicated TV page', () => {
+test('preserves hidden game sections without TV-specific selectors', () => {
   const result = applyRumbleVerticalLayoutFix(fixture);
   assert.match(result.source, /#app>section\.hidden\{\s*display:none!important;/);
-  assert.doesNotMatch(result.source, /#tvPage:not\(\.hidden\)/);
+  assert.doesNotMatch(result.source, /#tvPage/);
 });
 
 test('includes a compact fallback for shorter portrait screens', () => {
@@ -149,7 +149,7 @@ test('is idempotent after the patch is applied', () => {
   assert.equal(twice.source, once.source);
 });
 
-test('refuses to run before repair item 10', () => {
+test('refuses to run before repair item 9', () => {
   const source = fixture.replace('<script id="rowdy-built-in-question-bank-repair"></script>', '');
   assert.throws(() => applyRumbleVerticalLayoutFix(source), /Prerequisite missing/);
 });
