@@ -1,42 +1,44 @@
-# Rumble Repair Completion Ledger v39
+# Rumble Repair Completion Ledger v40
+
+> Historical filename retained so existing references do not break. Version 40 removes the obsolete game-owned TV repair from the active Rumble sequence.
 
 ## Status
 
-All 11 ordered Rumble code repairs are implemented, automated, rollback-safe, and merged or ready for final merge. Production deployment and browser verification remain pending because direct cPanel, SSH, SFTP, and browser access are not available in this session.
+The active Rumble repair program contains 10 ordered code repairs. The standalone Rowdy Room TV display is a separate product at `tv.rowdyroom.site` and is not part of this ledger, the game file, or the Rumble installer.
 
-## Completed repair sequence
+Production deployment and browser verification remain separate from source verification.
 
-| # | Repair | Tests | Patcher |
-|---:|---|---:|---|
-| 1 | Setup/player-name focus | 3 | `tools/rumble/fix-setup-focus.mjs` |
-| 2 | Start Rumble/setup routing | 5 | `tools/rumble/fix-start-setup-flow.mjs` |
-| 3 | Coin winner and first-player carryover | 7 | `tools/rumble/fix-coin-carryover.mjs` |
-| 4 | Current player/team display | 7 | `tools/rumble/fix-current-turn-display.mjs` |
-| 5 | 40-second timer lifecycle | 8 | `tools/rumble/fix-timer-lifecycle.mjs` |
-| 6 | Automatic player/team advancement | 12 | `tools/rumble/fix-turn-advancement.mjs` |
-| 7 | Punch Wheel display trigger | 9 | `tools/rumble/fix-wheel-trigger.mjs` |
-| 8 | Strike/steal buzzer display trigger | 12 | `tools/rumble/fix-buzzer-trigger.mjs` |
-| 9 | Isolated QR/queue/banner TV mode | 12 | `tools/rumble/fix-tv-mode.mjs` |
-| 10 | Built-in-only non-repeating question bank | 15 | `tools/rumble/fix-built-in-question-bank.mjs` |
-| 11 | Responsive 9:16 vertical layout | 20 | `tools/rumble/fix-vertical-layout.mjs` |
+## Active repair sequence
 
-**Automated total: 110 passed, 0 failed.**
+| # | Repair | Patcher |
+|---:|---|---|
+| 1 | Setup/player-name focus | `tools/rumble/fix-setup-focus.mjs` |
+| 2 | Start Rumble/setup routing | `tools/rumble/fix-start-setup-flow.mjs` |
+| 3 | Coin winner and first-player carryover | `tools/rumble/fix-coin-carryover.mjs` |
+| 4 | Current player/team display | `tools/rumble/fix-current-turn-display.mjs` |
+| 5 | 40-second timer lifecycle | `tools/rumble/fix-timer-lifecycle.mjs` |
+| 6 | Automatic player/team advancement | `tools/rumble/fix-turn-advancement.mjs` |
+| 7 | Punch Wheel display trigger | `tools/rumble/fix-wheel-trigger.mjs` |
+| 8 | Strike/steal buzzer display trigger and strike levels | `tools/rumble/fix-buzzer-trigger.mjs` and `tools/rumble/fix-buzzer-strike-levels.mjs` |
+| 9 | Built-in-only non-repeating question bank | `tools/rumble/fix-built-in-question-bank.mjs` |
+| 10 | Responsive 9:16 vertical layout | `tools/rumble/fix-vertical-layout.mjs` |
 
-## Item 11 result
+The active automated suite determines the current test count. Old totals that included Rumble TV tests are historical and must not be used as the current baseline.
+
+## Responsive layout result
 
 The responsive layer:
 
 - normalizes the mobile viewport and enables safe-area support
 - uses dynamic viewport height for mobile browser chrome and orientation changes
 - changes portrait/narrow game, setup, and host surfaces to a centered single-column flow
-- makes question, answers, scores, timer, current-player, and strike text readable with responsive `clamp()` sizing
+- makes question, answers, scores, timer, current-player, and strike text readable with responsive sizing
 - gives buttons and inputs a 44-pixel minimum touch target and at least 16-pixel input text
 - prevents horizontal overflow and allows vertical scrolling when content exceeds the screen
-- constrains overlays so they cannot clip outside the viewport
+- constrains game overlays so they cannot clip outside the viewport
 - compresses spacing on short portrait screens
 - honors reduced-motion preferences
-- leaves the dedicated `#tv` route separate
-- preserves existing game logic byte-for-byte
+- preserves existing game logic
 
 Runtime marker:
 
@@ -56,13 +58,12 @@ Apply and browser-test each repair in order against the confirmed production Rum
 5. timer lifecycle
 6. turn advancement
 7. wheel trigger
-8. buzzer trigger
-9. TV mode
-10. built-in question bank
-11. vertical layout
+8. buzzer trigger and strike levels
+9. built-in question bank
+10. vertical layout
 ```
 
-Likely target from the prior server scan:
+Canonical target:
 
 ```text
 /home/ef39cr6m1vih/public_html/game.rowdyroom.site/index.html
@@ -88,39 +89,29 @@ Do not call Rumble production-ready until the live file passes:
 - current player/team display is correct
 - timer starts, pauses, resumes, resets, and handles zero exactly once
 - correct, wrong, timeout, third-strike, question, and round transitions advance correctly
-- wheel video and game effect match
-- Strike 3, Steal, and combined buzzer videos match game state
-- `#tv` contains only QR, current/next, team queues, and banner
+- Wheel video and game effect match
+- Strike 1, Strike 2, Strike 3, Steal, and combined buzzer videos match game state
 - legacy question uploads are absent and built-in questions do not repeat before exhaustion
 - portrait 9:16 screens remain readable with no clipped content or controls
+- no `#tv` route, TV launcher, karaoke queue, signup QR, or standalone-TV dependency exists in Rumble
 - rollback is tested before the show window
+
+## Separate standalone TV acceptance
+
+The standalone TV display is governed by `docs/bible/2026-07-14-standalone-tv-display-law.md`. Its signup QR, rotating banner, Now Performing, Up Next, next five performers, and estimated wait time are tested independently from Rumble.
 
 ## Stream launch-readiness checkpoint
 
-The Supabase karaoke queue core is hardened and has passed transactional tests for:
+The Supabase karaoke queue core is the canonical queue source. Full-show readiness requires live verification of:
 
-- public sign-up
-- duplicate rejection
-- deterministic ordering
-- one current performer
-- one open performance
-- performer switching and completion
-- self-removal
-- line skips and Boost Point movement
-- wallet and ledger accounting
-
-The full show is **not yet labeled stream-ready** because the deployed Mission Control/Companion stack appears to use a separate PHP/MySQL queue whose source is not in GitHub and cannot currently be inspected or live-tested. GitHub issue #11 tracks that production blocker.
-
-Before the full system is called stream-ready, the actual live Mission Control/Companion workflow must verify:
-
-- public sign-up and approval
+- public signup
 - deterministic queue and rotation
-- matching current/next performer across host and viewer screens
+- matching current and next performer across Mission Control, Companion, and the standalone TV display
 - complete, skip, remove, requeue, reorder, and line-skip actions
-- refresh/reconnect persistence
-- host/Companion synchronization
-- removal of all test records
+- refresh and reconnect persistence
+- host and viewer synchronization
+- removal of test records
 
 ## Enforcement
 
-GitHub code completion is not live completion. Production status changes only after ordered deployment and browser testing against the actual server files and actual live queue backend.
+GitHub code completion is not live completion. Production status changes only after ordered deployment and browser testing against the actual server files and live queue backend.
