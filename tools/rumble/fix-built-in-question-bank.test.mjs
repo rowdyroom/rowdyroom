@@ -8,6 +8,7 @@ const bank = `const QUESTION_BANK=[
   {question:'Q3',answers:['A3','B3'],points:[10,5]}
 ];`;
 const picker = `function pickQuestion(){let available=QUESTION_BANK.map((_,i)=>i).filter(i=>!state.used.includes(i)); if(!available.length){state.used=[]; available=QUESTION_BANK.map((_,i)=>i);} const idx=available[Math.floor(Math.random()*available.length)]; state.used.push(idx); state.currentQuestion=QUESTION_BANK[idx]; state.revealed=[]; state.pool=0; state.timer=40;}`;
+const buzzerPrerequisite = `function buzzerStrikeEvent(count){const strikeCount=Math.max(1,Math.min(3,Number(count)||1));return 'strike_'+strikeCount;}`;
 const legacyUi = `<section id="questionTools">
   <h3 class="title">Question Bank (Max 2000)</h3>
   <textarea id="bulkQuestions" placeholder="Question | Answer1, Answer2, Answer3 | Points1, Points2, Points3"></textarea>
@@ -28,8 +29,8 @@ const fixture = `<html>
 ${bank}
 const state={used:[],revealed:[],pool:0,timer:40,currentQuestion:null};
 ${picker}
+${buzzerPrerequisite}
 </script>
-<script id="rowdy-tv-mode-repair"></script>
 </body>
 </html>`;
 
@@ -50,7 +51,7 @@ test('preserves the built-in QUESTION_BANK byte-for-byte', () => {
 test('preserves the non-repeating random pickQuestion implementation byte-for-byte', () => {
   const result = applyRumbleBuiltInQuestionBankFix(fixture);
   assert.ok(result.source.includes(picker));
-  assert.match(result.source, /QUESTION_BANK\.map\(\(_,\s*i\)=>i\)\.filter\(i=>!state\.used\.includes\(i\)\)/);
+  assert.match(result.source, /QUESTION_BANK\.map\(\(_,[ ]*i\)=>i\)\.filter\(i=>!state\.used\.includes\(i\)\)/);
   assert.match(result.source, /if\(!available\.length\)\{state\.used=\[\]/);
 });
 
@@ -111,8 +112,8 @@ test('is idempotent after the patch is applied', () => {
   assert.equal(twice.source, once.source);
 });
 
-test('refuses to run before repair item 9', () => {
-  const source = fixture.replace('<script id="rowdy-tv-mode-repair"></script>', '');
+test('refuses to run before repair item 8', () => {
+  const source = fixture.replace(buzzerPrerequisite, '');
   assert.throws(() => applyRumbleBuiltInQuestionBankFix(source), /Prerequisite missing/);
 });
 
