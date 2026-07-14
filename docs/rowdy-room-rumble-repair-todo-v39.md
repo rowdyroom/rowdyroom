@@ -1,10 +1,10 @@
-# Rumble Repair Completion Ledger v40
+# Rumble Repair Completion Ledger v41
 
-> Historical filename retained so existing references do not break. Version 40 removes the obsolete game-owned TV repair from the active Rumble sequence.
+> Historical filename retained so existing references do not break. Version 41 adds the focused private Rumble host dashboard and corrected host keybind contract as repair item 11.
 
 ## Status
 
-The active Rumble repair program contains 10 ordered code repairs. The standalone Rowdy Room TV display is a separate product at `tv.rowdyroom.site` and is not part of this ledger, the game file, or the Rumble installer.
+The active Rumble repair program contains 11 ordered code repairs. The standalone Rowdy Room TV display is a separate product at `tv.rowdyroom.site` and is not part of this ledger, the game file, or the Rumble installer.
 
 Production deployment and browser verification remain separate from source verification.
 
@@ -22,6 +22,7 @@ Production deployment and browser verification remain separate from source verif
 | 8 | Strike/steal buzzer display trigger and strike levels | `tools/rumble/fix-buzzer-trigger.mjs` and `tools/rumble/fix-buzzer-strike-levels.mjs` |
 | 9 | Built-in-only non-repeating question bank | `tools/rumble/fix-built-in-question-bank.mjs` |
 | 10 | Responsive 9:16 vertical layout | `tools/rumble/fix-vertical-layout.mjs` |
+| 11 | Focused private host dashboard and corrected keybinds | `tools/rumble/fix-host-dashboard-v2.mjs` |
 
 The active automated suite determines the current test count. Old totals that included Rumble TV tests are historical and must not be used as the current baseline.
 
@@ -46,6 +47,20 @@ Runtime marker:
 window.ROWDY_LAYOUT_MODE = 'responsive_9_16';
 ```
 
+## Focused host dashboard result
+
+The private `#host` dashboard now owns the game-host role. The general Rowdy Room Mission Control application does not control Rumble matches.
+
+The focused dashboard shows current player, Fire/Ice team, question, private answer key, timer status, strikes, lifelines, and resurrection inventory. It permits Next Player, Next Question, Lifeline, Resurrection, Open Game Screen, Lock, and confirmed Emergency Reset.
+
+It does not expose manual Wheel, Punch Wheel, Power Punch, or Buzzer controls. The `0` key calls the real wrong-answer action once; `P` and `O` are blocked; backtick delegates once to `useLifeline('hint')`; and `/` delegates once to `useResurrect()`.
+
+Runtime marker:
+
+```javascript
+window.ROWDY_RUMBLE_HOST_DASHBOARD_VERSION = '2.0.0';
+```
+
 ## Required production deployment order
 
 Apply and browser-test each repair in order against the confirmed production Rumble file:
@@ -61,6 +76,7 @@ Apply and browser-test each repair in order against the confirmed production Rum
 8. buzzer trigger and strike levels
 9. built-in question bank
 10. vertical layout
+11. host dashboard v2 and keybind correction
 ```
 
 Canonical target:
@@ -93,6 +109,11 @@ Do not call Rumble production-ready until the live file passes:
 - Strike 1, Strike 2, Strike 3, Steal, and combined buzzer videos match game state
 - legacy question uploads are absent and built-in questions do not repeat before exhaustion
 - portrait 9:16 screens remain readable with no clipped content or controls
+- private `#host` dashboard shows the required match information and limited controls
+- one `0` press records one wrong answer and triggers the matching external strike animation without a duplicate generic Buzzer overlay
+- `P` and `O` cannot manually activate Wheel effects
+- backtick consumes exactly one lifeline and `/` consumes exactly one resurrection token
+- no manual Wheel or Buzzer buttons exist in the host dashboard
 - no `#tv` route, TV launcher, karaoke queue, signup QR, or standalone-TV dependency exists in Rumble
 - rollback is tested before the show window
 
