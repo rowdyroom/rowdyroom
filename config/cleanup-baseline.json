@@ -41,8 +41,13 @@
           "batch": 1,
           "name": "retire_obsolete_rumble_owned_tv_source",
           "approval": "Roger Jamsek: APPROVE BATCH 1",
-          "status": "approved_and_implemented_on_cleanup_branch_pending_ci_and_merge",
+          "status": "completed_by_pull_request_26",
+          "pull_request": 26,
           "rollback_ref": "1b841a2b8a388694d65cda641523c44275d6ef77",
+          "validation": [
+            "Canonical Domain Registry passed",
+            "Rumble Repair Suite passed"
+          ],
           "retired_paths": [
             "tools/rumble/fix-tv-mode.mjs",
             "tools/rumble/fix-tv-mode.test.mjs",
