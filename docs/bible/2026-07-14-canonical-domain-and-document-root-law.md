@@ -7,7 +7,7 @@
 
 ## Purpose
 
-This law prevents Rowdy Room pages from being renamed, relocated, linked, or deployed according to guesses based on folder names. The cPanel domain map supplied by Roger Jamsek on 2026-07-14 is the approved baseline.
+This law prevents Rowdy Room pages from being renamed, relocated, linked, assigned to the wrong product, or deployed according to guesses based on folder names or existing routes. The cPanel domain map supplied by Roger Jamsek on 2026-07-14 is the approved baseline.
 
 ## Law 1 — Public hostnames are canonical
 
@@ -16,9 +16,9 @@ When a hostname exists in cPanel Domains, that hostname is the canonical public 
 Examples:
 
 - `https://companion.rowdyroom.site/` is the canonical public Companion address.
-- `https://game.rowdyroom.site/` is the canonical public Rumble address.
-- `https://queue.rowdyroom.site/` is the canonical public Queue address.
-- `https://vote.rowdyroom.site/` is the canonical public Voting address.
+- `https://game.rowdyroom.site/` is the canonical Rumble game address.
+- `https://queue.rowdyroom.site/` is the canonical Queue address.
+- `https://vote.rowdyroom.site/` is the canonical Voting address.
 
 No person, assistant, script, installer, document, button, QR code, or deployment may replace a registered subdomain with a path-style address such as `rowdyroom.site/companion`, `rowdyroom.site/game`, `rowdyroom.site/queue`, or `rowdyroom.site/vote` unless this law and the registry are deliberately changed first with Roger's approval.
 
@@ -68,6 +68,8 @@ The following folders are currently unclassified, duplicated, internal, legacy, 
 
 They must not be deleted, redirected, promoted, or used as canonical deployment targets without a separate audit and registry update.
 
+The presence of `game-viewer` does not prove that it is the approved TV display. It remains unclassified until audited.
+
 ## Law 5 — Path-only surfaces remain path-only
 
 Only these path-only surfaces are currently registered:
@@ -78,17 +80,57 @@ Only these path-only surfaces are currently registered:
 
 A new subdomain must not be invented for them. A new path must not be invented for an existing subdomain.
 
-## Law 6 — Hash routes are modes, not websites
+## Law 6 — The TV display is independent of the game
 
-`https://game.rowdyroom.site/#tv` is a browser mode inside the Rumble site. It is not a separate domain, cPanel document root, or independent website.
+The Rowdy Room TV display is a standalone live-show and livestream display product.
 
-The `#tv` mode may have a separate visual layout, but it remains owned by `game.rowdyroom.site` and must be deployed through that site's registered document root.
+It is not:
 
-## Law 7 — QR codes and buttons use canonical addresses
+- A Rumble game page
+- A Rumble route
+- A `#tv` mode under `game.rowdyroom.site`
+- A wheel or buzzer display
+- A game control surface
+- An answer board
 
-All QR codes, navigation buttons, bookmarks, host controls, videos, printed materials, and instructions must use canonical public URLs from the registry.
+`game.rowdyroom.site` is Rumble-only and may not own, host, define, or control the general TV display.
 
-Specifically, the Rumble TV signup QR must point to:
+The reserved future public identity is:
+
+`https://tv.rowdyroom.site/`
+
+That hostname is not yet present in the supplied cPanel Domains list. It remains **pending cPanel creation and live deployment**. Until it exists and is verified, no other existing domain or path may be used as a substitute.
+
+The intended document root is:
+
+`/home/ef39cr6m1vih/public_html/tv.rowdyroom.site`
+
+## Law 7 — The TV display has a strict information contract
+
+The standalone TV display may show only the live karaoke information Roger approved:
+
+1. Signup QR code
+2. Rotating information banner
+3. Now Performing
+4. Up Next
+5. Next five performers in rotation
+6. Estimated wait time
+
+The display must read the live karaoke rotation from the canonical queue system. It must not depend on Rumble game state.
+
+The TV display may not show:
+
+- Game rules
+- Fire or Ice teams
+- Rumble scores
+- Strikes
+- Steal status
+- Wheel results
+- Buzzer events
+- Game host controls
+- Answer boards
+
+The signup QR must point to:
 
 `https://companion.rowdyroom.site/`
 
@@ -133,7 +175,7 @@ When instructions, old ZIP files, installers, documentation, source code, chat h
 
 No lower-priority source may silently override a higher-priority source.
 
-## Current canonical public domain set
+## Current registered public domain set
 
 1. `rowdyroom.site`
 2. `admin.memories.rowdyroom.site`
@@ -149,6 +191,10 @@ No lower-priority source may silently override a higher-priority source.
 12. `videomaker.rowdyroom.site`
 13. `vote.rowdyroom.site`
 
+## Reserved domain pending creation
+
+- `tv.rowdyroom.site` — standalone live-show TV display only
+
 ## Required deployment preflight
 
 Before changing any website file, record:
@@ -156,6 +202,8 @@ Before changing any website file, record:
 - Canonical hostname
 - Canonical public URL
 - Exact document root
+- Product ownership
+- Allowed content contract
 - Target file
 - Expected identifying marker
 - Backup location
