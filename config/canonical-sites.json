@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "effective_date": "2026-07-14",
+  "account_home": "/home/ef39cr6m1vih",
+  "public_html": "/home/ef39cr6m1vih/public_html",
+  "source_of_truth": "cPanel Domains and File Manager screenshots supplied by Roger Jamsek on 2026-07-14",
+  "change_control": {
+    "owner_approval_required": true,
+    "bible_update_required": true,
+    "registry_update_required": true,
+    "cpanel_mapping_verification_required": true,
+    "live_smoke_test_required": true,
+    "rule": "No public hostname, canonical URL, document root, redirect, or route may be changed by inference from a folder name."
+  },
+  "domains": [
+    {
+      "hostname": "rowdyroom.site",
+      "canonical_public_url": "https://rowdyroom.site/",
+      "document_root": "/home/ef39cr6m1vih/public_html",
+      "redirects_to": null,
+      "role": "main_public_website",
+      "canonical": true
+    },
+    {
+      "hostname": "admin.memories.rowdyroom.site",
+      "canonical_public_url": "https://admin.memories.rowdyroom.site/",
+      "document_root": "/home/ef39cr6m1vih/public_html/admin.memories.rowdyroom.site",
+      "redirects_to": null,
+      "role": "memories_admin",
+      "canonical": true
+    },
+    {
+      "hostname": "book.rowdyroom.site",
+      "canonical_public_url": "https://book.rowdyroom.site/",
+      "document_root": "/home/ef39cr6m1vih/public_html/book.rowdyroom.site",
+      "redirects_to": null,
+      "role": "booking",
+      "canonical": true
+    },
+    {
+      "hostname": "companion.rowdyroom.site",
+      "canonical_public_url": "https://companion.rowdyroom.site/",
+      "document_root": "/home/ef39cr6m1vih/public_html/companion.rowdyroom.site",
+      "redirects_to": "https://rowdyroom.site/companion/",
+      "role": "viewer_companion_app",
+      "canonical": true,
+      "note": "The redirect target is an implementation detail. All user-facing references must use companion.rowdyroom.site."
+    },
+    {
+      "hostname": "game.rowdyroom.site",
+      "canonical_public_url": "https://game.rowdyroom.site/",
+      "document_root": "/home/ef39cr6m1vih/public_html/game.rowdyroom.site",
+      "redirects_to": null,
+      "role": "rowdy_room_rumble_game",
+      "canonical": true,
+      "route_modes": [
+        {
+          "route": "#tv",
+          "public_url": "https://game.rowdyroom.site/#tv",
+          "type": "browser_mode_not_separate_domain_or_document_root"
+        }
+      ]
+    },
+    {
+      "hostname": "memories.rowdyroom.site",
+      "canonical_public_url": "https://memories.rowdyroom.site/",
+      "document_root": "/home/ef39cr6m1vih/public_html/memories.rowdyroom.site",
+      "redirects_to": null,
+      "role": "memories_public",
+      "canonical": true
+    },
+    {
+      "hostname": "pickup.memories.rowdyroom.site",
+      "canonical_public_url": "https://pickup.memories.rowdyroom.site/",
+      "document_root": "/home/ef39cr6m1vih/public_html/pickup.memories.rowdyroom.site",
+      "redirects_to": null,
+      "role": "memories_pickup",
+      "canonical": true
+    },
+    {
+      "hostname": "privacypolicy.rowdyroom.site",
+      "canonical_public_url": "https://privacypolicy.rowdyroom.site/",
+      "document_root": "/home/ef39cr6m1vih/public_html/privacypolicy.rowdyroom.site",
+      "redirects_to": null,
+      "role": "privacy_policy",
+      "canonical": true
+    },
+    {
+      "hostname": "queue.rowdyroom.site",
+      "canonical_public_url": "https://queue.rowdyroom.site/",
+      "document_root": "/home/ef39cr6m1vih/public_html/queue",
+      "redirects_to": null,
+      "role": "queue",
+      "canonical": true,
+      "note": "A subdomain may use a non-matching folder name. The cPanel document root controls deployment; the hostname controls the public URL."
+    },
+    {
+      "hostname": "render.rowdyroom.site",
+      "canonical_public_url": "https://render.rowdyroom.site/",
+      "document_root": "/home/ef39cr6m1vih/public_html/render.rowdyroom.site",
+      "redirects_to": null,
+      "role": "render_service",
+      "canonical": true
+    },
+    {
+      "hostname": "songfinder.rowdyroom.site",
+      "canonical_public_url": "https://songfinder.rowdyroom.site/",
+      "document_root": "/home/ef39cr6m1vih/public_html/songfinder.rowdyroom.site",
+      "redirects_to": null,
+      "role": "song_finder",
+      "canonical": true
+    },
+    {
+      "hostname": "videomaker.rowdyroom.site",
+      "canonical_public_url": "https://videomaker.rowdyroom.site/",
+      "document_root": "/home/ef39cr6m1vih/public_html/videomaker.rowdyroom.site",
+      "redirects_to": null,
+      "role": "video_maker",
+      "canonical": true
+    },
+    {
+      "hostname": "vote.rowdyroom.site",
+      "canonical_public_url": "https://vote.rowdyroom.site/",
+      "document_root": "/home/ef39cr6m1vih/public_html/vote.rowdyroom.site",
+      "redirects_to": null,
+      "role": "voting",
+      "canonical": true
+    }
+  ],
+  "registered_path_only_surfaces": [
+    {
+      "name": "mission_control",
+      "canonical_public_url": "https://rowdyroom.site/mission-control/",
+      "document_root": "/home/ef39cr6m1vih/public_html/mission-control",
+      "visibility": "private_host"
+    },
+    {
+      "name": "rumble_wheel_display",
+      "canonical_public_url": "https://rowdyroom.site/rumble-wheel/",
+      "document_root": "/home/ef39cr6m1vih/public_html/rumble-wheel",
+      "visibility": "display"
+    },
+    {
+      "name": "rumble_buzzer_display",
+      "canonical_public_url": "https://rowdyroom.site/rumble-buzzer/",
+      "document_root": "/home/ef39cr6m1vih/public_html/rumble-buzzer",
+      "visibility": "display"
+    }
+  ],
+  "unclassified_or_duplicate_public_html_folders": [
+    "admin",
+    "admin-tools",
+    "api",
+    "assets",
+    "companion",
+    "game",
+    "game-control",
+    "game-viewer",
+    "icons",
+    "memories",
+    "public_html",
+    "rowdyroom_mobile_homepage_v7",
+    "src",
+    "staging",
+    "videos"
+  ],
+  "noncanonical_account_root_folders_seen": [
+    "/home/ef39cr6m1vih/render",
+    "/home/ef39cr6m1vih/videomaker"
+  ]
+}
