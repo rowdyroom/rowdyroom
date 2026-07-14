@@ -1,0 +1,31 @@
+name: Canonical Domain Registry
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate canonical domain registry
+        run: node tools/domain-registry/validate-canonical-sites.mjs
+
+      - name: Block new path-style public aliases
+        if: github.event_name == 'pull_request'
+        run: node tools/domain-registry/validate-canonical-sites.mjs --scan-diff "origin/${{ github.base_ref }}"
