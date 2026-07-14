@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "effective_date": "2026-07-14",
+  "mode": "audit_only",
+  "destructive_actions_approved": false,
+  "systems": {
+    "cpanel": {
+      "keep": [
+        "all canonical document roots in config/canonical-sites.json",
+        "standalone TV document root after verification",
+        "mission-control",
+        "rumble-wheel",
+        "rumble-buzzer"
+      ],
+      "review_groups": [
+        ["companion", "companion.rowdyroom.site"],
+        ["game", "game-control", "game-viewer", "game.rowdyroom.site"],
+        ["memories", "memories.rowdyroom.site"],
+        ["/home/ef39cr6m1vih/render", "public_html/render.rowdyroom.site"],
+        ["/home/ef39cr6m1vih/videomaker", "public_html/videomaker.rowdyroom.site"],
+        ["admin", "admin.memories.rowdyroom.site"],
+        ["public_html/public_html"],
+        ["admin-tools"],
+        ["rowdyroom_mobile_homepage_v7"],
+        ["staging"],
+        ["_old_rowdyroom_deployment_files"]
+      ]
+    },
+    "github": {
+      "keep": [
+        "main",
+        "canonical registries and laws",
+        "active feature source",
+        "applied migrations and rollbacks",
+        "commit and pull-request history"
+      ],
+      "retire_after_test_update": [
+        "tools/rumble/fix-tv-mode.mjs",
+        "tools/rumble/fix-tv-mode.test.mjs",
+        "tools/rumble/fix-tv-mode-hardening.mjs",
+        "tools/rumble/fix-tv-mode-hardening.test.mjs",
+        "docs/bible/2026-07-13-rumble-tv-mode-repair.md",
+        "supabase/seed/20260713_rumble_tv_mode_repair.sql",
+        "supabase/rollback/20260713_rumble_tv_mode_repair_rollback.sql",
+        "obsolete package.json Rumble TV commands",
+        "obsolete Rumble TV step in tools/rumble/apply-all-repairs.mjs"
+      ],
+      "review": [
+        "temporary live-source recovery tooling",
+        "temporary Companion media installers",
+        "old deployment TODO and repair ledgers",
+        "merged feature branches",
+        "stale issues"
+      ]
+    },
+    "supabase": {
+      "keep_project": "szubjgpvlqliyparrnam",
+      "review_project": "dupwuopnpmdsprxxqsle",
+      "active_project_counts": {
+        "public_tables": 62,
+        "public_views": 28,
+        "public_functions": 71,
+        "edge_functions": 0,
+        "storage_buckets": 1,
+        "storage_objects": 5
+      },
+      "generated_data_review": {
+        "rr_engine_file_snapshots": 30742,
+        "rr_code_objects": 24672,
+        "rr_system_dependencies": 6880,
+        "rr_engine_runs": 35,
+        "rr_scan_jobs": 30
+      },
+      "security_review_required": true
+    }
+  },
+  "required_order": [
+    "backup and inventory",
+    "GitHub obsolete TV-source cleanup",
+    "cPanel temporary-file cleanup",
+    "cPanel duplicate-folder comparison and quarantine",
+    "inactive Supabase project export and decision",
+    "Engine generated-data retention",
+    "Supabase security hardening"
+  ]
+}
