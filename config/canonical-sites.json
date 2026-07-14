@@ -1,16 +1,16 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "effective_date": "2026-07-14",
   "account_home": "/home/ef39cr6m1vih",
   "public_html": "/home/ef39cr6m1vih/public_html",
-  "source_of_truth": "cPanel Domains and File Manager screenshots supplied by Roger Jamsek on 2026-07-14",
+  "source_of_truth": "cPanel Domains and File Manager screenshots supplied by Roger Jamsek on 2026-07-14, plus Roger's explicit TV-display correction on 2026-07-14",
   "change_control": {
     "owner_approval_required": true,
     "bible_update_required": true,
     "registry_update_required": true,
     "cpanel_mapping_verification_required": true,
     "live_smoke_test_required": true,
-    "rule": "No public hostname, canonical URL, document root, redirect, or route may be changed by inference from a folder name."
+    "rule": "No public hostname, canonical URL, document root, redirect, route, or product ownership relationship may be changed by inference from a folder name or existing page route."
   },
   "domains": [
     {
@@ -51,15 +51,14 @@
       "canonical_public_url": "https://game.rowdyroom.site/",
       "document_root": "/home/ef39cr6m1vih/public_html/game.rowdyroom.site",
       "redirects_to": null,
-      "role": "rowdy_room_rumble_game",
+      "role": "rowdy_room_rumble_game_only",
       "canonical": true,
-      "route_modes": [
-        {
-          "route": "#tv",
-          "public_url": "https://game.rowdyroom.site/#tv",
-          "type": "browser_mode_not_separate_domain_or_document_root"
-        }
-      ]
+      "prohibited_roles": [
+        "live_show_tv_display",
+        "general_signup_display",
+        "karaoke_rotation_display"
+      ],
+      "note": "The Rumble game does not own, host, define, or control the standalone TV display."
     },
     {
       "hostname": "memories.rowdyroom.site",
@@ -127,6 +126,41 @@
       "canonical": true
     }
   ],
+  "planned_domains": [
+    {
+      "hostname": "tv.rowdyroom.site",
+      "desired_public_url": "https://tv.rowdyroom.site/",
+      "desired_document_root": "/home/ef39cr6m1vih/public_html/tv.rowdyroom.site",
+      "status": "pending_cpanel_creation_and_live_deployment",
+      "role": "standalone_live_show_tv_display",
+      "independent_of": [
+        "game.rowdyroom.site",
+        "rumble_wheel_display",
+        "rumble_buzzer_display"
+      ],
+      "allowed_display_fields": [
+        "signup_qr_code",
+        "rotating_information_banner",
+        "now_performing",
+        "up_next",
+        "next_five_performers",
+        "estimated_wait_time"
+      ],
+      "forbidden_display_fields": [
+        "game_rules",
+        "rumble_scores",
+        "fire_team",
+        "ice_team",
+        "strikes",
+        "steal_status",
+        "wheel_results",
+        "buzzer_events",
+        "game_host_controls",
+        "answer_board"
+      ],
+      "data_source_rule": "Read live karaoke rotation data from the canonical queue system. Do not depend on the Rumble game state."
+    }
+  ],
   "registered_path_only_surfaces": [
     {
       "name": "mission_control",
@@ -138,13 +172,13 @@
       "name": "rumble_wheel_display",
       "canonical_public_url": "https://rowdyroom.site/rumble-wheel/",
       "document_root": "/home/ef39cr6m1vih/public_html/rumble-wheel",
-      "visibility": "display"
+      "visibility": "rumble_display_only"
     },
     {
       "name": "rumble_buzzer_display",
       "canonical_public_url": "https://rowdyroom.site/rumble-buzzer/",
       "document_root": "/home/ef39cr6m1vih/public_html/rumble-buzzer",
-      "visibility": "display"
+      "visibility": "rumble_display_only"
     }
   ],
   "unclassified_or_duplicate_public_html_folders": [
