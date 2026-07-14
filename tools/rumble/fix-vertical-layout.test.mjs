@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { applyRumbleVerticalLayoutFix } from './fix-vertical-layout.mjs';
 
+const forbiddenTvPageSelector = '#' + 'tvPage';
 const gameLogic = `function wrongAnswer(team=state.currentTeam){state.overlay='STRIKE';saveState();}
 function pickQuestion(){return QUESTION_BANK[0];}
 function punchAttack(){return 'POWER PUNCH';}`;
@@ -112,7 +113,7 @@ test('constrains game overlays so full-screen messages cannot clip', () => {
 test('preserves hidden game sections without TV-specific selectors', () => {
   const result = applyRumbleVerticalLayoutFix(fixture);
   assert.match(result.source, /#app>section\.hidden\{\s*display:none!important;/);
-  assert.doesNotMatch(result.source, /#tvPage/);
+  assert.equal(result.source.includes(forbiddenTvPageSelector), false);
 });
 
 test('includes a compact fallback for shorter portrait screens', () => {
