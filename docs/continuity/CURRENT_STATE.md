@@ -23,6 +23,19 @@ Rowdy Room is a live karaoke, audience-participation, competition, community, an
 
 The detailed product decisions, production map, architecture, and known risks remain in `docs/ROWDY_ROOM_BIBLE.md`.
 
+## Authoritative Main 4 formula
+
+The eight panel spots are divided into four protected Main 4 positions and four regular rotation positions.
+
+- Before a Rumble changes the incumbents, the protected order is the two best live-vote averages followed by the two largest gift contributors.
+- The remaining eligible people rotate through the other four spots in signup order, four at a time.
+- Each panel cycle keeps or reinserts the same Main 4 and advances to the next four regular queue members.
+- After an activated Rumble is challenged and completed, the four protected positions are assigned by game score from highest through fourth-highest.
+- The Rumble winners have a guaranteed 30-minute protection window during which another Rumble cannot be activated.
+- The regular four-person rotation resumes where it stopped before the Rumble.
+
+The detailed formula and example are maintained in section 5.3 of `docs/ROWDY_ROOM_BIBLE.md`.
+
 ## Continuity controls
 
 As of 2026-07-18:
