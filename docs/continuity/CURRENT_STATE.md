@@ -39,6 +39,22 @@ The eight panel spots are divided into four protected Main 4 positions and four 
 
 The detailed formula and example are maintained in section 5.3 of `docs/ROWDY_ROOM_BIBLE.md`.
 
+Central edge rules are now fixed: score qualifiers are selected first, gift qualifiers skip anyone already in a score spot, score ties break by vote count then signup order, gift ties break by gift count then signup order, and a Rumble requires four distinct final results. An unfilled live-score or gift category remains visibly open rather than borrowing a different rule. The Rumble winners' 30-minute clock begins only when the host finalizes the game results.
+
+## Main 4 implementation state
+
+As of 2026-07-18, the public-safe implementation is prepared and locally verified:
+
+- Mission Control renders all eight authoritative positions and the Rumble protection countdown
+- host controls cover show start, live-leader refresh, the next regular four, Rumble activation, score finalization, and cancellation
+- Rumble finalization accepts every player's score and orders the protected four from highest through fourth-highest
+- a reusable browser adapter is prepared for the Companion App, host dashboard, Rumble game, and public display
+- contract tests, TypeScript checks, and a production Next.js build pass
+
+The live Supabase installation has not been applied. Supabase's production safeguard requires Roger's explicit approval because the installation changes schema, access permissions, automatic triggers, the scheduled expiry check, and Realtime publication. No production database state changed during the rejected attempt.
+
+The full private migration and security details are intentionally excluded from this public repository and retained in the protected local recovery package.
+
 ## Continuity controls
 
 As of 2026-07-18:
@@ -78,5 +94,6 @@ Before answering a Rowdy Room setup, equipment, show, production, or architectur
 ## Next recovery milestone
 
 Recover and verify the physical equipment inventory. Each item must have a source or Roger's confirmation before it is treated as authoritative.
+
 
 

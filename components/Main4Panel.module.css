@@ -1,0 +1,243 @@
+.panel {
+  grid-column: 1 / -1;
+  border-color: rgba(247, 208, 70, 0.42);
+  background:
+    radial-gradient(circle at 88% 10%, rgba(247, 208, 70, 0.12), transparent 24rem),
+    var(--panel-2);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.mode {
+  min-width: 260px;
+  padding: 14px 16px;
+  border: 1px solid rgba(32, 231, 255, 0.38);
+  border-radius: 16px;
+  background: rgba(32, 231, 255, 0.09);
+}
+
+.mode strong,
+.mode span {
+  display: block;
+}
+
+.mode strong {
+  color: var(--cyan);
+  font-size: 0.88rem;
+  letter-spacing: 0.08em;
+}
+
+.mode span {
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+.mode.protected {
+  border-color: rgba(247, 208, 70, 0.58);
+  background: rgba(247, 208, 70, 0.11);
+}
+
+.mode.protected strong {
+  color: var(--gold);
+}
+
+.slotGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.slot {
+  position: relative;
+  min-height: 145px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.mainSlot {
+  border-color: rgba(247, 208, 70, 0.34);
+  background: linear-gradient(160deg, rgba(247, 208, 70, 0.11), rgba(139, 92, 246, 0.08));
+}
+
+.rotationSlot {
+  border-color: rgba(32, 231, 255, 0.2);
+}
+
+.slotNumber {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: #090511;
+  background: var(--gold);
+  font-weight: 900;
+}
+
+.slot small,
+.slot strong {
+  display: block;
+}
+
+.slot small {
+  max-width: calc(100% - 32px);
+  color: var(--muted);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.slot strong {
+  margin-top: 24px;
+  font-size: 1.25rem;
+}
+
+.slot p,
+.controlCard p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.statusLine {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 14px 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.statusLine span {
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.message {
+  min-height: 24px;
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 14px;
+}
+
+.controlCard {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  background: rgba(6, 4, 18, 0.5);
+}
+
+.controlCard h3 {
+  margin-top: 0;
+}
+
+.controlCard label {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.controlCard input,
+.controlCard select {
+  width: 100%;
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid rgba(139, 92, 246, 0.38);
+  border-radius: 10px;
+  color: var(--text);
+  background: rgba(12, 8, 29, 0.94);
+}
+
+.inlineFields {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
+  align-items: end;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.controlCard button {
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid rgba(32, 231, 255, 0.4);
+  border-radius: 10px;
+  color: var(--text);
+  background: rgba(32, 231, 255, 0.1);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.controlCard button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.rumbleResults {
+  display: grid;
+  gap: 10px;
+}
+
+.resultRow {
+  display: grid;
+  grid-template-columns: 32px minmax(130px, 1fr) 100px 100px auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.resultRow span {
+  color: var(--gold);
+  font-weight: 900;
+}
+
+@media (max-width: 920px) {
+  .header,
+  .inlineFields {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .mode {
+    min-width: 0;
+  }
+
+  .slotGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .controls {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .slotGrid,
+  .resultRow {
+    grid-template-columns: 1fr;
+  }
+}
+

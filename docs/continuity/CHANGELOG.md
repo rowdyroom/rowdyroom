@@ -1,6 +1,19 @@
 # Rowdy Room Continuity Changelog
 
-## 2026-07-18 — Main 4 post-Rumble handoff clarified
+## 2026-07-18 â€” Main 4 authority implementation prepared
+
+Status: Public-safe application implementation verified; production database approval pending.
+
+- Added the Mission Control Main 4 panel with all eight positions, live formula status, regular-rotation cursor, and Rumble protection countdown.
+- Added guarded host actions for show start, live refresh, advancing the regular four, Rumble activation, score finalization, and cancellation.
+- Added a browser-safe integration adapter for the Companion App, host dashboard, Rumble game, and public displays.
+- Resolved duplicate qualification and tie behavior centrally and required four distinct Rumble results before the 30-minute guarantee can begin.
+- Preserved vote, gift, and rotation history; the legacy destructive Rumble reset is replaced in the private migration by a history-preserving reset.
+- Passed Main 4 contract tests, TypeScript validation, and a production application build.
+- Kept the private database migration and security implementation out of the public repository.
+- Recorded that Supabase made no production change because its safeguard requires Roger's explicit approval of the schema, permission, trigger, scheduled-expiry, and Realtime changes.
+
+## 2026-07-18 â€” Main 4 post-Rumble handoff clarified
 
 Status: Authoritative product rule confirmed by Roger.
 
@@ -10,7 +23,7 @@ Status: Authoritative product rule confirmed by Roger.
 - Confirmed that the other four panel spots retain their saved signup-order position and do not restart during the handoff.
 - Required the centralized rotation authority to update the Companion App, host-control dashboards, public displays, and database together.
 
-## 2026-07-18 — Main 4 and panel rotation formula confirmed
+## 2026-07-18 â€” Main 4 and panel rotation formula confirmed
 
 Status: Authoritative product rule confirmed by Roger.
 
@@ -23,7 +36,7 @@ Status: Authoritative product rule confirmed by Roger.
 - Confirmed that the regular queue resumes where it stopped before the Rumble rather than restarting.
 - Marked tie, duplicate-qualification, short-finisher, and absence edge cases for one centralized implementation rule.
 
-## 2026-07-18 â€” Durable continuity system
+## 2026-07-18 Ã¢â‚¬â€ Durable continuity system
 
 Status: Implemented with equipment recovery still open.
 
@@ -35,5 +48,6 @@ Status: Implemented with equipment recovery still open.
 - Established append-only private history and scheduled snapshots.
 - Recorded that the exact equipment inventory, original Rowdy Room Progress conversation, and unreconciled private Bible records remain recovery-required.
 - Prohibited inventing missing equipment or operational facts.
+
 
 
