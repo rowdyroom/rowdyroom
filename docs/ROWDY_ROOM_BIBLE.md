@@ -181,9 +181,24 @@ The queue can accept an unlimited performer list, but the host remains responsib
 - voting remains available for the defined post-performance window; the current documented target is one minute
 - iPhone users may need Safari instead of TikTok's in-app browser
 
-### 5.3 Main 4
+### 5.3 Main 4 and eight-person panel rotation
 
-Main 4 combines contribution and performance. The exact ranking formula must remain centralized and documented so the website, host tools, TV display, and database do not calculate different standings.
+The panel has eight spots. Four are protected Main 4 spots and four are regular rotation spots.
+
+Before a Rumble changes the incumbents, Main 4 is ordered as:
+
+1. highest average performer score from live votes
+2. second-highest average performer score from live votes
+3. highest gift contributor
+4. second-highest gift contributor
+
+The other four spots are filled by the remaining eligible people in signup order. The regular rotation advances four people at a time while the Main 4 remain in their protected positions. With 24 total people, the initial panel is Main 4 followed by the first four remaining signups. The next panel cycle is the same Main 4 followed by remaining signups five through eight, then the same Main 4 followed by remaining signups nine through twelve, and so on.
+
+A Rowdy Rumble occurs only after it is activated and a challenger enters. When the game ends, the four protected spots are reassigned by Rumble score, from highest to fourth-highest. Those four Rumble winners are guaranteed the protected positions for 30 minutes, and another Rumble cannot be activated during that protection window.
+
+After the Rumble, the regular four-person rotation resumes at the exact signup position where it stopped; it does not restart. The centralized rotation logic is responsible for maintaining the current Main 4 positions, the next regular group, and the 30-minute Rumble protection/cooldown across the host tools, public displays, and database.
+
+Tie handling, a person qualifying in both rating and contribution categories, fewer than four valid Rumble finishers, and absent or declined panelists must be resolved by one centralized rule before implementation; they must not be handled differently by separate surfaces.
 
 ## 6. Boost Points and TikFinity
 
