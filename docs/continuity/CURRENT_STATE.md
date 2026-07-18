@@ -43,15 +43,18 @@ Central edge rules are now fixed: score qualifiers are selected first, gift qual
 
 ## Main 4 implementation state
 
-As of 2026-07-18, the public-safe implementation is prepared and locally verified:
+As of 2026-07-18, the public-safe implementation and the production database authority are verified:
 
 - Mission Control renders all eight authoritative positions and the Rumble protection countdown
 - host controls cover show start, live-leader refresh, the next regular four, Rumble activation, score finalization, and cancellation
 - Rumble finalization accepts every player's score and orders the protected four from highest through fourth-highest
 - a reusable browser adapter is prepared for the Companion App, host dashboard, Rumble game, and public display
 - contract tests, TypeScript checks, and a production Next.js build pass
+- the live Supabase rotation engine is installed and its rollback-only production smoke test passes
+- live readback confirms eight active panel assignments, a clean live state, no retained smoke-test rows, service-only mutations, and read-only public status access
+- the engine-specific missing-index advisory was corrected and rechecked
 
-The live Supabase installation has not been applied. Supabase's production safeguard requires Roger's explicit approval because the installation changes schema, access permissions, automatic triggers, the scheduled expiry check, and Realtime publication. No production database state changed during the rejected attempt.
+The remaining deployment gap is the live cPanel surface integration. The browser adapter is prepared, but the live Companion, host, game, and public-display files could not be updated without access to their source and deployment target.
 
 The full private migration and security details are intentionally excluded from this public repository and retained in the protected local recovery package.
 
@@ -94,6 +97,5 @@ Before answering a Rowdy Room setup, equipment, show, production, or architectur
 ## Next recovery milestone
 
 Recover and verify the physical equipment inventory. Each item must have a source or Roger's confirmation before it is treated as authoritative.
-
 
 
