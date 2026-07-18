@@ -48,13 +48,21 @@ As of 2026-07-18, the public-safe implementation and the production database aut
 - Mission Control renders all eight authoritative positions and the Rumble protection countdown
 - host controls cover show start, live-leader refresh, the next regular four, Rumble activation, score finalization, and cancellation
 - Rumble finalization accepts every player's score and orders the protected four from highest through fourth-highest
-- a reusable browser adapter is prepared for the Companion App, host dashboard, Rumble game, and public display
+- versioned Companion, Mission Control, and Rumble adapters are implemented and syntax-checked
 - contract tests, TypeScript checks, and a production Next.js build pass
 - the live Supabase rotation engine is installed and its rollback-only production smoke test passes
 - live readback confirms eight active panel assignments, a clean live state, no retained smoke-test rows, service-only mutations, and read-only public status access
 - the engine-specific missing-index advisory was corrected and rechecked
+- a pre-deployment server backup was created before any live-surface file work
+- the versioned Companion, Mission Control, and Rumble bundles were uploaded to their server asset folders
+- the existing live scripts now activate the versioned bundles, with duplicate-safe page fallbacks for clients holding an older cached app script
+- live status-only smoke checks confirm exactly one Main 4 bundle per surface, eight ordered positions per mounted view, the Mission Control host actions, the Rumble score container and host actions, and no browser warnings or errors
+- the live Rumble bridge was advanced to v3 after the unlock test exposed a dashboard-redraw issue; v3 remounts the Main 4 panel without double-wrapping game functions or starting a second panel-status poller
+- the unlocked Rumble dashboard retained one Main 4 panel, one score container, four host actions, eight ordered positions, and the connected host status
+- the normal dashboard logout returned to the host-login screen and live database readback confirmed the session token, lock owner, and heartbeat were cleared
+- the verified public-safe v2 adapter, three live-surface integrations, logout handoff migration, and live verification record are saved on draft pull request #28, with GitHub readback matched to the local sources
 
-The remaining deployment gap is the live cPanel surface integration. The browser adapter is prepared, but the live Companion, host, game, and public-display files could not be updated without access to their source and deployment target.
+The production database authority and the three current live surfaces are active and live-smoke verified, including Rumble host unlock, post-unlock panel persistence, logout, and database lock release. No production Rumble was activated or finalized during the smoke test. No public-display domain was created; that remains subject to the separate domain-creation approval rule.
 
 The full private migration and security details are intentionally excluded from this public repository and retained in the protected local recovery package.
 
@@ -97,5 +105,6 @@ Before answering a Rowdy Room setup, equipment, show, production, or architectur
 ## Next recovery milestone
 
 Recover and verify the physical equipment inventory. Each item must have a source or Roger's confirmation before it is treated as authoritative.
+
 
 
