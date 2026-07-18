@@ -1,6 +1,17 @@
 # Rowdy Room Continuity Changelog
 
-## 2026-07-18 â€” Main 4 authority implementation prepared
+## 2026-07-18 — Main 4 production database verified
+
+Status: Production rotation authority installed and verified; live cPanel surface deployment remains pending.
+
+- Installed the centralized Main 4 and regular-four rotation authority in the live database after Roger's explicit production approval.
+- Passed a rollback-only production smoke test covering live qualifiers, signup rotation, Rumble score ordering, the exact 30-minute protection window, automatic expiry handoff, saved-cursor continuity, gift deduplication, and the public/service permission contract.
+- Confirmed by live readback that the test left no retained test rows and the production state remained clean with all eight panel positions available.
+- Corrected the engine-specific missing-index advisory and reran the production advisor checks.
+- Kept the private migration, security details, and infrastructure information out of the public repository.
+- Left the pull request in draft because the prepared browser adapter still needs deployment to the live cPanel surfaces.
+
+## 2026-07-18 — Main 4 authority implementation prepared
 
 Status: Public-safe application implementation verified; production database approval pending.
 
@@ -13,7 +24,7 @@ Status: Public-safe application implementation verified; production database app
 - Kept the private database migration and security implementation out of the public repository.
 - Recorded that Supabase made no production change because its safeguard requires Roger's explicit approval of the schema, permission, trigger, scheduled-expiry, and Realtime changes.
 
-## 2026-07-18 â€” Main 4 post-Rumble handoff clarified
+## 2026-07-18 — Main 4 post-Rumble handoff clarified
 
 Status: Authoritative product rule confirmed by Roger.
 
@@ -23,7 +34,7 @@ Status: Authoritative product rule confirmed by Roger.
 - Confirmed that the other four panel spots retain their saved signup-order position and do not restart during the handoff.
 - Required the centralized rotation authority to update the Companion App, host-control dashboards, public displays, and database together.
 
-## 2026-07-18 â€” Main 4 and panel rotation formula confirmed
+## 2026-07-18 — Main 4 and panel rotation formula confirmed
 
 Status: Authoritative product rule confirmed by Roger.
 
@@ -36,7 +47,7 @@ Status: Authoritative product rule confirmed by Roger.
 - Confirmed that the regular queue resumes where it stopped before the Rumble rather than restarting.
 - Marked tie, duplicate-qualification, short-finisher, and absence edge cases for one centralized implementation rule.
 
-## 2026-07-18 Ã¢â‚¬â€ Durable continuity system
+## 2026-07-18 — Durable continuity system
 
 Status: Implemented with equipment recovery still open.
 
@@ -48,6 +59,5 @@ Status: Implemented with equipment recovery still open.
 - Established append-only private history and scheduled snapshots.
 - Recorded that the exact equipment inventory, original Rowdy Room Progress conversation, and unreconciled private Bible records remain recovery-required.
 - Prohibited inventing missing equipment or operational facts.
-
 
 
