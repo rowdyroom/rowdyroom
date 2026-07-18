@@ -32,7 +32,10 @@ The eight panel spots are divided into four protected Main 4 positions and four 
 - Each panel cycle keeps or reinserts the same Main 4 and advances to the next four regular queue members.
 - After an activated Rumble is challenged and completed, the four protected positions are assigned by game score from highest through fourth-highest.
 - The Rumble winners have a guaranteed 30-minute protection window during which another Rumble cannot be activated.
-- The regular four-person rotation resumes where it stopped before the Rumble.
+- At the end of exactly 30 minutes, the protected spots automatically return to the original live-standing formula using the current top two live-vote averages followed by the current top two gift contributors.
+- A Rumble winner remains protected after the guarantee only by qualifying under that recalculated live-standing formula.
+- The regular four-person rotation resumes where it stopped before the Rumble and keeps its saved signup-order position through the 30-minute handoff.
+- One centralized authority applies every position change to the Companion App, host-control dashboards, public displays, and database.
 
 The detailed formula and example are maintained in section 5.3 of `docs/ROWDY_ROOM_BIBLE.md`.
 
