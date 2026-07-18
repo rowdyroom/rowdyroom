@@ -196,7 +196,11 @@ The other four spots are filled by the remaining eligible people in signup order
 
 A Rowdy Rumble occurs only after it is activated and a challenger enters. When the game ends, the four protected spots are reassigned by Rumble score, from highest to fourth-highest. Those four Rumble winners are guaranteed the protected positions for 30 minutes, and another Rumble cannot be activated during that protection window.
 
-After the Rumble, the regular four-person rotation resumes at the exact signup position where it stopped; it does not restart. The centralized rotation logic is responsible for maintaining the current Main 4 positions, the next regular group, and the 30-minute Rumble protection/cooldown across the host tools, public displays, and database.
+At the exact end of the 30-minute guarantee, the protected positions automatically return to the original live-standing formula using the values current at that moment: the two highest average performer scores from live votes, followed by the two highest gift contributors. A Rumble winner remains in a protected position only if that person qualifies under the recalculated live-standing formula.
+
+The regular four-person signup rotation is independent of that protected-position handoff. It resumes where it stopped for the Rumble and continues from its saved signup-order position; it does not restart when the Rumble ends or when the 30-minute guarantee expires.
+
+One centralized rotation authority must control the current protected four, the next regular group, the saved regular-rotation position, the Rumble protection/cooldown, and the timed return to live standings. Every automatic change must update the same authoritative state used by the Companion App, host-control dashboards, public displays, and database so they all show the same current and upcoming panel positions.
 
 Tie handling, a person qualifying in both rating and contribution categories, fewer than four valid Rumble finishers, and absent or declined panelists must be resolved by one centralized rule before implementation; they must not be handled differently by separate surfaces.
 
