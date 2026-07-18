@@ -1,5 +1,15 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-18 — Main 4 post-Rumble handoff clarified
+
+Status: Authoritative product rule confirmed by Roger.
+
+- Set the Rumble winners' protected-position guarantee to end at exactly 30 minutes.
+- At expiration, the protected four automatically return to the original formula using the current top two live-vote averages followed by the current top two gift contributors.
+- Clarified that Rumble winners remain protected after expiration only if they qualify under the recalculated live standings.
+- Confirmed that the other four panel spots retain their saved signup-order position and do not restart during the handoff.
+- Required the centralized rotation authority to update the Companion App, host-control dashboards, public displays, and database together.
+
 ## 2026-07-18 — Main 4 and panel rotation formula confirmed
 
 Status: Authoritative product rule confirmed by Roger.
