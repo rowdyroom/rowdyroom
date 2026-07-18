@@ -1,6 +1,44 @@
 # Rowdy Room Continuity Changelog
 
-## 2026-07-18 — Main 4 production database verified
+## 2026-07-18 â€” GitHub continuity sync restored
+
+Status: Public-safe Main 4 sources and the final live verification record are saved to draft pull request #28 and verified by remote readback.
+
+- Confirmed the connected GitHub identity remains the existing `rowdyroom` user account with administrator and push permission on `rowdyroom/rowdyroom`.
+- Confirmed an actual write to the existing continuity branch succeeds after the earlier account usage limit.
+- Saved the v2 panel adapter, Companion integration, Mission Control integration, v3 Rumble bridge source, public-safe logout handoff migration, and updated deployment notes.
+- Saved the final production state and live-smoke verification record without publishing credentials, service-role keys, private infrastructure paths, or the protected recovery package.
+- Kept pull request #28 in draft; this continuity save does not merge the branch into `main`.
+
+## 2026-07-18 â€” Main 4 live surfaces activated
+
+Status: Production database authority and all three current live surfaces are active and live-smoke verified.
+
+- Activated the versioned Main 4 bundles in Companion, Mission Control, and the live Rumble game.
+- Added duplicate-safe page fallbacks so clients holding an older cached app script still receive the new bundle without loading it twice.
+- Verified one versioned Main 4 bundle per surface and no browser warnings or errors.
+- Verified Companion renders eight ordered positions in both Queue and Rumble views.
+- Verified Mission Control renders eight ordered positions in its live and host-control views, with the guarded host actions present.
+- Verified the locked Rumble host dashboard contains one Main 4 panel, one individual-score container, four host actions, and eight ordered positions.
+- Found that the game redraw removed the Main 4 panel immediately after host unlock, corrected it in the v3 Rumble bridge, and added duplicate-safe remount behavior.
+- Verified the unlocked dashboard retains exactly one Main 4 panel, one individual-score container, four host actions, eight ordered positions, and the connected host status with no browser errors.
+- Verified the normal dashboard logout returns to the login screen and clears the active Main 4 session token, lock owner, and heartbeat in the live database.
+- Did not activate, finalize, or cancel a production Rumble during the smoke test.
+- Cleared the credential field after the logout check and did not store or republish the host password.
+
+## 2026-07-18 â€” Main 4 live surface bundles staged
+
+Status: Server backup complete and versioned surface bundles uploaded; final loader activation and live smoke tests remain pending.
+
+- Created a pre-deployment server backup covering Companion, Mission Control, the live Rumble game, buzzer, and wheel.
+- Added a safer publishable-key adapter that does not send a publishable key as a bearer token.
+- Added Companion lineup display integration, Mission Control host controls, Rumble individual-score tracking, automatic four-player-or-more activation, top-four finalization, and exhibition handling for smaller matches.
+- Hardened the existing host logout handoff so authorized surfaces release the short-lived host lock when an action finishes.
+- Uploaded the versioned Companion, Mission Control, and Rumble bundles to their live asset folders.
+- Did not alter the TV/public-display domain because creating that domain still requires separate explicit approval.
+- Left loader activation pending after the authenticated browser session was blocked before the final three edits; the live pages therefore remain on their previous behavior until those loader lines are added and smoke-tested.
+
+## 2026-07-18 â€” Main 4 production database verified
 
 Status: Production rotation authority installed and verified; live cPanel surface deployment remains pending.
 
@@ -11,7 +49,7 @@ Status: Production rotation authority installed and verified; live cPanel surfac
 - Kept the private migration, security details, and infrastructure information out of the public repository.
 - Left the pull request in draft because the prepared browser adapter still needs deployment to the live cPanel surfaces.
 
-## 2026-07-18 — Main 4 authority implementation prepared
+## 2026-07-18 â€” Main 4 authority implementation prepared
 
 Status: Public-safe application implementation verified; production database approval pending.
 
@@ -24,7 +62,7 @@ Status: Public-safe application implementation verified; production database app
 - Kept the private database migration and security implementation out of the public repository.
 - Recorded that Supabase made no production change because its safeguard requires Roger's explicit approval of the schema, permission, trigger, scheduled-expiry, and Realtime changes.
 
-## 2026-07-18 — Main 4 post-Rumble handoff clarified
+## 2026-07-18 â€” Main 4 post-Rumble handoff clarified
 
 Status: Authoritative product rule confirmed by Roger.
 
@@ -34,7 +72,7 @@ Status: Authoritative product rule confirmed by Roger.
 - Confirmed that the other four panel spots retain their saved signup-order position and do not restart during the handoff.
 - Required the centralized rotation authority to update the Companion App, host-control dashboards, public displays, and database together.
 
-## 2026-07-18 — Main 4 and panel rotation formula confirmed
+## 2026-07-18 â€” Main 4 and panel rotation formula confirmed
 
 Status: Authoritative product rule confirmed by Roger.
 
@@ -47,7 +85,7 @@ Status: Authoritative product rule confirmed by Roger.
 - Confirmed that the regular queue resumes where it stopped before the Rumble rather than restarting.
 - Marked tie, duplicate-qualification, short-finisher, and absence edge cases for one centralized implementation rule.
 
-## 2026-07-18 — Durable continuity system
+## 2026-07-18 â€” Durable continuity system
 
 Status: Implemented with equipment recovery still open.
 
@@ -59,5 +97,6 @@ Status: Implemented with equipment recovery still open.
 - Established append-only private history and scheduled snapshots.
 - Recorded that the exact equipment inventory, original Rowdy Room Progress conversation, and unreconciled private Bible records remain recovery-required.
 - Prohibited inventing missing equipment or operational facts.
+
 
 
