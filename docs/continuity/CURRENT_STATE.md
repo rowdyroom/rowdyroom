@@ -23,6 +23,7 @@ Rowdy Room is a live karaoke, audience-participation, competition, community, an
 
 The detailed product decisions, production map, architecture, and known risks remain in `docs/ROWDY_ROOM_BIBLE.md`.
 
+
 ## Authoritative show projection path
 
 Roger confirmed the projection requirement on 2026-07-20:
@@ -35,7 +36,9 @@ Roger confirmed the projection requirement on 2026-07-20:
 6. Direct AirPlay, Miracast, or other screen mirroring is secondary only because it can be blacked out or blocked.
 7. A wired HDMI cable remains the emergency fallback.
 
-The wireless-HDMI kit is a required future purchase, not an owned inventory item. Its exact model remains recovery-required until room distance, obstructions, acceptable live-camera latency, HDCP/EDID behavior, encryption requirement, and whether the projector budget includes the kit are confirmed.
+Roger set an approximate $500 total budget for the exact TOWOND 120-inch screen and stand, projector, wireless-HDMI transmitter/receiver, two lights with a remote, and two wireless speaker receivers. The current package plan totals $455.19 before tax and uses the HAPPRUN B0DT5VLVL8 projector, Nyrius Orion Prime TDD20 link, NiceVeedi two-light kit, and two Alto Bluetooth Total 2 receivers. No purchase or cart change has been made.
+
+The Orion Prime is a budget compromise with 90 ms official latency and no named encryption specification; it is not described as encrypted or private. The ARIES Pro NPCS600 is the preferred low-latency upgrade but raises the package subtotal to $570.19 before tax. The two Alto receivers remain conditional because the exact Rockville models, powered/passive design, and rear-panel inputs are still recovery-required.
 
 ## Authoritative Main 4 formula
 
@@ -95,7 +98,7 @@ As of 2026-07-20:
 - chats are explicitly classified as temporary context rather than permanent records
 - the protected Supabase equipment inventory is the private source of truth, with forced row-level security, item-version history, and nightly snapshots
 - `Rowdy_Room_Equipment_Inventory_Master.xlsx` is the editable intake copy; workbook rows become authoritative only after Supabase save and readback
-- Roger's 2026-07-19 text intake and twenty-three preserved photographs are processed into 66 authoritative equipment lines representing 90 physical units; 51 lines are confirmed and 15 photo-derived lines remain recovery-required
+- Roger's 2026-07-19 text intake and twenty-three preserved photographs are processed into 67 authoritative equipment lines representing 92 physical units; 51 lines are confirmed and 16 lines remain recovery-required
 - every material equipment change requires a public-safe summary check, structured private save, history verification, continuity checks, and a dated local recovery copy
 
 ## Recovery required
@@ -104,8 +107,8 @@ The current equipment intake is no longer missing, but these gaps remain and mus
 
 The 2026-07-20 batch-03 addition matched the onn. Roku TV label to its existing record and added one PowerGis powered-audio unit. Its exact model, electrical rating, complete connector layout, and operating condition remain recovery-required.
 
-1. Fifteen photo-derived equipment lines still need label, model, rating, connector, quantity, or condition confirmation.
-2. Sixty-one equipment lines have not yet had their working condition tested or explicitly confirmed.
+1. Sixteen equipment lines still need label, model, rating, connector, quantity, or condition confirmation, including the Roger-confirmed pair of Rockville speakers.
+2. Sixty-two equipment lines have not yet had their working condition tested or explicitly confirmed.
 3. The original Rowdy Room Progress conversation has not been recovered as a durable export.
 4. The private server-side Bible directory has not been fully reconciled with GitHub and Supabase.
 
