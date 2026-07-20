@@ -25,9 +25,9 @@ Repository: `rowdyroom/rowdyroom`
 - The continuity files and repository-wide `AGENTS.md` are on `agent/rowdy-room-continuity`, represented by draft pull request #28. They are **not merged into `main`**.
 - Law-aware repository instructions commit: `e35f4f7e4ba996219b74b448e1530fe4561cf688`.
 - Law-aware runbook commit: `189a285f333bce6584b729c45df66e4b6c81d4de`.
-- Processed equipment public-safe inventory commit: `6d278739bff4d3d61542a080862f5e886eec5dad`.
-- Current State commit recording processed equipment counts: `0268650e3c8d34f78a9632950d7fc156a8d6a563`.
-- Continuity Changelog commit recording processed equipment: `8d37a0cc2c4cc38c3f255e3057e054fac58ea833`.
+- Equipment public-safe inventory commit after batch 03: `2d7953ecd316f3ad3aaf0fa28343d33206970be5`.
+- Current State commit recording batch-03 equipment counts: `5a1c424d1004fa10c760a1ba5cca97266e7efd58`.
+- Continuity Changelog commit recording batch 03: `24c0cfd9e44fa94a5fd1a03156164d770e1347ed`.
 - Branch Operator Law sync commit: `af12d4a1fdd1335514f387cb89c614f3582eb372`.
 - Branch Project Bible sync commit: `10503f6d42fa87c87585796de1ac7a6f77bc8cc6`.
 
@@ -42,7 +42,7 @@ Authoritative project: Supabase `Final`, ref `szubjgpvlqliyparrnam`.
 - `public.rr_continuity_checks` — pass, warning, and failure evidence.
 - `public.rr_equipment_inventory` — authoritative private equipment inventory.
 - `public.rr_equipment_history` — equipment version history.
-- Primary record keys: `rowdy-room/current-state`, `rowdy-room/continuity-protocol`, `rowdy-room/equipment-recovery`, `rowdy-room/equipment-pending-intake-2026-07-19`, and `rowdy-room/law-and-breadcrumb-protocol`.
+- Primary record keys: `rowdy-room/current-state`, `rowdy-room/continuity-protocol`, `rowdy-room/equipment-recovery`, `rowdy-room/equipment-pending-intake-2026-07-19`, `rowdy-room/equipment-photo-addition-2026-07-20`, and `rowdy-room/law-and-breadcrumb-protocol`.
 
 Do not copy protected content into this public map. Use safe record keys, versions, hashes, and check identifiers only.
 
@@ -50,32 +50,43 @@ Verified 2026-07-20 private record snapshot:
 
 - `rowdy-room/law-and-breadcrumb-protocol`: version `1`, SHA-256 `1e2de42998ee451cb94b1b8c02ffe9513eb83642bcde59df7c975c29000e5602`
 - `rowdy-room/continuity-protocol`: version `4`, SHA-256 `f7e29562aff5f07bbaa30e57197bf46bab8ee48d8fc95a34fac802f20913811c`
-- `rowdy-room/current-state`: version `16`, SHA-256 `529ba2cd4ec3b99f76c63c1fb879aac991396d435524a8d6761ff55d7d8092d1`
-- `rowdy-room/equipment-recovery`: version `7`, SHA-256 `274e4e5c37072a8fb1434314d0db76606e776ad9d24e9131b45ffebfb150d2a9`
-- `rowdy-room/equipment-pending-intake-2026-07-19`: version `4`, SHA-256 `e001020d27dfaed9602ff7170f1b12f4632b4f5c103491e4c715b5dead9d7299`
-- History entries `72`, `73`, and `74` verify the three processed-intake updates.
+- `rowdy-room/current-state`: version `17`, SHA-256 `7756d0ddc9e9e757ff26d6230eff42c1e5f2c864759d59f22f02e348633b31be`
+- `rowdy-room/equipment-recovery`: version `8`, SHA-256 `caeb99f2d1feee70d3a89f4ddbb030383d35c6dc46a847b6205ac565d104b4af`
+- `rowdy-room/equipment-pending-intake-2026-07-19`: version `5`, SHA-256 `50f379fe23a37e1a38601bd69e62981f43a331bc958ad695c36131bf297e7ab7`
+- `rowdy-room/equipment-photo-addition-2026-07-20`: version `1`, SHA-256 `b6f5179f18c83ffcfd949a0f29c9a1a825a4617f73509b5f91dddcc1e38ed9e6`
+- History entries `75` through `78` verify the batch-03 continuity saves.
 
 ## Authoritative equipment snapshot
 
-Roger authorized processing of the current text and photo batch on 2026-07-20.
+The current text intake and twenty-three photographs have been processed and verified as of 2026-07-20.
 
-- Inventory lines: `65`
-- Physical units: `89`
-- User-confirmed lines: `45`
-- Physically verified photo lines: `6`
-- Recovery-required photo lines: `14`
+- Inventory lines: `66`
+- Physical units: `90`
+- User-confirmed lines: `44`
+- Physically verified lines: `7`
+- Recovery-required lines: `15`
 - Working lines: `3`
 - Needs-repair lines: `2`
-- Operating status not yet confirmed: `60`
-- Aggregate inventory SHA-256: `94259543098240bded10666857748f708f11cff120361a9533afb4211e232cfa`
-- Equipment history: `65` inserts and `1` audited quantity correction
-- Retry-safe second synchronization: no additional history rows
+- Operating status not yet confirmed: `61`
+- Aggregate inventory SHA-256: `b72b08839acfa7445f6883b5735f2dad52ed3dc5514f81077e85caa40080b1b7`
+- Equipment history: `66` inserts, one audited quantity correction, and one audited photo-verification update
+- Batch-03 result: Photos 1 and 2 are one PowerGis powered-audio unit; Photo 3 matches the existing onn. Roku TV model 100012589.
 
 Public GitHub stores only this safe summary. Names, private source evidence, condition notes, and any identifiers remain in the private truth system and recovery package.
 
 ## Local recovery map
 
 Material changes create dated recovery material under the approved Codex workspace, with SHA-256 evidence recorded in private continuity checks.
+
+Latest equipment photo-addition recovery:
+
+- `Rowdy_Room_Equipment_Photo_Addition_2026-07-20_PRIVATE.zip`
+- bytes: `4844409`
+- entries: `13`
+- photos: `3`
+- SHA-256: `0846adaa649f3bffda5d31b309a825728eb1f38ef7ac662e6fae8fa77418bead`
+- internal hashes: `11/11` passed
+- includes the three source photographs, updated private JSON and CSV, master workbook, inspection evidence, and Supabase/GitHub readbacks
 
 Processed equipment recovery:
 
@@ -100,24 +111,25 @@ Private master workbook:
 
 - `Rowdy_Room_Equipment_Inventory_Master.xlsx`
 - sheets: `4`
-- SHA-256: `e72db523d216118d1b1763e4942fcc6a52b1ebf234f60e4a6cea70ec86820dd5`
+- SHA-256: `ca6803352b5ab801563bd2647d2bd6a945c43c327ac5595ecd10a11dd41de072`
 - formula errors: `0`
-- all sheets rendered; inventory top and bottom visually checked
+- all four sheets rendered; the onn. TV and PowerGis rows were visually checked
 
-Processed-equipment continuity checks:
+Latest equipment continuity checks:
 
-- run: `bdef7c7d-cccc-4fdb-a632-039a7b72535e`
-- check `71`: authoritative Supabase inventory/readback — pass
-- check `72`: continuity record history readback — pass
-- check `73`: workbook formula and visual QA — pass
-- check `74`: public-safe GitHub readback and privacy check — pass
-- check `75`: processed local recovery archive readback — pass
-- check `76`: branch is not merged to `main` — warning
+- run: `c5e71e1a-7603-4a82-8e36-ee8b181d9ec8`
+- check `82`: authoritative Supabase inventory readback — pass
+- check `83`: equipment history readback — pass
+- check `84`: continuity record history readback — pass
+- check `85`: workbook formula and visual QA — pass
+- check `86`: public-safe GitHub readback and privacy scan — pass
+- check `87`: local recovery archive readback — pass
+- check `88`: branch is not merged to `main` — warning
 
 ## Current recovery-required facts
 
-- Fourteen photo-derived inventory lines still need exact identification or additional evidence.
-- Sixty inventory lines still need an operating-status test or confirmation.
+- Fifteen photo-derived inventory lines still need exact identification or additional evidence.
+- Sixty-one inventory lines still need an operating-status test or confirmation.
 - The original Rowdy Room Progress conversation has not been recovered as a durable export.
 - The private server-side Bible directory has not been fully reconciled with GitHub and Supabase.
 - Draft pull request #28 still needs review or merge before its continuity files exist on `main`.
