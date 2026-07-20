@@ -1,5 +1,18 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-20 — Approximately $500 wireless projection package recorded
+
+Status: Roger set a roughly $500 total budget for the exact TOWOND 120-inch screen and stand, an HDMI projector, point-to-point wireless HDMI, two lights with one remote, and two wireless adapters for the Rockville speakers.
+
+- Recorded the current $455.19 pre-tax package plan: TOWOND B0DKN2MMDZ, HAPPRUN B0DT5VLVL8, Nyrius Orion Prime TDD20, NiceVeedi B0D5LPNF15, and two Alto Bluetooth Total 2 receivers.
+- Preserved the correct OBSBOT path: OBSBOT USB to production PC and OBS, then PC HDMI through the dedicated wireless-HDMI link to the projector.
+- Recorded the Orion Prime's official 90 ms latency and the absence of a named encryption specification; it is a budget compromise and is not described as private or encrypted.
+- Recorded the ARIES Pro NPCS600 as the preferred low-latency upgrade, raising the package subtotal to $570.19 before tax.
+- Added the Roger-confirmed pair of Rockville speakers to the protected inventory without guessing the model, power design, inputs, Bluetooth capability, stereo-link behavior, or condition.
+- Gated purchase of the two Alto receivers on confirmation that the Rockville speakers are powered and have compatible XLR inputs.
+- Confirmed that no item was ordered and no Amazon cart was changed.
+- Refreshed the private workbook to 67 lines and 92 physical units, with zero formula errors and visual QA of all four sheets.
+
 ## 2026-07-20 — Authoritative show projection path corrected
 
 Status: Roger clarified that “wireless” means a dedicated wireless-HDMI program-feed link, not ordinary screen mirroring.
