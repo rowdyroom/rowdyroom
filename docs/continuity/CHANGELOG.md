@@ -1,5 +1,18 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-20 — Authoritative show projection path corrected
+
+Status: Roger clarified that “wireless” means a dedicated wireless-HDMI program-feed link, not ordinary screen mirroring.
+
+- Recorded that the OBSBOT Tiny 2 Lite stays USB-connected to the production PC and normally appears inside the complete OBS program feed sent to the projector.
+- Set the primary display transport to a dedicated point-to-point wireless HDMI transmitter and receiver connected to the projector's HDMI input.
+- Kept wired HDMI as the emergency fallback and AirPlay/Miracast as secondary convenience methods only because screen mirroring can be blacked out or blocked.
+- Recorded the owned OREI 1x2 splitter as the available split point for a local display and the wireless transmitter, subject to compatibility testing.
+- Kept the transmitter/receiver kit out of owned inventory until it is purchased and verified.
+- Required explicit encryption before any future kit is described as private or secure.
+- Marked exact kit selection recovery-required pending room-distance, obstruction, latency, compatibility, encryption, and budget-scope confirmation.
+
+
 ## 2026-07-20 — Additional equipment photo batch appended
 
 Status: Three additional photographs were appended to the existing equipment truth set after Roger resumed intake.
