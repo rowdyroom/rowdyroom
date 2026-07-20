@@ -37,8 +37,17 @@ Repository: `rowdyroom/rowdyroom`
 - Rockville RPG15 Changelog commit and pre-breadcrumb branch head: `57237ec82e00c7feec2f9b9da907b8e04313a94a`.
 - Branch Operator Law sync commit: `af12d4a1fdd1335514f387cb89c614f3582eb372`.
 - Branch Project Bible sync commit: `10503f6d42fa87c87585796de1ac7a6f77bc8cc6`.
+- Same-Chat Continuity Law main commit: `b115355f796bd409a8901bc3e28b1760f322e86b`.
+- Same-Chat Continuity Bible main commit: `6be7fa59651f5dcd132cff7ac0c9f06bd3cbc07b`.
+- Same-Chat Continuity branch Law commit: `a710c5c54c269fe2a718976fafca308ef4e02cb6`.
+- Same-Chat Continuity branch Bible commit: `61451decb00dd6de574bbdb8a6e9909431a290b8`.
+- Same-Chat Continuity Runbook commit: `1af58b04be592782ac20d691687428f9463d1703`.
+- Same-Chat Continuity Current State commit: `0ed0d646ded948e9e8f692a33638804f9123f7c9`.
+- Same-Chat Continuity Changelog commit: `505a382e00fb180f7a3a8b34a27d816b403e9884`.
 
 Always verify the current branch head and file contents before changing them. A draft-branch record must never be described as merged.
+
+The persistent Work Mode skill `rowdy-room-continuity` was installed and validated on 2026-07-20. Its Same-Chat Continuity gate requires the current conversation to be preserved until a reliable near-limit warning and a complete verified handoff reviewed with Roger. The current runtime does not expose a compaction-disable control or exact remaining-context meter.
 
 ## Private truth-store map
 
@@ -49,11 +58,13 @@ Authoritative project: Supabase `Final`, ref `szubjgpvlqliyparrnam`.
 - `public.rr_continuity_checks` — pass, warning, and failure evidence.
 - `public.rr_equipment_inventory` — authoritative private equipment inventory.
 - `public.rr_equipment_history` — equipment version history.
-- Primary record keys: `rowdy-room/current-state`, `rowdy-room/show-projection-signal-path`, `rowdy-room/continuity-protocol`, `rowdy-room/equipment-recovery`, `rowdy-room/equipment-pending-intake-2026-07-19`, `rowdy-room/equipment-photo-addition-2026-07-20`, and `rowdy-room/law-and-breadcrumb-protocol`.
+- Primary record keys: `rowdy-room/current-state`, `rowdy-room/same-chat-continuity-law`, `rowdy-room/show-projection-signal-path`, `rowdy-room/continuity-protocol`, `rowdy-room/equipment-recovery`, `rowdy-room/equipment-pending-intake-2026-07-19`, `rowdy-room/equipment-photo-addition-2026-07-20`, and `rowdy-room/law-and-breadcrumb-protocol`.
 
 Do not copy protected content into this public map. Use safe record keys, versions, hashes, and check identifiers only.
 
 Verified 2026-07-20 private record snapshot:
+
+- `rowdy-room/same-chat-continuity-law`: version `2`, SHA-256 `fa5004bb9c696f2cfe157958cdf70f19cbacf67f23d2917c4f16ece38104debf`, history ID `94`
 
 - `rowdy-room/law-and-breadcrumb-protocol`: version `1`, SHA-256 `1e2de42998ee451cb94b1b8c02ffe9513eb83642bcde59df7c975c29000e5602`
 - `rowdy-room/continuity-protocol`: version `4`, SHA-256 `f7e29562aff5f07bbaa30e57197bf46bab8ee48d8fc95a34fac802f20913811c`
@@ -69,6 +80,8 @@ Verified 2026-07-20 private record snapshot:
 - Equipment history entry `73` verifies the Rockville RPG15 canonical version `2`, SHA-256 `b9af4380126d7512f68a596592ee82abadcd94f676314fe98367555f72cef844`.
 - Equipment history entry `74` preserves deletion of the mistaken `powergis-powered-pa-amplifier` alias.
 - Continuity history entries `86` through `89` verify the RPG15 recovery, Current State, AV-package, and photo-addition corrections.
+- Continuity history entries `90` through `94` verify the Same-Chat Continuity Law, protocol updates, Current State update, and attached recovery package.
+- Continuity check run `de7b364b-d3a3-4748-afcb-0e56195eb65b` recorded six passes and two explicit warnings for unavailable runtime controls and stale OBS-dependent projection records.
 
 ## Authoritative equipment snapshot
 
@@ -91,6 +104,13 @@ The current text intake and twenty-three photographs have been processed and ver
 Public GitHub stores only this safe summary. Names, private source evidence, condition notes, and any identifiers remain in the private truth system and recovery package.
 
 ## Local recovery map
+
+Latest Same-Chat Continuity recovery:
+
+- path: `/workspace/scratch/c6cc1c3cb715/recovery/Rowdy_Room_Same_Chat_Continuity_2026-07-20.zip`
+- SHA-256: `2a5b796df42c2b022580abf17d13b0a9951aa3c1cd87e94143b076510a7cb1f3`
+- contents: public-safe manifest, Same-Chat Law copy, installed skill, and skill interface metadata
+- archive readback: pass
 
 Material changes create dated recovery material under the approved Codex workspace, with SHA-256 evidence recorded in private continuity checks.
 
