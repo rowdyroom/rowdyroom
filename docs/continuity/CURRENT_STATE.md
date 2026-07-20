@@ -96,6 +96,9 @@ As of 2026-07-20:
 - repository-wide agent instructions require these records to be loaded before Rowdy Room work
 - private structured records, equipment details, save checks, and history are maintained outside the public repository
 - chats are explicitly classified as temporary context rather than permanent records
+- the Same-Chat Continuity Law forbids a voluntary chat move unless Roger authorizes it and requires a complete verified handoff before continuation elsewhere
+- exact context remaining and a compaction-disable control are not exposed in the current Work Mode runtime; a reliable runtime warning must trigger the handoff procedure, and automatic compaction requires same-chat reconstruction from durable records
+- the persistent personal skill `rowdy-room-continuity` was installed and validated for Work Mode on 2026-07-20; skill-list caching may delay automatic invocation in the already-open conversation
 - the protected Supabase equipment inventory is the private source of truth, with forced row-level security, item-version history, and nightly snapshots
 - `Rowdy_Room_Equipment_Inventory_Master.xlsx` is the editable intake copy; workbook rows become authoritative only after Supabase save and readback
 - Roger's 2026-07-19 text intake, twenty-three preserved photographs, and the RPG15 correction are processed into 66 authoritative equipment lines representing 91 physical units; 52 lines are confirmed and 14 lines remain recovery-required
@@ -111,6 +114,7 @@ The 2026-07-20 batch-03 addition matched the onn. Roku TV label to its existing 
 2. Sixty-one equipment lines have not yet had their working condition tested or explicitly confirmed; this includes both RPG15 speakers.
 3. The original Rowdy Room Progress conversation has not been recovered as a durable export.
 4. The private server-side Bible directory has not been fully reconciled with GitHub and Supabase.
+5. Existing AV-package and show-projection records specify OBS, while Roger's latest direct correction says he does not use OBS, uses TikTok LIVE Studio, normally uses the AI camera as his personal home-streaming camera, and uses the projector primarily for live events. Those stale OBS-dependent records are `Recovery required` and must not drive the projector selection.
 
 Recovery sources, in priority order:
 
