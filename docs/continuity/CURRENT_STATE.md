@@ -81,22 +81,23 @@ As of 2026-07-20:
 - chats are explicitly classified as temporary context rather than permanent records
 - the protected Supabase equipment inventory is the private source of truth, with forced row-level security, item-version history, and nightly snapshots
 - `Rowdy_Room_Equipment_Inventory_Master.xlsx` is the editable intake copy; workbook rows become authoritative only after Supabase save and readback
-- Roger's 2026-07-19 equipment text batch is preserved privately as `rowdy-room/equipment-pending-intake-2026-07-19` and in a dated private recovery package, but remains unprocessed with zero authoritative inventory rows while pictures and additional items are pending
+- Roger's 2026-07-19 text intake and twenty preserved photographs are processed into 65 authoritative equipment lines representing 89 physical units; 51 lines are confirmed and 14 photo-derived lines remain recovery-required
 - every material equipment change requires a public-safe summary check, structured private save, history verification, continuity checks, and a dated local recovery copy
 
 ## Recovery required
 
-The following information has not been recovered and must not be guessed:
+The current equipment intake is no longer missing, but these gaps remain and must not be guessed:
 
-1. The exact physical equipment inventory, including manufacturer and model.
-2. The original Rowdy Room Progress conversation.
-3. Any decisions or equipment facts present only in the private server-side Bible records.
+1. Fourteen photo-derived equipment lines still need label, model, rating, connector, quantity, or condition confirmation.
+2. Sixty equipment lines have not yet had their working condition tested or explicitly confirmed.
+3. The original Rowdy Room Progress conversation has not been recovered as a durable export.
+4. The private server-side Bible directory has not been fully reconciled with GitHub and Supabase.
 
 Recovery sources, in priority order:
 
-1. an export of the original Rowdy Room Progress conversation
-2. the private server-side Bible directory
-3. Roger's item-by-item physical confirmation
+1. Roger's label photographs and operational tests for the remaining equipment lines
+2. an export of the original Rowdy Room Progress conversation
+3. the private server-side Bible directory
 
 ## Required startup behavior
 
@@ -115,7 +116,7 @@ Before answering a Rowdy Room setup, equipment, show, production, or architectur
 
 ## Next recovery milestone
 
-Recover and verify the physical equipment inventory. Each item must have a source or Roger's confirmation before it is treated as authoritative.
+Confirm the remaining fourteen recovery-required equipment lines and test unknown working conditions. Future equipment additions should append to the existing 65-line truth set through the same save, history, readback, and recovery workflow.
 
 
 
