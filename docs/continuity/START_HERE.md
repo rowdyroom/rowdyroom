@@ -27,6 +27,8 @@ Repository: `rowdyroom/rowdyroom`
 - Law-aware runbook commit: `189a285f333bce6584b729c45df66e4b6c81d4de`.
 - Law-aware Current State commit: `6fc3fb2277c55daf9d35dece29afc93ac76ce1a3`.
 - Law change log commit: `a076d124b712cb0986c00f91364d20b2bd8c4e7c`.
+- Branch Operator Law sync commit: `af12d4a1fdd1335514f387cb89c614f3582eb372`.
+- Branch Project Bible sync commit: `10503f6d42fa87c87585796de1ac7a6f77bc8cc6`.
 
 Always verify the current branch head and file contents before changing them. A draft-branch record must never be described as merged.
 
@@ -43,6 +45,13 @@ Authoritative project: Supabase `Final`, ref `szubjgpvlqliyparrnam`.
 
 Do not copy protected content into this public map. Use safe record keys, versions, hashes, and check identifiers only.
 
+Verified 2026-07-20 private record snapshot:
+
+- `rowdy-room/law-and-breadcrumb-protocol`: version `1`, SHA-256 `1e2de42998ee451cb94b1b8c02ffe9513eb83642bcde59df7c975c29000e5602`
+- `rowdy-room/continuity-protocol`: version `4`, SHA-256 `f7e29562aff5f07bbaa30e57197bf46bab8ee48d8fc95a34fac802f20913811c`
+- `rowdy-room/current-state`: version `11`, SHA-256 `9d755ab8b70d883ed1ab3fdeaf9eb295b66a959caa704ca9b2f68d03cb0b2aeb`
+- History readback: pass for all three records
+
 ## Local recovery map
 
 A material change must create a dated recovery directory or package under the approved Codex workspace and record its SHA-256 hash in the private continuity checks.
@@ -54,7 +63,18 @@ Existing equipment truth-system recovery package:
 - Status: pass
 - Verified equipment rows at that snapshot: 0
 
-The dated recovery package for the 2026-07-20 Law and breadcrumb change must be recorded in the private continuity checks and local root breadcrumb before this change is complete.
+2026-07-20 Law and breadcrumb recovery package:
+
+- `Rowdy_Room_Law_And_Breadcrumb_2026-07-20.zip`
+- bytes: `34937`
+- entries: `13`
+- SHA-256: `c2cec656e6fa8ccdd27b3c1f74ed2c53805e4e1da810e134dc8c335347d359f7`
+- per-file hash manifest: included
+- continuity-check run: `1af02b8d-3293-4be6-b16c-6356d884b4b6`
+- GitHub main save check `53`: pass
+- continuity branch check `54`: warning because draft pull request #28 is not merged
+- Supabase readback/history check `55`: pass
+- local enforcement/recovery check `56`: pass
 
 ## Current recovery-required facts
 
