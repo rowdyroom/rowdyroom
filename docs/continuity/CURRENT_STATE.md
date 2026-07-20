@@ -77,6 +77,9 @@ As of 2026-07-18:
 - repository-wide agent instructions require these records to be loaded before Rowdy Room work
 - private structured records, equipment details, save checks, and history are maintained outside the public repository
 - chats are explicitly classified as temporary context rather than permanent records
+- the protected Supabase equipment inventory is the private source of truth, with forced row-level security, item-version history, and nightly snapshots
+- `Rowdy_Room_Equipment_Inventory_Master.xlsx` is the editable intake copy; workbook rows become authoritative only after Supabase save and readback
+- every material equipment change requires a public-safe summary check, structured private save, history verification, continuity checks, and a dated local recovery copy
 
 ## Recovery required
 
