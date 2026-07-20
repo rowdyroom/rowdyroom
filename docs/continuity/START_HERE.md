@@ -87,6 +87,15 @@ Public GitHub stores only this safe summary. Names, private source evidence, con
 
 Material changes create dated recovery material under the approved Codex workspace, with SHA-256 evidence recorded in private continuity checks.
 
+Latest AV-package recovery:
+
+- Rowdy_Room_AV_Package_Plan_2026-07-20_PRIVATE.zip
+- bytes: 82168
+- entries: 9
+- SHA-256: 304f0a8e77f6ca4dc57e78969c07c0f75fc17586d5b93dca8e431ac55d110873
+- internal hashes: 8/8 passed
+- includes the package recommendation, protected Supabase readback, public-safe GitHub readback, refreshed private JSON and CSV, master workbook, and workbook inspection evidence
+
 Latest show-projection recovery:
 
 - `Rowdy_Room_Show_Projection_Path_2026-07-20_PRIVATE.zip`
@@ -129,20 +138,20 @@ Private master workbook:
 
 - `Rowdy_Room_Equipment_Inventory_Master.xlsx`
 - sheets: `4`
-- SHA-256: `aec62bb20c42f8472964b735d630fa9bd3404dc4b7317dbc1fce52305f84d8a6`
+- SHA-256: `e1c63e6460f6a8d9b423198cd076977ff9c5f7b82af6334bb5e11039f3566180`
 - formula errors: `0`
-- all four sheets rendered; the updated OBSBOT row was visually checked
+- all four sheets rendered; the updated Rockville row, counts, and summary were visually checked
 
-Latest show-projection continuity checks:
+Latest AV-package continuity checks:
 
-- run: `a2abc25c-4ff1-447e-a7b8-c6580fe2d0f9`
-- check `91`: protected show-projection record and current-state history readback — pass
-- check `92`: OBSBOT equipment version and history readback — pass
-- check `93`: authoritative equipment aggregate readback — pass
-- check `94`: workbook formula and visual QA — pass
-- check `95`: four public-safe GitHub documents read back — pass
-- check `96`: local projection recovery archive readback — pass
-- check `97`: branch is not merged to `main` — warning
+- run: 105a4819-eae0-4ddc-9863-14a635d1bb8e
+- protected AV-package, signal-path, and current-state record readback — pass
+- Rockville equipment version, content hash, and history readback — pass
+- authoritative 67-line / 92-unit inventory aggregate readback — pass
+- workbook formula and four-sheet visual QA — pass
+- five public-safe GitHub documents read back — pass
+- local AV-package recovery archive and internal hashes — pass
+- draft pull request #28 remains unmerged to main — warning
 
 ## Current recovery-required facts
 
