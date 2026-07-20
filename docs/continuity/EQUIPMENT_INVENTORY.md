@@ -6,6 +6,18 @@
 
 The durable equipment system is active. The prior physical equipment list is still not present in the recovered records, so no equipment has been invented or inferred to fill the gap.
 
+## Pending unprocessed intake
+
+On 2026-07-20, Roger's supplied equipment text batch was preserved in the protected private continuity store and a dated private local recovery package after the final Operator Law audit found that the batch still existed only in chat. It remains deliberately unprocessed because Roger said more pictures and items are coming.
+
+- Private pending record: `rowdy-room/equipment-pending-intake-2026-07-19`
+- Intake status: `pending-unprocessed`
+- Authoritative equipment rows: 0
+- Photos and additional items: pending
+- Inventory processing: prohibited until Roger explicitly confirms the intake is complete
+
+No private identifiers or raw equipment details from that batch are published in this public file.
+
 This public file records only information that is safe to publish. Exact serial numbers, private storage locations, purchase records, credentials, network details, and other sensitive information belong only in the private inventory.
 
 ## Source-of-truth hierarchy
