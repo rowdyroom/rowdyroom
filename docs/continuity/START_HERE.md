@@ -28,6 +28,10 @@ Repository: `rowdyroom/rowdyroom`
 - Equipment public-safe inventory commit after batch 03: `2d7953ecd316f3ad3aaf0fa28343d33206970be5`.
 - Current State commit recording batch-03 equipment counts: `5a1c424d1004fa10c760a1ba5cca97266e7efd58`.
 - Continuity Changelog commit recording batch 03: `24c0cfd9e44fa94a5fd1a03156164d770e1347ed`.
+- Show-projection Project Bible commit: `9e83c9f4a6b8ec2e0fa8fa62fa15138b2eb8ca43`.
+- Show-projection Current State commit: `d26e1536195605d2d1b20bde374279cc20ad66a6`.
+- Show-projection Changelog commit: `0acbc6bc397da19c293ce15506b5f221d23b4f50`.
+- OBSBOT and equipment-summary projection-path commit: `ab32d46cd54d5518ab70a1afc1376d8bc93b3988`.
 - Branch Operator Law sync commit: `af12d4a1fdd1335514f387cb89c614f3582eb372`.
 - Branch Project Bible sync commit: `10503f6d42fa87c87585796de1ac7a6f77bc8cc6`.
 
@@ -42,7 +46,7 @@ Authoritative project: Supabase `Final`, ref `szubjgpvlqliyparrnam`.
 - `public.rr_continuity_checks` — pass, warning, and failure evidence.
 - `public.rr_equipment_inventory` — authoritative private equipment inventory.
 - `public.rr_equipment_history` — equipment version history.
-- Primary record keys: `rowdy-room/current-state`, `rowdy-room/continuity-protocol`, `rowdy-room/equipment-recovery`, `rowdy-room/equipment-pending-intake-2026-07-19`, `rowdy-room/equipment-photo-addition-2026-07-20`, and `rowdy-room/law-and-breadcrumb-protocol`.
+- Primary record keys: `rowdy-room/current-state`, `rowdy-room/show-projection-signal-path`, `rowdy-room/continuity-protocol`, `rowdy-room/equipment-recovery`, `rowdy-room/equipment-pending-intake-2026-07-19`, `rowdy-room/equipment-photo-addition-2026-07-20`, and `rowdy-room/law-and-breadcrumb-protocol`.
 
 Do not copy protected content into this public map. Use safe record keys, versions, hashes, and check identifiers only.
 
@@ -50,11 +54,14 @@ Verified 2026-07-20 private record snapshot:
 
 - `rowdy-room/law-and-breadcrumb-protocol`: version `1`, SHA-256 `1e2de42998ee451cb94b1b8c02ffe9513eb83642bcde59df7c975c29000e5602`
 - `rowdy-room/continuity-protocol`: version `4`, SHA-256 `f7e29562aff5f07bbaa30e57197bf46bab8ee48d8fc95a34fac802f20913811c`
-- `rowdy-room/current-state`: version `17`, SHA-256 `7756d0ddc9e9e757ff26d6230eff42c1e5f2c864759d59f22f02e348633b31be`
+- `rowdy-room/current-state`: version `18`, SHA-256 `ddb331de920855af83fc099ea66ca4ff144e72351a0e97e376ddf5de4dd19d32`
+- `rowdy-room/show-projection-signal-path`: version `1`, SHA-256 `f50fb81546fdeaa72a2fdd40d63071062a3c3e94bc2fe734653564baf0b7421b`
 - `rowdy-room/equipment-recovery`: version `8`, SHA-256 `caeb99f2d1feee70d3a89f4ddbb030383d35c6dc46a847b6205ac565d104b4af`
 - `rowdy-room/equipment-pending-intake-2026-07-19`: version `5`, SHA-256 `50f379fe23a37e1a38601bd69e62981f43a331bc958ad695c36131bf297e7ab7`
 - `rowdy-room/equipment-photo-addition-2026-07-20`: version `1`, SHA-256 `b6f5179f18c83ffcfd949a0f29c9a1a825a4617f73509b5f91dddcc1e38ed9e6`
 - History entries `75` through `78` verify the batch-03 continuity saves.
+- Continuity history entries `79` and `80` verify the projection decision and current-state update.
+- Equipment history entry `71` verifies OBSBOT version `2`, SHA-256 `878079e9a282b0f82664ce11f17736df0fe1cc3d5ccf7723ee38198ed145d880`.
 
 ## Authoritative equipment snapshot
 
@@ -68,8 +75,10 @@ The current text intake and twenty-three photographs have been processed and ver
 - Working lines: `3`
 - Needs-repair lines: `2`
 - Operating status not yet confirmed: `61`
-- Aggregate inventory SHA-256: `b72b08839acfa7445f6883b5735f2dad52ed3dc5514f81077e85caa40080b1b7`
-- Equipment history: `66` inserts, one audited quantity correction, and one audited photo-verification update
+- Aggregate inventory SHA-256: `db898256e0c4d5af746304c4203bc806d69326585a8a0234d446f1d58ae187b1`
+- Equipment history: `66` inserts, one audited quantity correction, one audited photo-verification update, and one audited OBSBOT show-use update
+- Authoritative show path: OBSBOT USB -> production PC -> OBS program -> HDMI -> point-to-point wireless HDMI transmitter/receiver -> projector HDMI
+- Screen mirroring is secondary only; the wireless-HDMI kit is not owned until purchased and verified.
 - Batch-03 result: Photos 1 and 2 are one PowerGis powered-audio unit; Photo 3 matches the existing onn. Roku TV model 100012589.
 
 Public GitHub stores only this safe summary. Names, private source evidence, condition notes, and any identifiers remain in the private truth system and recovery package.
@@ -77,6 +86,15 @@ Public GitHub stores only this safe summary. Names, private source evidence, con
 ## Local recovery map
 
 Material changes create dated recovery material under the approved Codex workspace, with SHA-256 evidence recorded in private continuity checks.
+
+Latest show-projection recovery:
+
+- `Rowdy_Room_Show_Projection_Path_2026-07-20_PRIVATE.zip`
+- bytes: `80413`
+- entries: `9`
+- SHA-256: `74c1560b954fd6c8e18f5632b4a5daf0573545c80ba32e1023cb6b617ae8ce9e`
+- internal hashes: `8/8` passed
+- includes the authoritative signal-path decision, protected Supabase readback, public-safe GitHub readback, refreshed private JSON and CSV, master workbook, and workbook inspection evidence
 
 Latest equipment photo-addition recovery:
 
@@ -111,20 +129,20 @@ Private master workbook:
 
 - `Rowdy_Room_Equipment_Inventory_Master.xlsx`
 - sheets: `4`
-- SHA-256: `ca6803352b5ab801563bd2647d2bd6a945c43c327ac5595ecd10a11dd41de072`
+- SHA-256: `aec62bb20c42f8472964b735d630fa9bd3404dc4b7317dbc1fce52305f84d8a6`
 - formula errors: `0`
-- all four sheets rendered; the onn. TV and PowerGis rows were visually checked
+- all four sheets rendered; the updated OBSBOT row was visually checked
 
-Latest equipment continuity checks:
+Latest show-projection continuity checks:
 
-- run: `c5e71e1a-7603-4a82-8e36-ee8b181d9ec8`
-- check `82`: authoritative Supabase inventory readback — pass
-- check `83`: equipment history readback — pass
-- check `84`: continuity record history readback — pass
-- check `85`: workbook formula and visual QA — pass
-- check `86`: public-safe GitHub readback and privacy scan — pass
-- check `87`: local recovery archive readback — pass
-- check `88`: branch is not merged to `main` — warning
+- run: `a2abc25c-4ff1-447e-a7b8-c6580fe2d0f9`
+- check `91`: protected show-projection record and current-state history readback — pass
+- check `92`: OBSBOT equipment version and history readback — pass
+- check `93`: authoritative equipment aggregate readback — pass
+- check `94`: workbook formula and visual QA — pass
+- check `95`: four public-safe GitHub documents read back — pass
+- check `96`: local projection recovery archive readback — pass
+- check `97`: branch is not merged to `main` — warning
 
 ## Current recovery-required facts
 
@@ -133,6 +151,7 @@ Latest equipment continuity checks:
 - The original Rowdy Room Progress conversation has not been recovered as a durable export.
 - The private server-side Bible directory has not been fully reconciled with GitHub and Supabase.
 - Draft pull request #28 still needs review or merge before its continuity files exist on `main`.
+- The exact wireless HDMI kit remains unselected until actual room distance, obstructions, acceptable live-camera latency, HDCP/EDID behavior, explicit encryption requirement, and whether its cost is inside or outside the $200 projector budget are confirmed.
 - Future equipment additions are allowed and must be appended through the same private inventory, history, workbook, recovery, and breadcrumb procedure.
 
 ## Breadcrumb required after every material change
