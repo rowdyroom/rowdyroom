@@ -1,5 +1,17 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-20 — Same-chat continuity law and Work Mode enforcement installed
+
+Status: Roger required Rowdy Room work to remain in the same chat until a reliable near-limit warning, followed by a complete reviewed and verified handoff before any continuation elsewhere.
+
+- Added the Same-Chat Continuity Law to the Operator Law and Project Bible.
+- Added the limit and handoff procedure to the Continuity Runbook and Current State.
+- Installed and validated the persistent Work Mode skill `rowdy-room-continuity`.
+- Recorded that the current runtime exposes neither a compaction-disable control nor an exact remaining-context meter; the assistant must not claim otherwise.
+- Required automatic compaction to recover in the same chat from verified durable records without making Roger repeat saved facts.
+- Required inaccessible chat spans to remain `Recovery required`; an incomplete reconstruction cannot be called a complete handoff.
+- Marked the stale OBS-dependent projection records `Recovery required` because Roger's latest correction is that he does not use OBS, uses TikTok LIVE Studio, normally uses the AI camera for personal home streaming, and uses the projector primarily for live events.
+
 ## 2026-07-20 — Rockville RPG15 pair confirmed and duplicate repaired
 
 Status: Roger confirmed that both owned Rockville speakers are Power GIG RPG15 active 15-inch PA speakers.
