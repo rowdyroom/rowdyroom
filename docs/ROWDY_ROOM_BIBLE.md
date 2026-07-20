@@ -1,7 +1,7 @@
 # Rowdy Room Project Bible
 
 **Status:** Active source of truth  
-**Last consolidated:** 2026-07-13  
+**Last consolidated:** 2026-07-20  
 **Owner:** Roger Jamsek  
 **Public brand:** Rowdy Room  
 **Location:** Rolla, Missouri  
@@ -17,6 +17,9 @@ This document consolidates the authoritative decisions, current systems, progres
 4. Small changes are acceptable only when the previous state can be restored.
 5. The live system, GitHub, and Supabase documentation must describe the same behavior. Any mismatch is a defect.
 6. Secrets, host passwords, private tokens, service-role keys, and API credentials must never be committed to GitHub or copied into this Bible.
+7. `docs/ROWDY_ROOM_OPERATOR_LAW.md` must be read as the first substantive action after every Rowdy Room prompt or continuation and audited again immediately before the final response.
+8. After every action, compare the actual result with the Operator Law and correct any missed requirement before continuing when it is safe to do so.
+9. `docs/continuity/START_HERE.md` is the root breadcrumb map. Every material change must update the applicable durable records, verification evidence, and recovery breadcrumbs so another task can reconstruct the current state without depending on chat history.
 
 The server-side tracking system created outside the web root is the operational record:
 
