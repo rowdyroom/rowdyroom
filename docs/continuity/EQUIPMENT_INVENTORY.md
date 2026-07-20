@@ -2,21 +2,23 @@
 
 **Status:** Durable inventory active; current intake processed and verified  
 **Last reviewed:** 2026-07-20  
-**Authoritative inventory lines:** 65  
-**Physical units represented:** 89
+**Authoritative inventory lines:** 66  
+**Physical units represented:** 90
 
-Roger's current text list and the twenty preserved equipment photographs have been processed into the protected private equipment inventory. Multiple photographs of the same item were deduplicated, package quantities were preserved, and uncertain identifications were marked recovery-required instead of guessed.
+Roger's current text list and twenty-three preserved equipment photographs have been processed into the protected private equipment inventory. Multiple photographs of the same item were deduplicated, package quantities were preserved, and uncertain identifications were marked recovery-required instead of guessed.
 
 No serial numbers, device identifiers, storage locations, purchase details, private notes, or raw photographs are published in this public file.
 
+The latest photo addition deduplicated two views of one PowerGis powered-audio unit into a single recovery-required line and matched the third photo to the existing onn. Roku TV, raising that TV from user-confirmed to physically verified without adding a duplicate.
+
 ## Current verification state
 
-- 45 lines are Roger-confirmed from the supplied text list.
-- 6 lines are physically verified from a readable product or label photograph.
-- 14 photo-derived lines remain recovery-required because a brand, model, rating, connector type, quantity, or operating condition is not fully confirmed.
+- 44 lines are Roger-confirmed from the supplied text list.
+- 7 lines are physically verified from a readable product or label photograph.
+- 15 photo-derived lines remain recovery-required because a brand, model, rating, connector type, quantity, or operating condition is not fully confirmed.
 - 3 lines have a confirmed working status.
 - 2 lines have a confirmed needs-repair or partially functional status.
-- 60 lines have an unknown operating status until they are tested.
+- 61 lines have an unknown operating status until they are tested.
 - Future additions are allowed and append to this truth set; they do not replace the current inventory.
 
 ## Public-safe category summary
@@ -32,10 +34,10 @@ No serial numbers, device identifiers, storage locations, purchase details, priv
 | Microphones & wireless microphone systems | 2 | 3 |
 | Networking & wireless video | 1 | 1 |
 | Power & battery equipment | 9 | 10 |
-| Speakers, subwoofers & monitors | 3 | 3 |
+| Speakers, subwoofers & monitors | 4 | 4 |
 | Stands, mounts & cases | 10 | 15 |
 | Televisions, projectors & audience displays | 3 | 3 |
-| **Total** | **65** | **89** |
+| **Total** | **66** | **90** |
 
 ## Source-of-truth hierarchy
 
@@ -49,13 +51,13 @@ No serial numbers, device identifiers, storage locations, purchase details, priv
 
 The protected readback confirms:
 
-- 65 authoritative rows
-- 89 physical units
-- 65 valid item content hashes
-- 65 insert-history records
+- 66 authoritative rows
+- 90 physical units
+- 66 valid item content hashes
+- 66 insert-history records
 - one audited quantity correction
-- aggregate inventory SHA-256 `94259543098240bded10666857748f708f11cff120361a9533afb4211e232cfa`
-- a second retry-safe synchronization pass produced no further changes
+- one audited photo-verification update
+- aggregate inventory SHA-256 `b72b08839acfa7445f6883b5735f2dad52ed3dc5514f81077e85caa40080b1b7`
 
 The safe intake record key is `rowdy-room/equipment-pending-intake-2026-07-19`. Protected content, versions, hashes, checks, and local recovery locations are recorded in `docs/continuity/START_HERE.md`.
 
