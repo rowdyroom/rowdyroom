@@ -1,8 +1,18 @@
 # Rowdy Room Continuity Runbook
 
-**Effective:** 2026-07-18
+**Effective:** 2026-07-20
 
 This runbook prevents important Rowdy Room facts from existing only inside a chat.
+
+## Mandatory start and finish gates
+
+For every Rowdy Room prompt, continuation, and action:
+
+1. Read `docs/ROWDY_ROOM_OPERATOR_LAW.md` before the first substantive answer or action.
+2. Read `docs/continuity/START_HERE.md` and follow the applicable breadcrumbs before deciding what is known or what access is available.
+3. After each action, compare the actual result against the Operator Law and correct any missed requirement that can still be corrected safely.
+4. Immediately before the final response, read the Operator Law again and perform a final compliance audit.
+5. Do not substitute a statement of compliance for evidence. Preserve paths, commits, record keys, versions, hashes, checks, and recovery locations.
 
 ## The verified save rule
 
@@ -17,8 +27,23 @@ A material Rowdy Room change is complete only after all applicable steps pass:
 7. Compare the values that are supposed to match.
 8. Record a pass, warning, or failure for each target.
 9. Create a dated local recovery copy that contains no exposed secrets.
+10. Update `docs/continuity/START_HERE.md` and add a dated breadcrumb that lets a future task find the saved result and its verification evidence.
 
 If any required save fails, the change remains incomplete and the failure must be reported plainly.
+
+## Required breadcrumb record
+
+Every material change must leave a public-safe breadcrumb containing:
+
+- the date and a short description of the change
+- the authoritative public-safe file path, branch, and commit
+- safe identifiers for private records, including record key, version, and content hash
+- the continuity-check run identifiers and pass, warning, or failure status
+- the dated local recovery path, file hash, and package contents summary
+- any remaining `Recovery required` facts or unverified surfaces
+- the exact next safe action
+
+The root map is `docs/continuity/START_HERE.md`. Chat history and task titles may help with discovery, but they are never authoritative breadcrumbs.
 
 ## What counts as a material change
 
