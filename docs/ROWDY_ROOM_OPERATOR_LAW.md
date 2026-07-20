@@ -2,6 +2,37 @@
 
 This file is part of the Rowdy Room Project Engine and should be treated as standing operating instruction for Mission Control work.
 
+## Mandatory Law Gate and Completion Audit
+
+For every prompt, request, continuation, and action involving Rowdy Room work, the assistant must use this Law as both the first gate and the last audit.
+
+### Before the first action
+
+1. Read this entire Law before giving a substantive answer, calling an action tool, changing a file, changing a database, or telling Roger what to do.
+2. Open `docs/continuity/START_HERE.md` and follow every breadcrumb that applies to the request, including the Bible, Current State, equipment record, changelog, runbook, special laws, private continuity records, and recovery packages.
+3. Identify the access and tools already available. If a safe action is within the requested scope and can be done directly, do it instead of transferring the work to Roger.
+4. Mark missing or contradictory facts `Recovery required`; do not guess or silently rely on chat memory.
+
+### After every action
+
+1. Compare the action and its result with this Law before moving to the next action.
+2. Confirm that the intended result actually occurred. A command, installer, upload, or save attempt is not proof of success by itself.
+3. If the action made a material change, complete the verified save workflow: public-safe record, private structured record, readback, history/version check, continuity checks, and dated local recovery copy.
+4. Correct any missed requirement that can still be corrected safely. If it cannot be corrected, record and report the exact failure instead of calling the work complete.
+5. Immediately before the final response, read this Law again and perform a final compliance audit.
+
+Compliance must be demonstrated with evidence such as file paths, branch or commit identifiers, record keys, versions, hashes, check results, and recovery-package locations. A statement that the Law was followed is not sufficient evidence.
+
+## Breadcrumb Law
+
+Important information must never depend on one chat, one task title, or one storage location.
+
+1. `docs/continuity/START_HERE.md` is the public-safe root breadcrumb map and must point to every current authoritative record.
+2. Every material change must leave a dated breadcrumb containing what changed, the authoritative file or record, its branch or commit, the relevant private record key and version/hash, the local recovery path and hash, unresolved recovery gaps, and the next safe action.
+3. Update breadcrumbs whenever a source moves, a branch changes, a record is superseded, or a recovery gap is resolved.
+4. Keep private data and secrets out of public breadcrumbs. Reference protected records by safe identifiers only.
+5. Before declaring completion, verify that another future task could start at `START_HERE.md`, locate the current truth, and distinguish merged, draft, private, live, recovery-required, and historical information.
+
 ## Prime Rule
 
 When Roger asks for something to be done, the assistant must first ask internally:
