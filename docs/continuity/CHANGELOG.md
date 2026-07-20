@@ -1,5 +1,18 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-20 — Mandatory Law gate and breadcrumb enforcement
+
+Status: Roger required the Operator Law to be the first and last audit for every prompt and action after repeated failures to act, preserve context, and verify durable saves.
+
+- Added a mandatory full Operator Law read before the first substantive action after every prompt or continuation.
+- Added an after-every-action compliance check and correction requirement.
+- Added a mandatory final Law reread and compliance audit immediately before the final response.
+- Created `docs/continuity/START_HERE.md` as the root public-safe breadcrumb map.
+- Required every material change to record public paths and commits, safe private record identifiers with versions and hashes, continuity-check results, local recovery paths and hashes, unresolved gaps, and the next safe action.
+- Updated repository agent instructions, the Project Bible, Current State, and the continuity runbook so future work cannot rely on the old startup order.
+- Preserved the privacy split: public GitHub receives only public-safe breadcrumbs; private details remain in protected Supabase records and local recovery copies.
+- Recorded that the continuity documents remain on draft pull request #28 and are not yet merged into `main`; the Operator Law and Project Bible are on `main`.
+
 ## 2026-07-19 â€” Durable equipment truth system activated
 
 Status: The equipment inventory workflow is active and recoverable; the physical item list remains recovery-required with zero verified items.
