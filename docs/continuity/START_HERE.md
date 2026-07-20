@@ -32,6 +32,9 @@ Repository: `rowdyroom/rowdyroom`
 - Show-projection Current State commit: `d26e1536195605d2d1b20bde374279cc20ad66a6`.
 - Show-projection Changelog commit: `0acbc6bc397da19c293ce15506b5f221d23b4f50`.
 - OBSBOT and equipment-summary projection-path commit: `ab32d46cd54d5518ab70a1afc1376d8bc93b3988`.
+- Rockville RPG15 equipment correction commit: `26f1e631c7af6ce29549b8e70ed5b4aa47bf615e`.
+- Rockville RPG15 Current State correction commit: `0ec689baf4e798ac5838e31eecc4ca9f7f9e1c5e`.
+- Rockville RPG15 Changelog commit and pre-breadcrumb branch head: `57237ec82e00c7feec2f9b9da907b8e04313a94a`.
 - Branch Operator Law sync commit: `af12d4a1fdd1335514f387cb89c614f3582eb372`.
 - Branch Project Bible sync commit: `10503f6d42fa87c87585796de1ac7a6f77bc8cc6`.
 
@@ -54,38 +57,51 @@ Verified 2026-07-20 private record snapshot:
 
 - `rowdy-room/law-and-breadcrumb-protocol`: version `1`, SHA-256 `1e2de42998ee451cb94b1b8c02ffe9513eb83642bcde59df7c975c29000e5602`
 - `rowdy-room/continuity-protocol`: version `4`, SHA-256 `f7e29562aff5f07bbaa30e57197bf46bab8ee48d8fc95a34fac802f20913811c`
-- `rowdy-room/current-state`: version `18`, SHA-256 `ddb331de920855af83fc099ea66ca4ff144e72351a0e97e376ddf5de4dd19d32`
+- `rowdy-room/current-state`: version `21`, SHA-256 `01c3b2eb6509f33a740eef571c7a2de51036e21c1405da3999fd559f96dbccea`
 - `rowdy-room/show-projection-signal-path`: version `1`, SHA-256 `f50fb81546fdeaa72a2fdd40d63071062a3c3e94bc2fe734653564baf0b7421b`
-- `rowdy-room/equipment-recovery`: version `8`, SHA-256 `caeb99f2d1feee70d3a89f4ddbb030383d35c6dc46a847b6205ac565d104b4af`
+- `rowdy-room/equipment-recovery`: version `9`, SHA-256 `b36b779d6737c95212e79e915c66752320d7ec9b78b0c2d2efb58c23e28db8aa`
 - `rowdy-room/equipment-pending-intake-2026-07-19`: version `5`, SHA-256 `50f379fe23a37e1a38601bd69e62981f43a331bc958ad695c36131bf297e7ab7`
-- `rowdy-room/equipment-photo-addition-2026-07-20`: version `1`, SHA-256 `b6f5179f18c83ffcfd949a0f29c9a1a825a4617f73509b5f91dddcc1e38ed9e6`
+- `rowdy-room/equipment-photo-addition-2026-07-20`: version `2`, SHA-256 `6d7747b34f1b8b6ee0e966ccbea500c1372ac4ed537d62d86569309da537b17b`
+- `rowdy-room/av-package-budget-2026-07-20`: version `3`, SHA-256 `c80efdd172f744cb399709d8cfba880cb4c1097f129c43cb43596ce34df0fd09`
 - History entries `75` through `78` verify the batch-03 continuity saves.
 - Continuity history entries `79` and `80` verify the projection decision and current-state update.
 - Equipment history entry `71` verifies OBSBOT version `2`, SHA-256 `878079e9a282b0f82664ce11f17736df0fe1cc3d5ccf7723ee38198ed145d880`.
+- Equipment history entry `73` verifies the Rockville RPG15 canonical version `2`, SHA-256 `b9af4380126d7512f68a596592ee82abadcd94f676314fe98367555f72cef844`.
+- Equipment history entry `74` preserves deletion of the mistaken `powergis-powered-pa-amplifier` alias.
+- Continuity history entries `86` through `89` verify the RPG15 recovery, Current State, AV-package, and photo-addition corrections.
 
 ## Authoritative equipment snapshot
 
 The current text intake and twenty-three photographs have been processed and verified as of 2026-07-20.
 
-- Inventory lines: `67`
-- Physical units: `92`
-- User-confirmed lines: `44`
+- Inventory lines: `66`
+- Physical units: `91`
+- User-confirmed lines: `45`
 - Physically verified lines: `7`
-- Recovery-required lines: `16`
+- Recovery-required lines: `14`
 - Working lines: `3`
 - Needs-repair lines: `2`
-- Operating status not yet confirmed: `62`
-- Aggregate inventory SHA-256: `a876cd583d7c87e9ca75dc8ae10b909f698008a62bf03f0e856c4c25d97bbbe7`
-- Equipment history: `67` inserts, one audited quantity correction, one audited photo-verification update, and one audited OBSBOT show-use update
+- Operating status not yet confirmed: `61`
+- Aggregate inventory SHA-256: `b36da5b23e91c6e06e40193cdde1f38e2fe24c0e09d0b519493a3f658ab4a3bf`
+- Equipment history: `67` inserts, four audited updates, and one audited duplicate deletion
 - Authoritative show path: OBSBOT USB -> production PC -> OBS program -> HDMI -> point-to-point wireless HDMI transmitter/receiver -> projector HDMI
 - Screen mirroring is secondary only; the wireless-HDMI kit is not owned until purchased and verified.
-- Batch-03 result: Photos 1 and 2 are one PowerGis powered-audio unit; Photo 3 matches the existing onn. Roku TV model 100012589.
+- Batch-03 corrected result: Photos 1 and 2 show the owned Rockville Power GIG RPG15 pair and are not a separate PowerGis device; Photo 3 matches the existing onn. Roku TV model 100012589.
 
 Public GitHub stores only this safe summary. Names, private source evidence, condition notes, and any identifiers remain in the private truth system and recovery package.
 
 ## Local recovery map
 
 Material changes create dated recovery material under the approved Codex workspace, with SHA-256 evidence recorded in private continuity checks.
+
+Latest Rockville RPG15 correction recovery:
+
+- `Rowdy_Room_Rockville_RPG15_Correction_2026-07-20_PRIVATE.zip`
+- bytes: `468165`
+- entries: `11`
+- SHA-256: `d390027811651b096764f7344705adbeb4dd66163d2719580a642eaed2b80cba`
+- internal hashes: `10/10` passed
+- contains the regenerated workbook, normalized private JSON/CSV/SQL, source data, Supabase readback, preview evidence, and hash manifest
 
 Latest AV-package recovery:
 
@@ -138,30 +154,30 @@ Private master workbook:
 
 - `Rowdy_Room_Equipment_Inventory_Master.xlsx`
 - sheets: `4`
-- SHA-256: `e1c63e6460f6a8d9b423198cd076977ff9c5f7b82af6334bb5e11039f3566180`
+- SHA-256: `3f7a2c6a1e66b8424415fc329bfe7ea120f03c4347b7cf51a8336e29b36c5b1f`
 - formula errors: `0`
-- all four sheets rendered; the updated Rockville row, counts, and summary were visually checked
+- all previews regenerated; the corrected counts and inventory presentation were visually checked
 
-Latest AV-package continuity checks:
+Latest Rockville RPG15 correction continuity checks:
 
-- run: 105a4819-eae0-4ddc-9863-14a635d1bb8e
-- protected AV-package, signal-path, and current-state record readback — pass
-- Rockville equipment version, content hash, and history readback — pass
-- authoritative 67-line / 92-unit inventory aggregate readback — pass
-- workbook formula and four-sheet visual QA — pass
-- five public-safe GitHub documents read back — pass
-- local AV-package recovery archive and internal hashes — pass
+- run: `f5bae21e-7984-4409-a600-8cdc0f609ffa`
+- Rockville RPG15 canonical row, hash, update history, and duplicate-delete history — pass
+- authoritative 66-line / 91-unit inventory aggregate — pass
+- four corrected private continuity records and history hashes — pass
+- workbook formula and visual QA — pass
+- three public-safe GitHub documents read back exactly — pass
+- 11-entry local correction archive and all 10 internal hashes — pass
 - draft pull request #28 remains unmerged to main — warning
 
 ## Current recovery-required facts
 
-- Sixteen inventory lines still need exact identification or additional evidence, including the two Roger-confirmed Rockville speakers.
-- Sixty-two inventory lines still need an operating-status test or confirmation.
+- Fourteen inventory lines still need exact identification or additional evidence.
+- Sixty-one inventory lines still need an operating-status test or confirmation, including both Rockville RPG15 speakers.
 - The original Rowdy Room Progress conversation has not been recovered as a durable export.
 - The private server-side Bible directory has not been fully reconciled with GitHub and Supabase.
 - Draft pull request #28 still needs review or merge before its continuity files exist on `main`.
 - The current approximately $500 package plan uses the Nyrius Orion Prime as a 90 ms budget compromise; it has not been purchased. The preferred low-latency ARIES Pro upgrade exceeds the package budget. Neither link is described as encrypted because no named encryption specification was found.
-- The exact Rockville speaker models, powered/passive design, rear-panel inputs, Bluetooth support, stereo-link behavior, and operating condition must be confirmed before the two Alto Bluetooth Total 2 receivers are purchased.
+- The Rockville RPG15 model, active design, XLR / 1/4-inch / RCA inputs, and lack of built-in Bluetooth are confirmed. Before the two Alto Bluetooth Total 2 receivers are purchased or used in a show, test both speakers' operating condition, receiver stereo-link behavior, and latency; keep show-critical audio wired.
 - Future equipment additions are allowed and must be appended through the same private inventory, history, workbook, recovery, and breadcrumb procedure.
 
 ## Breadcrumb required after every material change
