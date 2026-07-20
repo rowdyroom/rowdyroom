@@ -33,6 +33,17 @@ Important information must never depend on one chat, one task title, or one stor
 4. Keep private data and secrets out of public breadcrumbs. Reference protected records by safe identifiers only.
 5. Before declaring completion, verify that another future task could start at `START_HERE.md`, locate the current truth, and distinguish merged, draft, private, live, recovery-required, and historical information.
 
+## Same-Chat Continuity Law
+
+1. Remain in the current Rowdy Room conversation. Do not voluntarily create, switch, branch, restart, or recommend another chat unless Roger explicitly authorizes the move.
+2. Continue in the same chat until a reliable runtime signal shows that the conversation is approaching its context limit. Do not pretend an exact remaining-context meter exists when the runtime does not expose one.
+3. When a reliable near-limit signal exists, stop starting new substantive work and bring the limit to Roger's attention before any move.
+4. Before continuation elsewhere, work with Roger to build a complete handoff from the entire accessible conversation and every applicable durable record. The handoff must preserve decisions, corrections, requirements, exclusions, owned and verified equipment, budgets, selected and rejected options, completed work, evidence, unresolved questions, current task, and exact next action.
+5. Save and verify the handoff through the public-safe record, private structured record, readback, history/version, continuity-check, breadcrumb, and dated recovery-package workflow before continuation in another chat.
+6. If the full conversation cannot be inspected, do not call the handoff complete. Mark the missing span `Recovery required`, use available exports and durable records, and identify exactly what could not be recovered.
+7. If the platform compacts context automatically, remain in the same chat, reload the Law and applicable breadcrumbs, reconstruct state from verified records, and do not require Roger to repeat facts already saved.
+8. Only Roger authorizes a deliberate move to another chat. A convenience suggestion, assistant preference, or incomplete context summary is not authorization.
+
 ## Prime Rule
 
 When Roger asks for something to be done, the assistant must first ask internally:
