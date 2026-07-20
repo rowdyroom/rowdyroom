@@ -81,15 +81,17 @@ As of 2026-07-20:
 - chats are explicitly classified as temporary context rather than permanent records
 - the protected Supabase equipment inventory is the private source of truth, with forced row-level security, item-version history, and nightly snapshots
 - `Rowdy_Room_Equipment_Inventory_Master.xlsx` is the editable intake copy; workbook rows become authoritative only after Supabase save and readback
-- Roger's 2026-07-19 text intake and twenty preserved photographs are processed into 65 authoritative equipment lines representing 89 physical units; 51 lines are confirmed and 14 photo-derived lines remain recovery-required
+- Roger's 2026-07-19 text intake and twenty-three preserved photographs are processed into 66 authoritative equipment lines representing 90 physical units; 51 lines are confirmed and 15 photo-derived lines remain recovery-required
 - every material equipment change requires a public-safe summary check, structured private save, history verification, continuity checks, and a dated local recovery copy
 
 ## Recovery required
 
 The current equipment intake is no longer missing, but these gaps remain and must not be guessed:
 
-1. Fourteen photo-derived equipment lines still need label, model, rating, connector, quantity, or condition confirmation.
-2. Sixty equipment lines have not yet had their working condition tested or explicitly confirmed.
+The 2026-07-20 batch-03 addition matched the onn. Roku TV label to its existing record and added one PowerGis powered-audio unit. Its exact model, electrical rating, complete connector layout, and operating condition remain recovery-required.
+
+1. Fifteen photo-derived equipment lines still need label, model, rating, connector, quantity, or condition confirmation.
+2. Sixty-one equipment lines have not yet had their working condition tested or explicitly confirmed.
 3. The original Rowdy Room Progress conversation has not been recovered as a durable export.
 4. The private server-side Bible directory has not been fully reconciled with GitHub and Supabase.
 
@@ -116,7 +118,7 @@ Before answering a Rowdy Room setup, equipment, show, production, or architectur
 
 ## Next recovery milestone
 
-Confirm the remaining fourteen recovery-required equipment lines and test unknown working conditions. Future equipment additions should append to the existing 65-line truth set through the same save, history, readback, and recovery workflow.
+Confirm the remaining fifteen recovery-required equipment lines and test unknown working conditions. Future equipment additions should append to the existing 66-line truth set through the same save, history, readback, and recovery workflow.
 
 
 
