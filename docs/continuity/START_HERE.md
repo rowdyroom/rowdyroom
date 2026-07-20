@@ -25,8 +25,9 @@ Repository: `rowdyroom/rowdyroom`
 - The continuity files and repository-wide `AGENTS.md` are on `agent/rowdy-room-continuity`, represented by draft pull request #28. They are **not merged into `main`**.
 - Law-aware repository instructions commit: `e35f4f7e4ba996219b74b448e1530fe4561cf688`.
 - Law-aware runbook commit: `189a285f333bce6584b729c45df66e4b6c81d4de`.
-- Law-aware Current State commit: `6fc3fb2277c55daf9d35dece29afc93ac76ce1a3`.
-- Law change log commit: `a076d124b712cb0986c00f91364d20b2bd8c4e7c`.
+- Current State commit including private pending-intake breadcrumb: `56be1119239cd5d3cafbcd0d02e2adcb4ad6d9ed`.
+- Equipment public-safe pending-intake summary commit: `577a1b499fd62f7c735289574395c7149f56d6f0`.
+- Changelog commit including pending-intake preservation: `ee8125c4ad57b7aa41cf7c25f0f50321cf30e091`.
 - Branch Operator Law sync commit: `af12d4a1fdd1335514f387cb89c614f3582eb372`.
 - Branch Project Bible sync commit: `10503f6d42fa87c87585796de1ac7a6f77bc8cc6`.
 
@@ -49,8 +50,10 @@ Verified 2026-07-20 private record snapshot:
 
 - `rowdy-room/law-and-breadcrumb-protocol`: version `1`, SHA-256 `1e2de42998ee451cb94b1b8c02ffe9513eb83642bcde59df7c975c29000e5602`
 - `rowdy-room/continuity-protocol`: version `4`, SHA-256 `f7e29562aff5f07bbaa30e57197bf46bab8ee48d8fc95a34fac802f20913811c`
-- `rowdy-room/current-state`: version `11`, SHA-256 `9d755ab8b70d883ed1ab3fdeaf9eb295b66a959caa704ca9b2f68d03cb0b2aeb`
-- History readback: pass for all three records
+- `rowdy-room/current-state`: version `13`, SHA-256 `0a861e065606385fae4f4fe33a7d7228a807ef9f1a6c8de555e6e6aae62f27e3`
+- `rowdy-room/equipment-recovery`: version `4`, SHA-256 `3662015d8e4380fb3a2403e7f1e530fe02c878b5560d29f488c15350c5fcec14`
+- `rowdy-room/equipment-pending-intake-2026-07-19`: version `1`, SHA-256 `e3e4794fb4f7b2ad2afa118aa1de3f912fd7eeef680d6486a0dc04e88770f11e`
+- History readback: pass for the Law records and pending-intake preservation
 
 ## Local recovery map
 
@@ -71,14 +74,31 @@ Existing equipment truth-system recovery package:
 - SHA-256: `c2cec656e6fa8ccdd27b3c1f74ed2c53805e4e1da810e134dc8c335347d359f7`
 - per-file hash manifest: included
 - continuity-check run: `1af02b8d-3293-4be6-b16c-6356d884b4b6`
+
+Private pending equipment intake recovery:
+
+- `Rowdy_Room_Equipment_Pending_Intake_2026-07-20_PRIVATE.zip`
+- bytes: `5687`
+- entries: `3`
+- ZIP SHA-256: `0f3a3e42b5350d38439cca4a94f93b0a20b356b4ed6d8ba9f273226c293f7d86`
+- raw-file SHA-256: `bcefdbccfbc0840cb4dcbc8c0362e01bde5ae297fcb16b18202ba86ebce580f7`
+- privacy: protected local/private record only; not for GitHub publication
+- inventory rows after preservation: `0`
 - GitHub main save check `53`: pass
 - continuity branch check `54`: warning because draft pull request #28 is not merged
 - Supabase readback/history check `55`: pass
 - local enforcement/recovery check `56`: pass
 
+Pending-intake preservation checks:
+
+- continuity-check run: `28bc7d13-8f99-4b62-8b22-d1985efb1da6`
+- Supabase raw preservation/history check `58`: pass
+- private local recovery check `59`: pass
+- public-safe GitHub breadcrumb check `60`: pass
+
 ## Current recovery-required facts
 
-- The authoritative equipment table currently contains zero items because Roger instructed Codex not to process the supplied list or photos until he explicitly says everything has been submitted.
+- Roger's raw equipment text batch is now preserved in protected record `rowdy-room/equipment-pending-intake-2026-07-19` and a private local recovery package, but it remains deliberately unprocessed. The authoritative equipment table still contains zero items while pictures and additional items are pending.
 - The original Rowdy Room Progress conversation has not been recovered as a durable export.
 - The private server-side Bible directory has not been fully reconciled with GitHub and Supabase.
 - Draft pull request #28 still needs review or merge before its continuity files exist on `main`.
