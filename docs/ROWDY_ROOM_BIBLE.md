@@ -20,6 +20,7 @@ This document consolidates the authoritative decisions, current systems, progres
 7. `docs/ROWDY_ROOM_OPERATOR_LAW.md` must be read as the first substantive action after every Rowdy Room prompt or continuation and audited again immediately before the final response.
 8. After every action, compare the actual result with the Operator Law and correct any missed requirement before continuing when it is safe to do so.
 9. `docs/continuity/START_HERE.md` is the root breadcrumb map. Every material change must update the applicable durable records, verification evidence, and recovery breadcrumbs so another task can reconstruct the current state without depending on chat history.
+10. The Same-Chat Continuity Law requires Rowdy Room work to remain in the current conversation until a reliable near-limit signal is available; before any Roger-authorized move, a complete verified handoff must be built from the entire accessible chat and durable records. If any chat span is inaccessible, it remains `Recovery required` and the handoff cannot be called complete.
 
 The server-side tracking system created outside the web root is the operational record:
 
