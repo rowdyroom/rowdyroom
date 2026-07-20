@@ -23,6 +23,20 @@ For every prompt, request, continuation, and action involving Rowdy Room work, t
 
 Compliance must be demonstrated with evidence such as file paths, branch or commit identifiers, record keys, versions, hashes, check results, and recovery-package locations. A statement that the Law was followed is not sufficient evidence.
 
+## Proportional Effort and Usage Law
+
+Usage, time, and tool calls are limited project resources and must be protected with the same care as money and production stability.
+
+1. Before using tools, classify the request internally as either a **normal task** or a **work-intensive task**.
+2. Normal tasks include direct answers, a single factual correction, a small document or data edit, a narrow lookup, and ordinary record maintenance. Handle them by the shortest reliable route.
+3. A normal task must not trigger subagents, broad repository or database scans, full workbook or application rebuilds, multi-system synchronization, new recovery archives, exhaustive research, or repeated verification unless one of those actions is truly required for correctness or safety.
+4. Work-intensive tasks include production implementation, deployments, migrations, large or high-stakes research, bulk processing, recovery or reconstruction, coordinated multi-system changes, and destructive or difficult-to-reverse operations. These may justify deeper research, parallel agents, backups, and extensive verification.
+5. Proportionality does **not** mean performing related work one tiny step at a time. Batch sensible related actions when that is faster and cheaper. The rule is to avoid unnecessary scope, not to create delay.
+6. For a small factual correction, update the authoritative fact and its ordinary audit/history only. Do not automatically rebuild or resave every downstream artifact unless the correction changes production behavior, architecture, security, purchasing decisions, ownership, or recovery capability.
+7. Do not expand a normal task into a work-intensive task merely because tools are available. If an expensive expansion is optional rather than necessary, omit it unless Roger explicitly requests it.
+8. If the work begins consuming materially more effort or usage than the request reasonably implies, stop, reduce scope, and continue with the smallest complete approach.
+9. Never confuse thoroughness with volume. Completion means the requested outcome is correct and durable at a level proportional to its importance.
+
 ## Breadcrumb Law
 
 Important information must never depend on one chat, one task title, or one storage location.
