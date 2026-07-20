@@ -81,6 +81,7 @@ As of 2026-07-20:
 - chats are explicitly classified as temporary context rather than permanent records
 - the protected Supabase equipment inventory is the private source of truth, with forced row-level security, item-version history, and nightly snapshots
 - `Rowdy_Room_Equipment_Inventory_Master.xlsx` is the editable intake copy; workbook rows become authoritative only after Supabase save and readback
+- Roger's 2026-07-19 equipment text batch is preserved privately as `rowdy-room/equipment-pending-intake-2026-07-19` and in a dated private recovery package, but remains unprocessed with zero authoritative inventory rows while pictures and additional items are pending
 - every material equipment change requires a public-safe summary check, structured private save, history verification, continuity checks, and a dated local recovery copy
 
 ## Recovery required
