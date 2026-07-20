@@ -86,6 +86,17 @@ When an important fact is missing:
 
 Never turn a plausible guess into an authoritative record.
 
+## Same-chat limit and handoff procedure
+
+1. Stay in the current Rowdy Room conversation unless Roger explicitly authorizes a move.
+2. Do not claim compaction is disabled or an exact remaining-context count is known unless the current runtime exposes that control or meter.
+3. When a reliable near-limit warning appears, pause new substantive work and notify Roger.
+4. Review the entire accessible chat plus every applicable durable record.
+5. Build a handoff covering decisions, corrections, requirements, exclusions, equipment facts and test status, budgets, selections, rejections, evidence, unresolved questions, current task, and exact next action.
+6. Save the handoff publicly and privately as appropriate; read it back; verify history, checks, hashes, breadcrumbs, and a dated recovery package.
+7. Review the handoff plan with Roger before a deliberate move.
+8. If any part of the conversation is inaccessible, mark it `Recovery required`; never describe the handoff as complete.
+
 ## Scheduled checks
 
 The private system keeps nightly snapshots and a visible result for each scheduled run. A failed run must remain visible until investigated. GitHub history provides the public-document rollback path; the dated local package provides an additional recovery copy.
