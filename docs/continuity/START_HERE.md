@@ -67,16 +67,16 @@ Verified 2026-07-20 private record snapshot:
 
 The current text intake and twenty-three photographs have been processed and verified as of 2026-07-20.
 
-- Inventory lines: `66`
-- Physical units: `90`
+- Inventory lines: `67`
+- Physical units: `92`
 - User-confirmed lines: `44`
 - Physically verified lines: `7`
-- Recovery-required lines: `15`
+- Recovery-required lines: `16`
 - Working lines: `3`
 - Needs-repair lines: `2`
-- Operating status not yet confirmed: `61`
-- Aggregate inventory SHA-256: `db898256e0c4d5af746304c4203bc806d69326585a8a0234d446f1d58ae187b1`
-- Equipment history: `66` inserts, one audited quantity correction, one audited photo-verification update, and one audited OBSBOT show-use update
+- Operating status not yet confirmed: `62`
+- Aggregate inventory SHA-256: `a876cd583d7c87e9ca75dc8ae10b909f698008a62bf03f0e856c4c25d97bbbe7`
+- Equipment history: `67` inserts, one audited quantity correction, one audited photo-verification update, and one audited OBSBOT show-use update
 - Authoritative show path: OBSBOT USB -> production PC -> OBS program -> HDMI -> point-to-point wireless HDMI transmitter/receiver -> projector HDMI
 - Screen mirroring is secondary only; the wireless-HDMI kit is not owned until purchased and verified.
 - Batch-03 result: Photos 1 and 2 are one PowerGis powered-audio unit; Photo 3 matches the existing onn. Roku TV model 100012589.
@@ -146,12 +146,13 @@ Latest show-projection continuity checks:
 
 ## Current recovery-required facts
 
-- Fifteen photo-derived inventory lines still need exact identification or additional evidence.
-- Sixty-one inventory lines still need an operating-status test or confirmation.
+- Sixteen inventory lines still need exact identification or additional evidence, including the two Roger-confirmed Rockville speakers.
+- Sixty-two inventory lines still need an operating-status test or confirmation.
 - The original Rowdy Room Progress conversation has not been recovered as a durable export.
 - The private server-side Bible directory has not been fully reconciled with GitHub and Supabase.
 - Draft pull request #28 still needs review or merge before its continuity files exist on `main`.
-- The exact wireless HDMI kit remains unselected until actual room distance, obstructions, acceptable live-camera latency, HDCP/EDID behavior, explicit encryption requirement, and whether its cost is inside or outside the $200 projector budget are confirmed.
+- The current approximately $500 package plan uses the Nyrius Orion Prime as a 90 ms budget compromise; it has not been purchased. The preferred low-latency ARIES Pro upgrade exceeds the package budget. Neither link is described as encrypted because no named encryption specification was found.
+- The exact Rockville speaker models, powered/passive design, rear-panel inputs, Bluetooth support, stereo-link behavior, and operating condition must be confirmed before the two Alto Bluetooth Total 2 receivers are purchased.
 - Future equipment additions are allowed and must be appended through the same private inventory, history, workbook, recovery, and breadcrumb procedure.
 
 ## Breadcrumb required after every material change
