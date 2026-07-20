@@ -9,7 +9,7 @@ Roger's current text list and twenty-three preserved equipment photographs have 
 
 No serial numbers, device identifiers, storage locations, purchase details, private notes, or raw photographs are published in this public file.
 
-The latest photo addition deduplicated two views of one PowerGis powered-audio unit into a single recovery-required line and matched the third photo to the existing onn. Roku TV, raising that TV from user-confirmed to physically verified without adding a duplicate.
+The latest equipment-use correction keeps the OBSBOT Tiny 2 Lite connected by USB to the main production PC. The camera is composed inside OBS, and the complete OBS program is sent from the PC by HDMI through a dedicated point-to-point wireless HDMI transmitter/receiver to the projector. Ordinary AirPlay or Miracast screen mirroring is secondary only because protected or restricted content can black out. The planned transmitter/receiver kit is not recorded as owned equipment until it is actually purchased.
 
 ## Current verification state
 
@@ -57,7 +57,8 @@ The protected readback confirms:
 - 66 insert-history records
 - one audited quantity correction
 - one audited photo-verification update
-- aggregate inventory SHA-256 `b72b08839acfa7445f6883b5735f2dad52ed3dc5514f81077e85caa40080b1b7`
+- one audited OBSBOT show-use and projection-path update
+- aggregate inventory SHA-256 `db898256e0c4d5af746304c4203bc806d69326585a8a0234d446f1d58ae187b1`
 
 The safe intake record key is `rowdy-room/equipment-pending-intake-2026-07-19`. Protected content, versions, hashes, checks, and local recovery locations are recorded in `docs/continuity/START_HERE.md`.
 
