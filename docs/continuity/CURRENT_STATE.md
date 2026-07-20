@@ -38,7 +38,7 @@ Roger confirmed the projection requirement on 2026-07-20:
 
 Roger set an approximate $500 total budget for the exact TOWOND 120-inch screen and stand, projector, wireless-HDMI transmitter/receiver, two lights with a remote, and two wireless speaker receivers. The current package plan totals $455.19 before tax and uses the HAPPRUN B0DT5VLVL8 projector, Nyrius Orion Prime TDD20 link, NiceVeedi two-light kit, and two Alto Bluetooth Total 2 receivers. No purchase or cart change has been made.
 
-The Orion Prime is a budget compromise with 90 ms official latency and no named encryption specification; it is not described as encrypted or private. The ARIES Pro NPCS600 is the preferred low-latency upgrade but raises the package subtotal to $570.19 before tax. The two Alto receivers remain conditional because the exact Rockville models, powered/passive design, and rear-panel inputs are still recovery-required.
+The Orion Prime is a budget compromise with 90 ms official latency and no named encryption specification; it is not described as encrypted or private. The ARIES Pro NPCS600 is the preferred low-latency upgrade but raises the package subtotal to $570.19 before tax. Roger has now confirmed both speakers as active Rockville Power GIG RPG15 units, and their XLR inputs make the two Alto receivers physically compatible. Purchase remains subject to a live return-window test of both speakers, receiver stereo-link behavior, latency, and operating condition; show-critical audio stays wired through the Yamaha AG06MK.
 
 ## Authoritative Main 4 formula
 
@@ -98,17 +98,17 @@ As of 2026-07-20:
 - chats are explicitly classified as temporary context rather than permanent records
 - the protected Supabase equipment inventory is the private source of truth, with forced row-level security, item-version history, and nightly snapshots
 - `Rowdy_Room_Equipment_Inventory_Master.xlsx` is the editable intake copy; workbook rows become authoritative only after Supabase save and readback
-- Roger's 2026-07-19 text intake and twenty-three preserved photographs are processed into 67 authoritative equipment lines representing 92 physical units; 51 lines are confirmed and 16 lines remain recovery-required
+- Roger's 2026-07-19 text intake, twenty-three preserved photographs, and the RPG15 correction are processed into 66 authoritative equipment lines representing 91 physical units; 52 lines are confirmed and 14 lines remain recovery-required
 - every material equipment change requires a public-safe summary check, structured private save, history verification, continuity checks, and a dated local recovery copy
 
 ## Recovery required
 
 The current equipment intake is no longer missing, but these gaps remain and must not be guessed:
 
-The 2026-07-20 batch-03 addition matched the onn. Roku TV label to its existing record and added one PowerGis powered-audio unit. Its exact model, electrical rating, complete connector layout, and operating condition remain recovery-required.
+The 2026-07-20 batch-03 addition matched the onn. Roku TV label to its existing record. Roger later confirmed that the two other photographs show the owned Rockville Power GIG RPG15 pair, not a separate PowerGis device; that duplicate line has been removed while its delete history is retained.
 
-1. Sixteen equipment lines still need label, model, rating, connector, quantity, or condition confirmation, including the Roger-confirmed pair of Rockville speakers.
-2. Sixty-two equipment lines have not yet had their working condition tested or explicitly confirmed.
+1. Fourteen equipment lines still need label, model, rating, connector, quantity, or condition confirmation.
+2. Sixty-one equipment lines have not yet had their working condition tested or explicitly confirmed; this includes both RPG15 speakers.
 3. The original Rowdy Room Progress conversation has not been recovered as a durable export.
 4. The private server-side Bible directory has not been fully reconciled with GitHub and Supabase.
 
@@ -135,7 +135,7 @@ Before answering a Rowdy Room setup, equipment, show, production, or architectur
 
 ## Next recovery milestone
 
-Confirm the remaining fifteen recovery-required equipment lines and test unknown working conditions. Future equipment additions should append to the existing 66-line truth set through the same save, history, readback, and recovery workflow.
+Confirm the remaining fourteen recovery-required equipment lines and test unknown working conditions. Future equipment additions should append to the existing 66-line truth set through the same save, history, readback, and recovery workflow.
 
 
 
