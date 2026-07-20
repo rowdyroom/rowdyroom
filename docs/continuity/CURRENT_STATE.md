@@ -1,10 +1,10 @@
 # Rowdy Room Current State
 
 **Status:** Active handoff record  
-**Last updated:** 2026-07-18  
+**Last updated:** 2026-07-20  
 **Owner:** Roger Jamsek
 
-This is the first file to read after the Project Bible. It summarizes what is known, what is protected, and what still requires recovery. It is public-safe and intentionally excludes secrets and private infrastructure details.
+Read this file after the Operator Law, `docs/continuity/START_HERE.md`, and the Project Bible. It summarizes what is known, what is protected, and what still requires recovery. It is public-safe and intentionally excludes secrets and private infrastructure details.
 
 ## Product and show context
 
@@ -68,8 +68,10 @@ The full private migration and security details are intentionally excluded from 
 
 ## Continuity controls
 
-As of 2026-07-18:
+As of 2026-07-20:
 
+- the Operator Law now requires a full Law read before the first action after every prompt, a Law check after every action, and a final Law audit immediately before responding
+- `docs/continuity/START_HERE.md` is the public-safe root breadcrumb map for authoritative files, private record identifiers, recovery copies, known gaps, and next actions
 - the Project Bible remains the public-safe master narrative
 - this file is the required current-state handoff
 - a dedicated public-safe equipment recovery file exists
@@ -99,11 +101,16 @@ Recovery sources, in priority order:
 
 Before answering a Rowdy Room setup, equipment, show, production, or architecture question:
 
-1. load the Project Bible
-2. load this Current State file
-3. load the equipment record when equipment affects the answer
-4. check the latest continuity changelog
-5. identify any unresolved recovery gap instead of filling it from assumption
+1. read the entire Operator Law before the first substantive action
+2. open `docs/continuity/START_HERE.md` and follow the applicable breadcrumbs
+3. load the Project Bible
+4. load this Current State file
+5. load the equipment record when equipment affects the answer
+6. check the latest continuity changelog
+7. read the continuity runbook before a material change
+8. identify any unresolved recovery gap instead of filling it from assumption
+9. after every action, compare the actual result with the Operator Law and correct any missed requirement that can be corrected safely
+10. read the Operator Law again and complete the final audit immediately before responding
 
 ## Next recovery milestone
 
