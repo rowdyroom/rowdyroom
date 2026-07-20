@@ -207,6 +207,17 @@ One centralized rotation authority must control the current protected four, the 
 
 Tie handling, a person qualifying in both rating and contribution categories, fewer than four valid Rumble finishers, and absent or declined panelists must be resolved by one centralized rule before implementation; they must not be handled differently by separate surfaces.
 
+### 5.4 Show projection and wireless video
+
+- The OBSBOT Tiny 2 Lite remains USB-connected to the main production PC and supplies camera video to OBS; it does not connect directly to the projector.
+- During most shows, the projector should receive the complete OBS program feed containing the OBSBOT camera, overlays, game or dashboard content, and other selected sources.
+- The required primary wireless path is a dedicated point-to-point wireless HDMI transmitter and receiver between the production PC video output and the projector's HDMI input.
+- AirPlay, Miracast, and other app-level screen-mirroring methods are convenience fallbacks only because protected content, operating-system behavior, or application changes can produce a black image.
+- A wired HDMI path remains the emergency fallback.
+- The owned OREI 1x2 HDMI splitter may feed a local display and the wireless-HDMI transmitter at the same time after EDID, HDCP, resolution, and frame-rate compatibility are tested.
+- A wireless-HDMI transmitter/receiver kit is a purchase requirement, not owned inventory, until it is bought and verified.
+- Minimum purchase criteria are explicit 1080p60 support, low enough latency for live camera use, stable range for the actual room, reliable external power, and compatible HDMI/HDCP/EDID behavior. A link must have an explicit encryption specification before it is described as private or secure.
+
 ## 6. Boost Points and TikFinity
 
 Boost Points connect TikTok audience activity to Rowdy Room actions.
