@@ -1,5 +1,17 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-19 â€” Durable equipment truth system activated
+
+Status: The equipment inventory workflow is active and recoverable; the physical item list remains recovery-required with zero verified items.
+
+- Confirmed the protected Supabase equipment inventory and equipment-history tables use forced row-level security and expose no grants to public application roles.
+- Confirmed the prepare and audit triggers preserve item versions and content hashes, with nightly continuity snapshots already active.
+- Created `Rowdy_Room_Equipment_Inventory_Master.xlsx` as the editable intake copy with dropdowns, private-field warnings, verification states, sync readiness checks, and a live recovery summary.
+- Set Supabase as the authoritative private list, GitHub as the public-safe summary, the workbook as an intake copy, and dated local packages as independent recovery copies.
+- Required every equipment addition, correction, replacement, failure, or retirement to be saved and read back from the private truth store before it is treated as authoritative.
+- Kept the inventory at zero verified items because no manufacturer, model, quantity, connection, or condition was invented.
+- Kept pull request #28 in draft; this equipment continuity update is not merged into `main`.
+
 ## 2026-07-18 â€” GitHub continuity sync restored
 
 Status: Public-safe Main 4 sources and the final live verification record are saved to draft pull request #28 and verified by remote readback.
