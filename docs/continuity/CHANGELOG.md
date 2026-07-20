@@ -1,5 +1,21 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-20 — Current equipment intake processed and verified
+
+Status: Roger confirmed the current upload pause, releasing the preserved intake for processing into the durable equipment truth system.
+
+- Normalized the supplied text list and twenty preserved photographs into 65 deduplicated inventory lines representing 89 physical units.
+- Kept package quantities explicit and treated photographs from multiple angles as one item.
+- Saved 45 Roger-confirmed lines, 6 physically verified photo lines, and 14 recovery-required photo lines without guessing missing models, ratings, connectors, quantities, or condition.
+- Kept serial numbers, device identifiers, private paths, raw photographs, and detailed condition notes out of the public repository.
+- Saved the normalized inventory to the protected Supabase table and confirmed 65 valid item hashes, 65 insert-history rows, and one audited quantity correction.
+- Repeated the retry-safe synchronization and confirmed that it produced no additional changes.
+- Generated and visually verified the private master workbook with 65 lines, 89 units, live summary formulas, private-field warnings, and zero formula errors.
+- Updated the public-safe equipment and Current State summaries on draft pull request #28; no merge to `main` was performed.
+- Left fourteen photo-derived lines recovery-required and sixty operating conditions unknown until Roger provides clearer labels or tests.
+- Preserved the processed dataset, workbook, readback evidence, and source manifests in a dated private local recovery package.
+
+
 ## 2026-07-20 — Mandatory Law gate and breadcrumb enforcement
 
 Status: Roger required the Operator Law to be the first and last audit for every prompt and action after repeated failures to act, preserve context, and verify durable saves.
