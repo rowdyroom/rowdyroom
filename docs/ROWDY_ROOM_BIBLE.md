@@ -207,6 +207,7 @@ One centralized rotation authority must control the current protected four, the 
 
 Tie handling, a person qualifying in both rating and contribution categories, fewer than four valid Rumble finishers, and absent or declined panelists must be resolved by one centralized rule before implementation; they must not be handled differently by separate surfaces.
 
+
 ### 5.4 Show projection and wireless video
 
 - The OBSBOT Tiny 2 Lite remains USB-connected to the main production PC and supplies camera video to OBS; it does not connect directly to the projector.
@@ -217,6 +218,21 @@ Tie handling, a person qualifying in both rating and contribution categories, fe
 - The owned OREI 1x2 HDMI splitter may feed a local display and the wireless-HDMI transmitter at the same time after EDID, HDCP, resolution, and frame-rate compatibility are tested.
 - A wireless-HDMI transmitter/receiver kit is a purchase requirement, not owned inventory, until it is bought and verified.
 - Minimum purchase criteria are explicit 1080p60 support, low enough latency for live camera use, stable range for the actual room, reliable external power, and compatible HDMI/HDCP/EDID behavior. A link must have an explicit encryption specification before it is described as private or secure.
+
+Current approximately $500 package plan, with prices checked on 2026-07-20 and no purchase or cart change made:
+
+| Component | Current selection | Checked price | Status and limits |
+|---|---|---:|---|
+| Screen and stand | [TOWOND 120-inch front/rear screen, B0DKN2MMDZ](https://www.amazon.com/dp/B0DKN2MMDZ) | $56.99 | Exact requested 16:9 portable screen |
+| Projector | [HAPPRUN native-1080p HDMI projector, B0DT5VLVL8](https://www.amazon.com/dp/B0DT5VLVL8) | $129.94 | Physical HDMI and remote; seller brightness claim requires return-window testing; use in darkness at 120 inches |
+| Wireless HDMI | [Nyrius Orion Prime TDD20, B0DD6D3MM4](https://www.amazon.com/dp/B0DD6D3MM4) | $64.97 | Direct point-to-point 1080p60 link; official latency is 90 ms; no named encryption specification was found |
+| Two lights and remote | [NiceVeedi two-panel 36 W kit, B0D5LPNF15](https://www.amazon.com/dp/B0D5LPNF15) | $89.99 | Two bi-color panels, stands, adapters, bag, and one IR remote |
+| Two speaker receivers | Two [Alto Bluetooth Total 2 receivers, B091Z2523R](https://www.amazon.com/dp/B091Z2523R) | $113.30 | Conditional: only for powered/active Rockville speakers with compatible XLR inputs; Bluetooth is not for show-critical lip-synced audio |
+| **Subtotal before tax** |  | **$455.19** | Leaves about $44.81 for tax or small cabling |
+
+The technically stronger live-camera wireless-HDMI option is the [Nyrius ARIES Pro NPCS600, B0092T3E3A](https://www.amazon.com/dp/B0092T3E3A) at $179.97. Nyrius documents uncompressed 1080p and no more than 1 ms latency, but substituting it raises the package subtotal to $570.19 before tax. Neither Nyrius model may be described as AES-encrypted because no named encryption specification was found. The Orion Prime is the budget compromise; the ARIES Pro is the preferred later upgrade for live-camera timing.
+
+The two Rockville speaker models, active/passive design, rear-panel inputs, built-in Bluetooth capability, stereo-link behavior, and operating condition are not yet confirmed. The two Alto receivers must not be ordered until rear-panel photos or model numbers verify powered speakers with compatible XLR inputs.
 
 ## 6. Boost Points and TikFinity
 
