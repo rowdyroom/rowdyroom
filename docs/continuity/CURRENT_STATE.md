@@ -23,6 +23,20 @@ Rowdy Room is a live karaoke, audience-participation, competition, community, an
 
 The detailed product decisions, production map, architecture, and known risks remain in `docs/ROWDY_ROOM_BIBLE.md`.
 
+## Authoritative show projection path
+
+Roger confirmed the projection requirement on 2026-07-20:
+
+1. The OBSBOT Tiny 2 Lite connects to the main production PC by USB.
+2. OBS composes the camera, overlays, game or dashboard, and other selected sources into the program feed.
+3. The production PC sends that program feed through HDMI, with the owned OREI 1x2 splitter available to retain a local display feed.
+4. A dedicated point-to-point wireless HDMI transmitter carries the second HDMI feed to a receiver at the projector.
+5. The receiver connects to the projector's physical HDMI input.
+6. Direct AirPlay, Miracast, or other screen mirroring is secondary only because it can be blacked out or blocked.
+7. A wired HDMI cable remains the emergency fallback.
+
+The wireless-HDMI kit is a required future purchase, not an owned inventory item. Its exact model remains recovery-required until room distance, obstructions, acceptable live-camera latency, HDCP/EDID behavior, encryption requirement, and whether the projector budget includes the kit are confirmed.
+
 ## Authoritative Main 4 formula
 
 The eight panel spots are divided into four protected Main 4 positions and four regular rotation positions.
