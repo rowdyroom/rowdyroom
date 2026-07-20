@@ -1,5 +1,18 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-20 — Rockville RPG15 pair confirmed and duplicate repaired
+
+Status: Roger confirmed that both owned Rockville speakers are Power GIG RPG15 active 15-inch PA speakers.
+
+- Recorded the manufacturer-exact model spelling `RPG15`, quantity two, active/powered design, XLR / 1/4-inch / stereo RCA inputs, balanced XLR line output, and lack of built-in Bluetooth.
+- Corrected batch-03 photographs 01–02: POWERGIG was previously misread as a separate PowerGis device. The duplicate live row was deleted while its audit history was preserved.
+- Verified canonical equipment version `2`, content SHA-256 `b9af4380126d7512f68a596592ee82abadcd94f676314fe98367555f72cef844`, update history ID `73`, and duplicate-delete history ID `74`.
+- Read back 66 authoritative lines and 91 physical units: 45 user-confirmed, 7 physically verified, 14 recovery-required, and 61 with operating condition still unknown.
+- Regenerated the private workbook with zero formula errors and visual QA; workbook SHA-256 is `3f7a2c6a1e66b8424415fc329bfe7ea120f03c4347b7cf51a8336e29b36c5b1f`.
+- Created and internally verified the 11-entry private recovery package `Rowdy_Room_Rockville_RPG15_Correction_2026-07-20_PRIVATE.zip`, SHA-256 `d390027811651b096764f7344705adbeb4dd66163d2719580a642eaed2b80cba`.
+- The Alto Bluetooth Total 2 receivers are now physically compatible with the RPG15 XLR inputs, but purchase/show use still requires an operating, stereo-link, and latency test. Show-critical audio remains wired.
+- Updated the public-safe equipment and Current State summaries on draft pull request #28; the continuity branch remains unmerged.
+
 ## 2026-07-20 — Approximately $500 wireless projection package recorded
 
 Status: Roger set a roughly $500 total budget for the exact TOWOND 120-inch screen and stand, an HDMI projector, point-to-point wireless HDMI, two lights with one remote, and two wireless adapters for the Rockville speakers.
