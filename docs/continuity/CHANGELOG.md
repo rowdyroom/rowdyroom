@@ -10,6 +10,9 @@ Status: Roger required the Operator Law to be the first and last audit for every
 - Created `docs/continuity/START_HERE.md` as the root public-safe breadcrumb map.
 - Required every material change to record public paths and commits, safe private record identifiers with versions and hashes, continuity-check results, local recovery paths and hashes, unresolved gaps, and the next safe action.
 - Updated repository agent instructions, the Project Bible, Current State, and the continuity runbook so future work cannot rely on the old startup order.
+- During the final Law audit, found that Roger's raw equipment text batch still existed only in chat because processing was on hold.
+- Preserved that raw batch without processing it in protected record `rowdy-room/equipment-pending-intake-2026-07-19` and a hashed private local recovery package.
+- Confirmed the authoritative equipment inventory remains at zero rows while pictures and additional items are pending.
 - Preserved the privacy split: public GitHub receives only public-safe breadcrumbs; private details remain in protected Supabase records and local recovery copies.
 - Recorded that the continuity documents remain on draft pull request #28 and are not yet merged into `main`; the Operator Law and Project Bible are on `main`.
 
