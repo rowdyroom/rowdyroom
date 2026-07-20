@@ -1,5 +1,18 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-20 — Additional equipment photo batch appended
+
+Status: Three additional photographs were appended to the existing equipment truth set after Roger resumed intake.
+
+- Determined that the first two photographs show the label and control panel of the same PowerGis powered-audio unit and saved one recovery-required inventory line rather than two duplicates.
+- Matched the third photograph to the existing onn. 32-inch Roku TV, model 100012589, and raised that record from user-confirmed to physically verified without adding another unit.
+- Updated the protected Supabase inventory to 66 lines and 90 physical units: 44 user-confirmed, 7 physically verified, and 15 recovery-required.
+- Confirmed the two affected item versions, content hashes, and audited history entries after the save.
+- Regenerated the private master workbook with 66 lines, 90 units, live formulas, zero formula errors, and visual checks of every sheet and both changed equipment rows.
+- Updated the public-safe equipment and Current State summaries on draft pull request #28; the branch remains unmerged.
+- Preserved the three source photographs, updated private dataset, workbook, readbacks, and hashes in a dated private local recovery package.
+- Left the PowerGis unit's exact model, electrical rating, complete connector layout, and operating condition recovery-required rather than guessing.
+
 ## 2026-07-20 — Current equipment intake processed and verified
 
 Status: Roger confirmed the current upload pause, releasing the preserved intake for processing into the durable equipment truth system.
