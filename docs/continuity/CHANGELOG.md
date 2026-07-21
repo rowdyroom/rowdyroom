@@ -1,5 +1,19 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-21 — Portable AI computer donor-system plan corrected
+
+Status: Roger corrected the project plan after an unsupported older-laptop instruction was introduced during continuity reconciliation.
+
+- Confirmed the owned working Ryzen 7 5700X / RTX 3070 main production PC is the donor system for the portable build.
+- Confirmed the plan is to upgrade the graphics card and motherboard and move compatible donor components into a portable case.
+- Recorded Roger's recollection that the motherboard was the additional intended upgrade; the exact replacement motherboard remains recovery-required.
+- Removed the older laptop and smaller desktop from the project plan and recovery instructions. The older laptop is not part of the authoritative equipment inventory.
+- Kept the exact graphics-card, motherboard, and case models recovery-required rather than guessing.
+- Required compatibility verification for the retained CPU, RAM, storage, PSU, cooling, dimensions, and connectors before purchasing parts.
+- Corrected the main handoff, public breadcrumbs, protected current-state record, draft continuity records, and PR description. No equipment was purchased and no production show system was changed.
+
+# Rowdy Room Continuity Changelog
+
 ## 2026-07-21 — Portable AI computer continuity reconciliation
 
 Status: The active public and private continuity records were corrected before portable-computer design or purchasing.
