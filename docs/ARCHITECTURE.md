@@ -26,7 +26,7 @@ Build a modular AI operating system that coordinates agents, connectors, memory,
 
 ## Connector categories
 
-- Streaming: TikTok Live Studio, OBS, Discord, Voicemod, Stream Deck.
+- Streaming and show control: TikTok Live Studio, Discord, Voicemod, and Stream Deck. OBS is not part of Roger's current Rowdy Room workflow.
 - Content: Canva, CapCut, Dropbox, Google Drive, iCloud Drive.
 - Development: Supabase, GitHub, local file system, Docker.
 - Business: Gmail, iCloud Mail, Calendar, Stripe, PayPal, Square.

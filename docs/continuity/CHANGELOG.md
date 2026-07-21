@@ -1,5 +1,22 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-21 — Portable AI computer continuity reconciliation
+
+Status: The active public and private continuity records were corrected before portable-computer design or purchasing.
+
+- Confirmed the active continuation is Build Portable AI Computer.
+- Replaced the OBS assumption with Roger's actual workflow: TikTok Live Studio; OBS is not used.
+- Recorded the OBSBOT Tiny 2 Lite as normally used for personal home streaming and removed retained projector-routing fields from its authoritative inventory row.
+- Kept the projector primarily associated with live events and marked its exact source, content, and routing recovery-required.
+- Superseded the OBS-dependent approximately $500 AV-package plan; no item was ordered and no cart was changed.
+- Preserved the transport policy that dedicated point-to-point wireless HDMI is the primary wireless option only if a computer HDMI feed is confirmed; wired HDMI is the emergency fallback and ordinary mirroring is secondary.
+- Verified 66 inventory lines / 91 units, 14 recovery-required lines, 61 unknown operating statuses, and aggregate SHA-256 `cfe3cc36e5f8842b4a07df301ac46dc53fdb1bc453ef55730ca581ed82c8d5f2`.
+- Verified OBSBOT equipment v4, SHA-256 `0071fa82403f8c212c2a47a4081dd49149bd74746e001b672507652caf73b42e`, history ID 76.
+- Verified protected current-state v24, equipment-recovery v11, show-projection v3, and superseded AV-package v4 with history IDs 95–100.
+- Corrected the active handoff on `main` at commit `1fc06e3bdbf1abb51c0c4a7d63b2ef1a22730237` and the architecture record at `c03834f68ea05a9e59a65e2629d69c15bf92b3dc`.
+- Synchronized current `main` into draft PR #28 to resolve its prior conflict state; the PR remains draft and unmerged.
+- Set the exact next product action to identify and test the older laptop and smaller desktop before any replacement purchase.
+
 ## 2026-07-20 — Same-chat continuity law and Work Mode enforcement installed
 
 Status: Roger required Rowdy Room work to remain in the same chat until a reliable near-limit warning, followed by a complete reviewed and verified handoff before any continuation elsewhere.

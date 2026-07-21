@@ -185,55 +185,9 @@ The queue can accept an unlimited performer list, but the host remains responsib
 - voting remains available for the defined post-performance window; the current documented target is one minute
 - iPhone users may need Safari instead of TikTok's in-app browser
 
-### 5.3 Main 4 and eight-person panel rotation
+### 5.3 Main 4
 
-The panel has eight spots. Four are protected Main 4 spots and four are regular rotation spots.
-
-Before a Rumble changes the incumbents, Main 4 is ordered as:
-
-1. highest average performer score from live votes
-2. second-highest average performer score from live votes
-3. highest gift contributor
-4. second-highest gift contributor
-
-The other four spots are filled by the remaining eligible people in signup order. The regular rotation advances four people at a time while the Main 4 remain in their protected positions. With 24 total people, the initial panel is Main 4 followed by the first four remaining signups. The next panel cycle is the same Main 4 followed by remaining signups five through eight, then the same Main 4 followed by remaining signups nine through twelve, and so on.
-
-A Rowdy Rumble occurs only after it is activated and a challenger enters. When the game ends, the four protected spots are reassigned by Rumble score, from highest to fourth-highest. Those four Rumble winners are guaranteed the protected positions for 30 minutes, and another Rumble cannot be activated during that protection window.
-
-At the exact end of the 30-minute guarantee, the protected positions automatically return to the original live-standing formula using the values current at that moment: the two highest average performer scores from live votes, followed by the two highest gift contributors. A Rumble winner remains in a protected position only if that person qualifies under the recalculated live-standing formula.
-
-The regular four-person signup rotation is independent of that protected-position handoff. It resumes where it stopped for the Rumble and continues from its saved signup-order position; it does not restart when the Rumble ends or when the 30-minute guarantee expires.
-
-One centralized rotation authority must control the current protected four, the next regular group, the saved regular-rotation position, the Rumble protection/cooldown, and the timed return to live standings. Every automatic change must update the same authoritative state used by the Companion App, host-control dashboards, public displays, and database so they all show the same current and upcoming panel positions.
-
-Tie handling, a person qualifying in both rating and contribution categories, fewer than four valid Rumble finishers, and absent or declined panelists must be resolved by one centralized rule before implementation; they must not be handled differently by separate surfaces.
-
-
-### 5.4 Show projection and wireless video
-
-- The OBSBOT Tiny 2 Lite remains USB-connected to the main production PC and supplies camera video to OBS; it does not connect directly to the projector.
-- During most shows, the projector should receive the complete OBS program feed containing the OBSBOT camera, overlays, game or dashboard content, and other selected sources.
-- The required primary wireless path is a dedicated point-to-point wireless HDMI transmitter and receiver between the production PC video output and the projector's HDMI input.
-- AirPlay, Miracast, and other app-level screen-mirroring methods are convenience fallbacks only because protected content, operating-system behavior, or application changes can produce a black image.
-- A wired HDMI path remains the emergency fallback.
-- The owned OREI 1x2 HDMI splitter may feed a local display and the wireless-HDMI transmitter at the same time after EDID, HDCP, resolution, and frame-rate compatibility are tested.
-- A wireless-HDMI transmitter/receiver kit is a purchase requirement, not owned inventory, until it is bought and verified.
-- Minimum purchase criteria are explicit 1080p60 support, low enough latency for live camera use, stable range for the actual room, reliable external power, and compatible HDMI/HDCP/EDID behavior. A link must have an explicit encryption specification before it is described as private or secure.
-
-Current approximately $500 package plan, with prices checked on 2026-07-20 and no purchase or cart change made:
-
-| Component | Current selection | Checked price | Status and limits |
-|---|---|---:|---|
-| Screen and stand | [TOWOND 120-inch front/rear screen, B0DKN2MMDZ](https://www.amazon.com/dp/B0DKN2MMDZ) | $56.99 | Exact requested 16:9 portable screen |
-| Projector | [HAPPRUN native-1080p HDMI projector, B0DT5VLVL8](https://www.amazon.com/dp/B0DT5VLVL8) | $129.94 | Physical HDMI and remote; seller brightness claim requires return-window testing; use in darkness at 120 inches |
-| Wireless HDMI | [Nyrius Orion Prime TDD20, B0DD6D3MM4](https://www.amazon.com/dp/B0DD6D3MM4) | $64.97 | Direct point-to-point 1080p60 link; official latency is 90 ms; no named encryption specification was found |
-| Two lights and remote | [NiceVeedi two-panel 36 W kit, B0D5LPNF15](https://www.amazon.com/dp/B0D5LPNF15) | $89.99 | Two bi-color panels, stands, adapters, bag, and one IR remote |
-| Two speaker receivers | Two [Alto Bluetooth Total 2 receivers, B091Z2523R](https://www.amazon.com/dp/B091Z2523R) | $113.30 | Conditional: only for powered/active Rockville speakers with compatible XLR inputs; Bluetooth is not for show-critical lip-synced audio |
-| **Subtotal before tax** |  | **$455.19** | Leaves about $44.81 for tax or small cabling |
-
-The technically stronger live-camera wireless-HDMI option is the [Nyrius ARIES Pro NPCS600, B0092T3E3A](https://www.amazon.com/dp/B0092T3E3A) at $179.97. Nyrius documents uncompressed 1080p and no more than 1 ms latency, but substituting it raises the package subtotal to $570.19 before tax. Neither Nyrius model may be described as AES-encrypted because no named encryption specification was found. The Orion Prime is the budget compromise; the ARIES Pro is the preferred later upgrade for live-camera timing.
-
-The two Rockville speaker models, active/passive design, rear-panel inputs, built-in Bluetooth capability, stereo-link behavior, and operating condition are not yet confirmed. The two Alto receivers must not be ordered until rear-panel photos or model numbers verify powered speakers with compatible XLR inputs.
+Main 4 combines contribution and performance. The exact ranking formula must remain centralized and documented so the website, host tools, TV display, and database do not calculate different standings.
 
 ## 6. Boost Points and TikFinity
 
