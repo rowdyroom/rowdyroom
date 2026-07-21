@@ -16,14 +16,16 @@ Before doing any work:
 
 ## Project objective
 
-Convert Roger's current working main production PC into a portable Rowdy Room AI/show computer. Reuse its existing components, upgrade the graphics card, and move the build into a compatible portable case. The finished system must support portable show operation, AI-assisted workflows, music and karaoke tools, DJ work, TikTok Live Studio, and the existing Rowdy Room environment.
+Convert Roger's current working main production PC into a portable Rowdy Room AI/show computer. Reuse its existing components where compatible, upgrade the graphics card and motherboard, and move the build into a compatible portable case. The finished system must support portable show operation, AI-assisted workflows, music and karaoke tools, DJ work, TikTok Live Studio, and the existing Rowdy Room environment.
+
+Roger recalls that the motherboard was the additional part intended for upgrade, but the exact replacement model and reason have not yet been recovered. Treat the motherboard model and final compatibility plan as **Recovery required** until confirmed.
 
 The donor computer is the owned working MSI/custom desktop with:
 
 - AMD Ryzen 7 5700X
-- MSI MAG B550 TOMAHAWK MAX WIFI (MS-7C91) motherboard
+- MSI MAG B550 TOMAHAWK MAX WIFI (MS-7C91) motherboard, planned for replacement
 - 48 GB RAM
-- NVIDIA GeForce RTX 3070 8 GB, to be replaced by the planned graphics-card upgrade
+- NVIDIA GeForce RTX 3070 8 GB, planned for replacement
 - about 2.27 TB total storage
 - Windows 11 Pro
 
@@ -47,7 +49,7 @@ The continuity audit and protected inventory readback establish:
 - The working donor computer is the Ryzen 7 5700X system with 48 GB RAM and an RTX 3070.
 - Useful portable components include the ARZOPA A1S portable monitor, Anker 11-in-1 USB-C dock, UGREEN 200 W charger, Yamaha USB mixer/interface, Elgato Stream Deck, and other owned show equipment, subject to their recorded operating status.
 
-Before purchasing or recommending the graphics card or portable case, reload the inventory and verify compatibility with the donor system.
+Before purchasing or recommending the graphics card, motherboard, or portable case, reload the inventory and verify compatibility with the donor system and with one another.
 
 ## Confirmed continuity locations
 
@@ -61,6 +63,7 @@ Before purchasing or recommending the graphics card or portable case, reload the
 ## Recovery required
 
 - Exact replacement graphics-card model.
+- Exact replacement motherboard model and whether the Ryzen 7 5700X, current RAM, and current storage will be retained.
 - Exact portable-case model and desired size/weight/transport configuration.
 - Donor-system PSU model, wattage, dimensions, and available GPU power connectors.
 - CPU-cooler model and height, current GPU dimensions, drive layout, and other physical fit constraints.
@@ -73,4 +76,4 @@ Before purchasing or recommending the graphics card or portable case, reload the
 
 ## Exact next product action
 
-Document the donor PC's PSU, CPU cooler, current GPU dimensions, drive layout, and internal clearances, plus Roger's target case size, weight, and transport needs. Use those constraints to select the graphics-card upgrade and a compatible portable case. Do not purchase either part until power, cooling, dimensions, and connector compatibility are verified.
+Recover or confirm the intended graphics-card, motherboard, and portable-case models. Then document the donor PC's PSU, CPU cooler, current GPU dimensions, RAM, drive layout, and internal clearances plus Roger's target size, weight, and transport needs. Verify socket, memory, power, cooling, dimensions, and connector compatibility before purchasing any part.
