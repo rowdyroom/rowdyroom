@@ -26,20 +26,19 @@ The active continuation is **Build Portable AI Computer**.
 - The projector is primarily for live events.
 - The old OBS-based projection path is recovery-required.
 - The approximately $500 AV plan is superseded and must not drive architecture or purchasing.
-- The exact next product action is to identify and test the older laptop and smaller desktop before deciding whether new computing hardware is required.
+- Exact next product action: identify and test the older laptop and smaller desktop before deciding whether new computing hardware is required.
 
 ## GitHub authority
 
 - Repository: `rowdyroom/rowdyroom`
-- `main` contains the Operator Law, Project Bible, architecture record, portable AI computer handoff, and a compact START_HERE root.
+- `main` contains the Operator Law, Project Bible, architecture record, portable AI computer handoff, and compact START_HERE root.
 - Full continuity records remain on `agent/rowdy-room-continuity`, draft PR #28.
-- PR #28 remains open, draft, and unmerged.
-- At the start of this reconciliation, the branch was seven commits behind `main` and GitHub reported the PR not mergeable.
-- This reconciliation merge incorporates current `main`; verify the PR state after the branch ref is updated.
-- Main portable-computer handoff correction commit: `1fc06e3bdbf1abb51c0c4a7d63b2ef1a22730237`.
-- Main architecture correction commit: `c03834f68ea05a9e59a65e2629d69c15bf92b3dc`.
+- Portable-computer handoff correction: `1fc06e3bdbf1abb51c0c4a7d63b2ef1a22730237`
+- Architecture correction: `c03834f68ea05a9e59a65e2629d69c15bf92b3dc`
+- PR conflict-resolution merge: `6b934d5e3d1acfa3beda1c0a7277b1e9eb2b9e4a`
+- Final main breadcrumb: `51a66ff655bb4e24456028531db63317790b6a04`
 
-A draft branch must never be described as merged.
+GitHub readback on 2026-07-21 reports PR #28 **open**, **draft**, **mergeable**, and **not merged**. A draft branch must never be described as merged.
 
 ## Protected authority
 
@@ -53,20 +52,28 @@ Supabase project `Final`, ref `szubjgpvlqliyparrnam`:
 
 Verified protected snapshot:
 
-- `rowdy-room/current-state`: v24, `57473d7f3f53853bfa47b55aa422afd695acb235ff33b9a49d16ea231b3bc34b`
-- `rowdy-room/equipment-recovery`: v11, `ebba5f6d07882ca6d7abed976b665f6a7bef744acef3d2f963b6c83d22876db6`
+- `rowdy-room/current-state`: v25, `f035347f378c15c68af8f6f1fe3384eceebd73198d53b6ec05e9627276888dee`, history 103
+- `rowdy-room/equipment-recovery`: v12, `10914592983b3598415aba5430a3d93aefceb33e477e7b607e67aa894cda413c`, history 104
 - `rowdy-room/show-projection-signal-path`: v3, `a9329a679b13d72912f4d4849975a974f165cd4daef2361b8a3996449462d90b`, recovery-required
 - `rowdy-room/av-package-budget-2026-07-20`: v4, `e6a16b1f512cf2ca6343d0d912b9f344d833ca3135164f084c2c259c29124f11`, superseded
-- `rowdy-room/continuity-protocol`: v5, `6769535ad8afbf1ffece49089d8bf936a703f57eee2abdcfeffe789961393ca2`
-- `rowdy-room/law-and-breadcrumb-protocol`: v2, `3f9e73a30f4fb84e5c0ad11ea3d8cb58e75ec017ab5ab9e808c4911887c395b1`
+- `rowdy-room/continuity-protocol`: v6, `297029ae0319136cea4467bf0d2f442aa01bd244083aba998c07886b265b4724`, history 101
+- `rowdy-room/law-and-breadcrumb-protocol`: v3, `f350ed29bf8edf9e1441c6e390e17956ae64c56e6b5cb17d24be189d47eda917`, history 102
+- continuity check run: `7e63c16e-7c5f-4553-b4f2-ba37542505e7`, checks 124–131
 
 ## Equipment truth
 
 - 66 lines / 91 units
 - 45 user-confirmed / 7 physically verified / 14 recovery-required
 - 61 unknown operating statuses / 3 working / 2 needs repair
-- inventory aggregate SHA-256 `cfe3cc36e5f8842b4a07df301ac46dc53fdb1bc453ef55730ca581ed82c8d5f2`
-- OBSBOT v4 SHA-256 `0071fa82403f8c212c2a47a4081dd49149bd74746e001b672507652caf73b42e`, history ID 76
+- aggregate SHA-256 `cfe3cc36e5f8842b4a07df301ac46dc53fdb1bc453ef55730ca581ed82c8d5f2`
+- OBSBOT v4 SHA-256 `0071fa82403f8c212c2a47a4081dd49149bd74746e001b672507652caf73b42e`, history 76
+
+## Recovery evidence
+
+- `Rowdy_Room_Continuity_Reconciliation_2026-07-21_PRIVATE.zip`
+- SHA-256 `5ceb6aef67a46af0e11394ff89ecaef1c7eab23ee8502bd1474a2891dd8d4c2e`
+- 4 entries; 3/3 internal hashes passed
+- privacy scan: 7 changed files, 0 findings
 
 ## Recovery required
 
@@ -77,9 +84,6 @@ Verified protected snapshot:
 - exact live-event projector source, content, and routing
 - original Rowdy Room Progress export
 - private server-side Bible reconciliation
-- final PR mergeability/privacy readback
 - workbook regeneration before the next equipment intake or workbook-led edit
 
-## Breadcrumb completion
-
-The follow-up breadcrumb must add the conflict-resolution commit, verified PR state, final protected protocol versions/hashes, continuity-check run, and dated local recovery filename/hash.
+PR #28 remains draft and unmerged until separately reviewed or merged. No production show system, purchase/cart, or Scheduled Task change was authorized or made during this reconciliation.
