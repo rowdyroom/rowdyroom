@@ -16,7 +16,18 @@ Before doing any work:
 
 ## Project objective
 
-Design and build a portable AI computer for Rowdy Room operations using equipment Roger already owns wherever practical. The system must support portable show operation, AI-assisted workflows, music and karaoke tools, TikTok Live Studio, and the existing Rowdy Room environment.
+Convert Roger's current working main production PC into a portable Rowdy Room AI/show computer. Reuse its existing components, upgrade the graphics card, and move the build into a compatible portable case. The finished system must support portable show operation, AI-assisted workflows, music and karaoke tools, DJ work, TikTok Live Studio, and the existing Rowdy Room environment.
+
+The donor computer is the owned working MSI/custom desktop with:
+
+- AMD Ryzen 7 5700X
+- MSI MAG B550 TOMAHAWK MAX WIFI (MS-7C91) motherboard
+- 48 GB RAM
+- NVIDIA GeForce RTX 3070 8 GB, to be replaced by the planned graphics-card upgrade
+- about 2.27 TB total storage
+- Windows 11 Pro
+
+An older laptop is not part of the authoritative equipment inventory and is not part of this build plan.
 
 ## Critical operating correction
 
@@ -28,17 +39,15 @@ The OBSBOT Tiny 2 Lite is normally Roger's personal home-streaming camera. The p
 
 The continuity audit and protected inventory readback establish:
 
-- Supabase `rowdy-room/current-state` was version `22` at the start of the 2026-07-21 reconciliation.
 - The authoritative inventory has `66` lines and `91` physical units.
 - `45` lines are user-confirmed and `7` are physically verified.
 - `14` lines remain recovery-required.
 - `61` lines have unknown operating condition.
 - `3` lines are confirmed working and `2` need repair.
-- The working Windows desktop is a Ryzen 7 5700X system with 48 GB RAM and an RTX 3070.
-- Useful portable components include the Anker 11-in-1 USB-C dock, ARZOPA A1S portable monitor, UGREEN 200 W charger, Belkin 20,000 mAh power bank, Yamaha USB mixer/interface, Elgato Stream Deck, and OBSBOT Tiny 2 Lite, but their operating condition is not yet confirmed unless stated otherwise in the inventory.
-- No verified portable Windows laptop or mini-PC capable of replacing the desktop is currently present in the authoritative inventory.
+- The working donor computer is the Ryzen 7 5700X system with 48 GB RAM and an RTX 3070.
+- Useful portable components include the ARZOPA A1S portable monitor, Anker 11-in-1 USB-C dock, UGREEN 200 W charger, Yamaha USB mixer/interface, Elgato Stream Deck, and other owned show equipment, subject to their recorded operating status.
 
-Before purchasing or recommending equipment, reload the inventory and compare the proposed design against current owned equipment.
+Before purchasing or recommending the graphics card or portable case, reload the inventory and verify compatibility with the donor system.
 
 ## Confirmed continuity locations
 
@@ -51,16 +60,17 @@ Before purchasing or recommending equipment, reload the inventory and compare th
 
 ## Recovery required
 
+- Exact replacement graphics-card model.
+- Exact portable-case model and desired size/weight/transport configuration.
+- Donor-system PSU model, wattage, dimensions, and available GPU power connectors.
+- CPU-cooler model and height, current GPU dimensions, drive layout, and other physical fit constraints.
 - Physical confirmation of Yamaha `AG06MK` versus `AG06MK2`.
-- Exact identity, specifications, and working condition of the older laptop discussed previously.
-- Exact identity, specifications, and working condition of the smaller desktop discussed previously.
 - Fourteen partially identified inventory lines.
 - Sixty-one operating-condition tests.
 - Original Rowdy Room Progress conversation export.
 - Reconciliation of the private server-side `rowdyroom_bible` directory.
-- Exact live-event projector source, content, and signal path after removal of the OBS assumption.
-- Review or merge of draft pull request #28 after its conflict state is reconciled.
+- Exact live-event projector source, content, and signal path.
 
 ## Exact next product action
 
-Locate the older laptop and smaller desktop, record their manufacturer/model, CPU, RAM, storage, ports, Windows version, power requirements, and working condition, and test whether each can run TikTok Live Studio plus the required karaoke/DJ/AI tools. Do not buy a replacement computer until that comparison is complete.
+Document the donor PC's PSU, CPU cooler, current GPU dimensions, drive layout, and internal clearances, plus Roger's target case size, weight, and transport needs. Use those constraints to select the graphics-card upgrade and a compatible portable case. Do not purchase either part until power, cooling, dimensions, and connector compatibility are verified.
