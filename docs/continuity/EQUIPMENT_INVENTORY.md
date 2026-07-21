@@ -1,6 +1,6 @@
 # Rowdy Room Equipment Inventory
 
-**Status:** Durable inventory active; 2026-07-21 use correction verified  
+**Status:** Durable inventory active; 2026-07-21 project-plan correction verified  
 **Authoritative inventory lines:** 66  
 **Physical units represented:** 91
 
@@ -29,11 +29,27 @@ Protected evidence:
 - history ID `76`
 - operating condition remains unknown
 
-## Portable-computer baseline
+## Portable-computer donor baseline
 
-Confirmed useful owned components include:
+The portable AI computer will be built from the owned working main production PC:
 
-- working Ryzen 7 5700X Windows 11 Pro desktop, 48 GB RAM, RTX 3070
+- equipment key `main-production-pc-ryzen-5700x`
+- MSI/custom desktop
+- Ryzen 7 5700X
+- MSI MAG B550 TOMAHAWK MAX WIFI (MS-7C91)
+- 48 GB RAM
+- RTX 3070 8 GB
+- about 2.27 TB storage
+- Windows 11 Pro
+- version `1`
+- content SHA-256 `a471bea56f4470994ae2464e790c47c5534697ddac20b0c7ed8be7e4264cac43`
+
+The plan is to upgrade the graphics card and motherboard and move compatible donor components into a portable case. Roger recalls the motherboard as the additional intended upgrade, but the replacement graphics card, motherboard, and case models are not yet confirmed.
+
+An older laptop is not part of the authoritative inventory and is not part of this build plan. Do not add a replacement graphics card, motherboard, or portable case to owned inventory until it is actually purchased or otherwise confirmed as owned.
+
+Other useful owned components include:
+
 - working iPad Air M4
 - working iPhone 17 Pro Max
 - Anker 11-in-1 USB-C docking station
@@ -43,8 +59,6 @@ Confirmed useful owned components include:
 - Yamaha USB mixer/interface
 - Elgato Stream Deck
 - OBSBOT Tiny 2 Lite
-
-The protected inventory contains no verified portable Windows laptop or mini-PC capable of replacing the desktop. The older laptop and smaller desktop discussed previously remain **Recovery required** until their exact identity, specifications, and working condition are recorded.
 
 The Yamaha inventory row currently says `AG06MK`; physical confirmation of `AG06MK` versus `AG06MK2` is still required.
 
