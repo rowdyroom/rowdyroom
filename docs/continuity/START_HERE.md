@@ -48,12 +48,13 @@ Supabase project `Final`, ref `szubjgpvlqliyparrnam`:
 
 Verified protected records:
 
-- `rowdy-room/current-state`: v24, `57473d7f3f53853bfa47b55aa422afd695acb235ff33b9a49d16ea231b3bc34b`
-- `rowdy-room/equipment-recovery`: v11, `ebba5f6d07882ca6d7abed976b665f6a7bef744acef3d2f963b6c83d22876db6`
+- `rowdy-room/current-state`: v25, `f035347f378c15c68af8f6f1fe3384eceebd73198d53b6ec05e9627276888dee`, history ID 103
+- `rowdy-room/equipment-recovery`: v12, `10914592983b3598415aba5430a3d93aefceb33e477e7b607e67aa894cda413c`, history ID 104
 - `rowdy-room/show-projection-signal-path`: v3, `a9329a679b13d72912f4d4849975a974f165cd4daef2361b8a3996449462d90b`, recovery-required
 - `rowdy-room/av-package-budget-2026-07-20`: v4, `e6a16b1f512cf2ca6343d0d912b9f344d833ca3135164f084c2c259c29124f11`, superseded
-- `rowdy-room/continuity-protocol`: v5, `6769535ad8afbf1ffece49089d8bf936a703f57eee2abdcfeffe789961393ca2`
-- `rowdy-room/law-and-breadcrumb-protocol`: v2, `3f9e73a30f4fb84e5c0ad11ea3d8cb58e75ec017ab5ab9e808c4911887c395b1`
+- `rowdy-room/continuity-protocol`: v6, `297029ae0319136cea4467bf0d2f442aa01bd244083aba998c07886b265b4724`, history ID 101
+- `rowdy-room/law-and-breadcrumb-protocol`: v3, `f350ed29bf8edf9e1441c6e390e17956ae64c56e6b5cb17d24be189d47eda917`, history ID 102
+- continuity check run: `7e63c16e-7c5f-4553-b4f2-ba37542505e7`, checks 124–131
 
 ## Equipment truth
 
@@ -62,6 +63,13 @@ Verified protected records:
 - 61 unknown operating statuses / 3 working / 2 needs repair
 - aggregate SHA-256 `cfe3cc36e5f8842b4a07df301ac46dc53fdb1bc453ef55730ca581ed82c8d5f2`
 - OBSBOT v4 SHA-256 `0071fa82403f8c212c2a47a4081dd49149bd74746e001b672507652caf73b42e`, history ID 76
+
+## Recovery evidence
+
+- Dated private recovery archive: `Rowdy_Room_Continuity_Reconciliation_2026-07-21_PRIVATE.zip`
+- archive SHA-256: `5ceb6aef67a46af0e11394ff89ecaef1c7eab23ee8502bd1474a2891dd8d4c2e`
+- 4 entries; 3/3 internal hashes passed
+- changed-document privacy scan: 7 files, 0 findings
 
 ## Recovery required
 
@@ -74,4 +82,4 @@ Verified protected records:
 - private server-side Bible reconciliation
 - workbook regeneration before the next equipment intake or workbook-led edit
 
-A final reconciliation breadcrumb will add the dated recovery package and continuity-check run. The PR remains draft until separately reviewed or merged.
+PR #28 remains draft and unmerged until separately reviewed or merged. No production show system, purchase/cart, or Scheduled Task change was authorized or made during this reconciliation.
