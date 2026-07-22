@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="description" content="Rowdy Room live karaoke display.">
+    <title>Rowdy Room Live Display</title>
+    <link rel="stylesheet" href="assets/tv-display.css">
+  </head>
+  <body>
+    <main class="display-shell" aria-live="polite">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark">RR</span><span>ROWDY ROOM</span></div>
+        <p id="banner" class="banner">Scan the code to sign up and join the karaoke queue.</p>
+        <div class="live-status"><span id="connectionDot" class="connection-dot" aria-hidden="true"></span><span id="connectionText">CONNECTING</span></div>
+      </header>
+
+      <section class="hero-grid" aria-label="Live karaoke rotation">
+        <article class="performer-card now-card">
+          <p class="eyebrow">NOW PERFORMING</p>
+          <h1 id="nowName">Waiting for the next performer</h1>
+          <p id="nowSong" class="song-line">The room is getting ready.</p>
+        </article>
+
+        <article class="performer-card next-card">
+          <p class="eyebrow">UP NEXT</p>
+          <h2 id="nextName">—</h2>
+          <p id="nextSong" class="song-line">Join the queue from your phone.</p>
+        </article>
+      </section>
+
+      <section class="lower-grid">
+        <article class="queue-card">
+          <div class="section-heading"><p class="eyebrow">ON DECK</p><span>Next five</span></div>
+          <ol id="queueList" class="queue-list">
+            <li class="empty-row">Waiting for the queue to update.</li>
+          </ol>
+        </article>
+
+        <aside class="signup-card" aria-label="Sign up to sing">
+          <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=420x420&amp;format=svg&amp;data=https%3A%2F%2Fcompanion.rowdyroom.site%2F" alt="QR code linking to companion.rowdyroom.site">
+          <div>
+            <p class="eyebrow">READY TO SING?</p>
+            <h2>SCAN TO SIGN UP</h2>
+            <p>Join the queue, follow your place, and vote during live performances.</p>
+            <p class="signup-url">companion.rowdyroom.site</p>
+          </div>
+        </aside>
+
+        <article class="wait-card">
+          <p class="eyebrow">ESTIMATED WAIT</p>
+          <strong id="waitTime">Waiting for queue estimate</strong>
+          <p id="updatedAt">Live rotation will appear here automatically.</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="assets/tv-display.js" defer></script>
+  </body>
+</html>
