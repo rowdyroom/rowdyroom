@@ -6,6 +6,18 @@
 
 Start every Rowdy Room task here after reading the complete Operator Law. Do not rely on chat memory. Missing or contradictory facts remain **Recovery required**.
 
+## 2026-07-22 — Jessica movement revision 2026-07-22.1
+
+- Change: installed three Roger-approved visual pet movements—confident waiting, headset command-mode active work, and skeptical review.
+- Public-safe authority: `docs/pets/JESSICA_ASSISTANT.md`, commit `5c18dcdac28f786b422adea25456f12d26373891`; pets breadcrumb `docs/pets/START_HERE.md`, commit `d7704e61c6307e722463e3e7c1f6707ea441194d`; changelog commit `9699ae7c8576530c2adc6e2003312ff80346e4af`.
+- Private authority: `pets/jessica-assistant`, version 3, history ID 145, SHA-256 `5ddc3b5e798518f3f9d0b7cd18b31310abdb424fc7a77d0393c7f6d84c7e88c1`.
+- Installed sprite: Codex v2, 1536 x 2288, SHA-256 `8494cdd55061652a30f7843fdfa4ca2ac7d374186dafe57247294d44caee2d8e`.
+- Verification: run `9590f541-c392-43a9-a8cc-83cddfbe66f8`; checks 178–185 passed; structural and independent visual QA passed; rows 0–5 and 9–10 stayed pixel-exact.
+- Recovery: `Jessica_Movement_Update_2026-07-22_PRIVATE.zip`, SHA-256 `fe16bc2bc10b2a53ad72dbaa35b7ba685dd532a5aaab10530863041002ffc19a`, 19 entries.
+- Scope: no personality trait, behavior, expert role, workflow, source preference, tool, or permission was activated.
+- Remaining Recovery required: all unapproved Jessica draft design areas listed below.
+- Next safe action: review one small group of draft personality traits with Roger.
+
 ## 2026-07-22 — Yamaha AG06MK2 model confirmation
 
 - Change: Roger confirmed the owned Yamaha mixer is model `AG06MK2`; the prior `AG06MK` / `AG06MK2` conflict is resolved.
@@ -59,13 +71,13 @@ GitHub readback confirms PR #28 is closed and merged. It is no longer a continui
 ## Pets continuity
 
 - Pets root: [`docs/pets/START_HERE.md`](../pets/START_HERE.md)
-- Jessica public-safe profile: [`docs/pets/JESSICA_ASSISTANT.md`](../pets/JESSICA_ASSISTANT.md), profile v1.2
+- Jessica public-safe profile: [`docs/pets/JESSICA_ASSISTANT.md`](../pets/JESSICA_ASSISTANT.md), profile v1.3
 - Approved Jessica decisions: optional personalization inheritance is NONE; durable records are required for material Jessica updates
 - All proposed personality traits, behaviors, expert roles, workflows, source preferences, and example-command behavior remain inactive working draft
-- Public Jessica profile commit: `519c79881cee71a5324f3bf4dcf1676c9c18ff6f`
-- Protected record: `pets/jessica-assistant`, v2, history 139, SHA-256 `ddef0ecd67ded41f3f17c21e8b7d8ff82947e7396194d16fd039e0576042e413`
-- Verification run: `f9b2b953-408c-44f5-aae1-f51a99a5eee3`; no failed checks
-- Recovery package: `outputs/Jessica_Pets_Continuity_2026-07-22_PRIVATE.zip`, SHA-256 `4fdbec2865d7d5e2398332683ec09b78ee0be3cc221ff7113ad1c896cf7cc68c`
+- Public Jessica profile commit: `5c18dcdac28f786b422adea25456f12d26373891`
+- Protected record: `pets/jessica-assistant`, v3, history 145, SHA-256 `5ddc3b5e798518f3f9d0b7cd18b31310abdb424fc7a77d0393c7f6d84c7e88c1`
+- Verification run: `9590f541-c392-43a9-a8cc-83cddfbe66f8`; no failed checks
+- Recovery package: `Jessica_Movement_Update_2026-07-22_PRIVATE.zip`, SHA-256 `fe16bc2bc10b2a53ad72dbaa35b7ba685dd532a5aaab10530863041002ffc19a`
 - Exact next Jessica action: review one small group of draft personality traits with Roger and record each item as approved, rejected, revised, or pending
 
 ## Protected authority
