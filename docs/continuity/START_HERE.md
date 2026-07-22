@@ -6,6 +6,16 @@
 
 Start every Rowdy Room task here after reading the complete Operator Law. Do not rely on chat memory. Missing or contradictory facts remain **Recovery required**.
 
+## 2026-07-22 — Standalone TV display source staged (not live)
+
+- Change: staged a standalone viewer-facing karaoke TV display at `deploy/tv-display/`. It shows only the approved QR, rotating banner, Now Performing, Up Next, next five, and queue-supplied wait estimate. It is independent of Rumble, Wheel, Buzzer, and Mission Control.
+- Public-safe authority: source commit `8cec95eff3f3c38c5ce762661e760ea8a71e7dc0` on branch `agent/standalone-tv-display-2026-07-22`; source root `deploy/tv-display/`.
+- Protected authority: `rowdy-room/standalone-tv-display`, v1, SHA-256 `03e100829d7c8d9421d1521102575103f11bf1abb2f639c9a1f8386cf7e348cd`, status `recovery-required` until live hosting is verified.
+- Verification: JavaScript syntax passed; 16:9 desktop layout passed with no vertical overflow; the neutral unavailable-queue state and QR destination passed. PHP lint and a live queue/television smoke test remain blocked by hosting.
+- Recovery: protected local package `Rowdy_Room_TV_Display_2026-07-22_PRIVATE_RECOVERY.zip`, SHA-256 `F9EAE3CC3736685F98BE47D1F1580D03240816CCC60072E0BCDF8202A6994EFE`, 6 entries.
+- Recovery required: create `tv.rowdyroom.site` in cPanel, verify its reserved document root, back it up, deploy this exact source, confirm PHP cURL, and run the live QR/queue/television smoke test.
+- Next safe action: use the reserved standalone TV hostname only; do not put this display into `game.rowdyroom.site` or any Rumble surface.
+
 ## 2026-07-22 — Jessica movement revision 2026-07-22.1
 
 - Change: installed three Roger-approved visual pet movements—confident waiting, headset command-mode active work, and skeptical review.
