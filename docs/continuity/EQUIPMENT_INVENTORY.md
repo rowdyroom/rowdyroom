@@ -60,11 +60,11 @@ Other useful owned components include:
 - ARZOPA A1S 14-inch 1080p portable monitor
 - UGREEN Nexode 200 W charger
 - Belkin 20,000 mAh 30 W USB-C power bank
-- Yamaha USB mixer/interface
+- Yamaha AG06MK2 USB mixer/interface
 - Elgato Stream Deck
 - OBSBOT Tiny 2 Lite
 
-The Yamaha inventory row currently says `AG06MK`; physical confirmation of `AG06MK` versus `AG06MK2` is still required.
+Roger confirmed the Yamaha mixer as model `AG06MK2` on 2026-07-22. Its operating condition remains unknown until tested.
 ## Public-safe category summary
 
 | Category | Inventory lines | Physical units |
