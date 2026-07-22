@@ -1,5 +1,16 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-22 — Yamaha mixer model confirmed as AG06MK2
+
+Status: Roger confirmed the exact Yamaha mixer model, resolving the prior AG06MK-versus-AG06MK2 ambiguity.
+
+- Corrected the authoritative private inventory key to `yamaha-ag06mk2-black` and model to `AG06MK2`.
+- Preserved the prior value in append-only equipment history.
+- Updated the public-safe equipment summary and Current State recovery list.
+- Resolved and removed Conflict Review item `CONFLICT-05` as part of approved cleanup Batch 2.
+- Operating condition remains unknown until tested.
+
+
 ## 2026-07-22 - PR #28 merged into main
 
 Status: Roger authorized the merge. GitHub readback confirms PR #28 is closed and merged.
