@@ -111,6 +111,12 @@ The standalone display source is staged at `deploy/tv-display/` on branch `agent
 
 It includes a full-screen viewer display and a same-origin PHP adapter that strips the existing Companion queue response to display-safe fields. The source is not a live deployment. `tv.rowdyroom.site` remains **Recovery required** until the cPanel domain mapping, root backup, PHP cURL availability, live queue refresh, QR target, television/fullscreen behavior, and no-Rumble-content smoke test all pass.
 
+## Live implementation correction — 2026-07-22
+
+Live verification now confirms that `https://tv.rowdyroom.site/` exists and serves the standalone queue display. Its public queue/performance reads are reachable. The remaining defect is access from the other authorized surfaces, not absence of a TV product.
+
+The approved current repair is `deploy/tv-display-access-repair/rowdy-install-tv-display-links.php`, source commit `797ac8ae4ddbe78a5fc2ae6e9fec5f9fcb9d1df8`. It may add links from the main website and Mission Control only. It must not move, replace, or embed the live TV implementation. The previously staged `deploy/tv-display/` candidate is unmerged recovery material, not a deployment target.
+
 ## Deployment gate
 
 Before live deployment:
