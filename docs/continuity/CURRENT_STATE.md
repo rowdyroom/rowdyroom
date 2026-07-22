@@ -43,7 +43,7 @@ The working donor PC is equipment key `main-production-pc-ryzen-5700x`. The two 
 - `asus-dual-rtx5060ti-o16g`: version 1, user-confirmed owned, operating status unknown, SHA-256 `7e3c427a9538ecc875cd7af68c508182bee4d719ac79eb19d43383edf86f52fa`
 - `cooler-master-qube-540-case`: version 1, user-confirmed owned, operating status unknown, SHA-256 `228e44358f92f3cf3cb303fd89a78e651c92866f3de085a0750be6ef2e5ff570`
 
-Useful owned portable components include the ARZOPA A1S portable monitor, Anker 11-in-1 USB-C dock, UGREEN 200 W charger, Yamaha USB mixer/interface, Elgato Stream Deck, and other recorded show equipment. Their operating condition remains unknown unless the private inventory says otherwise.
+Useful owned portable components include the ARZOPA A1S portable monitor, Anker 11-in-1 USB-C dock, UGREEN 200 W charger, Yamaha AG06MK2 USB mixer/interface, Elgato Stream Deck, and other recorded show equipment. Their operating condition remains unknown unless the private inventory says otherwise.
 
 The existing private workbook predates the 2026-07-21 purchase and project-plan corrections. Supabase remains authoritative; regenerate the workbook before the next equipment intake or workbook-led edit.
 ## Production and Main 4 state
@@ -83,7 +83,6 @@ Purchase-save verification: local recovery archive `Rowdy_Room_Portable_PC_Purch
 - RM1200x SHIFT side-cable clearance in the QUBE 540
 - required case-fan plan
 - post-install GPU, display-output, TikTok Live Studio, local-AI workload, stability, and temperature tests
-- Yamaha physical model: `AG06MK` versus `AG06MK2`
 - 14 partially identified equipment lines
 - 63 operating-condition tests
 - exact live-event projector source, content, and signal path
