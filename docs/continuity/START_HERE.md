@@ -54,8 +54,8 @@ Supabase project `Final`, ref `szubjgpvlqliyparrnam`:
 
 Verified protected records:
 
-- `rowdy-room/current-state`: v28, `b51a37144ebfb9858b820e63c179d5c069829f9f2a7975c97db41a68a50ecbd7`, history ID 122
-- `rowdy-room/equipment-recovery`: v13, `299f88573655344503f38cf3147169a470e8e19cd94c8fa52920ce5fc33bac6f`, history ID 123
+- `rowdy-room/current-state`: v29, `79f5ffb49a735f168ce09ece15dd7dcf7f44db4469b95c378565705a54322dcb`, history ID 124
+- `rowdy-room/equipment-recovery`: v14, `df5679c3e908f777a4874294fa526e13a71c6742762b0c2b46e21394e417fad6`, history ID 125
 - `rowdy-room/show-projection-signal-path`: v3, `a9329a679b13d72912f4d4849975a974f165cd4daef2361b8a3996449462d90b`, recovery-required
 - `rowdy-room/av-package-budget-2026-07-20`: v4, `e6a16b1f512cf2ca6343d0d912b9f344d833ca3135164f084c2c259c29124f11`, superseded
 - `rowdy-room/continuity-protocol`: v6, `297029ae0319136cea4467bf0d2f442aa01bd244083aba998c07886b265b4724`, history ID 101
@@ -75,7 +75,10 @@ Verified protected records:
 - archive SHA-256: `5ceb6aef67a46af0e11394ff89ecaef1c7eab23ee8502bd1474a2891dd8d4c2e`
 - purchased-part database rows and histories passed exact readback
 - public handoff commit: `6e71ebd09077f1d48ade32742910689b11965cd7`
-- a dated private recovery package must preserve the purchase confirmation and final readbacks
+- purchase recovery archive: `Rowdy_Room_Portable_PC_Purchases_2026-07-21_PRIVATE.zip`
+- archive SHA-256: `10b9eb55fc361a2b656f9ec0725073c6b75676e1001e46d6f36b551d9fc881c5`
+- archive entries: 4; internal hashes: 3/3 passed
+- continuity check run: `942cfd79-cd4d-4cb9-b728-f8f803d1cf47` — 7 pass, 2 warn, 0 fail
 ## Recovery required
 
 - physical receipt and inspection of the purchased QUBE 540 and ASUS Dual RTX 5060 Ti 16GB
