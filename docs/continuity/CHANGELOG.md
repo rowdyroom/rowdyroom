@@ -8,8 +8,10 @@
 - Retained the MSI MAG B550 TOMAHAWK MAX WIFI motherboard and current 48 GB RAM as the initial build plan; no replacement motherboard is currently planned.
 - Preserved the Corsair RM1200x SHIFT 1200 W as user-confirmed existing equipment while leaving QUBE 540 side-cable clearance recovery-required.
 - Inventory readback: 68 lines, 93 units, 47 user-confirmed, 7 physically verified, 14 recovery-required, 63 unknown operating statuses, aggregate SHA-256 `a6037fb817234aa509e629c237699c5adbf346d7137d0852c9c392cddd5c7754`.
-- Protected records updated to `rowdy-room/current-state` v28 and `rowdy-room/equipment-recovery` v13 with exact history and hash readback.
+- Protected records finalized at `rowdy-room/current-state` v29 / history 124 / SHA-256 `79f5ffb49a735f168ce09ece15dd7dcf7f44db4469b95c378565705a54322dcb` and `rowdy-room/equipment-recovery` v14 / history 125 / SHA-256 `df5679c3e908f777a4874294fa526e13a71c6742762b0c2b46e21394e417fad6`.
 - Exact next product action: identify the installed CPU cooler and current drive layout, then verify QUBE 540 cooler height, RM1200x SHIFT side-cable clearance, drive placement, and the case-fan plan.
+- Recovery archive `Rowdy_Room_Portable_PC_Purchases_2026-07-21_PRIVATE.zip`: SHA-256 `10b9eb55fc361a2b656f9ec0725073c6b75676e1001e46d6f36b551d9fc881c5`, 4 entries, 3/3 internal hashes passed.
+- Verification run `942cfd79-cd4d-4cb9-b728-f8f803d1cf47`: 7 pass, 2 warn, 0 fail.
 - No additional purchase, production show-system change, or Scheduled Task action was performed.
 
 ## 2026-07-21 — Portable AI computer donor-system plan corrected
