@@ -1,5 +1,18 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-22 - Pets registry and Jessica durable record established
+
+Status: Jessica remains in design. Only two decisions are approved; all personality, behavior, role, workflow, source-preference, and example-command proposals remain inactive working draft.
+
+- Added `docs/pets/START_HERE.md` as the public-safe pets breadcrumb root and `docs/pets/JESSICA_ASSISTANT.md` as Jessica's public-safe profile summary.
+- Updated the installed `$jessica-assistant` profile to version 1.2 so only explicitly approved decisions are active.
+- Approved optional personalization inheritance as NONE and required the verified durable-record workflow for every material Jessica update.
+- Saved protected record `pets/jessica-assistant` v1, history ID 138, SHA-256 `6a1c5218b78fc6627460770c2c26fe8e4c10844b4ee168247e5f2696583b8506`.
+- Public Jessica profile commit: `519c79881cee71a5324f3bf4dcf1676c9c18ff6f`.
+- Verification run `f9b2b953-408c-44f5-aae1-f51a99a5eee3` passed local profile, public profile, protected history, recovery, scope, and privacy checks; the missing PyYAML validator dependency and the draft/unmergeable PR state remain warnings.
+- Recovery package `outputs/Jessica_Pets_Continuity_2026-07-22_PRIVATE.zip`: SHA-256 `4fdbec2865d7d5e2398332683ec09b78ee0be3cc221ff7113ad1c896cf7cc68c`, 11 entries, 9/9 listed internal hashes passed.
+- No personality trait, expert role, workflow, permission, production system, purchase, or external integration was activated by this record.
+
 ## 2026-07-21 — Portable AI computer case and graphics card purchased
 
 - Roger confirmed purchase of the Cooler Master QUBE 540 and ASUS Dual GeForce RTX 5060 Ti OC Edition 16GB GDDR7 (DUAL-RTX5060TI-O16G).
