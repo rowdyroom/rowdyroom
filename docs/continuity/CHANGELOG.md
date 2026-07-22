@@ -1,5 +1,14 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-22 — TV access upload-and-extract package
+
+Status: cPanel-friendly ZIP prepared; production install still pending.
+
+- Created `Rowdy_Room_TV_Display_Links_UPLOAD_AND_EXTRACT_2026-07-22.zip` containing exactly one top-level installer file. Upload it to `public_html` and extract it there.
+- ZIP SHA-256: `723C4DB06FA6A5461DE6E2311C0600F89F1C8560EF9958880E0BE15D8B31D306`.
+- Updated protected record `rowdy-room/standalone-tv-display` to v3, SHA-256 `23de5ec1c8d2708c78225f7434a120b9b59f074efa5feaf78a2256be9d0bb0ca`, history 148.
+- Remaining blocker: the installer has not been extracted or run in cPanel, so live homepage and Mission Control links remain unverified.
+
 ## 2026-07-22 — TV display access correction
 
 Status: Existing live TV display verified; homepage and Mission Control access repair staged, not deployed.
