@@ -6,6 +6,16 @@
 
 Start every Rowdy Room task here after reading the complete Operator Law. Do not rely on chat memory. Missing or contradictory facts remain **Recovery required**.
 
+## 2026-07-22 — Live TV display recovered; access repair staged
+
+- Live evidence: `https://tv.rowdyroom.site/` returns HTTP 200 and serves the existing **Rowdy Room Live Rotation** display. Its existing public queue and performance queries returned HTTP 200. The earlier domain-pending record is outdated.
+- Actual gap: neither the public homepage nor Mission Control exposes a TV Display link, so the live product is undiscoverable.
+- Correct repair: `deploy/tv-display-access-repair/rowdy-install-tv-display-links.php`, source commit `797ac8ae4ddbe78a5fc2ae6e9fec5f9fcb9d1df8`. It backs up and adds only two links: homepage sticky controls and Mission Control → Setup → Displays.
+- Superseded candidate: `deploy/tv-display/` remains an unmerged recovery candidate and **must not replace the existing live TV display** without a source-reconciliation review.
+- Protected authority: `rowdy-room/standalone-tv-display`, v2 after this correction; deployment remains recovery-required solely because cPanel write access is unavailable in this task.
+- Recovery: protected local package `Rowdy_Room_TV_Display_Link_Repair_2026-07-22_PRIVATE_RECOVERY.zip`, SHA-256 `779743A35715BCAF8F6FBCF8A355F242DE9D4690208DF27A2D0D2544D7B345CE`.
+- Next safe action: upload the access-repair installer beside `public_html/index.html`, run it once, verify both links open the existing TV display, then delete the installer.
+
 ## 2026-07-22 — Standalone TV display source staged (not live)
 
 - Change: staged a standalone viewer-facing karaoke TV display at `deploy/tv-display/`. It shows only the approved QR, rotating banner, Now Performing, Up Next, next five, and queue-supplied wait estimate. It is independent of Rumble, Wheel, Buzzer, and Mission Control.
