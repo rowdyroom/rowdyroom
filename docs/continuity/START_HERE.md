@@ -1,7 +1,7 @@
 # Rowdy Room Continuity — START HERE
 
 **Status:** Active public-safe breadcrumb root  
-**Last updated:** 2026-07-21  
+**Last updated:** 2026-07-22  
 **Owner:** Roger Jamsek
 
 Start every Rowdy Room task here after reading the complete Operator Law. Do not rely on chat memory. Missing or contradictory facts remain **Recovery required**.
@@ -37,13 +37,13 @@ The active continuation is **Build Portable AI Computer**.
 ## GitHub authority
 
 - Repository: `rowdyroom/rowdyroom`
-- `main` contains the Operator Law, Project Bible, architecture record, portable AI computer handoff, and compact START_HERE root.
-- Full continuity records remain on `agent/rowdy-room-continuity`, draft PR #28.
+- `main` contains the Operator Law, Project Bible, architecture record, and portable AI computer handoff.
+- `agent/rowdy-room-continuity` contains the full continuity and pets records and has been synchronized with current `main` for the authorized PR #28 merge.
 - Donor-system handoff correction: `d00605a194a3838af7aba6ff77e3d1fa4233afc8`
 - Main donor-plan breadcrumb: `26f22e785bd642e94e45abb02c361c5a1cada016`
 - Prior PR conflict-resolution merge: `6b934d5e3d1acfa3beda1c0a7277b1e9eb2b9e4a`
 
-PR #28 remains open, draft, and unmerged. Its final mergeability must be read back after the corrected branch is synchronized with current `main`.
+PR #28 remains open and unmerged at this synchronization point. Roger authorized its merge on 2026-07-22; final merge state must be read back before changing this statement.
 
 ## Pets continuity
 
@@ -77,24 +77,23 @@ Verified protected snapshot:
 - `rowdy-room/law-and-breadcrumb-protocol`: v3, `f350ed29bf8edf9e1441c6e390e17956ae64c56e6b5cb17d24be189d47eda917`, history 102
 ## Equipment truth
 
-- 68 lines / 93 units
+- 68 lines / 93 physical units
 - 47 user-confirmed / 7 physically verified / 14 recovery-required
 - 63 unknown operating statuses / 3 working / 2 needs repair
-- donor equipment key `main-production-pc-ryzen-5700x`; its RTX 3070 remains installed
-- purchased GPU key `asus-dual-rtx5060ti-o16g`, v1, operating status unknown
-- purchased case key `cooler-master-qube-540-case`, v1, operating status unknown
+- donor system: `main-production-pc-ryzen-5700x`, working with its RTX 3070 still installed
+- purchased GPU: `asus-dual-rtx5060ti-o16g`, v1, user-confirmed owned, operating status unknown
+- purchased case: `cooler-master-qube-540-case`, v1, user-confirmed owned, operating status unknown
 - aggregate SHA-256 `a6037fb817234aa509e629c237699c5adbf346d7137d0852c9c392cddd5c7754`
 ## Recovery evidence
 
 - Previous reconciliation archive: `Rowdy_Room_Continuity_Reconciliation_2026-07-21_PRIVATE.zip`
-- SHA-256 `5ceb6aef67a46af0e11394ff89ecaef1c7eab23ee8502bd1474a2891dd8d4c2e`
-- A compact dated correction record must preserve the donor-system plan correction and final readbacks.
-
+- archive SHA-256: `5ceb6aef67a46af0e11394ff89ecaef1c7eab23ee8502bd1474a2891dd8d4c2e`
+- purchased-part database rows and histories passed exact readback
+- public handoff commit: `6e71ebd09077f1d48ade32742910689b11965cd7`
 - purchase recovery archive: `Rowdy_Room_Portable_PC_Purchases_2026-07-21_PRIVATE.zip`
 - archive SHA-256: `10b9eb55fc361a2b656f9ec0725073c6b75676e1001e46d6f36b551d9fc881c5`
 - archive entries: 4; internal hashes: 3/3 passed
 - continuity check run: `942cfd79-cd4d-4cb9-b728-f8f803d1cf47` — 7 pass, 2 warn, 0 fail
-
 ## Recovery required
 
 - physical receipt and inspection of the purchased QUBE 540 and ASUS Dual RTX 5060 Ti 16GB
@@ -110,4 +109,4 @@ Verified protected snapshot:
 - private server-side Bible reconciliation
 - workbook regeneration before the next equipment intake or workbook-led edit
 
-PR #28 remains draft and unmerged until separately reviewed or merged. No further purchase/cart action, production show system change, or Scheduled Task change is authorized by this record.
+An older laptop is not part of the authoritative equipment inventory and is not part of this build plan. PR #28 remains unmerged at this synchronization point. No further purchase/cart action, production show system change, or Scheduled Task change is authorized by this record.
