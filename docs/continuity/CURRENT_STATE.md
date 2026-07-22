@@ -12,34 +12,40 @@ The current product continuation is **Build Portable AI Computer**.
 
 - Donor system: Roger's current working main production PC.
 - Current donor baseline: Ryzen 7 5700X, MSI MAG B550 TOMAHAWK MAX WIFI, 48 GB RAM, RTX 3070, about 2.27 TB storage, Windows 11 Pro.
-- Planned changes: upgrade the graphics card, upgrade the motherboard, and move the components into a compatible portable case.
-- Roger recalls the motherboard as the additional planned upgrade; the exact replacement model is not yet confirmed.
-- Required workloads: karaoke, DJ work, AI workflows, Rowdy Room tools, and TikTok Live Studio.
+- Roger confirmed purchase of the Cooler Master QUBE 540 and ASUS Dual GeForce RTX 5060 Ti OC Edition 16GB GDDR7 (DUAL-RTX5060TI-O16G).
+- The purchased parts are recorded as owned but not yet received, physically inspected, installed, or tested.
+- The RTX 3070 remains the installed working GPU until the new card is installed and verified.
+- Retain the MSI motherboard and 48 GB RAM initially. A replacement motherboard is not currently planned.
+- The existing Corsair RM1200x SHIFT 1200 W PSU is user-confirmed; QUBE 540 side-cable clearance remains to be verified.
+- Required workloads: karaoke, DJ work, AI workflows, local video-generation work, Rowdy Room tools, and TikTok Live Studio.
 - Roger does **not** use OBS. OBS must not be included in this project.
 - The OBSBOT Tiny 2 Lite is normally Roger's personal home-streaming camera.
 - The projector is primarily for live events.
 - The prior OBS-based projection path and approximately $500 AV-package plan are superseded and must not drive architecture or purchasing.
 - The exact live-event projector source, content, and routing remain **Recovery required**.
 - An older laptop is not part of the authoritative inventory and is not part of this build plan.
-
 ## Authoritative equipment state
 
 Protected Supabase readback on 2026-07-21 confirms:
 
-- 66 inventory lines
-- 91 physical units
-- 45 user-confirmed lines
+- 68 inventory lines
+- 93 physical units
+- 47 user-confirmed lines
 - 7 physically verified lines
 - 14 recovery-required lines
-- 61 lines with unknown operating condition
+- 63 lines with unknown operating condition
 - 3 confirmed working lines
 - 2 lines needing repair
-- aggregate inventory SHA-256 `cfe3cc36e5f8842b4a07df301ac46dc53fdb1bc453ef55730ca581ed82c8d5f2`
+- aggregate inventory SHA-256 `a6037fb817234aa509e629c237699c5adbf346d7137d0852c9c392cddd5c7754`
 
-The working donor PC is equipment key `main-production-pc-ryzen-5700x`. Useful owned portable components include the ARZOPA A1S portable monitor, Anker 11-in-1 USB-C dock, UGREEN 200 W charger, Yamaha USB mixer/interface, Elgato Stream Deck, and other recorded show equipment. Their operating condition remains unknown unless the private inventory says otherwise.
+The working donor PC is equipment key `main-production-pc-ryzen-5700x`. The two newly purchased lines are:
 
-The existing private workbook predates the 2026-07-21 use and project-plan corrections. Supabase remains authoritative; regenerate the workbook before the next equipment intake or workbook-led edit.
+- `asus-dual-rtx5060ti-o16g`: version 1, user-confirmed owned, operating status unknown, SHA-256 `7e3c427a9538ecc875cd7af68c508182bee4d719ac79eb19d43383edf86f52fa`
+- `cooler-master-qube-540-case`: version 1, user-confirmed owned, operating status unknown, SHA-256 `228e44358f92f3cf3cb303fd89a78e651c92866f3de085a0750be6ef2e5ff570`
 
+Useful owned portable components include the ARZOPA A1S portable monitor, Anker 11-in-1 USB-C dock, UGREEN 200 W charger, Yamaha USB mixer/interface, Elgato Stream Deck, and other recorded show equipment. Their operating condition remains unknown unless the private inventory says otherwise.
+
+The existing private workbook predates the 2026-07-21 purchase and project-plan corrections. Supabase remains authoritative; regenerate the workbook before the next equipment intake or workbook-led edit.
 ## Production and Main 4 state
 
 Main 4 is already implemented and operational:
@@ -62,26 +68,26 @@ This project-plan correction does not change production show systems.
 
 ## Protected continuity readback
 
-- `rowdy-room/current-state`: version `27`, SHA-256 `eaa19365ebca76d98544621bd0627b6a8e7632111b4d3bb7d4a8b7967fe40c79`, history ID `108`
-- `rowdy-room/equipment-recovery`: version `12`, SHA-256 `10914592983b3598415aba5430a3d93aefceb33e477e7b607e67aa894cda413c`
+- `rowdy-room/current-state`: version `28`, SHA-256 `b51a37144ebfb9858b820e63c179d5c069829f9f2a7975c97db41a68a50ecbd7`, history ID `122`
+- `rowdy-room/equipment-recovery`: version `13`, SHA-256 `299f88573655344503f38cf3147169a470e8e19cd94c8fa52920ce5fc33bac6f`, history ID `123`
 - `rowdy-room/show-projection-signal-path`: version `3`, SHA-256 `a9329a679b13d72912f4d4849975a974f165cd4daef2361b8a3996449462d90b`, status `recovery-required`
 - `rowdy-room/av-package-budget-2026-07-20`: version `4`, SHA-256 `e6a16b1f512cf2ca6343d0d912b9f344d833ca3135164f084c2c259c29124f11`, status `superseded`
-
 ## Recovery required
 
-- exact replacement graphics-card model
-- exact replacement motherboard model and retained CPU/RAM/storage plan
-- exact portable-case model and size/weight/transport requirements
-- donor-system PSU model, wattage, dimensions, GPU power connectors, CPU-cooler fit, GPU dimensions, drive layout, and internal clearances
+- physical receipt and inspection of the purchased QUBE 540 and ASUS Dual RTX 5060 Ti 16GB
+- exact installed CPU-cooler model and height
+- current drive layout and desired drive retention
+- RM1200x SHIFT side-cable clearance in the QUBE 540
+- required case-fan plan
+- post-install GPU, display-output, TikTok Live Studio, local-AI workload, stability, and temperature tests
 - Yamaha physical model: `AG06MK` versus `AG06MK2`
 - 14 partially identified equipment lines
-- 61 operating-condition tests
+- 63 operating-condition tests
 - exact live-event projector source, content, and signal path
 - original Rowdy Room Progress conversation export
 - private server-side `rowdyroom_bible` reconciliation
 - final PR #28 mergeability/privacy readback after this correction
 - workbook regeneration before the next equipment intake or workbook-led edit
-
 ## Exact next product action
 
-Recover or confirm the intended graphics-card, motherboard, and portable-case models. Then verify the donor PC's CPU socket, memory, PSU, cooling, physical dimensions, drives, and connectors against those three parts before any purchase.
+Identify the CPU cooler currently installed on the Ryzen 7 5700X and document the current drive layout. Then verify cooler height, RM1200x SHIFT side-cable clearance, drive placement, and the QUBE 540 fan plan before deciding whether any additional parts are needed. Do not install the new GPU or move the production system without separate authorization.
