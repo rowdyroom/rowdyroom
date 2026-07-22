@@ -1,4 +1,4 @@
-# Pets Continuity â€” START HERE
+# Pets Continuity - START HERE
 
 **Status:** Active public-safe pets breadcrumb root  
 **Last updated:** 2026-07-22
