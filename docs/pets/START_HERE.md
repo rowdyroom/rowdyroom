@@ -27,7 +27,15 @@ Use this area for durable, public-safe records about Codex pets and their associ
 
 ## Evidence
 
-The initial public record exists in this branch. Final commit, protected version/hash/history, check run, and local recovery evidence are recorded by the follow-up breadcrumb update after verification.
+- Public Jessica profile: `docs/pets/JESSICA_ASSISTANT.md`, commit `519c79881cee71a5324f3bf4dcf1676c9c18ff6f`
+- Protected record: `pets/jessica-assistant`, version 1, history ID 138, SHA-256 `6a1c5218b78fc6627460770c2c26fe8e4c10844b4ee168247e5f2696583b8506`
+- Verification run: `f9b2b953-408c-44f5-aae1-f51a99a5eee3`
+- Passed checks: installed profile readback, public profile readback, protected record/history readback, recovery archive, draft activation scope, and public privacy scan
+- Warnings: the official skill validator lacks PyYAML, although equivalent checks passed manually; draft PR #28 remains open, draft, unmerged, and not mergeable
+- Failures: none
+- Local recovery package: `outputs/Jessica_Pets_Continuity_2026-07-22_PRIVATE.zip`
+- Recovery SHA-256: `4fdbec2865d7d5e2398332683ec09b78ee0be3cc221ff7113ad1c896cf7cc68c`
+- Recovery archive: 11 entries; 9/9 listed internal file hashes passed
 
 ## Recovery required
 
