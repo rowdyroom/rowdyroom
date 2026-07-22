@@ -6,6 +6,16 @@
 
 Start every Rowdy Room task here after reading the complete Operator Law. Do not rely on chat memory. Missing or contradictory facts remain **Recovery required**.
 
+## 2026-07-22 — Yamaha AG06MK2 model confirmation
+
+- Change: Roger confirmed the owned Yamaha mixer is model `AG06MK2`; the prior `AG06MK` / `AG06MK2` conflict is resolved.
+- Public-safe authority: `docs/continuity/EQUIPMENT_INVENTORY.md` on `main`, commit `8ba0cad73db12a802d0dae02bb3f5d23c2da9791`; `docs/continuity/CURRENT_STATE.md`, commit `9574973219fa061867e2e13a8722db6b991c5aef`; changelog commit `71853ea2cdbe2a55c977e2b9bb35b0f6e9d206e4`.
+- Private authority: equipment key `yamaha-ag06mk2-black`, version `2`, SHA-256 `a235abf0ca31bec473a2b8d5b3e2f73142b739c6a3e0fe52eeab2d40ba290b03`, history ID `213`; `rowdy-room/current-state` version `31`, SHA-256 `06ec8236c06347bc9c92aba643a0dbcdb20d6dc28d170e1810a2f0b3fd288aa8`; `rowdy-room/equipment-recovery` version `15`, SHA-256 `5d7a09e28b3dd544be2187b3ada2abbd617d79750eebb9d758c1020ddbd5973b`.
+- Verification: continuity run `89695818-b06d-4ce7-9f20-1e148008175c`, check IDs `171`–`175`, all pass.
+- Recovery: `/workspace/scratch/925d103e7b45/outputs/rowdy-room-recovery/Rowdy_Room_AG06MK2_Correction_2026-07-22_PRIVATE.zip`, SHA-256 `c63559fb535e1eb774669e1aff9fcb75d7212bfd4d522de543a977da7fcd1e0c`, two entries.
+- Remaining Recovery required: the AG06MK2 operating condition is unknown until tested; all other gaps listed below remain open.
+- Next safe action: continue the approved spreadsheet cleanup review; test the AG06MK2 operating condition when practical.
+
 ## Required startup order
 
 1. [Operator Law](../ROWDY_ROOM_OPERATOR_LAW.md)
@@ -102,7 +112,6 @@ Verified protected snapshot:
 - current drive layout and desired drive retention
 - RM1200x SHIFT side-cable clearance in the QUBE 540
 - required case-fan plan and post-build temperature tests
-- Yamaha `AG06MK` versus `AG06MK2`
 - 14 partially identified equipment lines
 - 63 operating-condition tests
 - exact live-event projector source, content, and routing
