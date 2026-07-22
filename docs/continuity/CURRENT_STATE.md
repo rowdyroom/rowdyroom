@@ -1,7 +1,7 @@
 # Rowdy Room Current State
 
 **Status:** Active public-safe handoff record  
-**Last updated:** 2026-07-21  
+**Last updated:** 2026-07-22  
 **Owner:** Roger Jamsek
 
 Read this after the complete Operator Law, `docs/continuity/START_HERE.md`, and the Project Bible. Missing or contradictory facts remain **Recovery required**.
@@ -62,13 +62,13 @@ This project-plan correction does not change production show systems.
 - Operator Law: `docs/ROWDY_ROOM_OPERATOR_LAW.md` on `main`
 - Project Bible: `docs/ROWDY_ROOM_BIBLE.md` on `main`
 - Portable AI computer handoff: `docs/continuity/BUILD_PORTABLE_AI_COMPUTER_HANDOFF.md` on `main`
-- Current State, Equipment Inventory, Changelog, Runbook, and full public breadcrumb: branch `agent/rowdy-room-continuity`, draft pull request #28
+- Current State, Equipment Inventory, Changelog, Runbook, full public breadcrumb, and pets records: `main`
 - Private truth: Supabase project `Final`, ref `szubjgpvlqliyparrnam`
-- Draft pull request #28 remains open, draft, and unmerged
+- Pull request #28: closed and merged on 2026-07-22 at `8ad1c435ff50a67bb142b6b2bbfeb0e41310812e`
 
 ## Protected continuity readback
 
-- `rowdy-room/current-state`: version `29`, SHA-256 `79f5ffb49a735f168ce09ece15dd7dcf7f44db4469b95c378565705a54322dcb`, history ID `124`
+- `rowdy-room/current-state`: version `30`, SHA-256 `02a599bdc7b229b089cf781be4aa6adff342b064870c25d722829784b22b8964`, history ID `141`
 - `rowdy-room/equipment-recovery`: version `14`, SHA-256 `df5679c3e908f777a4874294fa526e13a71c6742762b0c2b46e21394e417fad6`, history ID `125`
 - `rowdy-room/show-projection-signal-path`: version `3`, SHA-256 `a9329a679b13d72912f4d4849975a974f165cd4daef2361b8a3996449462d90b`, status `recovery-required`
 - `rowdy-room/av-package-budget-2026-07-20`: version `4`, SHA-256 `e6a16b1f512cf2ca6343d0d912b9f344d833ca3135164f084c2c259c29124f11`, status `superseded`
@@ -89,7 +89,6 @@ Purchase-save verification: local recovery archive `Rowdy_Room_Portable_PC_Purch
 - exact live-event projector source, content, and signal path
 - original Rowdy Room Progress conversation export
 - private server-side `rowdyroom_bible` reconciliation
-- final PR #28 mergeability/privacy readback after this correction
 - workbook regeneration before the next equipment intake or workbook-led edit
 ## Exact next product action
 

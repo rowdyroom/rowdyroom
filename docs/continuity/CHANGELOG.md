@@ -1,5 +1,17 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-22 - PR #28 merged into main
+
+Status: Roger authorized the merge. GitHub readback confirms PR #28 is closed and merged.
+
+- Resolved the only branch conflict in `docs/continuity/START_HERE.md`, preserving both the current portable-computer handoff and Jessica pets continuity.
+- Synchronized current `main` into `agent/rowdy-room-continuity` without a force push.
+- Marked PR #28 ready and merged it with merge commit `8ad1c435ff50a67bb142b6b2bbfeb0e41310812e`.
+- Moved the full continuity, Main 4 source, and pets records onto authoritative `main`.
+- Verified protected merge-state updates: `pets/jessica-assistant` v2/history 139, `rowdy-room/continuity-protocol` v7/history 140, `rowdy-room/current-state` v30/history 141, and `rowdy-room/law-and-breadcrumb-protocol` v4/history 142; all record/history hashes matched.
+- No Jessica personality trait, behavior, expert role, workflow, source preference, permission, or limitation was changed.
+- No purchase, production deployment, show-system change, database schema change, plugin installation, or automation was performed.
+
 ## 2026-07-22 - Pets registry and Jessica durable record established
 
 Status: Jessica remains in design. Only two decisions are approved; all personality, behavior, role, workflow, source-preference, and example-command proposals remain inactive working draft.

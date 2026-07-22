@@ -52,10 +52,10 @@ No further purchase should be recommended until the remaining physical fit and c
 ## Confirmed continuity locations
 
 - Project Bible: `docs/ROWDY_ROOM_BIBLE.md` on `main`.
-- Current State: `docs/continuity/CURRENT_STATE.md` on `agent/rowdy-room-continuity` until draft pull request #28 is merged.
-- Equipment Inventory: `docs/continuity/EQUIPMENT_INVENTORY.md` on the continuity branch; private authority is `public.rr_equipment_inventory`.
-- Continuity Changelog: `docs/continuity/CHANGELOG.md` on the continuity branch.
-- Continuity Runbook: `docs/continuity/CONTINUITY_RUNBOOK.md` on the continuity branch.
+- Current State: `docs/continuity/CURRENT_STATE.md` on `main`.
+- Equipment Inventory: `docs/continuity/EQUIPMENT_INVENTORY.md` on `main`; private authority is `public.rr_equipment_inventory`.
+- Continuity Changelog: `docs/continuity/CHANGELOG.md` on `main`.
+- Continuity Runbook: `docs/continuity/CONTINUITY_RUNBOOK.md` on `main`.
 - Protected record keys and recovery evidence are listed in `docs/continuity/START_HERE.md`.
 
 ## Recovery required
