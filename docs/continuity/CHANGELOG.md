@@ -1,5 +1,17 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-21 — Portable AI computer case and graphics card purchased
+
+- Roger confirmed purchase of the Cooler Master QUBE 540 and ASUS Dual GeForce RTX 5060 Ti OC Edition 16GB GDDR7 (DUAL-RTX5060TI-O16G).
+- Added two user-confirmed owned inventory lines. Both remain operational-status unknown until received, physically inspected, installed, and tested.
+- The existing RTX 3070 remains the working installed graphics card.
+- Retained the MSI MAG B550 TOMAHAWK MAX WIFI motherboard and current 48 GB RAM as the initial build plan; no replacement motherboard is currently planned.
+- Preserved the Corsair RM1200x SHIFT 1200 W as user-confirmed existing equipment while leaving QUBE 540 side-cable clearance recovery-required.
+- Inventory readback: 68 lines, 93 units, 47 user-confirmed, 7 physically verified, 14 recovery-required, 63 unknown operating statuses, aggregate SHA-256 `a6037fb817234aa509e629c237699c5adbf346d7137d0852c9c392cddd5c7754`.
+- Protected records updated to `rowdy-room/current-state` v28 and `rowdy-room/equipment-recovery` v13 with exact history and hash readback.
+- Exact next product action: identify the installed CPU cooler and current drive layout, then verify QUBE 540 cooler height, RM1200x SHIFT side-cable clearance, drive placement, and the case-fan plan.
+- No additional purchase, production show-system change, or Scheduled Task action was performed.
+
 ## 2026-07-21 — Portable AI computer donor-system plan corrected
 
 Status: Roger corrected the project plan after an unsupported older-laptop instruction was introduced during continuity reconciliation.
