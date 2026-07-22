@@ -68,10 +68,13 @@ This project-plan correction does not change production show systems.
 
 ## Protected continuity readback
 
-- `rowdy-room/current-state`: version `28`, SHA-256 `b51a37144ebfb9858b820e63c179d5c069829f9f2a7975c97db41a68a50ecbd7`, history ID `122`
-- `rowdy-room/equipment-recovery`: version `13`, SHA-256 `299f88573655344503f38cf3147169a470e8e19cd94c8fa52920ce5fc33bac6f`, history ID `123`
+- `rowdy-room/current-state`: version `29`, SHA-256 `79f5ffb49a735f168ce09ece15dd7dcf7f44db4469b95c378565705a54322dcb`, history ID `124`
+- `rowdy-room/equipment-recovery`: version `14`, SHA-256 `df5679c3e908f777a4874294fa526e13a71c6742762b0c2b46e21394e417fad6`, history ID `125`
 - `rowdy-room/show-projection-signal-path`: version `3`, SHA-256 `a9329a679b13d72912f4d4849975a974f165cd4daef2361b8a3996449462d90b`, status `recovery-required`
 - `rowdy-room/av-package-budget-2026-07-20`: version `4`, SHA-256 `e6a16b1f512cf2ca6343d0d912b9f344d833ca3135164f084c2c259c29124f11`, status `superseded`
+
+Purchase-save verification: local recovery archive `Rowdy_Room_Portable_PC_Purchases_2026-07-21_PRIVATE.zip`, SHA-256 `10b9eb55fc361a2b656f9ec0725073c6b75676e1001e46d6f36b551d9fc881c5`, 4 entries, 3/3 internal hashes passed. Check run `942cfd79-cd4d-4cb9-b728-f8f803d1cf47`: 7 pass, 2 warn, 0 fail.
+
 ## Recovery required
 
 - physical receipt and inspection of the purchased QUBE 540 and ASUS Dual RTX 5060 Ti 16GB
