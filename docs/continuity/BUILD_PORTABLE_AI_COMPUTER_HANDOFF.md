@@ -16,21 +16,18 @@ Before doing any work:
 
 ## Project objective
 
-Convert Roger's current working main production PC into a portable Rowdy Room AI/show computer. Reuse its existing components where compatible, upgrade the graphics card and motherboard, and move the build into a compatible portable case. The finished system must support portable show operation, AI-assisted workflows, music and karaoke tools, DJ work, TikTok Live Studio, and the existing Rowdy Room environment.
+Convert Roger's current working main production PC into a portable Rowdy Room AI/show computer. Reuse its existing compatible components, install the purchased graphics card, and move the build into the purchased portable case. The finished system must support portable show operation, AI-assisted workflows, music and karaoke tools, DJ work, TikTok Live Studio, and the existing Rowdy Room environment.
 
-Roger recalls that the motherboard was the additional part intended for upgrade, but the exact replacement model and reason have not yet been recovered. Treat the motherboard model and final compatibility plan as **Recovery required** until confirmed.
+Current decisions:
 
-The donor computer is the owned working MSI/custom desktop with:
-
-- AMD Ryzen 7 5700X
-- MSI MAG B550 TOMAHAWK MAX WIFI (MS-7C91) motherboard, planned for replacement
-- 48 GB RAM
-- NVIDIA GeForce RTX 3070 8 GB, planned for replacement
-- about 2.27 TB total storage
-- Windows 11 Pro
+- Retain the AMD Ryzen 7 5700X.
+- Retain the MSI MAG B550 TOMAHAWK MAX WIFI (MS-7C91) motherboard unless a later verified requirement proves it inadequate.
+- Retain the current 48 GB RAM initially.
+- Replace the installed NVIDIA GeForce RTX 3070 8 GB with the purchased ASUS Dual GeForce RTX 5060 Ti OC Edition 16GB GDDR7 (DUAL-RTX5060TI-O16G) after delivery and testing.
+- Move the system into the purchased Cooler Master QUBE 540 after physical fit checks.
+- Reuse the user-confirmed Corsair RM1200x SHIFT 1200 W PSU if its side-cable clearance is verified in the QUBE 540.
 
 An older laptop is not part of the authoritative equipment inventory and is not part of this build plan.
-
 ## Critical operating correction
 
 Roger does **not** use OBS. Do not recommend, configure, document, or include OBS anywhere in this project. Use **TikTok Live Studio** where live-streaming software is relevant.
@@ -39,18 +36,19 @@ The OBSBOT Tiny 2 Lite is normally Roger's personal home-streaming camera. The p
 
 ## Verified continuity and equipment baseline
 
-The continuity audit and protected inventory readback establish:
+The protected inventory readback on 2026-07-21 establishes:
 
-- The authoritative inventory has `66` lines and `91` physical units.
-- `45` lines are user-confirmed and `7` are physically verified.
+- The authoritative inventory has `68` lines and `93` physical units.
+- `47` lines are user-confirmed and `7` are physically verified.
 - `14` lines remain recovery-required.
-- `61` lines have unknown operating condition.
+- `63` lines have unknown operating condition.
 - `3` lines are confirmed working and `2` need repair.
-- The working donor computer is the Ryzen 7 5700X system with 48 GB RAM and an RTX 3070.
+- The working donor computer remains the Ryzen 7 5700X system with 48 GB RAM and the currently installed RTX 3070.
+- Roger confirmed purchase of the Cooler Master QUBE 540 and ASUS Dual RTX 5060 Ti 16GB. They are recorded as owned but not yet received, physically inspected, installed, or tested.
+- No replacement motherboard is currently planned.
 - Useful portable components include the ARZOPA A1S portable monitor, Anker 11-in-1 USB-C dock, UGREEN 200 W charger, Yamaha USB mixer/interface, Elgato Stream Deck, and other owned show equipment, subject to their recorded operating status.
 
-Before purchasing or recommending the graphics card, motherboard, or portable case, reload the inventory and verify compatibility with the donor system and with one another.
-
+No further purchase should be recommended until the remaining physical fit and cooling details are confirmed.
 ## Confirmed continuity locations
 
 - Project Bible: `docs/ROWDY_ROOM_BIBLE.md` on `main`.
@@ -62,18 +60,18 @@ Before purchasing or recommending the graphics card, motherboard, or portable ca
 
 ## Recovery required
 
-- Exact replacement graphics-card model.
-- Exact replacement motherboard model and whether the Ryzen 7 5700X, current RAM, and current storage will be retained.
-- Exact portable-case model and desired size/weight/transport configuration.
-- Donor-system PSU model, wattage, dimensions, and available GPU power connectors.
-- CPU-cooler model and height, current GPU dimensions, drive layout, and other physical fit constraints.
+- Receipt and physical verification of the purchased Cooler Master QUBE 540 and ASUS Dual RTX 5060 Ti 16GB.
+- Exact installed CPU-cooler model and height.
+- Current drive layout and desired drive retention.
+- QUBE 540 clearance for the RM1200x SHIFT side-mounted cables.
+- Required case-fan plan and post-build temperature targets.
+- Post-install GPU, display-output, TikTok Live Studio, local-AI workload, stability, and temperature tests.
 - Physical confirmation of Yamaha `AG06MK` versus `AG06MK2`.
 - Fourteen partially identified inventory lines.
-- Sixty-one operating-condition tests.
+- Sixty-three operating-condition tests.
 - Original Rowdy Room Progress conversation export.
 - Reconciliation of the private server-side `rowdyroom_bible` directory.
 - Exact live-event projector source, content, and signal path.
-
 ## Exact next product action
 
-Recover or confirm the intended graphics-card, motherboard, and portable-case models. Then document the donor PC's PSU, CPU cooler, current GPU dimensions, RAM, drive layout, and internal clearances plus Roger's target size, weight, and transport needs. Verify socket, memory, power, cooling, dimensions, and connector compatibility before purchasing any part.
+Identify the CPU cooler currently installed on the Ryzen 7 5700X and document the current drive layout. Then verify cooler height, RM1200x SHIFT side-cable clearance, drive placement, and the QUBE 540 fan plan before deciding whether any additional parts are needed. Do not install the new GPU or move the production system until Roger separately authorizes the build work.
