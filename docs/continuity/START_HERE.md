@@ -45,6 +45,18 @@ The active continuation is **Build Portable AI Computer**.
 
 PR #28 remains open, draft, and unmerged. Its final mergeability must be read back after the corrected branch is synchronized with current `main`.
 
+## Pets continuity
+
+- Pets root: [`docs/pets/START_HERE.md`](../pets/START_HERE.md)
+- Jessica public-safe profile: [`docs/pets/JESSICA_ASSISTANT.md`](../pets/JESSICA_ASSISTANT.md), profile v1.2
+- Approved Jessica decisions: optional personalization inheritance is NONE; durable records are required for material Jessica updates
+- All proposed personality traits, behaviors, expert roles, workflows, source preferences, and example-command behavior remain inactive working draft
+- Public Jessica profile commit: `519c79881cee71a5324f3bf4dcf1676c9c18ff6f`
+- Protected record: `pets/jessica-assistant`, v1, history 138, SHA-256 `6a1c5218b78fc6627460770c2c26fe8e4c10844b4ee168247e5f2696583b8506`
+- Verification run: `f9b2b953-408c-44f5-aae1-f51a99a5eee3`; no failed checks
+- Recovery package: `outputs/Jessica_Pets_Continuity_2026-07-22_PRIVATE.zip`, SHA-256 `4fdbec2865d7d5e2398332683ec09b78ee0be3cc221ff7113ad1c896cf7cc68c`
+- Exact next Jessica action: review one small group of draft personality traits with Roger and record each item as approved, rejected, revised, or pending
+
 ## Protected authority
 
 Supabase project `Final`, ref `szubjgpvlqliyparrnam`:
