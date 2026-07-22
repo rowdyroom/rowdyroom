@@ -105,6 +105,12 @@ The following are prohibited as canonical TV addresses:
 
 The game and TV products may both read shared public queue data, but neither may own or embed the other.
 
+## Source release staged — 2026-07-22
+
+The standalone display source is staged at `deploy/tv-display/` on branch `agent/standalone-tv-display-2026-07-22`, source commit `8cec95eff3f3c38c5ce762661e760ea8a71e7dc0`.
+
+It includes a full-screen viewer display and a same-origin PHP adapter that strips the existing Companion queue response to display-safe fields. The source is not a live deployment. `tv.rowdyroom.site` remains **Recovery required** until the cPanel domain mapping, root backup, PHP cURL availability, live queue refresh, QR target, television/fullscreen behavior, and no-Rumble-content smoke test all pass.
+
 ## Deployment gate
 
 Before live deployment:
