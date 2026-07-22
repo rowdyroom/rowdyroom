@@ -1,5 +1,20 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-22 — Jessica movement revision 2026-07-22.1 installed
+
+Status: Roger approved and authorized implementation of three Jessica pet movements.
+
+- Replaced only the waiting, running / active-work, and review animation rows.
+- Waiting now uses confident needs-input body language; running uses non-locomotion headset command mode; review uses skeptical quality-control body language.
+- Installed profile v1.3 and v2 spritesheet SHA-256 `8494cdd55061652a30f7843fdfa4ca2ac7d374186dafe57247294d44caee2d8e`.
+- Preserved idle, directional running, waving, jumping, failed, and both look-direction rows pixel-exact.
+- Structural validation and independent visual QA passed with zero repair rows.
+- Updated public summary at commit `5c18dcdac28f786b422adea25456f12d26373891`.
+- Updated protected record `pets/jessica-assistant` to version 3, history ID 145, SHA-256 `5ddc3b5e798518f3f9d0b7cd18b31310abdb424fc7a77d0393c7f6d84c7e88c1`.
+- Verification run `9590f541-c392-43a9-a8cc-83cddfbe66f8`: initial checks 178–185 all passed.
+- Recovery archive `Jessica_Movement_Update_2026-07-22_PRIVATE.zip`, SHA-256 `fe16bc2bc10b2a53ad72dbaa35b7ba685dd532a5aaab10530863041002ffc19a`, 19 entries.
+- No personality trait, behavior, expert role, workflow, source preference, tool, or permission was activated.
+
 ## 2026-07-22 — Yamaha mixer model confirmed as AG06MK2
 
 Status: Roger confirmed the exact Yamaha mixer model, resolving the prior AG06MK-versus-AG06MK2 ambiguity.
