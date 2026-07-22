@@ -1,0 +1,122 @@
+:root {
+  --purple: #5b21b6;
+  --purple-bright: #8b5cf6;
+  --cyan: #22d3ee;
+  --gold: #fbbf24;
+  --ink: #070711;
+  --panel: rgba(25, 15, 53, 0.92);
+  --line: rgba(167, 139, 250, 0.35);
+  --muted: #c4b5fd;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: #fff;
+  background:
+    radial-gradient(circle at 14% 15%, rgba(34, 211, 238, 0.14), transparent 27rem),
+    radial-gradient(circle at 82% 14%, rgba(139, 92, 246, 0.25), transparent 35rem),
+    linear-gradient(135deg, #090314, var(--ink) 56%, #110622);
+}
+
+.display-shell {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto auto 1fr;
+  gap: clamp(1rem, 2vw, 2rem);
+  padding: clamp(1rem, 2.6vw, 3.25rem);
+}
+
+.topbar, .hero-grid, .lower-grid { display: grid; gap: clamp(0.8rem, 1.6vw, 1.5rem); }
+
+.topbar {
+  grid-template-columns: minmax(12rem, 0.85fr) minmax(18rem, 2.4fr) auto;
+  align-items: center;
+  min-height: 4.3rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  background: rgba(12, 6, 31, 0.82);
+}
+
+.brand { display: flex; align-items: center; gap: 0.65rem; font-weight: 900; letter-spacing: 0.12em; white-space: nowrap; }
+.brand-mark { display: grid; width: 2.55rem; height: 2.55rem; place-items: center; border-radius: 0.8rem; color: #16062f; background: linear-gradient(135deg, var(--cyan), #fff); font-size: 0.82rem; }
+.banner { margin: 0; color: #f5f3ff; font-size: clamp(0.85rem, 1.5vw, 1.22rem); font-weight: 700; text-align: center; }
+.live-status { display: flex; align-items: center; gap: 0.45rem; color: var(--muted); font-size: 0.72rem; font-weight: 900; letter-spacing: 0.1em; white-space: nowrap; }
+.connection-dot { width: 0.65rem; height: 0.65rem; border-radius: 50%; background: #f59e0b; box-shadow: 0 0 0.75rem currentColor; }
+.connection-dot.is-live { color: #22c55e; background: #22c55e; }
+.connection-dot.is-error { color: #f43f5e; background: #f43f5e; }
+
+.hero-grid { grid-template-columns: minmax(0, 1.65fr) minmax(18rem, 1fr); }
+.performer-card, .queue-card, .signup-card, .wait-card {
+  border: 1px solid var(--line);
+  border-radius: 1.5rem;
+  background: linear-gradient(145deg, rgba(41, 23, 83, 0.96), var(--panel));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 1.5rem 4rem rgba(0, 0, 0, 0.22);
+}
+
+.performer-card { min-height: clamp(12rem, 26vh, 20rem); padding: clamp(1.25rem, 3vw, 3rem); }
+.now-card { border-color: rgba(34, 211, 238, 0.65); background: linear-gradient(135deg, rgba(18, 65, 100, 0.95), rgba(41, 21, 87, 0.94)); }
+.next-card { background: linear-gradient(145deg, rgba(78, 46, 130, 0.94), rgba(20, 12, 43, 0.94)); }
+.eyebrow { margin: 0 0 0.65rem; color: var(--cyan); font-size: clamp(0.72rem, 1.15vw, 1rem); font-weight: 900; letter-spacing: 0.18em; }
+.performer-card h1, .performer-card h2 { overflow-wrap: anywhere; margin: 0; font-weight: 950; letter-spacing: -0.045em; line-height: 0.98; }
+.performer-card h1 { font-size: clamp(2.1rem, 6.9vw, 7rem); }
+.performer-card h2 { font-size: clamp(1.8rem, 4.1vw, 4.5rem); }
+.song-line { margin: 0.9rem 0 0; color: #ede9fe; font-size: clamp(0.96rem, 1.5vw, 1.35rem); }
+
+.lower-grid { grid-template-columns: minmax(0, 1.4fr) minmax(21rem, 1fr); align-items: stretch; }
+.queue-card { grid-row: span 2; padding: clamp(1rem, 2vw, 2rem); }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--line); padding-bottom: 0.8rem; }
+.section-heading .eyebrow { margin: 0; }
+.section-heading span { color: var(--muted); font-size: 0.9rem; font-weight: 700; }
+.queue-list { display: grid; gap: 0.55rem; margin: 1rem 0 0; padding: 0; list-style: none; }
+.queue-list li { display: grid; grid-template-columns: 2.75rem minmax(0, 1fr) auto; align-items: center; gap: 0.8rem; min-height: 3.45rem; padding: 0.65rem 0.8rem; border-radius: 0.85rem; background: rgba(7, 4, 21, 0.52); }
+.queue-list .position { color: var(--gold); font-size: 1.2rem; font-weight: 950; text-align: center; }
+.queue-list .name { overflow-wrap: anywhere; font-size: clamp(1rem, 1.7vw, 1.35rem); font-weight: 850; }
+.queue-list .song { color: var(--muted); font-size: 0.85rem; text-align: right; }
+.queue-list .empty-row { display: block; color: var(--muted); text-align: center; }
+
+.signup-card { display: grid; grid-template-columns: minmax(8.4rem, 0.85fr) minmax(0, 1fr); align-items: center; padding: clamp(0.9rem, 1.6vw, 1.5rem); }
+.signup-card h2 { margin: 0; font-size: clamp(1.25rem, 2.15vw, 2.25rem); line-height: 1; }
+.signup-card p:not(.eyebrow):not(.signup-url) { margin: 0.65rem 0; color: #ede9fe; font-size: 0.9rem; line-height: 1.4; }
+.qr-code { display: block; width: min(100%, 15rem); aspect-ratio: 1; padding: 0.55rem; border-radius: 0.7rem; background: #fff; }
+.signup-url { margin: 0; color: var(--gold); font-size: 0.8rem; font-weight: 900; }
+
+.wait-card { display: grid; align-content: center; min-height: 8rem; padding: 1.2rem 1.5rem; }
+.wait-card .eyebrow { margin-bottom: 0.25rem; }
+.wait-card strong { color: #fff; font-size: clamp(1.2rem, 2.25vw, 2.2rem); line-height: 1.05; }
+.wait-card p { margin: 0.55rem 0 0; color: var(--muted); font-size: 0.82rem; }
+
+@media (min-width: 761px) and (min-height: 700px) {
+  body { overflow: hidden; }
+  .display-shell {
+    height: 100vh;
+    grid-template-rows: 4.3rem minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 1rem;
+    padding: clamp(1rem, 1.65vw, 2rem);
+  }
+  .topbar { min-height: 0; }
+  .performer-card { min-height: 0; }
+  .performer-card h1 { font-size: clamp(2.6rem, 5.45vw, 5.9rem); }
+  .lower-grid { min-height: 0; }
+  .queue-card, .signup-card, .wait-card { min-height: 0; overflow: hidden; }
+  .queue-list { gap: 0.35rem; margin-top: 0.65rem; }
+  .queue-list li { min-height: 2.5rem; padding: 0.4rem 0.65rem; }
+  .signup-card { grid-template-columns: minmax(7rem, 0.75fr) minmax(0, 1fr); }
+  .qr-code { width: min(100%, 11.5rem); }
+  .wait-card { min-height: 0; padding: 0.8rem 1.2rem; }
+}
+
+@media (max-width: 760px) {
+  .display-shell { padding: 0.75rem; }
+  .topbar, .hero-grid, .lower-grid { grid-template-columns: 1fr; }
+  .topbar { justify-items: center; text-align: center; }
+  .brand { justify-self: start; }
+  .live-status { justify-self: end; }
+  .queue-card { grid-row: auto; }
+  .signup-card { grid-template-columns: 7rem minmax(0, 1fr); }
+}
