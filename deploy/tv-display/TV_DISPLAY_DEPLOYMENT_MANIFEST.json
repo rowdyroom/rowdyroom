@@ -1,0 +1,27 @@
+{
+  "release": "2026-07-22.1",
+  "product": "Rowdy Room standalone TV display",
+  "public_url": "https://tv.rowdyroom.site/",
+  "required_document_root": "/home/ef39cr6m1vih/public_html/tv.rowdyroom.site",
+  "deployment_state": "source-ready; cPanel domain creation and live deployment pending",
+  "required_files": [
+    "index.html",
+    "assets/tv-display.css",
+    "assets/tv-display.js",
+    "api/queue-display.php"
+  ],
+  "allowed_content": [
+    "signup QR code",
+    "rotating information banner",
+    "now performing",
+    "up next",
+    "next five performers",
+    "estimated wait time when supplied by canonical queue"
+  ],
+  "forbidden_content": [
+    "Rumble game state",
+    "host controls",
+    "private viewer or performer data"
+  ],
+  "verification_url": "https://tv.rowdyroom.site/"
+}
