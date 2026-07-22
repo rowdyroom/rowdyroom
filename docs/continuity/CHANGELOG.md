@@ -1,5 +1,18 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-22 — Standalone TV display source staged
+
+Status: Source-ready; not live until the reserved cPanel subdomain exists and passes deployment gates.
+
+- Added the independent `deploy/tv-display/` release: a 16:9 public karaoke display, a same-origin PHP queue adapter, and an exact deployment manifest.
+- Preserved product separation: no Rumble route, score, team, wheel, buzzer, game control, or Mission Control content is present.
+- The adapter uses the fixed existing Companion bootstrap endpoint, exposes only display-safe queue fields, accepts no user input, and makes no queue changes.
+- JavaScript syntax, a 16:9 no-overflow visual layout, a neutral queue-unavailable fallback, and the Companion QR target passed. PHP lint is unavailable locally; live PHP/queue/television verification remains pending.
+- Public-safe source is on branch `agent/standalone-tv-display-2026-07-22`; source commit `8cec95eff3f3c38c5ce762661e760ea8a71e7dc0`.
+- Protected record: `rowdy-room/standalone-tv-display`, v1, SHA-256 `03e100829d7c8d9421d1521102575103f11bf1abb2f639c9a1f8386cf7e348cd`.
+- Recovery package: `Rowdy_Room_TV_Display_2026-07-22_PRIVATE.zip`, SHA-256 `F9EAE3CC3736685F98BE47D1F1580D03240816CCC60072E0BCDF8202A6994EFE`, six entries.
+- Remaining blocker: create and verify `tv.rowdyroom.site` with document root `/home/ef39cr6m1vih/public_html/tv.rowdyroom.site`, then back up, deploy, and live-smoke-test it.
+
 ## 2026-07-22 — Jessica movement revision 2026-07-22.1 installed
 
 Status: Roger approved and authorized implementation of three Jessica pet movements.
