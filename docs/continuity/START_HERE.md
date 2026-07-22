@@ -6,6 +6,14 @@
 
 Start every Rowdy Room task here after reading the complete Operator Law. Do not rely on chat memory. Missing or contradictory facts remain **Recovery required**.
 
+## 2026-07-22 — TV access upload-and-extract package
+
+- Delivery change: created `Rowdy_Room_TV_Display_Links_UPLOAD_AND_EXTRACT_2026-07-22.zip` for direct cPanel upload and extraction in `public_html`. It contains exactly one top-level file: `rowdy-install-tv-display-links.php`.
+- Integrity: ZIP SHA-256 `723C4DB06FA6A5461DE6E2311C0600F89F1C8560EF9958880E0BE15D8B31D306`.
+- Protected authority: `rowdy-room/standalone-tv-display`, v3, SHA-256 `23de5ec1c8d2708c78225f7434a120b9b59f074efa5feaf78a2256be9d0bb0ca`, history 148.
+- Status: link repair remains recovery-required until the extracted installer runs, both new links open the existing `https://tv.rowdyroom.site/` page, and the installer is deleted.
+- Next safe action: upload the ZIP to `public_html`, extract it there, then open `https://rowdyroom.site/rowdy-install-tv-display-links.php` once.
+
 ## 2026-07-22 — Live TV display recovered; access repair staged
 
 - Live evidence: `https://tv.rowdyroom.site/` returns HTTP 200 and serves the existing **Rowdy Room Live Rotation** display. Its existing public queue and performance queries returned HTTP 200. The earlier domain-pending record is outdated.
