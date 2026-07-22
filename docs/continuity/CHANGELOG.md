@@ -1,5 +1,16 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-22 — TV display access correction
+
+Status: Existing live TV display verified; homepage and Mission Control access repair staged, not deployed.
+
+- Live readback corrected the historical domain-pending claim: `https://tv.rowdyroom.site/` now returns HTTP 200 and serves the Rowdy Room Live Rotation display.
+- Its existing queue/performance requests return HTTP 200. The defect is discoverability: homepage and Mission Control currently contain no TV Display link.
+- Added `deploy/tv-display-access-repair/rowdy-install-tv-display-links.php`. It is backup-first, exact-marker guarded, idempotent, and adds only the homepage sticky TV Display action and Mission Control Setup → Displays link.
+- The earlier `deploy/tv-display/` source candidate is retained unmerged for recovery only and is not authorized to replace the current live TV implementation.
+- Access-repair source commit: `797ac8ae4ddbe78a5fc2ae6e9fec5f9fcb9d1df8`. Protected recovery package: `Rowdy_Room_TV_Display_Link_Repair_2026-07-22_PRIVATE_RECOVERY.zip`, SHA-256 `779743A35715BCAF8F6FBCF8A355F242DE9D4690208DF27A2D0D2544D7B345CE`.
+- Remaining blocker: cPanel write access is not available in this task. Run the installer against the verified public_html targets, then delete it and smoke-test both links.
+
 ## 2026-07-22 — Standalone TV display source staged
 
 Status: Source-ready; not live until the reserved cPanel subdomain exists and passes deployment gates.
