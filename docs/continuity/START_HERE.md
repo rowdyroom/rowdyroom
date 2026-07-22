@@ -1,46 +1,61 @@
 # Rowdy Room Continuity — START HERE
 
-This is the mandatory public-safe breadcrumb root for all Rowdy Room work.
+**Status:** Active public-safe breadcrumb root  
+**Last updated:** 2026-07-22  
+**Owner:** Roger Jamsek
+
+Start every Rowdy Room task here after reading the complete Operator Law. Do not rely on chat memory. Missing or contradictory facts remain **Recovery required**.
 
 ## Required startup order
 
-1. Read [`docs/ROWDY_ROOM_OPERATOR_LAW.md`](../ROWDY_ROOM_OPERATOR_LAW.md) in full.
-2. Read this file in full.
-3. Load every applicable record below.
-4. Identify the tools and connected access available in the current conversation.
-5. Mark anything missing, contradictory, or unverifiable as **Recovery required**.
-6. Before the final response, reread the Operator Law and audit the work against it.
+1. [Operator Law](../ROWDY_ROOM_OPERATOR_LAW.md)
+2. [Project Bible](../ROWDY_ROOM_BIBLE.md)
+3. [Current State](CURRENT_STATE.md)
+4. [Equipment Inventory](EQUIPMENT_INVENTORY.md) when equipment affects the request
+5. [Continuity Changelog](CHANGELOG.md)
+6. [Continuity Runbook](CONTINUITY_RUNBOOK.md) before a material change
+7. [Build Portable AI Computer handoff](BUILD_PORTABLE_AI_COMPUTER_HANDOFF.md) for the active portable-computer project
+8. Applicable files under `docs/bible/`
 
-## Current project continuation
+## Current continuation
 
-- [Build Portable AI Computer handoff](BUILD_PORTABLE_AI_COMPUTER_HANDOFF.md)
-- The current Ryzen 7 5700X / RTX 3070 production PC remains the donor system.
-- Roger confirmed purchase of the Cooler Master QUBE 540 case and ASUS Dual GeForce RTX 5060 Ti OC Edition 16GB GDDR7 (DUAL-RTX5060TI-O16G).
-- The purchased parts are recorded as owned but not yet received, physically inspected, installed, or tested.
+The active continuation is **Build Portable AI Computer**.
+
+- Donor system: the current working Ryzen 7 5700X / RTX 3070 main production PC.
+- Roger confirmed purchase of the Cooler Master QUBE 540 and ASUS Dual GeForce RTX 5060 Ti OC Edition 16GB GDDR7 (DUAL-RTX5060TI-O16G).
+- The purchased parts are owned but not yet received, physically inspected, installed, or tested.
 - Retain the MSI MAG B550 TOMAHAWK MAX WIFI motherboard and current 48 GB RAM initially.
 - No replacement motherboard is currently planned unless a later verified requirement proves it necessary.
-- The existing Corsair RM1200x SHIFT 1200 W PSU is user-confirmed; QUBE 540 side-cable clearance remains to be verified.
+- The Corsair RM1200x SHIFT 1200 W PSU is user-confirmed; case side-cable clearance remains to be checked.
+- An older laptop is not part of the authoritative inventory and is not part of this plan.
 - Roger uses TikTok Live Studio, not OBS.
 - The OBSBOT Tiny 2 Lite is normally for personal home streaming.
 - The projector is primarily for live events.
 - The old OBS-based projection path is recovery-required.
-- The approximately $500 AV-package plan is superseded and must not drive architecture or purchasing.
+- The approximately $500 AV plan is superseded and must not drive architecture or purchasing.
 - Exact next product action: identify the installed CPU cooler and current drive layout, then verify cooler height, PSU cable clearance, drive placement, and the case-fan plan before deciding whether additional parts are needed.
-## Public authority
+## GitHub authority
 
-Repository: `rowdyroom/rowdyroom`
+- Repository: `rowdyroom/rowdyroom`
+- `main` contains the Operator Law, Project Bible, architecture record, and portable AI computer handoff.
+- `agent/rowdy-room-continuity` contains the full continuity and pets records and has been synchronized with current `main` for the authorized PR #28 merge.
+- Donor-system handoff correction: `d00605a194a3838af7aba6ff77e3d1fa4233afc8`
+- Main donor-plan breadcrumb: `26f22e785bd642e94e45abb02c361c5a1cada016`
+- Prior PR conflict-resolution merge: `6b934d5e3d1acfa3beda1c0a7277b1e9eb2b9e4a`
 
-- Operator Law: `docs/ROWDY_ROOM_OPERATOR_LAW.md` on `main`
-- Project Bible: `docs/ROWDY_ROOM_BIBLE.md` on `main`
-- Architecture: `docs/ARCHITECTURE.md` on `main`
-- Portable-computer handoff: `docs/continuity/BUILD_PORTABLE_AI_COMPUTER_HANDOFF.md` on `main`
-- Full Current State, Equipment Inventory, Changelog, Runbook, and breadcrumb: branch `agent/rowdy-room-continuity`, draft PR #28
-- Donor-system plan correction commit: `d00605a194a3838af7aba6ff77e3d1fa4233afc8`
-- Purchased case/GPU handoff commit: `6e71ebd09077f1d48ade32742910689b11965cd7`
-- Architecture correction commit: `c03834f68ea05a9e59a65e2629d69c15bf92b3dc`
-- Prior PR conflict-resolution merge commit: `6b934d5e3d1acfa3beda1c0a7277b1e9eb2b9e4a`
+PR #28 remains open and unmerged at this synchronization point. Roger authorized its merge on 2026-07-22; final merge state must be read back before changing this statement.
 
-PR #28 remains **open**, **draft**, and **not merged**. Its mergeability must be read back after this correction is synchronized to the branch.
+## Pets continuity
+
+- Pets root: [`docs/pets/START_HERE.md`](../pets/START_HERE.md)
+- Jessica public-safe profile: [`docs/pets/JESSICA_ASSISTANT.md`](../pets/JESSICA_ASSISTANT.md), profile v1.2
+- Approved Jessica decisions: optional personalization inheritance is NONE; durable records are required for material Jessica updates
+- All proposed personality traits, behaviors, expert roles, workflows, source preferences, and example-command behavior remain inactive working draft
+- Public Jessica profile commit: `519c79881cee71a5324f3bf4dcf1676c9c18ff6f`
+- Protected record: `pets/jessica-assistant`, v1, history 138, SHA-256 `6a1c5218b78fc6627460770c2c26fe8e4c10844b4ee168247e5f2696583b8506`
+- Verification run: `f9b2b953-408c-44f5-aae1-f51a99a5eee3`; no failed checks
+- Recovery package: `outputs/Jessica_Pets_Continuity_2026-07-22_PRIVATE.zip`, SHA-256 `4fdbec2865d7d5e2398332683ec09b78ee0be3cc221ff7113ad1c896cf7cc68c`
+- Exact next Jessica action: review one small group of draft personality traits with Roger and record each item as approved, rejected, revised, or pending
 
 ## Protected authority
 
@@ -52,14 +67,14 @@ Supabase project `Final`, ref `szubjgpvlqliyparrnam`:
 - `public.rr_equipment_inventory`
 - `public.rr_equipment_history`
 
-Verified protected records:
+Verified protected snapshot:
 
-- `rowdy-room/current-state`: v29, `79f5ffb49a735f168ce09ece15dd7dcf7f44db4469b95c378565705a54322dcb`, history ID 124
-- `rowdy-room/equipment-recovery`: v14, `df5679c3e908f777a4874294fa526e13a71c6742762b0c2b46e21394e417fad6`, history ID 125
+- `rowdy-room/current-state`: v29, `79f5ffb49a735f168ce09ece15dd7dcf7f44db4469b95c378565705a54322dcb`, history 124
+- `rowdy-room/equipment-recovery`: v14, `df5679c3e908f777a4874294fa526e13a71c6742762b0c2b46e21394e417fad6`, history 125
 - `rowdy-room/show-projection-signal-path`: v3, `a9329a679b13d72912f4d4849975a974f165cd4daef2361b8a3996449462d90b`, recovery-required
 - `rowdy-room/av-package-budget-2026-07-20`: v4, `e6a16b1f512cf2ca6343d0d912b9f344d833ca3135164f084c2c259c29124f11`, superseded
-- `rowdy-room/continuity-protocol`: v6, `297029ae0319136cea4467bf0d2f442aa01bd244083aba998c07886b265b4724`, history ID 101
-- `rowdy-room/law-and-breadcrumb-protocol`: v3, `f350ed29bf8edf9e1441c6e390e17956ae64c56e6b5cb17d24be189d47eda917`, history ID 102
+- `rowdy-room/continuity-protocol`: v6, `297029ae0319136cea4467bf0d2f442aa01bd244083aba998c07886b265b4724`, history 101
+- `rowdy-room/law-and-breadcrumb-protocol`: v3, `f350ed29bf8edf9e1441c6e390e17956ae64c56e6b5cb17d24be189d47eda917`, history 102
 ## Equipment truth
 
 - 68 lines / 93 physical units
@@ -94,4 +109,4 @@ Verified protected records:
 - private server-side Bible reconciliation
 - workbook regeneration before the next equipment intake or workbook-led edit
 
-An older laptop is not part of the authoritative equipment inventory and is not part of this build plan. No further purchase/cart action, production show system change, or Scheduled Task change is authorized by this record.
+An older laptop is not part of the authoritative equipment inventory and is not part of this build plan. PR #28 remains unmerged at this synchronization point. No further purchase/cart action, production show system change, or Scheduled Task change is authorized by this record.

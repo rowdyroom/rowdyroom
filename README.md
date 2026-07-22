@@ -3,7 +3,7 @@
 Rowdy Room is a live karaoke, audience-participation, competition, community, and local entertainment platform based in Rolla, Missouri.
 
 **Live Karaoke. Real Votes. Real Community.**  
-**Sing • Compete • Vote • Connect.**
+**Sing â€¢ Compete â€¢ Vote â€¢ Connect.**
 
 ## Current systems
 
@@ -22,12 +22,17 @@ Rowdy Room is a live karaoke, audience-participation, competition, community, an
 ## Documentation
 
 - [Rowdy Room Project Bible](docs/ROWDY_ROOM_BIBLE.md)
-- [Progress Status — 2026-07-13](docs/PROJECT_STATUS_2026-07-13.md)
-- [Supabase Security Audit — 2026-07-13](docs/SUPABASE_SECURITY_AUDIT_2026-07-13.md)
+- [Progress Status â€” 2026-07-13](docs/PROJECT_STATUS_2026-07-13.md)
+- [Supabase Security Audit â€” 2026-07-13](docs/SUPABASE_SECURITY_AUDIT_2026-07-13.md)
 - [Supabase Bible sync](supabase/seed/20260713_rowdy_room_bible_sync.sql)
 - [Supabase Bible sync rollback](supabase/rollback/20260713_rowdy_room_bible_sync_rollback.sql)
 - [Supabase security-audit record](supabase/seed/20260713_security_audit_record.sql)
 - [Supabase security-audit record rollback](supabase/rollback/20260713_security_audit_record_rollback.sql)
+- [Public-safe Main 4 browser adapter](deploy/main4-panel/README.md)
+
+## Main 4 authority
+
+Mission Control includes the eight-position Main 4 and regular-signup rotation panel. Public browser surfaces can use the adapter in `deploy/main4-panel` to read the same authority. Host mutations require the existing host password and short-lived session lock; browser code never receives the Supabase service-role key.
 
 ## Operating rule
 
@@ -38,3 +43,4 @@ No production patch is complete without a backup or version-controlled recovery 
 The repository includes a Next.js 15, React 19, and TypeScript enterprise-engine application. The production website currently also includes PHP, HTML, CSS, and JavaScript surfaces that must be synchronized into version control as the deployment process is formalized.
 
 Never commit secrets, host passwords, private tokens, service-role keys, or API credentials.
+

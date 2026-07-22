@@ -3,6 +3,7 @@ import { ApiReliabilityPanel } from "../components/ApiReliabilityPanel";
 import { HostConsolePanel } from "../components/HostConsolePanel";
 import { LiveLinksPanel } from "../components/LiveLinksPanel";
 import { LocalBridgePanel } from "../components/LocalBridgePanel";
+import { Main4Panel } from "../components/Main4Panel";
 import { MissionActions } from "../components/MissionActions";
 import { MissionChat } from "../components/MissionChat";
 import { MissionMemory } from "../components/MissionMemory";
@@ -42,6 +43,7 @@ export default function HomePage() {
           <div className="heroActions">
             <a href="#mission-status">Status</a>
             <a href="#show-mode">Show Mode</a>
+            <a href="#main-four">Main 4</a>
             <a href="#run-sheet">Run Sheet</a>
             <a href="#host-console">Host Console</a>
             <a href="#live-links">Live Links</a>
@@ -77,6 +79,7 @@ export default function HomePage() {
       <section className="contentGrid">
         <MissionStatus />
         <ShowModePanel />
+        <Main4Panel />
         <RunSheetPanel />
         <HostConsolePanel />
         <LiveLinksPanel />
@@ -125,3 +128,4 @@ export default function HomePage() {
     </main>
   );
 }
+
