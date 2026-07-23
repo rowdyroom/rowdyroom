@@ -13,7 +13,7 @@ This public-safe breadcrumb identifies the approved chat-first profile work that
 - An **About Me** profile draft is approved.
 - A **Current Priorities** entry is stored as private, time-sensitive context.
 - A cleaned cross-platform **Custom Settings** baseline is an approved working draft.
-- **More About Me** remains a draft until Roger adds the personal details he wants included.
+- **More About Me** is approved.
 - Nothing in this record has changed live ChatGPT/Codex settings, activated a pet, applied Guided Builder fields, granted tools, or enabled memory.
 
 ## Boundaries
@@ -24,9 +24,9 @@ This public-safe breadcrumb identifies the approved chat-first profile work that
 
 ## Authority and recovery
 
-- Protected record: `rowdy-room/assistant-profile-foundation`, v2, SHA-256 `8fd132a6206f3cbd08768e815be015b987a833f1f0645bf044ded2817bf65ed6`.
+- Protected record: `rowdy-room/assistant-profile-foundation`, v3, SHA-256 `32da04a47494017093a99ed21f7a4a01fa190e1462c9c17d49059998dc099397`.
 - User-controlled working sheet: **Easy Bot, Pet & Prompt Builder — ChatGPT + Codex Examples**, tab **Personal & Rowdy Context**, rows 31–34.
-- Dated private recovery copy: `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json`, SHA-256 `1bbf9d9c9424dac18f295da44de1ac3e32036576b3c8cd2ff217f3247d2511f7`; private Library item `libfile_057b3b0ffc788191bba586c2aa66991e`.
+- Dated private recovery copy: `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json`, SHA-256 `7954a0b7444fdc6bc20f98bcb8a56c8bc30eb56c1ac5d7ac86142d8621f55498`; private Library item `libfile_057b3b0ffc788191bba586c2aa66991e`, version 2.
 
 ## Recovery required
 
@@ -34,4 +34,4 @@ This public-safe breadcrumb identifies the approved chat-first profile work that
 
 ## Exact next safe action
 
-Roger completes the personal additions to **More About Me**, then we review the separate memory categories before applying any profile material to ChatGPT, Codex, the Guided Builder, or an assistant package.
+Review the separate memory categories before applying any profile material to ChatGPT, Codex, the Guided Builder, or an assistant package.
