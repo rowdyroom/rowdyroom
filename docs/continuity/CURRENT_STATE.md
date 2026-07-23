@@ -1,7 +1,7 @@
 # Rowdy Room Current State
 
 **Status:** Active public-safe handoff record  
-**Last updated:** 2026-07-21  
+**Last updated:** 2026-07-23  
 **Owner:** Roger Jamsek
 
 Read this after the complete Operator Law, `docs/continuity/START_HERE.md`, and the Project Bible. Missing or contradictory facts remain **Recovery required**.
@@ -56,6 +56,15 @@ Main 4 is already implemented and operational:
 - no production Rumble was activated or finalized during verification
 
 This project-plan correction does not change production show systems.
+
+## Portable assistant transition
+
+Roger intends to move primary AI work from ChatGPT to the portable AI PC after the hardware is built and verified. The main assistant, Jessica, and Gwen must use the portable-first policy in `docs/continuity/PORTABLE_ASSISTANT_FOUNDATION.md`.
+
+- ChatGPT and Codex remain the current working adapters during the transition.
+- The local runtime must be evaluated against realistic tasks before any workflow is retired from ChatGPT/Codex.
+- No claim of equivalent local performance, complete feature parity, or completed migration is valid until the portable AI PC is installed and benchmarked.
+- Exact local runtime, model choice, local permission map, and cloud/API fallback remain **Recovery required**.
 
 ## Continuity authority
 
