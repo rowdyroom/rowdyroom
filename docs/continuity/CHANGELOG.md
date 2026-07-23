@@ -5,10 +5,10 @@
 Status: Roger approved the finalized More About Me profile text after chat-first review.
 
 - Marked the existing profile entry approved and Keep in the working builder sheet.
-- Updated protected record `rowdy-room/assistant-profile-foundation` to v3, SHA-256 `32da04a47494017093a99ed21f7a4a01fa190e1462c9c17d49059998dc099397`.
-- Replaced the dated private recovery copy with Library version 2, SHA-256 `7954a0b7444fdc6bc20f98bcb8a56c8bc30eb56c1ac5d7ac86142d8621f55498`.
+- Updated protected record `rowdy-room/assistant-profile-foundation` to v4, SHA-256 `30ebbe5bee894d08a1d29e4f0b1d8f01f41a7405ae74de47a57ace0dcc80191b`.
+- Replaced the dated private recovery copy with Library version 3, SHA-256 `305533f988f2eb5b23a96875de6dd06776bca9364761789cb11c5f41b088ce4a`.
 - Kept all profile material unapplied to live ChatGPT, Codex, Guided Builder, and assistant packages.
-- The prior dedicated Supabase continuity-check-row failure remains Recovery required; profile data, sheet, protected record, history, breadcrumb, and recovery copy were verified separately.
+- The corrected verification run `5a24b2a5-3151-4b7b-b0b6-4aab01955413` inserted and read back four passing audit rows; the earlier identity-column mistake is resolved.
 - Exact next safe action: review separate memory categories before any platform or build application.
 
 ## 2026-07-23 — Assistant profile foundation captured
