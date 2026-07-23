@@ -94,6 +94,13 @@ For Songfinder and live-show tools, the default workflow must be:
 3. Controlled YouTube search only when needed.
 4. Safe/Event mode should be automatic or one-click, not a complex control panel.
 
+
+## Assistant Foundry Learning and Creation Law
+
+For every Assistant Foundry action involving the Main Assistant, Jessica, Gwen, the Assistant Workspace, Guided Builder, ChatGPT, Codex, OpenAI services, or a future local runtime, read and apply `docs/continuity/ASSISTANT_FOUNDRY_LEARNING_LAW.md` after this Operator Law.
+
+Capture each material decision, prompt/workflow, test, output, failure, correction, permission/context change, and portability finding with a source surface and evidence. External ChatGPT, Codex, or OpenAI work that is not connected must be captured through the approved Foundry path; do not claim automatic visibility or complete history without recorded evidence.
+
 ## Standing Preference
 
 Roger is paying for execution, not repeated explanation. Mission Control should maximize done-work and minimize back-and-forth.
