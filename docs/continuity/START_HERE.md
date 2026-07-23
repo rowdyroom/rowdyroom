@@ -38,7 +38,7 @@ The active continuation is **Build Portable AI Computer**.
 - Assistant portability: [Portable Assistant Foundation](PORTABLE_ASSISTANT_FOUNDATION.md) is active for the future Main Assistant, Jessica, and Gwen. ChatGPT/Codex are the current working adapters; local runtime work starts only after the purchased hardware is physically verified and evaluated.
 - Assistant Foundry product requirement: build a conversation-first Assistant Workspace plus a separate Guided Builder app with buttons, suggestions, progress, and one obvious next step. Start with a functional guided prototype, not an assumed ChatGPT clone.
 - Assistant Foundry Learning and Creation Law: use `docs/continuity/ASSISTANT_FOUNDRY_LEARNING_LAW.md` for every material assistant-system action. Capture external ChatGPT/Codex/OpenAI work through an explicit Foundry capture/import path until a verified adapter exists.
-- Assistant Profile Foundation: chat-first profile work is active at `docs/continuity/ASSISTANT_PROFILE_FOUNDATION.md`; About Me, More About Me, and the working Custom Settings baseline are approved, remain unapplied to live platforms, and await separate memory-category review.
+- Assistant Profile Foundation: chat-first profile work is active at `docs/continuity/ASSISTANT_PROFILE_FOUNDATION.md`; About Me, More About Me, the working Custom Settings baseline, and private Decision Context are approved. All remain unapplied to live platforms. Decision Context is opt-in per assistant, not automatic inheritance.
 ## GitHub authority
 
 - Repository: `rowdyroom/rowdyroom`
@@ -83,7 +83,7 @@ Verified protected snapshot:
 - `rowdy-room/portable-assistant-foundation`: v4, `77ff5476182cbd02491138d5c947ffb7f026580eef9fecd4a30074c4d31c00b1`, history 168, active
 - `rowdy-room/assistant-foundry-learning-law`: v1, `f9d1369a131d5f1e885f2c826c9db1043a377aa8cc790280603792927ec54eb8`, history 167, active
 - `rowdy-room/assistant-foundry-guided-builder-prototype`: v1, `8f3936a707d4ad777c2a1f000d8d8720dd644be5e83b7346630bef72e1be8e17`, history 169, active
-- `rowdy-room/assistant-profile-foundation`: v4, `30ebbe5bee894d08a1d29e4f0b1d8f01f41a7405ae74de47a57ace0dcc80191b`, active; More About Me approved; private recovery copy `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json` v3 / SHA-256 `305533f988f2eb5b23a96875de6dd06776bca9364761789cb11c5f41b088ce4a`; public profile breadcrumb commit `1e587a13bfae368e955ebbd3ef3f175c6bccaa8c`; verification run `5a24b2a5-3151-4b7b-b0b6-4aab01955413` has 4 pass / 0 fail.
+- `rowdy-room/assistant-profile-foundation`: v5, `289bf6eb20f9b40ca328176f4e8bd339088fc4cbdf0616ac5c4a39bd4f7b812a`, active; More About Me and private Decision Context approved; Decision Context is opt-in per assistant. Private recovery copy `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json` v4 / SHA-256 `375f977d9c6ffe4356f197aa873f6759ea349cdf9eb9f0fb62e78a6d04431b41`; public profile breadcrumb commit `97e7e901db290ab3fbceabe7baed5e7458e04351`; current verification run pending.
 ## Equipment truth
 
 - 68 lines / 93 physical units
