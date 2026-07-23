@@ -11,7 +11,10 @@ Status: Roger required the new assistant system to retain what it learns and cre
 - Added a Learning Ledger capture path to the first Guided Builder prototype. Browser-local prototype storage is not a shared durable ledger; future adapter and durable-sync work remains recovery-required.
 - Protected readback: `rowdy-room/assistant-foundry-learning-law` v1 / history 167 / SHA-256 `f9d1369a131d5f1e885f2c826c9db1043a377aa8cc790280603792927ec54eb8`; `rowdy-room/portable-assistant-foundation` v3 / history 166 / SHA-256 `750de90096c71fc56d5e476105d1db63959c0104cf04fd1ff78e60c933f117e9`.
 - Recovery package: `outputs/Assistant_Foundry_Learning_Law_and_Builder_2026-07-23_PRIVATE.zip`, SHA-256 `580e1fd22a1c4dddef1e576229543124ba91062ece78061e68b00045bc0f4cdd`, 6 entries; archive integrity test passed.
-- A private deployment checkpoint was blocked by the current platform usage limit. The functional local preview and its source snapshot are preserved, but no live Builder URL is claimed.
+- The first save attempt hit a current platform usage limit; after Roger explicitly continued, the private checkpoint completed successfully.
+- Verified private Guided Builder version 1, source commit `f6056e48b5a6cbd699202ca43d607f626f46158e`, custom owner-only access, and terminal deployment success. The private URL remains only in protected records and the dated recovery package.
+- Updated protected records: `rowdy-room/portable-assistant-foundation` v4 / history 168 / SHA-256 `77ff5476182cbd02491138d5c947ffb7f026580eef9fecd4a30074c4d31c00b1`; `rowdy-room/assistant-foundry-guided-builder-prototype` v1 / history 169 / SHA-256 `8f3936a707d4ad777c2a1f000d8d8720dd644be5e83b7346630bef72e1be8e17`.
+- Updated recovery package SHA-256: `99a07e41d65c3145c5bd7781a5f212b82990a662cc13881342e0fdf16fc67dde`; 6 entries, archive integrity test passed.
 
 ## 2026-07-23 — Assistant Foundry workspace and guided-builder requirement recorded
 
