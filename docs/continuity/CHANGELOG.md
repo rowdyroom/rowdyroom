@@ -1,5 +1,19 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-23 — Portable assistant foundation recorded
+
+Status: Roger approved a portable-first foundation for the future Main Assistant, Jessica, and Gwen. ChatGPT/Codex remain the current working surfaces while Roger prepares to move to his own AI computer; no assistant, tool, permission, connector, local runtime, or draft behavior was activated.
+
+- Added [Portable Assistant Foundation](PORTABLE_ASSISTANT_FOUNDATION.md), defining a user-owned portable core: profiles, rules, workflows, evaluations, safe context references, reusable files, and approved visual assets.
+- Set the future Main Assistant as a separate design requirement, rather than assuming an unnamed copy of the current ChatGPT/Codex experience.
+- Updated Jessica's public profile to v1.3 and protected record `pets/jessica-assistant` to v4 / history 164 / SHA-256 `dd6cde25f21594e89f3ba04a23973f3b095473060eccb768603f1d9a1537b2e9`. Her visual package remains separate from behavior; all draft traits and workflows remain inactive.
+- Confirmed Gwen remains a draft Rowdy marketing/content planner. Her three tests are evidence only and did not publish content or activate tools.
+- Recorded that the purchased Cooler Master QUBE 540 and ASUS Dual RTX 5060 Ti 16GB are owned but not yet received, installed, or measured. Local model/runtime choice and performance remain recovery-required.
+- Saved protected decision `rowdy-room/portable-assistant-foundation` v1 / history 163 / SHA-256 `53b8441e5a5fc69b62b949d642cc99381b16554adce379a2ccaf30f3f05fd5c9`.
+- Public policy commit: `d5461c0c040c116cf2eebf8067ec0cbc5e4d093d`; Jessica profile commit: `d7c8c6eec8b6c0ee4047ce774c3d9f9b1bd64ec9`; Current State update: `c67d2c96e500718d9170fb51571eff7b1082bbe4`.
+- Recovery package: `outputs/Portable_Assistant_Foundation_2026-07-23_PRIVATE.zip`, SHA-256 `30375b07b29c9103b92fb28bbd5e3adf13b7ed0080bef76a2208431fbeb2ae27`, 4 entries.
+- Recovery required: actual local runtime/model, hardware and performance validation, required local permissions/connectors, transferable data/memory boundaries, and any optional cloud fallback/cost decision.
+
 ## 2026-07-22 - Pets registry and Jessica durable record established
 
 Status: Jessica remains in design. Only two decisions are approved; all personality, behavior, role, workflow, source-preference, and example-command proposals remain inactive working draft.
