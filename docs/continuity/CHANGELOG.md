@@ -1,5 +1,19 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-23 — Assistant Foundry workspace and guided-builder requirement recorded
+
+Status: Roger clarified that the portable assistant system must include both a familiar everyday user platform and a guided app that makes assistant creation easy. This is a product requirement only; no application, local runtime, assistant behavior, tool, connector, or permission was activated.
+
+- Added the Assistant Workspace requirement: conversation-first use, project/file context, clear assistant switching, concise task/source/status visibility, optional pet presentation, and approval gates for consequential actions.
+- Added the Guided Builder requirement: button-led build flow with examples, suggestions, progress, and one obvious next step through purpose, personality, context, permissions, workflows, testing, and package approval.
+- Set the initial implementation priority to a functional guided prototype rather than a pixel-perfect ChatGPT clone.
+- Kept Main Assistant, Jessica, and Gwen as distinct packages. A filled Builder form or selected pet never activates behavior, memory, tools, or permissions.
+- Updated public policy commit: `3cef70871ecb3a3df068f83934c3c85496666cf5`; Current State update: `6d0d6e150df901b79b6e08b7bebd818bef39f1f2`.
+- Updated protected record `rowdy-room/portable-assistant-foundation` v2 / history 165 / SHA-256 `c7a7dce771ec3a42836ffe5e44c4eb7c0e530dbd292de68a144e9914921d2814`.
+- Updated builder sheet `Easy Bot, Pet & Prompt Builder — ChatGPT + Codex Examples`, tab `8. Assistant Foundry UX`, sheet ID `149764074`.
+- Recovery package: `outputs/Assistant_Foundry_UX_Foundation_2026-07-23_PRIVATE.zip`, SHA-256 `70bbe15e928c98406c0c101189da411dd927f203b05f88b560727ce1edb9eee6`, 3 entries.
+- Recovery required: exact UI technology, local model/runtime, voice behavior, connector set, local performance, and hardware benchmark after the portable AI PC is built.
+
 ## 2026-07-23 — Portable assistant foundation recorded
 
 Status: Roger approved a portable-first foundation for the future Main Assistant, Jessica, and Gwen. ChatGPT/Codex remain the current working surfaces while Roger prepares to move to his own AI computer; no assistant, tool, permission, connector, local runtime, or draft behavior was activated.
