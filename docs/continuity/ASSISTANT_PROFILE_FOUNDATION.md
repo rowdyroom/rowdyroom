@@ -26,7 +26,11 @@ This public-safe breadcrumb identifies the approved chat-first profile work that
 
 - Protected record: `rowdy-room/assistant-profile-foundation`, v2, SHA-256 `8fd132a6206f3cbd08768e815be015b987a833f1f0645bf044ded2817bf65ed6`.
 - User-controlled working sheet: **Easy Bot, Pet & Prompt Builder — ChatGPT + Codex Examples**, tab **Personal & Rowdy Context**, rows 31–34.
-- Dated private recovery copy: `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json`, SHA-256 `4eed22e748d7b10b3a55684bf0c9a778b60c6004b57f9f2f4bf447f68982ceb0`; private Library item `libfile_057b3b0ffc788191bba586c2aa66991e`.
+- Dated private recovery copy: `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json`, SHA-256 `1bbf9d9c9424dac18f295da44de1ac3e32036576b3c8cd2ff217f3247d2511f7`; private Library item `libfile_057b3b0ffc788191bba586c2aa66991e`.
+
+## Recovery required
+
+- The dedicated Supabase continuity-check rows could not be inserted after two attempts because the connector returned an internal error. The private record and history, working sheet, public breadcrumbs, and recovery copy were read back successfully. Add the missing check-run rows when the connector recovers.
 
 ## Exact next safe action
 
