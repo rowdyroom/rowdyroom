@@ -46,6 +46,13 @@ Each assistant must eventually have a user-owned package containing:
 
 Secrets, raw API keys, private URLs, private customer data, and private local paths do not belong in public records or portable prompt files.
 
+
+## Learning and creation continuity
+
+The active [Assistant Foundry Learning and Creation Law](ASSISTANT_FOUNDRY_LEARNING_LAW.md) requires usable capture of material work across the Foundry, ChatGPT, Codex, OpenAI services, and the future local runtime. The shared system must not claim that an outside platform was captured automatically unless it has a verified integration; external work is brought in through **Capture to Foundry**, import, or an approved adapter.
+
+The Guided Builder’s Learning Ledger is the user-facing capture path. Draft exploration can stay in the ledger; approved decisions and reusable assets must be promoted to the portable, versioned record.
+
 ## Assistant Foundry user experience
 
 The portable system must include **two separate user-facing surfaces** that work from the same portable assistant packages.
