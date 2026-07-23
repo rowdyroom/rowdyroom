@@ -1,5 +1,16 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-23 — More About Me approved in Assistant Profile Foundation
+
+Status: Roger approved the finalized More About Me profile text after chat-first review.
+
+- Marked the existing profile entry approved and Keep in the working builder sheet.
+- Updated protected record `rowdy-room/assistant-profile-foundation` to v3, SHA-256 `32da04a47494017093a99ed21f7a4a01fa190e1462c9c17d49059998dc099397`.
+- Replaced the dated private recovery copy with Library version 2, SHA-256 `7954a0b7444fdc6bc20f98bcb8a56c8bc30eb56c1ac5d7ac86142d8621f55498`.
+- Kept all profile material unapplied to live ChatGPT, Codex, Guided Builder, and assistant packages.
+- The prior dedicated Supabase continuity-check-row failure remains Recovery required; profile data, sheet, protected record, history, breadcrumb, and recovery copy were verified separately.
+- Exact next safe action: review separate memory categories before any platform or build application.
+
 ## 2026-07-23 — Assistant profile foundation captured
 
 Status: Roger approved a chat-first cleanup of his personal profile foundation before continuing an assistant build. No live ChatGPT/Codex setting, Guided Builder field, pet, tool permission, memory, or assistant behavior was activated.
