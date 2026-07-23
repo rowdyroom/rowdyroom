@@ -9,6 +9,9 @@ Status: Roger required the new assistant system to retain what it learns and cre
 - Added the clear boundary that ChatGPT/Codex/OpenAI work cannot be claimed as automatically captured unless a verified adapter actually records it; outside work uses Capture to Foundry, import, or an approved export.
 - Linked the law from the Operator Law, Portable Assistant Foundation, Current State, and START HERE startup order.
 - Added a Learning Ledger capture path to the first Guided Builder prototype. Browser-local prototype storage is not a shared durable ledger; future adapter and durable-sync work remains recovery-required.
+- Protected readback: `rowdy-room/assistant-foundry-learning-law` v1 / history 167 / SHA-256 `f9d1369a131d5f1e885f2c826c9db1043a377aa8cc790280603792927ec54eb8`; `rowdy-room/portable-assistant-foundation` v3 / history 166 / SHA-256 `750de90096c71fc56d5e476105d1db63959c0104cf04fd1ff78e60c933f117e9`.
+- Recovery package: `outputs/Assistant_Foundry_Learning_Law_and_Builder_2026-07-23_PRIVATE.zip`, SHA-256 `580e1fd22a1c4dddef1e576229543124ba91062ece78061e68b00045bc0f4cdd`, 6 entries; archive integrity test passed.
+- A private deployment checkpoint was blocked by the current platform usage limit. The functional local preview and its source snapshot are preserved, but no live Builder URL is claimed.
 
 ## 2026-07-23 — Assistant Foundry workspace and guided-builder requirement recorded
 
