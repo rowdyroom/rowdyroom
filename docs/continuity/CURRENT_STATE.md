@@ -40,6 +40,8 @@ The current product continuation is **Build Portable AI Computer**.
 - Material Assistant Foundry decisions, prompts/workflows, tests, outputs, failures, corrections, context/permission changes, and portability findings must be captured with a source surface and evidence.
 - The system must not claim that ChatGPT, Codex, or OpenAI work was imported automatically without a verified adapter. Outside work is added through **Capture to Foundry**, import, or an approved export.
 - The first Guided Builder prototype uses a browser-local Learning Ledger. A connected durable ledger and outside-platform adapters remain **Recovery required**.
+- Protected readback: `rowdy-room/assistant-foundry-learning-law` v1 / history 167 / SHA-256 `f9d1369a131d5f1e885f2c826c9db1043a377aa8cc790280603792927ec54eb8`; `rowdy-room/portable-assistant-foundation` v3 / history 166 / SHA-256 `750de90096c71fc56d5e476105d1db63959c0104cf04fd1ff78e60c933f117e9`.
+- A private prototype checkpoint is not yet deployed because the current platform usage limit blocked the checkpoint attempt. The source is preserved in the dated recovery package; do not claim that a live Builder is available.
 
 ## Authoritative equipment state
 
