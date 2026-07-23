@@ -79,8 +79,9 @@ Verified protected snapshot:
 - `rowdy-room/av-package-budget-2026-07-20`: v4, `e6a16b1f512cf2ca6343d0d912b9f344d833ca3135164f084c2c259c29124f11`, superseded
 - `rowdy-room/continuity-protocol`: v6, `297029ae0319136cea4467bf0d2f442aa01bd244083aba998c07886b265b4724`, history 101
 - `rowdy-room/law-and-breadcrumb-protocol`: v3, `f350ed29bf8edf9e1441c6e390e17956ae64c56e6b5cb17d24be189d47eda917`, history 102
-- `rowdy-room/portable-assistant-foundation`: v3, `750de90096c71fc56d5e476105d1db63959c0104cf04fd1ff78e60c933f117e9`, history 166, active
+- `rowdy-room/portable-assistant-foundation`: v4, `77ff5476182cbd02491138d5c947ffb7f026580eef9fecd4a30074c4d31c00b1`, history 168, active
 - `rowdy-room/assistant-foundry-learning-law`: v1, `f9d1369a131d5f1e885f2c826c9db1043a377aa8cc790280603792927ec54eb8`, history 167, active
+- `rowdy-room/assistant-foundry-guided-builder-prototype`: v1, `8f3936a707d4ad777c2a1f000d8d8720dd644be5e83b7346630bef72e1be8e17`, history 169, active
 ## Equipment truth
 
 - 68 lines / 93 physical units
@@ -106,8 +107,9 @@ Verified protected snapshot:
 - Assistant Foundry UX public policy commit: `3cef70871ecb3a3df068f83934c3c85496666cf5`; protected record `rowdy-room/portable-assistant-foundation` v2 / history 165 / SHA-256 `c7a7dce771ec3a42836ffe5e44c4eb7c0e530dbd292de68a144e9914921d2814`
 - Assistant Foundry UX recovery package: `outputs/Assistant_Foundry_UX_Foundation_2026-07-23_PRIVATE.zip`, SHA-256 `70bbe15e928c98406c0c101189da411dd927f203b05f88b560727ce1edb9eee6`, 3 entries
 - Assistant Foundry UX verification run: `f43e1ebc-0fb6-4e02-b605-9a0c30ee55d5` — 5 pass, 1 warn, 0 fail; warning: secondary archive persistence is unavailable in this runtime
-- Assistant Foundry Learning Law and Builder recovery package: `outputs/Assistant_Foundry_Learning_Law_and_Builder_2026-07-23_PRIVATE.zip`, SHA-256 `580e1fd22a1c4dddef1e576229543124ba91062ece78061e68b00045bc0f4cdd`, 6 entries, internal archive test passed
-- Exact next safe action: when platform deployment usage is available, checkpoint the existing private Guided Builder prototype, read back its terminal deployment status, then record the verified version and URL. Do not install a local runtime or claim ChatGPT parity before evaluation.
+- Assistant Foundry Learning Law and Builder recovery package: `outputs/Assistant_Foundry_Learning_Law_and_Builder_2026-07-23_PRIVATE.zip`, SHA-256 `99a07e41d65c3145c5bd7781a5f212b82990a662cc13881342e0fdf16fc67dde`, 6 entries, internal archive test passed
+- Private Guided Builder checkpoint: version 1, source commit `f6056e48b5a6cbd699202ca43d607f626f46158e`, terminal status succeeded. The private URL exists only in the protected record/recovery package; access remains custom owner-only.
+- Exact next safe action: use the private Guided Builder to continue Main Assistant v0.1 through personality and voice, rules and permissions, skills and workflows, test and compare, then approve and package. Do not install a local runtime or claim ChatGPT parity before evaluation.
 ## Recovery required
 
 - physical receipt and inspection of the purchased QUBE 540 and ASUS Dual RTX 5060 Ti 16GB
