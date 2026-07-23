@@ -1,5 +1,15 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-23 — Assistant Foundry learning and creation law activated
+
+Status: Roger required the new assistant system to retain what it learns and creates across the Foundry, ChatGPT, Codex, OpenAI services, and the future local runtime.
+
+- Added the standing public-safe [Assistant Foundry Learning and Creation Law](ASSISTANT_FOUNDRY_LEARNING_LAW.md).
+- Required material build decisions, prompts/workflows, tests, outputs, failures, corrections, context/permission changes, and portability findings to carry source-surface and evidence fields.
+- Added the clear boundary that ChatGPT/Codex/OpenAI work cannot be claimed as automatically captured unless a verified adapter actually records it; outside work uses Capture to Foundry, import, or an approved export.
+- Linked the law from the Operator Law, Portable Assistant Foundation, Current State, and START HERE startup order.
+- Added a Learning Ledger capture path to the first Guided Builder prototype. Browser-local prototype storage is not a shared durable ledger; future adapter and durable-sync work remains recovery-required.
+
 ## 2026-07-23 — Assistant Foundry workspace and guided-builder requirement recorded
 
 Status: Roger clarified that the portable assistant system must include both a familiar everyday user platform and a guided app that makes assistant creation easy. This is a product requirement only; no application, local runtime, assistant behavior, tool, connector, or permission was activated.
