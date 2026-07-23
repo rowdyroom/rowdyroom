@@ -14,8 +14,9 @@ Start every Rowdy Room task here after reading the complete Operator Law. Do not
 4. [Equipment Inventory](EQUIPMENT_INVENTORY.md) when equipment affects the request
 5. [Continuity Changelog](CHANGELOG.md)
 6. [Continuity Runbook](CONTINUITY_RUNBOOK.md) before a material change
-7. [Build Portable AI Computer handoff](BUILD_PORTABLE_AI_COMPUTER_HANDOFF.md) for the active portable-computer project
-8. Applicable files under `docs/bible/`
+7. [Assistant Foundry Learning and Creation Law](ASSISTANT_FOUNDRY_LEARNING_LAW.md) for any assistant-system work
+8. [Build Portable AI Computer handoff](BUILD_PORTABLE_AI_COMPUTER_HANDOFF.md) for the active portable-computer project
+9. Applicable files under `docs/bible/`
 
 ## Current continuation
 
@@ -36,6 +37,7 @@ The active continuation is **Build Portable AI Computer**.
 - Exact next product action: identify the installed CPU cooler and current drive layout, then verify cooler height, PSU cable clearance, drive placement, and the case-fan plan before deciding whether additional parts are needed.
 - Assistant portability: [Portable Assistant Foundation](PORTABLE_ASSISTANT_FOUNDATION.md) is active for the future Main Assistant, Jessica, and Gwen. ChatGPT/Codex are the current working adapters; local runtime work starts only after the purchased hardware is physically verified and evaluated.
 - Assistant Foundry product requirement: build a conversation-first Assistant Workspace plus a separate Guided Builder app with buttons, suggestions, progress, and one obvious next step. Start with a functional guided prototype, not an assumed ChatGPT clone.
+- Assistant Foundry Learning and Creation Law: use `docs/continuity/ASSISTANT_FOUNDRY_LEARNING_LAW.md` for every material assistant-system action. Capture external ChatGPT/Codex/OpenAI work through an explicit Foundry capture/import path until a verified adapter exists.
 ## GitHub authority
 
 - Repository: `rowdyroom/rowdyroom`
