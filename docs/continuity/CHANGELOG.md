@@ -12,6 +12,7 @@ Status: Roger approved a portable-first foundation for the future Main Assistant
 - Saved protected decision `rowdy-room/portable-assistant-foundation` v1 / history 163 / SHA-256 `53b8441e5a5fc69b62b949d642cc99381b16554adce379a2ccaf30f3f05fd5c9`.
 - Public policy commit: `d5461c0c040c116cf2eebf8067ec0cbc5e4d093d`; Jessica profile commit: `d7c8c6eec8b6c0ee4047ce774c3d9f9b1bd64ec9`; Current State update: `c67d2c96e500718d9170fb51571eff7b1082bbe4`.
 - Recovery package: `outputs/Portable_Assistant_Foundation_2026-07-23_PRIVATE.zip`, SHA-256 `30375b07b29c9103b92fb28bbd5e3adf13b7ed0080bef76a2208431fbeb2ae27`, 4 entries.
+- Verification run `d1f6d54b-89d4-443d-9683-60c7a1a71579`: 7 pass, 1 warn, 0 fail. The warning records that a secondary persistent archive transfer is unavailable in this runtime; the public-safe GitHub and protected Supabase records were read back successfully.
 - Recovery required: actual local runtime/model, hardware and performance validation, required local permissions/connectors, transferable data/memory boundaries, and any optional cloud fallback/cost decision.
 
 ## 2026-07-22 - Pets registry and Jessica durable record established
