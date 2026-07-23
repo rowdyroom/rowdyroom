@@ -28,15 +28,16 @@ Use this area for durable, public-safe records about Codex pets and their associ
 
 ## Evidence
 
-- Public Jessica profile: `docs/pets/JESSICA_ASSISTANT.md`, commit `519c79881cee71a5324f3bf4dcf1676c9c18ff6f`
-- Protected record: `pets/jessica-assistant`, version 1, history ID 138, SHA-256 `6a1c5218b78fc6627460770c2c26fe8e4c10844b4ee168247e5f2696583b8506`
+- Public Jessica profile: `docs/pets/JESSICA_ASSISTANT.md`, commit `d7c8c6eec8b6c0ee4047ce774c3d9f9b1bd64ec9`
+- Protected record: `pets/jessica-assistant`, version 4, history ID 164, SHA-256 `dd6cde25f21594e89f3ba04a23973f3b095473060eccb768603f1d9a1537b2e9`
 - Verification run: `f9b2b953-408c-44f5-aae1-f51a99a5eee3`
 - Passed checks: installed profile readback, public profile readback, protected record/history readback, recovery archive, draft activation scope, and public privacy scan
 - Warnings: the official skill validator lacks PyYAML, although equivalent checks passed manually; draft PR #28 remains open, draft, unmerged, and not mergeable
 - Failures: none
-- Local recovery package: `outputs/Jessica_Pets_Continuity_2026-07-22_PRIVATE.zip`
-- Recovery SHA-256: `4fdbec2865d7d5e2398332683ec09b78ee0be3cc221ff7113ad1c896cf7cc68c`
-- Recovery archive: 11 entries; 9/9 listed internal file hashes passed
+- Previous Jessica recovery package: `outputs/Jessica_Pets_Continuity_2026-07-22_PRIVATE.zip`
+- Previous recovery SHA-256: `4fdbec2865d7d5e2398332683ec09b78ee0be3cc221ff7113ad1c896cf7cc68c`
+- Current portability recovery package: `outputs/Portable_Assistant_Foundation_2026-07-23_PRIVATE.zip`
+- Current recovery SHA-256: `30375b07b29c9103b92fb28bbd5e3adf13b7ed0080bef76a2208431fbeb2ae27`; 4 entries
 
 ## Recovery required
 
