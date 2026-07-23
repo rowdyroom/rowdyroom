@@ -15,6 +15,7 @@ Status: Roger required the new assistant system to retain what it learns and cre
 - Verified private Guided Builder version 1, source commit `f6056e48b5a6cbd699202ca43d607f626f46158e`, custom owner-only access, and terminal deployment success. The private URL remains only in protected records and the dated recovery package.
 - Updated protected records: `rowdy-room/portable-assistant-foundation` v4 / history 168 / SHA-256 `77ff5476182cbd02491138d5c947ffb7f026580eef9fecd4a30074c4d31c00b1`; `rowdy-room/assistant-foundry-guided-builder-prototype` v1 / history 169 / SHA-256 `8f3936a707d4ad777c2a1f000d8d8720dd644be5e83b7346630bef72e1be8e17`.
 - Updated recovery package SHA-256: `99a07e41d65c3145c5bd7781a5f212b82990a662cc13881342e0fdf16fc67dde`; 6 entries, archive integrity test passed.
+- Final verification run `14b7a4be-d5f6-4135-9deb-65ba36448643`: 5 pass, 1 warn, 0 fail. The warning is intentional and remains recovery-required: no connected user-approved shared capture adapter for ChatGPT/Codex/OpenAI/local-runtime activity.
 
 ## 2026-07-23 — Assistant Foundry workspace and guided-builder requirement recorded
 
