@@ -1,5 +1,17 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-23 — Decision Context approved in Assistant Profile Foundation
+
+Status: Roger approved a private decision-context layer for use when explicitly selected by an assistant build.
+
+- Added the entry to the working builder sheet under **Personal & Rowdy Context**, rows 31–35, marked Approved and Keep.
+- Decision Context covers lifestyle-versus-income tradeoffs, time value, independent work style, calculated risk, quality standards, when to recommend versus brainstorm, and scope-drift control.
+- It is private core-profile material and is **opt-in per assistant**, not automatic inheritance.
+- Protected record: `rowdy-room/assistant-profile-foundation` v5 / SHA-256 `289bf6eb20f9b40ca328176f4e8bd339088fc4cbdf0616ac5c4a39bd4f7b812a`.
+- Private recovery copy: `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json`, Library version 4 / SHA-256 `375f977d9c6ffe4356f197aa873f6759ea349cdf9eb9f0fb62e78a6d04431b41`.
+- Kept all profile material unapplied to live ChatGPT, Codex, Guided Builder, and assistant packages.
+- Exact next safe action: define explicit inheritance for the Main Assistant, Gwen, and Jessica, starting with the Main Assistant.
+
 ## 2026-07-23 — More About Me approved in Assistant Profile Foundation
 
 Status: Roger approved the finalized More About Me profile text after chat-first review.
