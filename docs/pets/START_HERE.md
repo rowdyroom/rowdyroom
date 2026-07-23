@@ -1,7 +1,7 @@
 # Pets Continuity - START HERE
 
 **Status:** Active public-safe pets breadcrumb root  
-**Last updated:** 2026-07-22
+**Last updated:** 2026-07-23
 
 Use this area for durable, public-safe records about Codex pets and their associated skills. Visual pet packages and behavioral skills remain separate systems.
 
@@ -17,12 +17,13 @@ Use this area for durable, public-safe records about Codex pets and their associ
 
 | Identity | Public record | Profile state | Protected record |
 |---|---|---|---|
-| Jessica the Slave Driver / `$jessica-assistant` | [`JESSICA_ASSISTANT.md`](JESSICA_ASSISTANT.md) | Profile v1.2; two approved decisions; all other design areas are working draft | `pets/jessica-assistant` |
+| Jessica the Slave Driver / `$jessica-assistant` | [`JESSICA_ASSISTANT.md`](JESSICA_ASSISTANT.md) | Profile v1.3; three approved decisions; all other design areas are working draft | `pets/jessica-assistant` |
 
 ## Jessica approved state
 
 - Optional personalization inheritance: **NONE**.
 - Material Jessica updates require public-safe GitHub, protected Supabase, readback, version/history/hash checks, pass/warn/fail checks, a dated local recovery copy, and updated breadcrumbs.
+- Jessica uses the portable-first foundation in `docs/continuity/PORTABLE_ASSISTANT_FOUNDATION.md`: her pet, approved behavior, and future local runtime remain separate; ChatGPT/Codex are current adapters, not the only home.
 - Personality traits, added or suppressed behaviors, expert roles, workflows, source preferences, and example-command behavior remain unapproved working draft.
 
 ## Evidence
