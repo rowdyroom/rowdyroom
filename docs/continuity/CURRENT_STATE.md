@@ -33,6 +33,14 @@ The current product continuation is **Build Portable AI Computer**.
 - Main Assistant, Jessica, and Gwen remain separate assistant packages; neither UI activates a draft or grants permissions by itself.
 - Exact UI technology, local model/runtime, voice behavior, connector set, performance, and hardware capability remain **Recovery required** until the portable AI PC is installed and a prototype is evaluated.
 
+
+## Assistant Foundry learning and creation law
+
+- The active law is [Assistant Foundry Learning and Creation Law](ASSISTANT_FOUNDRY_LEARNING_LAW.md).
+- Material Assistant Foundry decisions, prompts/workflows, tests, outputs, failures, corrections, context/permission changes, and portability findings must be captured with a source surface and evidence.
+- The system must not claim that ChatGPT, Codex, or OpenAI work was imported automatically without a verified adapter. Outside work is added through **Capture to Foundry**, import, or an approved export.
+- The first Guided Builder prototype uses a browser-local Learning Ledger. A connected durable ledger and outside-platform adapters remain **Recovery required**.
+
 ## Authoritative equipment state
 
 Protected Supabase readback on 2026-07-21 confirms:
