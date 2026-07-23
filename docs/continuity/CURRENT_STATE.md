@@ -24,6 +24,15 @@ The current product continuation is **Build Portable AI Computer**.
 - The prior OBS-based projection path and approximately $500 AV-package plan are superseded and must not drive architecture or purchasing.
 - The exact live-event projector source, content, and routing remain **Recovery required**.
 - An older laptop is not part of the authoritative inventory and is not part of this build plan.
+## Assistant Foundry product requirement
+
+- The portable assistant system requires a **conversation-first Assistant Workspace** for daily use and a separate **Guided Builder** application for creating and improving assistants.
+- The Workspace should retain the practical feel of ChatGPT/Codex: conversations, project/file context, assistant switching, concise task/status visibility, optional pet presentation, and clear approval gates.
+- The Builder must guide Roger with buttons, suggestions, examples, progress, and one obvious next step through purpose, personality, context, permissions, workflows, tests, and approval/package creation.
+- The first implementation target is a functional guided prototype that uses the existing portable records. A pixel-perfect ChatGPT clone is not the target.
+- Main Assistant, Jessica, and Gwen remain separate assistant packages; neither UI activates a draft or grants permissions by itself.
+- Exact UI technology, local model/runtime, voice behavior, connector set, performance, and hardware capability remain **Recovery required** until the portable AI PC is installed and a prototype is evaluated.
+
 ## Authoritative equipment state
 
 Protected Supabase readback on 2026-07-21 confirms:
