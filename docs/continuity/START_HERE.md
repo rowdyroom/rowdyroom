@@ -1,7 +1,7 @@
 # Rowdy Room Continuity — START HERE
 
 **Status:** Active public-safe breadcrumb root  
-**Last updated:** 2026-07-22  
+**Last updated:** 2026-07-23  
 **Owner:** Roger Jamsek
 
 Start every Rowdy Room task here after reading the complete Operator Law. Do not rely on chat memory. Missing or contradictory facts remain **Recovery required**.
@@ -34,6 +34,7 @@ The active continuation is **Build Portable AI Computer**.
 - The old OBS-based projection path is recovery-required.
 - The approximately $500 AV plan is superseded and must not drive architecture or purchasing.
 - Exact next product action: identify the installed CPU cooler and current drive layout, then verify cooler height, PSU cable clearance, drive placement, and the case-fan plan before deciding whether additional parts are needed.
+- Assistant portability: [Portable Assistant Foundation](PORTABLE_ASSISTANT_FOUNDATION.md) is active for the future Main Assistant, Jessica, and Gwen. ChatGPT/Codex are the current working adapters; local runtime work starts only after the purchased hardware is physically verified and evaluated.
 ## GitHub authority
 
 - Repository: `rowdyroom/rowdyroom`
@@ -48,11 +49,11 @@ PR #28 remains open and unmerged at this synchronization point. Roger authorized
 ## Pets continuity
 
 - Pets root: [`docs/pets/START_HERE.md`](../pets/START_HERE.md)
-- Jessica public-safe profile: [`docs/pets/JESSICA_ASSISTANT.md`](../pets/JESSICA_ASSISTANT.md), profile v1.2
-- Approved Jessica decisions: optional personalization inheritance is NONE; durable records are required for material Jessica updates
+- Jessica public-safe profile: [`docs/pets/JESSICA_ASSISTANT.md`](../pets/JESSICA_ASSISTANT.md), profile v1.3
+- Approved Jessica decisions: optional personalization inheritance is NONE; durable records are required for material Jessica updates; Jessica's owned visual and behavioral core is portable-first
 - All proposed personality traits, behaviors, expert roles, workflows, source preferences, and example-command behavior remain inactive working draft
-- Public Jessica profile commit: `519c79881cee71a5324f3bf4dcf1676c9c18ff6f`
-- Protected record: `pets/jessica-assistant`, v1, history 138, SHA-256 `6a1c5218b78fc6627460770c2c26fe8e4c10844b4ee168247e5f2696583b8506`
+- Public Jessica profile commit: `d7c8c6eec8b6c0ee4047ce774c3d9f9b1bd64ec9`
+- Protected record: `pets/jessica-assistant`, v4, history 164, SHA-256 `dd6cde25f21594e89f3ba04a23973f3b095473060eccb768603f1d9a1537b2e9`
 - Verification run: `f9b2b953-408c-44f5-aae1-f51a99a5eee3`; no failed checks
 - Recovery package: `outputs/Jessica_Pets_Continuity_2026-07-22_PRIVATE.zip`, SHA-256 `4fdbec2865d7d5e2398332683ec09b78ee0be3cc221ff7113ad1c896cf7cc68c`
 - Exact next Jessica action: review one small group of draft personality traits with Roger and record each item as approved, rejected, revised, or pending
@@ -75,6 +76,7 @@ Verified protected snapshot:
 - `rowdy-room/av-package-budget-2026-07-20`: v4, `e6a16b1f512cf2ca6343d0d912b9f344d833ca3135164f084c2c259c29124f11`, superseded
 - `rowdy-room/continuity-protocol`: v6, `297029ae0319136cea4467bf0d2f442aa01bd244083aba998c07886b265b4724`, history 101
 - `rowdy-room/law-and-breadcrumb-protocol`: v3, `f350ed29bf8edf9e1441c6e390e17956ae64c56e6b5cb17d24be189d47eda917`, history 102
+- `rowdy-room/portable-assistant-foundation`: v1, `53b8441e5a5fc69b62b949d642cc99381b16554adce379a2ccaf30f3f05fd5c9`, history 163, active
 ## Equipment truth
 
 - 68 lines / 93 physical units
