@@ -100,6 +100,9 @@ Verified protected snapshot:
 - portable assistant foundation: `docs/continuity/PORTABLE_ASSISTANT_FOUNDATION.md`, public source commit `d5461c0c040c116cf2eebf8067ec0cbc5e4d093d`; protected record `rowdy-room/portable-assistant-foundation` v1 / history 163 / SHA-256 `53b8441e5a5fc69b62b949d642cc99381b16554adce379a2ccaf30f3f05fd5c9`
 - portable assistant recovery package: `outputs/Portable_Assistant_Foundation_2026-07-23_PRIVATE.zip`, SHA-256 `30375b07b29c9103b92fb28bbd5e3adf13b7ed0080bef76a2208431fbeb2ae27`, 4 entries
 - portability verification run: `d1f6d54b-89d4-443d-9683-60c7a1a71579` — 7 pass, 1 warn, 0 fail; warning: secondary archive persistence is unavailable in this runtime
+- Assistant Foundry UX public policy commit: `3cef70871ecb3a3df068f83934c3c85496666cf5`; protected record `rowdy-room/portable-assistant-foundation` v2 / history 165 / SHA-256 `c7a7dce771ec3a42836ffe5e44c4eb7c0e530dbd292de68a144e9914921d2814`
+- Assistant Foundry UX recovery package: `outputs/Assistant_Foundry_UX_Foundation_2026-07-23_PRIVATE.zip`, SHA-256 `70bbe15e928c98406c0c101189da411dd927f203b05f88b560727ce1edb9eee6`, 3 entries
+- Exact next safe action: build a functional Guided Builder prototype that uses the existing package records; do not install a local runtime or claim ChatGPT parity before evaluation.
 ## Recovery required
 
 - physical receipt and inspection of the purchased QUBE 540 and ASUS Dual RTX 5060 Ti 16GB
