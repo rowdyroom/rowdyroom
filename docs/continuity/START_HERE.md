@@ -96,6 +96,9 @@ Verified protected snapshot:
 - archive SHA-256: `10b9eb55fc361a2b656f9ec0725073c6b75676e1001e46d6f36b551d9fc881c5`
 - archive entries: 4; internal hashes: 3/3 passed
 - continuity check run: `942cfd79-cd4d-4cb9-b728-f8f803d1cf47` — 7 pass, 2 warn, 0 fail
+- portable assistant foundation: `docs/continuity/PORTABLE_ASSISTANT_FOUNDATION.md`, public source commit `d5461c0c040c116cf2eebf8067ec0cbc5e4d093d`; protected record `rowdy-room/portable-assistant-foundation` v1 / history 163 / SHA-256 `53b8441e5a5fc69b62b949d642cc99381b16554adce379a2ccaf30f3f05fd5c9`
+- portable assistant recovery package: `outputs/Portable_Assistant_Foundation_2026-07-23_PRIVATE.zip`, SHA-256 `30375b07b29c9103b92fb28bbd5e3adf13b7ed0080bef76a2208431fbeb2ae27`, 4 entries
+- portability verification run: `d1f6d54b-89d4-443d-9683-60c7a1a71579` — 7 pass, 1 warn, 0 fail; warning: secondary archive persistence is unavailable in this runtime
 ## Recovery required
 
 - physical receipt and inspection of the purchased QUBE 540 and ASUS Dual RTX 5060 Ti 16GB
