@@ -12,6 +12,7 @@ Status: Roger clarified that the portable assistant system must include both a f
 - Updated protected record `rowdy-room/portable-assistant-foundation` v2 / history 165 / SHA-256 `c7a7dce771ec3a42836ffe5e44c4eb7c0e530dbd292de68a144e9914921d2814`.
 - Updated builder sheet `Easy Bot, Pet & Prompt Builder — ChatGPT + Codex Examples`, tab `8. Assistant Foundry UX`, sheet ID `149764074`.
 - Recovery package: `outputs/Assistant_Foundry_UX_Foundation_2026-07-23_PRIVATE.zip`, SHA-256 `70bbe15e928c98406c0c101189da411dd927f203b05f88b560727ce1edb9eee6`, 3 entries.
+- Verification run `f43e1ebc-0fb6-4e02-b605-9a0c30ee55d5`: 5 pass, 1 warn, 0 fail. The warning records that a second persistent archive transfer is unavailable in this runtime; public-safe GitHub, protected Supabase, the builder sheet, and the local archive passed readback.
 - Recovery required: exact UI technology, local model/runtime, voice behavior, connector set, local performance, and hardware benchmark after the portable AI PC is built.
 
 ## 2026-07-23 — Portable assistant foundation recorded
