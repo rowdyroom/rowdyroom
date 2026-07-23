@@ -14,6 +14,7 @@ This public-safe breadcrumb identifies the approved chat-first profile work that
 - A **Current Priorities** entry is stored as private, time-sensitive context.
 - A cleaned cross-platform **Custom Settings** baseline is an approved working draft.
 - **More About Me** is approved.
+- A private **Decision Context** is approved and is opt-in per assistant, not automatic inheritance.
 - Nothing in this record has changed live ChatGPT/Codex settings, activated a pet, applied Guided Builder fields, granted tools, or enabled memory.
 
 ## Boundaries
@@ -24,11 +25,11 @@ This public-safe breadcrumb identifies the approved chat-first profile work that
 
 ## Authority and recovery
 
-- Protected record: `rowdy-room/assistant-profile-foundation`, v4, SHA-256 `30ebbe5bee894d08a1d29e4f0b1d8f01f41a7405ae74de47a57ace0dcc80191b`.
-- User-controlled working sheet: **Easy Bot, Pet & Prompt Builder — ChatGPT + Codex Examples**, tab **Personal & Rowdy Context**, rows 31–34.
-- Dated private recovery copy: `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json`, SHA-256 `305533f988f2eb5b23a96875de6dd06776bca9364761789cb11c5f41b088ce4a`; private Library item `libfile_057b3b0ffc788191bba586c2aa66991e`, version 3.
-- Verification run `5a24b2a5-3151-4b7b-b0b6-4aab01955413`: four passing checks for sheet readback, protected record/history, recovery copy, and public breadcrumbs.
+- Protected record: `rowdy-room/assistant-profile-foundation`, v5, SHA-256 `289bf6eb20f9b40ca328176f4e8bd339088fc4cbdf0616ac5c4a39bd4f7b812a`.
+- User-controlled working sheet: **Easy Bot, Pet & Prompt Builder — ChatGPT + Codex Examples**, tab **Personal & Rowdy Context**, rows 31–35.
+- Dated private recovery copy: `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json`, SHA-256 `375f977d9c6ffe4356f197aa873f6759ea349cdf9eb9f0fb62e78a6d04431b41`; private Library item `libfile_057b3b0ffc788191bba586c2aa66991e`, version 4.
+- Previous verification run `5a24b2a5-3151-4b7b-b0b6-4aab01955413` passed for the preceding profile state. This decision-context save receives a new verification run before completion.
 
 ## Exact next safe action
 
-Review the separate memory categories before applying any profile material to ChatGPT, Codex, the Guided Builder, or an assistant package.
+Define explicit inheritance for the Main Assistant, Gwen, and Jessica—starting with the Main Assistant—before applying any profile material to ChatGPT, Codex, the Guided Builder, or an assistant package.
