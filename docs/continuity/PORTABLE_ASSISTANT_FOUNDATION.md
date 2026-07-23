@@ -46,6 +46,48 @@ Each assistant must eventually have a user-owned package containing:
 
 Secrets, raw API keys, private URLs, private customer data, and private local paths do not belong in public records or portable prompt files.
 
+## Assistant Foundry user experience
+
+The portable system must include **two separate user-facing surfaces** that work from the same portable assistant packages.
+
+### 1. Assistant Workspace — everyday use
+
+This is Roger's main place to use assistants. It should preserve the practical feel of ChatGPT/Codex without claiming exact platform duplication:
+
+- conversations with files and project context
+- clear assistant switcher: Main Assistant, Jessica, Gwen, and future specialists
+- an optional animated Jessica presence that never changes behavior or permissions by itself
+- visible current task, sources used, and concise action/status history
+- approval gates before external, destructive, spending, publishing, or live-system actions
+- simple project/file access and an optional approved cloud/API fallback
+
+The default screen must be conversation-first and uncluttered. It is not a wall of controls.
+
+### 2. Guided Builder — create and improve assistants
+
+This is an app that walks Roger through assistant creation with buttons, examples, suggestions, progress, and one obvious next step. It must not require filling in a giant prompt by hand.
+
+The initial builder flow is:
+
+1. **Start a Build** — choose Main Assistant, Pet/Character, Specialist, or blank custom build.
+2. **Purpose and boundaries** — define the job, non-goals, and what success looks like.
+3. **Personality and voice** — choose a small set of observable traits with examples.
+4. **Context and memory** — select personal context, Rowdy Room context, temporary context, and what must remain excluded.
+5. **Rules and permissions** — choose sources, tools, approval gates, stopping rules, and privacy limits.
+6. **Skills and workflows** — add repeatable procedures rather than vague claims of expertise.
+7. **Test and compare** — run realistic tasks against a baseline, record failures, and decide what to revise.
+8. **Approve and package** — create a versioned portable assistant package and platform adapters.
+
+The Builder should offer defaults and suggestions based on the selected build type, but Roger must approve what becomes permanent identity, memory, permissions, or rules.
+
+### Product boundaries
+
+- The Workspace and Builder are interfaces; the assistant package and runtime remain separate layers.
+- The Builder does not activate a build, expose private context, or grant tools merely because fields are completed.
+- The Workspace may use a local model, an approved cloud/API model, or both behind the same assistant package.
+- Initial implementation priority is a functional guided prototype, not a pixel-perfect clone of ChatGPT.
+- Exact UI technology, local-runtime application, voice behavior, connector set, model choice, and computer performance remain **Recovery required** until the new hardware is verified and a prototype is tested.
+
 ## Platform-only limits
 
 The following are **Recovery required** for a future migration and must not be assumed portable:
