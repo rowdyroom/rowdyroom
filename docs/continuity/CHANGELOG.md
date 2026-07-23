@@ -9,8 +9,9 @@ Status: Roger approved a chat-first cleanup of his personal profile foundation b
 - Kept More About Me as a draft pending Roger’s personal additions; it is not treated as complete.
 - Updated the user-controlled working sheet **Easy Bot, Pet & Prompt Builder — ChatGPT + Codex Examples**, tab **Personal & Rowdy Context**, rows 31–34.
 - Protected record: `rowdy-room/assistant-profile-foundation` v2 / history 171 / SHA-256 `8fd132a6206f3cbd08768e815be015b987a833f1f0645bf044ded2817bf65ed6`.
-- Public foundation source commit: `ab40d5029f08f3e739b907a52fed2e6edcc4d4f7`.
-- Private recovery copy: `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json`, SHA-256 `4eed22e748d7b10b3a55684bf0c9a778b60c6004b57f9f2f4bf447f68982ceb0`, stored in the protected Library.
+- Public foundation source commit: `68d09e5c6f81aeabc7ab0e91e2b1b7ea39941cb4`.
+- Private recovery copy: `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json`, SHA-256 `1bbf9d9c9424dac18f295da44de1ac3e32036576b3c8cd2ff217f3247d2511f7`, stored in the protected Library.
+- Recovery required: two attempts to insert the dedicated Supabase continuity-check rows returned an internal connector error. Public breadcrumbs, the protected record/history, Sheet revision 39, and the recovery copy were read back; insert the check rows when the connector recovers.
 - Exact next safe action: Roger completes More About Me, then we refine the separate memory categories before applying any profile material to a live platform or assistant package.
 
 
