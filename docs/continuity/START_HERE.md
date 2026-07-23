@@ -83,7 +83,7 @@ Verified protected snapshot:
 - `rowdy-room/portable-assistant-foundation`: v4, `77ff5476182cbd02491138d5c947ffb7f026580eef9fecd4a30074c4d31c00b1`, history 168, active
 - `rowdy-room/assistant-foundry-learning-law`: v1, `f9d1369a131d5f1e885f2c826c9db1043a377aa8cc790280603792927ec54eb8`, history 167, active
 - `rowdy-room/assistant-foundry-guided-builder-prototype`: v1, `8f3936a707d4ad777c2a1f000d8d8720dd644be5e83b7346630bef72e1be8e17`, history 169, active
-- `rowdy-room/assistant-profile-foundation`: v5, `289bf6eb20f9b40ca328176f4e8bd339088fc4cbdf0616ac5c4a39bd4f7b812a`, active; More About Me and private Decision Context approved; Decision Context is opt-in per assistant. Private recovery copy `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json` v4 / SHA-256 `375f977d9c6ffe4356f197aa873f6759ea349cdf9eb9f0fb62e78a6d04431b41`; public profile breadcrumb commit `97e7e901db290ab3fbceabe7baed5e7458e04351`; current verification run pending.
+- `rowdy-room/assistant-profile-foundation`: v5, `289bf6eb20f9b40ca328176f4e8bd339088fc4cbdf0616ac5c4a39bd4f7b812a`, active; More About Me and private Decision Context approved; Decision Context is opt-in per assistant. Private recovery copy `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json` v4 / SHA-256 `375f977d9c6ffe4356f197aa873f6759ea349cdf9eb9f0fb62e78a6d04431b41`; public profile breadcrumb commit `d19473ad56ed53b53a42f6775715e5b45a9d4352`; verification run `34af0553-4a97-4c1b-b9f6-7f7a53d3cb7c` has 4 pass / 0 fail.
 ## Equipment truth
 
 - 68 lines / 93 physical units
