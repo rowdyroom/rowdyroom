@@ -109,6 +109,7 @@ Verified protected snapshot:
 - Assistant Foundry UX verification run: `f43e1ebc-0fb6-4e02-b605-9a0c30ee55d5` — 5 pass, 1 warn, 0 fail; warning: secondary archive persistence is unavailable in this runtime
 - Assistant Foundry Learning Law and Builder recovery package: `outputs/Assistant_Foundry_Learning_Law_and_Builder_2026-07-23_PRIVATE.zip`, SHA-256 `99a07e41d65c3145c5bd7781a5f212b82990a662cc13881342e0fdf16fc67dde`, 6 entries, internal archive test passed
 - Private Guided Builder checkpoint: version 1, source commit `f6056e48b5a6cbd699202ca43d607f626f46158e`, terminal status succeeded. The private URL exists only in the protected record/recovery package; access remains custom owner-only.
+- Assistant Foundry final verification run: `14b7a4be-d5f6-4135-9deb-65ba36448643` — 5 pass, 1 warn, 0 fail; warning: no connected user-approved shared capture adapter for ChatGPT/Codex/OpenAI/local-runtime activity.
 - Exact next safe action: use the private Guided Builder to continue Main Assistant v0.1 through personality and voice, rules and permissions, skills and workflows, test and compare, then approve and package. Do not install a local runtime or claim ChatGPT parity before evaluation.
 ## Recovery required
 
