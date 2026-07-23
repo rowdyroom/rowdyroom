@@ -35,6 +35,7 @@ The active continuation is **Build Portable AI Computer**.
 - The approximately $500 AV plan is superseded and must not drive architecture or purchasing.
 - Exact next product action: identify the installed CPU cooler and current drive layout, then verify cooler height, PSU cable clearance, drive placement, and the case-fan plan before deciding whether additional parts are needed.
 - Assistant portability: [Portable Assistant Foundation](PORTABLE_ASSISTANT_FOUNDATION.md) is active for the future Main Assistant, Jessica, and Gwen. ChatGPT/Codex are the current working adapters; local runtime work starts only after the purchased hardware is physically verified and evaluated.
+- Assistant Foundry product requirement: build a conversation-first Assistant Workspace plus a separate Guided Builder app with buttons, suggestions, progress, and one obvious next step. Start with a functional guided prototype, not an assumed ChatGPT clone.
 ## GitHub authority
 
 - Repository: `rowdyroom/rowdyroom`
@@ -76,7 +77,7 @@ Verified protected snapshot:
 - `rowdy-room/av-package-budget-2026-07-20`: v4, `e6a16b1f512cf2ca6343d0d912b9f344d833ca3135164f084c2c259c29124f11`, superseded
 - `rowdy-room/continuity-protocol`: v6, `297029ae0319136cea4467bf0d2f442aa01bd244083aba998c07886b265b4724`, history 101
 - `rowdy-room/law-and-breadcrumb-protocol`: v3, `f350ed29bf8edf9e1441c6e390e17956ae64c56e6b5cb17d24be189d47eda917`, history 102
-- `rowdy-room/portable-assistant-foundation`: v1, `53b8441e5a5fc69b62b949d642cc99381b16554adce379a2ccaf30f3f05fd5c9`, history 163, active
+- `rowdy-room/portable-assistant-foundation`: v2, `c7a7dce771ec3a42836ffe5e44c4eb7c0e530dbd292de68a144e9914921d2814`, history 165, active
 ## Equipment truth
 
 - 68 lines / 93 physical units
