@@ -38,6 +38,7 @@ The active continuation is **Build Portable AI Computer**.
 - Assistant portability: [Portable Assistant Foundation](PORTABLE_ASSISTANT_FOUNDATION.md) is active for the future Main Assistant, Jessica, and Gwen. ChatGPT/Codex are the current working adapters; local runtime work starts only after the purchased hardware is physically verified and evaluated.
 - Assistant Foundry product requirement: build a conversation-first Assistant Workspace plus a separate Guided Builder app with buttons, suggestions, progress, and one obvious next step. Start with a functional guided prototype, not an assumed ChatGPT clone.
 - Assistant Foundry Learning and Creation Law: use `docs/continuity/ASSISTANT_FOUNDRY_LEARNING_LAW.md` for every material assistant-system action. Capture external ChatGPT/Codex/OpenAI work through an explicit Foundry capture/import path until a verified adapter exists.
+- Assistant Profile Foundation: chat-first profile work is active at `docs/continuity/ASSISTANT_PROFILE_FOUNDATION.md`; the approved About Me and Custom Settings drafts remain unapplied to live platforms, while More About Me remains draft.
 ## GitHub authority
 
 - Repository: `rowdyroom/rowdyroom`
@@ -82,6 +83,7 @@ Verified protected snapshot:
 - `rowdy-room/portable-assistant-foundation`: v4, `77ff5476182cbd02491138d5c947ffb7f026580eef9fecd4a30074c4d31c00b1`, history 168, active
 - `rowdy-room/assistant-foundry-learning-law`: v1, `f9d1369a131d5f1e885f2c826c9db1043a377aa8cc790280603792927ec54eb8`, history 167, active
 - `rowdy-room/assistant-foundry-guided-builder-prototype`: v1, `8f3936a707d4ad777c2a1f000d8d8720dd644be5e83b7346630bef72e1be8e17`, history 169, active
+- `rowdy-room/assistant-profile-foundation`: v2, `8fd132a6206f3cbd08768e815be015b987a833f1f0645bf044ded2817bf65ed6`, history 171, active
 ## Equipment truth
 
 - 68 lines / 93 physical units
@@ -110,7 +112,8 @@ Verified protected snapshot:
 - Assistant Foundry Learning Law and Builder recovery package: `outputs/Assistant_Foundry_Learning_Law_and_Builder_2026-07-23_PRIVATE.zip`, SHA-256 `99a07e41d65c3145c5bd7781a5f212b82990a662cc13881342e0fdf16fc67dde`, 6 entries, internal archive test passed
 - Private Guided Builder checkpoint: version 1, source commit `f6056e48b5a6cbd699202ca43d607f626f46158e`, terminal status succeeded. The private URL exists only in the protected record/recovery package; access remains custom owner-only.
 - Assistant Foundry final verification run: `14b7a4be-d5f6-4135-9deb-65ba36448643` — 5 pass, 1 warn, 0 fail; warning: no connected user-approved shared capture adapter for ChatGPT/Codex/OpenAI/local-runtime activity.
-- Exact next safe action: use the private Guided Builder to continue Main Assistant v0.1 through personality and voice, rules and permissions, skills and workflows, test and compare, then approve and package. Do not install a local runtime or claim ChatGPT parity before evaluation.
+- Assistant profile foundation: `docs/continuity/ASSISTANT_PROFILE_FOUNDATION.md`, public source commit `ab40d5029f08f3e739b907a52fed2e6edcc4d4f7`; protected record `rowdy-room/assistant-profile-foundation` v2 / history 171 / SHA-256 `8fd132a6206f3cbd08768e815be015b987a833f1f0645bf044ded2817bf65ed6`; private recovery copy `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json`, SHA-256 `4eed22e748d7b10b3a55684bf0c9a778b60c6004b57f9f2f4bf447f68982ceb0`.
+- Exact next safe action: keep the conversation chat-first; complete More About Me and the separate memory categories, then return to the Guided Builder for Main Assistant v0.1 personality and voice. Do not install a local runtime or claim ChatGPT parity before evaluation.
 ## Recovery required
 
 - physical receipt and inspection of the purchased QUBE 540 and ASUS Dual RTX 5060 Ti 16GB
