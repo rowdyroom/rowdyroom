@@ -38,7 +38,7 @@ The active continuation is **Build Portable AI Computer**.
 - Assistant portability: [Portable Assistant Foundation](PORTABLE_ASSISTANT_FOUNDATION.md) is active for the future Main Assistant, Jessica, and Gwen. ChatGPT/Codex are the current working adapters; local runtime work starts only after the purchased hardware is physically verified and evaluated.
 - Assistant Foundry product requirement: build a conversation-first Assistant Workspace plus a separate Guided Builder app with buttons, suggestions, progress, and one obvious next step. Start with a functional guided prototype, not an assumed ChatGPT clone.
 - Assistant Foundry Learning and Creation Law: use `docs/continuity/ASSISTANT_FOUNDRY_LEARNING_LAW.md` for every material assistant-system action. Capture external ChatGPT/Codex/OpenAI work through an explicit Foundry capture/import path until a verified adapter exists.
-- Assistant Profile Foundation: chat-first profile work is active at `docs/continuity/ASSISTANT_PROFILE_FOUNDATION.md`; the approved About Me and Custom Settings drafts remain unapplied to live platforms, while More About Me remains draft.
+- Assistant Profile Foundation: chat-first profile work is active at `docs/continuity/ASSISTANT_PROFILE_FOUNDATION.md`; About Me, More About Me, and the working Custom Settings baseline are approved, remain unapplied to live platforms, and await separate memory-category review.
 ## GitHub authority
 
 - Repository: `rowdyroom/rowdyroom`
@@ -83,7 +83,7 @@ Verified protected snapshot:
 - `rowdy-room/portable-assistant-foundation`: v4, `77ff5476182cbd02491138d5c947ffb7f026580eef9fecd4a30074c4d31c00b1`, history 168, active
 - `rowdy-room/assistant-foundry-learning-law`: v1, `f9d1369a131d5f1e885f2c826c9db1043a377aa8cc790280603792927ec54eb8`, history 167, active
 - `rowdy-room/assistant-foundry-guided-builder-prototype`: v1, `8f3936a707d4ad777c2a1f000d8d8720dd644be5e83b7346630bef72e1be8e17`, history 169, active
-- `rowdy-room/assistant-profile-foundation`: v2, `8fd132a6206f3cbd08768e815be015b987a833f1f0645bf044ded2817bf65ed6`, history 171, active
+- `rowdy-room/assistant-profile-foundation`: v3, `32da04a47494017093a99ed21f7a4a01fa190e1462c9c17d49059998dc099397`, active; More About Me approved; private recovery copy `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json` v2 / SHA-256 `7954a0b7444fdc6bc20f98bcb8a56c8bc30eb56c1ac5d7ac86142d8621f55498`; public profile breadcrumb commit `625dae169b01e3b4f0e755c1cb405b71b6a44ce8`; dedicated check rows remain recovery-required.
 ## Equipment truth
 
 - 68 lines / 93 physical units
