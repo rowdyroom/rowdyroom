@@ -1,5 +1,19 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-23 — Assistant profile foundation captured
+
+Status: Roger approved a chat-first cleanup of his personal profile foundation before continuing an assistant build. No live ChatGPT/Codex setting, Guided Builder field, pet, tool permission, memory, or assistant behavior was activated.
+
+- Added the public-safe [Assistant Profile Foundation](ASSISTANT_PROFILE_FOUNDATION.md) breadcrumb.
+- Recorded an approved About Me draft, private time-sensitive priorities, and a cleaned cross-platform Custom Settings working draft.
+- Kept More About Me as a draft pending Roger’s personal additions; it is not treated as complete.
+- Updated the user-controlled working sheet **Easy Bot, Pet & Prompt Builder — ChatGPT + Codex Examples**, tab **Personal & Rowdy Context**, rows 31–34.
+- Protected record: `rowdy-room/assistant-profile-foundation` v2 / history 171 / SHA-256 `8fd132a6206f3cbd08768e815be015b987a833f1f0645bf044ded2817bf65ed6`.
+- Public foundation source commit: `ab40d5029f08f3e739b907a52fed2e6edcc4d4f7`.
+- Private recovery copy: `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json`, SHA-256 `4eed22e748d7b10b3a55684bf0c9a778b60c6004b57f9f2f4bf447f68982ceb0`, stored in the protected Library.
+- Exact next safe action: Roger completes More About Me, then we refine the separate memory categories before applying any profile material to a live platform or assistant package.
+
+
 ## 2026-07-23 — Assistant Foundry learning and creation law activated
 
 Status: Roger required the new assistant system to retain what it learns and creates across the Foundry, ChatGPT, Codex, OpenAI services, and the future local runtime.
