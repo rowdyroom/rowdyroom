@@ -24,13 +24,10 @@ This public-safe breadcrumb identifies the approved chat-first profile work that
 
 ## Authority and recovery
 
-- Protected record: `rowdy-room/assistant-profile-foundation`, v3, SHA-256 `32da04a47494017093a99ed21f7a4a01fa190e1462c9c17d49059998dc099397`.
+- Protected record: `rowdy-room/assistant-profile-foundation`, v4, SHA-256 `30ebbe5bee894d08a1d29e4f0b1d8f01f41a7405ae74de47a57ace0dcc80191b`.
 - User-controlled working sheet: **Easy Bot, Pet & Prompt Builder — ChatGPT + Codex Examples**, tab **Personal & Rowdy Context**, rows 31–34.
-- Dated private recovery copy: `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json`, SHA-256 `7954a0b7444fdc6bc20f98bcb8a56c8bc30eb56c1ac5d7ac86142d8621f55498`; private Library item `libfile_057b3b0ffc788191bba586c2aa66991e`, version 2.
-
-## Recovery required
-
-- The dedicated Supabase continuity-check rows could not be inserted after two attempts because the connector returned an internal error. The private record and history, working sheet, public breadcrumbs, and recovery copy were read back successfully. Add the missing check-run rows when the connector recovers.
+- Dated private recovery copy: `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json`, SHA-256 `305533f988f2eb5b23a96875de6dd06776bca9364761789cb11c5f41b088ce4a`; private Library item `libfile_057b3b0ffc788191bba586c2aa66991e`, version 3.
+- Verification run `5a24b2a5-3151-4b7b-b0b6-4aab01955413`: four passing checks for sheet readback, protected record/history, recovery copy, and public breadcrumbs.
 
 ## Exact next safe action
 
