@@ -102,6 +102,7 @@ Verified protected snapshot:
 - portability verification run: `d1f6d54b-89d4-443d-9683-60c7a1a71579` — 7 pass, 1 warn, 0 fail; warning: secondary archive persistence is unavailable in this runtime
 - Assistant Foundry UX public policy commit: `3cef70871ecb3a3df068f83934c3c85496666cf5`; protected record `rowdy-room/portable-assistant-foundation` v2 / history 165 / SHA-256 `c7a7dce771ec3a42836ffe5e44c4eb7c0e530dbd292de68a144e9914921d2814`
 - Assistant Foundry UX recovery package: `outputs/Assistant_Foundry_UX_Foundation_2026-07-23_PRIVATE.zip`, SHA-256 `70bbe15e928c98406c0c101189da411dd927f203b05f88b560727ce1edb9eee6`, 3 entries
+- Assistant Foundry UX verification run: `f43e1ebc-0fb6-4e02-b605-9a0c30ee55d5` — 5 pass, 1 warn, 0 fail; warning: secondary archive persistence is unavailable in this runtime
 - Exact next safe action: build a functional Guided Builder prototype that uses the existing package records; do not install a local runtime or claim ChatGPT parity before evaluation.
 ## Recovery required
 
