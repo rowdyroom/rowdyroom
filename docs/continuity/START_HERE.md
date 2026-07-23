@@ -83,7 +83,7 @@ Verified protected snapshot:
 - `rowdy-room/portable-assistant-foundation`: v4, `77ff5476182cbd02491138d5c947ffb7f026580eef9fecd4a30074c4d31c00b1`, history 168, active
 - `rowdy-room/assistant-foundry-learning-law`: v1, `f9d1369a131d5f1e885f2c826c9db1043a377aa8cc790280603792927ec54eb8`, history 167, active
 - `rowdy-room/assistant-foundry-guided-builder-prototype`: v1, `8f3936a707d4ad777c2a1f000d8d8720dd644be5e83b7346630bef72e1be8e17`, history 169, active
-- `rowdy-room/assistant-profile-foundation`: v3, `32da04a47494017093a99ed21f7a4a01fa190e1462c9c17d49059998dc099397`, active; More About Me approved; private recovery copy `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json` v2 / SHA-256 `7954a0b7444fdc6bc20f98bcb8a56c8bc30eb56c1ac5d7ac86142d8621f55498`; public profile breadcrumb commit `625dae169b01e3b4f0e755c1cb405b71b6a44ce8`; dedicated check rows remain recovery-required.
+- `rowdy-room/assistant-profile-foundation`: v4, `30ebbe5bee894d08a1d29e4f0b1d8f01f41a7405ae74de47a57ace0dcc80191b`, active; More About Me approved; private recovery copy `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json` v3 / SHA-256 `305533f988f2eb5b23a96875de6dd06776bca9364761789cb11c5f41b088ce4a`; public profile breadcrumb commit `1e587a13bfae368e955ebbd3ef3f175c6bccaa8c`; verification run `5a24b2a5-3151-4b7b-b0b6-4aab01955413` has 4 pass / 0 fail.
 ## Equipment truth
 
 - 68 lines / 93 physical units
