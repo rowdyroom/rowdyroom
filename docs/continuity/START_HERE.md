@@ -83,7 +83,7 @@ Verified protected snapshot:
 - `rowdy-room/portable-assistant-foundation`: v4, `77ff5476182cbd02491138d5c947ffb7f026580eef9fecd4a30074c4d31c00b1`, history 168, active
 - `rowdy-room/assistant-foundry-learning-law`: v1, `f9d1369a131d5f1e885f2c826c9db1043a377aa8cc790280603792927ec54eb8`, history 167, active
 - `rowdy-room/assistant-foundry-guided-builder-prototype`: v1, `8f3936a707d4ad777c2a1f000d8d8720dd644be5e83b7346630bef72e1be8e17`, history 169, active
-- `rowdy-room/assistant-profile-foundation`: v7, `3bf60186f11bb3905221bdb0fe0fe7253484dca6c72d210bf373f2b75f325c28`, active; More About Me, private Decision Context, and starting Assistant Inheritance Policy approved. Private recovery copy `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json` v5 / SHA-256 `8dc7ef50e0586aae5abf1c65eeac2755eb689d5ea2ad1430c9a15dcdf1ba3e88`; public profile breadcrumb commit `3f192da79d04cf4da729d0854fa79b24472ea3f6`; verification run `9523b9d3-64f4-4e5c-bcfa-cc96e9b3c2f0` pending final check-row readback.
+- `rowdy-room/assistant-profile-foundation`: v7, `3bf60186f11bb3905221bdb0fe0fe7253484dca6c72d210bf373f2b75f325c28`, active; More About Me, private Decision Context, and starting Assistant Inheritance Policy approved. Private recovery copy `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json` v5 / SHA-256 `8dc7ef50e0586aae5abf1c65eeac2755eb689d5ea2ad1430c9a15dcdf1ba3e88`; public profile breadcrumb commit `3f192da79d04cf4da729d0854fa79b24472ea3f6`; verification run `9523b9d3-64f4-4e5c-bcfa-cc96e9b3c2f0` has 4 pass / 0 fail; check rows 240-243.
 ## Equipment truth
 
 - 68 lines / 93 physical units
