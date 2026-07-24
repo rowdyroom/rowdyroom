@@ -29,7 +29,7 @@ This public-safe breadcrumb identifies the approved chat-first profile work that
 - Protected record: `rowdy-room/assistant-profile-foundation`, v7, SHA-256 `3bf60186f11bb3905221bdb0fe0fe7253484dca6c72d210bf373f2b75f325c28`, history 178.
 - User-controlled working sheet: **Easy Bot, Pet & Prompt Builder — ChatGPT + Codex Examples**, tab **Personal & Rowdy Context**, rows 31–36.
 - Dated private recovery copy: `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json`, SHA-256 `8dc7ef50e0586aae5abf1c65eeac2755eb689d5ea2ad1430c9a15dcdf1ba3e88`; private Library item `libfile_057b3b0ffc788191bba586c2aa66991e`, version 5.
-- Verification run `9523b9d3-64f4-4e5c-bcfa-cc96e9b3c2f0`: pending final readback rows for sheet, protected record/history, recovery copy, and public breadcrumbs.
+- Verification run `9523b9d3-64f4-4e5c-bcfa-cc96e9b3c2f0`: 4 pass / 0 fail; check rows 240-243.
 
 ## Exact next safe action
 
