@@ -38,7 +38,7 @@ The active continuation is **Build Portable AI Computer**.
 - Assistant portability: [Portable Assistant Foundation](PORTABLE_ASSISTANT_FOUNDATION.md) is active for the future Main Assistant, Jessica, and Gwen. ChatGPT/Codex are the current working adapters; local runtime work starts only after the purchased hardware is physically verified and evaluated.
 - Assistant Foundry product requirement: build a conversation-first Assistant Workspace plus a separate Guided Builder app with buttons, suggestions, progress, and one obvious next step. Start with a functional guided prototype, not an assumed ChatGPT clone.
 - Assistant Foundry Learning and Creation Law: use `docs/continuity/ASSISTANT_FOUNDRY_LEARNING_LAW.md` for every material assistant-system action. Capture external ChatGPT/Codex/OpenAI work through an explicit Foundry capture/import path until a verified adapter exists.
-- Assistant Profile Foundation: chat-first profile work is active at `docs/continuity/ASSISTANT_PROFILE_FOUNDATION.md`; About Me, More About Me, the working Custom Settings baseline, and private Decision Context are approved. All remain unapplied to live platforms. Decision Context is opt-in per assistant, not automatic inheritance.
+- Assistant Profile Foundation: chat-first profile work is active at `docs/continuity/ASSISTANT_PROFILE_FOUNDATION.md`; About Me, More About Me, the working Custom Settings baseline, private Decision Context, and starting Assistant Inheritance Policy are approved. All remain unapplied to live platforms. Main Assistant may inherit the approved profile set; Gwen inherits Custom Settings plus needed project context only; Jessica inherits no optional personalization by default; future bots and pets inherit nothing optional unless selected.
 ## GitHub authority
 
 - Repository: `rowdyroom/rowdyroom`
@@ -83,7 +83,7 @@ Verified protected snapshot:
 - `rowdy-room/portable-assistant-foundation`: v4, `77ff5476182cbd02491138d5c947ffb7f026580eef9fecd4a30074c4d31c00b1`, history 168, active
 - `rowdy-room/assistant-foundry-learning-law`: v1, `f9d1369a131d5f1e885f2c826c9db1043a377aa8cc790280603792927ec54eb8`, history 167, active
 - `rowdy-room/assistant-foundry-guided-builder-prototype`: v1, `8f3936a707d4ad777c2a1f000d8d8720dd644be5e83b7346630bef72e1be8e17`, history 169, active
-- `rowdy-room/assistant-profile-foundation`: v5, `289bf6eb20f9b40ca328176f4e8bd339088fc4cbdf0616ac5c4a39bd4f7b812a`, active; More About Me and private Decision Context approved; Decision Context is opt-in per assistant. Private recovery copy `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json` v4 / SHA-256 `375f977d9c6ffe4356f197aa873f6759ea349cdf9eb9f0fb62e78a6d04431b41`; public profile breadcrumb commit `d19473ad56ed53b53a42f6775715e5b45a9d4352`; verification run `34af0553-4a97-4c1b-b9f6-7f7a53d3cb7c` has 4 pass / 0 fail.
+- `rowdy-room/assistant-profile-foundation`: v6, `3bf60186f11bb3905221bdb0fe0fe7253484dca6c72d210bf373f2b75f325c28`, active; More About Me, private Decision Context, and starting Assistant Inheritance Policy approved. Private recovery copy `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json` v5 / SHA-256 `8dc7ef50e0586aae5abf1c65eeac2755eb689d5ea2ad1430c9a15dcdf1ba3e88`; public profile breadcrumb commit `3f192da79d04cf4da729d0854fa79b24472ea3f6`; verification run `9523b9d3-64f4-4e5c-bcfa-cc96e9b3c2f0` pending final check-row readback.
 ## Equipment truth
 
 - 68 lines / 93 physical units
@@ -114,7 +114,7 @@ Verified protected snapshot:
 - Assistant Foundry final verification run: `14b7a4be-d5f6-4135-9deb-65ba36448643` — 5 pass, 1 warn, 0 fail; warning: no connected user-approved shared capture adapter for ChatGPT/Codex/OpenAI/local-runtime activity.
 - Assistant profile foundation: `docs/continuity/ASSISTANT_PROFILE_FOUNDATION.md`, public source commit `68d09e5c6f81aeabc7ab0e91e2b1b7ea39941cb4`; protected record `rowdy-room/assistant-profile-foundation` v2 / history 171 / SHA-256 `8fd132a6206f3cbd08768e815be015b987a833f1f0645bf044ded2817bf65ed6`; private recovery copy `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json`, SHA-256 `1bbf9d9c9424dac18f295da44de1ac3e32036576b3c8cd2ff217f3247d2511f7`.
 - Assistant profile check logging is recovery-required: two Supabase connector attempts to insert the dedicated check-run rows returned an internal error; public breadcrumbs, private record/history, Sheet revision 39, and recovery copy have passed readback.
-- Exact next safe action: keep the conversation chat-first; complete More About Me and the separate memory categories, then return to the Guided Builder for Main Assistant v0.1 personality and voice. Do not install a local runtime or claim ChatGPT parity before evaluation.
+- Exact next safe action: use the approved inheritance policy to start Main Assistant v0.1 in the Guided Builder, beginning with purpose, boundaries, personality, voice, and test cases before applying anything to a live platform or assistant package.
 ## Recovery required
 
 - physical receipt and inspection of the purchased QUBE 540 and ASUS Dual RTX 5060 Ti 16GB
