@@ -12,7 +12,7 @@ Status: Roger approved the starting context-inheritance defaults for Main Assist
 - This is a starting policy only. It does not apply settings to ChatGPT, Codex, Guided Builder, Gwen, Jessica, or future assistant packages yet.
 - Protected record: `rowdy-room/assistant-profile-foundation` v7 / SHA-256 `3bf60186f11bb3905221bdb0fe0fe7253484dca6c72d210bf373f2b75f325c28`, history 178.
 - Private recovery copy: `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json`, Library version 5 / SHA-256 `8dc7ef50e0586aae5abf1c65eeac2755eb689d5ea2ad1430c9a15dcdf1ba3e88`.
-- Verification run `9523b9d3-64f4-4e5c-bcfa-cc96e9b3c2f0`: pending final readback rows.
+- Verification run `9523b9d3-64f4-4e5c-bcfa-cc96e9b3c2f0`: 4 pass / 0 fail; check rows 240-243.
 - Exact next safe action: start Main Assistant v0.1 in the Guided Builder using the approved inheritance policy.
 
 ## 2026-07-23 — Decision Context approved in Assistant Profile Foundation
