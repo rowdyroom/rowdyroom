@@ -1,5 +1,21 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-26 — AI Start Dispatcher Contract v1 approved
+
+Status: Roger approved the minimal dispatcher contract as the design authority for a recoverable staging implementation. No live AI Start code, hosting, credential, or storage change was made.
+
+- Defined deterministic mission states from queued through complete or cancelled.
+- Defined when a Work bot is needed, when it must remain idle, and how one primary worker is selected.
+- Added compact mission packets, append-only delta events, actor inboxes, capability routing, atomic claims, configurable leases, heartbeats without model calls, and idempotent writes.
+- Kept Chat as mission creator and reviewer; Work submits ready-for-review and cannot self-complete.
+- Added explicit approval gates for financial, production, destructive, permission, messaging, and scope-expanding actions.
+- Defined a minimal `api.php?action=...` contract that preserves the current AI Start update log, registry, exports, imports, backups, and health checks.
+- Defined 18 staging acceptance tests, including duplicate-claim prevention, lease expiry, Chat-to-Work result return, existing-feature compatibility, security, backup, and rollback.
+- Public contract: `docs/continuity/AI_START_DISPATCHER_CONTRACT.md`.
+- Recovery required: automatic cloud-session wake triggering, authenticated standard-Chat writes, final client authentication, notification choice, hosting storage schema, rollback mechanics, and measured lease timing.
+- Exact next safe action: build a recoverable staging copy and do not alter live AI Start until staging passes and Roger separately approves deployment.
+
+
 ## 2026-07-26 — Token-efficient Chat and Work coordination approved
 
 Status: Roger approved a session-manifest, delta-loading, deterministic-routing, and compact mission-packet policy to reduce model usage without weakening continuity, recovery, privacy, or approval gates.
