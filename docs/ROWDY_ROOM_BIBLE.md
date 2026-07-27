@@ -17,10 +17,11 @@ This document consolidates the authoritative decisions, current systems, progres
 4. Small changes are acceptable only when the previous state can be restored.
 5. The live system, GitHub, and Supabase documentation must describe the same behavior. Any mismatch is a defect.
 6. Secrets, host passwords, private tokens, service-role keys, and API credentials must never be committed to GitHub or copied into this Bible.
-7. `docs/ROWDY_ROOM_OPERATOR_LAW.md` must be read as the first substantive action after every Rowdy Room prompt or continuation and audited again immediately before the final response.
-8. After every action, compare the actual result with the Operator Law and correct any missed requirement before continuing when it is safe to do so.
+7. On a new, compacted, reconstructed, contradictory, material, high-risk, or manifest-changed Rowdy Room session, read the complete `docs/ROWDY_ROOM_OPERATOR_LAW.md` and `docs/continuity/START_HERE.md`. On an ordinary verified continuation, check `docs/continuity/SESSION_MANIFEST.md` and load only changed or task-relevant records.
+8. After every action, compare the actual result with the verified Operator Law version and correct any missed requirement before continuing when it is safe to do so. Use a compact final checklist for ordinary non-mutating work and the complete final Law reread for material, mutating, high-risk, contradictory, reconstructed, or manifest-changed work.
 9. `docs/continuity/START_HERE.md` is the root breadcrumb map. Every material change must update the applicable durable records, verification evidence, and recovery breadcrumbs so another task can reconstruct the current state without depending on chat history.
-10. The Same-Chat Continuity Law requires Rowdy Room work to remain in the current conversation until a reliable near-limit signal is available; before any Roger-authorized move, a complete verified handoff must be built from the entire accessible chat and durable records. If any chat span is inaccessible, it remains `Recovery required` and the handoff cannot be called complete.
+10. `docs/continuity/SESSION_MANIFEST.md` is the compact version gate. It must be incremented whenever a listed authority changes so verified sessions can avoid reloading unchanged context without relying on stale memory.
+11. The Same-Chat Continuity Law requires Rowdy Room work to remain in the current conversation until a reliable near-limit signal is available; before any Roger-authorized move, a complete verified handoff must be built from the entire accessible chat and durable records. If any chat span is inaccessible, it remains `Recovery required` and the handoff cannot be called complete.
 
 The server-side tracking system created outside the web root is the operational record:
 
