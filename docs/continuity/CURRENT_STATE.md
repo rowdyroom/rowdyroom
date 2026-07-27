@@ -51,6 +51,9 @@ The current product continuation is **Build Portable AI Computer**.
 - Chat and Work bots should exchange compact mission packets and events, keep complete history outside the active prompt, and fetch older context only when needed.
 - One primary Work bot is the default. Additional workers or reviewers are activated only when independent work or material risk justifies them.
 - Cloud ChatGPT and Work sessions still cannot wake themselves merely because AI Start changed; automatic activation remains **Recovery required** pending an approved adapter, automation, or local coordinator.
+- Roger approved [AI Start Dispatcher Contract v1](AI_START_DISPATCHER_CONTRACT.md) on 2026-07-26 as the staging implementation contract.
+- Contract v1 defines the mission lifecycle, capability routing, bot inbox, atomic claim and lease rules, compact mission packets, idempotency, approval gates, failure behavior, and 18 acceptance tests.
+- Contract approval does not authorize live AI Start code, hosting, credential, or storage changes. The exact next action is a recoverable staging implementation.
 
 ## Authoritative equipment state
 
