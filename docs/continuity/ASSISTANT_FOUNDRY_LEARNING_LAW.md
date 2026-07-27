@@ -1,7 +1,7 @@
 # Assistant Foundry Learning and Creation Law
 
 **Status:** Active standing law for Assistant Foundry work  
-**Last updated:** 2026-07-23  
+**Last updated:** 2026-07-26  
 **Owner:** Roger Jamsek
 
 ## Purpose
@@ -53,6 +53,16 @@ The law requires reliable capture; it does **not** pretend that every platform i
 3. Every future ChatGPT, Codex, OpenAI, or local-runtime adapter must expose a safe capture/import path before it may claim Foundry learning continuity.
 4. Assistant packages must be portable; no learning record may be treated as authoritative only because it exists in one chat, one provider, or one device.
 5. Tests must compare the current build, prior approved build, and a no-skill/no-package baseline when that comparison is useful.
+
+## Token-efficient coordination policy
+
+- Use deterministic application code for mission routing, status transitions, locks, leases, heartbeat, queue polling, and idle decisions.
+- Give models compact mission packets and events rather than complete histories.
+- Store complete history durably outside the active prompt and retrieve it only by relevant ID, version, cursor, or evidence reference.
+- Use one primary worker by default. Activate additional workers or reviewers only for justified independent work or material risk.
+- A bot is needed only when a compatible queued mission exists and it is available to claim it. Otherwise it remains idle.
+- A worker must stop when the mission is complete, cancelled, blocked, waiting for Roger, or owned by another active lease.
+- Cloud ChatGPT and Work sessions cannot be described as self-waking without a verified trigger or adapter.
 
 ## Current implementation truth
 
