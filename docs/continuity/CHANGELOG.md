@@ -1,5 +1,19 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-26 — Token-efficient Chat and Work coordination approved
+
+Status: Roger approved a session-manifest, delta-loading, deterministic-routing, and compact mission-packet policy to reduce model usage without weakening continuity, recovery, privacy, or approval gates.
+
+- Replaced mandatory full authority rereads on every ordinary turn with a compact Session Manifest version check.
+- Kept full reloads mandatory for new, compacted, reconstructed, contradictory, material, high-risk, or manifest-changed work.
+- Reserved complete final Law rereads for material, mutating, high-risk, contradictory, reconstructed, or manifest-changed work; ordinary non-mutating work uses a compact compliance checklist.
+- Assigned mechanical routing, queue status, locks, leases, heartbeat, and idle checks to deterministic server or application code rather than AI prompts.
+- Set one primary Work bot as the default and limited additional workers or reviewers to justified independent work or risk.
+- Kept complete durable history outside active prompts and required bots to retrieve only changed or task-relevant events and records.
+- Recorded that the larger AI Start dispatcher and automatic wake/notification adapter remain unimplemented and **Recovery required**.
+- Exact next safe action: design the smallest AI Start mission queue and bot inbox contract before changing production code or hosting.
+
+
 ## 2026-07-23 — Assistant inheritance policy approved
 
 Status: Roger approved the starting context-inheritance defaults for Main Assistant, Gwen, Jessica, and future bots/pets.
