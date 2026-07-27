@@ -17,8 +17,9 @@ Start new, compacted, reconstructed, contradictory, material, high-risk, or mani
 7. [Continuity Runbook](CONTINUITY_RUNBOOK.md) before a material change
 8. [Assistant Foundry Learning and Creation Law](ASSISTANT_FOUNDRY_LEARNING_LAW.md) for assistant-system work
 9. [AI Start Dispatcher Contract v1](AI_START_DISPATCHER_CONTRACT.md) for Chat-to-Work dispatcher implementation
-10. [Build Portable AI Computer handoff](BUILD_PORTABLE_AI_COMPUTER_HANDOFF.md) for the active portable-computer project
-11. Applicable files under `docs/bible/`
+10. [AI Start Dispatcher Staging v1](AI_START_DISPATCHER_STAGING_V1.md) for the verified isolated implementation and remaining production gates
+11. [Build Portable AI Computer handoff](BUILD_PORTABLE_AI_COMPUTER_HANDOFF.md) for the active portable-computer project
+12. Applicable files under `docs/bible/`
 
 ## Approved token-efficient loading policy
 
@@ -34,8 +35,14 @@ Start new, compacted, reconstructed, contradictory, material, high-risk, or mani
 - Approved dispatcher contract: [AI Start Dispatcher Contract v1](AI_START_DISPATCHER_CONTRACT.md), commit `f2476c44f728460d55c87af3ea9a679ca3465c7e`, blob `43860200a4790ffc32281c53a003d6bb0a147e74`.
 - AI Start contract record: `upd_20260727_020701_fa9f24ca`; health count increased from 5 to 6 with data and backup writable.
 - Contract recovery copy: `AI_Start_Dispatcher_Contract_V1_Recovery_2026-07-26.json`, SHA-256 `8c0de04e6280191a0461e9aeb3814187516f21a9af5ba10aa3f10d4e5e9d13c3`.
-- Recovery required: automatic ChatGPT/Work wake triggering, authenticated standard-Chat writes, final per-client authentication, notification choice, hosting storage and rollback implementation, and measured lease timing.
-- Exact next safe action: build the dispatcher in a recoverable staging copy, run all 18 acceptance tests, and request separate production deployment approval only after staging passes.
+- Verified isolated implementation: [AI Start Dispatcher Staging v1](AI_START_DISPATCHER_STAGING_V1.md) on branch `feat/ai-start-dispatcher-staging-v1`; remote checkpoint commit `48e4ed1a6a32592683552cb6d4ab07d6eea24843`; staging-record blob `a9fea8f1951fafd0ea8e106e192873823747e079`.
+- Staging readback: 16 of 16 GitHub blobs matched; all 18 contract checks passed; repository typecheck, syntax, security scan, snapshot, rollback, and live-health checks passed.
+- AI Start staging audit record: `upd_20260727_034410_d179657f`; health count increased from 6 to 7 with one bot and data and backup writable.
+- Private recovery evidence: `AI_Start_Dispatcher_Staging_V1_Recovery_2026-07-26.json`, protected file `libfile_bdfebce768c08191a88a34bbf76d0046`, version 0, SHA-256 `d950793c78ea0fe83c1ce5242287376ffae6f2d7b71ba9a242280e05755c6cd1`.
+- Local recovery archive: `AI_Start_Dispatcher_Staging_V1_2026-07-26.tar.gz`, 26 entries, SHA-256 `2c31d5aad8861c89e165569b4e7443d4ffac9c962d29995057ecf316372d77a2`.
+- Captured correction: the first audit POST used form encoding and was rejected without saving; the JSON retry succeeded.
+- Recovery required: authoritative live PHP/static source recovery, hosting-compatible private staging port, final per-client authentication and protected credential storage, authenticated standard-Chat writes, notification choice, verified wake adapter, hosting-equivalent testing, and measured real-session lease timing.
+- Exact next safe action: recover the live source into private versioned staging, port the verified behavior, and rerun the same 18 checks before requesting separate production deployment approval.
 
 ## Current continuation
 
