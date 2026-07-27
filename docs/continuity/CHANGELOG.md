@@ -1,5 +1,33 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-26 — AI Start Dispatcher isolated staging v1 verified
+
+Status: The approved dispatcher contract is implemented and verified in an
+isolated local staging service. Nothing was deployed to the live AI Start site.
+
+- Added deterministic mission storage, state transitions, capability routing,
+  inboxes, atomic claims, hashed lease tokens, configurable heartbeat, cursor
+  reads, idempotency, version checks, and role permissions.
+- Preserved the `api.php?action=...` URL shape and added staging-compatible
+  versions of the existing update, bot, export, import, backup, and health actions.
+- Added the minimal Needs You / Working / Finished dashboard plus hidden
+  Advanced / History controls.
+- Added snapshot and rollback commands.
+- Ran all 18 contract acceptance checks: 18 passed, 0 failed.
+- Verified 86.55% line, 74.75% branch, and 91.84% function coverage.
+- Verified the repository TypeScript check, staging JavaScript syntax, whitespace,
+  browser credential/private-path scan, snapshot, rollback, and live health readback.
+- Live AI Start remained at 6 updates and 1 bot with data and backup writable.
+- Public staging record: `docs/continuity/AI_START_DISPATCHER_STAGING_V1.md`.
+- Implementation path: `staging/ai-start-dispatcher/`.
+- Recovery required: authoritative live PHP source recovery, hosting-compatible
+  port, final per-client authentication and protected credential storage,
+  standard-Chat authenticated writes, notification choice, automatic wake
+  adapter, hosting-equivalent test, and measured lease behavior.
+- Exact next safe action: recover the live source into private versioned staging,
+  port the verified behavior, and rerun the 18 checks before requesting separate
+  production deployment approval.
+
 ## 2026-07-26 — AI Start Dispatcher Contract v1 approved
 
 Status: Roger approved the minimal dispatcher contract as the design authority for a recoverable staging implementation. No live AI Start code, hosting, credential, or storage change was made.
