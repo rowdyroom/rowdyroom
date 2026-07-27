@@ -27,6 +27,11 @@ Start new, compacted, reconstructed, contradictory, material, high-risk, or mani
 - Mechanical routing, locks, leases, heartbeat, and queue checks belong in deterministic code rather than model prompts.
 - Full durable history remains available by reference and is fetched only when needed.
 - One primary worker is the default; additional workers or reviewers require a clear workload or risk reason.
+- Public authority checkpoint: commit `85d925fdee109ce35908e51391c3aec22b0b8d14`; eight authority readbacks passed.
+- AI Start approval record: `upd_20260727_011415_68d18eb1`; health count increased from 4 to 5 with data and backup writable.
+- Recovery copy: `Token_Efficient_Coordination_Recovery_2026-07-26.json`, SHA-256 `bf0a67c65f7979cd914fec3e6cbd7b1ca2c0f07238dceba5bbff2ca669787900`.
+- Recovery required: automatic ChatGPT/Work wake triggering and the larger mission queue, bot inbox, claim/lease, and notification adapter remain unimplemented.
+- Exact next safe action: design the smallest AI Start mission queue and bot inbox contract before changing production code or hosting.
 
 ## Current continuation
 
