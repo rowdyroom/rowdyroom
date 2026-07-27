@@ -46,14 +46,18 @@ The current product continuation is **Build Portable AI Computer**.
 ## Token-efficient Chat and Work coordination
 
 - Roger approved the session-manifest and delta-loading policy on 2026-07-26.
-- AI Start should evolve from a manual update form into a lightweight dispatcher, but that larger dispatcher build is not implemented by this policy update.
+- AI Start should evolve from a manual update form into a lightweight dispatcher.
 - Mechanical routing, mission status, locks, leases, heartbeat, and queue checks should run in deterministic server or application code rather than consuming model tokens.
 - Chat and Work bots should exchange compact mission packets and events, keep complete history outside the active prompt, and fetch older context only when needed.
 - One primary Work bot is the default. Additional workers or reviewers are activated only when independent work or material risk justifies them.
 - Cloud ChatGPT and Work sessions still cannot wake themselves merely because AI Start changed; automatic activation remains **Recovery required** pending an approved adapter, automation, or local coordinator.
 - Roger approved [AI Start Dispatcher Contract v1](AI_START_DISPATCHER_CONTRACT.md) on 2026-07-26 as the staging implementation contract.
 - Contract v1 defines the mission lifecycle, capability routing, bot inbox, atomic claim and lease rules, compact mission packets, idempotency, approval gates, failure behavior, and 18 acceptance tests.
-- Contract approval does not authorize live AI Start code, hosting, credential, or storage changes. The exact next action is a recoverable staging implementation.
+- [AI Start Dispatcher Staging v1](AI_START_DISPATCHER_STAGING_V1.md) now implements the contract in an isolated local Node.js staging service with the existing `api.php?action=...` URL shape.
+- All 18 contract checks pass locally, including legacy-action compatibility, security, writable backup, and rollback; repository typecheck and staging syntax checks also pass.
+- No live AI Start code, hosting, credential, or storage-schema change was made. Live health remained at 6 updates and 1 bot with data and backup writable after the local build.
+- Hosting-equivalent verification remains **Recovery required** because the authoritative live PHP source is not yet version-controlled or reconciled.
+- Exact next action: recover the live source into private versioned staging, port the verified behavior to the hosting-compatible stack, rerun the 18 checks, and request separate production deployment approval only after that passes.
 
 ## Authoritative equipment state
 
