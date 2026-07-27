@@ -1,22 +1,32 @@
 # Rowdy Room Continuity — START HERE
 
 **Status:** Active public-safe breadcrumb root  
-**Last updated:** 2026-07-23  
+**Last updated:** 2026-07-26  
 **Owner:** Roger Jamsek
 
-Start every Rowdy Room task here after reading the complete Operator Law. Do not rely on chat memory. Missing or contradictory facts remain **Recovery required**.
+Start new, compacted, reconstructed, contradictory, material, high-risk, or manifest-changed Rowdy Room work here after reading the complete Operator Law. For an ordinary continuation in a verified session, check the Session Manifest and load only changed or task-relevant records. Do not rely on unverified chat memory. Missing or contradictory facts remain **Recovery required**.
 
 ## Required startup order
 
-1. [Operator Law](../ROWDY_ROOM_OPERATOR_LAW.md)
-2. [Project Bible](../ROWDY_ROOM_BIBLE.md)
-3. [Current State](CURRENT_STATE.md)
-4. [Equipment Inventory](EQUIPMENT_INVENTORY.md) when equipment affects the request
-5. [Continuity Changelog](CHANGELOG.md)
-6. [Continuity Runbook](CONTINUITY_RUNBOOK.md) before a material change
-7. [Assistant Foundry Learning and Creation Law](ASSISTANT_FOUNDRY_LEARNING_LAW.md) for any assistant-system work
-8. [Build Portable AI Computer handoff](BUILD_PORTABLE_AI_COMPUTER_HANDOFF.md) for the active portable-computer project
-9. Applicable files under `docs/bible/`
+1. [Session Manifest](SESSION_MANIFEST.md) for an ordinary continuation in a verified session
+2. [Operator Law](../ROWDY_ROOM_OPERATOR_LAW.md) in full when the manifest or task conditions require a full gate
+3. [Project Bible](../ROWDY_ROOM_BIBLE.md) when the task needs product or system authority
+4. [Current State](CURRENT_STATE.md) when current project state affects the task
+5. [Equipment Inventory](EQUIPMENT_INVENTORY.md) when equipment affects the request
+6. [Continuity Changelog](CHANGELOG.md) when recent decisions or changes affect the task
+7. [Continuity Runbook](CONTINUITY_RUNBOOK.md) before a material change
+8. [Assistant Foundry Learning and Creation Law](ASSISTANT_FOUNDRY_LEARNING_LAW.md) for assistant-system work
+9. [Build Portable AI Computer handoff](BUILD_PORTABLE_AI_COMPUTER_HANDOFF.md) for the active portable-computer project
+10. Applicable files under `docs/bible/`
+
+## Approved token-efficient loading policy
+
+- Roger approved the session-manifest and delta-loading policy on 2026-07-26.
+- Full authority loading is required for new, compacted, reconstructed, contradictory, material, high-risk, or manifest-changed work.
+- Ordinary same-session turns use the compact manifest and retrieve only changed or task-relevant records.
+- Mechanical routing, locks, leases, heartbeat, and queue checks belong in deterministic code rather than model prompts.
+- Full durable history remains available by reference and is fetched only when needed.
+- One primary worker is the default; additional workers or reviewers require a clear workload or risk reason.
 
 ## Current continuation
 
