@@ -43,6 +43,15 @@ The current product continuation is **Build Portable AI Computer**.
 - Protected readback: `rowdy-room/assistant-foundry-learning-law` v1 / history 167 / SHA-256 `f9d1369a131d5f1e885f2c826c9db1043a377aa8cc790280603792927ec54eb8`; `rowdy-room/portable-assistant-foundation` v4 / history 168 / SHA-256 `77ff5476182cbd02491138d5c947ffb7f026580eef9fecd4a30074c4d31c00b1`; `rowdy-room/assistant-foundry-guided-builder-prototype` v1 / history 169 / SHA-256 `8f3936a707d4ad777c2a1f000d8d8720dd644be5e83b7346630bef72e1be8e17`.
 - Guided Builder version 1 is deployed with custom owner-only access and verified terminal success. Its URL is private and held only in the protected record/recovery package; no public availability is claimed.
 
+## Token-efficient Chat and Work coordination
+
+- Roger approved the session-manifest and delta-loading policy on 2026-07-26.
+- AI Start should evolve from a manual update form into a lightweight dispatcher, but that larger dispatcher build is not implemented by this policy update.
+- Mechanical routing, mission status, locks, leases, heartbeat, and queue checks should run in deterministic server or application code rather than consuming model tokens.
+- Chat and Work bots should exchange compact mission packets and events, keep complete history outside the active prompt, and fetch older context only when needed.
+- One primary Work bot is the default. Additional workers or reviewers are activated only when independent work or material risk justifies them.
+- Cloud ChatGPT and Work sessions still cannot wake themselves merely because AI Start changed; automatic activation remains **Recovery required** pending an approved adapter, automation, or local coordinator.
+
 ## Authoritative equipment state
 
 Protected Supabase readback on 2026-07-21 confirms:
