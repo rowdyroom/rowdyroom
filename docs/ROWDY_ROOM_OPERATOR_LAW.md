@@ -4,22 +4,23 @@ This file is part of the Rowdy Room Project Engine and should be treated as stan
 
 ## Mandatory Law Gate and Completion Audit
 
-For every prompt, request, continuation, and action involving Rowdy Room work, the assistant must use this Law as both the first gate and the last audit.
+For every prompt, request, continuation, and action involving Rowdy Room work, the assistant must use this Law as the governing gate and final audit. Verified session state and the compact Session Manifest prevent repeated loading of unchanged authority.
 
 ### Before the first action
 
-1. Read this entire Law before giving a substantive answer, calling an action tool, changing a file, changing a database, or telling Roger what to do.
-2. Open `docs/continuity/START_HERE.md` and follow every breadcrumb that applies to the request, including the Bible, Current State, equipment record, changelog, runbook, special laws, private continuity records, and recovery packages.
-3. Identify the access and tools already available. If a safe action is within the requested scope and can be done directly, do it instead of transferring the work to Roger.
-4. Mark missing or contradictory facts `Recovery required`; do not guess or silently rely on chat memory.
+1. On the first Rowdy Room prompt in a new session, after compaction or reconstruction, when verified session state is unavailable, when the Session Manifest changed, or when the task is material, contradictory, or high-risk, read this entire Law and `docs/continuity/START_HERE.md` before substantive action.
+2. On later ordinary prompts in the same verified session, read `docs/continuity/SESSION_MANIFEST.md`. If its manifest version and applicable authority versions are unchanged, reuse the already-loaded rules and retrieve only new mission events or records relevant to the prompt.
+3. Follow every applicable breadcrumb. Load only the Bible, Current State, equipment record, changelog, runbook, special laws, private records, or recovery packages needed for the active task.
+4. Identify the access and tools already available. If a safe action is within the requested scope and can be done directly, do it instead of transferring the work to Roger.
+5. Mark missing or contradictory facts `Recovery required`; do not guess or silently rely on unverified chat memory.
 
 ### After every action
 
-1. Compare the action and its result with this Law before moving to the next action.
+1. Compare the action and its result with the verified Operator Law version before moving to the next action.
 2. Confirm that the intended result actually occurred. A command, installer, upload, or save attempt is not proof of success by itself.
 3. If the action made a material change, complete the verified save workflow: public-safe record, private structured record, readback, history/version check, continuity checks, and dated local recovery copy.
 4. Correct any missed requirement that can still be corrected safely. If it cannot be corrected, record and report the exact failure instead of calling the work complete.
-5. Immediately before the final response, read this Law again and perform a final compliance audit.
+5. Before an ordinary non-mutating final response with an unchanged manifest, perform the compact compliance checklist against the verified session version. Before a material, mutating, high-risk, contradictory, reconstructed, or manifest-changed final response, read this entire Law again and perform the full compliance audit.
 
 Compliance must be demonstrated with evidence such as file paths, branch or commit identifiers, record keys, versions, hashes, check results, and recovery-package locations. A statement that the Law was followed is not sufficient evidence.
 
@@ -36,6 +37,17 @@ Usage, time, and tool calls are limited project resources and must be protected 
 7. Do not expand a normal task into a work-intensive task merely because tools are available. If an expensive expansion is optional rather than necessary, omit it unless Roger explicitly requests it.
 8. If the work begins consuming materially more effort or usage than the request reasonably implies, stop, reduce scope, and continue with the smallest complete approach.
 9. Never confuse thoroughness with volume. Completion means the requested outcome is correct and durable at a level proportional to its importance.
+
+## Token-Efficient Context Law
+
+1. Use deterministic server or application code for routing, status, locks, leases, heartbeat, and queue checks. Do not spend model tokens on mechanical coordination.
+2. Treat `docs/continuity/SESSION_MANIFEST.md` as the compact version gate. Increment it whenever a listed authority changes.
+3. After a verified full load, retrieve only records, events, or document versions changed since the session cursor.
+4. Pass compact mission packets containing the mission ID, goal, completion test, assigned bot, current step, relevant constraints, changed facts, and evidence references.
+5. Keep full history durable but outside the prompt. Fetch older details only when the active task requires them.
+6. Use one primary worker by default. Add another worker or reviewer only when independent work or risk justifies it.
+7. Do not use an AI model for idle polling or heartbeat messages. If no matching mission exists, the bot stays idle.
+8. Never sacrifice correctness, recovery, privacy, approval gates, or authoritative readback merely to reduce tokens.
 
 ## Breadcrumb Law
 
