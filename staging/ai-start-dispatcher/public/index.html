@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AI Start Dispatcher — Staging</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <p class="eyebrow">ISOLATED STAGING</p>
+        <h1>AI Start Dispatcher</h1>
+        <p>Chat creates and reviews. Work claims and executes. Roger sees only what needs attention.</p>
+      </div>
+      <div id="health" class="health">Checking storage…</div>
+    </header>
+
+    <main>
+      <section class="toolbar">
+        <label>
+          Session credential
+          <input id="token" type="password" autocomplete="off" placeholder="Stored in this tab only" />
+        </label>
+        <button id="saveToken" type="button">Use Credential</button>
+        <button id="refresh" type="button" class="secondary">Refresh</button>
+      </section>
+
+      <p id="message" class="message" role="status"></p>
+
+      <section class="dashboard">
+        <article>
+          <h2>Needs You</h2>
+          <p class="hint">Questions, approvals, and results awaiting review.</p>
+          <div id="needsYou" class="cards"></div>
+        </article>
+        <article>
+          <h2>Working</h2>
+          <p class="hint">Claimed, active, blocked, or revision work.</p>
+          <div id="working" class="cards"></div>
+        </article>
+        <article>
+          <h2>Finished</h2>
+          <p class="hint">Ready for review, complete, or cancelled.</p>
+          <div id="finished" class="cards"></div>
+        </article>
+      </section>
+
+      <details>
+        <summary>Advanced / History</summary>
+        <form id="missionForm">
+          <h2>Send to Work</h2>
+          <div class="grid">
+            <label>Mission name <input name="missionName" required /></label>
+            <label>Capability <input name="requiredCapability" value="code" required /></label>
+            <label>Main category <input name="mainCategory" value="AI Project" required /></label>
+            <label>Project code <input name="projectCode" value="5601" required /></label>
+            <label>Current project <input name="currentProject" value="AI Start" required /></label>
+            <label>Current step <input name="currentStep" value="Claim and begin the first safe step" required /></label>
+          </div>
+          <label>Goal <textarea name="goal" required></textarea></label>
+          <label>Completion definition <textarea name="completionDefinition" required></textarea></label>
+          <label>Constraints, one per line <textarea name="constraints"></textarea></label>
+          <label>Do not do yet, one per line <textarea name="doNotDoYet"></textarea></label>
+          <button type="submit">Send to Work</button>
+        </form>
+        <div class="advanced-links">
+          <a href="api.php?action=updates14">14-day update JSON</a>
+          <a href="api.php?action=bots">Bot registry JSON</a>
+          <a href="api.php?action=export_json">Full staging JSON backup</a>
+          <a href="api.php?action=export_markdown">Markdown summary</a>
+        </div>
+      </details>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
