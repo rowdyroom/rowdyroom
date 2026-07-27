@@ -1,9 +1,9 @@
 # Rowdy Room Session Manifest
 
-**Manifest version:** 2  
+**Manifest version:** 3  
 **Updated:** 2026-07-26  
 **Branch:** `agent/rowdy-room-continuity`  
-**Authority checkpoint commit:** `e5f8dee558ace71056570ac8a5dbe6309f38af70`
+**Authority checkpoint commit:** `75fcea4ae8586f0e24b4d43b20782b9d0163cd18`
 
 Use this compact file for ordinary continuations in a verified session. If the manifest version and applicable authority versions match the session state, do not reload unchanged full documents. Load only new mission events and task-relevant records.
 
@@ -13,7 +13,7 @@ Force a full applicable reload for a new session, compaction, reconstruction, co
 |---|---:|---|
 | `docs/ROWDY_ROOM_OPERATOR_LAW.md` | 2.0 | `024f0af02bc3c8e7ac7abe4b638363ebe4981dc5` |
 | `docs/ROWDY_ROOM_BIBLE.md` | 1.1 | `a9fde5c6f17e88b63ab390a6e839cfb6b7bce214` |
-| `docs/continuity/START_HERE.md` | 2.1 | `86b144eeaa90a91a0f486b7c3def1eb101b402cc` |
+| `docs/continuity/START_HERE.md` | 2.2 | `62b259794da114d28efc988e3f2a5b641a1079e7` |
 | `docs/continuity/CURRENT_STATE.md` | 2026-07-26 | `905ca693aa6fa6f5adaa4d8851e30a517e900c22` |
 | `docs/continuity/CHANGELOG.md` | 2026-07-26 | `5c439b9fb6114cd3df9427d897992b1348ae48df` |
 | `docs/continuity/CONTINUITY_RUNBOOK.md` | 2.0 | `d785f58138df8a5e5fd92903f78de422aa594670` |
