@@ -8,11 +8,22 @@ This runbook prevents important Rowdy Room facts from existing only inside a cha
 
 For every Rowdy Room prompt, continuation, and action:
 
-1. Read `docs/ROWDY_ROOM_OPERATOR_LAW.md` before the first substantive answer or action.
-2. Read `docs/continuity/START_HERE.md` and follow the applicable breadcrumbs before deciding what is known or what access is available.
-3. After each action, compare the actual result against the Operator Law and correct any missed requirement that can still be corrected safely.
-4. Immediately before the final response, read the Operator Law again and perform a final compliance audit.
+1. On a new, compacted, reconstructed, contradictory, material, high-risk, or manifest-changed session, read `docs/ROWDY_ROOM_OPERATOR_LAW.md` and `docs/continuity/START_HERE.md` before substantive action.
+2. On an ordinary continuation in a verified session, read `docs/continuity/SESSION_MANIFEST.md`. If the manifest and applicable authority versions are unchanged, retrieve only new mission events or task-relevant records.
+3. After each action, compare the actual result against the verified Operator Law version and correct any missed requirement that can still be corrected safely.
+4. Before an ordinary non-mutating final response with an unchanged manifest, perform the compact compliance checklist. Before material, mutating, high-risk, contradictory, reconstructed, or manifest-changed work, reread the complete Operator Law and perform the full audit.
 5. Do not substitute a statement of compliance for evidence. Preserve paths, commits, record keys, versions, hashes, checks, and recovery locations.
+
+## Session Manifest and delta-loading rule
+
+1. Treat `docs/continuity/SESSION_MANIFEST.md` as the compact version gate for verified sessions.
+2. Increment its manifest version whenever a listed authority changes.
+3. Record the manifest version and applicable authority versions in session state after a full load.
+4. If those versions remain unchanged, reuse the verified rules and fetch only events or records newer than the session cursor.
+5. Force a full applicable reload after compaction, reconstruction, a new session, a contradiction, missing authority, manifest change, or a material/high-risk task.
+6. Keep complete durable history outside the active prompt and retrieve it by record ID, path, version, or evidence reference only when needed.
+7. Use deterministic code rather than model calls for routing, status, locks, leases, heartbeat, queue polling, and idle decisions.
+8. Token reduction never overrides correctness, recovery, privacy, authorization, or verification requirements.
 
 ## The verified save rule
 
