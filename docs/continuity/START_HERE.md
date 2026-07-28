@@ -9,7 +9,12 @@
 - Strict validator and Bob visual inspection passed; all four cardinal gates and the 16-direction clockwise loop read correctly.
 - Scope boundary: training record only; no new Bob behavior, tool, permission, or production automation was activated.
 - Bob's visual-pet continuity record remains on branch `bob-v2-continuity-2026-07-28`, not `main`.
+- Protected authority: `rowdy-robots/bob-training`, version 1, history ID 270, SHA-256 `8a91e3b5bc0e6462a27abe241f824af9bf7be802dc25fd11490efc6b1e8557a7`.
+- Verification: run `3b2e5141-b4e4-4079-b00a-d24977f3182d`, checks 259–267: 7 pass, 2 warn, 0 fail.
+- Recovery: `outputs/Bob_Lucian_v2_Retrospective_Training_Recovery_2026-07-28.zip`, SHA-256 `ecef60030da48d4e5c483c3ea2e0ab780280ef0351144f559c08dc9300132dc3`, 15/15 entries verified.
+- AI Start: submission `pending_20260728_145319_3cf4289a` saved as pending review; proposed passcode `0003` is not registered or official until approved.
 - Recovery required: live Lucian rendering after reload or wake remains unobserved.
+- Next safe action: approve or reject the pending AI Start registration, then reload or wake Lucian and observe live rendering.
 
 **Status:** Active public-safe breadcrumb root  
 **Last updated:** 2026-07-28  
