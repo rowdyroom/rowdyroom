@@ -8,6 +8,10 @@
 - Lucian's installed atlas remained unchanged at SHA-256 `9fd0ecd64ab9b09513cbf25b039bfb3e6bcdf90cc401858b9209ace455ad7e79`.
 - Validator and Bob visual review passed. No new repair was required.
 - No new Bob behavior, tool, permission, or production automation was activated.
+- Protected authority: `rowdy-robots/bob-training`, version 1, history ID 270, SHA-256 `8a91e3b5bc0e6462a27abe241f824af9bf7be802dc25fd11490efc6b1e8557a7`.
+- Verification run `3b2e5141-b4e4-4079-b00a-d24977f3182d`: checks 259–267, 7 pass, 2 warn, 0 fail.
+- Recovery archive `Bob_Lucian_v2_Retrospective_Training_Recovery_2026-07-28.zip`: SHA-256 `ecef60030da48d4e5c483c3ea2e0ab780280ef0351144f559c08dc9300132dc3`, 15/15 entries verified.
+- AI Start submission `pending_20260728_145319_3cf4289a` was saved for review; proposed passcode `0003` is not official until approved.
 - Live Lucian rendering after reload or wake remains Recovery required.
 
 ## 2026-07-28 — Lucian v2 visual pet upgrade
