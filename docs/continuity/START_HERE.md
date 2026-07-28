@@ -1,5 +1,16 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-07-28 — Bob Rowdy Robot Lucian v2 retrospective training
+
+- Bob was omitted from the original Lucian v2 build despite Roger's instruction; the record does not claim otherwise.
+- Bob completed a retrospective audit, workflow reconstruction, fresh-validator review, and his own visual inspection of the completed animation and direction sheets.
+- Public authority: `docs/rowdy-robots/BOB_TRAINING.md`, commit `31ae64b3b68281d71359e0c6f445b008f2c74acd`.
+- Installed Lucian atlas remained v2, 1536 x 2288, SHA-256 `9fd0ecd64ab9b09513cbf25b039bfb3e6bcdf90cc401858b9209ace455ad7e79`.
+- Strict validator and Bob visual inspection passed; all four cardinal gates and the 16-direction clockwise loop read correctly.
+- Scope boundary: training record only; no new Bob behavior, tool, permission, or production automation was activated.
+- Bob's visual-pet continuity record remains on branch `bob-v2-continuity-2026-07-28`, not `main`.
+- Recovery required: live Lucian rendering after reload or wake remains unobserved.
+
 **Status:** Active public-safe breadcrumb root  
 **Last updated:** 2026-07-28  
 **Owner:** Roger Jamsek
