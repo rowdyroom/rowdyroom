@@ -1,5 +1,15 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-28 — Bob Rowdy Robot trained from Lucian v2 build
+
+- Corrected the original omission: Bob did not perform the Lucian v2 build and is not credited with it.
+- Bob completed retrospective Bot Builder training by reconstructing the build and repair workflow, reviewing a fresh strict validator result, and personally inspecting the final extended animation and 16-direction sheets.
+- Added public training record `docs/rowdy-robots/BOB_TRAINING.md` at commit `31ae64b3b68281d71359e0c6f445b008f2c74acd`.
+- Lucian's installed atlas remained unchanged at SHA-256 `9fd0ecd64ab9b09513cbf25b039bfb3e6bcdf90cc401858b9209ace455ad7e79`.
+- Validator and Bob visual review passed. No new repair was required.
+- No new Bob behavior, tool, permission, or production automation was activated.
+- Live Lucian rendering after reload or wake remains Recovery required.
+
 ## 2026-07-28 — Lucian v2 visual pet upgrade
 
 - Installed Lucian's Codex visual pet as v2 with 9 standard animation rows and 16 clockwise look directions.
