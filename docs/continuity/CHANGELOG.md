@@ -1,5 +1,17 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-28 — Lucian v2 visual pet upgrade
+
+- Installed Lucian's Codex visual pet as v2 with 9 standard animation rows and 16 clockwise look directions.
+- Public authority: `docs/pets/LUCIAN_PET.md`, commit `a92e2f9411774a75adcda6f167c8e6c2c21ba630`.
+- Installed sprite: 1536 x 2288, SHA-256 `9fd0ecd64ab9b09513cbf25b039bfb3e6bcdf90cc401858b9209ace455ad7e79`.
+- Protected authority: `pets/lucian`, version 1, history ID 269, SHA-256 `1d92fa93c30939870c78efbfba5f9a9e00fc24c33c41379a234822c18e34682b`.
+- Verification: run `3358596a-e81b-40c9-a676-6b82ffb7059f`, checks 250–258: 8 pass, 1 warn, 0 fail. Cardinal direction gates and independent visual QA passed; 067.5, 112.5, and 337.5 were documented as minor blind-size ambiguity only.
+- Recovery: `Lucian_v2_Recovery_2026-07-28.zip`, SHA-256 `f9fc131860f478b74fc5be6c146fef15150f4a1ee97194e7aec256028187d23b`, 14 entries.
+- Scope boundary: visual package only. No behavior, tool, permission, Bob Rowdy Robot runtime, or worker runtime was activated.
+- Recovery required: live in-app rendering after reload or wake remains to be observed.
+- Next safe action: reload or wake Lucian and visually confirm idle, active-work, and pointer-following directions.
+
 ## 2026-07-22 — Jessica movement revision 2026-07-22.1 installed
 
 Status: Roger approved and authorized implementation of three Jessica pet movements.
