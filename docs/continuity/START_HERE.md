@@ -8,7 +8,7 @@
 - Installed Lucian atlas remained v2, 1536 x 2288, SHA-256 `9fd0ecd64ab9b09513cbf25b039bfb3e6bcdf90cc401858b9209ace455ad7e79`.
 - Strict validator and Bob visual inspection passed; all four cardinal gates and the 16-direction clockwise loop read correctly.
 - Scope boundary: training record only; no new Bob behavior, tool, permission, or production automation was activated.
-- Bob's visual-pet continuity record remains on branch `bob-v2-continuity-2026-07-28`, not `main`.
+- Bob's visual-pet continuity record is merged into `main` through PR #29 at commit `3cafbd9e70b0525d3ee26324078d7956bbf8d5e2`.
 - Protected authority: `rowdy-robots/bob-training`, version 1, history ID 270, SHA-256 `8a91e3b5bc0e6462a27abe241f824af9bf7be802dc25fd11490efc6b1e8557a7`.
 - Verification: run `3b2e5141-b4e4-4079-b00a-d24977f3182d`, checks 259–267: 7 pass, 2 warn, 0 fail.
 - Recovery: `outputs/Bob_Lucian_v2_Retrospective_Training_Recovery_2026-07-28.zip`, SHA-256 `ecef60030da48d4e5c483c3ea2e0ab780280ef0351144f559c08dc9300132dc3`, 15/15 entries verified.
@@ -36,7 +36,7 @@ Start every Rowdy Room task here after reading the complete Operator Law. Do not
 ## 2026-07-28 — Bob v2 looking-direction upgrade
 
 - Change: upgraded installed Codex pet `bob` to sprite version 2 with an 8 x 11 atlas and 16 clockwise looking directions.
-- Public-safe authority: `docs/pets/BOB_PET.md` and `docs/pets/START_HERE.md` on branch `bob-v2-continuity-2026-07-28`.
+- Public-safe authority: `docs/pets/BOB_PET.md` and `docs/pets/START_HERE.md` on `main`, merged through PR #29 at commit `3cafbd9e70b0525d3ee26324078d7956bbf8d5e2`.
 - Installed sprite: 1536 x 2288 WebP with alpha, SHA-256 `6d48c593f1fdd90c584cd3c1864aa60865c96cbd655af14103ae40f1ebe557b4`.
 - Verification: installed atlas passed with zero errors, zero warnings, and zero transparent-RGB residue; cardinal direction hard gates and labeled loop review passed.
 - Recovery: `Bob_v2_Look_Directions_Recovery_2026-07-28.zip`, SHA-256 `23e3a41b7e90e6280fcc41bd5fe86e8085a0bcf554b161187e268e68c160f29d`.
