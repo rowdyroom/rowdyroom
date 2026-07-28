@@ -31,6 +31,19 @@ Use this area for durable, public-safe records about Codex pets and their associ
 - Scope boundary: visual package only. No behavior, tool, permission, Bob Rowdy Robot runtime, or worker runtime was activated.
 - Recovery required: live in-app rendering after reload or wake remains to be observed.
 - Next safe action: reload or wake Lucian and visually confirm idle, active-work, and pointer-following directions.
+## 2026-07-28 — Bob v2 looking-direction upgrade
+
+- Upgraded installed pet `bob` from a legacy 8 x 9 atlas to Codex sprite version 2.
+- Bob's current public-safe record is [`BOB_PET.md`](BOB_PET.md).
+- Installed atlas: 1536 x 2288, 8 x 11 cells, 16 clockwise looking directions.
+- Installed spritesheet SHA-256: `6d48c593f1fdd90c584cd3c1864aa60865c96cbd655af14103ae40f1ebe557b4`.
+- Structural validation passed with zero errors, zero warnings, and zero transparent-RGB residue.
+- Cardinal direction hard gates passed; the full direction loop passed labeled review.
+- Recovery archive: `Bob_v2_Look_Directions_Recovery_2026-07-28.zip`, SHA-256 `23e3a41b7e90e6280fcc41bd5fe86e8085a0bcf554b161187e268e68c160f29d`.
+- Continuity recovery: `Bob_v2_Continuity_Update_2026-07-28.zip`, SHA-256 `dbe0973724a55875fca371663a5455125c0ca7e70d17d3fb8e4fa24400b8a6c9`.
+- AI Start submission: `pending_20260728_170702_fa2a792b`, pending review under the existing proposed Bob passcode `0003`; not official until approved.
+- Scope: visual pet package only; no behavior, skill, workflow, tool, integration, or permission changed.
+- Recovery required: live Codex runtime animation smoke test.
 
 ## 2026-07-22 — Jessica movement revision 2026-07-22.1
 
@@ -57,6 +70,7 @@ Use this area for durable, public-safe records about Codex pets and their associ
 
 | Identity | Public record | Profile state | Protected record |
 |---|---|---|---|
+| Bob / `bob` | [`BOB_PET.md`](BOB_PET.md) | Installed visual pet package v2 with 16 looking directions; no behavioral skill attached by this update | Not applicable; public-safe visual package facts only |
 | Jessica the Slave Driver / `$jessica-assistant` | [`JESSICA_ASSISTANT.md`](JESSICA_ASSISTANT.md) | Profile v1.3; two approved behavior/configuration decisions; three approved visual movements; all other design areas are working draft | `pets/jessica-assistant` |
 
 ## Jessica approved state

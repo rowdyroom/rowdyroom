@@ -25,6 +25,21 @@
 - Scope boundary: visual package only. No behavior, tool, permission, Bob Rowdy Robot runtime, or worker runtime was activated.
 - Recovery required: live in-app rendering after reload or wake remains to be observed.
 - Next safe action: reload or wake Lucian and visually confirm idle, active-work, and pointer-following directions.
+## 2026-07-28 — Bob upgraded to Codex pet v2 with looking directions
+
+Status: Installed and structurally verified.
+
+- Upgraded local Codex pet `bob` from a legacy 8 x 9 atlas to sprite version 2.
+- Installed an 8 x 11, 1536 x 2288 WebP atlas with all 16 clockwise looking directions.
+- Installed spritesheet SHA-256: `6d48c593f1fdd90c584cd3c1864aa60865c96cbd655af14103ae40f1ebe557b4`.
+- Standard frame inspection and installed atlas validation passed with zero errors, zero warnings, and zero transparent-RGB residue.
+- Cardinal direction hard gates passed; reviewed continuity warnings did not reveal reversal, clipping, identity break, attachment break, or scale pop.
+- Preserved the original Bob v1 package and the installed v2 package in `Bob_v2_Look_Directions_Recovery_2026-07-28.zip`, SHA-256 `23e3a41b7e90e6280fcc41bd5fe86e8085a0bcf554b161187e268e68c160f29d`.
+- Preserved the public-safe continuity update in `Bob_v2_Continuity_Update_2026-07-28.zip`, SHA-256 `dbe0973724a55875fca371663a5455125c0ca7e70d17d3fb8e4fa24400b8a6c9`.
+- Saved AI Start submission `pending_20260728_170702_fa2a792b` for review under the existing proposed Bob passcode `0003`; it is not official until approved.
+- Added `docs/pets/BOB_PET.md` and updated both pets and root continuity breadcrumbs.
+- No behavior, assistant skill, workflow, tool, external integration, or permission was activated or changed.
+- Live Codex runtime animation smoke testing remains Recovery required.
 
 ## 2026-07-22 — Jessica movement revision 2026-07-22.1 installed
 
