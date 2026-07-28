@@ -1,5 +1,15 @@
 # Pets Continuity - START HERE
 
+## 2026-07-28 — Bob Rowdy Robot Lucian v2 training
+
+- Bob did not perform the original Lucian build; he completed a documented retrospective training pass after the omission was identified.
+- Training authority: [`docs/rowdy-robots/BOB_TRAINING.md`](../rowdy-robots/BOB_TRAINING.md), commit `31ae64b3b68281d71359e0c6f445b008f2c74acd`.
+- Bob reviewed the fresh strict v2 validation and personally passed the final animation and 16-direction visual sheets.
+- Lucian's installed sprite remains unchanged at SHA-256 `9fd0ecd64ab9b09513cbf25b039bfb3e6bcdf90cc401858b9209ace455ad7e79`.
+- No new behavior, tool, permission, or production automation was activated.
+- Bob's v2 visual-pet record remains on branch `bob-v2-continuity-2026-07-28`, not `main`.
+- Live Lucian rendering after reload or wake remains Recovery required.
+
 **Status:** Active public-safe pets breadcrumb root  
 **Last updated:** 2026-07-28
 
