@@ -33,6 +33,18 @@ Start every Rowdy Room task here after reading the complete Operator Law. Do not
 - Scope boundary: visual package only. No behavior, tool, permission, Bob Rowdy Robot runtime, or worker runtime was activated.
 - Recovery required: live in-app rendering after reload or wake remains to be observed.
 - Next safe action: reload or wake Lucian and visually confirm idle, active-work, and pointer-following directions.
+## 2026-07-28 — Bob v2 looking-direction upgrade
+
+- Change: upgraded installed Codex pet `bob` to sprite version 2 with an 8 x 11 atlas and 16 clockwise looking directions.
+- Public-safe authority: `docs/pets/BOB_PET.md` and `docs/pets/START_HERE.md` on branch `bob-v2-continuity-2026-07-28`.
+- Installed sprite: 1536 x 2288 WebP with alpha, SHA-256 `6d48c593f1fdd90c584cd3c1864aa60865c96cbd655af14103ae40f1ebe557b4`.
+- Verification: installed atlas passed with zero errors, zero warnings, and zero transparent-RGB residue; cardinal direction hard gates and labeled loop review passed.
+- Recovery: `Bob_v2_Look_Directions_Recovery_2026-07-28.zip`, SHA-256 `23e3a41b7e90e6280fcc41bd5fe86e8085a0bcf554b161187e268e68c160f29d`.
+- Continuity recovery: `Bob_v2_Continuity_Update_2026-07-28.zip`, SHA-256 `dbe0973724a55875fca371663a5455125c0ca7e70d17d3fb8e4fa24400b8a6c9`.
+- AI Start: submission `pending_20260728_170702_fa2a792b` saved as pending review under proposed Bob passcode `0003`; it is not official until approved.
+- Private authority: not applicable; this record contains only public-safe visual-package facts and activates no behavior or permissions.
+- Remaining Recovery required: live Codex runtime animation smoke test.
+- Next safe action: visually verify Bob when next displayed in Codex; retain the validated package unless a specific runtime defect appears.
 
 ## 2026-07-22 — Jessica movement revision 2026-07-22.1
 
@@ -99,6 +111,11 @@ GitHub readback confirms PR #28 is closed and merged. It is no longer a continui
 ## Pets continuity
 
 - Pets root: [`docs/pets/START_HERE.md`](../pets/START_HERE.md)
+- Bob public-safe visual record: [`docs/pets/BOB_PET.md`](../pets/BOB_PET.md), installed sprite version 2 with 16 looking directions
+- Bob installed spritesheet SHA-256: `6d48c593f1fdd90c584cd3c1864aa60865c96cbd655af14103ae40f1ebe557b4`
+- Bob recovery archive: `Bob_v2_Look_Directions_Recovery_2026-07-28.zip`, SHA-256 `23e3a41b7e90e6280fcc41bd5fe86e8085a0bcf554b161187e268e68c160f29d`
+- Bob continuity recovery: `Bob_v2_Continuity_Update_2026-07-28.zip`, SHA-256 `dbe0973724a55875fca371663a5455125c0ca7e70d17d3fb8e4fa24400b8a6c9`
+- Bob AI Start mission submission: `pending_20260728_170702_fa2a792b`, pending review under proposed passcode `0003`
 - Jessica public-safe profile: [`docs/pets/JESSICA_ASSISTANT.md`](../pets/JESSICA_ASSISTANT.md), profile v1.3
 - Approved Jessica decisions: optional personalization inheritance is NONE; durable records are required for material Jessica updates
 - All proposed personality traits, behaviors, expert roles, workflows, source preferences, and example-command behavior remain inactive working draft
