@@ -1,7 +1,7 @@
 # Rowdy Room Current State
 
 **Status:** Active public-safe handoff record  
-**Last updated:** 2026-07-22  
+**Last updated:** 2026-07-30  
 **Owner:** Roger Jamsek
 
 Read this after the complete Operator Law, `docs/continuity/START_HERE.md`, and the Project Bible. Missing or contradictory facts remain **Recovery required**.
@@ -9,6 +9,10 @@ Read this after the complete Operator Law, `docs/continuity/START_HERE.md`, and 
 ## Active project continuation
 
 The current product continuation is **Build Portable AI Computer**.
+
+### 2026-07-30 operational confirmation
+
+Roger confirmed that he fixed the CPU cooler, the computer is operational, and temperatures observed in Radiograph look good. This is a user-confirmed operational result; exact temperature readings and representative show, TikTok Live Studio, local-AI, stability, and extended thermal tests remain **Recovery required**. This update does not confirm the currently installed case, GPU, exact CPU-cooler model, drive layout, fan plan, or PSU-clearance result.
 
 - Donor system: Roger's current working main production PC.
 - Current donor baseline: Ryzen 7 5700X, MSI MAG B550 TOMAHAWK MAX WIFI, 48 GB RAM, RTX 3070, about 2.27 TB storage, Windows 11 Pro.
@@ -78,11 +82,12 @@ Purchase-save verification: local recovery archive `Rowdy_Room_Portable_PC_Purch
 ## Recovery required
 
 - physical receipt and inspection of the purchased QUBE 540 and ASUS Dual RTX 5060 Ti 16GB
-- exact installed CPU-cooler model and height
+- exact installed CPU-cooler model; the cooler is fixed and the computer is operational by Roger confirmation
 - current drive layout and desired drive retention
+- currently installed case and GPU
 - RM1200x SHIFT side-cable clearance in the QUBE 540
 - required case-fan plan
-- post-install GPU, display-output, TikTok Live Studio, local-AI workload, stability, and temperature tests
+- exact Radiograph readings and representative GPU, display-output, TikTok Live Studio, local-AI workload, stability, and extended temperature tests
 - 14 partially identified equipment lines
 - 63 operating-condition tests
 - exact live-event projector source, content, and signal path
@@ -91,4 +96,4 @@ Purchase-save verification: local recovery archive `Rowdy_Room_Portable_PC_Purch
 - workbook regeneration before the next equipment intake or workbook-led edit
 ## Exact next product action
 
-Identify the CPU cooler currently installed on the Ryzen 7 5700X and document the current drive layout. Then verify cooler height, RM1200x SHIFT side-cable clearance, drive placement, and the QUBE 540 fan plan before deciding whether any additional parts are needed. Do not install the new GPU or move the production system without separate authorization.
+Confirm the currently installed case, GPU, CPU-cooler model, drive layout, and fan/PSU-clearance state. Then capture exact Radiograph readings during representative show, TikTok Live Studio, and local-AI workloads before closing the portable-computer build. Do not infer any unconfirmed installed part from the system-level operational report.
