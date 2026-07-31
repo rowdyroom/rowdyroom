@@ -1,5 +1,16 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-07-31 — Lucian Command Center and Rowdy Bot Voice Studio
+
+- Compact local Lucian chat, spoken replies, and a reusable floating launcher are verified on the same computer as RACC.
+- The private Voice Studio uses a local CUDA neural engine, supports future Rowdy bot profiles, and requires voice ownership/permission plus separate confirmation for each generation.
+- Primary acceptance WAV: 4.52 seconds, 217,004 bytes, SHA-256 `a1e8bb5bc15eabd324e9e1ceb77cbf9fcce08f8099a5b0de7cd558bcb70ba2ec`.
+- Verification: 58/58 automated tests; compact chat, spoken reply, Voice Studio, and floating launcher browser checks passed with zero console errors.
+- Public authority: `docs/rowdy-robots/LUCIAN_COMMAND_CENTER_VOICE_STUDIO.md`, commit `b33f4683469926864928d4a310c293f942091a8d`.
+- Recovery: `RACC_Lucian_Command_Center_Voice_Studio_v0.5_2026-07-31.zip`, SHA-256 `3129172ad946947d17df0e26a8315e14f93cd9f317ee23eddfb38704405c855f`.
+- Recovery required: authenticated HTTPS access for other LAN devices and Roger's final personalized Lucian reference choice.
+- Next safe action: audition the built-in voice or record an authorized 4-30 second reference, then return to Reviewer v0.1.
+
 ## 2026-07-30 — Portable computer cooler fixed and system operational
 
 - Roger confirmed that he fixed the CPU cooler, the Ryzen 7 5700X computer is operational, and temperatures observed in Radiograph look good.
