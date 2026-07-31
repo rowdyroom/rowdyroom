@@ -8,6 +8,12 @@ Read this after the complete Operator Law, `docs/continuity/START_HERE.md`, and 
 
 ## Active project continuation
 
+### 2026-07-31 Lucian local communication and voice
+
+Roger's priority override is complete: a compact local Lucian Command Center, reusable floating launcher, and private Rowdy Bot Voice Studio are implemented and verified. The Voice Studio runs a local CUDA neural engine, requires ownership/permission for reference voices, and requires separate confirmation for each generation. The primary 24 kHz acceptance WAV is 4.52 seconds, 217,004 bytes, SHA-256 `a1e8bb5bc15eabd324e9e1ceb77cbf9fcce08f8099a5b0de7cd558bcb70ba2ec`. The automated suite passed 58/58, and browser checks passed with zero console errors.
+
+The same-computer launcher is verified. Cross-device LAN access remains **Recovery required** until authenticated HTTPS access, firewall scope, and device enrollment are designed. Public detail: [Lucian Command Center and Rowdy Bot Voice Studio](../rowdy-robots/LUCIAN_COMMAND_CENTER_VOICE_STUDIO.md).
+
 The current product continuation is **Build Portable AI Computer**.
 
 ### 2026-07-30 operational confirmation
