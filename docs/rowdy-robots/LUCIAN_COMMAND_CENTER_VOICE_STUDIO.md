@@ -22,11 +22,9 @@
 - Voice references, generated audio, local database contents, and machine-specific paths remain private and are not stored in this public repository.
 - The local service remains loopback-only. It is not publicly exposed.
 
-## Remaining gate
+## Earlier same-computer gate resolved
 
-The same-computer launcher is verified. Secure use from other LAN devices remains **Recovery required** until authenticated HTTPS access, firewall scope, and device enrollment are designed and tested.
-
-Roger may next audition the built-in voice or record an authorized 4-30 second personalized reference. After that choice, the approved RACC family sequence returns to Reviewer v0.1.
+The authenticated HTTPS gateway and firewall scope described below resolve the earlier host-side LAN design gate. Physical enrollment and use from a separate approved device remain unverified.
 
 ## Secure private-network access
 
