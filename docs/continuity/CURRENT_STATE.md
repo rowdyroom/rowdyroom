@@ -1,5 +1,14 @@
 # Rowdy Room Current State
 
+## Lucian verified storage migration — 2026-07-31
+
+- Active local AI runtimes and mutable RACC data use the dedicated SSD; generated media and recovery copies use the separate larger storage drive.
+- Source, active, and recovery inventories matched exactly, including 57 large files and 48,783,460,155 bytes under three-way SHA-256 verification.
+- Live acceptance passed 61/61 tests, local and secure-LAN model replies, real voice/image/MP4 generation, and a verified database backup.
+- Superseded C-drive AI payloads were removed only after acceptance, reclaiming approximately 48.8 GB.
+- Public storage record commit: `308b273d86198de2ddaee08be50c69fea2dc28ff`; protected record version 3, history 341, SHA-256 `003e6fca2557f65f3fa7f406463104e55719a8a7336734f65bf917c70c48ec12`.
+
+
 ## Lucian secure private-network access — 2026-07-31
 
 - The secure gateway is active on the host's Windows Private network and proxies only to loopback RACC.
