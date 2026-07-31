@@ -1,5 +1,18 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-07-30 — Portable computer cooler fixed and system operational
+
+- Roger confirmed that he fixed the CPU cooler, the Ryzen 7 5700X computer is operational, and temperatures observed in Radiograph look good.
+- The report is user-confirmed and does not include exact temperature values.
+- Public authority: `docs/continuity/CURRENT_STATE.md` commit `e6aa9771775f5027a7f8f959561db3f02d50e684`; `docs/continuity/EQUIPMENT_INVENTORY.md` commit `afc114cb59d1579b284485f33ff7459e35617c95`; `docs/continuity/BUILD_PORTABLE_AI_COMPUTER_HANDOFF.md` commit `27d917113e5c5631de41b06c9008f664b3ffc8f0`; changelog commit `3c27f771603b88cff0757df39db7d46890f66fc0`.
+- Protected equipment authority: `main-production-pc-ryzen-5700x`, version 2, history ID 758, status `working`, SHA-256 `970db8a70a84a8681d446685dd1d1b723c799fe12feb986fd2f732dcc9429808`.
+- Protected current-state authority: `rowdy-room/current-state`, version 33, history ID 313, SHA-256 `e3322a8dca403b77f371e8bc07df84c99346693e58eecaa9132418e01740c82f`.
+- Protected recovery authority: `rowdy-room/equipment-recovery`, version 18, history ID 315, SHA-256 `bb8ecbfa3918308edba94c18e84e3b3cbc54bdf77ddcb4179ddcbed8e5d17c44`.
+- Verification run: `687169e8-b4b5-4974-8e42-f74207e49c2b`.
+- Recovery: `C:\\Users\\Roger\\Documents\\Codex\\2026-07-30\\build-4\\outputs\\Rowdy_Room_Portable_PC_Operational_Update_2026-07-30.zip`, SHA-256 `66acdd78a4fcc0b4fae38dd47f6a34a239413900a15908f5e730fa546ec1ba42`, one verified entry; source record SHA-256 `3ed4364b27d8d50d8f9fd6cd2ae38efd52456dc8be899876e58643767af7871d`.
+- Recovery required: exact temperature readings; currently installed case and GPU; exact CPU-cooler model; drive layout; fan plan; RM1200x SHIFT clearance; representative GPU, display-output, TikTok Live Studio, local-AI, stability, and extended temperature tests.
+- Exact next action: confirm the installed case, GPU, cooler model, drive layout, fan/PSU-clearance state, and exact Radiograph readings under representative workloads before closing the build.
+
 ## 2026-07-28 — Bob Rowdy Robot Lucian v2 retrospective training
 
 - Bob was omitted from the original Lucian v2 build despite Roger's instruction; the record does not claim otherwise.
@@ -17,7 +30,7 @@
 - Next safe action: approve or reject the pending AI Start registration, then reload or wake Lucian and observe live rendering.
 
 **Status:** Active public-safe breadcrumb root  
-**Last updated:** 2026-07-28  
+**Last updated:** 2026-07-30  
 **Owner:** Roger Jamsek
 
 Start every Rowdy Room task here after reading the complete Operator Law. Do not rely on chat memory. Missing or contradictory facts remain **Recovery required**.
