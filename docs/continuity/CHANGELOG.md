@@ -1,5 +1,14 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-31 — Lucian Command Center and Voice Studio verified
+
+- Added a compact persistent local Lucian communication surface plus a floating launcher for Roger-controlled local pages and extensions.
+- Added a private local Rowdy Bot Voice Studio with a built-in Lucian neural profile and permission-gated reference profiles for future bots.
+- Verified CUDA generation on the RTX 5060 Ti, two real watermarked WAV outputs, 58/58 automated tests, compact-chat response, spoken-reply playback, Voice Studio rendering, launcher embedding, and zero browser console errors.
+- Preserved the public/private split: public records contain only architecture and verification facts; reference recordings, generated voice content, local database contents, and machine paths remain private.
+- Kept cross-device LAN access recovery-required pending authenticated HTTPS and device controls.
+- Public record: `docs/rowdy-robots/LUCIAN_COMMAND_CENTER_VOICE_STUDIO.md`.
+
 ## 2026-07-30 — Portable computer cooler fixed and system operational
 
 - Roger confirmed that he fixed the CPU cooler and the Ryzen 7 5700X computer is operational.
