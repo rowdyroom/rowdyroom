@@ -1,7 +1,7 @@
 # Rowdy Room Current State
 
 **Status:** Active public-safe handoff record  
-**Last updated:** 2026-07-30  
+**Last updated:** 2026-07-31  
 **Owner:** Roger Jamsek
 
 Read this after the complete Operator Law, `docs/continuity/START_HERE.md`, and the Project Bible. Missing or contradictory facts remain **Recovery required**.
