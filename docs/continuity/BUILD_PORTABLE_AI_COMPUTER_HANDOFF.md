@@ -1,8 +1,12 @@
 # Build Portable AI Computer — Verified Handoff
 
-Date: 2026-07-21  
+Date: 2026-07-30  
 Repository: `rowdyroom/rowdyroom`  
 Branch: `main`
+
+## 2026-07-30 operational update
+
+Roger confirmed that he fixed the CPU cooler, the computer is operational, and current temperatures observed in Radiograph look good. This closes the prior cooler-failure blocker at the system level. Exact readings and representative show, TikTok Live Studio, local-AI, stability, and extended thermal tests remain **Recovery required**. The currently installed case, GPU, exact cooler model, drive layout, fan plan, and RM1200x SHIFT clearance were not confirmed by this update.
 
 ## Mandatory startup
 
@@ -61,11 +65,12 @@ No further purchase should be recommended until the remaining physical fit and c
 ## Recovery required
 
 - Receipt and physical verification of the purchased Cooler Master QUBE 540 and ASUS Dual RTX 5060 Ti 16GB.
-- Exact installed CPU-cooler model and height.
+- Exact installed CPU-cooler model; the cooler is fixed and the computer is operational by Roger confirmation.
 - Current drive layout and desired drive retention.
+- Currently installed case and GPU.
 - QUBE 540 clearance for the RM1200x SHIFT side-mounted cables.
 - Required case-fan plan and post-build temperature targets.
-- Post-install GPU, display-output, TikTok Live Studio, local-AI workload, stability, and temperature tests.
+- Exact Radiograph readings and representative GPU, display-output, TikTok Live Studio, local-AI workload, stability, and extended temperature tests.
 - Physical confirmation of Yamaha `AG06MK` versus `AG06MK2`.
 - Fourteen partially identified inventory lines.
 - Sixty-three operating-condition tests.
@@ -74,4 +79,4 @@ No further purchase should be recommended until the remaining physical fit and c
 - Exact live-event projector source, content, and signal path.
 ## Exact next product action
 
-Identify the CPU cooler currently installed on the Ryzen 7 5700X and document the current drive layout. Then verify cooler height, RM1200x SHIFT side-cable clearance, drive placement, and the QUBE 540 fan plan before deciding whether any additional parts are needed. Do not install the new GPU or move the production system until Roger separately authorizes the build work.
+Confirm the currently installed case, GPU, CPU-cooler model, drive layout, fan plan, and RM1200x SHIFT clearance. Then record exact Radiograph readings during representative show, TikTok Live Studio, and local-AI workloads before closing the build. Do not infer component installation from the system-level operational report.
