@@ -1,5 +1,15 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-31 — Lucian verified F/D storage migration
+
+- Moved active local AI runtimes and mutable RACC data off C to the dedicated SSD and routed generated media/recovery to the separate larger storage drive.
+- Preserved private LAN credentials in their existing protected host location.
+- Verified exact source/active/recovery inventories and 57 large-file SHA-256 comparisons covering 48,783,460,155 bytes.
+- Passed 61/61 automated tests, exact local and secure-LAN replies, real neural voice, PNG and H.264 MP4 generation, and a hash-verified post-migration database backup.
+- Removed superseded C-drive AI payloads only after acceptance and reclaimed approximately 48.8 GB.
+- Public record commit: `308b273d86198de2ddaee08be50c69fea2dc28ff`; protected record version 3, history 341, SHA-256 `003e6fca2557f65f3fa7f406463104e55719a8a7336734f65bf917c70c48ec12`; check run `3aebb941-e937-4d2c-8be9-d4e8bf3ab8e3` passed 12/12.
+
+
 ## 2026-07-31 — Lucian secure private-network access
 
 - Added a password-protected HTTPS gateway for Roger-approved local-subnet devices while retaining loopback-only RACC, model, voice, and media services.
