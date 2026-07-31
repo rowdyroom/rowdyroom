@@ -1,5 +1,16 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-07-31 — Lucian secure private-network access
+
+- Host-side authenticated HTTPS access is implemented and verified without exposing RACC's raw loopback ports.
+- Windows Firewall scope is Private profile plus `LocalSubnet`; there is no router, port-forward, Public-profile, or public-internet change.
+- Acceptance passed trusted TLS, owner login, session/origin controls, exact `LAN_OK`, browser rendering, zero console errors, and 61/61 automated tests.
+- Public authority: `docs/rowdy-robots/LUCIAN_COMMAND_CENTER_VOICE_STUDIO.md`, commit `b980355ad6c1f6aa158b05b525e338cc562a113b`.
+- Recovery: `RACC_Lucian_Secure_LAN_v0.6_2026-07-31.zip`, SHA-256 `77f27604c4ed34575ec80169c65904716e2afc0808e87290199ba26cb8c7769b`.
+- Recovery required: install the public Lucian CA certificate on one Roger-approved second device and observe a real login/reply.
+- Next safe action: complete that physical device smoke test, then return to the authorized voice choice and Reviewer v0.1.
+
+
 ## 2026-07-31 — Lucian Command Center and Rowdy Bot Voice Studio
 
 - Compact local Lucian chat, spoken replies, and a reusable floating launcher are verified on the same computer as RACC.
