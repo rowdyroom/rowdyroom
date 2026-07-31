@@ -1,10 +1,22 @@
 # Rowdy Room Equipment Inventory
 
-**Status:** Durable inventory active; 2026-07-21 project-plan correction verified  
-**Authoritative inventory lines:** 66  
-**Physical units represented:** 91
+**Status:** Durable inventory active; 2026-07-30 operational correction verified  
+**Authoritative inventory lines:** 68  
+**Physical units represented:** 93
 
 Supabase `public.rr_equipment_inventory` is the authoritative private inventory. This file is a public-safe summary and contains no serial numbers, private locations, raw photographs, purchase details, or private notes.
+
+## 2026-07-30 main-computer operational update
+
+Roger confirmed that the CPU cooler was fixed, the Ryzen 7 5700X computer is operational, and temperatures observed in Radiograph look good. The protected row remains user-confirmed and working. Exact temperature readings, exact cooler model, representative workload/stability testing, and the currently installed case/GPU state remain **Recovery required**.
+
+Protected evidence:
+
+- equipment key `main-production-pc-ryzen-5700x`
+- version `2`
+- content SHA-256 `970db8a70a84a8681d446685dd1d1b723c799fe12feb986fd2f732dcc9429808`
+- history ID `758`
+- operational status `working`
 
 ## Current verification state
 
@@ -40,8 +52,9 @@ The portable AI computer will be built from the owned working main production PC
 - RTX 3070 8 GB currently installed
 - about 2.27 TB storage
 - Windows 11 Pro
-- version `1`
-- content SHA-256 `a471bea56f4470994ae2464e790c47c5534697ddac20b0c7ed8be7e4264cac43`
+- version `2`
+- content SHA-256 `970db8a70a84a8681d446685dd1d1b723c799fe12feb986fd2f732dcc9429808`
+- CPU cooler fixed; system operational; Radiograph temperatures look good by Roger observation
 
 Roger confirmed purchase of these parts for the build:
 
