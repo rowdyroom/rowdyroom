@@ -1,6 +1,6 @@
 # Lucian Command Center and Rowdy Bot Voice Studio
 
-**Status:** Local-PC implementation verified  
+**Status:** Secure host-side LAN implementation verified  
 **Date:** 2026-07-31  
 **Owner:** Roger Jamsek
 
@@ -27,3 +27,17 @@
 The same-computer launcher is verified. Secure use from other LAN devices remains **Recovery required** until authenticated HTTPS access, firewall scope, and device enrollment are designed and tested.
 
 Roger may next audition the built-in voice or record an authorized 4-30 second personalized reference. After that choice, the approved RACC family sequence returns to Reviewer v0.1.
+
+## Secure private-network access
+
+- A separate HTTPS gateway now exposes the Command Center only to Roger-approved devices on the active Windows Private network.
+- RACC, Voice Studio, the local model, and media engines remain loopback-only behind the gateway.
+- Access requires Roger's private password. Sessions use Secure, HttpOnly, SameSite cookies; login attempts are throttled; mutation requests require the exact local origin.
+- Windows Firewall permits TCP 8443 only on the Private profile and from `LocalSubnet`. No router, port-forward, public-profile, or public-internet change was made.
+- Trusted TLS, unauthenticated denial, cross-origin denial, owner login, loopback isolation, exact `LAN_OK` model response, logout, browser rendering, and zero console errors passed. The automated suite passed 61/61.
+- Recovery package: `RACC_Lucian_Secure_LAN_v0.6_2026-07-31.zip`, SHA-256 `77f27604c4ed34575ec80169c65904716e2afc0808e87290199ba26cb8c7769b`.
+- Passwords, private certificate keys, machine addresses, and private configuration remain outside this public repository.
+
+## Remaining secure-LAN gate
+
+A physical login from a separately enrolled Roger-approved phone or tablet has not yet been observed. Device certificate enrollment and that second-device smoke test remain **Recovery required**.
