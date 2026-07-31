@@ -1,5 +1,15 @@
 # Rowdy Room Current State
 
+## Lucian secure private-network access — 2026-07-31
+
+- The secure gateway is active on the host's Windows Private network and proxies only to loopback RACC.
+- Authentication, encrypted sessions, origin/host/private-client gates, login throttling, and Private/LocalSubnet firewall scope passed.
+- RACC and voice ports remain loopback-only; no router or public-internet exposure was added.
+- Host-side HTTPS and browser acceptance passed with exact `LAN_OK`, zero console errors, and 61/61 automated tests.
+- Recovery package SHA-256: `77f27604c4ed34575ec80169c65904716e2afc0808e87290199ba26cb8c7769b`.
+- Physical second-device certificate enrollment and login remain `Recovery required`.
+
+
 **Status:** Active public-safe handoff record  
 **Last updated:** 2026-07-31  
 **Owner:** Roger Jamsek
