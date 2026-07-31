@@ -1,5 +1,14 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-31 — Lucian secure private-network access
+
+- Added a password-protected HTTPS gateway for Roger-approved local-subnet devices while retaining loopback-only RACC, model, voice, and media services.
+- Restricted Windows Firewall access to TCP 8443 on Private networks from `LocalSubnet`; made no public-network or router change.
+- Verified TLS trust, access denial before login, cross-origin denial, secure owner session, raw-port isolation, exact `LAN_OK`, logout, browser UI, zero console errors, and 61/61 tests.
+- Created a secret-free recovery package with source, verified database backup, public device certificate, and setup instructions; SHA-256 `77f27604c4ed34575ec80169c65904716e2afc0808e87290199ba26cb8c7769b`.
+- Left physical second-device enrollment and login `Recovery required` until observed.
+
+
 ## 2026-07-31 — Lucian Command Center and Voice Studio verified
 
 - Added a compact persistent local Lucian communication surface plus a floating launcher for Roger-controlled local pages and extensions.
