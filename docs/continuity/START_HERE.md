@@ -1,5 +1,20 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-07-31 — Lucian verified F/D storage migration
+
+- Active local model, media, voice, and mutable RACC data run from the dedicated SSD; generated media and recovery copies write to the separate larger storage drive.
+- Private LAN credentials remain protected in their existing host location; no credentials or private machine paths are published here.
+- Source, active, and recovery inventories matched exactly. Fifty-seven large files totaling 48,783,460,155 bytes passed three-way SHA-256 verification.
+- Acceptance passed 61/61 automated tests, exact `STORAGE_OK` and secure-LAN `LAN_STORAGE_OK` replies, real neural WAV, real PNG, H.264 MP4, and a verified post-migration database backup.
+- Superseded C-drive AI payloads were removed only after acceptance, reclaiming approximately 48.8 GB.
+- Public authority: `docs/rowdy-robots/LUCIAN_COMMAND_CENTER_VOICE_STUDIO.md`, commit `308b273d86198de2ddaee08be50c69fea2dc28ff`.
+- Protected authority: `rowdy-room/lucian-command-center-voice-studio`, version 3, history 341, SHA-256 `003e6fca2557f65f3fa7f406463104e55719a8a7336734f65bf917c70c48ec12`.
+- Verification run `3aebb941-e937-4d2c-8be9-d4e8bf3ab8e3`: 12 pass, 0 warn, 0 fail.
+- Recovery source archive: `RACC_Source_e461b33_Storage_Migration_2026-07-31.zip`, 160 entries, SHA-256 `1abce8b6b80072211f014531fbee2fd50ae5f87bed3de377228c5337d001c050`.
+- Recovery required remains the physical approved-device smoke test and Roger's personalized Lucian voice choice.
+- Next safe action: complete the approved-device login/reply test, then return to the voice choice and Reviewer v0.1.
+
+
 ## 2026-07-31 — Lucian secure private-network access
 
 - Host-side authenticated HTTPS access is implemented and verified without exposing RACC's raw loopback ports.
