@@ -1,5 +1,15 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-30 — Portable computer cooler fixed and system operational
+
+- Roger confirmed that he fixed the CPU cooler and the Ryzen 7 5700X computer is operational.
+- Roger is monitoring temperatures with Radiograph and reports that they look good; no exact temperature values were supplied.
+- Did not infer the installed case, installed GPU, exact cooler model, drive layout, fan plan, PSU clearance, or completion of representative workload/stability tests.
+- Updated protected equipment key `main-production-pc-ryzen-5700x` to version 2, status `working`, history ID 758, SHA-256 `970db8a70a84a8681d446685dd1d1b723c799fe12feb986fd2f732dcc9429808`.
+- Updated `rowdy-room/current-state` to version 32, history ID 311, SHA-256 `23566ec376e294b5329a84674f69bfa8d945ccd0479a368a4e2163cf378f05d9`.
+- Updated `rowdy-room/equipment-recovery` to version 16, history ID 312, SHA-256 `3b3df81c65874f5cc9bfeaa6af34255c80e02e852b93cb2c15200ffea4e4fba4`.
+- Exact Radiograph readings and representative GPU, display-output, TikTok Live Studio, local-AI, stability, and extended temperature tests remain **Recovery required**.
+
 ## 2026-07-28 — Bob Rowdy Robot trained from Lucian v2 build
 
 - Corrected the original omission: Bob did not perform the Lucian v2 build and is not credited with it.
