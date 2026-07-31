@@ -41,7 +41,7 @@
 - Next safe action: approve or reject the pending AI Start registration, then reload or wake Lucian and observe live rendering.
 
 **Status:** Active public-safe breadcrumb root  
-**Last updated:** 2026-07-30  
+**Last updated:** 2026-07-31  
 **Owner:** Roger Jamsek
 
 Start every Rowdy Room task here after reading the complete Operator Law. Do not rely on chat memory. Missing or contradictory facts remain **Recovery required**.
