@@ -4,6 +4,15 @@
 **Date:** 2026-07-31  
 **Owner:** Roger Jamsek
 
+## Verified storage layout
+
+- Active local model, media, voice, and mutable RACC data run from the dedicated SSD for faster loading.
+- Generated images, MP4 files, WAV files, and RACC backups write to the separate larger storage drive.
+- Private LAN credentials remain in their protected host location and are not published.
+- Source, active, and recovery inventories matched exactly; 57 large files totaling 48,783,460,155 bytes passed three-way SHA-256 verification.
+- Live acceptance passed 61/61 automated tests, exact local and secure-LAN model replies, real neural WAV, real PNG, H.264 MP4, and a hash-verified post-migration database backup.
+- Superseded C-drive AI payloads were removed only after acceptance, reclaiming approximately 48.8 GB.
+
 ## What is working
 
 - A compact Lucian Command Center provides persistent local chat, conversation selection, owner action approvals, and spoken replies.
