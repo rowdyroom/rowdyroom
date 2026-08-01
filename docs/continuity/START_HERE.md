@@ -1,13 +1,13 @@
 # Rowdy Room Continuity — START HERE
 
-## 2026-08-01 — Rowdy Robots local-first mission checkpoint
+## 2026-08-01 — Rowdy Robots full-team mission completion
 
-- Twenty-two local Robot packages are configured; Lucian, Dave, Bob, Rachel, and Sampson form the bounded active core.
-- Dave completed loopback-only model-backed routing with deterministic fail-closed fallback; 11/11 local model tags launched and 69/69 automated tests passed.
-- Google Drive: 78 items inventoried and all 69 files hash-verified locally. Supabase metadata is exported, but full data/storage restore remains **Recovery required**.
-- No cloud deletion occurred. Google Drive, Supabase, and GitHub must remain online.
+- All twenty-two local Robot packages are configured, commissioned through bounded real tasks, and active; dispatcher readback shows 22 available and zero paused.
+- Dave completed loopback-only model-backed routing with deterministic fail-closed fallback; 11/11 local model tags launched and 73/73 automated tests passed.
+- Live health, deterministic backup routing to Sampson, and the reusable Lucian launcher passed.
+- Google Drive and Supabase were intentionally not changed during commissioning. No cloud deletion or Supabase table/SQL change occurred.
 - Public authority: `docs/rowdy-robots/ROWDY_ROBOTS_LOCAL_FIRST_2026-08-01.md`.
-- Next safe action: finish full Supabase data/storage restore and shared-Drive dependency checks; activate paused Robots one at a time after a real task.
+- Completion point: operational team commissioning is complete; cloud restore proof and optional visual/voice personalization are separate future missions.
 
 ## 2026-07-31 — Lucian verified F/D storage migration
 
