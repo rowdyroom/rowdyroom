@@ -1,3 +1,11 @@
+## 2026-08-01 — Roger-directed Control Center staged cleanup
+
+- Removed the Custom Window Desk and model-next-step panel completely.
+- Removed the embedded right-side Rowdy Robots/Lucian chat while preserving the separate round popout launcher.
+- Applied Roger's final layout correction: removed the middle container and all its contents, left the center column open, kept the surrounding rails in place, and centered the top heading.
+- Recorded that a temporary search-side-panel iteration was superseded before closeout and is not active.
+- Passed focused and 86/86 automated tests, live browser geometry, public readback, protected version/history/hash readback, and a 6-entry recovery restore-and-rehash test.
+
 ## 2026-08-01 — Local Chrome Control Center and ComfyUI control
 
 - Repaired the reusable launcher’s local-service resolution and added one bounded ComfyUI ON/OFF control.
