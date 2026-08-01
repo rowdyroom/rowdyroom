@@ -18,7 +18,7 @@ Status: Partial, verified checkpoint
 - Dave is implemented as a deterministic dispatcher and Mission Desk.
 - Dave is not yet a model-backed autonomous worker.
 - The 22 Robot folders are starter records, not proof that 22 AI runtimes are active.
-- Cloud systems remain active sources. No cloud data was deleted or altered.
+- Cloud systems remain active sources. No source data was deleted; only the required GitHub and Supabase continuity breadcrumbs were added.
 - Full restore testing is still required before any cloud retirement decision.
 
 ## Next verified step
