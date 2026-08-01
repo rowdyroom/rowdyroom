@@ -4,6 +4,15 @@
 **Date:** 2026-08-01  
 **Owner:** Roger Jamsek
 
+## 2026-08-01 local Chrome Control Center
+
+- Fixed the reusable launcher so it always targets the local RACC service instead of accidentally treating its own script file as the service address.
+- Added a local Chrome Control Center with Google search, editable quick favorites, direct Chrome-tab launchers for ChatGPT, Gemini, Claude, and Grok, and full-screen local Lucian and Rowdy Bot views.
+- Added one deliberate ComfyUI ON/OFF control. It manages only the fixed local media engine, verifies its state, and does not interrupt queued work.
+- Browser proof: ComfyUI had zero running and pending jobs, then stopped cleanly from the dashboard and restarted ready. The full automated suite passed 84/84.
+- An unpacked Chrome new-tab extension is prepared but **not installed**. Installing it is Roger's separate choice and may conflict with another extension that already overrides Chrome's new tab page.
+- Per-bot Fast/Deep model controls are planned but not activated. The controlled Qwen 27B head-model trial remains the next model decision.
+
 ## 2026-08-01 voice-chat control repair
 
 - Spoken Rowdy Robot conversations route through the already-installed local 8B model with one-at-a-time pooling; normal Robot work models and permissions remain unchanged.
