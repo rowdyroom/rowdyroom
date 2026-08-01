@@ -23,6 +23,15 @@
 - Verification passed: focused server test, 86/86 full automated tests, empty center with zero children, unchanged surrounding-column positions, and a zero-pixel heading-center offset.
 - Recovery: `Rowdy_Control_Center_Staged_Cleanup_2026-08-01_184028.zip`, 6 entries, SHA-256 `FAE2D46AE24FA49A473029A392673A9D6F80A9CDA3EFD050571E5740106B9F30`; restore-and-rehash passed.
 
+## 2026-08-01 full-width fact checker and bare rails
+
+- Stretched the Private Fact Checker to the exact usable browser width with no horizontal overflow.
+- Removed only the visible backgrounds, borders, and shadows around AI Rail, Quick Actions, and the top Title/RACC status area.
+- Preserved their 18-pixel padding, content, controls, and grid positions.
+- Live browser proof: fact checker x=0 and width=1265 against a 1265-pixel usable viewport; AI Rail x=30; Quick Actions x=915; heading-center offset 0; status reached `RACC ready`.
+- Focused server verification and the full 86/86 automated suite passed.
+- Recovery: `Rowdy_Control_Center_Fact_Check_Layout_2026-08-01_185711.zip`, 6 entries, SHA-256 `7DC8B94C905CAB6A2105680D6D4890B3633DA52A6943FCA8CBB871C124CAF421`; restore-and-rehash passed.
+
 ## 2026-08-01 voice-chat control repair
 
 - Spoken Rowdy Robot conversations route through the already-installed local 8B model with one-at-a-time pooling; normal Robot work models and permissions remain unchanged.
