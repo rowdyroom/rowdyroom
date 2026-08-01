@@ -1,5 +1,13 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-07-31 — Rowdy Robots local-first migration checkpoint
+
+- Installed and hash-verified the 22-Robot starter package.
+- Created verified local Drive exports, Git mirrors, bounded Supabase recovery data, SHA-256 manifest, and separate-drive recovery ZIP.
+- Recorded Dave's evidence boundary: deterministic dispatcher implemented; model-backed autonomous worker not implemented.
+- Cloud deletion remains blocked pending full exports, restore drills, and Roger approval.
+- Continuity run: `57633e7b-9eb2-4d67-b7ae-44643313ef66`.
+
 ## 2026-07-31 — Lucian verified F/D storage migration
 
 - Moved active local AI runtimes and mutable RACC data off C to the dedicated SSD and routed generated media/recovery to the separate larger storage drive.
