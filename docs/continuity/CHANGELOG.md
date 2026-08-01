@@ -1,3 +1,11 @@
+## 2026-08-01 — Local Chrome Control Center and ComfyUI control
+
+- Repaired the reusable launcher’s local-service resolution and added one bounded ComfyUI ON/OFF control.
+- Created a local Chrome dashboard with Google search, editable quick favorites, external-AI tab launchers, and full-screen local Rowdy Bot/voice access.
+- Verified dashboard state, one real idle ComfyUI stop/start cycle, and 84/84 automated tests.
+- Prepared, but did not install, an unpacked Chrome new-tab extension. Its installation and any new-tab replacement remains Roger-controlled.
+- Per-bot heavy-model controls remain inactive pending the controlled Qwen 27B test.
+
 # Rowdy Room Continuity Changelog
 
 ## 2026-08-01 — Rowdy Robots full-team commissioning complete
