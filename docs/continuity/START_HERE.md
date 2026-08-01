@@ -1,14 +1,17 @@
 # Rowdy Room Continuity — START HERE
 
-## 2026-08-01 — Local Chrome Control Center and ComfyUI control
+## 2026-08-01 — Roger-directed Control Center staged cleanup
 
-- Local Chrome dashboard provides Google search, editable quick favorites, direct AI-service tab launchers, full-screen local Rowdy Bot/voice access, and a bounded ComfyUI ON/OFF control.
-- ComfyUI stop/start was browser-verified while idle; 84/84 automated tests passed.
-- Public authority: `docs/rowdy-robots/LUCIAN_COMMAND_CENTER_VOICE_STUDIO.md` and `docs/continuity/CHANGELOG.md` on branch `codex/rowdy-control-center-2026-08-01`.
-- Protected authority: `rowdy-room/lucian-command-center-voice-studio` pending this change's private readback.
-- An unpacked new-tab extension is prepared, not installed; an existing Chrome new-tab extension may conflict.
-- Recovery required: physical microphone acceptance and model-selection acceptance remain open.
-- Next safe action: install the prepared extension only if Roger chooses it, then run the controlled Qwen 27B Lucian head-model test.
+- Removed the Custom Window Desk, model-next-step panel, embedded background chat, and the entire middle container with its controls.
+- The middle column is intentionally open and unfilled. AI Rail and Quick Actions remain in place, the round popout launcher remains active, and the Rowdy Control Center heading is centered.
+- A temporary search-side-panel iteration was superseded before closeout and is not active.
+- Verification: focused server test passed, full suite passed 86/86, empty center has zero children and 625 px width, heading-center offset is zero, and surrounding-column positions are unchanged.
+- Public authority: `docs/rowdy-robots/LUCIAN_COMMAND_CENTER_VOICE_STUDIO.md` on branch `codex/rowdy-control-center-2026-08-01`, feature commit `b25edfd37cae917770c06c42b94a4b7dc58588c1`.
+- Protected authority: `rowdy-room/lucian-command-center-voice-studio`, version 6, history 373, SHA-256 `5f2c29ccd011d6d4cac238cddc751590773d4a2fc97d0e4ef3c9f06b7953ea34`.
+- Verification run `361ae4ca-363a-44bd-8b70-9f1d287d06e8`: checks 356-361, 6 pass, 0 warn, 0 fail.
+- Recovery: `Rowdy_Control_Center_Staged_Cleanup_2026-08-01_184028.zip`, 6 entries, SHA-256 `FAE2D46AE24FA49A473029A392673A9D6F80A9CDA3EFD050571E5740106B9F30`; restore-and-rehash passed.
+- Recovery required remains physical microphone acceptance, optional new-tab extension installation, and the physical approved-device LAN test.
+- Next safe action: Roger chooses the next two Control Center changes; apply and verify only that pair.
 
 ## 2026-08-01 — Rowdy Robots full-team mission completion
 
