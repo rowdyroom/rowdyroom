@@ -1,5 +1,14 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-08-01 — Rowdy Robots local-first mission checkpoint
+
+- Twenty-two local Robot packages are configured; Lucian, Dave, Bob, Rachel, and Sampson form the bounded active core.
+- Dave completed loopback-only model-backed routing with deterministic fail-closed fallback; 11/11 local model tags launched and 69/69 automated tests passed.
+- Google Drive: 78 items inventoried and all 69 files hash-verified locally. Supabase metadata is exported, but full data/storage restore remains **Recovery required**.
+- No cloud deletion occurred. Google Drive, Supabase, and GitHub must remain online.
+- Public authority: `docs/rowdy-robots/ROWDY_ROBOTS_LOCAL_FIRST_2026-08-01.md`.
+- Next safe action: finish full Supabase data/storage restore and shared-Drive dependency checks; activate paused Robots one at a time after a real task.
+
 ## 2026-07-31 — Lucian verified F/D storage migration
 
 - Active local model, media, voice, and mutable RACC data run from the dedicated SSD; generated media and recovery copies write to the separate larger storage drive.
@@ -67,7 +76,7 @@
 - Next safe action: approve or reject the pending AI Start registration, then reload or wake Lucian and observe live rendering.
 
 **Status:** Active public-safe breadcrumb root  
-**Last updated:** 2026-07-31  
+**Last updated:** 2026-08-01  
 **Owner:** Roger Jamsek
 
 Start every Rowdy Room task here after reading the complete Operator Law. Do not rely on chat memory. Missing or contradictory facts remain **Recovery required**.
