@@ -13,6 +13,16 @@
 - An unpacked Chrome new-tab extension is prepared but **not installed**. Installing it is Roger's separate choice and may conflict with another extension that already overrides Chrome's new tab page.
 - Per-bot Fast/Deep model controls are planned but not activated. The controlled Qwen 27B head-model trial remains the next model decision.
 
+## 2026-08-01 Roger-directed Control Center cleanup
+
+- Removed the Custom Window Desk and its layout code completely.
+- Removed the bottom model-next-step panel and the embedded background Rowdy Robots/Lucian chat.
+- Preserved the separate round Rowdy Robots popout launcher.
+- Roger's final correction removed the entire middle container and its controls, leaving the center column open and unfilled while the AI Rail and Quick Actions remain in place.
+- Centered the Rowdy Control Center heading in the top container. A brief search-side-panel iteration was superseded before closeout and is not active.
+- Verification passed: focused server test, 86/86 full automated tests, empty center with zero children, unchanged surrounding-column positions, and a zero-pixel heading-center offset.
+- Recovery: `Rowdy_Control_Center_Staged_Cleanup_2026-08-01_184028.zip`, 6 entries, SHA-256 `FAE2D46AE24FA49A473029A392673A9D6F80A9CDA3EFD050571E5740106B9F30`; restore-and-rehash passed.
+
 ## 2026-08-01 voice-chat control repair
 
 - Spoken Rowdy Robot conversations route through the already-installed local 8B model with one-at-a-time pooling; normal Robot work models and permissions remain unchanged.
