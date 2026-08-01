@@ -1,5 +1,14 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-08-01 — Rowdy Robots full-team commissioning complete
+
+- Commissioned every one of the 22 local Robots through a bounded real task before activation.
+- Verified dispatcher state at 22 available, zero paused, and no stale mission locks.
+- Passed 73/73 automated tests plus live health, deterministic backup routing to Sampson, and Lucian launcher checks.
+- Kept local model-pool concurrency at one, paid usage disabled, external providers disabled, and Roger as final authority.
+- Preserved a hash-verified recovery package containing committed source, activation and commissioning evidence, all 22 operational-status records, and a database backup.
+- Did not change Google Drive or Supabase content, tables, SQL, or operational projects.
+
 ## 2026-07-31 — Lucian verified F/D storage migration
 
 - Moved active local AI runtimes and mutable RACC data off C to the dedicated SSD and routed generated media/recovery to the separate larger storage drive.
