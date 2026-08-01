@@ -1,5 +1,15 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-08-01 — Local Chrome Control Center and ComfyUI control
+
+- Local Chrome dashboard provides Google search, editable quick favorites, direct AI-service tab launchers, full-screen local Rowdy Bot/voice access, and a bounded ComfyUI ON/OFF control.
+- ComfyUI stop/start was browser-verified while idle; 84/84 automated tests passed.
+- Public authority: `docs/rowdy-robots/LUCIAN_COMMAND_CENTER_VOICE_STUDIO.md` and `docs/continuity/CHANGELOG.md` on branch `codex/rowdy-control-center-2026-08-01`.
+- Protected authority: `rowdy-room/lucian-command-center-voice-studio` pending this change's private readback.
+- An unpacked new-tab extension is prepared, not installed; an existing Chrome new-tab extension may conflict.
+- Recovery required: physical microphone acceptance and model-selection acceptance remain open.
+- Next safe action: install the prepared extension only if Roger chooses it, then run the controlled Qwen 27B Lucian head-model test.
+
 ## 2026-08-01 — Rowdy Robots full-team mission completion
 
 - All twenty-two local Robot packages are configured, commissioned through bounded real tasks, and active; dispatcher readback shows 22 available and zero paused.
