@@ -7,7 +7,7 @@
 - Project-scoped Drive exports, two Git mirrors, and a bounded Supabase continuity/equipment/check snapshot were locally verified and indexed.
 - No cloud sources were deleted; Drive source content was not modified.
 - Public authority: `docs/rowdy-robots/LOCAL_FIRST_MIGRATION_CHECKPOINT_2026-07-31.md` on branch `codex/rowdy-robots-local-first-2026-07-31`.
-- Protected authority: `rowdy-room/rowdy-robots-local-first-migration`, version 4, SHA-256 `c64e6572f4e16c19716463a7f4965e501b5ee45f997f2dab870771e8fed4a99b`.
+- Protected authority: `rowdy-room/rowdy-robots-local-first-migration`, version 5, SHA-256 `c64e6572f4e16c19716463a7f4965e501b5ee45f997f2dab870771e8fed4a99b`.
 - Verification run: `57633e7b-9eb2-4d67-b7ae-44643313ef66`; Robot install, Git mirrors, and recovery archive pass; project-scoped Drive and bounded Supabase exports warn by design.
 - Recovery: `Rowdy_Robots_Local_First_2026-07-31_v2.zip`, 82 entries, SHA-256 `D9151990327B42528C5314001DC89BD5F14CF483024B55D4DD8370AAE1C57850`.
 - Recovery required: full-account Drive export, restore-grade Supabase dump, fresh-checkout mirror restore test, and first model-backed Robot worker.
