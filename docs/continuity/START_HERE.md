@@ -1,5 +1,19 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-08-01 — Movable/customizable Control Center and dual side popouts
+
+- Added locally saved customization for 42 remaining headings, descriptions, buttons, extension items, status displays, and side circles. Applicable items can be dragged, renamed, relinked, resized, or recolored; new text and buttons can be added.
+- Live RACC and ComfyUI wording remains system-controlled for truthful health reporting, while its position and styling remain customizable.
+- Added one independent left popout and one independent right popout; each opens from a customizable circle and collapses back to the circle with X.
+- Browser acceptance passed selection, +24-pixel drag, reload persistence, restoration to 0 pixels, independent left/right open-close behavior, final closed-circle state, full-width fact-check geometry, and `RACC ready`.
+- Focused server test and full suite passed 86/86.
+- Public authority: `docs/rowdy-robots/LUCIAN_COMMAND_CENTER_VOICE_STUDIO.md` on branch `codex/rowdy-control-center-2026-08-01`, feature commit `0e112ae0c830aafaae2960e75f07f3031771cb6a`.
+- Protected authority: `rowdy-room/lucian-command-center-voice-studio`, version 8, history 375, SHA-256 `6aa8dab4130b414fe927200614e809902f52bb36c09489a7a3edbe046f4a68f4`.
+- Verification run `e0b13da6-edeb-4cf5-b16c-13f5f8498c68`: checks 375-388, 14 pass, 0 warn, 0 fail.
+- Recovery: `Rowdy_Control_Center_Custom_Layout_Side_Popouts_2026-08-01_194740.zip`, 6 entries, SHA-256 `F4DC27DF9ACE03422B19389FE34F1375B89F7A1A3FF5632A8665FA9CA2473FE7`; restore-and-rehash passed.
+- Recovery required remains physical microphone acceptance, optional new-tab extension installation, and the physical approved-device LAN test.
+- Next safe action: Roger uses Customize page and the two side circles, then chooses the next two Control Center changes.
+
 ## 2026-08-01 — Control Center full-width fact checker and bare rails
 
 - Stretched the Private Fact Checker to the exact usable browser width and removed only the visible backgrounds, borders, and shadows around AI Rail, Quick Actions, and Title/RACC status.
