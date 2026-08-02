@@ -42,6 +42,16 @@
 - Focused server verification and the full 86/86 automated suite passed.
 - Recovery: `Rowdy_Control_Center_Custom_Layout_Side_Popouts_2026-08-01_194740.zip`, 6 entries, SHA-256 `F4DC27DF9ACE03422B19389FE34F1375B89F7A1A3FF5632A8665FA9CA2473FE7`; restore-and-rehash passed.
 
+## 2026-08-01 cross-zone buttons and appearance studio
+
+- Customizable buttons can move among their original area, the Extensions bar, the main page, the left panel, and the right panel. Saved placement remains device-local.
+- Added solid, glass, transparent, almost-invisible, and neon-glass styling; opacity and corner controls; and optional pulse, float, bounce, glow, and spin animations.
+- Added page and Extensions/tab colors, solid/glass/transparent bar styling, background darkness and fit, and a device-local photo or muted-looping movie background.
+- Local background media is stored in browser IndexedDB, capped at 512 MB, and is not uploaded by this feature.
+- Browser acceptance moved one button through all four destination zones and back to its permanent original home, applied and persisted glass/animation/theme settings, restored the neutral live state, and finished at `RACC ready`.
+- Focused server verification and the full 86/86 automated suite passed.
+- Recovery: `Rowdy_Control_Center_Advanced_Customization_2026-08-01_204019.zip`, 6 entries, SHA-256 `F63FEAE83A930D5C436558EE86F8F3DF4D4752CCF4CC7E340025272CCA8F08DB`; restore-and-rehash passed.
+
 ## 2026-08-01 voice-chat control repair
 
 - Spoken Rowdy Robot conversations route through the already-installed local 8B model with one-at-a-time pooling; normal Robot work models and permissions remain unchanged.
