@@ -1,3 +1,13 @@
+## 2026-08-01 — Movable/customizable Control Center and dual side popouts
+
+- Added locally saved movement and editing for 42 remaining Control Center items, with new-text/new-button controls and a confirmed reset.
+- Preserved system-controlled live health wording while allowing the displays' styling and placement to change.
+- Added independent left and right circle-to-popout panels with X-to-collapse behavior.
+- Browser interaction, focused server testing, and the full 86/86 suite passed.
+- Protected record `rowdy-room/lucian-command-center-voice-studio` advanced to version 8, history 375, SHA-256 `6aa8dab4130b414fe927200614e809902f52bb36c09489a7a3edbe046f4a68f4`.
+- Verification run `e0b13da6-edeb-4cf5-b16c-13f5f8498c68`: 14 pass, 0 warn, 0 fail.
+- Recovery `Rowdy_Control_Center_Custom_Layout_Side_Popouts_2026-08-01_194740.zip`: 6 entries, SHA-256 `F4DC27DF9ACE03422B19389FE34F1375B89F7A1A3FF5632A8665FA9CA2473FE7`; restore-and-rehash passed.
+
 ## 2026-08-01 — Control Center full-width fact checker and bare rails
 
 - Made the Private Fact Checker span the exact usable viewport width without horizontal overflow.
