@@ -8,7 +8,7 @@
 - Focused server test and full suite passed 86/86.
 - Public authority: `docs/rowdy-robots/LUCIAN_COMMAND_CENTER_VOICE_STUDIO.md` on branch `codex/rowdy-control-center-2026-08-01`, feature commit `46ab7dd80ba74ba44f4a4886e33a26413d612987`.
 - Protected authority: `rowdy-room/lucian-command-center-voice-studio`, version 7, history 374, SHA-256 `1492ca4d7ecb76357b2cf97a1288592d6ecb6a59cf46ec199224334cf79c291a`.
-- Verification run `d04dad4d-fb93-48c9-9607-5719023bc50d`: checks 365-372, 8 pass, 0 warn, 0 fail.
+- Verification run `d04dad4d-fb93-48c9-9607-5719023bc50d`: checks 365-374, 10 pass, 0 warn, 0 fail.
 - Recovery: `Rowdy_Control_Center_Fact_Check_Layout_2026-08-01_185711.zip`, 6 entries, SHA-256 `7DC8B94C905CAB6A2105680D6D4890B3633DA52A6943FCA8CBB871C124CAF421`; restore-and-rehash passed.
 - Recovery required remains physical microphone acceptance, optional new-tab extension installation, and the physical approved-device LAN test.
 - Next safe action: Roger chooses the next two Control Center changes; apply and verify only that pair.
