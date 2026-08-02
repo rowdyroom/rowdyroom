@@ -1,5 +1,19 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-08-01 — Cross-zone buttons and appearance studio
+
+- Customizable buttons can move among their original area, Extensions bar, main page, left panel, and right panel, with device-local persistence and reliable return to permanent built-in homes.
+- Added glass, transparent, almost-invisible, and neon-glass styles; opacity and corner controls; pulse, float, bounce, glow, and spin animations.
+- Added page and Extensions/tab colors, solid/glass/transparent bar styling, background darkness and fit, plus device-local photo or muted-looping movie backgrounds stored in IndexedDB and capped at 512 MB.
+- Browser acceptance moved one button through every zone and back, verified effect and theme persistence, kept side circles usable during Customize mode, restored the neutral state, and finished at `RACC ready`.
+- Focused server test and full suite passed 86/86.
+- Public authority: `docs/rowdy-robots/LUCIAN_COMMAND_CENTER_VOICE_STUDIO.md` on branch `codex/rowdy-control-center-2026-08-01`, feature commit `60dbcc4ac92be679aabecd59a07d768acc10cfe7`.
+- Protected authority: `rowdy-room/lucian-command-center-voice-studio`, version 9, history 376, SHA-256 `e246c53b3504fc684c1b9fd863f0aafbc40367da41c41dd4715dad7ce521b1dd`.
+- Verification run `33dc62ba-a870-4d31-90a8-a5366572db5b`: checks 391-407, 17 pass, 0 warn, 0 fail.
+- Recovery: `Rowdy_Control_Center_Advanced_Customization_2026-08-01_204019.zip`, 6 entries, SHA-256 `F63FEAE83A930D5C436558EE86F8F3DF4D4752CCF4CC7E340025272CCA8F08DB`; restore-and-rehash passed.
+- Recovery required remains physical microphone acceptance, optional new-tab extension installation, and the physical approved-device LAN test.
+- Next safe action: Roger uses Customize page and Background & effects, then chooses the next two Control Center changes.
+
 ## 2026-08-01 — Movable/customizable Control Center and dual side popouts
 
 - Added locally saved customization for 42 remaining headings, descriptions, buttons, extension items, status displays, and side circles. Applicable items can be dragged, renamed, relinked, resized, or recolored; new text and buttons can be added.
