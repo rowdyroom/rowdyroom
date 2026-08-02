@@ -32,6 +32,16 @@
 - Focused server verification and the full 86/86 automated suite passed.
 - Recovery: `Rowdy_Control_Center_Fact_Check_Layout_2026-08-01_185711.zip`, 6 entries, SHA-256 `7DC8B94C905CAB6A2105680D6D4890B3633DA52A6943FCA8CBB871C124CAF421`; restore-and-rehash passed.
 
+## 2026-08-01 movable/customizable page and dual side popouts
+
+- Added a visible `Customize page` mode for remaining Control Center headings, descriptions, buttons, links, extension items, status styling, and user-created text/buttons.
+- Forty-two items are registered for selection, local drag movement, restyling, resizing, and renaming or relinking when applicable. Settings stay on the device under `racc.page-customizer.v1`.
+- Live RACC and ComfyUI wording remains system-controlled to prevent a customized label from falsely reporting health; position, size, and colors remain customizable.
+- Added one independent left popout and one independent right popout. Each opens from its own customizable circle and returns to the circle when closed with X.
+- Browser acceptance passed visible edit controls, item selection, +24-pixel drag, reload persistence, restoration to 0 pixels, independent left/right open-close behavior, exact full-width fact-check geometry, and `RACC ready`.
+- Focused server verification and the full 86/86 automated suite passed.
+- Recovery: `Rowdy_Control_Center_Custom_Layout_Side_Popouts_2026-08-01_194740.zip`, 6 entries, SHA-256 `F4DC27DF9ACE03422B19389FE34F1375B89F7A1A3FF5632A8665FA9CA2473FE7`; restore-and-rehash passed.
+
 ## 2026-08-01 voice-chat control repair
 
 - Spoken Rowdy Robot conversations route through the already-installed local 8B model with one-at-a-time pooling; normal Robot work models and permissions remain unchanged.
