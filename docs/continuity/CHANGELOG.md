@@ -1,3 +1,13 @@
+## 2026-08-01 — Cross-zone buttons and appearance studio
+
+- Added saved button relocation among Original, Extensions, Main, Left, and Right areas, including permanent built-in home mappings and usable side circles during Customize mode.
+- Added glass, transparent, almost-invisible, and neon effects; opacity, corner radius, and optional pulse, float, bounce, glow, and spin animations.
+- Added page and Extensions/tab colors, solid/glass/transparent bar styling, background darkness and fit, and browser-local photo or looping-movie backgrounds.
+- Browser acceptance covered every relocation destination, original-home restoration, effect/theme persistence, neutral-state restoration, and `RACC ready`; focused and full 86/86 tests passed.
+- Public feature commit: `60dbcc4ac92be679aabecd59a07d768acc10cfe7`; breadcrumb commit: `2d9c707214dc665af53ff0761009865e1b2eb8f2`.
+- Protected record: version 9, history 376, SHA-256 `e246c53b3504fc684c1b9fd863f0aafbc40367da41c41dd4715dad7ce521b1dd`.
+- Recovery archive SHA-256: `F63FEAE83A930D5C436558EE86F8F3DF4D4752CCF4CC7E340025272CCA8F08DB`; six restored entries matched.
+
 ## 2026-08-01 — Movable/customizable Control Center and dual side popouts
 
 - Added locally saved movement and editing for 42 remaining Control Center items, with new-text/new-button controls and a confirmed reset.
