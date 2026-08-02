@@ -16,6 +16,16 @@
 
 # Rowdy Room Continuity Changelog
 
+## 2026-08-01 — Control Center full-width fact checker and bare rails
+
+- Made the Private Fact Checker span the exact usable viewport width without horizontal overflow.
+- Removed only the visible wrappers around AI Rail, Quick Actions, and Title/RACC status; all content, controls, padding, and positions stayed in place.
+- Browser geometry, focused server testing, and the full 86/86 suite passed.
+- Protected record `rowdy-room/lucian-command-center-voice-studio` advanced to version 7, history 374, SHA-256 `1492ca4d7ecb76357b2cf97a1288592d6ecb6a59cf46ec199224334cf79c291a`.
+- Verification run `d04dad4d-fb93-48c9-9607-5719023bc50d`: 8 pass, 0 warn, 0 fail.
+- Recovery `Rowdy_Control_Center_Fact_Check_Layout_2026-08-01_185711.zip`: 6 entries, SHA-256 `7DC8B94C905CAB6A2105680D6D4890B3633DA52A6943FCA8CBB871C124CAF421`; restore-and-rehash passed.
+
+
 ## 2026-08-01 — Rowdy Robots full-team commissioning complete
 
 - Commissioned every one of the 22 local Robots through a bounded real task before activation.
