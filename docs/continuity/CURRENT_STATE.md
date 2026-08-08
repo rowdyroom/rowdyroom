@@ -1,7 +1,7 @@
 # Rowdy Room Current State
 
 **Status:** Active public-safe handoff record  
-**Last updated:** 2026-07-23  
+**Last updated:** 2026-08-07  
 **Owner:** Roger Jamsek
 
 Read this after the complete Operator Law, `docs/continuity/START_HERE.md`, and the Project Bible. Missing or contradictory facts remain **Recovery required**.
@@ -42,6 +42,17 @@ The current product continuation is **Build Portable AI Computer**.
 - The first Guided Builder prototype uses a browser-local Learning Ledger. A connected durable ledger and outside-platform adapters remain **Recovery required**.
 - Protected readback: `rowdy-room/assistant-foundry-learning-law` v1 / history 167 / SHA-256 `f9d1369a131d5f1e885f2c826c9db1043a377aa8cc790280603792927ec54eb8`; `rowdy-room/portable-assistant-foundation` v4 / history 168 / SHA-256 `77ff5476182cbd02491138d5c947ffb7f026580eef9fecd4a30074c4d31c00b1`; `rowdy-room/assistant-foundry-guided-builder-prototype` v1 / history 169 / SHA-256 `8f3936a707d4ad777c2a1f000d8d8720dd644be5e83b7346630bef72e1be8e17`.
 - Guided Builder version 1 is deployed with custom owner-only access and verified terminal success. Its URL is private and held only in the protected record/recovery package; no public availability is claimed.
+
+## RACC Customizer v2 and shared communication hub
+
+- Public authority: [RACC Customizer v2 and Shared Communication Hub](RACC_CUSTOMIZER_AND_COMMUNICATION_HUB.md).
+- All 18 RACC pages use the shared Customizer v2 assets. Direct pages use **Customize**; embedded voice uses **Edit Voice**; other embedded panels use **Edit Panel**.
+- The shared Rowdy Companion is the one internal RACC voice/text communication hub. Every non-companion page opens the same companion; competing Guided Builder and Lucian chat forms are retired from view while approval and work controls remain.
+- Voice-popout customizations follow the shared companion everywhere it opens. Global themes use **Use on all pages**. Unrelated item-level layouts remain page-specific.
+- Source verification passed: JavaScript syntax, 6/6 integration tests, 18/18 direct-page DOM boots, embedded voice/panel boots, core edit actions, and ZIP integrity.
+- Delivered installer: `ROWDY_CUSTOMIZER_V2_VOICE_AND_SHARED_CHAT_FIX_20260807.zip`, SHA-256 `0b877ba3aa7bb5f164118c4836d986b7e421fa30a8d2a25c990d0ae077b13910`.
+- Protected record: `rowdy-room/racc-customizer-communication-hub` v1, SHA-256 `7463e3ef4f0964023c529150b6e343fc23323214eea41de0029d56d932f1c621`.
+- **Recovery required:** the new voice/shared-chat package is built and source-verified but is not yet recorded as installed on Roger's Windows PC. Live HTTP/browser readback and exact installer backup/report paths remain pending.
 
 ## Token-efficient Chat and Work coordination
 
