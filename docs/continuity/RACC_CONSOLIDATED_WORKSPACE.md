@@ -83,6 +83,15 @@ The backup-first installer:
 
 Roger reported that the earlier 2026-08-07 voice/shared-chat installer displayed **installed and verified**. The exact Windows backup/report paths and a complete live cross-page browser readback were not supplied in this session and remain **Recovery required**.
 
+## Protected continuity record
+
+- Record key: `rowdy-room/racc-consolidated-workspace`
+- Version: 1
+- SHA-256: `86521694ba8fe4b37e7534ef66bb7ae30790e95db13545609e2bf385c9920366`
+- History versions: 1
+- Status: active / source verified / install pending
+- Prior Customizer record corrected to Roger-reported installed-and-verified: `rowdy-room/racc-customizer-communication-hub` v4, SHA-256 `98f51cdf5d8158c4ed2b85c595b6f9c7d94db5c0dfd6d720f13f0c7b030ef000`
+
 ## Recovery required
 
 - The consolidated-workspace installer has not yet been run on Roger's Windows RACC checkout.
