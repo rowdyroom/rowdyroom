@@ -86,10 +86,11 @@ Roger reported that the earlier 2026-08-07 voice/shared-chat installer displayed
 ## Protected continuity record
 
 - Record key: `rowdy-room/racc-consolidated-workspace`
-- Version: 1
-- SHA-256: `86521694ba8fe4b37e7534ef66bb7ae30790e95db13545609e2bf385c9920366`
-- History versions: 1
+- Version: 2
+- SHA-256: `bd52cc4350ea436a74a9de95fa76f23e279ed48747a91f49fda1cbbbf26de19d`
+- History versions: 2
 - Status: active / source verified / install pending
+- Recovery artifact: `ROWDY_RACC_CONSOLIDATION_CONTINUITY_20260807.zip`, SHA-256 `50585d61af63a2f793379d8723dafd95e0cdc775b34d490f248d0c1705792d80`, Library `libfile_505989d37e788191bc0494166ecc18fa` v0; ZIP integrity passed
 - Prior Customizer record corrected to Roger-reported installed-and-verified: `rowdy-room/racc-customizer-communication-hub` v4, SHA-256 `98f51cdf5d8158c4ed2b85c595b6f9c7d94db5c0dfd6d720f13f0c7b030ef000`
 
 ## Recovery required
