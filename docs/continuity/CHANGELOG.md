@@ -1,5 +1,19 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-08-07 — RR Chat V4 verification failure recovered; V4.1 issued
+
+Status: V4 made no lasting Windows change; its automatic rollback completed. Corrected V4.1 is source/package verified and awaiting live installation.
+
+- Roger ran V4 at about 23:07 Central time.
+- The installer reached the presence test and stopped because an obsolete client-screen assertion still expected `voiceRoute`, a technical label intentionally removed from the simplified interface.
+- The installer restored the exact pre-install files, restarted the RACC server on port 4317, saved its report in the protected Rowdy recovery tree, and reported automatic rollback complete.
+- Replaced the obsolete display assertions with checks for the live voice-health endpoint, speech-recognition status, and **Voice ready** text.
+- Added the separate Rowdy voice-chat unit test to prove the backend route where `voiceRoute` still belongs.
+- Rebuilt the installer as `ROWDY_RR_CHAT_THREE_SEAT_CUSTOMIZER_V4_1_20260807.zip`; SHA-256 `9bf4557442711e2d3186930003178d771599adae6376d4ba0b38e7b5888ec728`.
+- Verification: 19 shared-page/Customizer tests, 36 RR Chat static checks, 12 package hashes, and ZIP integrity passed.
+- V4 is superseded and must not be retried.
+- Recovery required: run V4.1 and complete live browser/model-persistence readback.
+
 ## 2026-08-07 — Control Center side controls and Selected Item inspector unlocked
 
 Status: Roger's live browser readback identified that the prior shell protection blocked intended movement and resizing. V3 source, staged installer, recovery package, and durable records are verified; live Windows V3 installation remains pending.
