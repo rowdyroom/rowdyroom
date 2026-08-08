@@ -81,10 +81,10 @@ Start new, compacted, reconstructed, contradictory, material, high-risk, or mani
 - Inner voice areas are separate Customizer targets; the Selected Item inspector remains movable and resizable.
 - V4 Windows attempt on 2026-08-07 failed because its screen test still expected the removed technical token `voiceRoute`; the installer restored the exact pre-install files, restarted RACC, and completed automatic rollback.
 - V4 is superseded. Corrected V4.1 checks the live voice-health path and simple **Voice ready** display, and separately runs the backend voice-route test.
-- Public authority: commit `4a978337e6e6dd4f82891d150e4e5bdbf61fb08e`; blob `f95c9da3e8f42d87807d83775bec6b69eadae487`.
+- Public authority: commit `256156778378b177fa4e30ebfc14c19015e6ce1c`; blob `6248f0aa3a3977f3616ac37738377744d3b78d5d`.
 - Protected record: `rowdy-room/racc-customizer-communication-hub` v7, SHA-256 `433d1129229063bd9f721294ac762a1d39a45f1326d2216b44e34b9d64a5647e`; history version 7.
 - Corrected installer: `ROWDY_RR_CHAT_THREE_SEAT_CUSTOMIZER_V4_1_20260807.zip`, SHA-256 `9bf4557442711e2d3186930003178d771599adae6376d4ba0b38e7b5888ec728`, Library `libfile_029d003d32488191b62e780a7e0b699e` v1; package manifest and ZIP integrity passed.
-- Verification run: `3c9584cf-2054-4e5f-b732-071dd46a41cb` — 7 pass, 1 warning, 0 fail.
+- Dated recovery: `ROWDY_RR_CHAT_THREE_SEAT_V4_1_CONTINUITY_20260807.zip`, SHA-256 `63a3d22ff1646c31ec0b2cd32d5eba0dded9ca2b6bac0d4c90c60b9b53bce2ef`, Library `libfile_0d34aaa642148191a83a938fe46542b4` v1; ZIP integrity passed.\n- Verification run: `3c9584cf-2054-4e5f-b732-071dd46a41cb` — 9 pass, 1 warning, 0 fail.
 - Recovery required: run V4.1, capture its successful Windows backup/report/rollback paths, and complete the live three-seat, group-chat, inner-Customizer, model-change, and restart readback.
 - Exact next safe action: run `INSTALL_RR_CHAT_THREE_SEAT_V4_1.cmd` and wait for **RR Chat three-seat upgrade installed and verified**.
 
