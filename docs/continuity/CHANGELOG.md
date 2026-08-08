@@ -1,5 +1,21 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-08-07 — Control Center side controls and Selected Item inspector unlocked
+
+Status: Roger's live browser readback identified that the prior shell protection blocked intended movement and resizing. V3 source, staged installer, recovery package, and durable records are verified; live Windows V3 installation remains pending.
+
+- Made LEFT and RIGHT handles selectable, movable, and resizable in shared Customizer v2.
+- Made both side popout windows selectable, movable, and resizable.
+- Kept the four required shell controls protected from deletion.
+- Preserved click-to-open while allowing drag-to-move; opening a panel selects it for editing, and closing returns selection to its handle.
+- Made the Selected Item inspector draggable by its header, resizable, and persistent across refreshes.
+- Prevented inspector collapse from overwriting its saved expanded size.
+- Cumulative installer: `ROWDY_CONTROL_CENTER_SHELL_CUSTOMIZER_FIX_V3_20260807.zip`, SHA-256 `bfeea108bb6b9d54ea8db24e2b79c32e5b3843b52fa38398bab79fcdf93d4d53`, Library `libfile_84c4e81ac9c08191b12c35ea6fcc0054` v0.
+- Recovery: `ROWDY_CONTROL_CENTER_SHELL_V3_CONTINUITY_20260807.zip`, SHA-256 `4a3c00ac48e3215c74c22ae097a83e3b7b382583e143f956317398bfce3c3b58`, Library `libfile_565797dbad288191bb6fe27c335e4529` v0.
+- Protected record: `rowdy-room/racc-control-center-shell-launchers` v5, SHA-256 `4e4add51265e2e7c0793ded958c271bad3425ea4fc1dda528951de2fc6485fc2`; history versions 5.
+- Verification run `d19a3f22-49dc-4bde-95bd-6409fca08ef3`: 7 pass, 1 warning, 0 fail. Source tests 18/18; package manifest 14/14; both ZIP archives passed integrity.
+- Exact next safe action: run `INSTALL_CONTROL_CENTER_FIX_V3.cmd`, wait for the V3 installed-and-verified message, then confirm movement, resizing, and refresh persistence in the live browser.
+
 ## 2026-08-07 — Control Center shell restored and floating tools separated
 
 Status: Source correction, cumulative backup-first installer, continuity package, and durable records are verified. Live Windows installation and browser readback remain pending.
