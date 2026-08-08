@@ -1,5 +1,21 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-08-07 — RACC Customizer v2 and one shared communication hub recorded
+
+Status: Roger approved the improved Customizer across every RACC page and made Rowdy Companion the one internal voice/text communication hub. The new installer package is built and source-verified; live Windows installation remains pending.
+
+- Recorded the authoritative behavior in `docs/continuity/RACC_CUSTOMIZER_AND_COMMUNICATION_HUB.md`.
+- Connected Customizer v2 to all 18 pages, including embedded **Edit Voice** and **Edit Panel** modes.
+- Kept the Rowdy Companion customization state shared between standalone and embedded views and retained the global **Use on all pages** theme action.
+- Routed every non-companion page to the same Rowdy Robots launcher and prevented recursive launcher loading inside the companion.
+- Retired the older Guided Builder and Lucian Command Center chat forms from view while preserving approvals and work controls.
+- Preserved ChatGPT Team Handoff as an explicit external handoff rather than a second internal RACC chat.
+- Passed JavaScript syntax, 6/6 integration tests, 18-page DOM boot, embedded voice/panel boot, core edit actions, and archive integrity.
+- Delivered `ROWDY_CUSTOMIZER_V2_VOICE_AND_SHARED_CHAT_FIX_20260807.zip`, SHA-256 `0b877ba3aa7bb5f164118c4836d986b7e421fa30a8d2a25c990d0ae077b13910`.
+- Protected record: `rowdy-room/racc-customizer-communication-hub` v1, SHA-256 `7463e3ef4f0964023c529150b6e343fc23323214eea41de0029d56d932f1c621`.
+- Recovery required: Roger's Windows install result, live HTTP/browser readback, and the exact local backup/report paths created by the installer.
+- Exact next safe action: run the extracted installer; after it reports **installed and verified**, update public and protected records to live installed status.
+
 ## 2026-07-26 — AI Start Dispatcher Contract v1 approved
 
 Status: Roger approved the minimal dispatcher contract as the design authority for a recoverable staging implementation. No live AI Start code, hosting, credential, or storage change was made.
