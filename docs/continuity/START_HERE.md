@@ -44,16 +44,18 @@ Start new, compacted, reconstructed, contradictory, material, high-risk, or mani
 
 - Authority: [RACC Control Center Shell and Movable Launchers](RACC_CONTROL_CENTER_SHELL_AND_LAUNCHERS.md).
 - Approved shell: Extensions and Bookmarks at top; protected central Page Viewer; AI/external services in the left popout; Quick Actions in the right popout; Private Fact Checker below the viewer.
-- Floating controls: RR Chat, Customizer, and FreeTube are separate 60-by-60 circles, independently draggable, with separate saved positions.
-- Shared Customizer v2 is the one visible customizer; the older page-specific launcher/toolbox is retired.
-- Required shell zones are protected. A one-time migration restores hidden/displaced required controls without erasing unrelated saved colors, text, themes, or page-specific styling.
-- Public authority: commit `e31efe7b8b23a84375ce0d18eebfec4de1d4428f`; blob `da20bc4a52db1a2b16aa079003c065ea2d23cffd`.
-- Protected record: `rowdy-room/racc-control-center-shell-launchers` v3, SHA-256 `c1986214dfa069aca33027923963dcb3f8f632ab64327559b53c1c494992b374`; history versions 3.
-- Installer: `ROWDY_CONTROL_CENTER_SHELL_CUSTOMIZER_FIX_V2_20260807.zip`, SHA-256 `67a5a82ebd93ee1bdf9de8ffd72655c7a74bac07ce2f7b5512baa375cdb4abf7`, Library `libfile_f0bc6cdceaec81918950245fea1e599a` v0; cumulative and ZIP-verified.
-- Recovery: `ROWDY_CONTROL_CENTER_SHELL_CONTINUITY_20260807.zip`, SHA-256 `31e6ef186fee66b85794f282fa92d03a31abc6d158bc37f4c0312c794ffe5e4c`, Library `libfile_89c9de844588819192720d4bd61c5ee5` v0.
-- Verification run: `7b440b32-c39a-4e54-ba09-1c55f1e2469a` — 7 pass, 1 warning, 0 fail. Source checks: 16/16 focused tests and 14/14 package manifest.
-- Recovery required: run the cumulative installer on Roger's Windows RACC; capture exact backup/report/rollback paths; confirm both popouts, viewer/Fact Checker order, and launcher movement/persistence; recover 26 unrelated historical runtime/config modules missing from the supplied source snapshot.
-- Exact next safe action: run `INSTALL_CONTROL_CENTER_FIX.cmd`, wait for **Control Center shell and Customizer fix installed and verified**, then complete the five live browser checks.
+- Floating controls: RR Chat, Customizer, and FreeTube remain separate draggable circles with separate saved positions.
+- V3 correction: LEFT/RIGHT handles and both popout windows are selectable, movable, and resizable; they remain protected from deletion.
+- Popout behavior: click a handle to open and select its panel; drag the handle to move it; close returns selection to the handle.
+- Selected Item inspector: draggable by its header, resizable, and persistent across refreshes; collapse does not erase the saved expanded size.
+- Shared Customizer v2 remains the one visible customizer; unrelated shell zones remain protected.
+- Public authority: commit `4d9e2be5accd44799d152818a5a611b6ec7d79ed`; blob `1e8cdd171270220089598bce8e8ac6d9080e0e4e`.
+- Protected record: `rowdy-room/racc-control-center-shell-launchers` v5, SHA-256 `4e4add51265e2e7c0793ded958c271bad3425ea4fc1dda528951de2fc6485fc2`; history versions 5.
+- Installer: `ROWDY_CONTROL_CENTER_SHELL_CUSTOMIZER_FIX_V3_20260807.zip`, SHA-256 `bfeea108bb6b9d54ea8db24e2b79c32e5b3843b52fa38398bab79fcdf93d4d53`, Library `libfile_84c4e81ac9c08191b12c35ea6fcc0054` v0; cumulative and ZIP-verified.
+- Recovery: `ROWDY_CONTROL_CENTER_SHELL_V3_CONTINUITY_20260807.zip`, SHA-256 `4a3c00ac48e3215c74c22ae097a83e3b7b382583e143f956317398bfce3c3b58`, Library `libfile_565797dbad288191bb6fe27c335e4529` v0.
+- Verification run: `d19a3f22-49dc-4bde-95bd-6409fca08ef3` — 7 pass, 1 warning, 0 fail. Source tests: 18/18; package manifest: 14/14.
+- Recovery required: run V3 on Roger's Windows RACC; capture exact backup/report/rollback paths; confirm movement, resizing, and refresh persistence; recover 26 unrelated historical runtime/config modules absent from the supplied source snapshot.
+- Exact next safe action: run `INSTALL_CONTROL_CENTER_FIX_V3.cmd`, wait for **Control Center movable panels and Customizer fix installed and verified**, then complete the live browser checks.
 
 ## RACC consolidated workspace
 
