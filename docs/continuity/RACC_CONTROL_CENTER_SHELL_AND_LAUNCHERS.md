@@ -126,3 +126,14 @@ V3 cumulative installer:
 - ZIP integrity: passed
 
 Live installation remains pending until the V3 installer reports: `Control Center movable panels and Customizer fix installed and verified.`
+
+### V3 durable recovery evidence
+
+- Recovery package: `ROWDY_CONTROL_CENTER_SHELL_V3_CONTINUITY_20260807.zip`
+- Recovery SHA-256: `4a3c00ac48e3215c74c22ae097a83e3b7b382583e143f956317398bfce3c3b58`
+- Recovery Library: `libfile_565797dbad288191bb6fe27c335e4529`, version 0
+- Protected record: `rowdy-room/racc-control-center-shell-launchers`, version 4 at this checkpoint
+- Protected SHA-256: `a825ff64fe9f32b167907fa39253b9712731713c70545faccbd771b22104d730`
+- Continuity check run: `d19a3f22-49dc-4bde-95bd-6409fca08ef3`
+- Result: 7 passed, 1 warning, 0 failed
+- Warning boundary: V3 live Windows installation and browser readback remain pending.
