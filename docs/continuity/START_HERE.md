@@ -76,12 +76,17 @@ Start new, compacted, reconstructed, contradictory, material, high-risk, or mani
 ## RACC customization and communication continuity
 
 - Authority: [RACC Customizer v2 and Shared Communication Hub](RACC_CUSTOMIZER_AND_COMMUNICATION_HUB.md).
-- Approved scope remains one shared Customizer v2 across all 18 pages, embedded **Edit Voice** / **Edit Panel**, shared companion customization, global theme synchronization, and one RR Chat.
-- Roger reported the earlier voice/shared-chat installer displayed **installed and verified**; this supersedes the old install-pending statement.
-- Protected record: `rowdy-room/racc-customizer-communication-hub` v4, SHA-256 `98f51cdf5d8158c4ed2b85c595b6f9c7d94db5c0dfd6d720f13f0c7b030ef000`; history versions 4.
-- Public correction commit: `bfd6de97b450103f0cfdf5ed163fea4afd0313a1`; authority blob `9698e7c0e073c6eeb887a48a452d42c9369b4305`.
-- Recovery required: exact Windows backup/report/rollback paths and a complete representative cross-page live browser readback.
-- Exact next safe action for this older update: capture those paths and confirm **Edit Voice**, **Edit Panel**, and one RR Chat during the next live Windows verification.
+- Approved scope remains one shared Customizer across all 18 pages, embedded **Edit Voice** / **Edit Panel**, shared companion customization, global theme synchronization, and one RR Chat.
+- Three-seat RR Chat adds three saved Robot selectors, three monitored avatars, optional **In chat** participation, one focused Robot, and one real saved model selector.
+- Inner voice areas are separate Customizer targets; the Selected Item inspector remains movable and resizable.
+- V4 Windows attempt on 2026-08-07 failed because its screen test still expected the removed technical token `voiceRoute`; the installer restored the exact pre-install files, restarted RACC, and completed automatic rollback.
+- V4 is superseded. Corrected V4.1 checks the live voice-health path and simple **Voice ready** display, and separately runs the backend voice-route test.
+- Public authority: commit `4a978337e6e6dd4f82891d150e4e5bdbf61fb08e`; blob `f95c9da3e8f42d87807d83775bec6b69eadae487`.
+- Protected record: `rowdy-room/racc-customizer-communication-hub` v7, SHA-256 `433d1129229063bd9f721294ac762a1d39a45f1326d2216b44e34b9d64a5647e`; history version 7.
+- Corrected installer: `ROWDY_RR_CHAT_THREE_SEAT_CUSTOMIZER_V4_1_20260807.zip`, SHA-256 `9bf4557442711e2d3186930003178d771599adae6376d4ba0b38e7b5888ec728`, Library `libfile_029d003d32488191b62e780a7e0b699e` v1; package manifest and ZIP integrity passed.
+- Verification run: `3c9584cf-2054-4e5f-b732-071dd46a41cb` — 7 pass, 1 warning, 0 fail.
+- Recovery required: run V4.1, capture its successful Windows backup/report/rollback paths, and complete the live three-seat, group-chat, inner-Customizer, model-change, and restart readback.
+- Exact next safe action: run `INSTALL_RR_CHAT_THREE_SEAT_V4_1.cmd` and wait for **RR Chat three-seat upgrade installed and verified**.
 
 ## Current continuation
 
