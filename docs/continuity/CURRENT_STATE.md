@@ -49,10 +49,10 @@ The current product continuation is **Build Portable AI Computer**.
 - All 18 RACC pages use the shared Customizer v2 assets. Direct pages use **Customize**; embedded voice uses **Edit Voice**; other embedded panels use **Edit Panel**.
 - The shared Rowdy Companion is the one internal RACC voice/text communication hub. Every non-companion page opens the same companion; competing Guided Builder and Lucian chat forms are retired from view while approval and work controls remain.
 - Voice-popout customizations follow the shared companion everywhere it opens. Global themes use **Use on all pages**. Unrelated item-level layouts remain page-specific.
-- Source verification passed: JavaScript syntax, 6/6 integration tests, 18/18 direct-page DOM boots, embedded voice/panel boots, core edit actions, and ZIP integrity.
-- Delivered installer: `ROWDY_CUSTOMIZER_V2_VOICE_AND_SHARED_CHAT_FIX_20260807.zip`, SHA-256 `0b877ba3aa7bb5f164118c4836d986b7e421fa30a8d2a25c990d0ae077b13910`.
-- Protected record: `rowdy-room/racc-customizer-communication-hub` v2, SHA-256 `715c2c4e047ea561d9f271303d93d72d3e163ec5f0c3031493c0b0e51e9a7f0f`.
-- Dated continuity recovery: `ROWDY_CUSTOMIZER_COMMUNICATION_CONTINUITY_20260807.zip`, SHA-256 `5571b951cc0a6b739c44ad3fa8adcb80f57ca362650574c1b1afba2aaf116354`.
+- Source verification passed: JavaScript syntax, 7/7 integration tests, 18/18 direct-page DOM boots, embedded voice/panel boots, core edit actions, and ZIP integrity.
+- Delivered installer: `ROWDY_CUSTOMIZER_V2_VOICE_AND_SHARED_CHAT_FIX_20260807.zip`, SHA-256 `1c47f58c6a6e4fb1e6dbf3113d9b733978d205d6814d7ddb463348be90fdc7dd`.
+- Protected record: `rowdy-room/racc-customizer-communication-hub` v3, SHA-256 `0c751d5434dd85458e27169ec64f85311db3bfa7be041bed76ff384e22f5d183`.
+- Dated continuity recovery: `ROWDY_CUSTOMIZER_COMMUNICATION_CONTINUITY_20260807.zip`, SHA-256 `247181da5cbd1c05a08410a50f115c8367e7acb68052f2f10802d8ec63b113ef`.
 - **Recovery required:** the new voice/shared-chat package is built and source-verified but is not yet recorded as installed on Roger's Windows PC. Live HTTP/browser readback and exact installer backup/report paths remain pending.
 
 ## Token-efficient Chat and Work coordination
