@@ -1,5 +1,24 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-08-07 — RACC consolidated into two primary workspaces and one RR Chat
+
+Status: Roger authorized a task-oriented consolidation that preserves every original function and route. Source implementation and the backup-first installer are verified; live Windows installation of the consolidation remains pending.
+
+- Kept Rowdy Control Center as the front door and upgraded Operations Hub into the unified Rowdy Operations Workspace.
+- Kept Rowdy Companion as the one internal voice/text communication component.
+- Preserved all 18 original routes and all 15 original tool pages as direct compatibility endpoints and iframe modules.
+- Grouped tools into Run & Approve, Build & Manage the Team, Connect & Verify, and Create Voice/Characters/Media.
+- Added multi-word search, favorites, recents, task recipes, hash deep links, reload, full-screen, open separately, and responsive layouts.
+- Prevented embedded tools from creating nested RR Chat launchers while direct pages retain shared-chat access.
+- Updated Control Center to embed only the unified workspace and expose four high-level task choices.
+- Updated ChatGPT Team Handoff with the architecture, communication inheritance rule, compatibility boundary, and install status.
+- Passed 13/13 focused tests, 18/18 direct-page DOM boots, 18/18 HTTP compatibility routes, Operations interaction smoke, embedded modes, inline syntax, shared-asset HTTP checks, and ZIP integrity.
+- Delivered `ROWDY_RACC_CONSOLIDATED_WORKSPACE_V1_20260807.zip`, SHA-256 `e136249ae22c72265b53a4922ec92c373b5b2690b668cd87e949d7d8191edf0a`, Library `libfile_d2c83f65b4fc819186d7182ce931c00e` v0.
+- Public authority: `docs/continuity/RACC_CONSOLIDATED_WORKSPACE.md`; protected record `rowdy-room/racc-consolidated-workspace` v1, SHA-256 `86521694ba8fe4b37e7534ef66bb7ae30790e95db13545609e2bf385c9920366`.
+- Corrected the prior voice/shared-chat status from install pending to Roger-reported installed-and-verified; protected record v4, SHA-256 `98f51cdf5d8158c4ed2b85c595b6f9c7d94db5c0dfd6d720f13f0c7b030ef000`.
+- Recovery required: run the new consolidation installer on Windows, capture live browser readback and exact recovery paths, and recover the 26 unrelated historical runtime/config modules absent from the supplied source snapshot.
+- Exact next safe action: run `INSTALL_CONSOLIDATED_WORKSPACE.cmd`, wait for installed and verified, then confirm the four flows and one RR Chat.
+
 ## 2026-08-07 — RACC Customizer v2 and one shared communication hub recorded
 
 Status: Roger approved the improved Customizer across every RACC page and made Rowdy Companion the one internal voice/text communication hub. The new installer package is built and source-verified; live Windows installation remains pending.
