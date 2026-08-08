@@ -46,9 +46,10 @@ Start new, compacted, reconstructed, contradictory, material, high-risk, or mani
 - The 18 original page routes and 15 original tool pages remain available as compatibility endpoints/modules.
 - Four flows: **Run & Approve**, **Build & Manage the Team**, **Connect & Verify**, and **Create Voice, Characters & Media**.
 - Capabilities: multi-word search, favorites, recents, task recipes, deep links, reload, full-screen, open separately, and responsive layouts.
-- Source authority commits: creation `2a9d39e5b0e39a421b45f9604037f290074424e2`; protected-readback update `000363afa3463f5fb0ca7b427880ec98b26f03bd`; current authority blob `d3c25387fde5aa3fc8d552180f29c73cb74cd680`.
-- Protected record: `rowdy-room/racc-consolidated-workspace` v1, SHA-256 `86521694ba8fe4b37e7534ef66bb7ae30790e95db13545609e2bf385c9920366`; history versions 1.
+- Source authority commits: creation `2a9d39e5b0e39a421b45f9604037f290074424e2`; protected-readback update `000363afa3463f5fb0ca7b427880ec98b26f03bd`; recovery update commit `f842efa73a2841cc53dd8aed3467f130d985cadc`; current authority blob `1ae85186c4fb872d97ef6526aa8e2555486d0da3`.
+- Protected record: `rowdy-room/racc-consolidated-workspace` v2, SHA-256 `bd52cc4350ea436a74a9de95fa76f23e279ed48747a91f49fda1cbbbf26de19d`; history versions 2.
 - Installer: `ROWDY_RACC_CONSOLIDATED_WORKSPACE_V1_20260807.zip`, SHA-256 `e136249ae22c72265b53a4922ec92c373b5b2690b668cd87e949d7d8191edf0a`, Library `libfile_d2c83f65b4fc819186d7182ce931c00e` v0; ZIP integrity passed.
+- Dated continuity recovery: `ROWDY_RACC_CONSOLIDATION_CONTINUITY_20260807.zip`, SHA-256 `50585d61af63a2f793379d8723dafd95e0cdc775b34d490f248d0c1705792d80`, Library `libfile_505989d37e788191bc0494166ecc18fa` v0; ZIP integrity passed.
 - Source verification: 13/13 focused tests; 18/18 direct-page DOM boots; 18/18 HTTP compatibility routes; interaction, embedded, asset, inline-script, and archive checks passed.
 - Recovery required: consolidated Windows install, live browser readback, exact installer backup/report/rollback paths, and the 26 unrelated runtime/config modules absent from the supplied source snapshot.
 - Exact next safe action: run `INSTALL_CONSOLIDATED_WORKSPACE.cmd`, wait for **installed and verified**, then confirm the four flows and one RR Chat in the live browser.
