@@ -46,6 +46,8 @@ Verified against the source package before delivery:
 - Installer archive test: passed
 - Installer package: `ROWDY_CUSTOMIZER_V2_VOICE_AND_SHARED_CHAT_FIX_20260807.zip`
 - Installer package SHA-256: `0b877ba3aa7bb5f164118c4836d986b7e421fa30a8d2a25c990d0ae077b13910`
+- Protected record: `rowdy-room/racc-customizer-communication-hub` v2, SHA-256 `715c2c4e047ea561d9f271303d93d72d3e163ec5f0c3031493c0b0e51e9a7f0f`.
+- Dated continuity recovery: `ROWDY_CUSTOMIZER_COMMUNICATION_CONTINUITY_20260807.zip`, SHA-256 `5571b951cc0a6b739c44ad3fa8adcb80f57ca362650574c1b1afba2aaf116354`; ZIP integrity passed.
 
 ## Installation and recovery behavior
 
