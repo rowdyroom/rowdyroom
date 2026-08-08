@@ -91,6 +91,7 @@ Roger reported that the earlier 2026-08-07 voice/shared-chat installer displayed
 - History versions: 2
 - Status: active / source verified / install pending
 - Recovery artifact: `ROWDY_RACC_CONSOLIDATION_CONTINUITY_20260807.zip`, SHA-256 `50585d61af63a2f793379d8723dafd95e0cdc775b34d490f248d0c1705792d80`, Library `libfile_505989d37e788191bc0494166ecc18fa` v0; ZIP integrity passed
+- Continuity check run: `8b7dda50-528b-4566-ba51-d4bc1e7da284` — 7 pass, 1 warning, 0 fail. Warning: the new consolidated workspace is not yet live-installed on Windows.
 - Prior Customizer record corrected to Roger-reported installed-and-verified: `rowdy-room/racc-customizer-communication-hub` v4, SHA-256 `98f51cdf5d8158c4ed2b85c595b6f9c7d94db5c0dfd6d720f13f0c7b030ef000`
 
 ## Recovery required
