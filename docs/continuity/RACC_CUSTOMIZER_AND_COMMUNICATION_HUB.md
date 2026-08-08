@@ -1,6 +1,6 @@
 # RACC Customizer v2 and Shared Communication Hub
 
-**Status:** V4 install attempt failed one obsolete display-label test and rolled back cleanly; corrected V4.1 is source/package verified and awaits live Windows installation  
+**Status:** RR Chat File Uploader V5 is source/package verified and awaits live Windows installation  
 **Recorded:** 2026-08-07  
 **Owner:** Roger Jamsek  
 **Source surface:** ChatGPT Work / Codex
@@ -29,51 +29,56 @@ Roger approved a shared Customizer and one internal communication hub across the
 - One approved-model picker changes and saves the focused Robot's real runtime model.
 - Saved model overrides load again when the server starts.
 - The old technical header, Bots button, long personality paragraph, duplicate bot strip, and unavailable realtime pill are removed.
-- The useful summary shows Robots on screen, Robots in chat, focused Robot, its current model, and voice readiness.
-- Header, team summary, Robot seats, individual seats, model panel, avatar lineup, individual avatars, approvals, transcript, voice controls, text form, and attachments are separate Customizer targets.
+- Header, team summary, Robot seats, model panel, avatar lineup, approvals, transcript, voice controls, text form, and attachments are separate Customizer targets.
 
-## V4 failed attempt and automatic recovery
+## RR Chat file uploader V5
 
-Roger ran V4 on 2026-08-07 at about 23:07 Central time.
+V5 is cumulative. It includes the three-seat RR Chat and Customizer work plus the new uploader.
 
-- Package and file copying reached the test gate.
-- The presence test still expected the removed client text token `voiceRoute`.
-- That assertion belonged to the old technical display and did not prove a missing live route.
-- The installer stopped, restored the exact pre-install files, restarted RACC on port 4317, and reported automatic rollback complete.
-- V4 is superseded and must not be run again.
-- The exact Windows report path is retained only in the protected continuity record.
+- Paste copied pictures, documents, and other files directly into the RR Chat message box while typing.
+- Ordinary text-only paste remains ordinary text.
+- Clipboard content containing both text and a file keeps the text and attaches the file.
+- Files can also be dropped onto the message area or chosen with the round **+** button.
+- Pictures, videos, and audio receive previews; documents and other files receive clear file cards.
+- A message may contain words and files together or files by themselves.
+- Limits are 12 files, 25 MB per file, and 100 MB per message.
+- Files are saved atomically under the private RACC data root in `RowdyTeam/chat-uploads`.
+- Names, byte counts, paths, and SHA-256 fingerprints are checked; traversal names, broken data, mismatched sizes, and over-limit files are rejected.
+- Saving a file does not execute or open it.
+- Local Robot mode receives the verified saved local path so the Robot can work with it.
+- OpenAI cloud mode receives only the safe name, type, and size from this uploader; it does not receive the file bytes or private local path.
+- ChatGPT Team Handoff carries these rules for future chats and models.
 
-## V4.1 correction and evidence
+## Failed V4 attempt and recovery
 
-V4.1 replaces the obsolete screen assertions with checks for:
+Roger ran V4 on 2026-08-07 at about 23:07 Central time. Its presence test still expected the removed client display token `voiceRoute`. The installer stopped, restored the exact pre-install files, restarted RACC on port 4317, and completed automatic rollback. V4 is superseded and must not be run again.
 
-- the live voice-health endpoint
-- the current speech-recognition health result
-- the simple **Voice ready** display
-- the existing wake listener and voice-wake path
+V4.1 corrected the obsolete display assertion and separately retained the real backend voice-routing test. V5 includes that correction and supersedes V4.1, so Roger should run only V5.
 
-The corrected installer also runs the separate Rowdy voice-chat unit test, where the backend `voiceRoute` behavior belongs.
+## V5 evidence
 
 Verified before delivery:
 
 - JavaScript syntax: passed
-- Shared page, consolidated workspace, and Customizer tests: 19 passed, 0 failed
-- RR Chat screen, three-seat, model-save, and inner-Customizer checks: 36 passed, 0 failed
-- Package manifest: 12 passed, 0 failed
+- Focused Customizer, Control Center, consolidated-workspace, and uploader tests: 22 passed, 0 failed
+- Page-code paste/drop/upload smoke: passed
+- Payload-to-source byte comparison: passed for all 11 payload files
+- Package manifest: 14 passed, 0 failed
 - ZIP integrity: passed
-- Corrected installer: `ROWDY_RR_CHAT_THREE_SEAT_CUSTOMIZER_V4_1_20260807.zip`
-- Corrected installer SHA-256: `9bf4557442711e2d3186930003178d771599adae6376d4ba0b38e7b5888ec728`
-- Stable Library record: `libfile_029d003d32488191b62e780a7e0b699e`, version 1
-- Dated continuity recovery: `ROWDY_RR_CHAT_THREE_SEAT_V4_1_CONTINUITY_20260807.zip`, SHA-256 `63a3d22ff1646c31ec0b2cd32d5eba0dded9ca2b6bac0d4c90c60b9b53bce2ef`, Library `libfile_0d34aaa642148191a83a938fe46542b4` v1; ZIP integrity passed
-- Continuity check run: `3c9584cf-2054-4e5f-b732-071dd46a41cb` — 9 pass, 1 warning, 0 fail
+- Installer: `ROWDY_RR_CHAT_FILE_UPLOADER_V5_20260807.zip`
+- Installer SHA-256: `24b55eeed2df3fff8e5b572a08c39ecd1acd5e5ccd9ebbc82c6b2db52f60699b`
+- Stable Library record: `libfile_029d003d32488191b62e780a7e0b699e`, version 2
+- Windows installer performs the focused tests, page/code checks, same-model save check, and one real tiny upload whose path and SHA-256 are verified before that exact test file is removed.
+- The browser-engine smoke was not available in the scratch workspace; the complete Windows installer performs the final live server/browser proof.
 
 ## Recovery required
 
-- Run the corrected V4.1 installer on Roger's complete Windows RACC checkout.
+- Run V5 on Roger's complete Windows RACC checkout.
 - Capture the successful backup, install-report, and rollback-script paths.
-- Verify the three Robot selectors, three monitored avatars, **In chat** choices, focused model save, and inner Customizer selection in the live browser.
+- Verify paste from clipboard, text-plus-file paste, drag and drop, **+** selection, preview/removal, and file-only sending in the live RR Chat.
+- Verify the three Robot selectors, monitored avatars, **In chat** choices, focused model save, and inner Customizer selection.
 - Perform one deliberate model change and confirm it remains after a server restart.
 
 ## Exact next safe action
 
-Extract `ROWDY_RR_CHAT_THREE_SEAT_CUSTOMIZER_V4_1_20260807.zip`, double-click `INSTALL_RR_CHAT_THREE_SEAT_V4_1.cmd`, and wait for the exact message **RR Chat three-seat upgrade installed and verified.** Then perform the live browser checks above.
+Extract `ROWDY_RR_CHAT_FILE_UPLOADER_V5_20260807.zip`, double-click `INSTALL_RR_CHAT_FILE_UPLOADER_V5.cmd`, and wait for the exact message **RR Chat file uploader V5 installed and verified.** Then perform the live checks above.
