@@ -1,7 +1,7 @@
 # Rowdy Room Continuity — START HERE
 
 **Status:** Active public-safe breadcrumb root  
-**Last updated:** 2026-07-26  
+**Last updated:** 2026-08-07  
 **Owner:** Roger Jamsek
 
 Start new, compacted, reconstructed, contradictory, material, high-risk, or manifest-changed Rowdy Room work here after reading the complete Operator Law. For an ordinary continuation in a verified session, check the Session Manifest and load only changed or task-relevant records. Do not rely on unverified chat memory. Missing or contradictory facts remain **Recovery required**.
@@ -16,9 +16,10 @@ Start new, compacted, reconstructed, contradictory, material, high-risk, or mani
 6. [Continuity Changelog](CHANGELOG.md) when recent decisions or changes affect the task
 7. [Continuity Runbook](CONTINUITY_RUNBOOK.md) before a material change
 8. [Assistant Foundry Learning and Creation Law](ASSISTANT_FOUNDRY_LEARNING_LAW.md) for assistant-system work
-9. [AI Start Dispatcher Contract v1](AI_START_DISPATCHER_CONTRACT.md) for Chat-to-Work dispatcher implementation
-10. [Build Portable AI Computer handoff](BUILD_PORTABLE_AI_COMPUTER_HANDOFF.md) for the active portable-computer project
-11. Applicable files under `docs/bible/`
+9. [RACC Customizer v2 and Shared Communication Hub](RACC_CUSTOMIZER_AND_COMMUNICATION_HUB.md) for Control Center customization, embedded editing, and the single internal chat route
+10. [AI Start Dispatcher Contract v1](AI_START_DISPATCHER_CONTRACT.md) for Chat-to-Work dispatcher implementation
+11. [Build Portable AI Computer handoff](BUILD_PORTABLE_AI_COMPUTER_HANDOFF.md) for the active portable-computer project
+12. Applicable files under `docs/bible/`
 
 ## Approved token-efficient loading policy
 
@@ -36,6 +37,18 @@ Start new, compacted, reconstructed, contradictory, material, high-risk, or mani
 - Contract recovery copy: `AI_Start_Dispatcher_Contract_V1_Recovery_2026-07-26.json`, SHA-256 `8c0de04e6280191a0461e9aeb3814187516f21a9af5ba10aa3f10d4e5e9d13c3`.
 - Recovery required: automatic ChatGPT/Work wake triggering, authenticated standard-Chat writes, final per-client authentication, notification choice, hosting storage and rollback implementation, and measured lease timing.
 - Exact next safe action: build the dispatcher in a recoverable staging copy, run all 18 acceptance tests, and request separate production deployment approval only after staging passes.
+
+## RACC customization and communication continuity
+
+- Authority: [RACC Customizer v2 and Shared Communication Hub](RACC_CUSTOMIZER_AND_COMMUNICATION_HUB.md).
+- Approved scope: one shared Customizer v2 across all 18 RACC pages; embedded **Edit Voice** / **Edit Panel** controls; shared Rowdy Companion voice-popout state; global theme synchronization; one internal Rowdy Robots voice/text hub on every page.
+- The two older competing local Lucian chat forms are retired from view; approval and work controls remain.
+- Public source commit: `5196fda5b33cdec0ebd3b197eb86dbe82ffec841`; authority blob: `0e107134ae79e00978eef69e42382c2635a3873d`.
+- Protected record: `rowdy-room/racc-customizer-communication-hub` v1, SHA-256 `7463e3ef4f0964023c529150b6e343fc23323214eea41de0029d56d932f1c621`.
+- Recovery artifact: `ROWDY_CUSTOMIZER_V2_VOICE_AND_SHARED_CHAT_FIX_20260807.zip`, SHA-256 `0b877ba3aa7bb5f164118c4836d986b7e421fa30a8d2a25c990d0ae077b13910`.
+- Source verification: syntax passed; 6/6 integration tests; 18/18 direct-page DOM boots; embedded voice/panel and core edit actions passed; ZIP integrity passed.
+- Recovery required: the new package is not yet recorded as installed on Roger's Windows PC; live HTTP/browser readback and exact installer backup/report paths remain pending.
+- Exact next safe action: run `INSTALL_VOICE_AND_SHARED_CHAT_FIX.cmd`; update this authority after the installer reports **installed and verified**.
 
 ## Current continuation
 
@@ -102,6 +115,7 @@ Verified protected snapshot:
 - `rowdy-room/portable-assistant-foundation`: v4, `77ff5476182cbd02491138d5c947ffb7f026580eef9fecd4a30074c4d31c00b1`, history 168, active
 - `rowdy-room/assistant-foundry-learning-law`: v1, `f9d1369a131d5f1e885f2c826c9db1043a377aa8cc790280603792927ec54eb8`, history 167, active
 - `rowdy-room/assistant-foundry-guided-builder-prototype`: v1, `8f3936a707d4ad777c2a1f000d8d8720dd644be5e83b7346630bef72e1be8e17`, history 169, active
+- `rowdy-room/racc-customizer-communication-hub`: v1, `7463e3ef4f0964023c529150b6e343fc23323214eea41de0029d56d932f1c621`, active; installer built and source-verified, live Windows installation pending.
 - `rowdy-room/assistant-profile-foundation`: v7, `3bf60186f11bb3905221bdb0fe0fe7253484dca6c72d210bf373f2b75f325c28`, active; More About Me, private Decision Context, and starting Assistant Inheritance Policy approved. Private recovery copy `outputs/Assistant_Profile_Foundation_2026-07-23_PRIVATE.json` v5 / SHA-256 `8dc7ef50e0586aae5abf1c65eeac2755eb689d5ea2ad1430c9a15dcdf1ba3e88`; public profile breadcrumb commit `3f192da79d04cf4da729d0854fa79b24472ea3f6`; verification run `9523b9d3-64f4-4e5c-bcfa-cc96e9b3c2f0` has 4 pass / 0 fail; check rows 240-243.
 ## Equipment truth
 
