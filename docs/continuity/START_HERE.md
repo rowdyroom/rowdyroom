@@ -18,9 +18,10 @@ Start new, compacted, reconstructed, contradictory, material, high-risk, or mani
 8. [Assistant Foundry Learning and Creation Law](ASSISTANT_FOUNDRY_LEARNING_LAW.md) for assistant-system work
 9. [RACC Customizer v2 and Shared Communication Hub](RACC_CUSTOMIZER_AND_COMMUNICATION_HUB.md) for Control Center customization, embedded editing, and the single internal chat route
 10. [RACC Consolidated Workspace](RACC_CONSOLIDATED_WORKSPACE.md) for the two primary workspaces, four task flows, preserved routes, and install state
-11. [AI Start Dispatcher Contract v1](AI_START_DISPATCHER_CONTRACT.md) for Chat-to-Work dispatcher implementation
-12. [Build Portable AI Computer handoff](BUILD_PORTABLE_AI_COMPUTER_HANDOFF.md) for the active portable-computer project
-13. Applicable files under `docs/bible/`
+11. [RACC Control Center Shell and Movable Launchers](RACC_CONTROL_CENTER_SHELL_AND_LAUNCHERS.md) for the approved shell order, side popouts, and three independent floating controls
+12. [AI Start Dispatcher Contract v1](AI_START_DISPATCHER_CONTRACT.md) for Chat-to-Work dispatcher implementation
+13. [Build Portable AI Computer handoff](BUILD_PORTABLE_AI_COMPUTER_HANDOFF.md) for the active portable-computer project
+14. Applicable files under `docs/bible/`
 
 ## Approved token-efficient loading policy
 
@@ -38,6 +39,21 @@ Start new, compacted, reconstructed, contradictory, material, high-risk, or mani
 - Contract recovery copy: `AI_Start_Dispatcher_Contract_V1_Recovery_2026-07-26.json`, SHA-256 `8c0de04e6280191a0461e9aeb3814187516f21a9af5ba10aa3f10d4e5e9d13c3`.
 - Recovery required: automatic ChatGPT/Work wake triggering, authenticated standard-Chat writes, final per-client authentication, notification choice, hosting storage and rollback implementation, and measured lease timing.
 - Exact next safe action: build the dispatcher in a recoverable staging copy, run all 18 acceptance tests, and request separate production deployment approval only after staging passes.
+
+## RACC Control Center shell and launchers
+
+- Authority: [RACC Control Center Shell and Movable Launchers](RACC_CONTROL_CENTER_SHELL_AND_LAUNCHERS.md).
+- Approved shell: Extensions and Bookmarks at top; protected central Page Viewer; AI/external services in the left popout; Quick Actions in the right popout; Private Fact Checker below the viewer.
+- Floating controls: RR Chat, Customizer, and FreeTube are separate 60-by-60 circles, independently draggable, with separate saved positions.
+- Shared Customizer v2 is the one visible customizer; the older page-specific launcher/toolbox is retired.
+- Required shell zones are protected. A one-time migration restores hidden/displaced required controls without erasing unrelated saved colors, text, themes, or page-specific styling.
+- Public authority: commit `e31efe7b8b23a84375ce0d18eebfec4de1d4428f`; blob `da20bc4a52db1a2b16aa079003c065ea2d23cffd`.
+- Protected record: `rowdy-room/racc-control-center-shell-launchers` v3, SHA-256 `c1986214dfa069aca33027923963dcb3f8f632ab64327559b53c1c494992b374`; history versions 3.
+- Installer: `ROWDY_CONTROL_CENTER_SHELL_CUSTOMIZER_FIX_V2_20260807.zip`, SHA-256 `67a5a82ebd93ee1bdf9de8ffd72655c7a74bac07ce2f7b5512baa375cdb4abf7`, Library `libfile_f0bc6cdceaec81918950245fea1e599a` v0; cumulative and ZIP-verified.
+- Recovery: `ROWDY_CONTROL_CENTER_SHELL_CONTINUITY_20260807.zip`, SHA-256 `31e6ef186fee66b85794f282fa92d03a31abc6d158bc37f4c0312c794ffe5e4c`, Library `libfile_89c9de844588819192720d4bd61c5ee5` v0.
+- Verification run: `7b440b32-c39a-4e54-ba09-1c55f1e2469a` — 7 pass, 1 warning, 0 fail. Source checks: 16/16 focused tests and 14/14 package manifest.
+- Recovery required: run the cumulative installer on Roger's Windows RACC; capture exact backup/report/rollback paths; confirm both popouts, viewer/Fact Checker order, and launcher movement/persistence; recover 26 unrelated historical runtime/config modules missing from the supplied source snapshot.
+- Exact next safe action: run `INSTALL_CONTROL_CENTER_FIX.cmd`, wait for **Control Center shell and Customizer fix installed and verified**, then complete the five live browser checks.
 
 ## RACC consolidated workspace
 
