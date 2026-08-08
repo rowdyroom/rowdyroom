@@ -14,7 +14,8 @@ Status: Roger authorized a task-oriented consolidation that preserves every orig
 - Updated ChatGPT Team Handoff with the architecture, communication inheritance rule, compatibility boundary, and install status.
 - Passed 13/13 focused tests, 18/18 direct-page DOM boots, 18/18 HTTP compatibility routes, Operations interaction smoke, embedded modes, inline syntax, shared-asset HTTP checks, and ZIP integrity.
 - Delivered `ROWDY_RACC_CONSOLIDATED_WORKSPACE_V1_20260807.zip`, SHA-256 `e136249ae22c72265b53a4922ec92c373b5b2690b668cd87e949d7d8191edf0a`, Library `libfile_d2c83f65b4fc819186d7182ce931c00e` v0.
-- Public authority: `docs/continuity/RACC_CONSOLIDATED_WORKSPACE.md`; protected record `rowdy-room/racc-consolidated-workspace` v1, SHA-256 `86521694ba8fe4b37e7534ef66bb7ae30790e95db13545609e2bf385c9920366`.
+- Public authority: `docs/continuity/RACC_CONSOLIDATED_WORKSPACE.md`; protected record `rowdy-room/racc-consolidated-workspace` v2, SHA-256 `bd52cc4350ea436a74a9de95fa76f23e279ed48747a91f49fda1cbbbf26de19d`.
+- Dated recovery: `ROWDY_RACC_CONSOLIDATION_CONTINUITY_20260807.zip`, SHA-256 `50585d61af63a2f793379d8723dafd95e0cdc775b34d490f248d0c1705792d80`, Library `libfile_505989d37e788191bc0494166ecc18fa` v0; ZIP integrity passed.
 - Corrected the prior voice/shared-chat status from install pending to Roger-reported installed-and-verified; protected record v4, SHA-256 `98f51cdf5d8158c4ed2b85c595b6f9c7d94db5c0dfd6d720f13f0c7b030ef000`.
 - Recovery required: run the new consolidation installer on Windows, capture live browser readback and exact recovery paths, and recover the 26 unrelated historical runtime/config modules absent from the supplied source snapshot.
 - Exact next safe action: run `INSTALL_CONSOLIDATED_WORKSPACE.cmd`, wait for installed and verified, then confirm the four flows and one RR Chat.
