@@ -1,5 +1,27 @@
 # Rowdy Room Continuity Changelog
 
+
+## 2026-08-08 — RR Chat file paste, drop, and picker uploader V5 issued
+
+Status: V5 is cumulative, source/package verified, and awaiting live Windows installation.
+
+- Added clipboard-file paste directly in the RR Chat text box while preserving ordinary text-only paste and mixed text-plus-file clipboard content.
+- Added drag/drop and a round **+** file picker.
+- Added picture, video, and audio previews plus generic cards for documents and other files.
+- Added file-only and words-plus-files messages with remove, uploading, ready, and error states.
+- Added limits of 12 files, 25 MB each, and 100 MB per message.
+- Added safe atomic local storage, safe file names, traversal protection, exact-size checks, saved-path proof, and SHA-256 fingerprints.
+- Local Robot mode receives the verified local path; OpenAI cloud mode receives only safe name/type/size from this uploader.
+- Added future-chat/model handoff rules for the uploader.
+- V5 includes and supersedes V4 and V4.1; Roger should run only V5.
+- Verification: 22 focused tests, paste/drop/upload page-code smoke, 11 payload byte matches, 14 package hashes, and installer/recovery ZIP integrity passed.
+- Installer: `ROWDY_RR_CHAT_FILE_UPLOADER_V5_20260807.zip`, SHA-256 `24b55eeed2df3fff8e5b572a08c39ecd1acd5e5ccd9ebbc82c6b2db52f60699b`, stable Library `libfile_029d003d32488191b62e780a7e0b699e` v2.
+- Protected record: `rowdy-room/racc-customizer-communication-hub` v8, SHA-256 `1c3f99abf36b114f08577a009c2225094500c5932e82fa6af8be2b0bc1a68513`.
+- Recovery: `ROWDY_RR_CHAT_FILE_UPLOADER_V5_CONTINUITY_20260808.zip`, SHA-256 `dbba65755f76b8b2c560772ca7b4d06c344db9aa9214a0ed593819c7c3b3c8c4`, stable Library `libfile_0d34aaa642148191a83a938fe46542b4` v2.
+- Continuity check `913c8dcd-da77-485f-a206-f9c5f666bd19`: 12 pass, 1 warning, 0 fail.
+- Recovery required: run V5 on Windows and complete live uploader, three-seat, model-persistence, and Customizer browser readback.
+- Exact next safe action: extract V5, run `INSTALL_RR_CHAT_FILE_UPLOADER_V5.cmd`, and wait for **RR Chat file uploader V5 installed and verified.**
+
 ## 2026-08-07 — RR Chat V4 verification failure recovered; V4.1 issued
 
 Status: V4 made no lasting Windows change; its automatic rollback completed. Corrected V4.1 is source/package verified and awaiting live installation.
