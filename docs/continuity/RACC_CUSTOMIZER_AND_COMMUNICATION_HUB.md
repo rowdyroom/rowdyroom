@@ -64,6 +64,8 @@ Verified before delivery:
 - Corrected installer: `ROWDY_RR_CHAT_THREE_SEAT_CUSTOMIZER_V4_1_20260807.zip`
 - Corrected installer SHA-256: `9bf4557442711e2d3186930003178d771599adae6376d4ba0b38e7b5888ec728`
 - Stable Library record: `libfile_029d003d32488191b62e780a7e0b699e`, version 1
+- Dated continuity recovery: `ROWDY_RR_CHAT_THREE_SEAT_V4_1_CONTINUITY_20260807.zip`, SHA-256 `63a3d22ff1646c31ec0b2cd32d5eba0dded9ca2b6bac0d4c90c60b9b53bce2ef`, Library `libfile_0d34aaa642148191a83a938fe46542b4` v1; ZIP integrity passed
+- Continuity check run: `3c9584cf-2054-4e5f-b732-071dd46a41cb` — 9 pass, 1 warning, 0 fail
 
 ## Recovery required
 
