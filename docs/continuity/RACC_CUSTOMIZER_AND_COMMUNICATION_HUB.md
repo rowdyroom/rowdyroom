@@ -71,6 +71,16 @@ Verified before delivery:
 - Windows installer performs the focused tests, page/code checks, same-model save check, and one real tiny upload whose path and SHA-256 are verified before that exact test file is removed.
 - The browser-engine smoke was not available in the scratch workspace; the complete Windows installer performs the final live server/browser proof.
 
+## Continuity evidence
+
+- Protected record: `rowdy-room/racc-customizer-communication-hub` v8
+- Protected SHA-256: `1c3f99abf36b114f08577a009c2225094500c5932e82fa6af8be2b0bc1a68513`
+- Continuity check: `913c8dcd-da77-485f-a206-f9c5f666bd19` — 12 pass, 1 warning, 0 fail
+- Dated recovery: `ROWDY_RR_CHAT_FILE_UPLOADER_V5_CONTINUITY_20260808.zip`
+- Recovery SHA-256: `dbba65755f76b8b2c560772ca7b4d06c344db9aa9214a0ed593819c7c3b3c8c4`
+- Stable recovery record: `libfile_0d34aaa642148191a83a938fe46542b4`, version 2
+- Recovery ZIP integrity and all internal fingerprints: passed
+
 ## Recovery required
 
 - Run V5 on Roger's complete Windows RACC checkout.
