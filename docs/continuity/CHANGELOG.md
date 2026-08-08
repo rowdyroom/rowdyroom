@@ -1,5 +1,21 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-08-07 — Control Center shell restored and floating tools separated
+
+Status: Source correction, cumulative backup-first installer, continuity package, and durable records are verified. Live Windows installation and browser readback remain pending.
+
+- Restored the approved shell order: Extensions, Bookmarks, central Page Viewer, left/right edge popouts, and Private Fact Checker below the viewer.
+- Put AI/external services in the left popout and Quick Actions in the right popout.
+- Retired the duplicate page-specific customizer launcher; shared Customizer v2 is now the one visible customization system.
+- Made RR Chat, Customizer, and FreeTube separate 60-by-60 circular launchers with independent drag positions and saved placement.
+- Protected required shell zones and added a one-time migration that restores hidden/displaced required controls while preserving unrelated saved styling.
+- Cumulative installer: `ROWDY_CONTROL_CENTER_SHELL_CUSTOMIZER_FIX_V2_20260807.zip`, SHA-256 `67a5a82ebd93ee1bdf9de8ffd72655c7a74bac07ce2f7b5512baa375cdb4abf7`, Library `libfile_f0bc6cdceaec81918950245fea1e599a` v0.
+- Recovery package: `ROWDY_CONTROL_CENTER_SHELL_CONTINUITY_20260807.zip`, SHA-256 `31e6ef186fee66b85794f282fa92d03a31abc6d158bc37f4c0312c794ffe5e4c`, Library `libfile_89c9de844588819192720d4bd61c5ee5` v0.
+- Protected record: `rowdy-room/racc-control-center-shell-launchers` v3, SHA-256 `c1986214dfa069aca33027923963dcb3f8f632ab64327559b53c1c494992b374`; history versions 3.
+- Verification run `7b440b32-c39a-4e54-ba09-1c55f1e2469a`: 7 pass, 1 warning, 0 fail. The warning is the pending live Windows install/browser readback.
+- Source verification: 16/16 focused tests; 14/14 package manifest; JavaScript, inline-script, shell-order, unique-ID, staged-overlay, and ZIP checks passed.
+- Exact next safe action: run `INSTALL_CONTROL_CENTER_FIX.cmd`, wait for the exact installed-and-verified message, then verify both popouts, the viewer/Fact Checker order, and independent launcher movement/persistence.
+
 ## 2026-08-07 — RACC consolidated into two primary workspaces and one RR Chat
 
 Status: Roger authorized a task-oriented consolidation that preserves every original function and route. Source implementation and the backup-first installer are verified; live Windows installation of the consolidation remains pending.
