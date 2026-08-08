@@ -17,9 +17,10 @@ Start new, compacted, reconstructed, contradictory, material, high-risk, or mani
 7. [Continuity Runbook](CONTINUITY_RUNBOOK.md) before a material change
 8. [Assistant Foundry Learning and Creation Law](ASSISTANT_FOUNDRY_LEARNING_LAW.md) for assistant-system work
 9. [RACC Customizer v2 and Shared Communication Hub](RACC_CUSTOMIZER_AND_COMMUNICATION_HUB.md) for Control Center customization, embedded editing, and the single internal chat route
-10. [AI Start Dispatcher Contract v1](AI_START_DISPATCHER_CONTRACT.md) for Chat-to-Work dispatcher implementation
-11. [Build Portable AI Computer handoff](BUILD_PORTABLE_AI_COMPUTER_HANDOFF.md) for the active portable-computer project
-12. Applicable files under `docs/bible/`
+10. [RACC Consolidated Workspace](RACC_CONSOLIDATED_WORKSPACE.md) for the two primary workspaces, four task flows, preserved routes, and install state
+11. [AI Start Dispatcher Contract v1](AI_START_DISPATCHER_CONTRACT.md) for Chat-to-Work dispatcher implementation
+12. [Build Portable AI Computer handoff](BUILD_PORTABLE_AI_COMPUTER_HANDOFF.md) for the active portable-computer project
+13. Applicable files under `docs/bible/`
 
 ## Approved token-efficient loading policy
 
@@ -38,19 +39,29 @@ Start new, compacted, reconstructed, contradictory, material, high-risk, or mani
 - Recovery required: automatic ChatGPT/Work wake triggering, authenticated standard-Chat writes, final per-client authentication, notification choice, hosting storage and rollback implementation, and measured lease timing.
 - Exact next safe action: build the dispatcher in a recoverable staging copy, run all 18 acceptance tests, and request separate production deployment approval only after staging passes.
 
+## RACC consolidated workspace
+
+- Authority: [RACC Consolidated Workspace](RACC_CONSOLIDATED_WORKSPACE.md).
+- User-facing architecture: Rowdy Control Center is the front door; Rowdy Operations Workspace is the unified work surface; Rowdy Companion is the one shared RR Chat component.
+- The 18 original page routes and 15 original tool pages remain available as compatibility endpoints/modules.
+- Four flows: **Run & Approve**, **Build & Manage the Team**, **Connect & Verify**, and **Create Voice, Characters & Media**.
+- Capabilities: multi-word search, favorites, recents, task recipes, deep links, reload, full-screen, open separately, and responsive layouts.
+- Source authority commits: creation `2a9d39e5b0e39a421b45f9604037f290074424e2`; protected-readback update `000363afa3463f5fb0ca7b427880ec98b26f03bd`; current authority blob `d3c25387fde5aa3fc8d552180f29c73cb74cd680`.
+- Protected record: `rowdy-room/racc-consolidated-workspace` v1, SHA-256 `86521694ba8fe4b37e7534ef66bb7ae30790e95db13545609e2bf385c9920366`; history versions 1.
+- Installer: `ROWDY_RACC_CONSOLIDATED_WORKSPACE_V1_20260807.zip`, SHA-256 `e136249ae22c72265b53a4922ec92c373b5b2690b668cd87e949d7d8191edf0a`, Library `libfile_d2c83f65b4fc819186d7182ce931c00e` v0; ZIP integrity passed.
+- Source verification: 13/13 focused tests; 18/18 direct-page DOM boots; 18/18 HTTP compatibility routes; interaction, embedded, asset, inline-script, and archive checks passed.
+- Recovery required: consolidated Windows install, live browser readback, exact installer backup/report/rollback paths, and the 26 unrelated runtime/config modules absent from the supplied source snapshot.
+- Exact next safe action: run `INSTALL_CONSOLIDATED_WORKSPACE.cmd`, wait for **installed and verified**, then confirm the four flows and one RR Chat in the live browser.
+
 ## RACC customization and communication continuity
 
 - Authority: [RACC Customizer v2 and Shared Communication Hub](RACC_CUSTOMIZER_AND_COMMUNICATION_HUB.md).
-- Approved scope: one shared Customizer v2 across all 18 RACC pages; embedded **Edit Voice** / **Edit Panel** controls; shared Rowdy Companion voice-popout state; global theme synchronization; one internal Rowdy Robots voice/text hub on every page.
-- The two older competing local Lucian chat forms are retired from view; approval and work controls remain.
-- Public source commit: `9eb1be8759e99291577e91c247d06dac1b48fedf`; authority blob: `fc3c7d2d62e9a047efad63897986e2bc2b62389c`.
-- Protected record: `rowdy-room/racc-customizer-communication-hub` v3, SHA-256 `0c751d5434dd85458e27169ec64f85311db3bfa7be041bed76ff384e22f5d183`.
-- Installer artifact: `ROWDY_CUSTOMIZER_V2_VOICE_AND_SHARED_CHAT_FIX_20260807.zip`, SHA-256 `1c47f58c6a6e4fb1e6dbf3113d9b733978d205d6814d7ddb463348be90fdc7dd`.
-- Dated continuity recovery: `ROWDY_CUSTOMIZER_COMMUNICATION_CONTINUITY_20260807.zip`, SHA-256 `247181da5cbd1c05a08410a50f115c8367e7acb68052f2f10802d8ec63b113ef`; archive integrity passed.
-- Continuity check run: `cacdf030-abfa-4073-9289-d6a2baa2e5f9` — 6 pass, 1 warning, 0 fail. Warning: live Windows installation/readback remains pending.
-- Source verification: syntax passed; 7/7 integration tests; 18/18 direct-page DOM boots; embedded voice/panel and core edit actions passed; ZIP integrity passed.
-- Recovery required: the new package is not yet recorded as installed on Roger's Windows PC; live HTTP/browser readback and exact installer backup/report paths remain pending.
-- Exact next safe action: run `INSTALL_VOICE_AND_SHARED_CHAT_FIX.cmd`; update this authority after the installer reports **installed and verified**.
+- Approved scope remains one shared Customizer v2 across all 18 pages, embedded **Edit Voice** / **Edit Panel**, shared companion customization, global theme synchronization, and one RR Chat.
+- Roger reported the earlier voice/shared-chat installer displayed **installed and verified**; this supersedes the old install-pending statement.
+- Protected record: `rowdy-room/racc-customizer-communication-hub` v4, SHA-256 `98f51cdf5d8158c4ed2b85c595b6f9c7d94db5c0dfd6d720f13f0c7b030ef000`; history versions 4.
+- Public correction commit: `bfd6de97b450103f0cfdf5ed163fea4afd0313a1`; authority blob `9698e7c0e073c6eeb887a48a452d42c9369b4305`.
+- Recovery required: exact Windows backup/report/rollback paths and a complete representative cross-page live browser readback.
+- Exact next safe action for this older update: capture those paths and confirm **Edit Voice**, **Edit Panel**, and one RR Chat during the next live Windows verification.
 
 ## Current continuation
 
