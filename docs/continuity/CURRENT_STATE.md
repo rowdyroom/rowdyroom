@@ -56,6 +56,7 @@ The current product continuation is **Build Portable AI Computer**.
 - Delivered installer: `ROWDY_RACC_CONSOLIDATED_WORKSPACE_V1_20260807.zip`, SHA-256 `e136249ae22c72265b53a4922ec92c373b5b2690b668cd87e949d7d8191edf0a`.
 - Protected record: `rowdy-room/racc-consolidated-workspace` v2, SHA-256 `bd52cc4350ea436a74a9de95fa76f23e279ed48747a91f49fda1cbbbf26de19d`.
 - Dated recovery: `ROWDY_RACC_CONSOLIDATION_CONTINUITY_20260807.zip`, SHA-256 `50585d61af63a2f793379d8723dafd95e0cdc775b34d490f248d0c1705792d80`; ZIP integrity passed.
+- Continuity check `8b7dda50-528b-4566-ba51-d4bc1e7da284`: 7 pass, 1 warning, 0 fail; warning is pending live Windows install/readback.
 - **Recovery required:** live Windows install/readback and exact backup/report/rollback paths; 26 unrelated historical runtime/config modules are absent from the supplied source snapshot.
 
 ## RACC Customizer v2 and shared communication hub
