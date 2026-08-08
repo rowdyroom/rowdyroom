@@ -1,10 +1,32 @@
 # Rowdy Room Continuity — START HERE
 
 **Status:** Active public-safe breadcrumb root  
-**Last updated:** 2026-08-07  
+**Last updated:** 2026-08-08  
 **Owner:** Roger Jamsek
 
 Start new, compacted, reconstructed, contradictory, material, high-risk, or manifest-changed Rowdy Room work here after reading the complete Operator Law. For an ordinary continuation in a verified session, check the Session Manifest and load only changed or task-relevant records. Do not rely on unverified chat memory. Missing or contradictory facts remain **Recovery required**.
+
+## 2026-08-08 — RR Chat File Uploader V5
+
+V5 is the cumulative RR Chat installer. It preserves the shared communication hub, three Robot seats, saved focused-model selector, and inner Customizer targets while adding copy/paste, drag/drop, and **+** file selection directly in the message box.
+
+- Public authority: `docs/continuity/RACC_CUSTOMIZER_AND_COMMUNICATION_HUB.md`
+- Authority branch: `agent/rowdy-room-continuity`
+- Authority commit: `947d0f62b79612b79665028e4e67d4e7e4b8ff4e`
+- Authority blob: `a4a158091d1ec5780df6877991886c325cb4a0ba`
+- Changelog commit: `7e094ab01b881559b5dc8a73bc1fcaf847675f5d`
+- Changelog blob: `ac2aa30d18c0d692cafee23cbd4b92b6e9777c15`
+- Protected record: `rowdy-room/racc-customizer-communication-hub` v8
+- Protected SHA-256: `1c3f99abf36b114f08577a009c2225094500c5932e82fa6af8be2b0bc1a68513`
+- Continuity check: `913c8dcd-da77-485f-a206-f9c5f666bd19` — 12 pass, 1 warning, 0 fail
+- Installer: `ROWDY_RR_CHAT_FILE_UPLOADER_V5_20260807.zip`
+- Installer SHA-256: `24b55eeed2df3fff8e5b572a08c39ecd1acd5e5ccd9ebbc82c6b2db52f60699b`
+- Installer Library: `libfile_029d003d32488191b62e780a7e0b699e` v2
+- Recovery: `ROWDY_RR_CHAT_FILE_UPLOADER_V5_CONTINUITY_20260808.zip`
+- Recovery SHA-256: `dbba65755f76b8b2c560772ca7b4d06c344db9aa9214a0ed593819c7c3b3c8c4`
+- Recovery Library: `libfile_0d34aaa642148191a83a938fe46542b4` v2
+- Recovery required: live Windows V5 installation and browser readback.
+- Exact next action: extract V5, run `INSTALL_RR_CHAT_FILE_UPLOADER_V5.cmd`, and wait for **RR Chat file uploader V5 installed and verified.**
 
 ## Required startup order
 
