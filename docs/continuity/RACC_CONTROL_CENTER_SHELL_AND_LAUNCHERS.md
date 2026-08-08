@@ -87,3 +87,14 @@ A cached browser tab may require one `Ctrl+Shift+R`.
 ## Exact next safe action
 
 Extract `ROWDY_CONTROL_CENTER_SHELL_CUSTOMIZER_FIX_V2_20260807.zip`, double-click `INSTALL_CONTROL_CENTER_FIX.cmd`, wait for the exact installed-and-verified message, then perform the five live browser checks listed above.
+
+## Durable recovery evidence
+
+- Recovery package: `ROWDY_CONTROL_CENTER_SHELL_CONTINUITY_20260807.zip`
+- Recovery SHA-256: `31e6ef186fee66b85794f282fa92d03a31abc6d158bc37f4c0312c794ffe5e4c`
+- Recovery Library: `libfile_89c9de844588819192720d4bd61c5ee5`, version 0
+- Protected record: `rowdy-room/racc-control-center-shell-launchers`, version 2 at this checkpoint
+- Protected SHA-256: `8c147a70e4e2c805139a769ee4bab5f9761a34c7ea7a4126995579d59bbd331c`
+- Continuity check run: `7b440b32-c39a-4e54-ba09-1c55f1e2469a`
+- Check result: 7 passed, 1 warning, 0 failed
+- The warning is intentional: live Windows installation and browser readback remain pending.
