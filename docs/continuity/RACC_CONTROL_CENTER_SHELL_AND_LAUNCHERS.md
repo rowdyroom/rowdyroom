@@ -98,3 +98,31 @@ Extract `ROWDY_CONTROL_CENTER_SHELL_CUSTOMIZER_FIX_V2_20260807.zip`, double-clic
 - Continuity check run: `7b440b32-c39a-4e54-ba09-1c55f1e2469a`
 - Check result: 7 passed, 1 warning, 0 failed
 - The warning is intentional: live Windows installation and browser readback remain pending.
+
+## 2026-08-07 refinement: movable side controls and inspector
+
+Roger's live readback found three remaining limitations: the LEFT/RIGHT handles could not be moved or resized, the popout windows could not be moved or resized, and the Selected Item inspector could not be moved.
+
+The V3 correction:
+
+- makes the left and right edge handles selectable, movable, and resizable in shared Customizer v2;
+- makes both side popout windows selectable, movable, and resizable;
+- keeps these four required shell controls protected from deletion;
+- lets a click on a side handle open its panel while a drag moves the handle;
+- automatically selects the opened panel during customization;
+- keeps panel close controls usable during customization and returns selection to the corresponding handle;
+- makes the Selected Item inspector draggable by its header;
+- makes the inspector resizable and saves its position and expanded size;
+- prevents collapsing the inspector from overwriting its saved expanded size.
+
+V3 cumulative installer:
+
+- Artifact: `ROWDY_CONTROL_CENTER_SHELL_CUSTOMIZER_FIX_V3_20260807.zip`
+- SHA-256: `bfeea108bb6b9d54ea8db24e2b79c32e5b3843b52fa38398bab79fcdf93d4d53`
+- Library: `libfile_84c4e81ac9c08191b12c35ea6fcc0054`, version 0
+- Installer: `INSTALL_CONTROL_CENTER_FIX_V3.cmd`
+- Staged integration tests: 18 passed, 0 failed
+- Package manifest: 14 of 14 passed
+- ZIP integrity: passed
+
+Live installation remains pending until the V3 installer reports: `Control Center movable panels and Customizer fix installed and verified.`
