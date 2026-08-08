@@ -43,6 +43,20 @@ The current product continuation is **Build Portable AI Computer**.
 - Protected readback: `rowdy-room/assistant-foundry-learning-law` v1 / history 167 / SHA-256 `f9d1369a131d5f1e885f2c826c9db1043a377aa8cc790280603792927ec54eb8`; `rowdy-room/portable-assistant-foundation` v4 / history 168 / SHA-256 `77ff5476182cbd02491138d5c947ffb7f026580eef9fecd4a30074c4d31c00b1`; `rowdy-room/assistant-foundry-guided-builder-prototype` v1 / history 169 / SHA-256 `8f3936a707d4ad777c2a1f000d8d8720dd644be5e83b7346630bef72e1be8e17`.
 - Guided Builder version 1 is deployed with custom owner-only access and verified terminal success. Its URL is private and held only in the protected record/recovery package; no public availability is claimed.
 
+## RACC consolidated workspace
+
+- Public authority: [RACC Consolidated Workspace](RACC_CONSOLIDATED_WORKSPACE.md).
+- The user-facing RACC now has two primary workspaces: Control Center as the front door and Operations Workspace as the unified work surface.
+- Rowdy Companion remains the one shared RR Chat voice/text component.
+- All 18 original routes and all 15 original tool pages remain available.
+- Tools are grouped into four task flows: Run & Approve, Build & Manage the Team, Connect & Verify, and Create Voice/Characters/Media.
+- Added multi-word search, favorites, recents, task recipes, deep links, reload, full-screen, open separately, and responsive layouts.
+- Embedded tools inherit the parent RR Chat and do not create nested launchers; direct pages keep the shared launcher.
+- Source verification passed: 13 focused tests, 18 direct-page DOM boots, 18 HTTP compatibility routes, interaction smoke, embedded modes, inline syntax, shared assets, and ZIP integrity.
+- Delivered installer: `ROWDY_RACC_CONSOLIDATED_WORKSPACE_V1_20260807.zip`, SHA-256 `e136249ae22c72265b53a4922ec92c373b5b2690b668cd87e949d7d8191edf0a`.
+- Protected record: `rowdy-room/racc-consolidated-workspace` v1, SHA-256 `86521694ba8fe4b37e7534ef66bb7ae30790e95db13545609e2bf385c9920366`.
+- **Recovery required:** live Windows install/readback and exact backup/report/rollback paths; 26 unrelated historical runtime/config modules are absent from the supplied source snapshot.
+
 ## RACC Customizer v2 and shared communication hub
 
 - Public authority: [RACC Customizer v2 and Shared Communication Hub](RACC_CUSTOMIZER_AND_COMMUNICATION_HUB.md).
@@ -53,7 +67,7 @@ The current product continuation is **Build Portable AI Computer**.
 - Delivered installer: `ROWDY_CUSTOMIZER_V2_VOICE_AND_SHARED_CHAT_FIX_20260807.zip`, SHA-256 `1c47f58c6a6e4fb1e6dbf3113d9b733978d205d6814d7ddb463348be90fdc7dd`.
 - Protected record: `rowdy-room/racc-customizer-communication-hub` v3, SHA-256 `0c751d5434dd85458e27169ec64f85311db3bfa7be041bed76ff384e22f5d183`.
 - Dated continuity recovery: `ROWDY_CUSTOMIZER_COMMUNICATION_CONTINUITY_20260807.zip`, SHA-256 `247181da5cbd1c05a08410a50f115c8367e7acb68052f2f10802d8ec63b113ef`.
-- **Recovery required:** the new voice/shared-chat package is built and source-verified but is not yet recorded as installed on Roger's Windows PC. Live HTTP/browser readback and exact installer backup/report paths remain pending.
+- Roger reported the earlier voice/shared-chat installer displayed **installed and verified**. Exact Windows backup/report/rollback paths and a complete representative cross-page browser readback remain **Recovery required**.
 
 ## Token-efficient Chat and Work coordination
 
