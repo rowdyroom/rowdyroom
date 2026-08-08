@@ -47,6 +47,7 @@ Start new, compacted, reconstructed, contradictory, material, high-risk, or mani
 - Protected record: `rowdy-room/racc-customizer-communication-hub` v2, SHA-256 `715c2c4e047ea561d9f271303d93d72d3e163ec5f0c3031493c0b0e51e9a7f0f`.
 - Installer artifact: `ROWDY_CUSTOMIZER_V2_VOICE_AND_SHARED_CHAT_FIX_20260807.zip`, SHA-256 `0b877ba3aa7bb5f164118c4836d986b7e421fa30a8d2a25c990d0ae077b13910`.
 - Dated continuity recovery: `ROWDY_CUSTOMIZER_COMMUNICATION_CONTINUITY_20260807.zip`, SHA-256 `5571b951cc0a6b739c44ad3fa8adcb80f57ca362650574c1b1afba2aaf116354`; archive integrity passed.
+- Continuity check run: `cacdf030-abfa-4073-9289-d6a2baa2e5f9` — 6 pass, 1 warning, 0 fail. Warning: live Windows installation/readback remains pending.
 - Source verification: syntax passed; 6/6 integration tests; 18/18 direct-page DOM boots; embedded voice/panel and core edit actions passed; ZIP integrity passed.
 - Recovery required: the new package is not yet recorded as installed on Roger's Windows PC; live HTTP/browser readback and exact installer backup/report paths remain pending.
 - Exact next safe action: run `INSTALL_VOICE_AND_SHARED_CHAT_FIX.cmd`; update this authority after the installer reports **installed and verified**.
