@@ -39,15 +39,16 @@ Roger approved a shared Customizer v2 and one internal communication hub across 
 Verified against the source package before delivery:
 
 - JavaScript syntax checks: passed
-- Shared integration tests: 6 passed, 0 failed
+- Shared integration tests: 7 passed, 0 failed
+- ChatGPT Team Handoff packet: current Customizer, single-hub communication law, layout-hold release, authority path, and install-pending status passed.
 - DOM smoke test: all 18 direct pages passed
 - Embedded smoke tests: Rowdy Companion **Edit Voice** and another embedded panel **Edit Panel** passed
 - Core edit smoke tests: selection, sizing, auto-fit, duplicate, delete, and restore passed
 - Installer archive test: passed
 - Installer package: `ROWDY_CUSTOMIZER_V2_VOICE_AND_SHARED_CHAT_FIX_20260807.zip`
-- Installer package SHA-256: `0b877ba3aa7bb5f164118c4836d986b7e421fa30a8d2a25c990d0ae077b13910`
-- Protected record: `rowdy-room/racc-customizer-communication-hub` v2, SHA-256 `715c2c4e047ea561d9f271303d93d72d3e163ec5f0c3031493c0b0e51e9a7f0f`.
-- Dated continuity recovery: `ROWDY_CUSTOMIZER_COMMUNICATION_CONTINUITY_20260807.zip`, SHA-256 `5571b951cc0a6b739c44ad3fa8adcb80f57ca362650574c1b1afba2aaf116354`; ZIP integrity passed.
+- Installer package SHA-256: `1c47f58c6a6e4fb1e6dbf3113d9b733978d205d6814d7ddb463348be90fdc7dd`
+- Protected record: `rowdy-room/racc-customizer-communication-hub` v3, SHA-256 `0c751d5434dd85458e27169ec64f85311db3bfa7be041bed76ff384e22f5d183`.
+- Dated continuity recovery: `ROWDY_CUSTOMIZER_COMMUNICATION_CONTINUITY_20260807.zip`, SHA-256 `247181da5cbd1c05a08410a50f115c8367e7acb68052f2f10802d8ec63b113ef`; ZIP integrity passed.
 - Continuity check run: `cacdf030-abfa-4073-9289-d6a2baa2e5f9` — 6 pass, 1 warning, 0 fail. The warning is the pending live Windows install/readback.
 
 ## Installation and recovery behavior
