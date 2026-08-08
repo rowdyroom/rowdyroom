@@ -1,5 +1,24 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-08-08 — RR Chat Repair V6 issued
+
+Status: V6 is cumulative, source/package verified, and awaiting live Windows installation and physical microphone proof.
+
+- Compacted the three Robot selectors to reduce wasted top-panel height.
+- Removed the no-command clipping that hid reply approval controls.
+- Added always-visible reply approval/disapproval and private correction saving.
+- Restored a larger visible reply box plus Read aloud and Stop reading.
+- Separated typed text generation from voice creation so a voice failure cannot erase a good answer.
+- Added Robot-audio preference with browser-speech fallback.
+- Added one safe Lucian runtime check/repair and existing local-chat fallback.
+- Replaced the vague unexpected-server message with a short safe cause while redacting private paths.
+- Preserved the file uploader, three seats, saved model selector, inner Customizer targets, and separate command approval.
+- Source syntax and focused static/DOM smokes passed; package manifest 14/14 and ZIP integrity passed.
+- Installer: `ROWDY_RR_CHAT_REPAIR_V6_20260808.zip`, SHA-256 `6b41d26ac8c40fa0b977923161b0c250287e4e58765048596fb7177116ed50a6`, Library `libfile_029d003d32488191b62e780a7e0b699e` v3.
+- Protected record: `rowdy-room/racc-customizer-communication-hub` v9, SHA-256 `82f53093d01dc3be36c642ff8de9daef6df7110ca1d317ada835e2e090805fd2`.
+- Continuity check `3c011116-1925-4a43-88c6-90704f5787ce`: 11 pass, 2 warnings, 0 fail.
+- Recovery: `ROWDY_RR_CHAT_REPAIR_V6_CONTINUITY_20260808.zip`, SHA-256 `a6ca7925881edd8c446520985d683f64393491b290003870f6eb0d0e3d531c4f`, Library `libfile_0d34aaa642148191a83a938fe46542b4` v3.
+- Recovery required: run V6, confirm a typed reply, Robot/browser spoken playback, one physical microphone phrase, reply correction, separate command approval, uploader, model persistence, and inner Customizer behavior.
 
 ## 2026-08-08 — RR Chat file paste, drop, and picker uploader V5 issued
 
