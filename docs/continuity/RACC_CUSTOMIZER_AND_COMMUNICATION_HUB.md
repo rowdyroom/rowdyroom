@@ -1,6 +1,6 @@
 # RACC Customizer v2 and Shared Communication Hub
 
-**Status:** Installer package built and locally verified; live Windows installation pending Roger's installer run  
+**Status:** Roger reported installer completed with installed and verified; exact Windows paths and complete cross-page readback pending  
 **Recorded:** 2026-08-07  
 **Owner:** Roger Jamsek  
 **Source surface:** ChatGPT Work / Codex
@@ -40,7 +40,7 @@ Verified against the source package before delivery:
 
 - JavaScript syntax checks: passed
 - Shared integration tests: 7 passed, 0 failed
-- ChatGPT Team Handoff packet: current Customizer, single-hub communication law, layout-hold release, authority path, and install-pending status passed.
+- ChatGPT Team Handoff packet: current Customizer, single-hub communication law, layout authorization, consolidated-workspace boundary, and install status passed.
 - DOM smoke test: all 18 direct pages passed
 - Embedded smoke tests: Rowdy Companion **Edit Voice** and another embedded panel **Edit Panel** passed
 - Core edit smoke tests: selection, sizing, auto-fit, duplicate, delete, and restore passed
@@ -65,13 +65,16 @@ The update installer:
 8. Creates a manual rollback script.
 9. Automatically restores the pre-install files if any required check fails.
 
-## Recovery required
+## Installation report and remaining recovery
 
-- The delivered 2026-08-07 voice/shared-chat update is not recorded as installed on Roger's Windows PC until its installer reports **installed and verified**.
-- Live browser readback after installation remains pending.
+Roger explicitly reported that the installer displayed **installed and verified**. This supersedes the previous install-pending statement.
+
+**Recovery required:**
+
+- Exact Windows backup, install-report, and rollback-script paths were not supplied in this session.
+- The provided browser screenshot confirms the voice popout appears in Control Center, but a complete cross-page live browser readback was not captured.
 - Existing cached browser tabs may require one `Ctrl+Shift+R`.
-- The current continuity runtime cannot write the required Windows recovery copy directly. The installer creates it during the local installation.
 
 ## Exact next safe action
 
-Roger extracts `ROWDY_CUSTOMIZER_V2_VOICE_AND_SHARED_CHAT_FIX_20260807.zip`, runs `INSTALL_VOICE_AND_SHARED_CHAT_FIX.cmd`, and reports the install result. After a verified success, update this record from **installation pending** to **live installed and verified**.
+Preserve the installer-success report as current. During the next live Windows verification, capture the exact backup/report paths and confirm **Edit Voice**, **Edit Panel**, and the one RR Chat launcher across representative direct and embedded pages.
