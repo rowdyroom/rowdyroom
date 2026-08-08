@@ -6,27 +6,27 @@
 
 Start new, compacted, reconstructed, contradictory, material, high-risk, or manifest-changed Rowdy Room work here after reading the complete Operator Law. For an ordinary continuation in a verified session, check the Session Manifest and load only changed or task-relevant records. Do not rely on unverified chat memory. Missing or contradictory facts remain **Recovery required**.
 
-## 2026-08-08 — RR Chat File Uploader V5
+## 2026-08-08 — RR Chat Repair V6
 
-V5 is the cumulative RR Chat installer. It preserves the shared communication hub, three Robot seats, saved focused-model selector, and inner Customizer targets while adding copy/paste, drag/drop, and **+** file selection directly in the message box.
+V6 is the cumulative RR Chat installer. It preserves the shared communication hub, three Robot seats, saved focused-model selector, inner Customizer targets, and file uploader while repairing the compact layout, always-visible reply review, readable replies, spoken fallback, Lucian local recovery, and safe failure detail.
 
 - Public authority: `docs/continuity/RACC_CUSTOMIZER_AND_COMMUNICATION_HUB.md`
 - Authority branch: `agent/rowdy-room-continuity`
-- Authority commit: `947d0f62b79612b79665028e4e67d4e7e4b8ff4e`
-- Authority blob: `a4a158091d1ec5780df6877991886c325cb4a0ba`
-- Changelog commit: `7e094ab01b881559b5dc8a73bc1fcaf847675f5d`
-- Changelog blob: `ac2aa30d18c0d692cafee23cbd4b92b6e9777c15`
-- Protected record: `rowdy-room/racc-customizer-communication-hub` v8
-- Protected SHA-256: `1c3f99abf36b114f08577a009c2225094500c5932e82fa6af8be2b0bc1a68513`
-- Continuity check: `913c8dcd-da77-485f-a206-f9c5f666bd19` — 12 pass, 1 warning, 0 fail
-- Installer: `ROWDY_RR_CHAT_FILE_UPLOADER_V5_20260807.zip`
-- Installer SHA-256: `24b55eeed2df3fff8e5b572a08c39ecd1acd5e5ccd9ebbc82c6b2db52f60699b`
-- Installer Library: `libfile_029d003d32488191b62e780a7e0b699e` v2
-- Recovery: `ROWDY_RR_CHAT_FILE_UPLOADER_V5_CONTINUITY_20260808.zip`
-- Recovery SHA-256: `dbba65755f76b8b2c560772ca7b4d06c344db9aa9214a0ed593819c7c3b3c8c4`
-- Recovery Library: `libfile_0d34aaa642148191a83a938fe46542b4` v2
-- Recovery required: live Windows V5 installation and browser readback.
-- Exact next action: extract V5, run `INSTALL_RR_CHAT_FILE_UPLOADER_V5.cmd`, and wait for **RR Chat file uploader V5 installed and verified.**
+- Authority commit: `6cf8a439142d57344b6f7213bb367eef0cc6eb09`
+- Authority blob: `07310f1d0c86808815315f06409f67e3aa8ef04c`
+- Changelog commit: `4a5064093eca03f166a4a6bca42c01d5dd9f1d67`
+- Changelog blob: `40c83cb63f8a8fdfff7db08dc72be82cd7cdc8b7`
+- Protected record: `rowdy-room/racc-customizer-communication-hub` v9
+- Protected SHA-256: `82f53093d01dc3be36c642ff8de9daef6df7110ca1d317ada835e2e090805fd2`
+- Continuity check: `3c011116-1925-4a43-88c6-90704f5787ce` — 11 pass, 2 warnings, 0 fail
+- Installer: `ROWDY_RR_CHAT_REPAIR_V6_20260808.zip`
+- Installer SHA-256: `6b41d26ac8c40fa0b977923161b0c250287e4e58765048596fb7177116ed50a6`
+- Installer Library: `libfile_029d003d32488191b62e780a7e0b699e` v3
+- Recovery: `ROWDY_RR_CHAT_REPAIR_V6_CONTINUITY_20260808.zip`
+- Recovery SHA-256: `a6ca7925881edd8c446520985d683f64393491b290003870f6eb0d0e3d531c4f`
+- Recovery Library: `libfile_0d34aaa642148191a83a938fe46542b4` v3
+- Recovery required: live Windows V6 install, typed reply, spoken playback, physical microphone phrase, reply correction, separate command approval, and preserved uploader/model/Customizer readback.
+- Exact next action: extract V6, run `INSTALL_RR_CHAT_REPAIR_V6.cmd`, and wait for **RR Chat repair V6 installed and verified.**
 
 ## Required startup order
 
@@ -98,17 +98,19 @@ V5 is the cumulative RR Chat installer. It preserves the shared communication hu
 ## RACC customization and communication continuity
 
 - Authority: [RACC Customizer v2 and Shared Communication Hub](RACC_CUSTOMIZER_AND_COMMUNICATION_HUB.md).
-- Approved scope remains one shared Customizer across all 18 pages, embedded **Edit Voice** / **Edit Panel**, shared companion customization, global theme synchronization, and one RR Chat.
-- Three-seat RR Chat adds three saved Robot selectors, three monitored avatars, optional **In chat** participation, one focused Robot, and one real saved model selector.
-- Inner voice areas are separate Customizer targets; the Selected Item inspector remains movable and resizable.
-- V4 Windows attempt on 2026-08-07 failed because its screen test still expected the removed technical token `voiceRoute`; the installer restored the exact pre-install files, restarted RACC, and completed automatic rollback.
-- V4 is superseded. Corrected V4.1 checks the live voice-health path and simple **Voice ready** display, and separately runs the backend voice-route test.
-- Public authority: commit `256156778378b177fa4e30ebfc14c19015e6ce1c`; blob `6248f0aa3a3977f3616ac37738377744d3b78d5d`.
-- Protected record: `rowdy-room/racc-customizer-communication-hub` v7, SHA-256 `433d1129229063bd9f721294ac762a1d39a45f1326d2216b44e34b9d64a5647e`; history version 7.
-- Corrected installer: `ROWDY_RR_CHAT_THREE_SEAT_CUSTOMIZER_V4_1_20260807.zip`, SHA-256 `9bf4557442711e2d3186930003178d771599adae6376d4ba0b38e7b5888ec728`, Library `libfile_029d003d32488191b62e780a7e0b699e` v1; package manifest and ZIP integrity passed.
-- Dated recovery: `ROWDY_RR_CHAT_THREE_SEAT_V4_1_CONTINUITY_20260807.zip`, SHA-256 `63a3d22ff1646c31ec0b2cd32d5eba0dded9ca2b6bac0d4c90c60b9b53bce2ef`, Library `libfile_0d34aaa642148191a83a938fe46542b4` v1; ZIP integrity passed.\n- Verification run: `3c9584cf-2054-4e5f-b732-071dd46a41cb` — 9 pass, 1 warning, 0 fail.
-- Recovery required: run V4.1, capture its successful Windows backup/report/rollback paths, and complete the live three-seat, group-chat, inner-Customizer, model-change, and restart readback.
-- Exact next safe action: run `INSTALL_RR_CHAT_THREE_SEAT_V4_1.cmd` and wait for **RR Chat three-seat upgrade installed and verified**.
+- One shared Customizer remains available across all 18 pages, and `rowdy-companion.html?embed=1` remains the only internal RR Chat.
+- V6 keeps three compact Robot selectors, three monitored avatars, optional **In chat** participation, one focused Robot, and one real saved model selector.
+- Reply approval/disapproval stays visible; private corrections and separately approval-gated commands are preserved.
+- The full reply stays visible and can be read aloud using Robot audio or browser speech fallback.
+- Typed text generation is separated from voice creation, and Lucian has one safe local runtime repair/fallback route.
+- File paste/drop/**+**, privacy limits, inner Customizer targets, movable inspector, shell popouts, and floating controls remain preserved.
+- Public authority: commit `6cf8a439142d57344b6f7213bb367eef0cc6eb09`; blob `07310f1d0c86808815315f06409f67e3aa8ef04c`.
+- Protected record: `rowdy-room/racc-customizer-communication-hub` v9, SHA-256 `82f53093d01dc3be36c642ff8de9daef6df7110ca1d317ada835e2e090805fd2`.
+- V6 installer: `ROWDY_RR_CHAT_REPAIR_V6_20260808.zip`, SHA-256 `6b41d26ac8c40fa0b977923161b0c250287e4e58765048596fb7177116ed50a6`, Library `libfile_029d003d32488191b62e780a7e0b699e` v3.
+- Recovery: `ROWDY_RR_CHAT_REPAIR_V6_CONTINUITY_20260808.zip`, SHA-256 `a6ca7925881edd8c446520985d683f64393491b290003870f6eb0d0e3d531c4f`, Library `libfile_0d34aaa642148191a83a938fe46542b4` v3.
+- Verification run: `3c011116-1925-4a43-88c6-90704f5787ce` — 11 pass, 2 warnings, 0 fail.
+- Recovery required: live V6 install and the typed, spoken, physical-microphone, correction, command-approval, uploader, model-persistence, and Customizer checks.
+- Exact next action: run `INSTALL_RR_CHAT_REPAIR_V6.cmd` and wait for **RR Chat repair V6 installed and verified.**
 
 ## Current continuation
 
