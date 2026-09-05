@@ -5,7 +5,7 @@
 - Apple M2 Max / 96 GB hardware and a pinned Qwen3.5 122B A10B 4-bit model are technically commissioned as an authenticated private local worker.
 - On-device, Windows-adapter, live RACC endpoint, and post-LaunchAgent-restart exact responses passed.
 - RACC state is `registered-standby`; the existing owner-selected Psyche-only lineup was not changed.
-- Public authority: `docs/continuity/MAC_M2_MAX_LOCAL_AI_WORKER_2026-09-04.md`.
+- Public authority: `docs/continuity/MAC_M2_MAX_LOCAL_AI_WORKER_2026-09-04.md` on branch `codex/mac-m2-max-worker-2026-09-04`, draft PR #32.
 - Protected equipment authority: `apple-m2-max-macbook-pro-ai-worker`, version 1, SHA-256 `b18f85a9af52f2b16807b242e9425711ca42cc0684f88d8f47ea0d9ac7725c23`.
 - Protected continuity authority: `mac-m2-max-local-ai-worker-2026-09-04`, version 1, SHA-256 `70b8c38e7c34fa844599a686d369a4d4a094217452449e8a70866235c2958d20`.
 - Continuity check `mac-m2-max-worker-commissioning-2026-09-04`: pass.
