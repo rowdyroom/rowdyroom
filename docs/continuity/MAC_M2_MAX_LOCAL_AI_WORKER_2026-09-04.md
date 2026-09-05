@@ -2,6 +2,9 @@
 
 ## Result
 
+- Public branch: `codex/mac-m2-max-worker-2026-09-04`.
+- Review: draft PR #32.
+
 Roger's Apple M2 Max laptop is technically commissioned as a private local model worker for Rowdy AI Command Center.
 
 - Hardware verified live: Apple M2 Max, 12 CPU cores, 38 GPU cores, 96 GB unified memory, Metal 4, and healthy internal storage.
