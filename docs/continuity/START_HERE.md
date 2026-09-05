@@ -1,5 +1,18 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-09-04 — Mac M2 Max local AI worker
+
+- Apple M2 Max / 96 GB hardware and a pinned Qwen3.5 122B A10B 4-bit model are technically commissioned as an authenticated private local worker.
+- On-device, Windows-adapter, live RACC endpoint, and post-LaunchAgent-restart exact responses passed.
+- RACC state is `registered-standby`; the existing owner-selected Psyche-only lineup was not changed.
+- Public authority: `docs/continuity/MAC_M2_MAX_LOCAL_AI_WORKER_2026-09-04.md`.
+- Protected equipment authority: `apple-m2-max-macbook-pro-ai-worker`, version 1, SHA-256 `b18f85a9af52f2b16807b242e9425711ca42cc0684f88d8f47ea0d9ac7725c23`.
+- Protected continuity authority: `mac-m2-max-local-ai-worker-2026-09-04`, version 1, SHA-256 `70b8c38e7c34fa844599a686d369a4d4a094217452449e8a70866235c2958d20`.
+- Continuity check `mac-m2-max-worker-commissioning-2026-09-04`: pass.
+- Protected local recovery: `MacWorker_20260904-2125.zip`, SHA-256 `94B8198A4A838437298A81D96E9E7916B2D836C0AC9C8B179CBFF80348D5D186`.
+- Recovery required: physical owner acceptance under a real Rowdy workload, closed-lid availability, and sustained thermal behavior.
+- Next safe action: run one real Rowdy task and decide whether to activate the worker in a Robot lineup.
+
 ## 2026-08-01 — Rowdy Robots full-team mission completion
 
 - All twenty-two local Robot packages are configured, commissioned through bounded real tasks, and active; dispatcher readback shows 22 available and zero paused.
@@ -76,7 +89,7 @@
 - Next safe action: approve or reject the pending AI Start registration, then reload or wake Lucian and observe live rendering.
 
 **Status:** Active public-safe breadcrumb root  
-**Last updated:** 2026-08-01  
+**Last updated:** 2026-09-04  
 **Owner:** Roger Jamsek
 
 Start every Rowdy Room task here after reading the complete Operator Law. Do not rely on chat memory. Missing or contradictory facts remain **Recovery required**.
