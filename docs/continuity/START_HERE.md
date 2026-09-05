@@ -1,5 +1,18 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-09-04 — Mac M2 Max local AI worker
+
+- Apple M2 Max / 96 GB hardware and a pinned Qwen3.5 122B A10B 4-bit model are technically commissioned as an authenticated private local worker.
+- On-device, Windows-adapter, live RACC endpoint, and post-LaunchAgent-restart exact responses passed.
+- RACC state is `registered-standby`; the existing owner-selected Psyche-only lineup was not changed.
+- Public authority: `docs/continuity/MAC_M2_MAX_LOCAL_AI_WORKER_2026-09-04.md` on branch `codex/mac-m2-max-worker-2026-09-04`, draft PR #32.
+- Protected equipment authority: `apple-m2-max-macbook-pro-ai-worker`, version 2, SHA-256 `234537cae2bd5b1129eada5796cd7bc500203c8656b29a1b7792ca224a811313`.
+- Protected continuity authority: `mac-m2-max-local-ai-worker-2026-09-04`, version 2, SHA-256 `80a74bc103a61f89416bbac17918cb795a0ada5c9cd102e790bafcf830084634`.
+- Continuity checks `mac-m2-max-worker-commissioning-2026-09-04` and `mac-m2-max-worker-private-route-2026-09-04`: pass.
+- Protected local recovery: `MacWorker_20260904-2125.zip`, SHA-256 `94B8198A4A838437298A81D96E9E7916B2D836C0AC9C8B179CBFF80348D5D186`.
+- Recovery required: physical owner acceptance under a real Rowdy workload, closed-lid availability, sustained thermal behavior, and a verified router DHCP reservation.
+- Next safe action: run one real Rowdy task and decide whether to activate the worker in a Robot lineup.
+
 ## 2026-08-01 — Rowdy Robots full-team mission completion
 
 - All twenty-two local Robot packages are configured, commissioned through bounded real tasks, and active; dispatcher readback shows 22 available and zero paused.
@@ -76,7 +89,7 @@
 - Next safe action: approve or reject the pending AI Start registration, then reload or wake Lucian and observe live rendering.
 
 **Status:** Active public-safe breadcrumb root  
-**Last updated:** 2026-08-01  
+**Last updated:** 2026-09-04  
 **Owner:** Roger Jamsek
 
 Start every Rowdy Room task here after reading the complete Operator Law. Do not rely on chat memory. Missing or contradictory facts remain **Recovery required**.
