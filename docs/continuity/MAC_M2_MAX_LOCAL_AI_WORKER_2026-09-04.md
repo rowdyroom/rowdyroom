@@ -37,11 +37,11 @@ The broader local RACC suite completed 173/179. Six pre-existing Dave installer 
 
 Supabase project `Final`:
 
-- Equipment key: `apple-m2-max-macbook-pro-ai-worker`, version 1, SHA-256 `b18f85a9af52f2b16807b242e9425711ca42cc0684f88d8f47ea0d9ac7725c23`.
-- Continuity key: `mac-m2-max-local-ai-worker-2026-09-04`, version 1, SHA-256 `70b8c38e7c34fa844599a686d369a4d4a094217452449e8a70866235c2958d20`.
-- Equipment history count: 1.
-- Continuity history count: 1.
-- Continuity check: `mac-m2-max-worker-commissioning-2026-09-04`, pass.
+- Equipment key: `apple-m2-max-macbook-pro-ai-worker`, version 2, SHA-256 `234537cae2bd5b1129eada5796cd7bc500203c8656b29a1b7792ca224a811313`.
+- Continuity key: `mac-m2-max-local-ai-worker-2026-09-04`, version 2, SHA-256 `80a74bc103a61f89416bbac17918cb795a0ada5c9cd102e790bafcf830084634`.
+- Equipment history count: 2.
+- Continuity history count: 2.
+- Continuity checks: `mac-m2-max-worker-commissioning-2026-09-04` and `mac-m2-max-worker-private-route-2026-09-04`, both pass.
 
 ## Recovery
 
