@@ -54,6 +54,7 @@ Supabase project `Final`:
 - Physical owner acceptance under one real Rowdy workload: pending.
 - Closed-lid availability: Recovery required.
 - Sustained thermal behavior under a representative workload: Recovery required.
+- Router DHCP reservation for the current private LAN address: Recovery required.
 - Team activation: requires Roger to explicitly change the current owner-selected lineup.
 
 Next safe action: Roger should use the registered worker for one real Rowdy task and decide whether its response quality and latency are acceptable before activating it in a Robot lineup.
