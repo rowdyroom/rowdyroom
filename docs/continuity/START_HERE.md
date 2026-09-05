@@ -6,9 +6,9 @@
 - On-device, Windows-adapter, live RACC endpoint, and post-LaunchAgent-restart exact responses passed.
 - RACC state is `registered-standby`; the existing owner-selected Psyche-only lineup was not changed.
 - Public authority: `docs/continuity/MAC_M2_MAX_LOCAL_AI_WORKER_2026-09-04.md` on branch `codex/mac-m2-max-worker-2026-09-04`, draft PR #32.
-- Protected equipment authority: `apple-m2-max-macbook-pro-ai-worker`, version 1, SHA-256 `b18f85a9af52f2b16807b242e9425711ca42cc0684f88d8f47ea0d9ac7725c23`.
-- Protected continuity authority: `mac-m2-max-local-ai-worker-2026-09-04`, version 1, SHA-256 `70b8c38e7c34fa844599a686d369a4d4a094217452449e8a70866235c2958d20`.
-- Continuity check `mac-m2-max-worker-commissioning-2026-09-04`: pass.
+- Protected equipment authority: `apple-m2-max-macbook-pro-ai-worker`, version 2, SHA-256 `234537cae2bd5b1129eada5796cd7bc500203c8656b29a1b7792ca224a811313`.
+- Protected continuity authority: `mac-m2-max-local-ai-worker-2026-09-04`, version 2, SHA-256 `80a74bc103a61f89416bbac17918cb795a0ada5c9cd102e790bafcf830084634`.
+- Continuity checks `mac-m2-max-worker-commissioning-2026-09-04` and `mac-m2-max-worker-private-route-2026-09-04`: pass.
 - Protected local recovery: `MacWorker_20260904-2125.zip`, SHA-256 `94B8198A4A838437298A81D96E9E7916B2D836C0AC9C8B179CBFF80348D5D186`.
 - Recovery required: physical owner acceptance under a real Rowdy workload, closed-lid availability, sustained thermal behavior, and a verified router DHCP reservation.
 - Next safe action: run one real Rowdy task and decide whether to activate the worker in a Robot lineup.
