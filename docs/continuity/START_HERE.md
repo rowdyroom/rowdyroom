@@ -10,7 +10,7 @@
 - Protected continuity authority: `mac-m2-max-local-ai-worker-2026-09-04`, version 1, SHA-256 `70b8c38e7c34fa844599a686d369a4d4a094217452449e8a70866235c2958d20`.
 - Continuity check `mac-m2-max-worker-commissioning-2026-09-04`: pass.
 - Protected local recovery: `MacWorker_20260904-2125.zip`, SHA-256 `94B8198A4A838437298A81D96E9E7916B2D836C0AC9C8B179CBFF80348D5D186`.
-- Recovery required: physical owner acceptance under a real Rowdy workload, closed-lid availability, and sustained thermal behavior.
+- Recovery required: physical owner acceptance under a real Rowdy workload, closed-lid availability, sustained thermal behavior, and a verified router DHCP reservation.
 - Next safe action: run one real Rowdy task and decide whether to activate the worker in a Robot lineup.
 
 ## 2026-08-01 — Rowdy Robots full-team mission completion
