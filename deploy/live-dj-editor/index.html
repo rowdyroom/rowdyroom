@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#09031a">
+  <title>Rowdy Room Live DJ Auto Editor</title>
+  <style>
+    :root{--bg:#080315;--panel:#130a25;--line:#49316f;--cyan:#40e4ff;--pink:#ff38d1;--gold:#ffd35a;--text:#f8f2ff;--muted:#b9aacd;--ok:#48f59a;--danger:#ff607e}
+    *{box-sizing:border-box} body{margin:0;color:var(--text);font:16px/1.45 Inter,system-ui,sans-serif;background:radial-gradient(circle at 20% -10%,#35106c 0,transparent 38%),radial-gradient(circle at 100% 20%,#003f54 0,transparent 38%),var(--bg);min-height:100vh}
+    button,input,select,textarea{font:inherit} button{cursor:pointer}.shell{width:min(1400px,100%);margin:auto;padding:18px}.top{display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:16px}.brand small{display:block;color:var(--cyan);font-weight:900;letter-spacing:.24em}.brand h1{margin:.08em 0;font-size:clamp(1.8rem,5vw,3.4rem);line-height:1;background:linear-gradient(90deg,#fff,var(--gold),var(--pink));color:transparent;background-clip:text}.status{display:flex;gap:8px;align-items:center;padding:9px 13px;border:1px solid var(--line);border-radius:999px;background:#0b0617cc}.dot{width:10px;height:10px;border-radius:50%;background:var(--ok);box-shadow:0 0 14px var(--ok)}
+    .grid{display:grid;grid-template-columns:minmax(310px,430px) 1fr;gap:16px}.card{background:linear-gradient(145deg,#170d2aee,#090512ee);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 16px 45px #0008}.card h2{margin:0 0 12px;font-size:1.05rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan)}
+    .drop{display:grid;place-items:center;text-align:center;min-height:180px;border:2px dashed #71539e;border-radius:16px;padding:22px;background:#ffffff05}.drop.drag{border-color:var(--cyan);background:#40e4ff12}.drop strong{font-size:1.15rem}.drop p{color:var(--muted);margin:.4em 0 1em}.btn{border:0;border-radius:12px;padding:12px 16px;font-weight:900;color:white;background:#2b2038}.btn.primary{background:linear-gradient(90deg,#6525ff,#ff2dc8)}.btn.cyan{background:linear-gradient(90deg,#006f8a,#25cdea)}.btn.danger{background:#7b1830}.btn:disabled{opacity:.4;cursor:not-allowed}.actions{display:flex;flex-wrap:wrap;gap:9px}.field{display:grid;gap:6px;margin:12px 0}.field label{color:var(--muted);font-size:.83rem;font-weight:800}.field input,.field select,.field textarea{width:100%;color:var(--text);background:#080410;border:1px solid #523875;border-radius:11px;padding:11px}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .clip-list{display:grid;gap:8px;max-height:310px;overflow:auto;margin-top:12px}.clip{display:grid;grid-template-columns:56px 1fr auto;gap:10px;align-items:center;background:#ffffff07;border:1px solid #3a2854;border-radius:12px;padding:8px}.clip video{width:56px;height:42px;object-fit:cover;border-radius:7px;background:#000}.clip b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.clip small{color:var(--muted)}.clip button{border:0;color:#ff9bad;background:transparent;font-size:1.2rem}
+    .stage{aspect-ratio:16/9;background:#000;border:1px solid #553878;border-radius:17px;overflow:hidden;display:grid;place-items:center;position:relative}.stage canvas{width:100%;height:100%;object-fit:contain}.stage .empty{position:absolute;text-align:center;color:#867699}.stage .empty strong{display:block;color:white;font-size:1.4rem}.timeline{display:flex;gap:4px;min-height:72px;overflow-x:auto;padding:10px 0}.segment{min-width:95px;flex:1;padding:9px;border-radius:10px;background:linear-gradient(135deg,#293053,#4d194e);border:1px solid #735487}.segment b{display:block;font-size:.8rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.segment small{color:#d6c7e9}.progress{height:9px;background:#261a38;border-radius:99px;overflow:hidden;margin:12px 0}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--pink));transition:width .2s}.log{min-height:65px;max-height:125px;overflow:auto;border-radius:12px;background:#05020b;padding:10px;color:#bdeeff;font:12px/1.5 ui-monospace,monospace}.banner{margin-top:12px;padding:10px 12px;border-radius:10px;background:#ffd35a18;border:1px solid #ffd35a66;color:#ffe9a6}.hidden{display:none!important}
+    details{margin-top:12px;border-top:1px solid #34244a;padding-top:12px}summary{cursor:pointer;color:var(--muted);font-weight:800}textarea{min-height:120px;font-family:ui-monospace,monospace;font-size:.8rem}
+    @media(max-width:850px){.grid{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}.shell{padding:10px}.two{grid-template-columns:1fr}.card{padding:14px}}
+  </style>
+</head>
+<body>
+<main class="shell">
+  <header class="top">
+    <div class="brand"><small>ROWDY ROOM • SHOW TOOL</small><h1>LIVE DJ AUTO EDITOR</h1><div>Drop in recorded footage. Autopilot builds the highlight video.</div></div>
+    <div class="status"><span class="dot"></span><strong id="modeLabel">AI AUTOPILOT READY</strong></div>
+  </header>
+  <div class="grid">
+    <section>
+      <div class="card">
+        <h2>1. Add tonight's footage</h2>
+        <div class="drop" id="dropZone"><div><strong>Drop video clips here</strong><p>Phone, camera, or downloaded footage. Multiple clips are supported.</p><button class="btn primary" id="pickBtn">CHOOSE FOOTAGE</button><input id="files" type="file" accept="video/*" multiple hidden></div></div>
+        <div class="clip-list" id="clipList"></div>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <h2>2. Show settings</h2>
+        <div class="field"><label>VIDEO TITLE</label><input id="title" value="ROWDY ROOM LIVE"></div>
+        <div class="field"><label>SUBTITLE</label><input id="subtitle" value="Karaoke • DJ • Real Community"></div>
+        <div class="two">
+          <div class="field"><label>OUTPUT</label><select id="format"><option value="landscape">16:9 TV / YouTube</option><option value="portrait">9:16 Reels / TikTok</option><option value="square">1:1 Square</option></select></div>
+          <div class="field"><label>TARGET LENGTH</label><select id="target"><option value="30">30 seconds</option><option value="60" selected>60 seconds</option><option value="90">90 seconds</option><option value="180">3 minutes</option></select></div>
+        </div>
+        <div class="two">
+          <div class="field"><label>EDIT ENERGY</label><select id="energy"><option value="fast">High energy</option><option value="balanced" selected>Balanced</option><option value="story">Story / longer shots</option></select></div>
+          <div class="field"><label>QUALITY</label><select id="quality"><option value="720">Fast 720p</option><option value="1080" selected>Full HD 1080p</option></select></div>
+        </div>
+        <label style="display:flex;gap:9px;align-items:center;margin:8px 0 14px"><input id="keepAudio" type="checkbox" checked> Keep original clip audio</label>
+        <div class="actions"><button id="autopilot" class="btn primary" disabled>BUILD AI EDIT PLAN</button><button id="clear" class="btn danger" disabled>CLEAR</button></div>
+        <details><summary>AI team control</summary><p style="color:var(--muted)">AI workers can import an edit plan here or control the labeled buttons through browser automation. Exported plans contain filenames and cut timing—not the footage itself.</p><textarea id="aiPlan" placeholder='{"title":"ROWDY ROOM LIVE","segments":[{"clip":0,"start":2,"duration":5}]}'></textarea><div class="actions"><button id="applyPlan" class="btn">APPLY PLAN</button><button id="exportPlan" class="btn">EXPORT PLAN</button></div></details>
+      </div>
+    </section>
+    <section class="card">
+      <h2>3. Preview and render</h2>
+      <div class="stage" id="stage"><canvas id="canvas" width="1920" height="1080"></canvas><div class="empty" id="empty"><strong>Your automatic edit appears here</strong>Add footage, then choose Build AI Edit Plan.</div></div>
+      <div class="timeline" id="timeline"></div>
+      <div class="progress"><span id="progress"></span></div>
+      <div class="actions"><button id="preview" class="btn cyan" disabled>PREVIEW EDIT</button><button id="stop" class="btn" disabled>STOP</button><button id="render" class="btn primary" disabled>RENDER & DOWNLOAD</button></div>
+      <div class="banner">Tonight-safe design: all rendering happens in this browser. Your footage is not uploaded to the website.</div>
+      <div class="log" id="log">Waiting for footage…</div>
+      <video id="sourceVideo" playsinline crossorigin="anonymous" hidden></video>
+    </section>
+  </div>
+</main>
+<script>
+(() => {
+  'use strict';
+  const $=id=>document.getElementById(id), clips=[], plan=[];
+  let stopped=false, audioCtx=null, audioSource=null, audioDest=null;
+  const canvas=$('canvas'), ctx=canvas.getContext('2d'), source=$('sourceVideo');
+  const log=m=>{$('log').textContent=`${new Date().toLocaleTimeString()}  ${m}\n`+$('log').textContent};
+  const safe=s=>String(s||'').replace(/[<>]/g,'');
+  function setCanvas(){const f=$('format').value,q=+$('quality').value;if(f==='portrait'){canvas.width=q===1080?1080:720;canvas.height=q===1080?1920:1280}else if(f==='square'){canvas.width=q;canvas.height=q}else{canvas.width=q===1080?1920:1280;canvas.height=q===1080?1080:720}}
+  function buttons(){const has=clips.length>0,planned=plan.length>0;$('autopilot').disabled=!has;$('clear').disabled=!has;$('preview').disabled=!planned;$('render').disabled=!planned;$('exportPlan').disabled=!planned}
+  function duration(file){return new Promise((resolve,reject)=>{const v=document.createElement('video'),u=URL.createObjectURL(file);v.preload='metadata';v.onloadedmetadata=()=>{resolve({duration:v.duration,width:v.videoWidth,height:v.videoHeight,url:u})};v.onerror=()=>{URL.revokeObjectURL(u);reject(new Error(`Could not read ${file.name}`))};v.src=u})}
+  async function addFiles(files){for(const file of files){if(!file.type.startsWith('video/'))continue;try{const m=await duration(file);clips.push({file,name:file.name,...m});log(`Loaded ${file.name} (${m.duration.toFixed(1)}s)`)}catch(e){log(e.message)}}renderClips();buttons()}
+  function renderClips(){$('clipList').innerHTML='';clips.forEach((c,i)=>{const row=document.createElement('div');row.className='clip';row.innerHTML=`<video muted src="${c.url}"></video><div><b>${safe(c.name)}</b><small>${c.duration.toFixed(1)}s • ${c.width}×${c.height}</small></div><button aria-label="Remove ${safe(c.name)}">×</button>`;row.querySelector('button').onclick=()=>{URL.revokeObjectURL(c.url);clips.splice(i,1);plan.length=0;renderClips();renderPlan();buttons()};$('clipList').appendChild(row)})}
+  function buildPlan(){plan.length=0;const target=+$('target').value,energy=$('energy').value;const shot=energy==='fast'?3.5:energy==='story'?8:5.5;const cursors=clips.map(c=>Math.min(.5,Math.max(.1,c.duration*.04)));let elapsed=0,index=0,misses=0;while(elapsed<target&&clips.length&&misses<clips.length){const clipIndex=index%clips.length,c=clips[clipIndex],remaining=c.duration-cursors[clipIndex]-.15;if(remaining>=.75){const d=Math.min(shot,remaining,target-elapsed);plan.push({clip:clipIndex,start:+cursors[clipIndex].toFixed(2),duration:+d.toFixed(2)});cursors[clipIndex]+=d+.08;elapsed+=d;misses=0}else misses++;index++;if(index>1000)break}$('empty').classList.add('hidden');renderPlan();buttons();log(`Autopilot planned ${plan.length} unique cuts across ${clips.length} clip${clips.length===1?'':'s'} (${elapsed.toFixed(1)}s${elapsed<target?' available':''}).`);$('aiPlan').value=JSON.stringify(project(),null,2);drawTitle()}
+  function project(){return {version:1,title:$('title').value,subtitle:$('subtitle').value,format:$('format').value,target:+$('target').value,energy:$('energy').value,keepAudio:$('keepAudio').checked,segments:plan.map(x=>({...x,file:clips[x.clip]?.name||''}))}}
+  function renderPlan(){$('timeline').innerHTML='';plan.forEach((s,i)=>{const e=document.createElement('div');e.className='segment';e.innerHTML=`<b>${i+1}. ${safe(clips[s.clip]?.name||'Missing')}</b><small>${s.start.toFixed(1)}s → ${(s.start+s.duration).toFixed(1)}s</small>`;$('timeline').appendChild(e)})}
+  function drawCover(color='#080315'){ctx.fillStyle=color;ctx.fillRect(0,0,canvas.width,canvas.height)}
+  function drawBrand(){const w=canvas.width,h=canvas.height;ctx.save();ctx.fillStyle='#ffd35a';ctx.font=`900 ${Math.max(18,w*.018)}px system-ui`;ctx.fillText('ROWDY ROOM',w*.04,h*.07);ctx.fillStyle='#40e4ff';ctx.textAlign='right';ctx.fillText('LIVE DJ',w*.96,h*.07);ctx.restore()}
+  function fitVideo(){const vw=source.videoWidth||16,vh=source.videoHeight||9,cw=canvas.width,ch=canvas.height,scale=Math.max(cw/vw,ch/vh),w=vw*scale,h=vh*scale;ctx.drawImage(source,(cw-w)/2,(ch-h)/2,w,h);ctx.fillStyle='rgba(5,0,18,.18)';ctx.fillRect(0,0,cw,ch);drawBrand()}
+  function drawTitle(){setCanvas();drawCover();const w=canvas.width,h=canvas.height;const g=ctx.createLinearGradient(0,0,w,h);g.addColorStop(0,'#35106c');g.addColorStop(.5,'#007b91');g.addColorStop(1,'#7021a8');ctx.fillStyle=g;ctx.fillRect(0,0,w,h);ctx.textAlign='center';ctx.fillStyle='#fff';ctx.font=`900 ${Math.max(42,w*.075)}px system-ui`;ctx.fillText($('title').value.toUpperCase(),w/2,h*.47);ctx.fillStyle='#ffd35a';ctx.font=`800 ${Math.max(22,w*.03)}px system-ui`;ctx.fillText($('subtitle').value,w/2,h*.56);drawBrand()}
+  const seek=t=>new Promise((resolve,reject)=>{const done=()=>{source.removeEventListener('seeked',done);resolve()};source.addEventListener('seeked',done,{once:true});source.onerror=reject;source.currentTime=Math.min(t,Math.max(0,(source.duration||t)-.05))});
+  async function play(rendering=false){if(!plan.length)return;stopped=false;$('stop').disabled=false;$('preview').disabled=true;$('render').disabled=true;setCanvas();let recorder=null,chunks=[],raf=0,total=plan.reduce((a,b)=>a+b.duration,0),done=0;
+    try{
+      if(rendering){const stream=canvas.captureStream(30);if($('keepAudio').checked){audioCtx ||= new AudioContext();audioDest ||= audioCtx.createMediaStreamDestination();if(!audioSource){audioSource=audioCtx.createMediaElementSource(source);audioSource.connect(audioDest);audioSource.connect(audioCtx.destination)}audioDest.stream.getAudioTracks().forEach(t=>stream.addTrack(t))}const mime=['video/webm;codecs=vp9,opus','video/webm;codecs=vp8,opus','video/webm'].find(x=>MediaRecorder.isTypeSupported(x))||'';recorder=new MediaRecorder(stream,mime?{mimeType:mime,videoBitsPerSecond:$('quality').value==='1080'?9000000:5000000}:undefined);recorder.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};recorder.start(1000);log('Rendering started. Keep this tab open.')}else log('Preview started.');
+      drawTitle();await new Promise(r=>setTimeout(r,900));
+      for(const seg of plan){if(stopped)break;const c=clips[seg.clip];source.src=c.url;source.muted=!$('keepAudio').checked&&!rendering;await new Promise((res,rej)=>{source.onloadedmetadata=res;source.onerror=rej});await seek(seg.start);await source.play();const end=seg.start+seg.duration;await new Promise(resolve=>{const frame=()=>{if(stopped||source.currentTime>=end||source.ended){source.pause();cancelAnimationFrame(raf);resolve();return}fitVideo();const within=Math.max(0,source.currentTime-seg.start);$('progress').style.width=`${Math.min(100,(done+within)/total*100)}%`;raf=requestAnimationFrame(frame)};frame()});done+=seg.duration}
+      if(recorder&&recorder.state!=='inactive'){await new Promise(resolve=>{recorder.onstop=resolve;recorder.stop()});if(!stopped){const blob=new Blob(chunks,{type:recorder.mimeType||'video/webm'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`rowdy-room-live-${new Date().toISOString().slice(0,10)}.webm`;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),30000);log(`Download ready (${(blob.size/1048576).toFixed(1)} MB).`)}}
+    }catch(e){log(`Stopped with error: ${e.message}`)}finally{source.pause();$('stop').disabled=true;$('preview').disabled=false;$('render').disabled=false;if(!stopped)$('progress').style.width='100%'}
+  }
+  $('pickBtn').onclick=()=>$('files').click();$('files').onchange=e=>addFiles(e.target.files);['dragenter','dragover'].forEach(n=>$('dropZone').addEventListener(n,e=>{e.preventDefault();$('dropZone').classList.add('drag')}));['dragleave','drop'].forEach(n=>$('dropZone').addEventListener(n,e=>{e.preventDefault();$('dropZone').classList.remove('drag')}));$('dropZone').addEventListener('drop',e=>addFiles(e.dataTransfer.files));
+  $('autopilot').onclick=buildPlan;$('preview').onclick=()=>play(false);$('render').onclick=()=>play(true);$('stop').onclick=()=>{stopped=true;source.pause();log('Stopped by manual override.')};$('clear').onclick=()=>{stopped=true;clips.forEach(c=>URL.revokeObjectURL(c.url));clips.length=0;plan.length=0;renderClips();renderPlan();buttons();drawCover();$('empty').classList.remove('hidden');$('progress').style.width='0';log('Project cleared.')};
+  $('applyPlan').onclick=()=>{try{const p=JSON.parse($('aiPlan').value);if(p.title!=null)$('title').value=p.title;if(p.subtitle!=null)$('subtitle').value=p.subtitle;if(['landscape','portrait','square'].includes(p.format))$('format').value=p.format;if(Array.isArray(p.segments)){const next=p.segments.map(s=>({clip:Number(s.clip),start:Number(s.start),duration:Number(s.duration)})).filter(s=>clips[s.clip]&&s.start>=0&&s.duration>0&&s.start+s.duration<=clips[s.clip].duration+.1);if(!next.length)throw new Error('No valid segments matched the loaded footage');plan.splice(0,plan.length,...next)}renderPlan();buttons();drawTitle();log('AI edit plan applied.')}catch(e){log(`AI plan rejected: ${e.message}`)}};
+  $('exportPlan').onclick=()=>{const blob=new Blob([JSON.stringify(project(),null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='rowdy-live-dj-edit-plan.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),10000);log('AI edit plan exported.')};
+  $('format').onchange=drawTitle;$('quality').onchange=drawTitle;drawCover();buttons();
+})();
+</script>
+</body>
+</html>

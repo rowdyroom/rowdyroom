@@ -1,5 +1,85 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-09-17 — Camera framing and audio corrected
+
+- Tiny 2 Lite output is Landscape 16:9 with visible headroom; the incorrect Portrait 9:16 setting was the crop source.
+- Fulfillment capture now combines the Yamaha AG06MK2 show mix with a 35 percent Tiny 2 Lite microphone backup.
+- Silver and Gold videos are loudness-normalized to `I=-16`, `TP=-1.5`, `LRA=11`; real combined capture and decoding passed.
+- Keep OBSBOT Center closed during a paid performance so its preview does not lock the recording stream.
+- Public-safe implementation commit: `16a5f66` on `codex/queue-host-unified-20260917`.
+- Local recovery: `Rowdy_Room_Camera_Audio_2026-09-17/rowdyroom-camera-audio-16a5f66.zip`, 323 entries, SHA-256 `002F688329382ACB97158BB6582C9E22C1A94E5781DB8D24BF34A061F1F7A038`.
+
+## 2026-09-17 — Tiny 2 Lite tracking and recording accepted
+
+- Human Tracking is enabled in Group mode for one to four singers and remains active on the camera.
+- The fulfillment worker no longer depends on OBSBOT Center's unbound OSC listener or sends a blind tracking toggle.
+- A real 1920 x 1080, 30 fps capture passed with the performer framed. Keep OBSBOT Center closed while the fulfillment worker records so the preview does not lock the camera stream.
+- Evidence and remaining database-security warning: [`PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md`](PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md).
+- Public-safe implementation commit: `c36405b` on `codex/queue-host-unified-20260917`.
+- Local recovery: `Rowdy_Room_Camera_Tracking_2026-09-17/rowdyroom-camera-tracking-c36405b.zip`, 323 entries, SHA-256 `468FF29BFA9B3F46492A8DA14FDB5A1FEDAFA71600726457B5A0B981B6CA346A`.
+
+## 2026-09-17 — Live PayPal checkout activation
+
+- Dedicated live PayPal app, verified capture webhook, server-created checkout, checksum-verified package upload, and authenticated SMTP delivery are active.
+- A real delivery email to Roger and its HTTPS download passed. Physical Tiny 2 Lite tracking acceptance remains open because OBSBOT Center's OSC listener is not bound.
+- Exact evidence and remaining gates: [`PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md`](PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md).
+
+## 2026-09-17 — Paid performance recording and fulfillment pipeline
+
+- Built the verified-payment, queue-triggered recording, package-editing, and retryable-delivery foundation.
+- Recording begins only when the host starts the paid singer's performance and stops on End Performance.
+- The local worker is healthy and idle; live PayPal credentials/webhook registration, outbound email configuration, Companion checkout replacement, and physical Tiny 2 Lite tracking acceptance remain recovery-required.
+- Authority and exact gates: [`PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md`](PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md).
+
+## 2026-09-17 — Live DJ automatic recorded-footage editor
+
+- Live page: `https://videomaker.rowdyroom.site/live-dj/`
+- Operator guide: `docs/continuity/LIVE_DJ_AUTO_EDITOR_2026-09-17.md`
+- Status: live; real-footage load, unique-cut plan, preview, and STOP override verified.
+- AI-plan import/export and browser-operable controls are available; Roger retains STOP and final-publish control.
+
+## 2026-09-17 — TV proportions and signup wording
+
+- Rebalanced the live TV display for portrait and landscape screens: larger Rowdy Room title, QR code, signup prompt, queue typography, and banner with substantially tighter vertical spacing.
+- Removed the incorrect `companion.rowdyroom.site` text from TV Mode while retaining the QR code and signup prompt.
+- Changed the singer-flow action from `Find Our Song` to `Find My Song`.
+- Live acceptance passed at a 1080 x 1920 portrait viewport with no document overflow or browser errors; the mobile signup wording also passed with no overflow or errors.
+- Host controls, queue data, TV rotation logic, and SongFinder behavior were not changed.
+
+## 2026-09-17 — Companion navigation removed
+
+- Removed the remaining Queue navigation tab/bar to eliminate overlap; the page opens directly to the signup screen.
+- The signup wizard remains with no public tabs displayed; the public Live Queue card is hidden while the host and TV queues remain intact.
+- Singer entry uses plain `Singer N name` labels and does not mention TikTok.
+- Live visual acceptance confirmed a clean mobile layout with no overlap. See [`QUEUE_HOST_UNIFIED_2026-09-17.md`](QUEUE_HOST_UNIFIED_2026-09-17.md).
+
+## 2026-09-17 — Temporary Queue-only Companion
+
+- Songbook is now hidden with the other temporary-show tabs, leaving Queue as the only public Companion tab.
+- Direct Songbook routes return to Queue; the signup wizard's separate SongFinder step remains available.
+- Host controls, queue storage, support choices, and TV Mode are unchanged. See [`QUEUE_HOST_UNIFIED_2026-09-17.md`](QUEUE_HOST_UNIFIED_2026-09-17.md).
+
+## 2026-09-17 — Temporary signup-only live-show mode
+
+- Companion was initially limited to Queue and Songs for the next live show; Songbook was subsequently hidden, leaving Queue only.
+- Public Vote, Requests, Rumble, Memory, Boost, More, BP stats, and TikTok-facing labels are hidden; direct links to hidden areas return to Queue.
+- Successful signup shows a thank-you screen for five seconds, then resets to a clean `How many singers?` start for the next guest.
+- Host controls, queue storage, SongFinder, support/payment choices, and TV Mode remain operational. See [`QUEUE_HOST_UNIFIED_2026-09-17.md`](QUEUE_HOST_UNIFIED_2026-09-17.md).
+
+## 2026-09-17 — Companion lineup panel hidden
+
+- Removed the public `Current Panel Lineup` card from Companion so Singer Sign Up is the first Queue content.
+- Main 4 data, host controls, the live queue, and TV behavior were not removed.
+- Phone-width live acceptance confirmed zero lineup mounts, visible signup, no horizontal overflow, and no browser or network errors.
+- Deployment evidence is recorded in [`QUEUE_HOST_UNIFIED_2026-09-17.md`](QUEUE_HOST_UNIFIED_2026-09-17.md).
+
+## 2026-09-17 — Guided signup and host UX
+
+- Live Companion signup is now a five-step app-style flow for 1-4 singers, names, exact YouTube karaoke selection, optional support, and confirmation.
+- Optional support uses the established Cash App and PayPal performance-memory destinations; no real payment was attempted during acceptance.
+- Host and TV display every singer name, and Companion finishes on live voting.
+- Real YouTube, API, host, TV, mobile, and cleanup acceptance passed. See [`QUEUE_HOST_UNIFIED_2026-09-17.md`](QUEUE_HOST_UNIFIED_2026-09-17.md).
+
 ## 2026-08-01 — Rowdy Robots full-team mission completion
 
 - All twenty-two local Robot packages are configured, commissioned through bounded real tasks, and active; dispatcher readback shows 22 available and zero paused.

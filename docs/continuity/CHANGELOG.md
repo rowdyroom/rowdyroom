@@ -1,5 +1,99 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-09-17 — Camera headroom and delivery audio correction
+
+- Corrected the Tiny 2 Lite from Portrait 9:16 to Landscape 16:9, eliminating the mismatched crop and retaining headroom.
+- Confirmed the Yamaha capture endpoint existed but its acceptance signal was effectively silent.
+- Added the Tiny 2 Lite microphone as a reduced backup to the Yamaha show feed.
+- Added loudness normalization to Silver and Gold delivered videos.
+- Passed combined H.264/stereo-AAC capture, decoding, framing inspection, and normalized `-1.5 dB` peak acceptance.
+
+## 2026-09-17 — Tiny 2 Lite tracking and capture repair
+
+- Confirmed official Tiny 2 Lite tracking support and the installed camera at firmware `6.2.8.12`.
+- Enabled Human Tracking in Group mode for one to four performers.
+- Removed the worker's unsafe blind OSC tracking toggle and retained always-on on-camera tracking.
+- Closed OBSBOT Center during fulfillment recording to release its DirectShow lock.
+- Passed a real five-second 1920 x 1080, 30 fps capture and decoder check with the performer framed; restarted the fulfillment worker healthy.
+
+## 2026-09-17 — Live PayPal checkout and fulfillment upload
+
+- Created a dedicated live PayPal REST app and registered its verified capture webhook.
+- Stored credentials in a service-role-only Supabase settings table and deployed Edge Function version 2.
+- Replaced the Companion's operative self-attested payment behavior with server-created PayPal checkout.
+- Added checksum-verified chunked package upload and authenticated SMTP delivery through `delivery@rowdyroom.site`.
+- Verified live checkout creation and full delivery with HTTPS 200, matching checksum, and a real email to Roger; restarted the local worker healthy.
+
+## 2026-09-17 — Verified-payment performance fulfillment foundation
+
+Status: Partially implemented; live-payment acceptance blocked on PayPal account login and credentials.
+
+- Added protected payment events, retryable fulfillment jobs, a token-authenticated local worker, and exact package editing for Bronze/Silver/Gold.
+- Bound capture start/stop to the real host Start Next / End Performance queue transitions.
+- Deployed server-side PayPal order and signature-verifying webhook functions, version 1.
+- Kept the existing live signup unchanged until the PayPal secret and webhook gates can be completed.
+- Recorded the existing anonymous customer-order exposure and the safe migration dependency: host controls must move to a protected RPC before legacy policies are removed.
+
+## 2026-09-17 — Live DJ automatic recorded-footage editor
+
+- Published `https://videomaker.rowdyroom.site/live-dj/` for tonight's show.
+- Added local video intake, automatic unique-cut planning, preview, manual STOP override, and browser-side WebM export.
+- Added landscape, portrait, and square presets plus title, duration, energy, quality, audio, and AI edit-plan controls.
+- Footage remains in the operator's browser and is not uploaded to the website.
+- Live acceptance loaded a real MP4, planned one unique cut, started preview, and stopped cleanly.
+
+## 2026-09-17 — TV display proportions and singer wording
+
+- Enlarged the TV title, QR code, signup prompt, queue content, and rotating banner.
+- Removed excess portrait spacing and kept the display within one 1080 x 1920 viewport.
+- Changed `Find Our Song` to `Find My Song` in the Companion signup flow.
+- Removed the incorrect `companion.rowdyroom.site` text from TV Mode without changing the QR code.
+- Preserved queue behavior, host controls, TV rotation logic, and SongFinder integration.
+
+## 2026-09-17 — Companion navigation removed
+
+Status: Live and visually verified; intentionally temporary.
+
+- Hid the entire public tab bar after Queue became the only remaining tab.
+- Preserved the signup screen, SongFinder, host controls, and TV Mode while hiding the public Live Queue card.
+- Changed singer entry labels to plain `Singer N name` wording with no TikTok mention.
+- Live browser and screenshot acceptance confirmed direct signup entry with no navigation overlap.
+
+## 2026-09-17 — Songbook hidden for temporary show mode
+
+Status: Live and verified; intentionally temporary.
+
+- Hid the public Songs tab and Songbook screen, leaving Queue as the only visible Companion tab.
+- Routed direct Songbook links back to Queue while retaining the signup wizard's SongFinder integration.
+- Passed phone-width rendering, route-guard, no-overflow, and no-browser-error checks.
+
+## 2026-09-17 — Temporary signup-only live-show mode
+
+Status: Live and verified; intentionally temporary.
+
+- Reduced the public Companion navigation to Queue and Songs for the next show.
+- Hid voting, BP, TikTok-facing profile UI, and related public tabs without removing host, queue, TV, or backend data.
+- Changed successful signup to a five-second thank-you screen followed by a clean automatic restart.
+- Passed a real queue join, thank-you, timed reset, mobile visibility, direct-route guard, and exact QA cleanup test.
+
+## 2026-09-17 — Companion lineup panel hidden
+
+Status: Live and verified.
+
+- Disabled the legacy public Main 4 Companion loader that injected `Current Panel Lineup` above the signup wizard.
+- Kept Main 4 and queue data operational outside that removed public card.
+- Cache-busted the Companion application script and verified Singer Sign Up is now the first Queue card on a phone viewport.
+
+## 2026-09-17 — Guided signup, payments, and host usability
+
+Status: Live and verified.
+
+- Rebuilt public signup as a five-step mobile-first flow for singer count, names, SongFinder, optional support, and confirmation.
+- Preserved the existing Cash App tip and PayPal performance-memory package destinations and host order workflow.
+- Added 1-4 singer persistence and complete-name rendering in host controls and TV mode.
+- Simplified host defaults while retaining advanced show tools behind More Tools.
+- Passed live YouTube, queue API, host, TV, voting handoff, mobile fit, payment-link, backup, and QA-cleanup checks.
+
 ## 2026-08-01 — Rowdy Robots full-team commissioning complete
 
 - Commissioned every one of the 22 local Robots through a bounded real task before activation.
