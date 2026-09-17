@@ -337,4 +337,5 @@ An older laptop is not part of the authoritative equipment inventory and is not 
 - Archive SHA-256: `7B89E9DA23891FC5DB6B3692C146F4C4F369646DD0AD7753D6B80A6FB735DF99`.
 - Delivery email completed to `rowdyroom@gmail.com` at `2026-09-17T21:39:04.731Z`.
 - Production worker is healthy and idle on `https://rowdyroom.site/api/queue`.
+- Public-safe implementation commit `21e4674`; 323-entry recovery archive `rowdyroom-final-fulfillment-21e4674.zip`, SHA-256 `2C26F256BC4CDE86992379730AA8E59F41CA518284A0862B49EB9196D16F009F`.
 - Final owner gate: Roger must listen to the delivered full-performance file and confirm the vocal/music balance before customer sales begin.

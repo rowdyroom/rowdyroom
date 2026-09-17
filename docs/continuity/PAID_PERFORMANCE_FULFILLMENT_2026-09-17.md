@@ -36,6 +36,7 @@ Status: live checkout, automatic camera tracking, recording, and fulfillment del
 - The clean final master is 4:16.8 at 1920 x 1080. The Gold package contains eight photos, a 45-second highlight, and the full-performance MP4. The full MP4 passed a complete video decode; normalized audio measured `-18.3 dB` mean and `-1.6 dB` maximum.
 - Final archive SHA-256 is `7B89E9DA23891FC5DB6B3692C146F4C4F369646DD0AD7753D6B80A6FB735DF99`. Upload and authenticated email delivery to `rowdyroom@gmail.com` completed at `2026-09-17T21:39:04.731Z`.
 - The temporary rehearsal queue was removed and the production worker was restored healthy and idle against `https://rowdyroom.site/api/queue` at `2026-09-17T21:40:15.622Z`.
+- Final public-safe implementation commit: `21e4674`; recovery archive `rowdyroom-final-fulfillment-21e4674.zip` has 323 entries and SHA-256 `2C26F256BC4CDE86992379730AA8E59F41CA518284A0862B49EB9196D16F009F`.
 
 ## Safety corrections
 
