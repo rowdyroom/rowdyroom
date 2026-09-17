@@ -1,7 +1,7 @@
 import { spawn } from 'node:child_process';
-import { createHash } from 'node:crypto';
-import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
-import { existsSync } from 'node:fs';
+import { createHash, randomBytes } from 'node:crypto';
+import { mkdir, open, readFile, rename, stat, writeFile } from 'node:fs/promises';
+import { createReadStream, existsSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import dgram from 'node:dgram';
 
@@ -15,7 +15,7 @@ function parseEnv(text) {
   }));
 }
 const cfg = parseEnv(await readFile(ENV_PATH, 'utf8'));
-const required = ['SUPABASE_URL','SUPABASE_ANON_KEY','WORKER_ID','WORKER_TOKEN','FFMPEG_PATH','OUTPUT_DIR'];
+const required = ['SUPABASE_URL','SUPABASE_ANON_KEY','WORKER_ID','WORKER_TOKEN','FFMPEG_PATH','OUTPUT_DIR','DELIVERY_URL','DELIVERY_TOKEN','SMTP_HOST','SMTP_PORT','SMTP_USERNAME','SMTP_PASSWORD','PYTHON_PATH'];
 for (const key of required) if (!cfg[key]) throw new Error(`Missing ${key} in ${ENV_PATH}`);
 await mkdir(cfg.OUTPUT_DIR, { recursive: true });
 
@@ -112,6 +112,23 @@ async function edit(job, order) {
   await rpc('rr_worker_update_job',{p_worker_id:cfg.WORKER_ID,p_token:cfg.WORKER_TOKEN,p_job_id:job.id,p_status:'ready_to_deliver',p_result:{...job.result,output_dir:dir,manifest_path:manifestPath,outputs},p_error:null});
 }
 
+function runProcess(command,args){return new Promise((resolve,reject)=>{const p=spawn(command,args,{stdio:['ignore','pipe','pipe'],windowsHide:true});let err='';p.stderr.on('data',d=>err+=d);p.on('exit',c=>c===0?resolve():reject(new Error(err.slice(-1500)||`${command} exited ${c}`)));});}
+function sendDeliveryEmail(order,deliveryUrl){return new Promise((resolve,reject)=>{const script=join(ROOT,'send-delivery-email.py'),p=spawn(cfg.PYTHON_PATH,[script],{stdio:['pipe','pipe','pipe'],windowsHide:true});let out='',err='';p.stdout.on('data',d=>out+=d);p.stderr.on('data',d=>err+=d);p.on('exit',c=>c===0?resolve(out):reject(new Error(err.slice(-1500)||`Email sender exited ${c}`)));p.stdin.end(JSON.stringify({host:cfg.SMTP_HOST,port:Number(cfg.SMTP_PORT),username:cfg.SMTP_USERNAME,password:cfg.SMTP_PASSWORD,to:order.customer_email,customer:order.customer_name||order.singer_name||'Rowdy Room Guest',package_code:order.package_code,delivery_url:deliveryUrl}));});}
+async function fileHash(path){const hash=createHash('sha256');await new Promise((resolve,reject)=>{const stream=createReadStream(path);stream.on('data',d=>hash.update(d));stream.on('error',reject);stream.on('end',resolve);});return hash.digest('hex');}
+async function deliver(job,order){
+  const dir=job.result?.output_dir;if(!dir||!existsSync(dir))throw new Error('Edited package directory is missing.');
+  const safe=String(order.package_code).replace(/[^A-Za-z0-9_-]/g,'_'),archive=join(cfg.OUTPUT_DIR,`${safe}.zip`);
+  await runProcess('tar.exe',['-a','-c','-f',archive,'-C',dir,'.']);
+  const size=(await stat(archive)).size,sha256=await fileHash(archive),deliveryKey=randomBytes(24).toString('hex'),filename=`${safe}.zip`,chunkSize=5*1024*1024,handle=await open(archive,'r');
+  try{for(let offset=0,index=0;offset<size;offset+=chunkSize,index++){const length=Math.min(chunkSize,size-offset),buffer=Buffer.alloc(length);await handle.read(buffer,0,length,offset);const form=new FormData();form.set('action','chunk');form.set('delivery_key',deliveryKey);form.set('filename',filename);form.set('index',String(index));form.set('chunk',new Blob([buffer]),`chunk-${index}`);const response=await fetch(cfg.DELIVERY_URL,{method:'POST',headers:{'X-Rowdy-Worker-Token':cfg.DELIVERY_TOKEN},body:form});const data=await response.json().catch(()=>null);if(!response.ok||!data?.ok)throw new Error(data?.error||`Delivery upload failed (${response.status})`);}}
+  finally{await handle.close();}
+  const form=new FormData();form.set('action','finalize');form.set('delivery_key',deliveryKey);form.set('filename',filename);form.set('sha256',sha256);form.set('email',order.customer_email);form.set('customer',order.customer_name||order.singer_name||'Rowdy Room Guest');form.set('package_code',order.package_code);
+  const response=await fetch(cfg.DELIVERY_URL,{method:'POST',headers:{'X-Rowdy-Worker-Token':cfg.DELIVERY_TOKEN},body:form}),data=await response.json().catch(()=>null);if(!response.ok||!data?.ok)throw new Error(data?.error||`Delivery finalize failed (${response.status})`);
+  await sendDeliveryEmail(order,data.delivery_url);
+  await rpc('rr_worker_update_job',{p_worker_id:cfg.WORKER_ID,p_token:cfg.WORKER_TOKEN,p_job_id:job.id,p_status:'delivered',p_result:{...job.result,archive_path:archive,archive_sha256:sha256,delivery_url:data.delivery_url,emailed_at:new Date().toISOString()},p_error:null});
+  log('Package delivered and emailed',order.package_code,order.customer_email);
+}
+
 async function cycle() {
   const performer = await currentPerformer();
   if (state.active && !performer) await stopCapture();
@@ -121,6 +138,7 @@ async function cycle() {
     if (job.status === 'waiting_for_performance' && !state.active && matches(order, performer)) await startCapture(order, job);
     else if (job.status === 'recording' && state.active?.jobId === job.id && !matches(order, performer)) await stopCapture();
     else if (job.status === 'ready_to_edit') await edit(job, order);
+    else if (job.status === 'ready_to_deliver') await deliver(job, order);
   }
   state.lastError=null; await saveState();
 }
@@ -130,4 +148,3 @@ for (;;) {
   try { await cycle(); } catch (error) { state.lastError=String(error?.stack||error); await saveState(); log('ERROR',error.message); }
   await new Promise(r => setTimeout(r, Number(cfg.POLL_MS || 2000)));
 }
-

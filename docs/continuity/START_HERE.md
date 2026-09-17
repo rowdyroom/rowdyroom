@@ -1,5 +1,11 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-09-17 — Live PayPal checkout activation
+
+- Dedicated live PayPal app, verified capture webhook, server-created checkout, checksum-verified package upload, and authenticated SMTP delivery are active.
+- A real delivery email to Roger and its HTTPS download passed. Physical Tiny 2 Lite tracking acceptance remains open because OBSBOT Center's OSC listener is not bound.
+- Exact evidence and remaining gates: [`PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md`](PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md).
+
 ## 2026-09-17 — Paid performance recording and fulfillment pipeline
 
 - Built the verified-payment, queue-triggered recording, package-editing, and retryable-delivery foundation.

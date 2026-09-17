@@ -1,5 +1,13 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-09-17 — Live PayPal checkout and fulfillment upload
+
+- Created a dedicated live PayPal REST app and registered its verified capture webhook.
+- Stored credentials in a service-role-only Supabase settings table and deployed Edge Function version 2.
+- Replaced the Companion's operative self-attested payment behavior with server-created PayPal checkout.
+- Added checksum-verified chunked package upload and authenticated SMTP delivery through `delivery@rowdyroom.site`.
+- Verified live checkout creation and full delivery with HTTPS 200, matching checksum, and a real email to Roger; restarted the local worker healthy.
+
 ## 2026-09-17 — Verified-payment performance fulfillment foundation
 
 Status: Partially implemented; live-payment acceptance blocked on PayPal account login and credentials.
