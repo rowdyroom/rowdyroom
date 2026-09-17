@@ -6,6 +6,8 @@
 - The fulfillment worker no longer depends on OBSBOT Center's unbound OSC listener or sends a blind tracking toggle.
 - A real 1920 x 1080, 30 fps capture passed with the performer framed. Keep OBSBOT Center closed while the fulfillment worker records so the preview does not lock the camera stream.
 - Evidence and remaining database-security warning: [`PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md`](PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md).
+- Public-safe implementation commit: `c36405b` on `codex/queue-host-unified-20260917`.
+- Local recovery: `Rowdy_Room_Camera_Tracking_2026-09-17/rowdyroom-camera-tracking-c36405b.zip`, 323 entries, SHA-256 `468FF29BFA9B3F46492A8DA14FDB5A1FEDAFA71600726457B5A0B981B6CA346A`.
 
 ## 2026-09-17 — Live PayPal checkout activation
 
