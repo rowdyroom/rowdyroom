@@ -57,8 +57,15 @@ async function startCapture(order, job) {
   const safe = String(order.package_code).replace(/[^A-Za-z0-9_-]/g, '_');
   const temp = join(cfg.OUTPUT_DIR, `${safe}.recording.mkv`);
   await tracking(true);
-  const input = `video=${cfg.CAMERA_NAME || 'OBSBOT Tiny 2 Lite StreamCamera'}:audio=${cfg.AUDIO_NAME || 'Line (3- Yamaha AG06MK2)'}`;
-  const proc = ffmpeg(['-hide_banner','-loglevel','warning','-f','dshow','-rtbufsize','512M','-video_size','1920x1080','-framerate','30','-i',input,'-c:v','h264_nvenc','-preset','p4','-b:v','10M','-c:a','aac','-b:a','256k','-y',temp]);
+  const camera = cfg.CAMERA_NAME || 'OBSBOT Tiny 2 Lite StreamCamera';
+  const primaryAudio = cfg.AUDIO_NAME || 'Line (3- Yamaha AG06MK2)';
+  const backupAudio = cfg.BACKUP_AUDIO_NAME || 'OBSBOT Tiny 2 Lite Microphone (3- OBSBOT Tiny 2 Lite Audio)';
+  const args = ['-hide_banner','-loglevel','warning','-f','dshow','-rtbufsize','512M','-video_size','1920x1080','-framerate','30','-i',`video=${camera}:audio=${primaryAudio}`];
+  if (backupAudio && backupAudio !== primaryAudio) {
+    args.push('-f','dshow','-i',`audio=${backupAudio}`,'-filter_complex','[0:a][1:a]amix=inputs=2:duration=first:dropout_transition=2:weights=1 0.35[aout]','-map','0:v:0','-map','[aout]');
+  }
+  args.push('-c:v','h264_nvenc','-preset','p4','-b:v','10M','-c:a','aac','-b:a','256k','-y',temp);
+  const proc = ffmpeg(args);
   state.active = { jobId: job.id, orderId: order.id, singer: order.singer_name, temp, pid: proc.pid, startedAt: new Date().toISOString() };
   await saveState();
   await rpc('rr_worker_update_job',{p_worker_id:cfg.WORKER_ID,p_token:cfg.WORKER_TOKEN,p_job_id:job.id,p_status:'recording',p_result:{capture_path:temp},p_error:null});
@@ -103,12 +110,12 @@ async function edit(job, order) {
   outputs.push({kind:'photos',count:photoCount});
   if (order.package_key === 'silver' || order.package_key === 'gold') {
     const highlight=join(dir,`${title} - Highlight.mp4`);
-    await run(['-hide_banner','-loglevel','error','-ss','15','-i',source,'-t','45','-vf',"scale=1920:-2,drawtext=text='ROWDY ROOM LIVE':x=(w-text_w)/2:y=40:fontsize=48:fontcolor=white:borderw=3",'-c:v','h264_nvenc','-preset','p4','-c:a','aac','-movflags','+faststart','-y',highlight]);
+    await run(['-hide_banner','-loglevel','error','-ss','15','-i',source,'-t','45','-vf',"scale=1920:-2,drawtext=text='ROWDY ROOM LIVE':x=(w-text_w)/2:y=40:fontsize=48:fontcolor=white:borderw=3",'-af','loudnorm=I=-16:TP=-1.5:LRA=11','-c:v','h264_nvenc','-preset','p4','-c:a','aac','-movflags','+faststart','-y',highlight]);
     outputs.push({kind:'highlight',path:highlight});
   }
   if (order.package_key === 'gold') {
     const full=join(dir,`${title} - Full Performance.mp4`);
-    await run(['-hide_banner','-loglevel','error','-i',source,'-vf',"scale=1920:-2,drawtext=text='ROWDY ROOM LIVE':x=(w-text_w)/2:y=40:fontsize=48:fontcolor=white:borderw=3",'-c:v','h264_nvenc','-preset','p4','-c:a','aac','-movflags','+faststart','-y',full]);
+    await run(['-hide_banner','-loglevel','error','-i',source,'-vf',"scale=1920:-2,drawtext=text='ROWDY ROOM LIVE':x=(w-text_w)/2:y=40:fontsize=48:fontcolor=white:borderw=3",'-af','loudnorm=I=-16:TP=-1.5:LRA=11','-c:v','h264_nvenc','-preset','p4','-c:a','aac','-movflags','+faststart','-y',full]);
     outputs.push({kind:'full',path:full});
   }
   const manifest={order:order.package_code,customer:order.customer_name,email:order.customer_email,createdAt:new Date().toISOString(),outputs};

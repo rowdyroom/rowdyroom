@@ -1,5 +1,13 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-09-17 — Camera headroom and delivery audio correction
+
+- Corrected the Tiny 2 Lite from Portrait 9:16 to Landscape 16:9, eliminating the mismatched crop and retaining headroom.
+- Confirmed the Yamaha capture endpoint existed but its acceptance signal was effectively silent.
+- Added the Tiny 2 Lite microphone as a reduced backup to the Yamaha show feed.
+- Added loudness normalization to Silver and Gold delivered videos.
+- Passed combined H.264/stereo-AAC capture, decoding, framing inspection, and normalized `-1.5 dB` peak acceptance.
+
 ## 2026-09-17 — Tiny 2 Lite tracking and capture repair
 
 - Confirmed official Tiny 2 Lite tracking support and the installed camera at firmware `6.2.8.12`.

@@ -1,5 +1,12 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-09-17 — Camera framing and audio corrected
+
+- Tiny 2 Lite output is Landscape 16:9 with visible headroom; the incorrect Portrait 9:16 setting was the crop source.
+- Fulfillment capture now combines the Yamaha AG06MK2 show mix with a 35 percent Tiny 2 Lite microphone backup.
+- Silver and Gold videos are loudness-normalized to `I=-16`, `TP=-1.5`, `LRA=11`; real combined capture and decoding passed.
+- Keep OBSBOT Center closed during a paid performance so its preview does not lock the recording stream.
+
 ## 2026-09-17 — Tiny 2 Lite tracking and recording accepted
 
 - Human Tracking is enabled in Group mode for one to four singers and remains active on the camera.

@@ -19,6 +19,9 @@ Status: live checkout, automatic camera tracking, recording, and fulfillment del
 - The worker keeps recording, editing, and delivery as separate retryable states so email failure cannot lose the master recording.
 - Verified the exact Tiny 2 Lite at firmware `6.2.8.12`, enabled Human Tracking in Group mode, and confirmed a real 1920 x 1080, 30 fps, five-second hardware capture with the performer framed.
 - OBSBOT Center must remain closed during fulfillment recording because its preview keeps the DirectShow stream locked. Tracking runs on the camera; the worker now leaves it continuously enabled instead of sending an unverified OSC toggle.
+- Corrected the camera's saved output from Portrait 9:16 to Landscape 16:9; the new acceptance frame retains visible headroom.
+- Corrected silent-delivery risk by mixing the Yamaha AG06MK2 show feed with the Tiny 2 Lite microphone at 35 percent as a backup. Silver and Gold outputs receive EBU-style loudness normalization (`I=-16`, `TP=-1.5`, `LRA=11`).
+- The combined 1920 x 1080 acceptance capture contains H.264 video plus stereo AAC audio and decodes successfully. The normalized acceptance output measured a safe `-1.5 dB` maximum.
 
 ## Safety corrections
 
