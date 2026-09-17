@@ -1,5 +1,12 @@
 # Queue Host Controls Unified With Live Signup Queue
 
+## Host removal control
+
+- Host Controls now shows a red `Remove` button for every waiting PHP queue entry.
+- Removal requires the saved host credential and asks for confirmation before acting.
+- The current performer cannot be removed; remaining active queue positions are renumbered.
+- Live verification passed: queue readback stayed healthy, an unauthenticated removal returned HTTP 401, and Remove rendered without changing the live queue.
+
 **Date:** 2026-09-17  
 **Status:** Live repair verified; repository synchronization branch only
 

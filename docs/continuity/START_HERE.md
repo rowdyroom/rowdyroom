@@ -1,5 +1,11 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-09-17 — Host queue removal control
+
+- Host Controls now provides a confirmed, host-protected Remove button for waiting singers who leave or do not appear.
+- The current performer is protected and remaining positions are renumbered automatically.
+- Live acceptance confirmed healthy queue readback, HTTP 401 without host authorization, and visible Remove buttons without altering the queue.
+
 ## 2026-09-17 — Full paid-performance rehearsal accepted
 
 - Completed an isolated Gold-package rehearsal for `Roger TEST` / `Stay` without charging PayPal or changing the live Jason/AJ queue positions.

@@ -1,5 +1,11 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-09-17 — Waiting singers can be removed from Host Controls
+
+- Added a protected per-row Remove action for waiting PHP queue entries.
+- Added confirmation, current-performer protection, and automatic queue-position renumbering.
+- Verified HTTP 401 without the host credential, healthy queue readback, and visible Remove controls without deleting a live singer during acceptance.
+
 ## 2026-09-17 — Full paid-performance rehearsal completed
 
 - Completed a no-charge end-to-end Gold-package rehearsal for `RRM-20260917-F2AEAA-FINAL`.
