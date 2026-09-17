@@ -1,5 +1,15 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-09-17 — Guided signup, payments, and host usability
+
+Status: Live and verified.
+
+- Rebuilt public signup as a five-step mobile-first flow for singer count, names, SongFinder, optional support, and confirmation.
+- Preserved the existing Cash App tip and PayPal performance-memory package destinations and host order workflow.
+- Added 1-4 singer persistence and complete-name rendering in host controls and TV mode.
+- Simplified host defaults while retaining advanced show tools behind More Tools.
+- Passed live YouTube, queue API, host, TV, voting handoff, mobile fit, payment-link, backup, and QA-cleanup checks.
+
 ## 2026-08-01 — Rowdy Robots full-team commissioning complete
 
 - Commissioned every one of the 22 local Robots through a bounded real task before activation.

@@ -1,5 +1,12 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-09-17 — Guided signup and host UX
+
+- Live Companion signup is now a five-step app-style flow for 1-4 singers, names, exact YouTube karaoke selection, optional support, and confirmation.
+- Optional support uses the established Cash App and PayPal performance-memory destinations; no real payment was attempted during acceptance.
+- Host and TV display every singer name, and Companion finishes on live voting.
+- Real YouTube, API, host, TV, mobile, and cleanup acceptance passed. See [`QUEUE_HOST_UNIFIED_2026-09-17.md`](QUEUE_HOST_UNIFIED_2026-09-17.md).
+
 ## 2026-08-01 — Rowdy Robots full-team mission completion
 
 - All twenty-two local Robot packages are configured, commissioned through bounded real tasks, and active; dispatcher readback shows 22 available and zero paused.

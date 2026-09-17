@@ -76,3 +76,20 @@ This document is a public-safe deployment record. The production PHP/static sour
   - Companion JavaScript: `bf80929e3f7ae0778bab90b6b478985e5676c59bdbf2484c637e6e059b89f272`
   - Queue host page: `14a693f5a67be260527e70b99026f40fc5b208b851e86a2c0bcd19de797b3cc2`
 
+## Guided app-style signup and host usability
+
+- Companion now guides guests through five focused steps: 1-4 singer count, display names, exact SongFinder YouTube selection, optional support, and final confirmation.
+- Multi-singer names persist in the PHP/MySQL queue and render together in host controls and TV mode.
+- Optional support reuses the established Cash App tip handle and $5/$10/$20 PayPal performance-memory packages. No replacement payment system was introduced.
+- Paid performance-memory selections retain contact and delivery details, payment verification state, recording consent, and the existing host memory-order controls.
+- Host controls now lead with Voting, TV Mode, Refresh, and More Tools; specialized competition and administration panels remain available under More Tools.
+- Live acceptance passed through a real YouTube search, two-person signup, API readback, host `Open Track`, TV rendering, automatic Vote-screen handoff, and exact QA cleanup.
+- Phone-width acceptance passed after repairing long-username horizontal overflow. Payment destinations and required confirmation were verified without making a real payment.
+- Final production hashes:
+  - Companion HTML: `3e1fad944de00a31133e7113aa5e8834cf7e157af1cd85eb2291723e891a3012`
+  - Companion JavaScript: `fb4ef9d5ef8d1ba4bec2cb0072f541360a08dbc99377929278228f52f6e60623`
+  - Companion CSS: `655c94b5e50c3eb7289f24d25dc67f25cdbb11d9b3e637e34f3519e35be2b882`
+  - Queue service: `854e9c7b2d0ea631cb982ec2e8dd6312e8c4f2689cc3cc113fd2ac2ca2f9a5fe`
+  - Queue host page: `1220747c57ea2546ed3eb45179b0fa8452b609b64ba0f030680398bc6f0dc993`
+  - TV JavaScript: `deadc0999a293560239946daf34d76d8cf012aafb6f2af8444a28646ab306dec`
+
