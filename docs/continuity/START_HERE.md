@@ -10,6 +10,7 @@
 - The worker is restored to `https://rowdyroom.site/api/queue`, healthy, and idle.
 - AG06-only implementation commit: `623b756` on `codex/queue-host-unified-20260917`.
 - Local recovery: `Rowdy_Room_Full_Fulfillment_Rehearsal_2026-09-17/rowdyroom-full-fulfillment-rehearsal-448cdd7.zip`, 323 entries, SHA-256 `5997FB8A04E3E4960647E351F6C3A12B2DFE688B5EC7D4AC0A3264716608C23F`.
+- Corrected AG06-only recovery: `Rowdy_Room_Full_Fulfillment_Rehearsal_2026-09-17/rowdyroom-ag06-only-fulfillment-89ab225.zip`, 323 entries, SHA-256 `F90B8F56C3A4BE86F23178F09546A867C89E0442F3C186E71566A675C2BC529D`.
 
 ## 2026-09-17 — Camera framing corrected; AG06-only audio required
 
