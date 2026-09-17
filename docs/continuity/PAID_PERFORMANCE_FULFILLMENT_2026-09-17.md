@@ -1,6 +1,6 @@
 # Paid performance fulfillment — 2026-09-17
 
-Status: live checkout and automatic fulfillment delivery active; physical tracking acceptance remains open.
+Status: live checkout, automatic camera tracking, recording, and fulfillment delivery active.
 
 ## Implemented and verified
 
@@ -17,6 +17,8 @@ Status: live checkout and automatic fulfillment delivery active; physical tracki
 - Recording trigger is the host's existing Start Next transition: a verified paid order waits until its matching singer becomes `current`. End Performance stops capture.
 - Capture uses the OBSBOT Tiny 2 Lite video and Yamaha AG06MK2 show mix. Bronze produces photos; Silver adds a highlight; Gold adds the full performance.
 - The worker keeps recording, editing, and delivery as separate retryable states so email failure cannot lose the master recording.
+- Verified the exact Tiny 2 Lite at firmware `6.2.8.12`, enabled Human Tracking in Group mode, and confirmed a real 1920 x 1080, 30 fps, five-second hardware capture with the performer framed.
+- OBSBOT Center must remain closed during fulfillment recording because its preview keeps the DirectShow stream locked. Tracking runs on the camera; the worker now leaves it continuously enabled instead of sending an unverified OSC toggle.
 
 ## Safety corrections
 
@@ -24,9 +26,8 @@ Status: live checkout and automatic fulfillment delivery active; physical tracki
 - Only a PayPal signature-verified `PAYMENT.CAPTURE.COMPLETED` event with an exact amount/currency match creates a fulfillment job.
 - The live signup now redirects to PayPal only after the singer is safely joined to the queue and the exact package order is reserved.
 
-## Recovery required before live acceptance
+## Recovery required
 
-- OBSBOT Center recognizes the Tiny 2 Lite and its OSC setting is enabled, but the listener did not bind after restart. Direct USB controller package 0.7.0 supports Tiny 2 only, not Tiny 2 Lite, so physical automatic-tracking acceptance remains open rather than being falsely claimed.
 - Remove the legacy anonymous read/update policies on `rr_memory_orders` only after the host page is moved to the protected host RPC; removing them early would break current host controls.
 
 ## Current local paths

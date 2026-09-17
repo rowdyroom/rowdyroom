@@ -1,5 +1,12 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-09-17 — Tiny 2 Lite tracking and recording accepted
+
+- Human Tracking is enabled in Group mode for one to four singers and remains active on the camera.
+- The fulfillment worker no longer depends on OBSBOT Center's unbound OSC listener or sends a blind tracking toggle.
+- A real 1920 x 1080, 30 fps capture passed with the performer framed. Keep OBSBOT Center closed while the fulfillment worker records so the preview does not lock the camera stream.
+- Evidence and remaining database-security warning: [`PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md`](PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md).
+
 ## 2026-09-17 — Live PayPal checkout activation
 
 - Dedicated live PayPal app, verified capture webhook, server-created checkout, checksum-verified package upload, and authenticated SMTP delivery are active.

@@ -42,6 +42,10 @@ async function sendOsc(path, value) {
   socket.close();
 }
 async function tracking(on) {
+  // Tiny 2 Lite tracking stays enabled in OBSBOT Center's Human/Group mode.
+  // Do not send a blind toggle: a missing or stale OSC listener could leave
+  // tracking disabled at the start of a paid performance.
+  if ((cfg.OBSBOT_CONTROL_MODE || 'always_on') === 'always_on') return;
   await sendOsc('/OBSBOT/WebCam/General/SelectDevice', 0).catch(() => {});
   await sendOsc('/OBSBOT/WebCam/Tiny/ToggleAILock', on ? 1 : 0);
 }

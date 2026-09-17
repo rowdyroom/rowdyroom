@@ -1,5 +1,13 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-09-17 — Tiny 2 Lite tracking and capture repair
+
+- Confirmed official Tiny 2 Lite tracking support and the installed camera at firmware `6.2.8.12`.
+- Enabled Human Tracking in Group mode for one to four performers.
+- Removed the worker's unsafe blind OSC tracking toggle and retained always-on on-camera tracking.
+- Closed OBSBOT Center during fulfillment recording to release its DirectShow lock.
+- Passed a real five-second 1920 x 1080, 30 fps capture and decoder check with the performer framed; restarted the fulfillment worker healthy.
+
 ## 2026-09-17 — Live PayPal checkout and fulfillment upload
 
 - Created a dedicated live PayPal REST app and registered its verified capture webhook.
