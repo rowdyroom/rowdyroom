@@ -1,5 +1,13 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-09-17 — Companion lineup panel hidden
+
+Status: Live and verified.
+
+- Disabled the legacy public Main 4 Companion loader that injected `Current Panel Lineup` above the signup wizard.
+- Kept Main 4 and queue data operational outside that removed public card.
+- Cache-busted the Companion application script and verified Singer Sign Up is now the first Queue card on a phone viewport.
+
 ## 2026-09-17 — Guided signup, payments, and host usability
 
 Status: Live and verified.

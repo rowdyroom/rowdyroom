@@ -1,5 +1,12 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-09-17 — Companion lineup panel hidden
+
+- Removed the public `Current Panel Lineup` card from Companion so Singer Sign Up is the first Queue content.
+- Main 4 data, host controls, the live queue, and TV behavior were not removed.
+- Phone-width live acceptance confirmed zero lineup mounts, visible signup, no horizontal overflow, and no browser or network errors.
+- Deployment evidence is recorded in [`QUEUE_HOST_UNIFIED_2026-09-17.md`](QUEUE_HOST_UNIFIED_2026-09-17.md).
+
 ## 2026-09-17 — Guided signup and host UX
 
 - Live Companion signup is now a five-step app-style flow for 1-4 singers, names, exact YouTube karaoke selection, optional support, and confirmation.

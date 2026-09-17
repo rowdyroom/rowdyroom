@@ -93,3 +93,14 @@ This document is a public-safe deployment record. The production PHP/static sour
   - Queue host page: `1220747c57ea2546ed3eb45179b0fa8452b609b64ba0f030680398bc6f0dc993`
   - TV JavaScript: `deadc0999a293560239946daf34d76d8cf012aafb6f2af8444a28646ab306dec`
 
+## Companion lineup panel removal
+
+- Removed the legacy Companion loader that injected the `Current Panel Lineup` card.
+- Singer Sign Up is now the first card in the public Queue screen.
+- This is a presentation-only removal: Main 4 data, host controls, queue state, and TV behavior remain active.
+- Added a cache-busted Companion script URL so returning phones receive the new layout immediately.
+- Live phone-width acceptance passed with zero lineup cards, zero Main 4 mounts, no loader element, visible signup, no horizontal overflow, no failed responses, and no browser errors.
+- Final production hashes:
+  - Companion HTML: `e1a6a73bd6a569ab16bb1811b7b91399ed63054b366d2c4bd2fb90d7a5cd8758`
+  - Companion JavaScript: `9a232ee8ca841bbe1a57355a31af04b45774117fb0ca934419887031a7cafb80`
+
