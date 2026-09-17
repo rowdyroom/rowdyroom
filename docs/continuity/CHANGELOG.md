@@ -1,5 +1,14 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-09-17 — Full paid-performance rehearsal completed
+
+- Completed a no-charge end-to-end Gold-package rehearsal for `RRM-20260917-F2AEAA-FINAL`.
+- Locked capture to OBSBOT video plus the Yamaha AG06MK2 LOOPBACK mix; removed the webcam microphone to eliminate echo and delay.
+- Verified the final 4:16.8 full-performance MP4 by complete decode and audio-level analysis.
+- Generated eight photos, a 45-second highlight, a full-performance video, and a checksum-verified delivery ZIP.
+- Uploaded the package and sent the delivery email to `rowdyroom@gmail.com`.
+- Removed the temporary rehearsal queue and restored the healthy production worker to the live queue endpoint.
+
 ## 2026-09-17 — Removed delayed webcam audio from fulfillment capture
 
 - Removed the Tiny 2 Lite microphone from paid-performance recording after the full rehearsal exposed doubled, delayed audio.

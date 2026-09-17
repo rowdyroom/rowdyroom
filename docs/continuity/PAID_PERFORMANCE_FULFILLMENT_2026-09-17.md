@@ -31,6 +31,11 @@ Status: live checkout, automatic camera tracking, recording, and fulfillment del
 - Audio acceptance correction: the first rehearsal delivery is superseded because it contains the mixed webcam/AG06 track; the already-mixed master cannot be cleanly separated after capture.
 - Replacement AG06-only take passed full decode at 3:11 with 1920 x 1080 H.264 video, one stereo AAC stream, `-20.5 dB` mean audio, and `-1.2 dB` peak. The replacement archive SHA-256 is `031fd4d23b2c50ce3869c36e3f737dfba1c1dc1d9f20a1a9729adc47f0dcb037`; HTTPS HEAD returned 200 with the exact 54,389,372-byte length, and SMTP delivery to `rowdyroom@gmail.com` completed at `2026-09-17T20:51:44.627Z`.
 - Corrected source recovery: `rowdyroom-ag06-only-fulfillment-89ab225.zip`, 323 entries, SHA-256 `F90B8F56C3A4BE86F23178F09546A867C89E0442F3C186E71566A675C2BC529D`.
+- Final full-song rehearsal supersedes both earlier audio tests. Package `RRM-20260917-F2AEAA-FINAL` recorded the complete Rihanna "Stay" performance through the OBSBOT Tiny 2 Lite and the AG06MK2 LOOPBACK feed, with the webcam microphone excluded.
+- Mandatory customer-order routing: Windows/Chrome output `Line (3- Yamaha AG06MK2)`, AG06MK2 `STREAMING OUT` set to `LOOPBACK`, and worker input `Line (3- Yamaha AG06MK2)`. Any separate TikTok desktop-audio capture must be disabled if it duplicates this same loopback mix.
+- The clean final master is 4:16.8 at 1920 x 1080. The Gold package contains eight photos, a 45-second highlight, and the full-performance MP4. The full MP4 passed a complete video decode; normalized audio measured `-18.3 dB` mean and `-1.6 dB` maximum.
+- Final archive SHA-256 is `7B89E9DA23891FC5DB6B3692C146F4C4F369646DD0AD7753D6B80A6FB735DF99`. Upload and authenticated email delivery to `rowdyroom@gmail.com` completed at `2026-09-17T21:39:04.731Z`.
+- The temporary rehearsal queue was removed and the production worker was restored healthy and idle against `https://rowdyroom.site/api/queue` at `2026-09-17T21:40:15.622Z`.
 
 ## Safety corrections
 
@@ -47,4 +52,5 @@ Status: live checkout, automatic camera tracking, recording, and fulfillment del
 - Worker: `scripts/fulfillment/rowdy-fulfillment-worker.mjs`
 - Private local configuration: `scripts/fulfillment/.env.local` (ignored; never commit)
 - Package output: `C:\Users\Roger\Videos\Rowdy Room Customer Packages`
+- Final verified video: `C:\Users\Roger\Videos\Rowdy Room Customer Packages\RRM-20260917-F2AEAA-FINAL\Roger TEST - Rihanna - Stay ft. Mikky Ekko (Karaoke Version) - Full Performance.mp4`
 - Edge Functions: `supabase/functions/rowdy-paypal-order/` and `supabase/functions/rowdy-paypal-webhook/`

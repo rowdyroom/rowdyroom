@@ -12,13 +12,15 @@ msg["To"] = cfg["to"]
 msg["Reply-To"] = "rowdyroom@gmail.com"
 msg["Date"] = formatdate(localtime=True)
 msg["Message-ID"] = make_msgid(domain="rowdyroom.site")
-msg["Subject"] = f"Rowdy Room karaoke package {cfg['package_code']}"
+msg["Subject"] = cfg.get("subject") or f"Rowdy Room karaoke package {cfg['package_code']}"
+delivery_note = cfg.get("delivery_note")
 msg.set_content(
     f"Hi {cfg['customer']},\n\n"
-    "Thanks for singing with Rowdy Room. Your requested karaoke performance files are ready.\n\n"
-    f"Secure download:\n{cfg['delivery_url']}\n\n"
-    "If you did not request this recording, reply to this message and we will remove it.\n\n"
-    "Rowdy Room\nRolla, Missouri\n"
+    + "Thanks for singing with Rowdy Room. Your requested karaoke performance files are ready.\n\n"
+    + (f"{delivery_note}\n\n" if delivery_note else "")
+    + f"Secure download:\n{cfg['delivery_url']}\n\n"
+    + "If you did not request this recording, reply to this message and we will remove it.\n\n"
+    + "Rowdy Room\nRolla, Missouri\n"
 )
 with smtplib.SMTP_SSL(cfg["host"], int(cfg["port"]), context=ssl.create_default_context(), timeout=30) as smtp:
     smtp.login(cfg["username"], cfg["password"])

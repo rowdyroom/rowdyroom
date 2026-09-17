@@ -328,3 +328,13 @@ Verified protected snapshot:
 - workbook regeneration before the next equipment intake or workbook-led edit
 
 An older laptop is not part of the authoritative equipment inventory and is not part of this build plan. No further purchase/cart action, production show system change, or Scheduled Task change is authorized by this record.
+
+## 2026-09-17 show fulfillment acceptance
+
+- The paid karaoke-video path completed a full no-charge Gold-package rehearsal from queue-current trigger through recording, automatic editing, upload, and email delivery.
+- Authoritative audio routing is AG06MK2 `LOOPBACK` with Windows/Chrome output and worker input both set to `Line (3- Yamaha AG06MK2)`; the OBSBOT webcam microphone is excluded.
+- Final package `RRM-20260917-F2AEAA-FINAL`: 4:16.8, 1920 x 1080, complete decode passed, eight photos plus highlight and full performance.
+- Archive SHA-256: `7B89E9DA23891FC5DB6B3692C146F4C4F369646DD0AD7753D6B80A6FB735DF99`.
+- Delivery email completed to `rowdyroom@gmail.com` at `2026-09-17T21:39:04.731Z`.
+- Production worker is healthy and idle on `https://rowdyroom.site/api/queue`.
+- Final owner gate: Roger must listen to the delivered full-performance file and confirm the vocal/music balance before customer sales begin.
