@@ -7,6 +7,8 @@
 - Package `RRM-20260917-F2AEAA` uploaded with SHA-256 `dd648164a076db17b76cfce5d0e3eb66d3e8a4059c39777022a1bd192df6ad8c`; HTTPS delivery and SMTP email to `rowdyroom@gmail.com` passed.
 - Fixed the live checkout CORS preflight by using a bodyless `204` response; `rowdy-paypal-order` version 3 is active.
 - The worker is restored to `https://rowdyroom.site/api/queue`, healthy, and idle.
+- Public-safe implementation commit: `448cdd7` on `codex/queue-host-unified-20260917`.
+- Local recovery: `Rowdy_Room_Full_Fulfillment_Rehearsal_2026-09-17/rowdyroom-full-fulfillment-rehearsal-448cdd7.zip`, 323 entries, SHA-256 `5997FB8A04E3E4960647E351F6C3A12B2DFE688B5EC7D4AC0A3264716608C23F`.
 
 ## 2026-09-17 — Camera framing and audio corrected
 

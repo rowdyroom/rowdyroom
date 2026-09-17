@@ -27,6 +27,7 @@ Status: live checkout, automatic camera tracking, recording, and fulfillment del
 - Rehearsal output passed full decode: eight photos, a 45-second highlight, and a 4:42 full-performance MP4 with 1920 x 1080 H.264 video and stereo AAC audio.
 - Delivery completed to `rowdyroom@gmail.com`; uploaded archive SHA-256 is `dd648164a076db17b76cfce5d0e3eb66d3e8a4059c39777022a1bd192df6ad8c`, and the delivery endpoint returned HTTP 200.
 - The temporary rehearsal queue was removed from service and the worker was restored healthy and idle against `https://rowdyroom.site/api/queue`.
+- Public-safe implementation commit: `448cdd7`; local recovery archive `rowdyroom-full-fulfillment-rehearsal-448cdd7.zip` has 323 entries and SHA-256 `5997FB8A04E3E4960647E351F6C3A12B2DFE688B5EC7D4AC0A3264716608C23F`.
 
 ## Safety corrections
 
