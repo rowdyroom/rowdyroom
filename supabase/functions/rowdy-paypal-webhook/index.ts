@@ -1,0 +1,19 @@
+async function accessToken(){const id=Deno.env.get('PAYPAL_CLIENT_ID'),secret=Deno.env.get('PAYPAL_CLIENT_SECRET');if(!id||!secret)throw new Error('PayPal credentials missing');const r=await fetch('https://api-m.paypal.com/v1/oauth2/token',{method:'POST',headers:{Authorization:'Basic '+btoa(`${id}:${secret}`),'Content-Type':'application/x-www-form-urlencoded'},body:'grant_type=client_credentials'});const d=await r.json();if(!r.ok)throw new Error('PayPal auth failed');return d.access_token as string;}
+Deno.serve(async req=>{if(req.method!=='POST')return new Response('method',{status:405});const raw=await req.text();let event:any;try{event=JSON.parse(raw)}catch{return new Response('json',{status:400})}try{
+ const access=await accessToken(), webhookId=Deno.env.get('PAYPAL_WEBHOOK_ID');if(!webhookId)throw new Error('PayPal webhook id missing');
+ const verify=await fetch('https://api-m.paypal.com/v1/notifications/verify-webhook-signature',{method:'POST',headers:{Authorization:`Bearer ${access}`,'Content-Type':'application/json'},body:JSON.stringify({auth_algo:req.headers.get('paypal-auth-algo'),cert_url:req.headers.get('paypal-cert-url'),transmission_id:req.headers.get('paypal-transmission-id'),transmission_sig:req.headers.get('paypal-transmission-sig'),transmission_time:req.headers.get('paypal-transmission-time'),webhook_id:webhookId,webhook_event:event})});
+ const vd=await verify.json();if(!verify.ok||vd.verification_status!=='SUCCESS')return new Response('invalid signature',{status:400});
+ const url=Deno.env.get('SUPABASE_URL')!,service=Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,sha=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(raw)))).map(x=>x.toString(16).padStart(2,'0')).join('');
+ const resource=event.resource||{}, capture=resource.supplementary_data?.related_ids?.order_id?resource:null;
+ let orderId=resource.custom_id||resource.purchase_units?.[0]?.custom_id||resource.supplementary_data?.related_ids?.order_id||null;
+ if(!orderId&&capture?.id){const q=await fetch(`${url}/rest/v1/rr_memory_orders?provider_transaction_id=eq.${encodeURIComponent(capture.id)}&select=id`,{headers:{apikey:service,Authorization:`Bearer ${service}`}});const rows=await q.json();orderId=rows?.[0]?.id||null;}
+ await fetch(`${url}/rest/v1/rr_payment_events`,{method:'POST',headers:{apikey:service,Authorization:`Bearer ${service}`,'Content-Type':'application/json','Prefer':'resolution=ignore-duplicates'},body:JSON.stringify({provider:'paypal',provider_event_id:event.id,event_type:event.event_type,verification_status:'verified',payload_sha256:sha,order_id:orderId})});
+ if(event.event_type==='PAYMENT.CAPTURE.COMPLETED'&&orderId){
+  const amount=resource.amount;const q=await fetch(`${url}/rest/v1/rr_memory_orders?id=eq.${orderId}&select=id,amount_cents,currency`,{headers:{apikey:service,Authorization:`Bearer ${service}`}});const rows=await q.json(),order=rows?.[0];const cents=Math.round(Number(amount?.value||0)*100);
+  if(!order||cents!==order.amount_cents||amount?.currency_code!==order.currency)throw new Error('Paid amount did not match reserved package.');
+  await fetch(`${url}/rest/v1/rr_memory_orders?id=eq.${orderId}`,{method:'PATCH',headers:{apikey:service,Authorization:`Bearer ${service}`,'Content-Type':'application/json'},body:JSON.stringify({payment_status:'verified_paid',payment_verified_at:new Date().toISOString(),provider_transaction_id:resource.id,order_status:'paid_waiting_for_performance',fulfillment_status:'waiting_for_performance'})});
+  await fetch(`${url}/rest/v1/rr_fulfillment_jobs`,{method:'POST',headers:{apikey:service,Authorization:`Bearer ${service}`,'Content-Type':'application/json','Prefer':'resolution=ignore-duplicates'},body:JSON.stringify({order_id:orderId,status:'waiting_for_performance'})});
+ }
+ return new Response('ok',{status:200});
+}catch(e){console.error(e);return new Response('error',{status:500});}});
+

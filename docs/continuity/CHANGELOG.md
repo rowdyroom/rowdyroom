@@ -1,5 +1,15 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-09-17 — Verified-payment performance fulfillment foundation
+
+Status: Partially implemented; live-payment acceptance blocked on PayPal account login and credentials.
+
+- Added protected payment events, retryable fulfillment jobs, a token-authenticated local worker, and exact package editing for Bronze/Silver/Gold.
+- Bound capture start/stop to the real host Start Next / End Performance queue transitions.
+- Deployed server-side PayPal order and signature-verifying webhook functions, version 1.
+- Kept the existing live signup unchanged until the PayPal secret and webhook gates can be completed.
+- Recorded the existing anonymous customer-order exposure and the safe migration dependency: host controls must move to a protected RPC before legacy policies are removed.
+
 ## 2026-09-17 — Live DJ automatic recorded-footage editor
 
 - Published `https://videomaker.rowdyroom.site/live-dj/` for tonight's show.

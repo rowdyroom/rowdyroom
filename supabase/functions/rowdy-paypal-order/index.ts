@@ -1,0 +1,23 @@
+const allowedOrigins = new Set(['https://rowdyroom.site','https://www.rowdyroom.site']);
+const packages: Record<string,{name:string,value:string,cents:number}> = {
+  bronze:{name:'Bronze - Photos',value:'5.00',cents:500},
+  silver:{name:'Silver - Highlight Reel + Photos',value:'10.00',cents:1000},
+  gold:{name:'Gold - Full Performance + Highlight + Photos',value:'20.00',cents:2000}
+};
+function headers(origin:string|null){return {'Content-Type':'application/json','Access-Control-Allow-Origin':allowedOrigins.has(origin||'')?origin!:'https://rowdyroom.site','Access-Control-Allow-Headers':'content-type','Access-Control-Allow-Methods':'POST,OPTIONS','Vary':'Origin'};}
+function clean(v:unknown,n:number){return String(v??'').trim().slice(0,n);}
+async function token(){const id=Deno.env.get('PAYPAL_CLIENT_ID'),secret=Deno.env.get('PAYPAL_CLIENT_SECRET');if(!id||!secret)throw new Error('PayPal server credentials are not configured.');const r=await fetch('https://api-m.paypal.com/v1/oauth2/token',{method:'POST',headers:{Authorization:'Basic '+btoa(`${id}:${secret}`),'Content-Type':'application/x-www-form-urlencoded'},body:'grant_type=client_credentials'});const d=await r.json();if(!r.ok)throw new Error('PayPal authentication failed.');return d.access_token as string;}
+Deno.serve(async req=>{const origin=req.headers.get('origin');if(req.method==='OPTIONS')return new Response('',{status:204,headers:headers(origin)});if(req.method!=='POST')return new Response(JSON.stringify({ok:false,error:'Method not allowed'}),{status:405,headers:headers(origin)});try{
+  const b=await req.json(), key=clean(b.package_key,20).toLowerCase(), pkg=packages[key];
+  const email=clean(b.customer_email,254).toLowerCase(), name=clean(b.customer_name,160);
+  if(!pkg||!name||!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)||b.consent!==true)throw new Error('Valid package, name, email, and recording consent are required.');
+  const url=Deno.env.get('SUPABASE_URL')!, service=Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+  const create=await fetch(`${url}/rest/v1/rpc/rr_create_memory_order`,{method:'POST',headers:{apikey:service,Authorization:`Bearer ${service}`,'Content-Type':'application/json'},body:JSON.stringify({p_customer_name:name,p_customer_email:email,p_package_key:key,p_singer_name:clean(b.singer_name,160),p_duet_partner:clean(b.duet_partner,160),p_song_title:clean(b.song_title,300),p_song_artist:clean(b.song_artist,200),p_song_source_name:clean(b.song_source_name,160),p_song_source_url:clean(b.song_source_url,1000),p_queue_user_id:clean(b.queue_user_id,160),p_queue_position:Number(b.queue_position)||null,p_consent:true,p_notes:clean(b.notes,500)||null})});
+  const rows=await create.json();if(!create.ok||!rows?.[0])throw new Error(rows?.message||'Order could not be reserved.');const order=rows[0];
+  const access=await token();const pp=await fetch('https://api-m.paypal.com/v2/checkout/orders',{method:'POST',headers:{Authorization:`Bearer ${access}`,'Content-Type':'application/json','PayPal-Request-Id':order.checkout_reference},body:JSON.stringify({intent:'CAPTURE',purchase_units:[{reference_id:order.id,custom_id:order.id,invoice_id:order.package_code,description:pkg.name,amount:{currency_code:'USD',value:pkg.value}}],payment_source:{paypal:{experience_context:{user_action:'PAY_NOW',return_url:'https://rowdyroom.site/companion/?payment=return',cancel_url:'https://rowdyroom.site/companion/?payment=cancel'}}}})});
+  const pd=await pp.json();if(!pp.ok)throw new Error(pd?.message||'PayPal checkout could not be created.');
+  await fetch(`${url}/rest/v1/rr_memory_orders?id=eq.${order.id}`,{method:'PATCH',headers:{apikey:service,Authorization:`Bearer ${service}`,'Content-Type':'application/json'},body:JSON.stringify({provider_order_id:pd.id,order_status:'awaiting_payment'})});
+  const approve=(pd.links||[]).find((x:any)=>x.rel==='payer-action'||x.rel==='approve')?.href;if(!approve)throw new Error('PayPal approval link was missing.');
+  return new Response(JSON.stringify({ok:true,order_id:order.id,package_code:order.package_code,checkout_url:approve}),{headers:headers(origin)});
+}catch(e){return new Response(JSON.stringify({ok:false,error:e instanceof Error?e.message:'Checkout failed'}),{status:400,headers:headers(origin)});}});
+

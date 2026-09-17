@@ -1,5 +1,12 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-09-17 — Paid performance recording and fulfillment pipeline
+
+- Built the verified-payment, queue-triggered recording, package-editing, and retryable-delivery foundation.
+- Recording begins only when the host starts the paid singer's performance and stops on End Performance.
+- The local worker is healthy and idle; live PayPal credentials/webhook registration, outbound email configuration, Companion checkout replacement, and physical Tiny 2 Lite tracking acceptance remain recovery-required.
+- Authority and exact gates: [`PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md`](PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md).
+
 ## 2026-09-17 — Live DJ automatic recorded-footage editor
 
 - Live page: `https://videomaker.rowdyroom.site/live-dj/`
