@@ -57,3 +57,22 @@ Protected pre-change server backups were created and read back before every live
 The contributor RPC intentionally follows the existing host-password-validated admin RPC architecture. Supabase's advisor therefore reports the expected anonymous-callable SECURITY DEFINER warning for that RPC, alongside numerous pre-existing advisor findings. Broader advisor remediation was not bundled into this live-show repair.
 
 This document is a public-safe deployment record. The production PHP/static sources still need a deliberate repository synchronization process; production/GitHub drift remains a tracked risk.
+
+## YouTube-first signup and host track visibility
+
+- Public signup now begins with a single primary action to choose the exact YouTube karaoke video in SongFinder.
+- The queue join button remains disabled until SongFinder returns a validated YouTube video.
+- Companion passes the selected source name, canonical video URL, and duration metadata through the PHP queue API.
+- The PHP/MySQL queue now stores and returns those fields. Only HTTPS YouTube and youtu.be video links are accepted.
+- The host page maps the returned metadata and shows `Open Track` on the matching singer row.
+- The host page's manual SongFinder path now preserves the same source metadata.
+- Cross-window SongFinder messages are accepted only from `https://songfinder.rowdyroom.site`.
+- End-to-end live acceptance passed with a fresh public identity: YouTube search returned eight results, a real result was selected, the queue join returned HTTP 200, API readback preserved the same video URL and source, and the host row displayed `Open Track`.
+- A non-YouTube source URL was rejected with HTTP 400.
+- The temporary QA queue entry was backed up and removed after verification.
+- Final production SHA-256 values for this repair:
+  - Queue service: `b8c67d6276e3f496856a4ac031104c9a2cb7b380222f1c01adbab1e2df32e0f1`
+  - Companion HTML: `28f90315ac19b80c12fe2661aa3efc57ec22c5deb22c0545aafd4a14502e551b`
+  - Companion JavaScript: `bf80929e3f7ae0778bab90b6b478985e5676c59bdbf2484c637e6e059b89f272`
+  - Queue host page: `14a693f5a67be260527e70b99026f40fc5b208b851e86a2c0bcd19de797b3cc2`
+
