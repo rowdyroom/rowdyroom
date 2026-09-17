@@ -1,5 +1,12 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-09-17 — Full paid-performance rehearsal and checkout CORS repair
+
+- Fixed the Edge Function OPTIONS response that caused browser checkout to fail before reaching PayPal; deployed `rowdy-paypal-order` version 3 and verified a successful `204` preflight.
+- Ran a no-charge Gold-package rehearsal through queue trigger, Tiny 2 Lite/Yamaha capture, editing, checksum upload, HTTPS delivery, and SMTP email.
+- Accepted eight photos, a 45-second highlight, and a 4:42 1080p full performance containing H.264 video and stereo AAC audio.
+- Restored the worker to the authoritative live PHP queue after the isolated rehearsal.
+
 ## 2026-09-17 — Camera headroom and delivery audio correction
 
 - Corrected the Tiny 2 Lite from Portrait 9:16 to Landscape 16:9, eliminating the mismatched crop and retaining headroom.

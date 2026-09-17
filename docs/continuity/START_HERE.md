@@ -1,5 +1,13 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-09-17 — Full paid-performance rehearsal accepted
+
+- Completed an isolated Gold-package rehearsal for `Roger TEST` / `Stay` without charging PayPal or changing the live Jason/AJ queue positions.
+- Queue-current transition started recording; performance end stopped it; the worker created eight photos, a 45-second highlight, and a 4:42 full-performance video with 1080p H.264 video and stereo AAC audio.
+- Package `RRM-20260917-F2AEAA` uploaded with SHA-256 `dd648164a076db17b76cfce5d0e3eb66d3e8a4059c39777022a1bd192df6ad8c`; HTTPS delivery and SMTP email to `rowdyroom@gmail.com` passed.
+- Fixed the live checkout CORS preflight by using a bodyless `204` response; `rowdy-paypal-order` version 3 is active.
+- The worker is restored to `https://rowdyroom.site/api/queue`, healthy, and idle.
+
 ## 2026-09-17 — Camera framing and audio corrected
 
 - Tiny 2 Lite output is Landscape 16:9 with visible headroom; the incorrect Portrait 9:16 setting was the crop source.

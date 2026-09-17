@@ -22,6 +22,11 @@ Status: live checkout, automatic camera tracking, recording, and fulfillment del
 - Corrected the camera's saved output from Portrait 9:16 to Landscape 16:9; the new acceptance frame retains visible headroom.
 - Corrected silent-delivery risk by mixing the Yamaha AG06MK2 show feed with the Tiny 2 Lite microphone at 35 percent as a backup. Silver and Gold outputs receive EBU-style loudness normalization (`I=-16`, `TP=-1.5`, `LRA=11`).
 - The combined 1920 x 1080 acceptance capture contains H.264 video plus stereo AAC audio and decodes successfully. The normalized acceptance output measured a safe `-1.5 dB` maximum.
+- Fixed browser checkout CORS preflight: the Edge Function now returns a bodyless `204`; `rowdy-paypal-order` version 3 is active and OPTIONS acceptance passed.
+- Completed a no-charge, isolated Gold-package rehearsal for package `RRM-20260917-F2AEAA`. The queue-current transition started recording and performance end stopped it without moving or deleting the live Jason/AJ queue entries.
+- Rehearsal output passed full decode: eight photos, a 45-second highlight, and a 4:42 full-performance MP4 with 1920 x 1080 H.264 video and stereo AAC audio.
+- Delivery completed to `rowdyroom@gmail.com`; uploaded archive SHA-256 is `dd648164a076db17b76cfce5d0e3eb66d3e8a4059c39777022a1bd192df6ad8c`, and the delivery endpoint returned HTTP 200.
+- The temporary rehearsal queue was removed from service and the worker was restored healthy and idle against `https://rowdyroom.site/api/queue`.
 
 ## Safety corrections
 
