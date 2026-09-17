@@ -5,7 +5,8 @@
 Status: Live and visually verified; intentionally temporary.
 
 - Hid the entire public tab bar after Queue became the only remaining tab.
-- Preserved the signup screen, Live Queue information, SongFinder, host controls, and TV Mode.
+- Preserved the signup screen, SongFinder, host controls, and TV Mode while hiding the public Live Queue card.
+- Changed singer entry labels to plain `Singer N name` wording with no TikTok mention.
 - Live browser and screenshot acceptance confirmed direct signup entry with no navigation overlap.
 
 ## 2026-09-17 — Songbook hidden for temporary show mode

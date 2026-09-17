@@ -3,7 +3,8 @@
 ## 2026-09-17 — Companion navigation removed
 
 - Removed the remaining Queue navigation tab/bar to eliminate overlap; the page opens directly to the signup screen.
-- The signup wizard and Live Queue information remain, with no public tabs displayed.
+- The signup wizard remains with no public tabs displayed; the public Live Queue card is hidden while the host and TV queues remain intact.
+- Singer entry uses plain `Singer N name` labels and does not mention TikTok.
 - Live visual acceptance confirmed a clean mobile layout with no overlap. See [`QUEUE_HOST_UNIFIED_2026-09-17.md`](QUEUE_HOST_UNIFIED_2026-09-17.md).
 
 ## 2026-09-17 — Temporary Queue-only Companion

@@ -129,7 +129,11 @@ This document is a public-safe deployment record. The production PHP/static sour
 ## Companion navigation removal
 
 - Hid the complete public navigation bar after Queue became the sole remaining tab.
-- The Companion now opens directly to the signup wizard with the Live Queue information below it.
+- The Companion now opens directly to the signup wizard; the public Live Queue card below it is hidden without removing the queue DOM or disrupting host/TV queue behavior.
+- Singer entry labels now read `Singer N name`, with no TikTok wording in the visible signup flow.
+- Live acceptance confirmed the queue card and navigation are hidden, the corrected label and placeholder render, no TikTok or Live Queue text is visible, there is no horizontal overflow, and the browser console has no errors.
+- Rollback copies: `/home/ef39cr6m1vih/rowdyroom_backups/companion-index.before-hide-live-queue-2026-09-17T11-00-00.bak` and `/home/ef39cr6m1vih/rowdyroom_backups/companion-app.before-singer-label-cleanup-2026-09-17T11-00-00.bak`.
+- Live SHA-256 readback: Companion `index.html` `cfb21987404bc74b1d0afe5700f938feb30c4bd544f09dbcc2aed1777f103faa`; Companion `assets/app.js` `bdc26434a1c0bc851b4f658e450fd2634208157a94703bc2cd2b57fa31480f74`.
 - SongFinder, queue persistence, host controls, support choices, and TV Mode remain unchanged.
 - Live visual acceptance confirmed no visible tabs and no overlap with the signup card.
 - Final production hashes:
