@@ -1,5 +1,12 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-09-17 — Live DJ automatic recorded-footage editor
+
+- Live page: `https://videomaker.rowdyroom.site/live-dj/`
+- Operator guide: `docs/continuity/LIVE_DJ_AUTO_EDITOR_2026-09-17.md`
+- Status: live; real-footage load, unique-cut plan, preview, and STOP override verified.
+- AI-plan import/export and browser-operable controls are available; Roger retains STOP and final-publish control.
+
 ## 2026-09-17 — TV proportions and signup wording
 
 - Rebalanced the live TV display for portrait and landscape screens: larger Rowdy Room title, QR code, signup prompt, queue typography, and banner with substantially tighter vertical spacing.

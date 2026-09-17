@@ -1,5 +1,13 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-09-17 — Live DJ automatic recorded-footage editor
+
+- Published `https://videomaker.rowdyroom.site/live-dj/` for tonight's show.
+- Added local video intake, automatic unique-cut planning, preview, manual STOP override, and browser-side WebM export.
+- Added landscape, portrait, and square presets plus title, duration, energy, quality, audio, and AI edit-plan controls.
+- Footage remains in the operator's browser and is not uploaded to the website.
+- Live acceptance loaded a real MP4, planned one unique cut, started preview, and stopped cleanly.
+
 ## 2026-09-17 — TV display proportions and singer wording
 
 - Enlarged the TV title, QR code, signup prompt, queue content, and rotating banner.
