@@ -3,6 +3,7 @@
 ## 2026-09-17 — TV proportions and signup wording
 
 - Rebalanced the live TV display for portrait and landscape screens: larger Rowdy Room title, QR code, signup prompt, queue typography, and banner with substantially tighter vertical spacing.
+- Removed the incorrect `companion.rowdyroom.site` text from TV Mode while retaining the QR code and signup prompt.
 - Changed the singer-flow action from `Find Our Song` to `Find My Song`.
 - Live acceptance passed at a 1080 x 1920 portrait viewport with no document overflow or browser errors; the mobile signup wording also passed with no overflow or errors.
 - Host controls, queue data, TV rotation logic, and SongFinder behavior were not changed.

@@ -143,6 +143,9 @@ This document is a public-safe deployment record. The production PHP/static sour
 - Browser acceptance reported zero console errors on both surfaces.
 - Recovery copies: `/home/ef39cr6m1vih/rowdyroom_backups/tv-styles.before-proportion-repair-2026-09-17T11-30-00.bak`, `/home/ef39cr6m1vih/rowdyroom_backups/tv-index.before-proportion-repair-2026-09-17T11-30-00.bak`, `/home/ef39cr6m1vih/rowdyroom_backups/companion-app.before-find-my-song-2026-09-17T11-30-00.bak`, and `/home/ef39cr6m1vih/rowdyroom_backups/companion-index.before-find-my-song-2026-09-17T11-30-00.bak`.
 - Live SHA-256 readback: TV HTML `35be3d37180b3ca2e13da0d3b78e20939cb85a220e605c87bfb9a8b755ba90a2`; TV CSS `01fa6c20bb6662df48b36709c684b42f69733fcb203dac6b833262ffb25ed759`; Companion HTML `f64d5edb05bb232f8e7927c155ea857780ecf87f03bf865bc067e45e3302b0e0`.
+- Removed the incorrect `companion.rowdyroom.site` label from TV Mode. Portrait acceptance confirmed the label is absent, the QR and `SCAN TO SIGN UP` prompt remain visible, the page has no overflow, and the browser console has no errors.
+- TV HTML SHA-256 after removal: `c2c7220ae04bc170f0d2b782d82e88fcfab8cdeacd6755be5ac2487c7d9449e8`.
+- Recovery copy: `/home/ef39cr6m1vih/rowdyroom_backups/tv-index.before-remove-bad-address-2026-09-17T12-00-00.bak`.
 - SongFinder, queue persistence, host controls, support choices, and TV Mode remain unchanged.
 - Live visual acceptance confirmed no visible tabs and no overlap with the signup card.
 - Final production hashes:
