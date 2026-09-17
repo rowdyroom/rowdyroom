@@ -3,11 +3,12 @@
 ## 2026-09-17 — Full paid-performance rehearsal accepted
 
 - Completed an isolated Gold-package rehearsal for `Roger TEST` / `Stay` without charging PayPal or changing the live Jason/AJ queue positions.
-- Queue-current transition started recording; performance end stopped it; the worker created eight photos, a 45-second highlight, and a 4:42 full-performance video with 1080p H.264 video and stereo AAC audio.
-- Package `RRM-20260917-F2AEAA` uploaded with SHA-256 `dd648164a076db17b76cfce5d0e3eb66d3e8a4059c39777022a1bd192df6ad8c`; HTTPS delivery and SMTP email to `rowdyroom@gmail.com` passed.
+- The first take exposed doubled audio from mixing the webcam mic with the Yamaha and is superseded. The worker now excludes the webcam microphone and records AG06MK2 audio only.
+- The corrected queue-triggered take produced eight photos, a 45-second highlight, and a 3:11 full-performance video with 1080p H.264 video and one stereo AAC stream. Full decode passed; normalized audio measured `-20.5 dB` mean and `-1.2 dB` peak.
+- Corrected package `RRM-20260917-F2AEAA` uploaded with SHA-256 `031fd4d23b2c50ce3869c36e3f737dfba1c1dc1d9f20a1a9729adc47f0dcb037`; HTTPS 200 delivery and replacement SMTP email to `rowdyroom@gmail.com` passed.
 - Fixed the live checkout CORS preflight by using a bodyless `204` response; `rowdy-paypal-order` version 3 is active.
 - The worker is restored to `https://rowdyroom.site/api/queue`, healthy, and idle.
-- Public-safe implementation commit: `448cdd7` on `codex/queue-host-unified-20260917`.
+- AG06-only implementation commit: `623b756` on `codex/queue-host-unified-20260917`.
 - Local recovery: `Rowdy_Room_Full_Fulfillment_Rehearsal_2026-09-17/rowdyroom-full-fulfillment-rehearsal-448cdd7.zip`, 323 entries, SHA-256 `5997FB8A04E3E4960647E351F6C3A12B2DFE688B5EC7D4AC0A3264716608C23F`.
 
 ## 2026-09-17 — Camera framing corrected; AG06-only audio required

@@ -4,7 +4,8 @@
 
 - Removed the Tiny 2 Lite microphone from paid-performance recording after the full rehearsal exposed doubled, delayed audio.
 - The camera remains the video source; the Yamaha AG06MK2 is now the only audio source.
-- The first rehearsal delivery is superseded for audio acceptance and requires a new performance take because its two microphones were already mixed into one track.
+- The first rehearsal delivery is superseded because its two microphones were already mixed into one track.
+- Completed and delivered the replacement AG06-only take: 3:11, 1920 x 1080 H.264, stereo AAC, `-20.5 dB` mean, `-1.2 dB` peak, archive SHA-256 `031fd4d23b2c50ce3869c36e3f737dfba1c1dc1d9f20a1a9729adc47f0dcb037`.
 
 ## 2026-09-17 — Full paid-performance rehearsal and checkout CORS repair
 
