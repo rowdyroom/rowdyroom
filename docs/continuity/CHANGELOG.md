@@ -1,5 +1,12 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-09-17 — TV display proportions and singer wording
+
+- Enlarged the TV title, QR code, signup prompt, queue content, and rotating banner.
+- Removed excess portrait spacing and kept the display within one 1080 x 1920 viewport.
+- Changed `Find Our Song` to `Find My Song` in the Companion signup flow.
+- Preserved queue behavior, host controls, TV rotation logic, and SongFinder integration.
+
 ## 2026-09-17 — Companion navigation removed
 
 Status: Live and visually verified; intentionally temporary.

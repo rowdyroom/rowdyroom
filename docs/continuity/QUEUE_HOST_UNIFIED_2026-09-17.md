@@ -134,6 +134,15 @@ This document is a public-safe deployment record. The production PHP/static sour
 - Live acceptance confirmed the queue card and navigation are hidden, the corrected label and placeholder render, no TikTok or Live Queue text is visible, there is no horizontal overflow, and the browser console has no errors.
 - Rollback copies: `/home/ef39cr6m1vih/rowdyroom_backups/companion-index.before-hide-live-queue-2026-09-17T11-00-00.bak` and `/home/ef39cr6m1vih/rowdyroom_backups/companion-app.before-singer-label-cleanup-2026-09-17T11-00-00.bak`.
 - Live SHA-256 readback: Companion `index.html` `cfb21987404bc74b1d0afe5700f938feb30c4bd544f09dbcc2aed1777f103faa`; Companion `assets/app.js` `bdc26434a1c0bc851b4f658e450fd2634208157a94703bc2cd2b57fa31480f74`.
+
+## TV proportion and signup wording refinement
+
+- Increased the TV title, QR code, signup prompt, queue typography, and banner while reducing unused vertical spacing, especially on portrait displays.
+- Verified a 1080 x 1920 viewport fits exactly without document overflow; measured title, signup text, URL, QR, rotation panel, and banner bounds all remain inside the viewport.
+- Changed the Companion singer-flow button from `Find Our Song` to `Find My Song`; verified the new wording is visible and the former wording is absent.
+- Browser acceptance reported zero console errors on both surfaces.
+- Recovery copies: `/home/ef39cr6m1vih/rowdyroom_backups/tv-styles.before-proportion-repair-2026-09-17T11-30-00.bak`, `/home/ef39cr6m1vih/rowdyroom_backups/tv-index.before-proportion-repair-2026-09-17T11-30-00.bak`, `/home/ef39cr6m1vih/rowdyroom_backups/companion-app.before-find-my-song-2026-09-17T11-30-00.bak`, and `/home/ef39cr6m1vih/rowdyroom_backups/companion-index.before-find-my-song-2026-09-17T11-30-00.bak`.
+- Live SHA-256 readback: TV HTML `35be3d37180b3ca2e13da0d3b78e20939cb85a220e605c87bfb9a8b755ba90a2`; TV CSS `01fa6c20bb6662df48b36709c684b42f69733fcb203dac6b833262ffb25ed759`; Companion HTML `f64d5edb05bb232f8e7927c155ea857780ecf87f03bf865bc067e45e3302b0e0`.
 - SongFinder, queue persistence, host controls, support choices, and TV Mode remain unchanged.
 - Live visual acceptance confirmed no visible tabs and no overlap with the signup card.
 - Final production hashes:
