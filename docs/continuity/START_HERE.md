@@ -6,6 +6,8 @@
 - Fulfillment capture now combines the Yamaha AG06MK2 show mix with a 35 percent Tiny 2 Lite microphone backup.
 - Silver and Gold videos are loudness-normalized to `I=-16`, `TP=-1.5`, `LRA=11`; real combined capture and decoding passed.
 - Keep OBSBOT Center closed during a paid performance so its preview does not lock the recording stream.
+- Public-safe implementation commit: `16a5f66` on `codex/queue-host-unified-20260917`.
+- Local recovery: `Rowdy_Room_Camera_Audio_2026-09-17/rowdyroom-camera-audio-16a5f66.zip`, 323 entries, SHA-256 `002F688329382ACB97158BB6582C9E22C1A94E5781DB8D24BF34A061F1F7A038`.
 
 ## 2026-09-17 — Tiny 2 Lite tracking and recording accepted
 
