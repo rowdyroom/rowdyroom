@@ -32,6 +32,14 @@ The Companion App and TV display used the PHP/MySQL queue, while the queue host-
 - Live page SHA-256: `e229f89858334abd43f47efc7ed45d6dae7cae253e9bee629d71f7c9407c4d4a`.
 - Queue action service SHA-256: `7ef8463f9476c57e76f896bfe0de6f30aafcb86f4151aa97873f3045e50465dc`.
 
+## Durable evidence
+
+- Public branch: `codex/queue-host-unified-20260917`.
+- Draft pull request: #33; not merged into `main`.
+- Private continuity record: `rowdy-room/queue-host-unified-2026-09-17`, version 1, SHA-256 `5c0de7a903e969f952d25c1d571a0dbe7b75d5327a5d9153b4b89ddbc8651720`.
+- Continuity check run: `7aeac164-b8b5-4f16-bf39-f6e298030bfa` — five pass, one warning.
+- Local recovery record: `rowdyroom-live-repair-2026-09-17.md`, SHA-256 `6b7268eedf6637ae6b00e909581f81c9b8e118de6b13aa935215407c7845dd51`.
+
 ## Recovery and limits
 
 Protected pre-change server backups were created and read back before every live overwrite. Their private locations are intentionally omitted from this public repository.
