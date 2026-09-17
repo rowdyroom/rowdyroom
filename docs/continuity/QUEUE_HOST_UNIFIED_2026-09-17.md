@@ -116,3 +116,13 @@ This document is a public-safe deployment record. The production PHP/static sour
   - Companion HTML: `dc044e66386058e49e48a1c24ddc95673d3d12d77ef3ff46fe981bde1aa702f9`
   - Companion JavaScript: `10430d6f73cd31bd05628b0b4351e8cc2451fdf50dd42917beb7b1767bda55de`
 
+## Temporary Queue-only Companion
+
+- Hid the public Songs tab and Songbook screen after the initial signup-only deployment, leaving Queue as the only visible tab.
+- Direct `#songbook` navigation resolves to Queue instead of exposing the hidden screen.
+- The guided signup wizard still opens the separate YouTube SongFinder, so karaoke video selection remains operational.
+- Live phone-width acceptance passed with one visible Queue tab, hidden Songbook tab and screen, active signup, no horizontal overflow, no failed responses, and no browser errors.
+- Final production hashes:
+  - Companion HTML: `791d32d00062fa5dcb49ca345821e3d152958ff9c7b2fbc121eca68d6fc1ba44`
+  - Companion JavaScript: `01c91ff46d349436eb069a820dbfaa7e171d1deb71b3edba5567a2b4693c23ad`
+

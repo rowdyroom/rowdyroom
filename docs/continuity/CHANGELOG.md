@@ -1,5 +1,13 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-09-17 — Songbook hidden for temporary show mode
+
+Status: Live and verified; intentionally temporary.
+
+- Hid the public Songs tab and Songbook screen, leaving Queue as the only visible Companion tab.
+- Routed direct Songbook links back to Queue while retaining the signup wizard's SongFinder integration.
+- Passed phone-width rendering, route-guard, no-overflow, and no-browser-error checks.
+
 ## 2026-09-17 — Temporary signup-only live-show mode
 
 Status: Live and verified; intentionally temporary.
