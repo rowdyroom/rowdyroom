@@ -1,5 +1,11 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-09-17 — Companion navigation removed
+
+- Removed the remaining Queue navigation tab/bar to eliminate overlap; the page opens directly to the signup screen.
+- The signup wizard and Live Queue information remain, with no public tabs displayed.
+- Live visual acceptance confirmed a clean mobile layout with no overlap. See [`QUEUE_HOST_UNIFIED_2026-09-17.md`](QUEUE_HOST_UNIFIED_2026-09-17.md).
+
 ## 2026-09-17 — Temporary Queue-only Companion
 
 - Songbook is now hidden with the other temporary-show tabs, leaving Queue as the only public Companion tab.

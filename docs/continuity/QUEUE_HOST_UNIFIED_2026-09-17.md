@@ -126,3 +126,13 @@ This document is a public-safe deployment record. The production PHP/static sour
   - Companion HTML: `791d32d00062fa5dcb49ca345821e3d152958ff9c7b2fbc121eca68d6fc1ba44`
   - Companion JavaScript: `01c91ff46d349436eb069a820dbfaa7e171d1deb71b3edba5567a2b4693c23ad`
 
+## Companion navigation removal
+
+- Hid the complete public navigation bar after Queue became the sole remaining tab.
+- The Companion now opens directly to the signup wizard with the Live Queue information below it.
+- SongFinder, queue persistence, host controls, support choices, and TV Mode remain unchanged.
+- Live visual acceptance confirmed no visible tabs and no overlap with the signup card.
+- Final production hashes:
+  - Companion HTML: `3b1eac840989a31948ae0b5ae54e2e60f0ed881f8bb3bcaa14975038a5615c63`
+  - Companion JavaScript: `01c91ff46d349436eb069a820dbfaa7e171d1deb71b3edba5567a2b4693c23ad`
+
