@@ -59,11 +59,7 @@ async function startCapture(order, job) {
   await tracking(true);
   const camera = cfg.CAMERA_NAME || 'OBSBOT Tiny 2 Lite StreamCamera';
   const primaryAudio = cfg.AUDIO_NAME || 'Line (3- Yamaha AG06MK2)';
-  const backupAudio = cfg.BACKUP_AUDIO_NAME || 'OBSBOT Tiny 2 Lite Microphone (3- OBSBOT Tiny 2 Lite Audio)';
   const args = ['-hide_banner','-loglevel','warning','-f','dshow','-rtbufsize','512M','-video_size','1920x1080','-framerate','30','-i',`video=${camera}:audio=${primaryAudio}`];
-  if (backupAudio && backupAudio !== primaryAudio) {
-    args.push('-f','dshow','-i',`audio=${backupAudio}`,'-filter_complex','[0:a][1:a]amix=inputs=2:duration=first:dropout_transition=2:weights=1 0.35[aout]','-map','0:v:0','-map','[aout]');
-  }
   args.push('-c:v','h264_nvenc','-preset','p4','-b:v','10M','-c:a','aac','-b:a','256k','-y',temp);
   const proc = ffmpeg(args);
   state.active = { jobId: job.id, orderId: order.id, singer: order.singer_name, temp, pid: proc.pid, startedAt: new Date().toISOString() };

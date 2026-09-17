@@ -1,5 +1,11 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-09-17 — Removed delayed webcam audio from fulfillment capture
+
+- Removed the Tiny 2 Lite microphone from paid-performance recording after the full rehearsal exposed doubled, delayed audio.
+- The camera remains the video source; the Yamaha AG06MK2 is now the only audio source.
+- The first rehearsal delivery is superseded for audio acceptance and requires a new performance take because its two microphones were already mixed into one track.
+
 ## 2026-09-17 — Full paid-performance rehearsal and checkout CORS repair
 
 - Fixed the Edge Function OPTIONS response that caused browser checkout to fail before reaching PayPal; deployed `rowdy-paypal-order` version 3 and verified a successful `204` preflight.

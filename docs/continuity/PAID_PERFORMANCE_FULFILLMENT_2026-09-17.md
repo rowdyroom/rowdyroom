@@ -20,7 +20,7 @@ Status: live checkout, automatic camera tracking, recording, and fulfillment del
 - Verified the exact Tiny 2 Lite at firmware `6.2.8.12`, enabled Human Tracking in Group mode, and confirmed a real 1920 x 1080, 30 fps, five-second hardware capture with the performer framed.
 - OBSBOT Center must remain closed during fulfillment recording because its preview keeps the DirectShow stream locked. Tracking runs on the camera; the worker now leaves it continuously enabled instead of sending an unverified OSC toggle.
 - Corrected the camera's saved output from Portrait 9:16 to Landscape 16:9; the new acceptance frame retains visible headroom.
-- Corrected silent-delivery risk by mixing the Yamaha AG06MK2 show feed with the Tiny 2 Lite microphone at 35 percent as a backup. Silver and Gold outputs receive EBU-style loudness normalization (`I=-16`, `TP=-1.5`, `LRA=11`).
+- Capture uses only the Yamaha AG06MK2 show feed. The Tiny 2 Lite microphone was removed after the full rehearsal proved that mixing it with the Yamaha introduced doubled, delayed audio. Silver and Gold outputs receive EBU-style loudness normalization (`I=-16`, `TP=-1.5`, `LRA=11`).
 - The combined 1920 x 1080 acceptance capture contains H.264 video plus stereo AAC audio and decodes successfully. The normalized acceptance output measured a safe `-1.5 dB` maximum.
 - Fixed browser checkout CORS preflight: the Edge Function now returns a bodyless `204`; `rowdy-paypal-order` version 3 is active and OPTIONS acceptance passed.
 - Completed a no-charge, isolated Gold-package rehearsal for package `RRM-20260917-F2AEAA`. The queue-current transition started recording and performance end stopped it without moving or deleting the live Jason/AJ queue entries.
@@ -28,6 +28,7 @@ Status: live checkout, automatic camera tracking, recording, and fulfillment del
 - Delivery completed to `rowdyroom@gmail.com`; uploaded archive SHA-256 is `dd648164a076db17b76cfce5d0e3eb66d3e8a4059c39777022a1bd192df6ad8c`, and the delivery endpoint returned HTTP 200.
 - The temporary rehearsal queue was removed from service and the worker was restored healthy and idle against `https://rowdyroom.site/api/queue`.
 - Public-safe implementation commit: `448cdd7`; local recovery archive `rowdyroom-full-fulfillment-rehearsal-448cdd7.zip` has 323 entries and SHA-256 `5997FB8A04E3E4960647E351F6C3A12B2DFE688B5EC7D4AC0A3264716608C23F`.
+- Audio acceptance correction: the first rehearsal delivery is superseded because it contains the mixed webcam/AG06 track. A new AG06-only performance take is required; the already-mixed master cannot be cleanly separated after capture.
 
 ## Safety corrections
 

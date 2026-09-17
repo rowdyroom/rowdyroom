@@ -10,10 +10,10 @@
 - Public-safe implementation commit: `448cdd7` on `codex/queue-host-unified-20260917`.
 - Local recovery: `Rowdy_Room_Full_Fulfillment_Rehearsal_2026-09-17/rowdyroom-full-fulfillment-rehearsal-448cdd7.zip`, 323 entries, SHA-256 `5997FB8A04E3E4960647E351F6C3A12B2DFE688B5EC7D4AC0A3264716608C23F`.
 
-## 2026-09-17 — Camera framing and audio corrected
+## 2026-09-17 — Camera framing corrected; AG06-only audio required
 
 - Tiny 2 Lite output is Landscape 16:9 with visible headroom; the incorrect Portrait 9:16 setting was the crop source.
-- Fulfillment capture now combines the Yamaha AG06MK2 show mix with a 35 percent Tiny 2 Lite microphone backup.
+- Fulfillment capture uses only the Yamaha AG06MK2 show mix. The Tiny 2 Lite microphone is excluded because mixing it created doubled, delayed audio.
 - Silver and Gold videos are loudness-normalized to `I=-16`, `TP=-1.5`, `LRA=11`; real combined capture and decoding passed.
 - Keep OBSBOT Center closed during a paid performance so its preview does not lock the recording stream.
 - Public-safe implementation commit: `16a5f66` on `codex/queue-host-unified-20260917`.
