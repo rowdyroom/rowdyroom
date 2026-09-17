@@ -19,6 +19,14 @@ The Companion App and TV display used the PHP/MySQL queue, while the queue host-
 - Queue normalization no longer marks the next performer as current after the prior performance ends. Idle queues use `next`, `on_deck`, and `waiting` until the host explicitly starts the next performer.
 - The Top Contributors panel now uses a host-password-validated RPC instead of a direct RLS-blocked table read.
 
+## Host-action security
+
+- `/queue/start-next` and `/queue/complete-current` now require the host key.
+- The PHP API validates that key through the existing Supabase `rr_admin_ping` contract before executing either action.
+- The browser sends the host key only for those two host actions.
+- Acceptance passed: a request without the key returned HTTP 401; the saved valid host session returned HTTP 200; an authorized idle no-op left the queue unchanged.
+- No credential value was printed or committed.
+
 ## Verification
 
 - Host page: HTTP 200, live sync active, host session restored.
@@ -29,16 +37,18 @@ The Companion App and TV display used the PHP/MySQL queue, while the queue host-
   - Up next: `@jason` / `Inside out — Third eye blind`.
   - Four active performers.
 - No failed Rowdy Room or Supabase network responses remained. GoDaddy-injected analytics produced unrelated browser CORS noise.
-- Live page SHA-256: `e229f89858334abd43f47efc7ed45d6dae7cae253e9bee629d71f7c9407c4d4a`.
-- Queue action service SHA-256: `7ef8463f9476c57e76f896bfe0de6f30aafcb86f4151aa97873f3045e50465dc`.
+- Final production SHA-256 values:
+  - API index: `2a82a86b8ae8d976ecd1f57e2f909e190c1c97e51c093705441139c9c8b31d14`
+  - Queue host page: `c08884a14a1975f782faa92ca4c128bf949b43b07289babd4a825e47ebadcfb9`
+  - Queue action service: `7ef8463f9476c57e76f896bfe0de6f30aafcb86f4151aa97873f3045e50465dc`
 
 ## Durable evidence
 
 - Public branch: `codex/queue-host-unified-20260917`.
 - Draft pull request: #33; not merged into `main`.
-- Private continuity record: `rowdy-room/queue-host-unified-2026-09-17`, version 1, SHA-256 `5c0de7a903e969f952d25c1d571a0dbe7b75d5327a5d9153b4b89ddbc8651720`.
-- Continuity check run: `7aeac164-b8b5-4f16-bf39-f6e298030bfa` — five pass, one warning.
-- Local recovery record: `rowdyroom-live-repair-2026-09-17.md`, SHA-256 `6b7268eedf6637ae6b00e909581f81c9b8e118de6b13aa935215407c7845dd51`.
+- Private continuity record: `rowdy-room/queue-host-unified-2026-09-17`.
+- Local recovery record: `rowdyroom-live-repair-2026-09-17.md`.
+- Exact private record versions, hashes, check IDs, and protected server recovery paths remain in the private continuity store and local recovery record.
 
 ## Recovery and limits
 
