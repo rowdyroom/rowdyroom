@@ -104,3 +104,15 @@ This document is a public-safe deployment record. The production PHP/static sour
   - Companion HTML: `e1a6a73bd6a569ab16bb1811b7b91399ed63054b366d2c4bd2fb90d7a5cd8758`
   - Companion JavaScript: `9a232ee8ca841bbe1a57355a31af04b45774117fb0ca934419887031a7cafb80`
 
+## Temporary signup-only live-show mode
+
+- For the next live show, the public Companion exposes only Queue and Songs.
+- Vote, Requests, Rumble, Memory, Boost, More, BP/User/Score stats, and TikTok-facing singer labels are hidden; direct routes to hidden areas resolve to Queue.
+- After a successful join, guests see `Thanks for signing up!` and their queue position for five seconds before the wizard resets to a clean first step.
+- Host controls, PHP/MySQL queue persistence, SongFinder, support/payment choices, and TV Mode were not disabled.
+- Live mobile acceptance passed with only Queue and Songs visible, no voting/BP/TikTok text visible, a real HTTP 200 queue join, correct thank-you display, timed clean reset, and exact backup/removal of the QA row.
+- This mode is intentionally temporary and can be reversed from the protected pre-change Companion HTML and JavaScript backups.
+- Final production hashes:
+  - Companion HTML: `dc044e66386058e49e48a1c24ddc95673d3d12d77ef3ff46fe981bde1aa702f9`
+  - Companion JavaScript: `10430d6f73cd31bd05628b0b4351e8cc2451fdf50dd42917beb7b1767bda55de`
+

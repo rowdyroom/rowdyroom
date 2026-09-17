@@ -1,5 +1,12 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-09-17 — Temporary signup-only live-show mode
+
+- Companion is temporarily limited to Queue and Songs for the next live show.
+- Public Vote, Requests, Rumble, Memory, Boost, More, BP stats, and TikTok-facing labels are hidden; direct links to hidden areas return to Queue.
+- Successful signup shows a thank-you screen for five seconds, then resets to a clean `How many singers?` start for the next guest.
+- Host controls, queue storage, SongFinder, support/payment choices, and TV Mode remain operational. See [`QUEUE_HOST_UNIFIED_2026-09-17.md`](QUEUE_HOST_UNIFIED_2026-09-17.md).
+
 ## 2026-09-17 — Companion lineup panel hidden
 
 - Removed the public `Current Panel Lineup` card from Companion so Singer Sign Up is the first Queue content.

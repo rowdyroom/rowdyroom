@@ -1,5 +1,14 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-09-17 — Temporary signup-only live-show mode
+
+Status: Live and verified; intentionally temporary.
+
+- Reduced the public Companion navigation to Queue and Songs for the next show.
+- Hid voting, BP, TikTok-facing profile UI, and related public tabs without removing host, queue, TV, or backend data.
+- Changed successful signup to a five-second thank-you screen followed by a clean automatic restart.
+- Passed a real queue join, thank-you, timed reset, mobile visibility, direct-route guard, and exact QA cleanup test.
+
 ## 2026-09-17 — Companion lineup panel hidden
 
 Status: Live and verified.
