@@ -1,5 +1,12 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-05 — Live voting restored to Companion and host
+
+- Authoritative public-safe status and acceptance gaps: [`LIVE_VOTING_RESTORED_2026-10-05.md`](LIVE_VOTING_RESTORED_2026-10-05.md).
+- The live Companion Vote tab is visible and bound to host `live_show` performances; the obsolete July test performance is rejected.
+- Host voting status is automatic. An old current queue slot must be ended by Roger before starting the next real singer. A valid live ballot and final-minute closure remain unaccepted until an actual performance is available.
+- Private continuity key: `rowdy-room/live-voting-restored-2026-10-05`. Production rollback copies exist in the private cPanel recovery area. This entry documents a live server change; repository branch status is tracked separately and must not be mistaken for a code deployment.
+
 ## 2026-09-17 — Host queue removal control
 
 - Host Controls now provides a confirmed, host-protected Remove button for waiting singers who leave or do not appear.

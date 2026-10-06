@@ -1,5 +1,9 @@
 # Rowdy Room Current State
 
+## 2026-10-05 — Stream voting
+
+Guest Vote is restored at `https://rowdyroom.site/companion/#vote` and follows the host's PHP `live_show` performance. The host page reports automatic vote state rather than the unrelated legacy Supabase toggle. Readback and a stale-vote rejection passed. An old queue slot is still marked current without an active performance; Roger must end that slot before starting the next real singer. Real-ballot and final-minute end-to-end acceptance are **Recovery required**. See [`LIVE_VOTING_RESTORED_2026-10-05.md`](LIVE_VOTING_RESTORED_2026-10-05.md).
+
 ## Lucian verified storage migration — 2026-07-31
 
 - Active local AI runtimes and mutable RACC data use the dedicated SSD; generated media and recovery copies use the separate larger storage drive.

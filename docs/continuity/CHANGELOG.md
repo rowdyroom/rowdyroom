@@ -515,3 +515,8 @@ Status: Implemented with equipment recovery still open.
 
 
 
+# 2026-10-05 — Stream voting restored (live server, acceptance pending)
+
+- Re-exposed the Companion Vote tab, tied eligible votes to host `live_show` performances, and replaced the host's misleading legacy voting switch with automatic PHP-backed status.
+- Verified page/API readbacks, Queue–Vote navigation, closed state, stale-vote HTTP 400, and zero browser-console errors. Preserved pre-change server rollback copies.
+- Left the September current queue slot untouched; Roger must end it before the next performer. Valid vote, score, duplicate, and final-minute tests remain pending a real performance. See `LIVE_VOTING_RESTORED_2026-10-05.md`.
