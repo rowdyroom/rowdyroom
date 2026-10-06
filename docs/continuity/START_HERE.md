@@ -5,7 +5,8 @@
 - Authoritative public-safe status and acceptance gaps: [`LIVE_VOTING_RESTORED_2026-10-05.md`](LIVE_VOTING_RESTORED_2026-10-05.md).
 - The live Companion Vote tab is visible and bound to host `live_show` performances; the obsolete July test performance is rejected.
 - Host voting status is automatic. An old current queue slot must be ended by Roger before starting the next real singer. A valid live ballot and final-minute closure remain unaccepted until an actual performance is available.
-- Private continuity key: `rowdy-room/live-voting-restored-2026-10-05`. Production rollback copies exist in the private cPanel recovery area. This entry documents a live server change; repository branch status is tracked separately and must not be mistaken for a code deployment.
+- Public-safe source: branch `codex/queue-host-unified-20260917`, commit `339b5328718ba79bd57776ccb7a424887300c353` (draft PR #33, not merged). Private continuity key `rowdy-room/live-voting-restored-2026-10-05`, version 1, content SHA-256 `8156d0cb8e630bd9e3a50db25b7f897f77b35ddfe891d848c9cb3876e37fd1f2`.
+- Dated local recovery note: `Rowdy_Room_Live_Voting_Recovery_2026-10-05/RECOVERY.md`, SHA-256 `97eb613d9308cd59e77a3822cd4c77656262692222e3588da4bb4b4907325f45`. Production rollback copies exist in the private cPanel recovery area; exact private paths are in the protected record. This documents a live server change, not a code deployment from the draft branch.
 
 ## 2026-09-17 — Host queue removal control
 
