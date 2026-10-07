@@ -520,3 +520,9 @@ Status: Implemented with equipment recovery still open.
 - Re-exposed the Companion Vote tab, tied eligible votes to host `live_show` performances, and replaced the host's misleading legacy voting switch with automatic PHP-backed status.
 - Verified page/API readbacks, Queue–Vote navigation, closed state, stale-vote HTTP 400, and zero browser-console errors. Preserved pre-change server rollback copies.
 - Left the September current queue slot untouched; Roger must end it before the next performer. Valid vote, score, duplicate, and final-minute tests remain pending a real performance. See `LIVE_VOTING_RESTORED_2026-10-05.md`.
+
+# 2026-10-06 — Live queue reorder and audience score
+
+- Added host-authenticated waiting-singer drag/drop and Move Up/Down to the PHP queue, with exact-set validation and transactional position updates.
+- Exposed PHP live vote average and count on host, Companion Vote, and TV; kept saved performance totals current for final-minute ballots.
+- Verified unauthenticated reorder HTTP 401, live reorder and restoration, shared queue readback, visible score states, and private recovery copies. A real ballot remains an open acceptance check.

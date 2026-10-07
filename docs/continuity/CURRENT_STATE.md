@@ -1,8 +1,12 @@
 # Rowdy Room Current State
 
+## 2026-10-06 — Live queue movement and score visibility
+
+Host-authenticated waiting-singer reorder works by drag-and-drop or Move Up/Down, with the TV rotation reading the same PHP queue. The host, Companion Vote screen, and TV display have a current-performance vote average and count. The reorder-and-restore test passed; no real ballot was cast in this pass, so live score movement and final-minute ballot acceptance remain unverified. See [`QUEUE_VOTE_SCORE_2026-10-06.md`](QUEUE_VOTE_SCORE_2026-10-06.md).
+
 ## 2026-10-05 — Stream voting
 
-Guest Vote is restored at `https://rowdyroom.site/companion/#vote` and follows the host's PHP `live_show` performance. The host page reports automatic vote state rather than the unrelated legacy Supabase toggle. Readback and a stale-vote rejection passed. An old queue slot is still marked current without an active performance; Roger must end that slot before starting the next real singer. Real-ballot and final-minute end-to-end acceptance are **Recovery required**. See [`LIVE_VOTING_RESTORED_2026-10-05.md`](LIVE_VOTING_RESTORED_2026-10-05.md).
+Guest Vote is restored at `https://rowdyroom.site/companion/#vote` and follows the host's PHP `live_show` performance. The host page reports automatic vote state rather than the unrelated legacy Supabase toggle. Readback and a stale-vote rejection passed. The old current slot observed on October 5 was no longer current at the October 6 live readback. Real-ballot and final-minute end-to-end acceptance are **Recovery required**. See [`LIVE_VOTING_RESTORED_2026-10-05.md`](LIVE_VOTING_RESTORED_2026-10-05.md).
 
 ## Lucian verified storage migration — 2026-07-31
 

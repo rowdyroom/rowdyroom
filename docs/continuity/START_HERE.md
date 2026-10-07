@@ -1,5 +1,11 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-06 — Host queue movement and live audience score
+
+- Live host queue has protected drag-and-drop and Move Up/Down for waiting singers; the stream TV reads the same order.
+- Host, Companion Vote, and TV have a visible per-performance live score and vote count. Final-minute ballots now update the saved total.
+- Reorder and restore passed on the live queue, but a real ballot has not been exercised. See [`QUEUE_VOTE_SCORE_2026-10-06.md`](QUEUE_VOTE_SCORE_2026-10-06.md) for exact acceptance status and the next-show check.
+
 ## 2026-10-05 — Live voting restored to Companion and host
 
 - Authoritative public-safe status and acceptance gaps: [`LIVE_VOTING_RESTORED_2026-10-05.md`](LIVE_VOTING_RESTORED_2026-10-05.md).
