@@ -3,6 +3,9 @@
 ## 2026-10-07 — Live camera overlay
 
 - A transparent, read-only show overlay is deployed at `https://rowdyroom.site/live-overlay/` with source `deploy/live-overlay/index.html` and public-safe record `docs/continuity/LIVE_CAMERA_OVERLAY_2026-10-07.md`.
+- Public-safe source is on branch `codex/queue-host-unified-20260917`, commit `9cb0be0` (not merged into `main`). Private record `rowdy-room/live-camera-overlay-2026-10-07` is version 1, content SHA-256 `d7c12fb0eaad9a67a2b3e78a8348c40f8c0700a16e3748e52b5331503c29a580`, history ID 2302.
+- Verification run `e84c528c-45e0-4b18-accf-3259475f1ef0`, checks 981–985: 4 pass, 1 warn, 0 fail. The warning is the untested TikTok LIVE Studio scene composite.
+- Local recovery archive: `C:\Users\Roger\Documents\AI_PROJECT\Rowdy_Room_Camera_Overlay_Recovery_2026-10-07\overlay_source_and_handoff.zip`, SHA-256 `a276bf1e6712fecad5d25d90d5b36461c1b7197ea915d9af134099920e263ad4`; both included files matched their source files when packaged. The handoff document in the archive predates this breadcrumb appendix.
 - It displays now/next from the existing PHP queue and top two scores from the rolling 12-hour live-vote endpoint. No host credentials, queue actions, or camera/scene settings were changed.
 - Chrome showed real current queue and vote data. TikTok LIVE Studio source integration, transparency, and face-safe final placement remain **Recovery required**.
 - Next safe action: add the page as a browser/web source above the camera only if the installed LIVE Studio version supports transparent web sources; otherwise use a supported transparent-source path. Preview offline before going live.
