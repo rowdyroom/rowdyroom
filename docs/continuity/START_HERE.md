@@ -5,6 +5,9 @@
 - Live cPanel host page now shows a persistent, ranked 12-hour PHP-vote standings panel; it is separate from the older Supabase competition board. See [`LIVE_VOTE_STANDINGS_2026-10-07.md`](LIVE_VOTE_STANDINGS_2026-10-07.md).
 - Verification: endpoint HTTP 200, served-page JavaScript syntax pass, completed-score browser render with no active singer. Multi-singer real-ballot and show-boundary acceptance remain recovery-required.
 - Private server rollback directory: `20261007_live_vote_standings` (four files). Queue rotation remains host-controlled.
+- Public-safe authority: branch `codex/queue-host-unified-20260917`, production-change record commit `d7d4526` (not merged to `main`). Protected record `rowdy-room/live-vote-standings-2026-10-07` v1, SHA-256 `8ac615cb9725770e34330645dbf69ed85d2779341c995deed94880d14e9003d9`, history 2267.
+- Continuity run `4a970c8b-4be4-4e76-b03d-44af9597732d`: 5 pass, 2 warn, 0 fail. Local recovery copy `C:/Users/Roger/Documents/AI_PROJECT/Rowdy_Room_Live_Vote_Standings_Recovery_2026-10-07/RECOVERY.md`, SHA-256 `bdedd1be187f862d03b1d670bc24c1351bfc8cf3c9ca913e473e47d8095072ff`.
+- Next safe action: observe two genuine singers' votes and final-minute updates in the next live show; if the rolling window includes a prior show, add an explicit session boundary before using standings for automatic retention.
 
 ## 2026-10-06 — Host queue movement and live audience score
 
