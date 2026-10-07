@@ -1,5 +1,8 @@
 # Rowdy Room Current State
 
+2026-10-07 camera-overlay update: a separate transparent, read-only page is deployed at `https://rowdyroom.site/live-overlay/` and displays the existing queue and rolling 12-hour vote leaders. Browser data/render checks passed; placement and transparency in Roger's TikTok LIVE Studio scene remain **Recovery required**. See [`LIVE_CAMERA_OVERLAY_2026-10-07.md`](LIVE_CAMERA_OVERLAY_2026-10-07.md).
+
+
 2026-10-07 live-vote update: the host queue page has a persistent PHP-vote standings panel below Rotation Queue. It ranks voted performances in the prior 12 hours and highlights the top two; completed singers remain visible. The older Supabase competition board is separately labeled. This is not an explicit show-session reset or automatic retention in the queue. See [`LIVE_VOTE_STANDINGS_2026-10-07.md`](LIVE_VOTE_STANDINGS_2026-10-07.md).
 
 ## 2026-10-06 — Live queue movement and score visibility

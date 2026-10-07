@@ -1,5 +1,13 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-07 — Live camera overlay
+
+- A transparent, read-only show overlay is deployed at `https://rowdyroom.site/live-overlay/` with source `deploy/live-overlay/index.html` and public-safe record `docs/continuity/LIVE_CAMERA_OVERLAY_2026-10-07.md`.
+- It displays now/next from the existing PHP queue and top two scores from the rolling 12-hour live-vote endpoint. No host credentials, queue actions, or camera/scene settings were changed.
+- Chrome showed real current queue and vote data. TikTok LIVE Studio source integration, transparency, and face-safe final placement remain **Recovery required**.
+- Next safe action: add the page as a browser/web source above the camera only if the installed LIVE Studio version supports transparent web sources; otherwise use a supported transparent-source path. Preview offline before going live.
+
+
 ## 2026-10-07 — persistent PHP live-vote standings
 
 - Live cPanel host page now shows a persistent, ranked 12-hour PHP-vote standings panel; it is separate from the older Supabase competition board. See [`LIVE_VOTE_STANDINGS_2026-10-07.md`](LIVE_VOTE_STANDINGS_2026-10-07.md).

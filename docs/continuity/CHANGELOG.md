@@ -1,5 +1,13 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-07 — Read-only camera overlay deployed
+
+- Added a separate transparent overlay page using the existing PHP queue and live-vote endpoints; existing production pages and endpoints were not changed.
+- Verified the deployed page renders actual now/next and top-two data in Chrome, with an explicit unavailable state on errors.
+- Documented that the vote list is a rolling 12-hour average, not a per-show reset or automatic rotation rule.
+- TikTok LIVE Studio scene integration and offline composite preview remain Recovery required.
+
+
 ## 2026-10-07 — host live-vote standings connected
 
 - Connected a persistent host ranking to the saved PHP `live_show` votes, with a 12-hour window, average/vote-count ordering, and visible Top Two markers. Kept the old Supabase competition board clearly separate and left queue movement host-controlled.
