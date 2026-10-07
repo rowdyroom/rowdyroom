@@ -1,5 +1,10 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-07 — host live-vote standings connected
+
+- Connected a persistent host ranking to the saved PHP `live_show` votes, with a 12-hour window, average/vote-count ordering, and visible Top Two markers. Kept the old Supabase competition board clearly separate and left queue movement host-controlled.
+- Backed up live files and verified the new endpoint, page syntax, and completed-singer render. Real multi-singer vote and show-boundary acceptance remain open. See [`LIVE_VOTE_STANDINGS_2026-10-07.md`](LIVE_VOTE_STANDINGS_2026-10-07.md).
+
 ## 2026-09-17 — Waiting singers can be removed from Host Controls
 
 - Added a protected per-row Remove action for waiting PHP queue entries.

@@ -1,5 +1,7 @@
 # Rowdy Room Current State
 
+2026-10-07 live-vote update: the host queue page has a persistent PHP-vote standings panel below Rotation Queue. It ranks voted performances in the prior 12 hours and highlights the top two; completed singers remain visible. The older Supabase competition board is separately labeled. This is not an explicit show-session reset or automatic retention in the queue. See [`LIVE_VOTE_STANDINGS_2026-10-07.md`](LIVE_VOTE_STANDINGS_2026-10-07.md).
+
 ## 2026-10-06 — Live queue movement and score visibility
 
 Host-authenticated waiting-singer reorder works by drag-and-drop or Move Up/Down, with the TV rotation reading the same PHP queue. The host, Companion Vote screen, and TV display have a current-performance vote average and count. The reorder-and-restore test passed; no real ballot was cast in this pass, so live score movement and final-minute ballot acceptance remain unverified. See [`QUEUE_VOTE_SCORE_2026-10-06.md`](QUEUE_VOTE_SCORE_2026-10-06.md).
