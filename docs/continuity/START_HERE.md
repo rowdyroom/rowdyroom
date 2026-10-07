@@ -6,6 +6,7 @@
 - Host, Companion Vote, and TV have a visible per-performance live score and vote count. Final-minute ballots now update the saved total.
 - Reorder and restore passed on the live queue, but a real ballot has not been exercised. See [`QUEUE_VOTE_SCORE_2026-10-06.md`](QUEUE_VOTE_SCORE_2026-10-06.md) for exact acceptance status and the next-show check.
 - Public-safe source commit `16700afa404750db24ac11805ffee14cde1781fb`; private record `rowdy-room/queue-vote-score-2026-10-06` v1, content SHA-256 `d3f8070a5b19ea1728eb8d528f9d1a3cd18a7d7ea10f1e94d9da6529e3a506dd`. Continuity check run `a8b6c3d4-6991-495e-ad26-f4f621aeaa5a`: 5 pass, 1 warn (real ballot).
+- Live server code is active; this GitHub branch is a public-safe draft record, not the deployment source or a merged main-branch change. Dated local recovery note: `Rowdy_Room_Queue_Vote_Recovery_2026-10-06/RECOVERY.md`, SHA-256 `12c31185050c00ea9f48a106ae86b9e1733b01c3d0107a4f03d5106b6decb4b6`. Exact private rollback locations are in the protected record.
 
 ## 2026-10-05 — Live voting restored to Companion and host
 
