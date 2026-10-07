@@ -1,5 +1,139 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-07 — Live camera overlay
+
+- A transparent, read-only show overlay is deployed at `https://rowdyroom.site/live-overlay/` with source `deploy/live-overlay/index.html` and public-safe record `docs/continuity/LIVE_CAMERA_OVERLAY_2026-10-07.md`.
+- Public-safe source is on branch `codex/queue-host-unified-20260917`, commit `9cb0be0` (not merged into `main`). Private record `rowdy-room/live-camera-overlay-2026-10-07` is version 1, content SHA-256 `d7c12fb0eaad9a67a2b3e78a8348c40f8c0700a16e3748e52b5331503c29a580`, history ID 2302.
+- Verification run `e84c528c-45e0-4b18-accf-3259475f1ef0`, checks 981–985: 4 pass, 1 warn, 0 fail. The warning is the untested TikTok LIVE Studio scene composite.
+- Local recovery archive: `C:\Users\Roger\Documents\AI_PROJECT\Rowdy_Room_Camera_Overlay_Recovery_2026-10-07\overlay_source_and_handoff.zip`, SHA-256 `a276bf1e6712fecad5d25d90d5b36461c1b7197ea915d9af134099920e263ad4`; both included files matched their source files when packaged. The handoff document in the archive predates this breadcrumb appendix.
+- It displays now/next from the existing PHP queue and top two scores from the rolling 12-hour live-vote endpoint. No host credentials, queue actions, or camera/scene settings were changed.
+- Chrome showed real current queue and vote data. TikTok LIVE Studio source integration, transparency, and face-safe final placement remain **Recovery required**.
+- Next safe action: add the page as a browser/web source above the camera only if the installed LIVE Studio version supports transparent web sources; otherwise use a supported transparent-source path. Preview offline before going live.
+
+
+## 2026-10-07 — persistent PHP live-vote standings
+
+- Live cPanel host page now shows a persistent, ranked 12-hour PHP-vote standings panel; it is separate from the older Supabase competition board. See [`LIVE_VOTE_STANDINGS_2026-10-07.md`](LIVE_VOTE_STANDINGS_2026-10-07.md).
+- Verification: endpoint HTTP 200, served-page JavaScript syntax pass, completed-score browser render with no active singer. Multi-singer real-ballot and show-boundary acceptance remain recovery-required.
+- Private server rollback directory: `20261007_live_vote_standings` (four files). Queue rotation remains host-controlled.
+- Public-safe authority: branch `codex/queue-host-unified-20260917`, production-change record commit `d7d4526` (not merged to `main`). Protected record `rowdy-room/live-vote-standings-2026-10-07` v1, SHA-256 `8ac615cb9725770e34330645dbf69ed85d2779341c995deed94880d14e9003d9`, history 2267.
+- Continuity run `4a970c8b-4be4-4e76-b03d-44af9597732d`: 5 pass, 2 warn, 0 fail. Local recovery copy `C:/Users/Roger/Documents/AI_PROJECT/Rowdy_Room_Live_Vote_Standings_Recovery_2026-10-07/RECOVERY.md`, SHA-256 `bdedd1be187f862d03b1d670bc24c1351bfc8cf3c9ca913e473e47d8095072ff`.
+- Next safe action: observe two genuine singers' votes and final-minute updates in the next live show; if the rolling window includes a prior show, add an explicit session boundary before using standings for automatic retention.
+
+## 2026-10-06 — Host queue movement and live audience score
+
+- Live host queue has protected drag-and-drop and Move Up/Down for waiting singers; the stream TV reads the same order.
+- Host, Companion Vote, and TV have a visible per-performance live score and vote count. Final-minute ballots now update the saved total.
+- Reorder and restore passed on the live queue, but a real ballot has not been exercised. See [`QUEUE_VOTE_SCORE_2026-10-06.md`](QUEUE_VOTE_SCORE_2026-10-06.md) for exact acceptance status and the next-show check.
+- Public-safe source commit `16700afa404750db24ac11805ffee14cde1781fb`; private record `rowdy-room/queue-vote-score-2026-10-06` v1, content SHA-256 `d3f8070a5b19ea1728eb8d528f9d1a3cd18a7d7ea10f1e94d9da6529e3a506dd`. Continuity check run `a8b6c3d4-6991-495e-ad26-f4f621aeaa5a`: 5 pass, 1 warn (real ballot).
+- Live server code is active; this GitHub branch is a public-safe draft record, not the deployment source or a merged main-branch change. Dated local recovery note: `Rowdy_Room_Queue_Vote_Recovery_2026-10-06/RECOVERY.md`, SHA-256 `12c31185050c00ea9f48a106ae86b9e1733b01c3d0107a4f03d5106b6decb4b6`. Exact private rollback locations are in the protected record.
+
+## 2026-10-05 — Live voting restored to Companion and host
+
+- Authoritative public-safe status and acceptance gaps: [`LIVE_VOTING_RESTORED_2026-10-05.md`](LIVE_VOTING_RESTORED_2026-10-05.md).
+- The live Companion Vote tab is visible and bound to host `live_show` performances; the obsolete July test performance is rejected.
+- Host voting status is automatic. An old current queue slot must be ended by Roger before starting the next real singer. A valid live ballot and final-minute closure remain unaccepted until an actual performance is available.
+- Public-safe source: branch `codex/queue-host-unified-20260917`, commit `339b5328718ba79bd57776ccb7a424887300c353` (draft PR #33, not merged). Private continuity key `rowdy-room/live-voting-restored-2026-10-05`, version 1, content SHA-256 `8156d0cb8e630bd9e3a50db25b7f897f77b35ddfe891d848c9cb3876e37fd1f2`.
+- Dated local recovery note: `Rowdy_Room_Live_Voting_Recovery_2026-10-05/RECOVERY.md`, SHA-256 `97eb613d9308cd59e77a3822cd4c77656262692222e3588da4bb4b4907325f45`. Production rollback copies exist in the private cPanel recovery area; exact private paths are in the protected record. This documents a live server change, not a code deployment from the draft branch.
+
+## 2026-09-17 — Host queue removal control
+
+- Host Controls now provides a confirmed, host-protected Remove button for waiting singers who leave or do not appear.
+- The current performer is protected and remaining positions are renumbered automatically.
+- Live acceptance confirmed healthy queue readback, HTTP 401 without host authorization, and visible Remove buttons without altering the queue.
+
+## 2026-09-17 — Full paid-performance rehearsal accepted
+
+- Completed an isolated Gold-package rehearsal for `Roger TEST` / `Stay` without charging PayPal or changing the live Jason/AJ queue positions.
+- The first take exposed doubled audio from mixing the webcam mic with the Yamaha and is superseded. The worker now excludes the webcam microphone and records AG06MK2 audio only.
+- The corrected queue-triggered take produced eight photos, a 45-second highlight, and a 3:11 full-performance video with 1080p H.264 video and one stereo AAC stream. Full decode passed; normalized audio measured `-20.5 dB` mean and `-1.2 dB` peak.
+- Corrected package `RRM-20260917-F2AEAA` uploaded with SHA-256 `031fd4d23b2c50ce3869c36e3f737dfba1c1dc1d9f20a1a9729adc47f0dcb037`; HTTPS 200 delivery and replacement SMTP email to `rowdyroom@gmail.com` passed.
+- Fixed the live checkout CORS preflight by using a bodyless `204` response; `rowdy-paypal-order` version 3 is active.
+- The worker is restored to `https://rowdyroom.site/api/queue`, healthy, and idle.
+- AG06-only implementation commit: `623b756` on `codex/queue-host-unified-20260917`.
+- Local recovery: `Rowdy_Room_Full_Fulfillment_Rehearsal_2026-09-17/rowdyroom-full-fulfillment-rehearsal-448cdd7.zip`, 323 entries, SHA-256 `5997FB8A04E3E4960647E351F6C3A12B2DFE688B5EC7D4AC0A3264716608C23F`.
+- Corrected AG06-only recovery: `Rowdy_Room_Full_Fulfillment_Rehearsal_2026-09-17/rowdyroom-ag06-only-fulfillment-89ab225.zip`, 323 entries, SHA-256 `F90B8F56C3A4BE86F23178F09546A867C89E0442F3C186E71566A675C2BC529D`.
+
+## 2026-09-17 — Camera framing corrected; AG06-only audio required
+
+- Tiny 2 Lite output is Landscape 16:9 with visible headroom; the incorrect Portrait 9:16 setting was the crop source.
+- Fulfillment capture uses only the Yamaha AG06MK2 show mix. The Tiny 2 Lite microphone is excluded because mixing it created doubled, delayed audio.
+- Silver and Gold videos are loudness-normalized to `I=-16`, `TP=-1.5`, `LRA=11`; real combined capture and decoding passed.
+- Keep OBSBOT Center closed during a paid performance so its preview does not lock the recording stream.
+- Public-safe implementation commit: `16a5f66` on `codex/queue-host-unified-20260917`.
+- Local recovery: `Rowdy_Room_Camera_Audio_2026-09-17/rowdyroom-camera-audio-16a5f66.zip`, 323 entries, SHA-256 `002F688329382ACB97158BB6582C9E22C1A94E5781DB8D24BF34A061F1F7A038`.
+
+## 2026-09-17 — Tiny 2 Lite tracking and recording accepted
+
+- Human Tracking is enabled in Group mode for one to four singers and remains active on the camera.
+- The fulfillment worker no longer depends on OBSBOT Center's unbound OSC listener or sends a blind tracking toggle.
+- A real 1920 x 1080, 30 fps capture passed with the performer framed. Keep OBSBOT Center closed while the fulfillment worker records so the preview does not lock the camera stream.
+- Evidence and remaining database-security warning: [`PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md`](PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md).
+- Public-safe implementation commit: `c36405b` on `codex/queue-host-unified-20260917`.
+- Local recovery: `Rowdy_Room_Camera_Tracking_2026-09-17/rowdyroom-camera-tracking-c36405b.zip`, 323 entries, SHA-256 `468FF29BFA9B3F46492A8DA14FDB5A1FEDAFA71600726457B5A0B981B6CA346A`.
+
+## 2026-09-17 — Live PayPal checkout activation
+
+- Dedicated live PayPal app, verified capture webhook, server-created checkout, checksum-verified package upload, and authenticated SMTP delivery are active.
+- A real delivery email to Roger and its HTTPS download passed. Physical Tiny 2 Lite tracking acceptance remains open because OBSBOT Center's OSC listener is not bound.
+- Exact evidence and remaining gates: [`PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md`](PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md).
+
+## 2026-09-17 — Paid performance recording and fulfillment pipeline
+
+- Built the verified-payment, queue-triggered recording, package-editing, and retryable-delivery foundation.
+- Recording begins only when the host starts the paid singer's performance and stops on End Performance.
+- The local worker is healthy and idle; live PayPal credentials/webhook registration, outbound email configuration, Companion checkout replacement, and physical Tiny 2 Lite tracking acceptance remain recovery-required.
+- Authority and exact gates: [`PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md`](PAID_PERFORMANCE_FULFILLMENT_2026-09-17.md).
+
+## 2026-09-17 — Live DJ automatic recorded-footage editor
+
+- Live page: `https://videomaker.rowdyroom.site/live-dj/`
+- Operator guide: `docs/continuity/LIVE_DJ_AUTO_EDITOR_2026-09-17.md`
+- Status: live; real-footage load, unique-cut plan, preview, and STOP override verified.
+- AI-plan import/export and browser-operable controls are available; Roger retains STOP and final-publish control.
+
+## 2026-09-17 — TV proportions and signup wording
+
+- Rebalanced the live TV display for portrait and landscape screens: larger Rowdy Room title, QR code, signup prompt, queue typography, and banner with substantially tighter vertical spacing.
+- Removed the incorrect `companion.rowdyroom.site` text from TV Mode while retaining the QR code and signup prompt.
+- Changed the singer-flow action from `Find Our Song` to `Find My Song`.
+- Live acceptance passed at a 1080 x 1920 portrait viewport with no document overflow or browser errors; the mobile signup wording also passed with no overflow or errors.
+- Host controls, queue data, TV rotation logic, and SongFinder behavior were not changed.
+
+## 2026-09-17 — Companion navigation removed
+
+- Removed the remaining Queue navigation tab/bar to eliminate overlap; the page opens directly to the signup screen.
+- The signup wizard remains with no public tabs displayed; the public Live Queue card is hidden while the host and TV queues remain intact.
+- Singer entry uses plain `Singer N name` labels and does not mention TikTok.
+- Live visual acceptance confirmed a clean mobile layout with no overlap. See [`QUEUE_HOST_UNIFIED_2026-09-17.md`](QUEUE_HOST_UNIFIED_2026-09-17.md).
+
+## 2026-09-17 — Temporary Queue-only Companion
+
+- Songbook is now hidden with the other temporary-show tabs, leaving Queue as the only public Companion tab.
+- Direct Songbook routes return to Queue; the signup wizard's separate SongFinder step remains available.
+- Host controls, queue storage, support choices, and TV Mode are unchanged. See [`QUEUE_HOST_UNIFIED_2026-09-17.md`](QUEUE_HOST_UNIFIED_2026-09-17.md).
+
+## 2026-09-17 — Temporary signup-only live-show mode
+
+- Companion was initially limited to Queue and Songs for the next live show; Songbook was subsequently hidden, leaving Queue only.
+- Public Vote, Requests, Rumble, Memory, Boost, More, BP stats, and TikTok-facing labels are hidden; direct links to hidden areas return to Queue.
+- Successful signup shows a thank-you screen for five seconds, then resets to a clean `How many singers?` start for the next guest.
+- Host controls, queue storage, SongFinder, support/payment choices, and TV Mode remain operational. See [`QUEUE_HOST_UNIFIED_2026-09-17.md`](QUEUE_HOST_UNIFIED_2026-09-17.md).
+
+## 2026-09-17 — Companion lineup panel hidden
+
+- Removed the public `Current Panel Lineup` card from Companion so Singer Sign Up is the first Queue content.
+- Main 4 data, host controls, the live queue, and TV behavior were not removed.
+- Phone-width live acceptance confirmed zero lineup mounts, visible signup, no horizontal overflow, and no browser or network errors.
+- Deployment evidence is recorded in [`QUEUE_HOST_UNIFIED_2026-09-17.md`](QUEUE_HOST_UNIFIED_2026-09-17.md).
+
+## 2026-09-17 — Guided signup and host UX
+
+- Live Companion signup is now a five-step app-style flow for 1-4 singers, names, exact YouTube karaoke selection, optional support, and confirmation.
+- Optional support uses the established Cash App and PayPal performance-memory destinations; no real payment was attempted during acceptance.
+- Host and TV display every singer name, and Companion finishes on live voting.
+- Real YouTube, API, host, TV, mobile, and cleanup acceptance passed. See [`QUEUE_HOST_UNIFIED_2026-09-17.md`](QUEUE_HOST_UNIFIED_2026-09-17.md).
+
 ## 2026-08-01 — Rowdy Robots full-team mission completion
 
 - All twenty-two local Robot packages are configured, commissioned through bounded real tasks, and active; dispatcher readback shows 22 available and zero paused.
@@ -236,3 +370,14 @@ Verified protected snapshot:
 - workbook regeneration before the next equipment intake or workbook-led edit
 
 An older laptop is not part of the authoritative equipment inventory and is not part of this build plan. No further purchase/cart action, production show system change, or Scheduled Task change is authorized by this record.
+
+## 2026-09-17 show fulfillment acceptance
+
+- The paid karaoke-video path completed a full no-charge Gold-package rehearsal from queue-current trigger through recording, automatic editing, upload, and email delivery.
+- Authoritative audio routing is AG06MK2 `LOOPBACK` with Windows/Chrome output and worker input both set to `Line (3- Yamaha AG06MK2)`; the OBSBOT webcam microphone is excluded.
+- Final package `RRM-20260917-F2AEAA-FINAL`: 4:16.8, 1920 x 1080, complete decode passed, eight photos plus highlight and full performance.
+- Archive SHA-256: `7B89E9DA23891FC5DB6B3692C146F4C4F369646DD0AD7753D6B80A6FB735DF99`.
+- Delivery email completed to `rowdyroom@gmail.com` at `2026-09-17T21:39:04.731Z`.
+- Production worker is healthy and idle on `https://rowdyroom.site/api/queue`.
+- Public-safe implementation commit `21e4674`; 323-entry recovery archive `rowdyroom-final-fulfillment-21e4674.zip`, SHA-256 `2C26F256BC4CDE86992379730AA8E59F41CA518284A0862B49EB9196D16F009F`.
+- Final owner gate: Roger must listen to the delivered full-performance file and confirm the vocal/music balance before customer sales begin.

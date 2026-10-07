@@ -1,5 +1,141 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-07 — Read-only camera overlay deployed
+
+- Added a separate transparent overlay page using the existing PHP queue and live-vote endpoints; existing production pages and endpoints were not changed.
+- Verified the deployed page renders actual now/next and top-two data in Chrome, with an explicit unavailable state on errors.
+- Documented that the vote list is a rolling 12-hour average, not a per-show reset or automatic rotation rule.
+- TikTok LIVE Studio scene integration and offline composite preview remain Recovery required.
+
+
+## 2026-10-07 — host live-vote standings connected
+
+- Connected a persistent host ranking to the saved PHP `live_show` votes, with a 12-hour window, average/vote-count ordering, and visible Top Two markers. Kept the old Supabase competition board clearly separate and left queue movement host-controlled.
+- Backed up live files and verified the new endpoint, page syntax, and completed-singer render. Real multi-singer vote and show-boundary acceptance remain open. See [`LIVE_VOTE_STANDINGS_2026-10-07.md`](LIVE_VOTE_STANDINGS_2026-10-07.md).
+
+## 2026-09-17 — Waiting singers can be removed from Host Controls
+
+- Added a protected per-row Remove action for waiting PHP queue entries.
+- Added confirmation, current-performer protection, and automatic queue-position renumbering.
+- Verified HTTP 401 without the host credential, healthy queue readback, and visible Remove controls without deleting a live singer during acceptance.
+
+## 2026-09-17 — Full paid-performance rehearsal completed
+
+- Completed a no-charge end-to-end Gold-package rehearsal for `RRM-20260917-F2AEAA-FINAL`.
+- Locked capture to OBSBOT video plus the Yamaha AG06MK2 LOOPBACK mix; removed the webcam microphone to eliminate echo and delay.
+- Verified the final 4:16.8 full-performance MP4 by complete decode and audio-level analysis.
+- Generated eight photos, a 45-second highlight, a full-performance video, and a checksum-verified delivery ZIP.
+- Uploaded the package and sent the delivery email to `rowdyroom@gmail.com`.
+- Removed the temporary rehearsal queue and restored the healthy production worker to the live queue endpoint.
+
+## 2026-09-17 — Removed delayed webcam audio from fulfillment capture
+
+- Removed the Tiny 2 Lite microphone from paid-performance recording after the full rehearsal exposed doubled, delayed audio.
+- The camera remains the video source; the Yamaha AG06MK2 is now the only audio source.
+- The first rehearsal delivery is superseded because its two microphones were already mixed into one track.
+- Completed and delivered the replacement AG06-only take: 3:11, 1920 x 1080 H.264, stereo AAC, `-20.5 dB` mean, `-1.2 dB` peak, archive SHA-256 `031fd4d23b2c50ce3869c36e3f737dfba1c1dc1d9f20a1a9729adc47f0dcb037`.
+
+## 2026-09-17 — Full paid-performance rehearsal and checkout CORS repair
+
+- Fixed the Edge Function OPTIONS response that caused browser checkout to fail before reaching PayPal; deployed `rowdy-paypal-order` version 3 and verified a successful `204` preflight.
+- Ran a no-charge Gold-package rehearsal through queue trigger, Tiny 2 Lite/Yamaha capture, editing, checksum upload, HTTPS delivery, and SMTP email.
+- Accepted eight photos, a 45-second highlight, and a 4:42 1080p full performance containing H.264 video and stereo AAC audio.
+- Restored the worker to the authoritative live PHP queue after the isolated rehearsal.
+
+## 2026-09-17 — Camera headroom and delivery audio correction
+
+- Corrected the Tiny 2 Lite from Portrait 9:16 to Landscape 16:9, eliminating the mismatched crop and retaining headroom.
+- Confirmed the Yamaha capture endpoint existed but its acceptance signal was effectively silent.
+- Added the Tiny 2 Lite microphone as a reduced backup to the Yamaha show feed.
+- Added loudness normalization to Silver and Gold delivered videos.
+- Passed combined H.264/stereo-AAC capture, decoding, framing inspection, and normalized `-1.5 dB` peak acceptance.
+
+## 2026-09-17 — Tiny 2 Lite tracking and capture repair
+
+- Confirmed official Tiny 2 Lite tracking support and the installed camera at firmware `6.2.8.12`.
+- Enabled Human Tracking in Group mode for one to four performers.
+- Removed the worker's unsafe blind OSC tracking toggle and retained always-on on-camera tracking.
+- Closed OBSBOT Center during fulfillment recording to release its DirectShow lock.
+- Passed a real five-second 1920 x 1080, 30 fps capture and decoder check with the performer framed; restarted the fulfillment worker healthy.
+
+## 2026-09-17 — Live PayPal checkout and fulfillment upload
+
+- Created a dedicated live PayPal REST app and registered its verified capture webhook.
+- Stored credentials in a service-role-only Supabase settings table and deployed Edge Function version 2.
+- Replaced the Companion's operative self-attested payment behavior with server-created PayPal checkout.
+- Added checksum-verified chunked package upload and authenticated SMTP delivery through `delivery@rowdyroom.site`.
+- Verified live checkout creation and full delivery with HTTPS 200, matching checksum, and a real email to Roger; restarted the local worker healthy.
+
+## 2026-09-17 — Verified-payment performance fulfillment foundation
+
+Status: Partially implemented; live-payment acceptance blocked on PayPal account login and credentials.
+
+- Added protected payment events, retryable fulfillment jobs, a token-authenticated local worker, and exact package editing for Bronze/Silver/Gold.
+- Bound capture start/stop to the real host Start Next / End Performance queue transitions.
+- Deployed server-side PayPal order and signature-verifying webhook functions, version 1.
+- Kept the existing live signup unchanged until the PayPal secret and webhook gates can be completed.
+- Recorded the existing anonymous customer-order exposure and the safe migration dependency: host controls must move to a protected RPC before legacy policies are removed.
+
+## 2026-09-17 — Live DJ automatic recorded-footage editor
+
+- Published `https://videomaker.rowdyroom.site/live-dj/` for tonight's show.
+- Added local video intake, automatic unique-cut planning, preview, manual STOP override, and browser-side WebM export.
+- Added landscape, portrait, and square presets plus title, duration, energy, quality, audio, and AI edit-plan controls.
+- Footage remains in the operator's browser and is not uploaded to the website.
+- Live acceptance loaded a real MP4, planned one unique cut, started preview, and stopped cleanly.
+
+## 2026-09-17 — TV display proportions and singer wording
+
+- Enlarged the TV title, QR code, signup prompt, queue content, and rotating banner.
+- Removed excess portrait spacing and kept the display within one 1080 x 1920 viewport.
+- Changed `Find Our Song` to `Find My Song` in the Companion signup flow.
+- Removed the incorrect `companion.rowdyroom.site` text from TV Mode without changing the QR code.
+- Preserved queue behavior, host controls, TV rotation logic, and SongFinder integration.
+
+## 2026-09-17 — Companion navigation removed
+
+Status: Live and visually verified; intentionally temporary.
+
+- Hid the entire public tab bar after Queue became the only remaining tab.
+- Preserved the signup screen, SongFinder, host controls, and TV Mode while hiding the public Live Queue card.
+- Changed singer entry labels to plain `Singer N name` wording with no TikTok mention.
+- Live browser and screenshot acceptance confirmed direct signup entry with no navigation overlap.
+
+## 2026-09-17 — Songbook hidden for temporary show mode
+
+Status: Live and verified; intentionally temporary.
+
+- Hid the public Songs tab and Songbook screen, leaving Queue as the only visible Companion tab.
+- Routed direct Songbook links back to Queue while retaining the signup wizard's SongFinder integration.
+- Passed phone-width rendering, route-guard, no-overflow, and no-browser-error checks.
+
+## 2026-09-17 — Temporary signup-only live-show mode
+
+Status: Live and verified; intentionally temporary.
+
+- Reduced the public Companion navigation to Queue and Songs for the next show.
+- Hid voting, BP, TikTok-facing profile UI, and related public tabs without removing host, queue, TV, or backend data.
+- Changed successful signup to a five-second thank-you screen followed by a clean automatic restart.
+- Passed a real queue join, thank-you, timed reset, mobile visibility, direct-route guard, and exact QA cleanup test.
+
+## 2026-09-17 — Companion lineup panel hidden
+
+Status: Live and verified.
+
+- Disabled the legacy public Main 4 Companion loader that injected `Current Panel Lineup` above the signup wizard.
+- Kept Main 4 and queue data operational outside that removed public card.
+- Cache-busted the Companion application script and verified Singer Sign Up is now the first Queue card on a phone viewport.
+
+## 2026-09-17 — Guided signup, payments, and host usability
+
+Status: Live and verified.
+
+- Rebuilt public signup as a five-step mobile-first flow for singer count, names, SongFinder, optional support, and confirmation.
+- Preserved the existing Cash App tip and PayPal performance-memory package destinations and host order workflow.
+- Added 1-4 singer persistence and complete-name rendering in host controls and TV mode.
+- Simplified host defaults while retaining advanced show tools behind More Tools.
+- Passed live YouTube, queue API, host, TV, voting handoff, mobile fit, payment-link, backup, and QA-cleanup checks.
+
 ## 2026-08-01 — Rowdy Robots full-team commissioning complete
 
 - Commissioned every one of the 22 local Robots through a bounded real task before activation.
@@ -392,3 +528,14 @@ Status: Implemented with equipment recovery still open.
 
 
 
+# 2026-10-05 — Stream voting restored (live server, acceptance pending)
+
+- Re-exposed the Companion Vote tab, tied eligible votes to host `live_show` performances, and replaced the host's misleading legacy voting switch with automatic PHP-backed status.
+- Verified page/API readbacks, Queue–Vote navigation, closed state, stale-vote HTTP 400, and zero browser-console errors. Preserved pre-change server rollback copies.
+- Left the September current queue slot untouched; Roger must end it before the next performer. Valid vote, score, duplicate, and final-minute tests remain pending a real performance. See `LIVE_VOTING_RESTORED_2026-10-05.md`.
+
+# 2026-10-06 — Live queue reorder and audience score
+
+- Added host-authenticated waiting-singer drag/drop and Move Up/Down to the PHP queue, with exact-set validation and transactional position updates.
+- Exposed PHP live vote average and count on host, Companion Vote, and TV; kept saved performance totals current for final-minute ballots.
+- Verified unauthenticated reorder HTTP 401, live reorder and restoration, shared queue readback, visible score states, and private recovery copies. A real ballot remains an open acceptance check.

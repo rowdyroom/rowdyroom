@@ -7,3 +7,4 @@ dist/
 .DS_Store
 .rowdy-secrets.json
 .rowdy-model-settings.json
+supabase/.temp/
