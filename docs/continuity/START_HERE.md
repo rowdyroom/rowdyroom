@@ -5,6 +5,7 @@
 - Live host queue has protected drag-and-drop and Move Up/Down for waiting singers; the stream TV reads the same order.
 - Host, Companion Vote, and TV have a visible per-performance live score and vote count. Final-minute ballots now update the saved total.
 - Reorder and restore passed on the live queue, but a real ballot has not been exercised. See [`QUEUE_VOTE_SCORE_2026-10-06.md`](QUEUE_VOTE_SCORE_2026-10-06.md) for exact acceptance status and the next-show check.
+- Public-safe source commit `16700afa404750db24ac11805ffee14cde1781fb`; private record `rowdy-room/queue-vote-score-2026-10-06` v1, content SHA-256 `d3f8070a5b19ea1728eb8d528f9d1a3cd18a7d7ea10f1e94d9da6529e3a506dd`. Continuity check run `a8b6c3d4-6991-495e-ad26-f4f621aeaa5a`: 5 pass, 1 warn (real ballot).
 
 ## 2026-10-05 — Live voting restored to Companion and host
 
