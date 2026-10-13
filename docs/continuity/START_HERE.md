@@ -1,5 +1,13 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-13 — Desktop chatbot configured; LIVE acceptance pending
+
+- Desktop activation/incoming-message permission, native !help and concise reply verified saved. Rate1/15 seconds; separate !score disabled; bridge duplicate !help removed and long replies split to140 characters.
+- Native local connection and isolated offline message/dedup/rate tests passed. Roger declined starting LIVE; actual chat delivery is unverified.
+- Authority: `docs/continuity/DESKTOP_CHATBOT_READY_2026-10-13.md`, branch `codex/queue-host-unified-20260917` (not merged); private `rowdy-room/desktop-chatbot-ready-2026-10-13` v1/history2531/hash `2fd453457c574bccde2a0354b81aa257cc9ffbd57716fad744738edaeb76b8f9`.
+- Recovery: `Rowdy_Room_Chatbot_Recovery_2026-10-13/RECOVERY.md`; source/rollback hashes and checks in the document. Next LIVE: keep Desktop active, connect and verify !help in viewer chat. No competing web takeover.
+
+
 ## 2026-10-13 — Companion help link visibility
 
 Grouped header and Queue/Vote/Boost navigation in one sticky wrapper to remove the hard-coded104px nav offset. Help card remains below the group and the guide link has a44px tap target. Live source readback, non-overlap geometry, click hit test and guide navigation passed. Phone viewport override did not apply; narrow viewport acceptance remains unverified.
