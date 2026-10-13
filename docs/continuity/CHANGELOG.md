@@ -1,5 +1,230 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-13 — Desktop chatbot configured; LIVE acceptance pending
+
+- Desktop activation/incoming-message permission, native !help and concise reply verified saved. Rate1/15 seconds; separate !score disabled; bridge duplicate !help removed and long replies split to140 characters.
+- Native local connection and isolated offline message/dedup/rate tests passed. Roger declined starting LIVE; actual chat delivery is unverified.
+- Authority: `docs/continuity/DESKTOP_CHATBOT_READY_2026-10-13.md`, branch `codex/queue-host-unified-20260917` (not merged); private `rowdy-room/desktop-chatbot-ready-2026-10-13` v1/history2531/hash `2fd453457c574bccde2a0354b81aa257cc9ffbd57716fad744738edaeb76b8f9`.
+- Recovery: `Rowdy_Room_Chatbot_Recovery_2026-10-13/RECOVERY.md`; source/rollback hashes and checks in the document. Next LIVE: keep Desktop active, connect and verify !help in viewer chat. No competing web takeover.
+
+
+## 2026-10-13 — Companion help link visibility
+
+Grouped header and Queue/Vote/Boost navigation in one sticky wrapper to remove the hard-coded104px nav offset. Help card remains below the group and the guide link has a44px tap target. Live source readback, non-overlap geometry, click hit test and guide navigation passed. Phone viewport override did not apply; narrow viewport acceptance remains unverified.
+
+Private authority: `rowdy-room/help-link-layout-2026-10-13` v1/history2487/hash `299d9c750411ad1caf814261ba347b3d1cbf07ddb1dec7519e67979bf7b5c754` (recomputed match). Check run `132c4a5f-7440-4a7a-9f6d-d6952252808a`:1 pass/1 warn. Source SHA256 `4aa559b90bc67191332a2b29e4ef67eb5f4c0947a5e1c36bbb9e5b7dac218204`; rollback `Rowdy_Room_Help_Link_Recovery_2026-10-13/index.before.html`, SHA256 `c865dc84025cb8995c450dfd1754a8aa3517bcd14319c1b3f3a1f6b671706ec6`. Public document `docs/continuity/HELP_LINK_LAYOUT_2026-10-13.md`, branch `codex/queue-host-unified-20260917` (not merged).
+
+
+## 2026-10-12 — Fresh BP wallet start
+
+- Owner-authorized reset:13 shared wallets verified at0 BP;425 BP cleared. History and gift/reward replay protection retained.
+- Authority:`docs/continuity/BP_RESET_2026-10-12.md`, branch `codex/queue-host-unified-20260917` (not merged); private `rowdy-room/bp-reset-2026-10-12` v1/history2486/hash `3534d16669686045c6a868c8008d9505f0951a250d41c1988ea5449916a516ed`.
+- Recovery:`Rowdy_Room_BP_Reset_Recovery_2026-10-12/receipt.raw.json`, SHA256 `6b7ec2559c636e70cffea48486cfae88dcff5b7ff4657d5f842362f468ff2d9c`. Readback passed; new legitimate points may accrue normally.
+
+
+## 2026-10-12 — BP25 prices and chat skips
+
+Verification: protected `rowdy-room/bp25-chat-2026-10-12` v1, history2485, SHA256 `29a95d5d29f51a3b80a37ac10e41dfd3850547d15b34514a4540c770aa539396` (recomputed match); check run `0442adf7-a467-4e66-8502-a772f6087ec1`:5 pass /2 warn /0 fail. Recovery SHA256 `b85213996a4ca5aff152d9034f33a269bcca231d8d5385977d56a2c1b2aabcd6`. Chat delivery remains pending Desktop activation; existing server-key RPC architecture remains a review warning.
+
+- Live costs:25 BP per skip position /25 BP playback request. Completion10 BP, hourly completion cap10. Active TikTok participation remains12/hour. Gifts100/274/575/1200 unchanged.
+- Chat `!skip [1-3]` and `!skip @friend [1-3]`: sender wallet, host approval, separate3 self+3 sponsored positions/hour. Financial, completion, replay and source checks passed.
+- TikFinity PRO confirmed; signup help saved; local chatbot connection test passed. Actual Desktop chatbot activation/message permission and live chat reply acceptance remain recovery-required.
+- Public authority: `docs/continuity/BP25_CHAT_2026-10-12.md`, `codex/queue-host-unified-20260917` (not merged); protected `rowdy-room/bp25-chat-2026-10-12`.
+- Recovery: `Rowdy_Room_BP25_Chat_Recovery_2026-10-12/RECOVERY.md`. Next: Desktop take over, activate Chatbot, enable incoming Streamer.bot messages, then test viewer help and sponsored skip.
+
+
+## 2026-10-12 — Viewer guide and rotating stream instructions
+
+Verification: protected `rowdy-room/viewer-guide-2026-10-12` v1, history2484, SHA256 `8f1821b20dc5f24dec0ec6ba5763697c339fd636ef7e59314e21f0d5374f5349` (recomputed match); run `a3729152-d016-4275-9c83-9057ef3aa069`. Web sources/rollback originals and navigation/render checks passed; actual LIVE Studio placement remains unverified.
+Recovery SHA256 `aa98100c5143dcf58872e3ce3d1ec31b579b45e51cad24a8a0318260bdaabbf7`.
+
+- Live `https://rowdyroom.site/companion/guide.html`: signup beyond8 panel spots, rotation, BP rewards/gifts, self/sponsored skips, current prices/caps. Persistent Companion help link and direct signup/wallet buttons.
+- Existing live-overlay web page now cycles8 reminders every12 seconds with the Companion URL. Browser/source checks passed; LIVE Studio placement remains unverified.
+- Authority: `docs/continuity/VIEWER_GUIDE_2026-10-12.md`, branch `codex/queue-host-unified-20260917` (not merged), protected `rowdy-room/viewer-guide-2026-10-12`.
+- Recovery: `Rowdy_Room_Viewer_Guide_Recovery_2026-10-12/RECOVERY.md`. Next acceptance: preview the overlay above the camera in LIVE Studio; guide can be shared/pinned in chat.
+
+
+## 2026-10-12 — BP gift packages, sponsored skips and separate caps
+
+Verified receipt: protected `rowdy-room/bp-gifts-sponsored-skips-2026-10-12` v1, history2483, SHA256 `3529396a2fd1be935e50f0dadbf02e1e8a60c0c0101b085d474839c81161986a` (recomputed match). Preparation commit `47da6f1802cf06b2301f8afa0cf06491d43b28ed`; check run `f4b982f1-9d4b-4b0e-bd5c-4cdfae5505a3`. Server index and original matched; GitHub document matched; genuine gift remains pending next LIVE.
+Recovery `RECOVERY.md` SHA256 `2ae9d5c961f10914ea7fcbcfefa1f652e0abebebf97bef1fe78e8916c19e7184`.
+
+- Restored LIVE gift packages100/274/575/1200 BP; shared wallet. New skip price10 BP/position, playback12 BP.
+- Payer may move self or another singer, with separate3 self /3 sponsored positions per rolling hour; host approval before debit. Supersedes earlier2/5 prices.
+- Authority: `docs/continuity/BP_GIFTS_SPONSORED_SKIPS_2026-10-12.md`, branch `codex/queue-host-unified-20260917` (not merged); protected `rowdy-room/bp-gifts-sponsored-skips-2026-10-12`.
+- Synthetic gift-to-wallet and live approval/movement/charge tests passed; source/original readbacks matched. Recovery: `Rowdy_Room_BP_Gifts_Recovery_2026-10-12/RECOVERY.md`. Next acceptance: one genuine gift during the next LIVE.
+
+
+## 2026-10-12 — TikFinity BP without an open Companion App
+
+Verified receipt: protected record version1, history2482, content SHA256 51261c17efff46ca5e943c1c30fb79226cc61364289c9c8c153b0e451bf5fdd1; check run 26f3c30f-187b-4db7-ae0b-d0cabc37dc3a. Server active index and its original matched readback. GitHub preparation record read back successfully. Genuine LIVE acceptance remains pending.
+Local recovery SHA256: e651c52c0a38dbe720c836af421d4912eb8729ca324794d24e240158e0517ebb.
+
+- Supersedes Companion viewing timer: approved active TikTok rule is1 BP per five-minute interval with a comment or likes, capped12 BP/hour. Silent viewing is not identifiable and does not earn this reward.
+- Local relay is running and connected to TikFinity Desktop; automatic Windows sign-in startup is installed. Signed receiver and full synthetic pipeline passed. Genuine LIVE event acceptance remains pending.
+- Authority: `docs/continuity/TIKFINITY_ACTIVE_BP_2026-10-12.md`, branch `codex/queue-host-unified-20260917` (not merged); private `rowdy-room/tikfinity-active-bp-2026-10-12`.
+- Recovery: `Rowdy_Room_TikFinity_BP_Recovery_2026-10-12/RECOVERY.md`. Next action: observe one real viewer interaction during the next LIVE and check the matching wallet.
+
+
+## 2026-10-12 — TikTok signup and BP spending/earning restored
+
+- Live optional TikTok signup, existing shared wallet, 2 BP/position line skips and 5 BP song playback requests; host approval before charge.
+- Viewing1 BP/5 minutes, accepted vote1 BP, completed singing25 BP; verified TikTok follow10/share15/like milestone5. Existing caps and duplicate-event protection are retained.
+- Authority: `docs/continuity/BP_RESTORED_2026-10-12.md`, branch `codex/queue-host-unified-20260917` (not merged). Private key: `rowdy-room/bp-restoration-2026-10-12`.
+- Live synthetic spending passed and queue was restored empty; all5 sources and4 originals matched readback. External TikTok delivery and real five-minute viewing remain next-show acceptance checks.
+- Recovery: `Rowdy_Room_BP_Recovery_2026-10-12/RECOVERY.md`; next safe action is review requests and observe real rewards during the next show.
+
+
+
+
+Verification receipt: protected `rowdy-room/bp-restoration-2026-10-12` v1, SHA-256 `e0aaa2014a115b4646ae51904c0c6415f926eaca6c72c5b208ee3699e7fe8ba8`, history2481; check run `556dc3fb-5155-498a-9627-9ddc8e22e8e5`. Public preparation commit `be3d22fe7e7c2e2425fd57e83d5f0483da37e75d`, not merged. Recovery `RECOVERY.md` SHA-256 `431540bffb140f9f83489146418b1d0081e1c4833746e612d4baf45f6f46e67d`. Server active index and its rollback copy matched; public document readback matched.
+
+## 2026-10-12 — Host performance rotation choice
+
+- Live host now offers End & Remove and End & Return to Bottom. Scores, votes, completion credits, and the final-minute voting window are preserved.
+- Live synthetic-singer acceptance passed; the queue was restored to empty. No real singers or artificial ballots were used.
+- Authority: `docs/continuity/HOST_ROTATION_CHOICE_2026-10-12.md`, branch `codex/queue-host-unified-20260917` (not merged); preparation commit `ee174a5`.
+- Protected key: `rowdy-room/host-rotation-choice-2026-10-12`; verified version/hash and recovery evidence are linked in the detailed record.
+- Recovery: `Rowdy_Room_Rotation_Recovery_2026-10-12/RECOVERY.md`, plus three verified protected originals.
+- Next action: use the desired completion choice during the next show. Returning retains song details; it does not pick a new song automatically.
+
+
+## 2026-10-07 — Read-only camera overlay deployed
+
+- Added a separate transparent overlay page using the existing PHP queue and live-vote endpoints; existing production pages and endpoints were not changed.
+- Verified the deployed page renders actual now/next and top-two data in Chrome, with an explicit unavailable state on errors.
+- Documented that the vote list is a rolling 12-hour average, not a per-show reset or automatic rotation rule.
+- TikTok LIVE Studio scene integration and offline composite preview remain Recovery required.
+
+
+## 2026-10-07 — host live-vote standings connected
+
+- Connected a persistent host ranking to the saved PHP `live_show` votes, with a 12-hour window, average/vote-count ordering, and visible Top Two markers. Kept the old Supabase competition board clearly separate and left queue movement host-controlled.
+- Backed up live files and verified the new endpoint, page syntax, and completed-singer render. Real multi-singer vote and show-boundary acceptance remain open. See [`LIVE_VOTE_STANDINGS_2026-10-07.md`](LIVE_VOTE_STANDINGS_2026-10-07.md).
+
+## 2026-09-17 — Waiting singers can be removed from Host Controls
+
+- Added a protected per-row Remove action for waiting PHP queue entries.
+- Added confirmation, current-performer protection, and automatic queue-position renumbering.
+- Verified HTTP 401 without the host credential, healthy queue readback, and visible Remove controls without deleting a live singer during acceptance.
+
+## 2026-09-17 — Full paid-performance rehearsal completed
+
+- Completed a no-charge end-to-end Gold-package rehearsal for `RRM-20260917-F2AEAA-FINAL`.
+- Locked capture to OBSBOT video plus the Yamaha AG06MK2 LOOPBACK mix; removed the webcam microphone to eliminate echo and delay.
+- Verified the final 4:16.8 full-performance MP4 by complete decode and audio-level analysis.
+- Generated eight photos, a 45-second highlight, a full-performance video, and a checksum-verified delivery ZIP.
+- Uploaded the package and sent the delivery email to `rowdyroom@gmail.com`.
+- Removed the temporary rehearsal queue and restored the healthy production worker to the live queue endpoint.
+
+## 2026-09-17 — Removed delayed webcam audio from fulfillment capture
+
+- Removed the Tiny 2 Lite microphone from paid-performance recording after the full rehearsal exposed doubled, delayed audio.
+- The camera remains the video source; the Yamaha AG06MK2 is now the only audio source.
+- The first rehearsal delivery is superseded because its two microphones were already mixed into one track.
+- Completed and delivered the replacement AG06-only take: 3:11, 1920 x 1080 H.264, stereo AAC, `-20.5 dB` mean, `-1.2 dB` peak, archive SHA-256 `031fd4d23b2c50ce3869c36e3f737dfba1c1dc1d9f20a1a9729adc47f0dcb037`.
+
+## 2026-09-17 — Full paid-performance rehearsal and checkout CORS repair
+
+- Fixed the Edge Function OPTIONS response that caused browser checkout to fail before reaching PayPal; deployed `rowdy-paypal-order` version 3 and verified a successful `204` preflight.
+- Ran a no-charge Gold-package rehearsal through queue trigger, Tiny 2 Lite/Yamaha capture, editing, checksum upload, HTTPS delivery, and SMTP email.
+- Accepted eight photos, a 45-second highlight, and a 4:42 1080p full performance containing H.264 video and stereo AAC audio.
+- Restored the worker to the authoritative live PHP queue after the isolated rehearsal.
+
+## 2026-09-17 — Camera headroom and delivery audio correction
+
+- Corrected the Tiny 2 Lite from Portrait 9:16 to Landscape 16:9, eliminating the mismatched crop and retaining headroom.
+- Confirmed the Yamaha capture endpoint existed but its acceptance signal was effectively silent.
+- Added the Tiny 2 Lite microphone as a reduced backup to the Yamaha show feed.
+- Added loudness normalization to Silver and Gold delivered videos.
+- Passed combined H.264/stereo-AAC capture, decoding, framing inspection, and normalized `-1.5 dB` peak acceptance.
+
+## 2026-09-17 — Tiny 2 Lite tracking and capture repair
+
+- Confirmed official Tiny 2 Lite tracking support and the installed camera at firmware `6.2.8.12`.
+- Enabled Human Tracking in Group mode for one to four performers.
+- Removed the worker's unsafe blind OSC tracking toggle and retained always-on on-camera tracking.
+- Closed OBSBOT Center during fulfillment recording to release its DirectShow lock.
+- Passed a real five-second 1920 x 1080, 30 fps capture and decoder check with the performer framed; restarted the fulfillment worker healthy.
+
+## 2026-09-17 — Live PayPal checkout and fulfillment upload
+
+- Created a dedicated live PayPal REST app and registered its verified capture webhook.
+- Stored credentials in a service-role-only Supabase settings table and deployed Edge Function version 2.
+- Replaced the Companion's operative self-attested payment behavior with server-created PayPal checkout.
+- Added checksum-verified chunked package upload and authenticated SMTP delivery through `delivery@rowdyroom.site`.
+- Verified live checkout creation and full delivery with HTTPS 200, matching checksum, and a real email to Roger; restarted the local worker healthy.
+
+## 2026-09-17 — Verified-payment performance fulfillment foundation
+
+Status: Partially implemented; live-payment acceptance blocked on PayPal account login and credentials.
+
+- Added protected payment events, retryable fulfillment jobs, a token-authenticated local worker, and exact package editing for Bronze/Silver/Gold.
+- Bound capture start/stop to the real host Start Next / End Performance queue transitions.
+- Deployed server-side PayPal order and signature-verifying webhook functions, version 1.
+- Kept the existing live signup unchanged until the PayPal secret and webhook gates can be completed.
+- Recorded the existing anonymous customer-order exposure and the safe migration dependency: host controls must move to a protected RPC before legacy policies are removed.
+
+## 2026-09-17 — Live DJ automatic recorded-footage editor
+
+- Published `https://videomaker.rowdyroom.site/live-dj/` for tonight's show.
+- Added local video intake, automatic unique-cut planning, preview, manual STOP override, and browser-side WebM export.
+- Added landscape, portrait, and square presets plus title, duration, energy, quality, audio, and AI edit-plan controls.
+- Footage remains in the operator's browser and is not uploaded to the website.
+- Live acceptance loaded a real MP4, planned one unique cut, started preview, and stopped cleanly.
+
+## 2026-09-17 — TV display proportions and singer wording
+
+- Enlarged the TV title, QR code, signup prompt, queue content, and rotating banner.
+- Removed excess portrait spacing and kept the display within one 1080 x 1920 viewport.
+- Changed `Find Our Song` to `Find My Song` in the Companion signup flow.
+- Removed the incorrect `companion.rowdyroom.site` text from TV Mode without changing the QR code.
+- Preserved queue behavior, host controls, TV rotation logic, and SongFinder integration.
+
+## 2026-09-17 — Companion navigation removed
+
+Status: Live and visually verified; intentionally temporary.
+
+- Hid the entire public tab bar after Queue became the only remaining tab.
+- Preserved the signup screen, SongFinder, host controls, and TV Mode while hiding the public Live Queue card.
+- Changed singer entry labels to plain `Singer N name` wording with no TikTok mention.
+- Live browser and screenshot acceptance confirmed direct signup entry with no navigation overlap.
+
+## 2026-09-17 — Songbook hidden for temporary show mode
+
+Status: Live and verified; intentionally temporary.
+
+- Hid the public Songs tab and Songbook screen, leaving Queue as the only visible Companion tab.
+- Routed direct Songbook links back to Queue while retaining the signup wizard's SongFinder integration.
+- Passed phone-width rendering, route-guard, no-overflow, and no-browser-error checks.
+
+## 2026-09-17 — Temporary signup-only live-show mode
+
+Status: Live and verified; intentionally temporary.
+
+- Reduced the public Companion navigation to Queue and Songs for the next show.
+- Hid voting, BP, TikTok-facing profile UI, and related public tabs without removing host, queue, TV, or backend data.
+- Changed successful signup to a five-second thank-you screen followed by a clean automatic restart.
+- Passed a real queue join, thank-you, timed reset, mobile visibility, direct-route guard, and exact QA cleanup test.
+
+## 2026-09-17 — Companion lineup panel hidden
+
+Status: Live and verified.
+
+- Disabled the legacy public Main 4 Companion loader that injected `Current Panel Lineup` above the signup wizard.
+- Kept Main 4 and queue data operational outside that removed public card.
+- Cache-busted the Companion application script and verified Singer Sign Up is now the first Queue card on a phone viewport.
+
+## 2026-09-17 — Guided signup, payments, and host usability
+
+Status: Live and verified.
+
+- Rebuilt public signup as a five-step mobile-first flow for singer count, names, SongFinder, optional support, and confirmation.
+- Preserved the existing Cash App tip and PayPal performance-memory package destinations and host order workflow.
+- Added 1-4 singer persistence and complete-name rendering in host controls and TV mode.
+- Simplified host defaults while retaining advanced show tools behind More Tools.
+- Passed live YouTube, queue API, host, TV, voting handoff, mobile fit, payment-link, backup, and QA-cleanup checks.
+
 ## 2026-08-01 — Rowdy Robots full-team commissioning complete
 
 - Commissioned every one of the 22 local Robots through a bounded real task before activation.
@@ -392,3 +617,14 @@ Status: Implemented with equipment recovery still open.
 
 
 
+# 2026-10-05 — Stream voting restored (live server, acceptance pending)
+
+- Re-exposed the Companion Vote tab, tied eligible votes to host `live_show` performances, and replaced the host's misleading legacy voting switch with automatic PHP-backed status.
+- Verified page/API readbacks, Queue–Vote navigation, closed state, stale-vote HTTP 400, and zero browser-console errors. Preserved pre-change server rollback copies.
+- Left the September current queue slot untouched; Roger must end it before the next performer. Valid vote, score, duplicate, and final-minute tests remain pending a real performance. See `LIVE_VOTING_RESTORED_2026-10-05.md`.
+
+# 2026-10-06 — Live queue reorder and audience score
+
+- Added host-authenticated waiting-singer drag/drop and Move Up/Down to the PHP queue, with exact-set validation and transactional position updates.
+- Exposed PHP live vote average and count on host, Companion Vote, and TV; kept saved performance totals current for final-minute ballots.
+- Verified unauthenticated reorder HTTP 401, live reorder and restoration, shared queue readback, visible score states, and private recovery copies. A real ballot remains an open acceptance check.
