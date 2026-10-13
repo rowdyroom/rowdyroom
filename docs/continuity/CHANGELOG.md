@@ -1,5 +1,12 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-12 — Fresh BP wallet start
+
+- Owner-authorized reset:13 shared wallets verified at0 BP;425 BP cleared. History and gift/reward replay protection retained.
+- Authority:`docs/continuity/BP_RESET_2026-10-12.md`, branch `codex/queue-host-unified-20260917` (not merged); private `rowdy-room/bp-reset-2026-10-12` v1/history2486/hash `3534d16669686045c6a868c8008d9505f0951a250d41c1988ea5449916a516ed`.
+- Recovery:`Rowdy_Room_BP_Reset_Recovery_2026-10-12/receipt.raw.json`, SHA256 `6b7ec2559c636e70cffea48486cfae88dcff5b7ff4657d5f842362f468ff2d9c`. Readback passed; new legitimate points may accrue normally.
+
+
 ## 2026-10-12 — BP25 prices and chat skips
 
 Verification: protected `rowdy-room/bp25-chat-2026-10-12` v1, history2485, SHA256 `29a95d5d29f51a3b80a37ac10e41dfd3850547d15b34514a4540c770aa539396` (recomputed match); check run `0442adf7-a467-4e66-8502-a772f6087ec1`:5 pass /2 warn /0 fail. Recovery SHA256 `b85213996a4ca5aff152d9034f33a269bcca231d8d5385977d56a2c1b2aabcd6`. Chat delivery remains pending Desktop activation; existing server-key RPC architecture remains a review warning.
