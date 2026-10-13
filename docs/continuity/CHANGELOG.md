@@ -1,5 +1,14 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-12 — BP25 prices and chat skips
+
+- Live costs:25 BP per skip position /25 BP playback request. Completion10 BP, hourly completion cap10. Active TikTok participation remains12/hour. Gifts100/274/575/1200 unchanged.
+- Chat `!skip [1-3]` and `!skip @friend [1-3]`: sender wallet, host approval, separate3 self+3 sponsored positions/hour. Financial, completion, replay and source checks passed.
+- TikFinity PRO confirmed; signup help saved; local chatbot connection test passed. Actual Desktop chatbot activation/message permission and live chat reply acceptance remain recovery-required.
+- Public authority: `docs/continuity/BP25_CHAT_2026-10-12.md`, `codex/queue-host-unified-20260917` (not merged); protected `rowdy-room/bp25-chat-2026-10-12`.
+- Recovery: `Rowdy_Room_BP25_Chat_Recovery_2026-10-12/RECOVERY.md`. Next: Desktop take over, activate Chatbot, enable incoming Streamer.bot messages, then test viewer help and sponsored skip.
+
+
 ## 2026-10-12 — Viewer guide and rotating stream instructions
 
 Verification: protected `rowdy-room/viewer-guide-2026-10-12` v1, history2484, SHA256 `8f1821b20dc5f24dec0ec6ba5763697c339fd636ef7e59314e21f0d5374f5349` (recomputed match); run `a3729152-d016-4275-9c83-9057ef3aa069`. Web sources/rollback originals and navigation/render checks passed; actual LIVE Studio placement remains unverified.
