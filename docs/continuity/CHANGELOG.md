@@ -1,5 +1,13 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-12 — BP gift packages, sponsored skips and separate caps
+
+- Restored LIVE gift packages100/274/575/1200 BP; shared wallet. New skip price10 BP/position, playback12 BP.
+- Payer may move self or another singer, with separate3 self /3 sponsored positions per rolling hour; host approval before debit. Supersedes earlier2/5 prices.
+- Authority: `docs/continuity/BP_GIFTS_SPONSORED_SKIPS_2026-10-12.md`, branch `codex/queue-host-unified-20260917` (not merged); protected `rowdy-room/bp-gifts-sponsored-skips-2026-10-12`.
+- Synthetic gift-to-wallet and live approval/movement/charge tests passed; source/original readbacks matched. Recovery: `Rowdy_Room_BP_Gifts_Recovery_2026-10-12/RECOVERY.md`. Next acceptance: one genuine gift during the next LIVE.
+
+
 ## 2026-10-12 — TikFinity BP without an open Companion App
 
 Verified receipt: protected record version1, history2482, content SHA256 51261c17efff46ca5e943c1c30fb79226cc61364289c9c8c153b0e451bf5fdd1; check run 26f3c30f-187b-4db7-ae0b-d0cabc37dc3a. Server active index and its original matched readback. GitHub preparation record read back successfully. Genuine LIVE acceptance remains pending.
