@@ -10,6 +10,9 @@
 
 
 
+
+Verification receipt: protected `rowdy-room/bp-restoration-2026-10-12` v1, SHA-256 `e0aaa2014a115b4646ae51904c0c6415f926eaca6c72c5b208ee3699e7fe8ba8`, history2481; check run `556dc3fb-5155-498a-9627-9ddc8e22e8e5`. Public preparation commit `be3d22fe7e7c2e2425fd57e83d5f0483da37e75d`, not merged. Recovery `RECOVERY.md` SHA-256 `431540bffb140f9f83489146418b1d0081e1c4833746e612d4baf45f6f46e67d`. Server active index and its rollback copy matched; public document readback matched.
+
 ## 2026-10-12 — Host performance rotation choice
 
 - Live host now offers End & Remove and End & Return to Bottom. Scores, votes, completion credits, and the final-minute voting window are preserved.
