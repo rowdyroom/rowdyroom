@@ -1,5 +1,13 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-12 — TikFinity BP without an open Companion App
+
+- Supersedes Companion viewing timer: approved active TikTok rule is1 BP per five-minute interval with a comment or likes, capped12 BP/hour. Silent viewing is not identifiable and does not earn this reward.
+- Local relay is running and connected to TikFinity Desktop; automatic Windows sign-in startup is installed. Signed receiver and full synthetic pipeline passed. Genuine LIVE event acceptance remains pending.
+- Authority: `docs/continuity/TIKFINITY_ACTIVE_BP_2026-10-12.md`, branch `codex/queue-host-unified-20260917` (not merged); private `rowdy-room/tikfinity-active-bp-2026-10-12`.
+- Recovery: `Rowdy_Room_TikFinity_BP_Recovery_2026-10-12/RECOVERY.md`. Next action: observe one real viewer interaction during the next LIVE and check the matching wallet.
+
+
 ## 2026-10-12 — TikTok signup and BP spending/earning restored
 
 - Live optional TikTok signup, existing shared wallet, 2 BP/position line skips and 5 BP song playback requests; host approval before charge.
