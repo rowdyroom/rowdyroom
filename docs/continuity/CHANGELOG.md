@@ -1,5 +1,14 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-12 — TikTok signup and BP spending/earning restored
+
+- Live optional TikTok signup, existing shared wallet, 2 BP/position line skips and 5 BP song playback requests; host approval before charge.
+- Viewing1 BP/5 minutes, accepted vote1 BP, completed singing25 BP; verified TikTok follow10/share15/like milestone5. Existing caps and duplicate-event protection are retained.
+- Authority: `docs/continuity/BP_RESTORED_2026-10-12.md`, branch `codex/queue-host-unified-20260917` (not merged). Private key: `rowdy-room/bp-restoration-2026-10-12`.
+- Live synthetic spending passed and queue was restored empty; all5 sources and4 originals matched readback. External TikTok delivery and real five-minute viewing remain next-show acceptance checks.
+- Recovery: `Rowdy_Room_BP_Recovery_2026-10-12/RECOVERY.md`; next safe action is review requests and observe real rewards during the next show.
+
+
 ## 2026-10-12 — Host performance rotation choice
 
 - Live host now offers End & Remove and End & Return to Bottom. Scores, votes, completion credits, and the final-minute voting window are preserved.
