@@ -1,5 +1,15 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-12 — Host performance rotation choice
+
+- Live host now offers End & Remove and End & Return to Bottom. Scores, votes, completion credits, and the final-minute voting window are preserved.
+- Live synthetic-singer acceptance passed; the queue was restored to empty. No real singers or artificial ballots were used.
+- Authority: `docs/continuity/HOST_ROTATION_CHOICE_2026-10-12.md`, branch `codex/queue-host-unified-20260917` (not merged); preparation commit `ee174a5`.
+- Protected key: `rowdy-room/host-rotation-choice-2026-10-12`; verified version/hash and recovery evidence are linked in the detailed record.
+- Recovery: `Rowdy_Room_Rotation_Recovery_2026-10-12/RECOVERY.md`, plus three verified protected originals.
+- Next action: use the desired completion choice during the next show. Returning retains song details; it does not pick a new song automatically.
+
+
 ## 2026-10-07 — Read-only camera overlay deployed
 
 - Added a separate transparent overlay page using the existing PHP queue and live-vote endpoints; existing production pages and endpoints were not changed.
