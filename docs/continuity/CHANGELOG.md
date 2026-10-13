@@ -1,5 +1,16 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-12 — Viewer guide and rotating stream instructions
+
+Verification: protected `rowdy-room/viewer-guide-2026-10-12` v1, history2484, SHA256 `8f1821b20dc5f24dec0ec6ba5763697c339fd636ef7e59314e21f0d5374f5349` (recomputed match); run `a3729152-d016-4275-9c83-9057ef3aa069`. Web sources/rollback originals and navigation/render checks passed; actual LIVE Studio placement remains unverified.
+Recovery SHA256 `aa98100c5143dcf58872e3ce3d1ec31b579b45e51cad24a8a0318260bdaabbf7`.
+
+- Live `https://rowdyroom.site/companion/guide.html`: signup beyond8 panel spots, rotation, BP rewards/gifts, self/sponsored skips, current prices/caps. Persistent Companion help link and direct signup/wallet buttons.
+- Existing live-overlay web page now cycles8 reminders every12 seconds with the Companion URL. Browser/source checks passed; LIVE Studio placement remains unverified.
+- Authority: `docs/continuity/VIEWER_GUIDE_2026-10-12.md`, branch `codex/queue-host-unified-20260917` (not merged), protected `rowdy-room/viewer-guide-2026-10-12`.
+- Recovery: `Rowdy_Room_Viewer_Guide_Recovery_2026-10-12/RECOVERY.md`. Next acceptance: preview the overlay above the camera in LIVE Studio; guide can be shared/pinned in chat.
+
+
 ## 2026-10-12 — BP gift packages, sponsored skips and separate caps
 
 Verified receipt: protected `rowdy-room/bp-gifts-sponsored-skips-2026-10-12` v1, history2483, SHA256 `3529396a2fd1be935e50f0dadbf02e1e8a60c0c0101b085d474839c81161986a` (recomputed match). Preparation commit `47da6f1802cf06b2301f8afa0cf06491d43b28ed`; check run `f4b982f1-9d4b-4b0e-bd5c-4cdfae5505a3`. Server index and original matched; GitHub document matched; genuine gift remains pending next LIVE.
