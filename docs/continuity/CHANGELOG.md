@@ -2,6 +2,9 @@
 
 ## 2026-10-12 — BP gift packages, sponsored skips and separate caps
 
+Verified receipt: protected `rowdy-room/bp-gifts-sponsored-skips-2026-10-12` v1, history2483, SHA256 `3529396a2fd1be935e50f0dadbf02e1e8a60c0c0101b085d474839c81161986a` (recomputed match). Preparation commit `47da6f1802cf06b2301f8afa0cf06491d43b28ed`; check run `f4b982f1-9d4b-4b0e-bd5c-4cdfae5505a3`. Server index and original matched; GitHub document matched; genuine gift remains pending next LIVE.
+Recovery `RECOVERY.md` SHA256 `2ae9d5c961f10914ea7fcbcfefa1f652e0abebebf97bef1fe78e8916c19e7184`.
+
 - Restored LIVE gift packages100/274/575/1200 BP; shared wallet. New skip price10 BP/position, playback12 BP.
 - Payer may move self or another singer, with separate3 self /3 sponsored positions per rolling hour; host approval before debit. Supersedes earlier2/5 prices.
 - Authority: `docs/continuity/BP_GIFTS_SPONSORED_SKIPS_2026-10-12.md`, branch `codex/queue-host-unified-20260917` (not merged); protected `rowdy-room/bp-gifts-sponsored-skips-2026-10-12`.

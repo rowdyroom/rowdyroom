@@ -13,3 +13,6 @@ Validation:12 normalization checks,10 PHP service checks, rollback-only database
 Remaining acceptance: one genuine TikTok gift during the next LIVE. Synthetic pipeline proof and desktop connection do not prove genuine audience-event delivery. TikFinity must be connected to the stream.
 
 Authority: this document on `codex/queue-host-unified-20260917` (not merged); protected `rowdy-room/bp-gifts-sponsored-skips-2026-10-12`. Recovery: `Rowdy_Room_BP_Gifts_Recovery_2026-10-12/RECOVERY.md`.
+
+Verified receipt: protected `rowdy-room/bp-gifts-sponsored-skips-2026-10-12` v1, history2483, SHA256 `3529396a2fd1be935e50f0dadbf02e1e8a60c0c0101b085d474839c81161986a` (recomputed match). Preparation commit `47da6f1802cf06b2301f8afa0cf06491d43b28ed`; check run `f4b982f1-9d4b-4b0e-bd5c-4cdfae5505a3`. Server index and original matched; GitHub document matched; genuine gift remains pending next LIVE.
+Recovery `RECOVERY.md` SHA256 `2ae9d5c961f10914ea7fcbcfefa1f652e0abebebf97bef1fe78e8916c19e7184`.
