@@ -2,6 +2,8 @@
 
 ## 2026-10-12 — BP25 prices and chat skips
 
+Verification: protected `rowdy-room/bp25-chat-2026-10-12` v1, history2485, SHA256 `29a95d5d29f51a3b80a37ac10e41dfd3850547d15b34514a4540c770aa539396` (recomputed match); check run `0442adf7-a467-4e66-8502-a772f6087ec1`:5 pass /2 warn /0 fail. Recovery SHA256 `b85213996a4ca5aff152d9034f33a269bcca231d8d5385977d56a2c1b2aabcd6`. Chat delivery remains pending Desktop activation; existing server-key RPC architecture remains a review warning.
+
 - Live costs:25 BP per skip position /25 BP playback request. Completion10 BP, hourly completion cap10. Active TikTok participation remains12/hour. Gifts100/274/575/1200 unchanged.
 - Chat `!skip [1-3]` and `!skip @friend [1-3]`: sender wallet, host approval, separate3 self+3 sponsored positions/hour. Financial, completion, replay and source checks passed.
 - TikFinity PRO confirmed; signup help saved; local chatbot connection test passed. Actual Desktop chatbot activation/message permission and live chat reply acceptance remain recovery-required.
