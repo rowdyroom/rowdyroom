@@ -9,6 +9,7 @@
 - Recovery: `Rowdy_Room_BP_Recovery_2026-10-12/RECOVERY.md`; next safe action is review requests and observe real rewards during the next show.
 
 
+
 ## 2026-10-12 — Host performance rotation choice
 
 - Live host now offers End & Remove and End & Return to Bottom. Scores, votes, completion credits, and the final-minute voting window are preserved.
