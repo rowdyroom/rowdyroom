@@ -2,6 +2,9 @@
 
 ## 2026-10-12 — TikFinity BP without an open Companion App
 
+Verified receipt: protected record version1, history2482, content SHA256 51261c17efff46ca5e943c1c30fb79226cc61364289c9c8c153b0e451bf5fdd1; check run 26f3c30f-187b-4db7-ae0b-d0cabc37dc3a. Server active index and its original matched readback. GitHub preparation record read back successfully. Genuine LIVE acceptance remains pending.
+Local recovery SHA256: e651c52c0a38dbe720c836af421d4912eb8729ca324794d24e240158e0517ebb.
+
 - Supersedes Companion viewing timer: approved active TikTok rule is1 BP per five-minute interval with a comment or likes, capped12 BP/hour. Silent viewing is not identifiable and does not earn this reward.
 - Local relay is running and connected to TikFinity Desktop; automatic Windows sign-in startup is installed. Signed receiver and full synthetic pipeline passed. Genuine LIVE event acceptance remains pending.
 - Authority: `docs/continuity/TIKFINITY_ACTIVE_BP_2026-10-12.md`, branch `codex/queue-host-unified-20260917` (not merged); private `rowdy-room/tikfinity-active-bp-2026-10-12`.
