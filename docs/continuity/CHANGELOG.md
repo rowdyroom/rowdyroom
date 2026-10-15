@@ -1,5 +1,13 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-14 — Native YouTube playback correction (supersedes embedded player)
+
+- Roger's selected track rejected embedding. Open Track now uses regular YouTube; the approved local Rowdy Lyrics AppleScript helper reuses a dedicated Safari window in `?player=mac` host mode. Normal browser mode cannot guarantee reuse.
+- Host source readback and native two-link reuse passed (same Safari window 621); placeholders were non-playing and the test window was closed. Actual karaoke-to-TV picture/audio remains unverified.
+- Authority: [KARAOKE_LYRICS_PLAYER_2026-10-14.md](KARAOKE_LYRICS_PLAYER_2026-10-14.md), branch `codex/lyrics-player-20261014` (not merged). Protected `rowdy-room/karaoke-lyrics-player-20261014` v2, SHA-256 `555b8e9a962c4a13d84b8734fa0046ff091248c6a53a71d3d07d9cee6e036ed6`.
+- Recovery key `lyrics-player-20261014`, correction folder `direct-v2`. Next: launch Rowdy Lyrics on Mac, Open Track, share its Safari YouTube window using Window or App; use Theater mode and confirm Mac output.
+
+
 ## 2026-10-14 — Reusable karaoke lyrics player
 
 - Live host Open Track reuses one lyrics-player window across songs. Host controls remain separate; Hide Controls avoids a native fullscreen transition.
