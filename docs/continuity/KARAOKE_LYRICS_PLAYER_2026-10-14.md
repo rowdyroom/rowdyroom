@@ -1,6 +1,6 @@
 # Karaoke lyrics playback — 2026-10-14
 
-Status: correction prepared; approved native Mac helper installed; production host correction and native window-reuse verification pending.
+Status: host correction deployed with exact source readback; approved native Mac helper installed and owner-granted Safari control verified. Two non-playing links reused Safari window 621. Actual karaoke-to-TV picture and audio acceptance is pending.
 
 Roger's selected karaoke track rejected embedded playback. The earlier embedded player passed test videos but did not satisfy the actual karaoke acceptance gate. It is superseded by regular YouTube watch-page playback.
 
@@ -12,4 +12,4 @@ Share the dedicated Safari YouTube window using Window or App. Keep it in normal
 
 Scope: host Open Track routing plus the approved local Mac helper. Queue, scores, voting, and BP behavior are unchanged. Original source and prior deployment recovery files are preserved under recovery key `lyrics-player-20261014`.
 
-Protected authority: `rowdy-room/karaoke-lyrics-player-20261014`. Public documentation remains on unmerged branch `codex/lyrics-player-20261014`. Next: publish and verify the host correction, test native window reuse without audible test playback, and confirm Roger's actual TV lyrics and Mac audio.
+Protected authority: `rowdy-room/karaoke-lyrics-player-20261014`. Public documentation remains on unmerged branch `codex/lyrics-player-20261014`. Protected version 2, SHA-256 `555b8e9a962c4a13d84b8734fa0046ff091248c6a53a71d3d07d9cee6e036ed6`. Next: use the Mac desktop Rowdy Lyrics launcher, Open Track, allow Safari to open the approved helper if prompted, share the dedicated YouTube window, and confirm actual TV lyrics with Mac audio.
