@@ -1,5 +1,10 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-15 — Simplified live overlay deployed
+
+Singer names retained without song details; top two vote leaders share one horizontal line; bottom information bar removed. Source and browser verification passed. TikTok source refresh/composite remains unverified. Authority: [LIVE_OVERLAY_SIMPLE_2026-10-15.md](LIVE_OVERLAY_SIMPLE_2026-10-15.md), branch `codex/overlay-simple-20261015` (unmerged); protected `rowdy-room/live-camera-overlay-2026-10-07` v2, SHA-256 `19cbe32bb5a4f9fca64a3e9e3aa9e89b91e6a35eaa589c1a24d06f40ff67bd13`. Recovery key `Rowdy_Room_Overlay_Recovery_2026-10-15`.
+
+
 ## 2026-10-14 — Mac karaoke picture and audio accepted
 
 - Roger confirmed TV karaoke video/lyrics and Mac audio. Automatic Mac helper routing, dedicated-window reuse and audio guard are deployed. Share Window or App; keep the karaoke window open in normal-window playback.
