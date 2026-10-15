@@ -1,5 +1,10 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-15 — Companion Vote tab simplified
+
+One rules sentence, one scoring card and retained YouTube footer. Duplicate prose/rules removed; signup help hidden only on Vote. Live selectors and exact source readback passed; no vote submitted. Authority: [COMPANION_VOTE_SIMPLE_2026-10-15.md](COMPANION_VOTE_SIMPLE_2026-10-15.md), branch `codex/overlay-simple-20261015` (unmerged). Protected `rowdy-room/vote-simple-20261015` v1; recovery key `Rowdy_Room_Vote_Simple_2026-10-15`. Hashes and rollback in authority document.
+
+
 ## 2026-10-15 — Queue rotation and BP decisions beside singers
 
 Overlay now cycles next three singers with positional labels. Host BP actions are inline with the target singer and in an automatically updating sticky inbox above the queue. Approval retains existing protected BP charge/move behavior; denial leaves order unchanged. Source readbacks and offline checks passed; actual pending-request transaction remains untested. Authority: [LIVE_OVERLAY_SIMPLE_2026-10-15.md](LIVE_OVERLAY_SIMPLE_2026-10-15.md), branch `codex/overlay-simple-20261015` (unmerged); protected host `rowdy-room/bp-inline-host-20261015` v1, overlay `rowdy-room/live-camera-overlay-2026-10-07` v5. Recovery keys and hashes in authority document.
