@@ -1,5 +1,12 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-14 — Mac karaoke picture and audio accepted
+
+- Roger confirmed TV karaoke video/lyrics and Mac audio. Automatic Mac helper routing, dedicated-window reuse and audio guard are deployed. Share Window or App; keep the karaoke window open in normal-window playback.
+- Authority: [KARAOKE_LYRICS_PLAYER_2026-10-14.md](KARAOKE_LYRICS_PLAYER_2026-10-14.md), branch `codex/lyrics-player-20261014` (unmerged). Protected record `rowdy-room/karaoke-lyrics-player-20261014` v4, history 2579, SHA-256 `51c5f99bfac30518ba9588f8094a3c78f1164d1cc879ba3f7b25acd7b938da41`.
+- Recovery key `lyrics-player-20261014`, folder `mac-v3`. Future AirPlay reconnect and show endurance are untested. Earlier pending entries below are historical and superseded.
+
+
 ## 2026-10-14 — Native YouTube playback correction (supersedes embedded player)
 
 - Roger's selected track rejected embedding. Open Track now uses regular YouTube; the approved local Rowdy Lyrics AppleScript helper reuses a dedicated Safari window in `?player=mac` host mode. Normal browser mode cannot guarantee reuse.
