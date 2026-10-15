@@ -1,17 +1,15 @@
-# Reusable karaoke lyrics player — 2026-10-14
+# Karaoke lyrics playback — 2026-10-14
 
-Status: deployed with exact production source readbacks and real browser video playback verified; Mac-to-TV picture and audio acceptance pending.
+Status: correction prepared; approved native Mac helper installed; production host correction and native window-reuse verification pending.
 
-Open Track now reuses one same-origin lyrics-player window across tracks, replacing a new YouTube tab for every song. Host controls remain in their original window. The player embeds one YouTube video at a time, preserves its top-level document across song changes, and hides controls without entering browser or native video fullscreen. Escape restores the controls.
+Roger's selected karaoke track rejected embedded playback. The earlier embedded player passed test videos but did not satisfy the actual karaoke acceptance gate. It is superseded by regular YouTube watch-page playback.
 
-Use macOS Window or App sharing for the lyrics-player window; select the Mac headphone or speaker output separately. The website cannot control the Mac's audio routing. Do not claim AirPlay or physical audio delivery is verified from a browser test.
+The approved local Rowdy Lyrics AppleScript helper accepts only an 11-character YouTube video ID. It loads the regular YouTube page in a dedicated Safari window, reusing its saved window ID. It creates a new window if the saved window was closed or repurposed. Safari Automation permission is owner-approved. It has no HTTP listener, credentials, or generic command/URL input.
 
-Validation: URL allowlist and ID validation, stable window reuse, close/reopen, popup-block feedback, script syntax, YouTube lifecycle, autoplay recovery, and blocked-embedding feedback passed. A real browser opened two different YouTube videos in the same popup, with no top-level document navigation, and rendered video with controls hidden.
+Launching Rowdy Lyrics opens host controls with `?player=mac`. Open Track uses the installed `rowdylyrics` handler in that mode. Normal web mode opens a YouTube popup. Browser-only reuse is best-effort: the real-browser test opened a second window because YouTube isolates its browsing context. No browser-only single-window guarantee is made.
 
-Limits: YouTube can reject individual embedded videos, require a user gesture, show ads, or become unavailable. An Open on YouTube fallback pauses embedded playback first; opening that fallback may require sharing the other window. The remote TV black-screen/audio acceptance test remains required.
+Share the dedicated Safari YouTube window using Window or App. Keep it in normal-window Theater mode to avoid the prior native fullscreen transition. Audio routing remains a macOS setting and requires real Mac/TV acceptance.
 
-Deployment scope: host Open Track function and a new player page only; queue, performance, voting and BP actions are unchanged. Preserve the original host source and a server-side recovery copy before replacing it. Publish player before host and verify both readbacks.
+Scope: host Open Track routing plus the approved local Mac helper. Queue, scores, voting, and BP behavior are unchanged. Original source and prior deployment recovery files are preserved under recovery key `lyrics-player-20261014`.
 
-Recovery key: lyrics-player-20261014. Private operational paths and hashes belong in the protected deployment record.
-
-Protected authority: `rowdy-room/karaoke-lyrics-player-20261014`, version 1, SHA-256 `a4e1938d99bfff61e08fa6234ed9a50f65fa17969c81c1698e7d0fd2d696aa77`. Public record branch `codex/lyrics-player-20261014` is not merged. Dated recovery package key: `lyrics-player-20261014`. Next acceptance: reload host controls on the Mac, Open Track, share the lyrics-player window, and confirm visible TV lyrics plus Mac audio.
+Protected authority: `rowdy-room/karaoke-lyrics-player-20261014`. Public documentation remains on unmerged branch `codex/lyrics-player-20261014`. Next: publish and verify the host correction, test native window reuse without audible test playback, and confirm Roger's actual TV lyrics and Mac audio.
