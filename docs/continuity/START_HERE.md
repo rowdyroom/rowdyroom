@@ -1,5 +1,15 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-14 — Reusable karaoke lyrics player
+
+- Live host Open Track reuses one lyrics-player window across songs. Host controls remain separate; Hide Controls avoids a native fullscreen transition.
+- Production host and player readbacks matched. Real browser playback, two-song window reuse, and targeted code checks passed.
+- Protected authority: `rowdy-room/karaoke-lyrics-player-20261014`, v1, SHA-256 `a4e1938d99bfff61e08fa6234ed9a50f65fa17969c81c1698e7d0fd2d696aa77`.
+- Public authority: [KARAOKE_LYRICS_PLAYER_2026-10-14.md](KARAOKE_LYRICS_PLAYER_2026-10-14.md), branch `codex/lyrics-player-20261014` (not merged), initial documentation commit `f4e108a20453c6109bb7ae5a67534a02f500724b`.
+- Dated recovery key: `lyrics-player-20261014`; original host source and protected server rollback preserved. Queue, scores, votes, and BP behavior unchanged.
+- Next acceptance: on the Mac, reload host controls, Open Track, share the lyrics-player window using Window or App, and confirm the TV picture plus Mac audio. Physical AirPlay/audio remains unverified. Some YouTube videos prohibit embedding.
+
+
 ## 2026-08-01 — Rowdy Robots full-team mission completion
 
 - All twenty-two local Robot packages are configured, commissioned through bounded real tasks, and active; dispatcher readback shows 22 available and zero paused.
