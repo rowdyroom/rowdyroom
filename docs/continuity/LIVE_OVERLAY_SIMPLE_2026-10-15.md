@@ -21,3 +21,7 @@ Host BP decisions now appear beside the target singer, matched by queue entry ID
 Host SHA-256 `db082a6aecfae18766b662de11009649d8ed237339ce3bcae9f51aabfc2a4db3`. Protected host authority `rowdy-room/bp-inline-host-20261015` v1, SHA-256 `5d439d4e2830f2ee6754feb39dff322a2cb751c678532e53289b6c836bcd29b0`. Recovery key `Rowdy_Room_BP_Host_Recovery_2026-10-15` contains prior/deployed HTML, checks and offline visual fixture; overlay recovery retains pre-rotation HTML.
 
 Exact production source readbacks, full JavaScript syntax, rotation boundaries, target matching, escaping, duplicate guard, post-decision refresh and logout cleanup passed. Offline fixture verified layout. No live BP transaction was executed; no waiting queue entries or pending requests were available for owner acceptance. Roger resolved extra audio by disabling sound on the overlay browser source. Branch remains unmerged.
+
+## Camera space layout
+
+Singer cards are anchored 2% from the top and Live Vote Leaders 2% from the bottom, leaving a flexible transparent gap for the camera. Exact deployed source matched. Live browser confirmed transparent background and 663px gap at 802px viewport height. Deployed SHA-256 `6f01c92b7d7d86d6fee6bcbb97325b2cbb07e245a3db29714a5eaa967afca698`. Prior layout preserved as `index.before-camera-gap.html` in the existing overlay recovery folder. Actual TikTok source placement remains owner-controlled; refresh the same overlay URL to load this layout.
