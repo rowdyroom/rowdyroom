@@ -1,5 +1,10 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-15 — Queue rotation and BP decisions beside singers
+
+Overlay now cycles next three singers with positional labels. Host BP actions are inline with the target singer and in an automatically updating sticky inbox above the queue. Approval retains existing protected BP charge/move behavior; denial leaves order unchanged. Source readbacks and offline checks passed; actual pending-request transaction remains untested. Authority: [LIVE_OVERLAY_SIMPLE_2026-10-15.md](LIVE_OVERLAY_SIMPLE_2026-10-15.md), branch `codex/overlay-simple-20261015` (unmerged); protected host `rowdy-room/bp-inline-host-20261015` v1, overlay `rowdy-room/live-camera-overlay-2026-10-07` v5. Recovery keys and hashes in authority document.
+
+
 ## 2026-10-15 — Simplified live overlay deployed
 
 Singer names retained without song details; top two vote leaders share one horizontal line; bottom information bar removed. Source and browser verification passed. TikTok source refresh/composite remains unverified. Authority: [LIVE_OVERLAY_SIMPLE_2026-10-15.md](LIVE_OVERLAY_SIMPLE_2026-10-15.md), branch `codex/overlay-simple-20261015` (unmerged); protected `rowdy-room/live-camera-overlay-2026-10-07` v2, SHA-256 `19cbe32bb5a4f9fca64a3e9e3aa9e89b91e6a35eaa589c1a24d06f40ff67bd13`. Recovery key `Rowdy_Room_Overlay_Recovery_2026-10-15`.
