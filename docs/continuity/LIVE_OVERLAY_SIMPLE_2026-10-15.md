@@ -29,3 +29,7 @@ Singer cards are anchored 2% from the top and Live Vote Leaders 2% from the bott
 ## Half-gap adjustment
 
 At Roger's request, reduced the camera gap by half while retaining the top singer cards. CSS grid splits remaining transparent space equally before and after the vote leaders. Live gap measured 331.54px versus prior 663.08px at the same 802px viewport height; exact production source readback passed. Prior layout preserved as `index.before-half-gap.html`; screenshot `live-overlay-half-gap.png` in existing overlay recovery. Refresh the same source URL. TikTok positioning remains owner-controlled.
+
+## Swapped overlay order
+
+Live Vote Leaders now appears above Now Singing and Up Next, preserving the half-sized transparent gap. Live DOM measured leaders top 16px, singer row top 386.49px, gap 331.54px at 802px viewport height. Exact production source readback passed. Rollback `index.before-swap.html` and screenshot `live-overlay-swapped.png` retained in existing recovery. Same overlay URL; refresh source to load. Actual TikTok composite placement remains unverified.
