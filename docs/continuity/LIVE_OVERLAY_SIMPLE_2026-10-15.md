@@ -25,3 +25,7 @@ Exact production source readbacks, full JavaScript syntax, rotation boundaries, 
 ## Camera space layout
 
 Singer cards are anchored 2% from the top and Live Vote Leaders 2% from the bottom, leaving a flexible transparent gap for the camera. Exact deployed source matched. Live browser confirmed transparent background and 663px gap at 802px viewport height. Deployed SHA-256 `6f01c92b7d7d86d6fee6bcbb97325b2cbb07e245a3db29714a5eaa967afca698`. Prior layout preserved as `index.before-camera-gap.html` in the existing overlay recovery folder. Actual TikTok source placement remains owner-controlled; refresh the same overlay URL to load this layout.
+
+## Half-gap adjustment
+
+At Roger's request, reduced the camera gap by half while retaining the top singer cards. CSS grid splits remaining transparent space equally before and after the vote leaders. Live gap measured 331.54px versus prior 663.08px at the same 802px viewport height; exact production source readback passed. Prior layout preserved as `index.before-half-gap.html`; screenshot `live-overlay-half-gap.png` in existing overlay recovery. Refresh the same source URL. TikTok positioning remains owner-controlled.
