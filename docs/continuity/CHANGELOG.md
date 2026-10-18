@@ -2,6 +2,8 @@
 
 ## 2026-10-18 — Nine-turn rotation
 
+- Follow-up: fixed polling collapse of Absent singer and deployed saved Normal Queue / Battle Karaoke selector. Live toggle and reload persistence passed with unchanged singer; 61 isolated checks passed. Protected authority v2, hash `aba772e63a6280ed5497c0a6979d8d1cff8ee88a39630653ee81d351d5d91f46`. Detailed record and mode restore package are linked from START_HERE.
+
 - Confirmed repeating host, two rated, two contributor, four guest sequence; regular groups advance after turn nine.
 - Deployed compact host guidance and transactional server cursor. 38 isolated checks and rollback-only MySQL checks passed; exact source readback and unchanged real queue verified. Real multi-singer acceptance remains pending. Preparation commit 42d0d53.
 - Authority: NINE_TURN_ROTATION_2026-10-18.md on codex/queue-host-unified-20260917 (not merged). Protected key: rowdy-room/nine-turn-rotation-2026-10-18. Recovery: Rowdy_Room_Nine_Turn_Recovery_2026-10-18.

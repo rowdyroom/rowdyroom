@@ -2,6 +2,8 @@
 
 ## 2026-10-18 — Nine-turn rotation
 
+- Follow-up deployed: saved Normal Queue / Battle Karaoke switch and stable absent-singer disclosure. 61 isolated tests plus real toggle/reload/dropdown checks passed; current queue unchanged. Final mode Battle Karaoke. Private record now v2, SHA-256 `aba772e63a6280ed5497c0a6979d8d1cff8ee88a39630653ee81d351d5d91f46`; restore package `Rowdy_Room_Nine_Turn_Recovery_2026-10-18/Mode_Switch_2026-10-18`. The v1 evidence below is historical.
+
 - Verification: private v1, history 2776, hash `25823990326871fe41d16c4184f68bc78d80cef85d1694614ab859f2dd369d7f`; recovery instructions hash `5b8db114751eca5d3a08cf077fab4c6bce99d53a80938a94ddeb49eefd747f5d`. Detailed record links the check run and live acceptance boundary.
 
 - Confirmed repeating host, two rated, two contributor, four guest sequence; regular groups advance after turn nine.
