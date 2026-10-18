@@ -2,6 +2,8 @@
 
 ## 2026-10-18 — Nine-turn rotation
 
+- Verification: private v1, history 2776, hash `25823990326871fe41d16c4184f68bc78d80cef85d1694614ab859f2dd369d7f`; recovery instructions hash `5b8db114751eca5d3a08cf077fab4c6bce99d53a80938a94ddeb49eefd747f5d`. Detailed record links the check run and live acceptance boundary.
+
 - Confirmed repeating host, two rated, two contributor, four guest sequence; regular groups advance after turn nine.
 - Deployed compact host guidance and transactional server cursor. 38 isolated checks and rollback-only MySQL checks passed; exact source readback and unchanged real queue verified. Real multi-singer acceptance remains pending. Preparation commit 42d0d53.
 - Authority: NINE_TURN_ROTATION_2026-10-18.md on codex/queue-host-unified-20260917 (not merged). Protected key: rowdy-room/nine-turn-rotation-2026-10-18. Recovery: Rowdy_Room_Nine_Turn_Recovery_2026-10-18.
