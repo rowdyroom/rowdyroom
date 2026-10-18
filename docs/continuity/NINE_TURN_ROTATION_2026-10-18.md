@@ -1,5 +1,11 @@
 # Nine-turn host rotation — 2026-10-18
 
+## Follow-up: show modes and stable absent-singer control
+
+Roger requested a saved Normal Queue / Battle Karaoke switch and reported the absent-singer disclosure collapsing during polling. The prepared fix avoids rebuilding unchanged controls and preserves the disclosure state when data changes. Normal Queue advances in queue order and returns completed singers to the bottom; Battle Karaoke retains the nine-turn cycle. Switching modes leaves the current performance and queue unchanged. Enabling Battle starts at the host after the current song; disabling it clears the battle lineup. Mode updates use the same version and transaction guards. Sixty-one isolated checks passed, including a full normal queue cycle and a switch back to Battle during a non-host song. Live deployment verification pending for this follow-up.
+
+Protected restore package: `Rowdy_Room_Nine_Turn_Recovery_2026-10-18/Mode_Switch_2026-10-18`. The earlier verified v1 record below describes the first deployment; the mode follow-up will supersede it after live verification.
+
 Roger confirmed this exact cycle: host, top two rated singers, top two distinct contributors, then four regular guests. After turn nine, repeat the host and protected categories with the next four waiting guests. Completed regular guests return to the end of the waiting list. One server-owned cursor and a frozen per-round lineup replace manual host bookkeeping; qualifiers refresh at each round boundary.
 
 The host panel provides one Finish Song / Next Singer action, all nine turn roles, and explicit DROP / BRING UP names. Advanced singer tools are collapsed. Open or absent positions are skipped; the host seat requires a real host signup. Song metadata is retained until a new song is submitted. The host is identified as rowdyroger.
