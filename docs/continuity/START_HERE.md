@@ -1,5 +1,12 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-18 — Nine-turn rotation
+
+- Confirmed repeating host, two rated, two contributor, four guest sequence; regular groups advance after turn nine.
+- Prepared compact host guidance and transactional server cursor; 34 isolated checks passed. Deployment verification pending.
+- Authority: NINE_TURN_ROTATION_2026-10-18.md on codex/queue-host-unified-20260917 (not merged). Protected key: rowdy-room/nine-turn-rotation-2026-10-18. Recovery: Rowdy_Room_Nine_Turn_Recovery_2026-10-18.
+
+
 ## 2026-10-13 — Desktop chatbot configured; LIVE acceptance pending
 
 - Desktop activation/incoming-message permission, native !help and concise reply verified saved. Rate1/15 seconds; separate !score disabled; bridge duplicate !help removed and long replies split to140 characters.
