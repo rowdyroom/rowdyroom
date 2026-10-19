@@ -1,5 +1,9 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-19 — Live host rearrangement
+
+- Added a visible Rearrange Singers action and restored move controls in both modes. Server persists the remaining Battle lineup and waiting backlog without ending or moving the current singer. 68 isolated tests passed; deployed source and live UI verified. Protected key `rowdy-room/live-reorder-2026-10-19`; details and recovery linked from START_HERE.
+
 ## 2026-10-18 — Nine-turn rotation
 
 - Follow-up: fixed polling collapse of Absent singer and deployed saved Normal Queue / Battle Karaoke selector. Live toggle and reload persistence passed with unchanged singer; 61 isolated checks passed. Protected authority v2, hash `aba772e63a6280ed5497c0a6979d8d1cff8ee88a39630653ee81d351d5d91f46`. Detailed record and mode restore package are linked from START_HERE.

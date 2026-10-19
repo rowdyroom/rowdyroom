@@ -1,5 +1,11 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-19 — Live singer rearrangement
+
+- Deployed Rearrange Singers and waiting-row move controls in Normal and Battle, preserving the current performance. Manual Battle order is saved for this round. 68 isolated checks, two source readbacks and visible live buttons passed; actual host reorder acceptance pending.
+- Authority: `LIVE_REORDER_2026-10-19.md` on `codex/queue-host-unified-20260917` (not merged), preparation `48c15e0`. Private `rowdy-room/live-reorder-2026-10-19` v1 hash `de28abd8e0876db749f5df9789bac162e8db154fee64304c9d090da12cd351b1`.
+- Recovery: `Rowdy_Room_Nine_Turn_Recovery_2026-10-18/Live_Reorder_2026-10-19`; instructions hash `da0fb3326b38c4e53d22e90e0791f3878da1e0aba88f09b82cb15b0fb2001aff`. Next: use Move Up / Move Down on upcoming singers; current singer stays fixed.
+
 ## 2026-10-18 — Nine-turn rotation
 
 - Follow-up deployed: saved Normal Queue / Battle Karaoke switch and stable absent-singer disclosure. 61 isolated tests plus real toggle/reload/dropdown checks passed; current queue unchanged. Final mode Battle Karaoke. Private record now v2, SHA-256 `aba772e63a6280ed5497c0a6979d8d1cff8ee88a39630653ee81d351d5d91f46`; restore package `Rowdy_Room_Nine_Turn_Recovery_2026-10-18/Mode_Switch_2026-10-18`. The v1 evidence below is historical.
