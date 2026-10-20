@@ -2,7 +2,7 @@
 
 ## 2026-10-19 — Battle fairness and fresh scoring approved
 
-Two vote-protected singers plus six rotating guests; Battle waits for the existing line then starts on the host turn, with fresh scores and preserved history. Local draft passed 37 checks; NOT DEPLOYED. See [Battle fairness](BATTLE_FAIRNESS_2026-10-19.md). Private authority: `rowdy-room/battle-fairness-2026-10-19`; protected recovery: `Rowdy_Room_Battle_Fairness_2026-10-19`. Restore deployment access and reconcile live source before applying.
+Two vote-protected singers plus six rotating guests; Battle waits for the existing line then starts on the host turn, with fresh scores and preserved history. Deployed with four exact source readbacks, rollback-only MySQL verification and host rendering; 37 local checks passed. Current singer, queue and mode unchanged. See [Battle fairness](BATTLE_FAIRNESS_2026-10-19.md). Private authority: `rowdy-room/battle-fairness-2026-10-19`; protected recovery: `Rowdy_Room_Battle_Fairness_2026-10-19`. Next: refresh host controls and observe the first real queued-battle handoff.
 
 ## 2026-10-19 — Live singer rearrangement
 

@@ -1,6 +1,6 @@
 # Battle fairness and fresh scoring — 2026-10-19
 
-Status: Roger-approved rule change; locally tested draft, NOT DEPLOYED.
+Status: deployed with verified source readback, rollback-only MySQL check and host rendering. Actual audience handoff remains unverified.
 
 This decision supersedes the contributor-protected, immediate-start and rolling twelve-hour ranking rules for Battle Karaoke. Host remains in the repeated cycle. The two highest singers by the existing live-vote average remain protected; six other spots rotate in waiting order. Contributions no longer earn a permanent panel slot.
 
@@ -8,8 +8,8 @@ Selecting Battle queues it without changing the current song or waiting order. E
 
 At the actual Battle start, standings begin fresh at zero. Historical votes and performances stay saved. Qualifiers develop from new Battle votes, then update at round boundaries. Scores do not expire after twelve hours; the next actual Battle start creates the next fresh window. Until new votes establish qualifiers, protected slots remain open and are skipped.
 
-Prepared private source changes cover rotation, scoring, pending-line paid-skip protection and host status text. Local checks: 31 rotation/transaction checks, 6 scoring-query checks, PHP syntax and two inline JavaScript parses passed. Production source reconciliation, rollback-only MySQL checks, live browser verification and audience acceptance are outstanding. Prior deployment access was unavailable. No production queue, song, vote, ledger state or live file was changed.
+Deployed rotation, scoring, pending-line paid-skip protection and host status text after reconciling fresh production sources and preserving originals. All four source readbacks matched. The authenticated rollback-only MySQL check passed advisory locking, state upsert/readback/rollback, score query and host + two rated + six regular slot planning. The visible host page rendered the new score text. Current performer, complete singer list and rotation state remained unchanged. Normal Queue remains selected; no real singer was advanced and Battle was not armed by the agent.
 
-Deployment requires fresh live-source reconciliation and a stopped-show migration; do not overwrite a live performance. Existing Battle state must be deliberately rearmed through Normal Queue then Battle to capture the waiting line under the new rules. Candidate source and restore notes remain in protected local storage.
+Local checks: 31 rotation/transaction checks and 6 actual scoring-query checks passed; PHP and both inline JavaScript scripts parse. Actual pending-to-battle audience handoff and paid-skip production behavior remain owner-acceptance gates. Existing active old Battle state must be rearmed through Normal Queue then Battle; deployment was observed in Normal Queue.
 
-Authority: this file on `codex/queue-host-unified-20260917`, not merged into main. Private record: `rowdy-room/battle-fairness-2026-10-19`. Recovery package: `Rowdy_Room_Battle_Fairness_2026-10-19`; recovery instructions SHA-256: `1a844ab3c6ac6580b2527b7233f66030128ad3d8aa84094e30b49ea49de99dea`. Next action: restore authenticated deployment access, reconcile source, preserve live state, run MySQL verification and deploy while the show is stopped.
+Authority: this file on `codex/queue-host-unified-20260917`, not merged into main. Private record: `rowdy-room/battle-fairness-2026-10-19`. Recovery package: `Rowdy_Room_Battle_Fairness_2026-10-19`; recovery instructions SHA-256: `28301a6d2fb271dc65cfef906dbe1ac8bee373e0b0c2383fee6204b49ca7827a`. Next action: refresh the host page, queue Battle Karaoke when desired, and confirm the actual audience handoff after the waiting line finishes.
