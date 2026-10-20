@@ -1,5 +1,9 @@
 # Rowdy Room Project Bible
 
+## Approved Battle Karaoke revision — 2026-10-19
+
+The approved next rules are two singers protected by live-vote average and six rotating guests, with no contributor-protected seats. Battle is queued until everyone already waiting has sung and the turn returns to the host. Battle scores start fresh at actual start and persist until the next Battle start; all history remains saved. This supersedes the older Main 4 and twelve-hour Battle rules below as product intent, but is NOT YET DEPLOYED. See [Battle fairness implementation status](continuity/BATTLE_FAIRNESS_2026-10-19.md).
+
 **Status:** Active source of truth  
 **Last consolidated:** 2026-07-20  
 **Owner:** Roger Jamsek  

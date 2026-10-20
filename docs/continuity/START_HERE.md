@@ -1,5 +1,9 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-19 — Battle fairness and fresh scoring approved
+
+Two vote-protected singers plus six rotating guests; Battle waits for the existing line then starts on the host turn, with fresh scores and preserved history. Local draft passed 37 checks; NOT DEPLOYED. See [Battle fairness](BATTLE_FAIRNESS_2026-10-19.md). Private authority: `rowdy-room/battle-fairness-2026-10-19`; protected recovery: `Rowdy_Room_Battle_Fairness_2026-10-19`. Restore deployment access and reconcile live source before applying.
+
 ## 2026-10-19 — Live singer rearrangement
 
 - Deployed Rearrange Singers and waiting-row move controls in Normal and Battle, preserving the current performance. Manual Battle order is saved for this round. 68 isolated checks, two source readbacks and visible live buttons passed; actual host reorder acceptance pending.
