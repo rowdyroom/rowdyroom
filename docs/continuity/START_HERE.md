@@ -4,6 +4,8 @@
 
 Two vote-protected singers plus six rotating guests; Battle waits for the existing line then starts on the host turn, with fresh scores and preserved history. Deployed with four exact source readbacks, rollback-only MySQL verification and host rendering; 37 local checks passed. Current singer, queue and mode unchanged. See [Battle fairness](BATTLE_FAIRNESS_2026-10-19.md). Private authority: `rowdy-room/battle-fairness-2026-10-19`; protected recovery: `Rowdy_Room_Battle_Fairness_2026-10-19`. Next: refresh host controls and observe the first real queued-battle handoff.
 
+Deployment evidence: public commit `84b8922773484aafc11a1c39ef23c0b71fdb7eb0`; private record `rowdy-room/battle-fairness-2026-10-19` v2, SHA-256 `00b8bcf6c10038bf1ec53f65d4a17ffe87457cfb139fd51d0b92743b4b398757`; run `1b7761ec-431a-482f-bbc5-cc8ddc476001`; recovery instructions SHA-256 `28301a6d2fb271dc65cfef906dbe1ac8bee373e0b0c2383fee6204b49ca7827a`. Source/MySQL/browser/local checks pass; real audience handoff remains a warning.
+
 ## 2026-10-19 — Live singer rearrangement
 
 - Deployed Rearrange Singers and waiting-row move controls in Normal and Battle, preserving the current performance. Manual Battle order is saved for this round. 68 isolated checks, two source readbacks and visible live buttons passed; actual host reorder acceptance pending.
