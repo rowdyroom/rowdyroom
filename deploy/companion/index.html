@@ -1,0 +1,355 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rowdy Room Companion</title>
+  <link rel="stylesheet" href="assets/style.css?v=20260917-wizard-1">
+  <!-- youtube-signup-data-path: 2026-09-17 -->
+  <!-- guided-signup-wizard: 2026-09-17 -->
+  <!-- current-panel-lineup-hidden: 2026-09-17 -->
+<style id="next-show-signup-only">
+    .stats{display:none!important}
+    .top-tabs{display:flex!important}
+    .tab[data-screen="songbook"],.tab[data-screen="requests"],.tab[data-screen="rumble"],.tab[data-screen="memory"],.tab[data-screen="settings"]{display:none!important}
+    #songbook,#requests,#rumble,#memory,#settings{display:none!important}
+  .queue-preview-card{display:none!important}
+  .companion-topbar{position:sticky;top:0;z-index:100}
+  .companion-topbar>header,.companion-topbar>.top-tabs{position:static;top:auto}
+  .viewer-help a{display:block;min-height:44px;padding:10px 0}
+</style>
+  <!-- next-show-signup-only: 2026-09-17 -->
+<style>body:has(#vote.active) .viewer-help{display:none!important}.vote-rules{margin:14px 0;text-align:center;font-size:15px;line-height:1.5;color:var(--cyan);font-weight:700}#vote>.card{max-width:680px;margin:0 auto;padding:20px}#vote .vote-current{font-weight:700}#vote .vote-current p{margin:0 0 8px}#vote .vote-live-score{font-size:14px;color:var(--gold);margin:0 0 18px}#vote h2{font-size:20px;margin:16px 0 10px}#vote .vote-stars{margin:8px 0}#vote .small{margin:8px 0 18px}#vote .star{font-size:30px;min-height:52px;line-height:1}#vote .star:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}</style></head>
+<body dir="ltr" spellcheck="false" style="direction: ltr; min-height: 825px;">
+<div class="app">
+  <div class="companion-topbar">
+  <header>
+    <div class="brand">
+      <div class="logo">Rowdy Room</div>
+      <div class="live">LIVE</div>
+    </div>
+    <div class="stats">
+      <div class="stat"><span>User</span><strong id="who">@viewer</strong></div>
+      <div class="stat"><span>BP</span><strong id="bp">0</strong></div>
+      <div class="stat"><span>Score</span><strong id="score">0</strong></div>
+    </div>
+  </header>
+
+  <nav class="tabs top-tabs">
+    <button class="tab active" data-screen="queue">Queue</button>
+    <button class="tab" data-screen="songbook">Songs</button>
+    <button class="tab" data-screen="vote">Vote</button>
+    <button class="tab" data-screen="requests">Requests</button>
+    <button class="tab" data-screen="rumble">Rumble</button>
+    <button class="tab" data-screen="memory">Memory</button>
+    <button class="tab" data-screen="earn">Boost</button>
+    <button class="tab" data-screen="settings">More</button>
+  </nav>
+  </div>
+
+  <aside class="viewer-help" style="margin:12px 16px;padding:12px 16px;border:1px solid #53e5ef;border-radius:12px;background:#170c2d;color:#fff;font-size:15px;line-height:1.4"><strong>New here? Everyone can join the singing rotation.</strong><br><a href="guide.html" style="color:#89f4ff;font-weight:700">How to sign up, rotate in, earn BP & use gifts →</a></aside>
+  <main>
+    <section class="screen active" id="queue">
+      <div class="card signup-wizard-card">
+        <div class="wizard-heading">
+          <span class="wizard-kicker">Singer Sign Up</span>
+          <h1 id="wizardTitle">How many singers?</h1>
+          <p id="wizardHelp">We will guide you through the whole signup.</p>
+        </div>
+        <div class="wizard-progress" aria-label="Signup progress">
+          <span data-wstep="1" class="active">1</span><i></i><span data-wstep="2">2</span><i></i><span data-wstep="3">3</span><i></i><span data-wstep="4">4</span><i></i><span data-wstep="5">5</span>
+        </div>
+
+        <div id="signupStep1" class="wizard-step active">
+          <p class="wizard-question">How many people are singing this song?</p>
+          <div class="count-choice" role="group" aria-label="Number of singers">
+            <button type="button" onclick="chooseSingerCount(1)"><strong>1</strong><span>Solo</span></button>
+            <button type="button" onclick="chooseSingerCount(2)"><strong>2</strong><span>Duet</span></button>
+            <button type="button" onclick="chooseSingerCount(3)"><strong>3</strong><span>Trio</span></button>
+            <button type="button" onclick="chooseSingerCount(4)"><strong>4</strong><span>Group</span></button>
+          </div>
+        </div>
+
+        <div id="signupStep2" class="wizard-step">
+          <p class="wizard-question">Who is singing?</p>
+          <p class="small">Use the names you want the host and TV screen to show.</p>
+          <div id="singerNameFields" class="wizard-fields"></div>
+          <label for="signupTikTok">TikTok username (optional)</label><input id="signupTikTok" placeholder="@yourhandle" autocomplete="off" maxlength="25">
+          <p class="small">Connect your actual TikTok username to earn and spend BP. For groups, use the signup person's handle.</p>
+          <div class="wizard-actions"><button class="secondary" type="button" onclick="wizardBack(1)">Back</button><button type="button" onclick="continueSingerNames()">Find My Song</button></div>
+        </div>
+
+        <div id="signupStep3" class="wizard-step">
+          <p class="wizard-question">Choose your karaoke video</p>
+          <p class="small">SongFinder opens YouTube search so you can pick the exact version the host should play.</p>
+          <div id="selectedTrack" class="selected-track"><span>No video selected yet.</span></div>
+          <button id="chooseTrackBtn" type="button" onclick="openWizardSongFinder()">Open SongFinder</button>
+          <button class="secondary" type="button" onclick="wizardBack(2)">Back</button>
+        </div>
+
+        <div id="signupStep4" class="wizard-step">
+          <p class="wizard-question">Would you like to support the show?</p>
+          <p class="small">This is optional. Leave a Cash App tip, add a paid performance-memory package, or skip.</p>
+          <div class="support-choice">
+            <button type="button" onclick="chooseCashTip()"><strong>Leave a Tip</strong><span>Cash App · $rogerjamsek</span></button>
+            <button type="button" onclick="showMemoryPackages()"><strong>Save My Performance</strong><span>Photos and video from $5</span></button>
+            <button class="secondary" type="button" onclick="chooseNoSupport()"><strong>No Thanks</strong><span>Continue signup</span></button>
+          </div>
+          <div id="memoryPackageBox" class="memory-package-box">
+            <p class="wizard-question small-question">Choose a performance-memory package</p>
+            <div class="package-choice">
+              <button type="button" onclick="chooseMemoryPackage('Bronze - Photos',5,'https://www.paypal.com/ncp/payment/E5H7U33HZFCK2')"><strong>$5 Bronze</strong><span>Photos</span></button>
+              <button type="button" onclick="chooseMemoryPackage('Silver - Highlight Reel + Photos',10,'https://www.paypal.com/ncp/payment/FMY93PHTHRFZ4')"><strong>$10 Silver</strong><span>Highlight reel + photos</span></button>
+              <button type="button" onclick="chooseMemoryPackage('Gold - Full Performance + Highlight + Photos',20,'https://www.paypal.com/ncp/payment/ZXRV7W3PSR398')"><strong>$20 Gold</strong><span>Full performance + highlight + photos</span></button>
+            </div>
+            <div id="memoryOrderFields" class="wizard-fields memory-order-fields">
+              <label><span>Email</span><input id="memoryEmail" type="email" autocomplete="email" placeholder="you@example.com"></label>
+              <label><span>Phone</span><input id="memoryPhone" type="tel" autocomplete="tel" placeholder="Phone number"></label>
+              <label><span>Delivery</span><select id="memoryDelivery"><option>Email</option><option>Text Message</option><option>Both</option><option>In Person</option></select></label>
+              <label><span>Notes (optional)</span><input id="memoryNotes" placeholder="Birthday, duet, special moment..."></label>
+              <label class="check-label"><input id="memoryPaidConfirm" type="checkbox"><span>I opened PayPal and paid, or I will pay the host in person before performing.</span></label>
+              <label class="check-label"><input id="memoryConsent" type="checkbox"><span>I agree that Rowdy Room can record this performance and contact me for delivery.</span></label>
+              <button type="button" onclick="continueMemoryOrder()">Continue With Package</button>
+            </div>
+          </div>
+          <button class="text-button" type="button" onclick="wizardBack(3)">Back to song</button>
+        </div>
+
+        <div id="signupStep5" class="wizard-step">
+          <p class="wizard-question">Confirm your signup</p>
+          <div id="signupReview" class="signup-review"></div>
+          <div class="wizard-actions"><button class="secondary" type="button" onclick="wizardBack(4)">Back</button><button id="confirmSignupBtn" type="button" onclick="joinQueue()">Confirm & Join Queue</button></div>
+        </div>
+
+        <div id="signupSuccess" class="wizard-step success-step">
+          <div class="success-check">✓</div><h2>Thanks for signing up!</h2><p id="signupSuccessText"></p><p class="small">The signup screen will restart for the next singer.</p>
+          <button type="button" onclick="finishSignupToStart()">Start Another Signup</button>
+        </div>
+
+        <input id="song" type="hidden"><input id="artist" type="hidden"><input id="songSourceName" type="hidden"><input id="songSourceUrl" type="hidden"><input id="songDurationSeconds" type="hidden"><input id="songDurationText" type="hidden"><input id="songDurationIso" type="hidden">
+      </div>
+      <div class="card queue-preview-card"><h2>Live Queue</h2><p class="small">Your place appears here immediately after confirmation.</p><div id="queueList"><br></div></div>
+    </section>
+
+    <section class="screen" id="songbook">
+      <div class="card">
+        <h1>Songbook</h1>
+        <p>Search the Rowdy Room songbook, save favorites, request a listed song, or send a missing-song request to the host.</p>
+
+        <div class="songbook-searchbar">
+          <input id="songSearch" placeholder="Search title, artist, or song code">
+          <button onclick="searchSongs()">Search</button>
+        </div>
+
+        <div class="row-actions">
+          <button class="secondary" onclick="loadFavorites()">My Favorites</button>
+          <button class="secondary" onclick="searchSongs('')">Recent Songs</button>
+        </div>
+
+        <div id="songResults"><br></div>
+      </div>
+
+      <div class="card">
+        <h2>Request A Missing Song</h2>
+        <p class="small">Use this when the song is not listed. The host can approve, reject, or add it to the catalog later.</p>
+        <input id="customSongTitle" placeholder="Song title">
+        <input id="customSongArtist" placeholder="Artist">
+        <button onclick="customSongRequest()">Request Missing Song</button>
+      </div>
+
+      <div class="card">
+        <h2>My Song Requests</h2>
+        <div id="songRequestList"><br></div>
+      </div>
+    </section>
+
+    <section class="screen" id="vote">
+      <p class="vote-rules">Voting Rules — Be Honest. Be Fair. And be considerate.</p>
+      <div class="card">
+        <div id="currentPerformance" class="vote-current"></div>
+        <p id="currentVoteScore" class="vote-live-score" role="status" aria-live="polite">Live audience score: Voting closed</p>
+        <h2 id="overallRatingLabel">Overall Rating</h2>
+        <div class="stars vote-stars" role="group" aria-labelledby="overallRatingLabel">
+          <button class="star" type="button" aria-label="1 star" aria-pressed="false" onclick="selectVote(1)">★</button>
+          <button class="star" type="button" aria-label="2 stars" aria-pressed="false" onclick="selectVote(2)">★</button>
+          <button class="star" type="button" aria-label="3 stars" aria-pressed="false" onclick="selectVote(3)">★</button>
+          <button class="star" type="button" aria-label="4 stars" aria-pressed="false" onclick="selectVote(4)">★</button>
+          <button class="star" type="button" aria-label="5 stars" aria-pressed="false" onclick="selectVote(5)">★</button>
+        </div>
+        <p class="small" id="overallVoteText" role="status">Choose 1–5 stars.</p>
+        <button id="submitVoteButton" type="button" onclick="submitFairVote()">Submit Vote</button>
+      </div>
+    </section>
+
+    <section class="screen" id="requests">
+      <div class="card">
+        <h1>Requests</h1>
+        <p>Sponsor exact performer actions. Some requests may need host or performer approval before they activate.</p>
+
+        <div class="spend-grid">
+          <button class="spend-card" onclick="confirmSpend('Song Highlight',100,()=&gt;perf('song_highlight'))">
+            <strong>Song Highlight</strong>
+            <span>Gives a singer/song extra attention during the performance. It does not buy votes or guarantee a win.</span>
+            <strong>100 BP</strong>
+          </button>
+
+          <button class="spend-card" onclick="confirmSpend('Performance Spotlight',250,()=&gt;perf('performance_spotlight'))">
+            <strong>Performance Spotlight</strong>
+            <span>A stronger spotlight moment for the performer. Approval may be required because it affects the live show.</span>
+            <strong>250 BP</strong>
+          </button>
+
+          <button class="spend-card" onclick="confirmSpend('Turn Off Voting',75,()=&gt;perf('turn_off_voting'))">
+            <strong>Turn Off Voting</strong>
+            <span>Disables live voting for the current performer when approved. Used for protected or non-scored moments.</span>
+            <strong>75 BP</strong>
+          </button>
+
+          <button class="spend-card" onclick="confirmSpend('Move Ahead 1 Spot',100,()=&gt;perf('move_ahead_1'))">
+            <strong>Move Ahead 1 Spot</strong>
+            <span>Moves a singer up one queue spot when protection rules allow. Cannot pass current, next, or on deck.</span>
+            <strong>100 BP</strong>
+          </button>
+
+          <button class="spend-card danger-spend" onclick="confirmSpend('Emergency Line Jump',1000,()=&gt;perf('emergency_line_jump'))">
+            <strong>Emergency Line Jump</strong>
+            <span>High-impact queue action. Moves a singer near the front after the current singer. Host timing applies.</span>
+            <strong>1,000 BP</strong>
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>My Performer Requests</h2>
+        <div id="perfList"><br></div>
+      </div>
+    </section>
+
+    <section class="screen" id="rumble">
+      <div class="card">
+        <h1>Rumble</h1>
+        <p>Use BP for approved Rumble actions. Rumble is activated by the room, not by a fixed timer.</p>
+
+        <div class="spend-grid">
+          <button class="spend-card" onclick="confirmSpend('Sponsor Rumble Slot',250,()=&gt;rumbleSlot())">
+            <strong>Sponsor Rumble Slot</strong>
+            <span>Fills 1 of 4 Rumble activation slots.</span>
+            <strong>250 BP</strong>
+          </button>
+
+          <button class="spend-card danger-spend" onclick="confirmSpend('Full Rumble Activation',1000,()=&gt;rumbleActivate())">
+            <strong>Full Rumble Activation</strong>
+            <span>Activates a full Rumble when rules allow. Main 4 protection can delay activation.</span>
+            <strong>1,000 BP</strong>
+          </button>
+
+          <button class="spend-card" onclick="confirmSpend('Punch Wheel',150,()=&gt;punch())">
+            <strong>Punch Wheel</strong>
+            <span>Spin for 5 Second Timer, Miss, Power Punch, or Skip Turn. Chance-based pressure, not a guaranteed hit.</span>
+            <strong>150 BP</strong>
+          </button>
+
+          <button class="spend-card" onclick="confirmSpend('Lifeline Wheel',250,()=&gt;lifeline())">
+            <strong>Lifeline Wheel</strong>
+            <span>Randomly selects one unused team lifeline: audience, hint, team help, or phone a friend.</span>
+            <strong>250 BP</strong>
+          </button>
+
+          <button class="spend-card" onclick="confirmSpend('Resurrection Token',350,()=&gt;resurrection())">
+            <strong>Resurrection Token</strong>
+            <span>Restores one player to full health. One token per player per match/show window.</span>
+            <strong>350 BP</strong>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="memory">
+      <div class="card">
+        <h1>Memories</h1>
+        <p>Request clips and highlights from Rowdy Room moments.</p>
+
+        <div class="spend-grid">
+          <button class="spend-card" onclick="confirmSpend('Memory Clip',250,()=&gt;memory('memory_clip'))">
+            <strong>Memory Clip</strong>
+            <span>A saved clip request for a performance or live moment. Delivered when the clip is ready.</span>
+            <strong>250 BP</strong>
+          </button>
+
+          <button class="spend-card" onclick="confirmSpend('Featured Highlight',500,()=&gt;memory('featured_highlight'))">
+            <strong>Featured Highlight</strong>
+            <span>A bigger highlight request built for stronger sharing or feature use. More edited/prominent than a standard clip.</span>
+            <strong>500 BP</strong>
+          </button>
+        </div>
+
+        <p class="fine-print">Memory requests can show as Requested, Processing, Ready, Sent, Needs Review, or Failed depending on capture and delivery status.</p>
+      </div>
+
+      <div class="card">
+        <h2>My Memory Requests</h2>
+        <div id="memoryList"><br></div>
+      </div>
+    </section>
+
+    <section class="screen" id="earn">
+      <div class="card boost-page"><h1>Boost Points</h1>
+        <label for="boostHandle">TikTok username</label><input id="boostHandle" placeholder="@yourhandle" maxlength="25" autocomplete="off">
+        <button type="button" onclick="connectBoost()">Connect / Refresh BP</button>
+        <button type="button" class="secondary" onclick="disconnectBoost()">Disconnect Username</button>
+        <div class="boost-balance-box"><span>Your BP Balance</span><strong id="walletBalance">—</strong></div>
+        <p id="boostIdentity" class="small">Connect your TikTok username to see your points.</p>
+        <h2>Get BP with TikTok LIVE Gifts</h2>
+        <p>Send one of these gifts during the host's TikTok LIVE. BP goes automatically to the wallet for your TikTok username. Connect that same username here to view and spend it.</p>
+        <ul><li>Hand Heart: <strong>100 BP</strong></li><li>Amped Up: <strong>274 BP</strong></li><li>Drum Pop: <strong>575 BP</strong></li><li>Gold Mine: <strong>1,200 BP</strong></li></ul>
+        <p class="fine-print">Buy/send gifts through TikTok's LIVE gift tray. Each completed gift credits the listed BP; a completed gift streak credits that amount for each gift in the streak. TikFinity must be connected. Gifts do not move your turn automatically—request a skip below for host approval.</p>
+        <h2>Skip Ahead · 25 BP per position</h2><p>TikTok chat: <code>!skip 2</code> for yourself or <code>!skip @friend 2</code> for a friend. Choose 1–3 positions; host approval required.</p><p>Move your own turn or sponsor another singer. Your wallet pays for the skip. You cannot pass the current or up-next singer.</p>
+        <label for="boostEntry">Singer to move forward</label><select id="boostEntry" onchange="updateSkipQuote()"><option value="">Connect your username first</option></select>
+        <label for="boostSpots">Positions to skip</label><input id="boostSpots" type="number" min="1" max="3" value="1" oninput="updateSkipQuote()">
+        <button id="boostSkipButton" type="button" onclick="submitBoost('line_skip')">Request Skip · 25 BP</button>
+        <h2>Request a Song to Play · 25 BP</h2><p>Ask the host to play a song. This does not put you in the singing rotation.</p>
+        <label for="boostSong">Song title</label><input id="boostSong" maxlength="200" placeholder="Song title">
+        <label for="boostArtist">Artist (optional)</label><input id="boostArtist" maxlength="150" placeholder="Artist">
+        <label for="boostUrl">YouTube link (optional)</label><input id="boostUrl" type="url" maxlength="500" placeholder="https://youtu.be/…">
+        <button type="button" onclick="submitBoost('play_song')">Request Song · 25 BP</button>
+        <p class="fine-print">Each person can buy up to 3 positions for themselves and 3 positions for other singers per rolling hour. The host checks the requester and approves both options. BP is charged only on approval. Declined requests cost nothing.</p>
+        <h2>Earn BP by Watching & Participating</h2>
+        <ul><li>Active TikTok viewers: 1 BP per five-minute interval with a comment or likes (up to 12 BP per hour). No Companion App required; TikFinity must be connected to the live show. Silent viewing is not tracked.</li><li>Accepted live vote: 1 BP (up to 12 BP per hour).</li><li>TikTok follow: 10 BP. Live share: 15 BP. Like milestone: 5 BP, when recorded by the show's TikTok integration.</li><li>Completed singing: 10 BP (up to 10 BP per hour).</li></ul>
+        <p id="boostWatchStatus" class="small">Use your actual TikTok username to see rewards earned during the live show. TikTok activity rewards arrive even with this app closed.</p>
+        <h2>Your Requests</h2><div id="boostHistory">No requests loaded.</div>
+      </div>
+    </section>
+
+    <section class="screen" id="settings">
+      <div class="card">
+        <h1>Profile</h1>
+        <p>Create or load your Rowdy Room profile by TikTok handle. Full production identity verification is still handled through live-code verification.</p>
+        <input id="profileHandle" placeholder="@yourhandle">
+        <button onclick="resolveIdentity()">Use / Create Profile</button>
+        <button class="secondary" onclick="linkTikTok()">Link TikTok Handle</button>
+        <button onclick="startLiveCode()">Start Live Code Verification</button>
+        <input id="manualComment" placeholder="Manual test comment, e.g. RR-1234">
+        <button class="secondary" onclick="manualVerifyLiveCode()">Manual Verify Code</button>
+        <button class="secondary" onclick="bootstrap()">Refresh App</button>
+        <div id="liveCodeBox"><br></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="card fine-print">
+    Rowdy Room SongFinder uses YouTube API Services for user-requested public video search.
+    Use is subject to the
+    <a href="https://songfinder.rowdyroom.site/terms.html" target="_blank" rel="noopener">Rowdy Room SongFinder Terms</a>,
+    <a href="https://songfinder.rowdyroom.site/privacy.html" target="_blank" rel="noopener">SongFinder Privacy Policy</a>,
+    <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a>, and
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
+  </footer>
+
+  <div class="toast" id="toast"><br></div>
+</div>
+
+<!-- Companion UI content cleanup v5 -->
+<!-- Songbook Module v7 -->
+
+
+
+<script src="assets/app-single-vote-20261026.js"></script>
+</body></html>
