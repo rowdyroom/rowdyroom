@@ -1,5 +1,9 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-26 - Stream Deck voting timer
+
+Installed page 6 top-left in Rowdy Room Live: short press start/hide, hold 0.7s restart. Existing 40 keys preserved. See [Stream Deck timer](STREAM_DECK_VOTE_TIMER_2026-10-26.md). Source bd29680 on codex/voting-announcements-20261026 (unmerged); private rowdy-room/stream-deck-vote-timer-2026-10-26 v1/hash c63fc254d1c4a1c2ad6e678d9d49308d605b4408e97d8cc3b8222c94a2ea3d16. Protected recovery Rowdy_Room_VoteTimer_StreamDeck_2026-10-26. Signed API, SDK event and loaded key checks pass; physical key acceptance remains unobserved.
+
 ## 2026-10-26 - One overall five-star vote
 
 Deployed single Overall Rating selector; direct1-5 payload replaces lower-of-two scoring in the client. Existing API, votes and results preserved. Source cdca97b, codex/voting-announcements-20261026 (unmerged). See SINGLE_OVERALL_VOTE_2026-10-26.md; private rowdy-room/single-overall-vote-2026-10-26 v1/hashf2a04ee664d969422f2e8ab0a074952050e3cc195c459e16891599f8146eb468. Recovery Rowdy_Room_One_Star_Score_2026-10-26. Source/payload/browser/API boundary checks passed; next real audience submission unobserved. Refresh Companion.
