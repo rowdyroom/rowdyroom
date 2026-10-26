@@ -503,3 +503,9 @@ An older laptop is not part of the authoritative equipment inventory and is not 
 - Final owner gate: Roger must listen to the delivered full-performance file and confirm the vocal/music balance before customer sales begin.
 
 Verification receipt: check run231278b3-874a-407b-b307-e3c818e2766d has4 pass/1 warn (LIVE viewer chat). Public verification commit0706532. Local recovery archive Rowdy_Room_Voting_Announcements_2026-10-26.zip SHA256b621cd8afb6b769ea220e81307e93a60b89464aa5cbc3865fcd2bc031d2fc1b5. Timer left hidden after testing.
+
+## 2026-10-26 - Website prompt follows the timer
+
+Added rowdyroom.site and To sing or vote inside the centered voting-clock card. The address is absent when the timer is hidden and appears with it; it remains with Time's up until Hide. Browser visibility verified both directions; HTML server source matched after excluding provider analytics. Live Studio must refresh its existing Link source to load the new markup. This is no guarantee against TikTok moderation. No chatbot cadence, queue or voting rules changed.
+
+Source commit912f730 on codex/voting-announcements-20261026 (unmerged). New overlay SHA256bdcc8e6669023bc751731f2983a65a25f1d03f966e35ca990455c4b8355e4f4a. Private rowdy-room/voting-announcements-2026-10-26 v5/history3189/hash7c6531b734d8d66a1d02d27e2bfb376acb38a761678543dd41caf2140c3fd9c8. Local recovery uses existing Rowdy_Room_Voting_Announcements_2026-10-26: overlay.before-website.html, overlay.website-readback.html, overlay-website-prompt.png and updated build.py. Rollback restores overlay.before-website.html. Timer left hidden after verification.
