@@ -2,7 +2,7 @@
 
 ## 2026-10-26 - Deployed centered voting timer and room reminders
 
-Authority: docs/continuity/VOTING_ANNOUNCEMENTS_2026-10-26.md, codex/voting-announcements-20261026 (unmerged), implementation8917d2e. Private rowdy-room/voting-announcements-2026-10-26 v3/hash58ce8b12dd7dd0cd255b7e4e98bcbdbe08b74de5965620e87a1805d6e57ea85b. Recovery Rowdy_Room_Voting_Announcements_2026-10-26. Timer verified; centered Live Studio refresh and next-LIVE chat acceptance pending.
+Authority: docs/continuity/VOTING_ANNOUNCEMENTS_2026-10-26.md, codex/voting-announcements-20261026 (unmerged), implementation8917d2e. Private rowdy-room/voting-announcements-2026-10-26 v4/history3187/hash20adb65db513e0d4a5f1fab27918671d3032a3c8a1ffa1facd000a9af4845393. Recovery Rowdy_Room_Voting_Announcements_2026-10-26. Timer and centered Live Studio source preview verified; next-LIVE chat acceptance pending.
 
 ## 2026-10-26 - Room announcements and manual voting timer
 
