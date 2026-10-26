@@ -653,3 +653,5 @@ Status: Implemented with equipment recovery still open.
 - Added host-authenticated waiting-singer drag/drop and Move Up/Down to the PHP queue, with exact-set validation and transactional position updates.
 - Exposed PHP live vote average and count on host, Companion Vote, and TV; kept saved performance totals current for final-minute ballots.
 - Verified unauthenticated reorder HTTP 401, live reorder and restoration, shared queue readback, visible score states, and private recovery copies. A real ballot remains an open acceptance check.
+
+Verification receipt: check run231278b3-874a-407b-b307-e3c818e2766d has4 pass/1 warn (LIVE viewer chat). Public verification commit0706532. Local recovery archive Rowdy_Room_Voting_Announcements_2026-10-26.zip SHA256b621cd8afb6b769ea220e81307e93a60b89464aa5cbc3865fcd2bc031d2fc1b5. Timer left hidden after testing.

@@ -501,3 +501,5 @@ An older laptop is not part of the authoritative equipment inventory and is not 
 - Production worker is healthy and idle on `https://rowdyroom.site/api/queue`.
 - Public-safe implementation commit `21e4674`; 323-entry recovery archive `rowdyroom-final-fulfillment-21e4674.zip`, SHA-256 `2C26F256BC4CDE86992379730AA8E59F41CA518284A0862B49EB9196D16F009F`.
 - Final owner gate: Roger must listen to the delivered full-performance file and confirm the vocal/music balance before customer sales begin.
+
+Verification receipt: check run231278b3-874a-407b-b307-e3c818e2766d has4 pass/1 warn (LIVE viewer chat). Public verification commit0706532. Local recovery archive Rowdy_Room_Voting_Announcements_2026-10-26.zip SHA256b621cd8afb6b769ea220e81307e93a60b89464aa5cbc3865fcd2bc031d2fc1b5. Timer left hidden after testing.
