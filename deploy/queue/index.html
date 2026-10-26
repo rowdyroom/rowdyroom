@@ -1,0 +1,1364 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Rowdy Room Queue - Unified Live Controls</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+:root{
+  --bg:#050008;--panel:rgba(15,8,28,.88);--panel2:rgba(36,14,62,.72);
+  --royal:#6d28d9;--purple:#a855f7;--cyan:#22d3ee;--cyan2:#67e8f9;
+  --gold:#facc15;--text:#fff;--muted:#c9b8df;--border:rgba(168,85,247,.38);
+  --red:#ef4444;--green:#22c55e;--shadow:0 0 34px rgba(109,40,217,.42),0 0 16px rgba(34,211,238,.18);
+}
+*{box-sizing:border-box}
+html{min-height:100%;background:var(--bg)}
+body{
+  margin:0;min-height:100vh;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--text);
+  background:radial-gradient(circle at 18% 10%,rgba(168,85,247,.34),transparent 30%),radial-gradient(circle at 84% 18%,rgba(34,211,238,.22),transparent 28%),linear-gradient(135deg,#050008 0%,#10001d 42%,#050008 100%);
+  overflow-x:hidden;
+}
+.banner{position:sticky;top:0;z-index:60;height:86px;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#07000d;background:linear-gradient(90deg,var(--cyan),#fff,var(--gold),var(--cyan));border-bottom:2px solid rgba(255,255,255,.38);box-shadow:0 0 30px rgba(34,211,238,.45),0 0 56px rgba(250,204,21,.25)}
+
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+.wrap{position:relative;z-index:1;width:min(1500px,96vw);margin:auto;padding:clamp(14px,2vw,26px) 0 50px}
+.top{text-align:center;margin:18px 0 16px}
+h1{font-size:clamp(46px,7vw,112px);margin:0;color:var(--cyan2);line-height:.86;letter-spacing:.02em;text-transform:uppercase;font-weight:1000;text-shadow:0 0 10px var(--cyan),0 0 24px var(--royal),0 0 44px rgba(168,85,247,.9)}
+.sub{margin:.7rem 0 0;color:#fff;font-weight:900;letter-spacing:.16em;text-transform:uppercase;text-shadow:0 0 16px rgba(168,85,247,.5)}
+h2{font-size:clamp(24px,2.3vw,38px);line-height:1;margin:12px 0 16px;font-weight:1000;text-transform:uppercase;letter-spacing:.03em;color:#fff;text-shadow:0 0 18px rgba(168,85,247,.65)}
+.card{position:relative;background:linear-gradient(145deg,rgba(20,8,38,.9),rgba(8,4,17,.94));border:1px solid var(--border);border-radius:28px;padding:clamp(16px,1.7vw,28px);margin:14px 0;box-shadow:var(--shadow),inset 0 0 0 1px rgba(255,255,255,.06);overflow:hidden}
+.card:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(34,211,238,.12),transparent 32%,rgba(250,204,21,.08));pointer-events:none}.card>*{position:relative;z-index:1}
+.grid{display:grid;grid-template-columns:minmax(360px,.86fr) minmax(480px,1.14fr);gap:18px;align-items:stretch}
+input,button,select{width:100%;border-radius:18px;border:1px solid rgba(168,85,247,.42);padding:14px 16px;background:rgba(9,3,20,.9);color:#fff;font-size:clamp(16px,1.15vw,20px);outline:none}
+input{min-height:52px;box-shadow:inset 0 0 20px rgba(0,0,0,.35)}input::placeholder{color:rgba(218,201,255,.62)}
+input:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(34,211,238,.18),0 0 22px rgba(34,211,238,.24)}
+button{cursor:pointer;font-weight:1000;text-transform:uppercase;letter-spacing:.04em;transition:transform .16s ease,filter .16s ease,box-shadow .16s ease;min-height:50px}button:hover{transform:translateY(-1px);filter:brightness(1.08)}button:active{transform:translateY(1px) scale(.99)}
+.primary{background:linear-gradient(135deg,var(--cyan),#8b5cf6,var(--purple));color:#fff;border:1px solid rgba(255,255,255,.28);box-shadow:0 0 22px rgba(34,211,238,.35)}
+.secondary{background:rgba(168,85,247,.16);color:#f5e8ff;border-color:rgba(192,132,252,.45)}
+.danger{background:linear-gradient(135deg,#dc2626,#7f1d1d);border:1px solid rgba(248,113,113,.5);color:#fff}
+.good{background:linear-gradient(135deg,#22c55e,#16a34a);color:#031308;border:1px solid rgba(134,239,172,.5)}
+.toggleOn{box-shadow:0 0 24px rgba(34,211,238,.85),0 0 28px rgba(168,85,247,.65),0 0 10px rgba(255,255,255,.5) inset!important;border:2px solid var(--cyan)!important;background:linear-gradient(135deg,var(--cyan),var(--purple));color:#fff}
+.row{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:clamp(13px,1.25vw,20px);border-left:5px solid var(--cyan);border-radius:20px;background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(168,85,247,.1));margin:10px 0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06),0 10px 26px rgba(0,0,0,.28)}
+.queueRow[draggable="true"]{cursor:grab;touch-action:none}.queueRow.dragging{opacity:.55}.queueRow.drag-over{outline:3px solid var(--cyan);box-shadow:0 0 28px rgba(34,211,238,.5),inset 0 0 0 1px rgba(255,255,255,.08)}.drag-handle{display:inline-block;color:var(--cyan2);font-weight:1000;margin-right:10px;text-shadow:0 0 12px rgba(34,211,238,.55);user-select:none}
+.name{font-size:clamp(21px,1.8vw,34px);font-weight:1000;letter-spacing:.01em;color:#fff;text-shadow:0 0 12px rgba(34,211,238,.34)}
+.song{color:var(--muted);font-size:clamp(15px,1.15vw,20px);font-weight:700}.score{color:var(--gold);font-weight:1000;font-size:clamp(15px,1.2vw,22px);text-shadow:0 0 14px rgba(250,204,21,.32)}
+.pill{display:inline-flex;padding:7px 12px;border-radius:999px;background:rgba(34,211,238,.12);color:var(--cyan2);border:1px solid rgba(34,211,238,.38);font-weight:1000;font-size:clamp(12px,.9vw,15px);letter-spacing:.14em;text-transform:uppercase;box-shadow:0 0 16px rgba(34,211,238,.18)}
+.now{border:2px solid rgba(34,211,238,.75);background:linear-gradient(135deg,rgba(34,211,238,.16),rgba(109,40,217,.18),rgba(250,204,21,.08));box-shadow:0 0 34px rgba(34,211,238,.28),0 0 36px rgba(168,85,247,.35)}
+#nowName{font-size:clamp(34px,4vw,72px);line-height:.95;color:var(--cyan2);text-shadow:0 0 18px var(--cyan),0 0 34px var(--purple)}
+#nowSong{font-size:clamp(19px,1.8vw,34px)}.small{font-size:clamp(13px,1vw,17px);color:var(--muted);font-weight:700}.hostOnly{display:none!important}.host .hostOnly{display:block!important}.host .hostGrid{display:grid!important}.viewerOnly{display:block}.host .viewerOnly{display:block}
+.controls{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.toggles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.roundBtns{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.full{grid-column:1/-1}.removeBox{background:rgba(34,211,238,.08);border:1px solid rgba(34,211,238,.25);border-radius:20px;padding:14px;margin-top:14px}
+#tvPanel{display:none}
+body.tvMode .wrap .normalPage{display:none}
+body.tvMode #tvPanel{display:block;width:min(1200px,94vw);margin:30px auto}
+
+
+.tvNow{text-align:center;padding:40px}.tvNow #tvName{font-size:clamp(54px,8vw,140px);line-height:.9;color:var(--cyan2);text-shadow:0 0 18px var(--cyan),0 0 34px var(--purple)}.tvNow #tvSong{font-size:clamp(28px,4vw,58px)}.qr{display:flex;gap:22px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:20px}.qr img{background:#fff;padding:12px;border-radius:18px;max-width:260px}
+@media(max-width:860px){.grid{grid-template-columns:1fr}.controls,.toggles{grid-template-columns:1fr 1fr}.roundBtns,.formgrid{grid-template-columns:1fr}.row{grid-template-columns:1fr}h1{text-align:center}.card{border-radius:22px}.wrap{width:min(94vw,680px)}}
+@media(max-width:460px){.banner{height:44px}.banner span{font-size:13px}.wrap{width:94vw;padding-top:12px}.card{padding:15px}.controls,.toggles,.roundBtns{grid-template-columns:1fr}input,button{font-size:16px;min-height:48px}.name{font-size:22px}.row{padding:13px}}
+
+/* TV cast/fullscreen fit patch */
+html.tvFullscreen, body.tvMode{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+body.tvMode .wrap{
+  width:100vw !important;
+  height:calc(100vh - 86px) !important;
+  max-width:none !important;
+  padding:0 !important;
+  margin:0 !important;
+}
+body.tvMode #tvPanel{
+  width:100vw !important;
+  height:calc(100vh - 86px) !important;
+  max-width:none !important;
+  margin:0 !important;
+  border-radius:0 !important;
+  border-left:0 !important;
+  border-right:0 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:clamp(18px,3vw,48px) !important;
+}
+body.tvMode .tvNow #tvName,
+body.tvMode #tvName{
+  color:var(--cyan2) !important;
+  text-shadow:0 0 18px var(--cyan),0 0 34px var(--purple) !important;
+}
+body.tvMode #tvSong{
+  margin-top:18px;
+}
+body.tvMode .qr{
+  margin-top:clamp(22px,4vh,52px) !important;
+}
+body.tvMode .qr img{
+  width:min(28vh,260px) !important;
+  height:min(28vh,260px) !important;
+  object-fit:contain !important;
+}
+
+body.tvMode::after{
+  content:"";
+  display:none;
+}
+
+
+/* iPhone Safari mirror/pro TV display patch */
+body.tvMode{
+  background:#050008 !important;
+  overscroll-behavior:none;
+  -webkit-user-select:none;
+  user-select:none;
+}
+body.tvMode #tvPanel .pill,
+body.tvMode #tvPanel h2.tvTitleHidden{
+  display:none !important;
+}
+body.tvMode #tvPanel{
+  height:calc(100dvh - 86px) !important;
+  min-height:calc(100dvh - 86px) !important;
+  justify-content:space-evenly !important;
+  padding:clamp(14px,3vw,42px) max(clamp(16px,5vw,70px), env(safe-area-inset-left)) !important;
+}
+body.tvMode .tvLabel{
+  font-size:clamp(20px,3vw,46px);
+  color:var(--cyan2);
+  font-weight:1000;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  text-shadow:0 0 14px rgba(34,211,238,.8),0 0 26px rgba(168,85,247,.5);
+  margin:0 0 14px;
+}
+body.tvMode #tvName{
+  font-size:clamp(64px,11vw,170px) !important;
+  color:var(--cyan2) !important;
+}
+body.tvMode #tvSong{
+  font-size:clamp(30px,5vw,76px) !important;
+  color:#fff !important;
+  margin:10px 0 0 !important;
+}
+body.tvMode .qr{
+  width:min(1100px,94vw);
+  display:grid !important;
+  grid-template-columns:auto 1fr;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(18px,4vw,54px) !important;
+  margin-top:clamp(12px,2vh,34px) !important;
+}
+body.tvMode .qr img{
+  width:min(24vh,220px) !important;
+  height:min(24vh,220px) !important;
+  max-width:220px !important;
+}
+body.tvMode .tvNextBox{
+  text-align:left;
+}
+body.tvMode .tvNextLabel{
+  color:var(--gold);
+  font-size:clamp(18px,2.6vw,40px);
+  font-weight:1000;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin:0 0 8px;
+  text-shadow:0 0 14px rgba(250,204,21,.45);
+}
+body.tvMode #tvNextName{
+  color:var(--cyan2);
+  font-size:clamp(34px,5.5vw,86px);
+  line-height:1;
+  font-weight:1000;
+  text-shadow:0 0 14px rgba(34,211,238,.7),0 0 26px rgba(168,85,247,.48);
+}
+body.tvMode #tvNextSong{
+  color:var(--muted);
+  font-size:clamp(18px,2.4vw,38px);
+  font-weight:800;
+  margin-top:8px;
+}
+@media(max-aspect-ratio: 1/1){
+  body.tvMode .qr{grid-template-columns:1fr;text-align:center}
+  body.tvMode .tvNextBox{text-align:center}
+  body.tvMode #tvName{font-size:clamp(54px,14vw,130px) !important}
+}
+
+
+/* Final TV clean display override */
+body.tvMode #tvPanel .pill,
+body.tvMode #tvPanel .tvLabel,
+body.tvMode #tvPanel h2,
+body.tvMode .normalPage,
+body.tvMode button:not(.hostOnly button){
+  display:none !important;
+}
+body.tvMode #tvPanel{
+  border:none !important;
+  box-shadow:none !important;
+  background:transparent !important;
+}
+body.tvMode #tvPanel:before{display:none !important;}
+body.tvMode .tvNextDirect{
+  text-align:center !important;
+  margin-top:clamp(18px,4vh,48px) !important;
+}
+body.tvMode .tvNextLabel{
+  color:var(--gold) !important;
+  font-size:clamp(20px,3vw,44px) !important;
+  margin-bottom:10px !important;
+}
+body.tvMode #tvNextName{
+  color:var(--cyan2) !important;
+  font-size:clamp(42px,6vw,92px) !important;
+}
+body.tvMode #tvNextSong{
+  color:#fff !important;
+  font-size:clamp(22px,3vw,48px) !important;
+}
+body.tvMode .tvQrOnly{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  gap:10px !important;
+  margin-top:clamp(18px,4vh,42px) !important;
+}
+body.tvMode .tvWebText{
+  color:var(--cyan2) !important;
+  font-size:clamp(18px,2.6vw,34px) !important;
+  font-weight:1000 !important;
+  letter-spacing:.06em !important;
+  text-shadow:0 0 12px rgba(34,211,238,.65) !important;
+}
+
+
+.memoryAlert{
+  border:2px solid var(--gold);
+  background:linear-gradient(135deg,rgba(250,204,21,.18),rgba(168,85,247,.16));
+  box-shadow:0 0 28px rgba(250,204,21,.32),0 0 24px rgba(168,85,247,.24);
+  border-radius:18px;
+  padding:12px;
+  margin:10px 0;
+}
+.memoryAlertTitle{
+  color:var(--gold);
+  font-weight:1000;
+  font-size:clamp(15px,1.1vw,20px);
+  text-transform:uppercase;
+  text-shadow:0 0 12px rgba(250,204,21,.42);
+}
+
+.boostAlert{border:2px solid var(--cyan);background:linear-gradient(135deg,rgba(34,211,238,.16),rgba(168,85,247,.16));box-shadow:0 0 28px rgba(34,211,238,.32),0 0 24px rgba(168,85,247,.24);border-radius:18px;padding:12px;margin:10px 0}
+.boostAlertTitle{color:var(--cyan2);font-weight:1000;font-size:clamp(15px,1.1vw,20px);text-transform:uppercase;text-shadow:0 0 12px rgba(34,211,238,.42)}
+
+
+body.host .hostLoginCard{display:none!important}
+.hostSessionBox{
+  border:2px solid var(--green);
+  background:linear-gradient(135deg,rgba(34,197,94,.14),rgba(34,211,238,.10));
+  box-shadow:0 0 24px rgba(34,197,94,.22);
+}
+
+
+.liveSyncPill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 12px;
+  border-radius:999px;
+  background:rgba(34,197,94,.14);
+  color:#86efac;
+  border:1px solid rgba(34,197,94,.35);
+  font-weight:1000;
+  text-transform:uppercase;
+  font-size:12px;
+  margin-top:8px;
+}
+.liveSyncDot{
+  width:9px;height:9px;border-radius:999px;background:#22c55e;
+  box-shadow:0 0 12px #22c55e;
+}
+
+
+.bannerPanel{
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2px;
+  padding:6px 18px;
+  text-align:center;
+  text-transform:uppercase;
+  font-weight:1000;
+  text-shadow:0 0 10px rgba(255,255,255,.55),0 0 18px rgba(34,211,238,.42);
+  transition:opacity .22s ease,transform .22s ease;
+}
+.bannerPanel.fade{opacity:.18;transform:scale(.985)}
+#topBannerLine1{
+  width:100%;
+  font-size:clamp(28px,4vw,48px);
+  line-height:.94;
+  letter-spacing:.035em;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+#topBannerLine2{
+  width:100%;
+  font-size:clamp(20px,2.6vw,34px);
+  line-height:.96;
+  letter-spacing:.025em;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+body.tvMode .banner{
+  position:relative!important;
+  height:86px!important;
+}
+body.tvMode .wrap{
+  height:calc(100vh - 86px)!important;
+}
+body.tvMode #tvPanel{
+  height:calc(100vh - 86px)!important;
+  min-height:calc(100dvh - 86px)!important;
+}
+@media(max-width:760px){
+  .banner{height:78px}
+  #topBannerLine1{font-size:clamp(21px,7vw,32px)}
+  #topBannerLine2{font-size:clamp(16px,5vw,24px)}
+  body.tvMode .wrap,body.tvMode #tvPanel{height:calc(100vh - 78px)!important;min-height:calc(100dvh - 78px)!important}
+}
+@media(max-width:420px){
+  .banner{height:74px}
+  .bannerPanel{padding:5px 8px}
+  #topBannerLine1{font-size:clamp(19px,7.8vw,28px)}
+  #topBannerLine2{font-size:clamp(14px,5.2vw,20px)}
+  body.tvMode .wrap,body.tvMode #tvPanel{height:calc(100vh - 74px)!important;min-height:calc(100dvh - 74px)!important}
+}
+
+
+/* App-like host controls 2026-09-17 */
+.host-quick-controls{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.advancedHost{margin-top:14px}body.host:not(.advanced-open) .hostOnly.advancedHost,body.host:not(.advanced-open) #advancedHostControls{display:none!important}#advancedHostControls .toggles,#advancedHostControls .roundBtns,#advancedHostControls .controls{margin-top:10px}.queue-status{display:inline-flex;padding:5px 9px;border-radius:999px;background:rgba(34,211,238,.14);color:var(--cyan2);font-size:12px;font-weight:1000;text-transform:uppercase;margin-bottom:7px}.group-badge,.tip-badge{display:inline-flex;padding:5px 9px;border-radius:999px;font-size:12px;font-weight:900;margin:7px 7px 0 0}.group-badge{background:rgba(168,85,247,.18);color:#e9d5ff}.tip-badge{background:rgba(250,204,21,.16);color:var(--gold)}
+@media(max-width:760px){.host-quick-controls{grid-template-columns:1fr 1fr}}
+
+
+/* BP requests stay beside singers and within reach. */
+.host #showBPCard{position:sticky;top:86px;z-index:50;max-height:36vh;overflow:auto;padding:12px 16px}.host #showBPCard.bp-empty{display:none!important}#showBPCard h2{font-size:22px;margin:0 0 5px}.bp-request{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:7px 0;padding:10px;border:1px solid var(--cyan);border-radius:12px;background:#140826}.bp-request-details{min-width:0;overflow-wrap:anywhere}.bp-request-actions{display:flex;gap:6px;flex-shrink:0}.bp-request-actions button{width:auto;min-height:36px;padding:8px 10px;font-size:13px;border-radius:10px}.bp-inline{margin-top:8px}.bp-inline:empty{display:none}@media(max-width:600px){.bp-request{flex-wrap:wrap}.bp-request-actions{width:100%}.bp-request-actions button{flex:1}}
+#nineTurnPanel .nine-slots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:16px 0}
+.host .top{display:none}.host .grid{display:block}.host .now h2{font-size:32px!important}.host .now{margin-top:12px}
+.nine-slot{border:1px solid #705491;border-radius:12px;padding:12px;overflow-wrap:anywhere;background:#130924}
+.nine-slot.protected{border-color:var(--gold)}.nine-slot.done{opacity:.55}.nine-slot.current{border:3px solid var(--cyan);background:#153448;opacity:1}
+.nine-slot b{display:block;font-size:18px}.nine-slot small{display:block;color:var(--muted);margin:5px 0}
+.nine-primary{min-height:66px;font-size:22px;margin:10px 0}.nine-handoff{padding:14px;border-left:4px solid var(--gold);background:#251938;margin:12px 0;overflow-wrap:anywhere}
+.nine-details{margin:14px 0}.nine-details summary{cursor:pointer;padding:12px;color:var(--cyan2);font-weight:bold}.nine-secondary{display:flex;gap:8px}.nine-secondary>*{flex:1}
+@media(max-width:700px){#nineTurnPanel .nine-slots{grid-template-columns:1fr 1fr}.nine-primary{font-size:18px}}
+@media(max-width:400px){#nineTurnPanel .nine-slots{grid-template-columns:1fr}}
+
+</style>
+  <!-- unified-live-queue: 2026-09-17 -->
+  <!-- youtube-track-host-controls: 2026-09-17 -->
+  <!-- app-like-host-controls: 2026-09-17 -->
+<!-- host-rotation-choice: 2026-10-12 -->
+</head>
+<body>
+<div class="banner"><div id="topBannerPanel" class="bannerPanel"><div id="topBannerLine1">Loading Rowdy Room...</div><div id="topBannerLine2">Please wait</div></div></div>
+
+<div id="confirmOverlay" style="position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:999;align-items:center;justify-content:center;display:none">
+  <div style="background:linear-gradient(145deg,#140826,#06020d);border:2px solid var(--cyan);box-shadow:0 0 36px rgba(34,211,238,.35),0 0 36px rgba(168,85,247,.4);border-radius:20px;padding:30px;max-width:420px;text-align:center">
+    <p id="confirmMessage" style="font-size:18px;margin-bottom:20px;color:#fff"></p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <button id="confirmYes" class="danger">YES</button>
+      <button id="confirmNo" class="secondary">CANCEL</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+<div class="normalPage">
+  <div class="top">
+    <h1>The Rowdy Room</h1>
+    <p class="sub">Live Karaoke</p>
+  </div>
+
+<section class="card hostOnly">
+    <span class="pill">Host Only</span>
+    <h2 id="rotationTitle">Battle Karaoke</h2>
+    <label for="showMode">Show mode</label><select id="showMode" onchange="setNineMode(this.value==='battle')"><option value="normal">Normal Queue</option><option value="battle" selected>Battle Karaoke</option></select>
+
+    <div id="votingTimerControls" style="margin:14px 0;padding:12px;border:1px solid var(--cyan);border-radius:12px">
+      <b>Voting timer</b> <span id="votingTimerStatus" role="status">Checking…</span>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <button class="primary" type="button" data-timer-command="start">Start / Restart 1 minute</button>
+        <button class="secondary" type="button" data-timer-command="hide">Hide timer</button>
+      </div>
+      <p class="small" style="margin:6px 0 0">Overlay countdown only. Voting still follows the performance controls.</p>
+    </div>
+    <div id="nineTurnPanel" aria-live="polite"></div>
+    <details class="nine-details" id="reorderSingers"><summary>Rearrange singers / Waiting list</summary>
+    <p class="small">Waiting guests return to the bottom after their song. The next four guests join after turn nine. Song links are retained until a new song is submitted.</p>
+    <div id="queueList"></div></details>
+  </section>
+  <div class="grid">
+
+    <section class="card now">
+      <span class="pill">Now Performing</span>
+      <h2 id="nowName">Waiting...</h2>
+      <p id="nowSong" class="song">—</p>
+      <p id="nowScore" class="score">Average: —</p>
+      <div style="margin-top:18px;border-top:1px solid rgba(255,255,255,.12);padding-top:14px">
+        <p class="small"><b>Up Next</b></p>
+        <div id="upNextName" class="name" style="font-size:clamp(24px,2.8vw,46px)">—</div>
+        <div id="upNextSong" class="song">—</div>
+      </div>
+
+      <div class="hostOnly host-command-bar" style="margin-top:20px">
+        <p class="small"><b>Live Show Controls</b></p>
+        <div class="host-quick-controls">
+          <button id="votingToggle" class="secondary" type="button" disabled title="Voting follows Start Next and End Performance">Voting: Auto</button>
+          <button class="secondary" onclick="toggleTVMode()">TV Mode</button>
+          <button class="secondary" onclick="refresh(true)">Refresh</button>
+          <button id="advancedHostBtn" class="secondary" onclick="toggleAdvancedHost()">More Tools</button>
+        </div>
+        <div id="advancedHostControls" class="advancedHost">
+          <div class="toggles hostGrid"><button id="competitionToggle" class="secondary" onclick="toggleState('competition_mode')">Competition: Off</button><button id="roundsToggle" class="secondary" onclick="toggleState('rounds_enabled')">Rounds: Off</button></div>
+          <div class="roundBtns hostGrid"><button id="round1Btn" class="secondary" onclick="setRound(1)">Round 1</button><button id="round2Btn" class="secondary" onclick="setRound(2)">Round 2</button><button id="round3Btn" class="secondary" onclick="setRound(3)">Round 3</button></div>
+          <div class="controls hostGrid"><button class="danger" onclick="resetBoard()">Reset Board</button><button class="danger" onclick="logout()">Logout</button></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="card hostOnly bp-empty" id="showBPCard"><h2>BP Requests <span id="showBPCount"></span></h2><div id="showBPSync" class="small" role="status">Checking requests…</div><div id="showBPRequests"></div></section>
+
+
+  <section class="card hostOnly">
+    <span class="pill">Host Only</span>
+    <h2>Live Vote Standings</h2>
+    <p class="small">Current battle · scores reset when battle begins on your turn. Ranked by average vote, then vote count. Top two are highlighted. Protected positions refresh at the start of each round.</p>
+    <div id="liveVoteStandings"><p class="small">Loading live votes…</p></div>
+  </section>
+
+  
+  <section class="card hostOnly advancedHost">
+    <span class="pill">Host Only</span>
+    <h2>Legacy Competition Final Scores (separate)</h2>
+    <div id="leaderboard"></div>
+  </section>
+
+
+  <section class="card hostOnly advancedHost">
+    <span class="pill">Host Only</span>
+    <h2>Rowdy Boost Requests</h2>
+    <div class="formgrid">
+      <input id="awardBoostUser" placeholder="TikTok username to award">
+      <input id="awardBoostPoints" placeholder="Points, example: 10">
+      <input id="awardBoostReason" class="full" placeholder="Reason, example: Gift / Watch bonus / Host bonus">
+      <button class="good full" onclick="awardBoostPoints()">Award Boost Points</button>
+    </div>
+    <div id="boostRequestList" style="margin-top:12px"></div>
+  </section>
+
+
+  
+  <section class="card hostOnly advancedHost">
+    <span class="pill">Host Only</span>
+    <h2>Rowdy Game Actions</h2>
+    <div id="gameActionList" class="small">Pending game actions appear in the stream overlay automatically.</div>
+  </section>
+
+  <section class="card hostOnly advancedHost">
+    <span class="pill">Panel + Rumble</span>
+    <h2>Rowdy Room Panel Rules</h2>
+    <div id="rumbleStatusBox" class="small"></div>
+    <div class="controls">
+      <button class="primary" onclick="resetRumble()">End / Reset Rumble</button>
+      <button class="secondary" onclick="refresh(true)">Refresh Panel Data</button>
+    </div>
+    <h3>Top Contributors</h3>
+    <div id="topContributorsList"></div>
+    <h3>Pending Queue Skips</h3>
+    <div id="skipRequestList"></div>
+    <p class="small">Rules: Money Gun 500 activates Rowdy Room Rumble once every 30 minutes. Line skips now cost 2 pts per spot. Hand Heart activates a Lifeline. Amped Up activates a full Resurrect. DJ Booth 1000 buys 120 Rowdy Boost Points. Skips cannot pass current singer or up-next singer.</p>
+  </section>
+
+<section class="card hostOnly advancedHost">
+    <span class="pill">Host Only</span>
+    <h2>Banned Singers</h2>
+    <div class="formgrid">
+      <input id="manualBanName" placeholder="Singer name to ban">
+      <input id="manualBanReason" placeholder="Reason optional">
+      <button class="danger full" onclick="banByName()">Ban Name</button>
+    </div>
+    <div id="banList" style="margin-top:12px"></div>
+  </section>
+
+  <section class="card hostLoginCard" style="margin-top:28px">
+    <span class="pill">Host Login</span>
+    <h2>Host Access</h2>
+    <div class="formgrid">
+      <input id="adminKey" type="password" placeholder="Host Password">
+      <button id="hostLoginBtn" class="primary" onclick="verifyHostLogin()">Host Login</button>
+    </div>
+    <p id="loginStatus" class="small"></p>
+  </section>
+
+  <section id="hostSessionBox" class="card hostOnly hostSessionBox advancedHost" style="margin-top:28px">
+    <span class="pill">Host Session Active</span>
+    <h2>Host Login Saved</h2>
+    <p class="small">Host access is saved on this device. Use Logout only when you intentionally want to remove it.</p><div id="liveSyncStatus" class="liveSyncPill"><span class="liveSyncDot"></span>Live Sync Active</div>
+    <button class="danger" onclick="logout()">Logout Host Access</button>
+  </section>
+</div>
+
+<section id="tvPanel" class="card tvNow">
+  <div id="tvName">Waiting...</div>
+  <p id="tvSong" class="song">—</p>
+  <div class="tvNextBox tvNextDirect">
+    <p class="tvNextLabel">Up Next</p>
+    <div id="tvNextName">—</div>
+    <div id="tvNextSong">—</div>
+  </div>
+  <div class="qr tvQrOnly">
+    <img id="qrImg" alt="Queue QR code">
+    <div class="tvWebText">www.rowdyroom.site</div>
+  </div>
+</section>
+</div>
+
+<script>
+const SUPABASE_URL = "https://szubjgpvlqliyparrnam.supabase.co";
+const PHP_QUEUE_API = "/api";
+
+async function phpQueueApi(path, options={}){
+  const requestHeaders={"Content-Type":"application/json",...(options.headers||{})};
+  if(["/queue/rotation-next","/queue/start-next","/queue/complete-current","/queue/remove","/queue/reorder","/bp/host-requests","/bp/host-decide"].includes(path)){
+    const hostKey=admin();
+    if(hostKey)requestHeaders["X-Rowdy-Host-Key"]=hostKey;
+  }
+  const response=await fetch(PHP_QUEUE_API+path,{
+    ...options,
+    headers:requestHeaders
+  });
+  let data={};
+  try{data=await response.json()}catch(e){throw new Error("Queue API returned an invalid response.")}
+  if(!response.ok || data.ok===false)throw new Error(data.error||("Queue API failed with HTTP "+response.status));
+  return data;
+}
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN6dWJqZ3B2bHFsaXlwYXJybmFtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg5MzUyODgsImV4cCI6MjA5NDUxMTI4OH0.j4hmiRxlRDiS-RYUIlwi1oGzuh4EQfFd5mEJqVyqH4s";
+const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const $ = id => document.getElementById(id);
+let nineRotation=null, nineBusy=false;
+let singers=[], leaderboard=[], liveVoteStandings=[], standingsError=false, banned=[], memoryOrders=[], boostTransfers=[], contributors=[], skipRequests=[], rumbleState=null;
+let state={voting_status:"closed",current_round:"1",rounds_enabled:"off",competition_mode:"off"};
+let draggedSingerId=null;
+let isDraggingQueue=false;
+
+
+function parseDurationToSeconds(v){
+  v=String(v||"").trim(); if(!v)return 0;
+  if(/^PT/i.test(v)){const h=(v.match(/(\d+)H/i)||[])[1]||0,m=(v.match(/(\d+)M/i)||[])[1]||0,s=(v.match(/(\d+)S/i)||[])[1]||0;return Number(h)*3600+Number(m)*60+Number(s);}
+  const p=v.split(":").map(Number); if(p.some(isNaN))return 0;
+  if(p.length===3)return p[0]*3600+p[1]*60+p[2]; if(p.length===2)return p[0]*60+p[1]; return p[0]||0;
+}
+function formatDuration(seconds){
+  seconds=Math.max(0,Math.round(Number(seconds||0))); const h=Math.floor(seconds/3600),m=Math.floor((seconds%3600)/60),s=seconds%60;
+  return h?`${h}:${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`:`${m}:${String(s).padStart(2,"0")}`;
+}
+function formatWait(seconds){seconds=Math.max(0,Math.round(Number(seconds||0)));const m=Math.floor(seconds/60),s=seconds%60;return m?`${m} min${s?` ${s} sec`:""}`:`${s} sec`;}
+function syncDurationFields(){if(!$("songDurationText")||!$("songDurationSeconds"))return;const n=parseDurationToSeconds($("songDurationText").value);$("songDurationSeconds").value=n||"";}
+
+
+
+function votingToggleEnabled(){return stateOn("voting_enabled")||stateOn("voting_on")}
+function roundsEnabled(){return stateOn("rounds_enabled")||stateOn("rounds_on")||stateOn("round_mode")}
+
+function esc(s){const d=document.createElement("div");d.textContent=s||"";return d.innerHTML}
+function isActiveQueueStatus(s){return !["completed","final","removed","banned"].includes(String(s||"").toLowerCase())}
+function getCookieValue(name){
+  return decodeURIComponent((document.cookie.split("; ").find(row=>row.startsWith(name+"="))||"").split("=")[1]||"");
+}
+function setCookieValue(name,value){
+  const secure=location.protocol==="https:"?"; Secure":"";
+  document.cookie=`${name}=${encodeURIComponent(value||"")}; Max-Age=2592000; Path=/; SameSite=Lax${secure}`;
+}
+function clearCookieValue(name){
+  document.cookie=`${name}=; Max-Age=0; Path=/; SameSite=Lax`;
+}
+function getStoredAdminKey(){
+  let key="";
+  try{key=localStorage.getItem("rr_admin_key")||""}catch(e){}
+  if(!key){try{key=sessionStorage.getItem("rr_admin_key")||""}catch(e){}}
+  if(!key){key=getCookieValue("rr_admin_key")}
+  if(key){
+    try{localStorage.setItem("rr_admin_key",key)}catch(e){}
+    try{sessionStorage.setItem("rr_admin_key",key)}catch(e){}
+    setCookieValue("rr_admin_key",key);
+  }
+  return String(key||"").trim();
+}
+function storeAdminKey(key){
+  key=String(key||"").trim();
+  if(!key)return;
+  try{localStorage.setItem("rr_admin_key",key)}catch(e){}
+  try{sessionStorage.setItem("rr_admin_key",key)}catch(e){}
+  setCookieValue("rr_admin_key",key);
+}
+function clearAdminKey(){
+  try{localStorage.removeItem("rr_admin_key")}catch(e){}
+  try{sessionStorage.removeItem("rr_admin_key")}catch(e){}
+  clearCookieValue("rr_admin_key");
+}
+function isHost(){return !!getStoredAdminKey()}
+function admin(){return $("adminKey")?.value.trim() || getStoredAdminKey() || ""}
+function saveAdmin(){const k=$("adminKey")?.value.trim(); if(k)storeAdminKey(k)}
+function restoreHostSession(){
+  if(getStoredAdminKey()){
+    document.body.classList.add("host");
+    if($("loginStatus"))$("loginStatus").textContent="Host session restored.";
+  }
+}
+function toggleAdvancedHost(){document.body.classList.toggle("advanced-open");const open=document.body.classList.contains("advanced-open");const btn=$("advancedHostBtn");if(btn)btn.textContent=open?"Hide Tools":"More Tools";}
+function showNotification(message,type="info"){const n=document.createElement("div");n.style.cssText="position:fixed;bottom:20px;right:20px;padding:16px 20px;border-radius:12px;color:#fff;font-weight:bold;z-index:10000;max-width:360px;box-shadow:0 4px 12px rgba(0,0,0,.5)";n.textContent=message;n.style.background=type==="success"?"var(--green)":type==="error"?"var(--red)":"#4c1d95";if(type==="success")n.style.color="#051b0c";document.body.appendChild(n);setTimeout(()=>n.remove(),3600)}
+function showConfirm(message, callback){const overlay=$("confirmOverlay");$("confirmMessage").textContent=message;overlay.style.display="flex";function cleanup(){overlay.style.display="none";$("confirmYes").removeEventListener("click",yes);$("confirmNo").removeEventListener("click",no)}function yes(){cleanup();callback()}function no(){cleanup()}$("confirmYes").addEventListener("click",yes);$("confirmNo").addEventListener("click",no)}
+
+let lastRefreshError = "";
+async function refresh(showMsg=false){
+  if(isDraggingQueue && !showMsg) return;
+  try{
+    const [queueData,stateRes,leaderRes]=await Promise.all([
+      phpQueueApi("/queue"),
+      sb.from("rr_state").select("*"),
+      sb.from("rr_competition_leaderboard").select("*")
+    ]);
+    singers=(queueData.queue||[]).map(row=>{
+      const rawStatus=String(row.status||"waiting").toLowerCase();
+      let singerNames=[];try{singerNames=Array.isArray(row.singer_names_json)?row.singer_names_json:JSON.parse(row.singer_names_json||"[]")}catch(e){}
+      singerNames=(singerNames||[]).map(v=>String(v||"").trim()).filter(Boolean);
+      return {
+        id:row.entry_id,
+        user_id:row.user_id,
+        singer_name:singerNames.length?singerNames.join(" + "):(row.tiktok_username||row.user_id||"Performer"),
+        singer_names:singerNames,
+        singer_count:Number(row.singer_count||singerNames.length||1),
+        song_title:row.song_title||"",
+        song_artist:row.artist||"",
+        song_source_name:row.song_source_name||"",
+        song_source_url:row.song_source_url||"",
+        song_duration_seconds:Number(row.song_duration_seconds||0),
+        song_duration_text:row.song_duration_text||"",
+        song_duration_iso:row.song_duration_iso||"",
+        queue_position:Number(row.position||0),
+        status:rawStatus==="current"?"performing":rawStatus,
+        average_rating:0,
+        vote_count:0,
+        source_system:"php_queue"
+      };
+    }).filter(s=>isActiveQueueStatus(s.status));
+    const voteData=await fetch(PHP_QUEUE_API+"/companion/bootstrap?user_id=__host_vote_status__",{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null);
+    state.phpVote=voteData?.current_performance?.performance||null;
+    state.phpVoteScore=voteData?.current_score||null;
+    try {
+      const response=await fetch(PHP_QUEUE_API+"/vote/live-standings",{cache:"no-store"});
+      const data=await response.json();
+      if(!response.ok || data.ok!==true || !Array.isArray(data.standings))throw new Error("Standings unavailable");
+      liveVoteStandings=data.standings; standingsError=false;
+    } catch(error) { liveVoteStandings=[]; standingsError=true; }
+    leaderboard=leaderRes.error?[]:(leaderRes.data||[]);
+    if(!stateRes.error)(stateRes.data||[]).forEach(r=>state[r.key]=r.value);
+    if(isHost()){
+      const banRes = await sb.from("rr_banned_singers").select("*").order("created_at",{ascending:false});
+      banned = banRes.error ? [] : (banRes.data||[]);
+      const memRes = await sb.from("rr_memory_orders").select("*").in("order_status",["preordered","paid_order","active","active_paid_order","in_progress"]).order("created_at",{ascending:false});
+      memoryOrders = memRes.error ? [] : (memRes.data||[]);
+      const boostRes = await sb.from("rr_boost_transfers").select("*").eq("status","pending").order("created_at",{ascending:true});
+      boostTransfers = boostRes.error ? [] : (boostRes.data||[]);
+      const skipRes = await sb.from("rr_skip_requests").select("*").eq("status","pending").order("created_at",{ascending:true});
+      skipRequests = skipRes.error ? [] : (skipRes.data||[]);
+      const {data:contData,error:contError}=await sb.rpc("rr_admin_list_channel_contributors",{p_admin_key:admin(),p_limit:10});
+      contributors = contError ? [] : (contData||[]);
+      const rumbleRes = await sb.from("rr_rumble_state").select("*").eq("id","main").maybeSingle();
+      rumbleState = rumbleRes.error ? null : rumbleRes.data;
+    }else{banned=[];memoryOrders=[];boostTransfers=[];}
+    nineRotation=(await phpQueueApi("/queue/rotation",{cache:"no-store"})).rotation;
+    lastRefreshError="";
+    render();
+    if(showMsg)showNotification(`Refresh complete. ${singers.length} performers loaded from the live queue.`,"success");
+  }catch(error){
+    const msg="Refresh failed: "+(error&&error.message?error.message:"unknown error");
+    if(msg!==lastRefreshError){showNotification(msg,"error");lastRefreshError=msg;}
+    throw error;
+  }
+}
+
+function findMemoryOrderForSinger(s){
+  const name=String(s.singer_name||"").toLowerCase();
+  return (memoryOrders||[]).find(o=>String(o.singer_id||"")===String(s.id||"") || String(o.singer_name||o.customer_name||"").toLowerCase()===name);
+}
+function memoryOrderBadgeHtml(s){
+  const o=findMemoryOrderForSinger(s);
+  if(!o)return "";
+  return `<div class="memoryBadge" style="margin-top:6px;padding:6px 9px;border-radius:12px;background:rgba(250,204,21,.14);color:#facc15;font-weight:1000">🎥 MEMORY ORDER ACTIVE • ${esc(o.package_type||"Package")} • ${esc(o.payment_status||"")}</div>`;
+}
+
+function render(){
+  restoreHostSession(); document.body.classList.toggle("host", isHost());
+  const current=singers.find(s=>s.status==="performing");
+  const queued=singers.filter(s=>isActiveQueueStatus(s.status)).sort((a,b)=>(a.queue_position||0)-(b.queue_position||0));
+  const waiting=queued.filter(s=>s.status!=="performing");
+  const upNext=waiting[0];
+
+  $("nowName").textContent=current?current.singer_name:"Waiting...";
+  $("nowSong").textContent=current?`${current.song_title}${current.song_artist?" — "+current.song_artist:""}${current.song_source_name?" · Source: "+current.song_source_name:""}`:"—";
+  $("nowScore").textContent=state.phpVote?`Voting ${state.phpVote.status==="completed"?"final minute":"open"}: ${Number(state.phpVoteScore?.avg_rating||0).toFixed(2)}/5 · ${Number(state.phpVoteScore?.vote_count||0)} votes`:current?"Voting closed · End the old current slot, then Start Next":"Voting closed · Start Next opens voting";
+  $("upNextName").textContent=upNext?upNext.singer_name:"—";
+  $("upNextSong").textContent=upNext?`${upNext.song_title}${upNext.song_artist?" — "+upNext.song_artist:""}${upNext.song_source_name?" · Source: "+upNext.song_source_name:""}`:"—";
+  $("tvName").textContent=current?current.singer_name:"Waiting...";
+  $("tvSong").textContent=current?`${current.song_title}${current.song_artist?" — "+current.song_artist:""}`:"—";
+  $("tvNextName").textContent=upNext?`${upNext.singer_name}${upNext.duet_partner?" & "+upNext.duet_partner:""}`:"No one waiting";
+  $("tvNextSong").textContent=upNext?`${upNext.song_title}${upNext.song_artist?" — "+upNext.song_artist:""}`:"";
+
+  $("competitionToggle").textContent=`Competition: ${state.competition_mode==="on"?"On":"Off"}`;
+  $("roundsToggle").textContent=`Rounds: ${state.rounds_enabled==="on"?"On":"Off"}`;
+  $("votingToggle").textContent=state.phpVote?`Voting: ${state.phpVote.status==="completed"?"Final Minute":"Open"}`:"Voting: Auto";
+  $("competitionToggle").classList.toggle("toggleOn", state.competition_mode==="on");
+  $("roundsToggle").classList.toggle("toggleOn", state.rounds_enabled==="on");
+  $("votingToggle").classList.toggle("toggleOn", !!state.phpVote);
+  [1,2,3].forEach(n=>$("round"+n+"Btn").classList.toggle("toggleOn", String(state.current_round||"1")===String(n)));
+
+  $("queueList").innerHTML=queued.length?queued.map((s,i)=>`
+    <div class="row queueRow" draggable="false" data-singer-id="${s.id}" data-source-system="${s.source_system||''}">
+      <div>
+        <div class="queue-status">${s.status==="performing"?"Now Singing":i===0?"Up Next":i===1?"On Deck":"Waiting"}</div><div class="name">#${i+1} ${esc(s.singer_name)} ${s.status==="performing"?"🎤":""}</div>${s.singer_count>1?`<span class="group-badge">👥 ${s.singer_count} singers</span>`:""}
+        <div class="song">${esc(s.song_title)}${s.song_artist?" — "+esc(s.song_artist):""}${s.song_duration_text?" • "+esc(s.song_duration_text):""}</div>${memoryOrderBadgeHtml(s)}
+        ${s.song_source_name?`<div class="small">🎵 Source: ${esc(s.song_source_name)}</div>`:""}
+        ${s.song_notes?`<div class="small">📝 ${esc(s.song_notes)}</div>`:""}
+        <div class="score">${state.phpVote && String(state.phpVote.queue_entry_id)===String(s.id) ? (Number(state.phpVoteScore?.vote_count||0) ? `Live score: ${Number(state.phpVoteScore.avg_rating).toFixed(2)}/5 · ${Number(state.phpVoteScore.vote_count)} votes` : "Live score: Awaiting votes") : ""}</div>
+        ${renderMemoryOrderAlert(s)}<div class="bp-inline" data-bp-entry="${esc(s.id)}"></div>
+      </div>
+      <div style="display:grid;gap:6px;min-width:150px">
+        ${s.song_source_url?`<button class="good" onclick="openTrack('${encodeURIComponent(s.song_source_url)}')">Open Track</button>`:""}
+        ${s.source_system==="php_queue" && s.status!=="performing" ? `${waiting.findIndex(x=>x.id===s.id)>0?`<button class="secondary" onclick="moveQueuedSinger('${esc(s.id)}',-1)" aria-label="Move ${esc(s.singer_name)} up">↑ Move Up</button>`:""}${waiting.findIndex(x=>x.id===s.id)<waiting.length-1?`<button class="secondary" onclick="moveQueuedSinger('${esc(s.id)}',1)" aria-label="Move ${esc(s.singer_name)} down">↓ Move Down</button>`:""}<button class="danger" onclick="removeQueueEntry('${esc(s.id)}')">Remove</button>`:""}
+        ${false && i===0 && s.status!=="performing" ? '<button class="primary" onclick="startSinger(&#39;'+esc(s.id)+'&#39;)">Start Next</button>' : ""}
+          ${s.status!=="performing" ? `<button class="danger" onclick="removeQueueEntry('${esc(s.id)}')">Absent / Remove</button>` : ""}
+      </div>
+    </div>`).join(""):`<p class="small">Queue empty.</p>`;
+  renderNineRotation();
+  attachDragListeners();
+
+  $("liveVoteStandings").innerHTML=standingsError?`<p class="small">Live standings unavailable. Scores have not been replaced with the legacy board.</p>`:liveVoteStandings.length?liveVoteStandings.map((p,i)=>`<div class="row"><div><div class="name">#${i+1} ${esc(p.singer_name)} ${i<2?"★ Top Two":""}</div><div class="small">${Number(p.performances_scored||0)} scored performance(s) · ${Number(p.vote_count||0)} vote(s)</div></div><div class="score">${Number(p.avg_rating||0).toFixed(2)}/5</div></div>`).join(""):`<p class="small">No votes in this battle yet. Scores start fresh when the queued battle begins.</p>`;
+
+  $("leaderboard").innerHTML=leaderboard.length?leaderboard.map((p,i)=>{
+    const scores=p.round_scores||{};
+    const history=Object.keys(scores).sort((a,b)=>Number(a)-Number(b)).map(k=>`Round ${k}: ${Number(scores[k]||0).toFixed(2)}`).join(" · ");
+    return `<div class="row"><div><div class="name">#${i+1} ${esc(p.singer_name)} ${i===0?"👑":""}</div><div class="song">Performances scored: ${p.performances_completed||p.rounds_completed||0}</div><div class="small">${history||"No round history yet"}</div></div><div class="score">Final: ${Number(p.final_average||0).toFixed(2)}/5</div></div>`
+  }).join(""):`<p class="small">No final scores yet.</p>`;
+
+  $("banList").innerHTML=banned.length?banned.map(b=>`<div class="row"><div><div class="name">${esc(b.singer_name)}</div><div class="small">${esc(b.reason||"No reason listed")}</div></div><button class="secondary" onclick="unbanSinger('${b.id}')">Unban</button></div>`).join(""):`<p class="small">No banned singers.</p>`;
+
+  renderBoostRequests();
+  renderShowBP();
+  refreshShowBP();
+  renderRumblePanel();
+  applyRoundVisibility();
+  updateBanner();
+  updateQr();
+}
+
+
+function applyRoundVisibility(){
+  const on=true;
+  const rc=document.getElementById("roundControls");
+  if(rc)rc.style.display=on?"grid":"none";
+  document.querySelectorAll("[data-round-ui]").forEach(el=>el.style.display=on?"":"none");
+  document.querySelectorAll("[data-round-button]").forEach(btn=>{
+    btn.classList.remove("primary","active"); btn.classList.add("secondary");
+    if(on && String(btn.dataset.roundButton)===String(state.current_round||"1")){
+      btn.classList.remove("secondary"); btn.classList.add("primary","active");
+    }
+  });
+}
+
+
+function renderRumblePanel(){
+  const rbox=$("rumbleStatusBox");
+  if(rbox){
+    if(rumbleState && rumbleState.active){
+      rbox.innerHTML=`<b>⚡ RUMBLE ACTIVE</b><br>Activated by: @${esc(rumbleState.activated_by||"")}<br>Ends: ${rumbleState.ends_at?new Date(rumbleState.ends_at).toLocaleTimeString():""}`;
+    }else{
+      rbox.innerHTML=`Rumble inactive. Next activation: Money Gun gift worth 500 tokens.`;
+    }
+  }
+  const cbox=$("topContributorsList");
+  if(cbox){
+    cbox.innerHTML=contributors.length?contributors.slice(0,5).map((c,i)=>`<div class="row"><div><b>#${i+1} @${esc(c.tiktok_username)}</b><div class="small">${Number(c.token_total||0)} tokens • ${Number(c.gift_count||0)} gifts</div></div></div>`).join(""):`<p class="small">No contributors tracked yet.</p>`;
+  }
+  const sbox=$("skipRequestList");
+  if(sbox){
+    sbox.innerHTML=skipRequests.length?skipRequests.map(r=>`<div class="row"><div><b>⚡ Skip Request</b><div class="small">@${esc(r.from_username)} wants ${esc(r.target_singer_name||"selected singer")} to skip ${r.skip_spots||3} spots • ${esc(r.source)} ${r.gift_name?"• "+esc(r.gift_name):""}</div></div><div style="display:grid;gap:6px"><button class="good" onclick="decideSkip('${r.id}','approve')">Approve</button><button class="danger" onclick="decideSkip('${r.id}','deny')">Deny</button></div></div>`).join(""):`<p class="small">No pending skip requests.</p>`;
+  }
+}
+async function decideSkip(id,decision){
+  const {error}=await sb.rpc("rr_decide_skip_request",{p_request_id:id,p_decision:decision});
+  if(error){showNotification(error.message,"error");return}
+  showNotification("Skip request updated.","success");
+  refresh(true);
+}
+async function resetRumble(){
+  if(!confirm("End/reset Rumble, clear contributor totals, and clear live ratings?"))return;
+  const {error}=await sb.rpc("rr_end_rumble_and_reset");
+  if(error){showNotification(error.message,"error");return}
+  showNotification("Rumble reset.","success");
+  refresh(true);
+}
+
+
+let topBannerMessages=[];
+let topBannerMessageIndex=0;
+
+function cleanBannerText(v){
+  return String(v||"")
+    .replace(/\s*[\(\[]\s*(karaoke|karaoke version|official karaoke|hd karaoke|instrumental|lyrics|lyric video|with lyrics)\s*[\)\]]/ig,"")
+    .replace(/\s*-\s*(karaoke|karaoke version|official karaoke|hd karaoke|instrumental|lyrics).*$/ig,"")
+    .replace(/\s+/g," ")
+    .trim();
+}
+function bannerSongDisplay(s){
+  const title=cleanBannerText(s?.song_title||"");
+  const artist=cleanBannerText(s?.song_artist||"");
+  if(title && artist)return `${title} • ${artist}`;
+  return title || artist || "No song selected";
+}
+function buildTopBannerMessages(){
+  const active=singers.filter(s=>isActiveQueueStatus(s.status)).sort((a,b)=>(a.queue_position||0)-(b.queue_position||0));
+  const current=active.find(s=>s.status==="performing");
+  const queued=active.filter(s=>s.status!=="performing");
+  const next=queued[0]||null;
+  const waiting=queued.slice(0,4).map((s,i)=>`#${i+1} ${s.singer_name}`);
+  const nextSongs=queued.slice(0,3).map((s,i)=>`#${i+1} ${s.singer_name}: ${cleanBannerText(s.song_title||"")}`).join("  •  ");
+  const waitSeconds=Math.max(0,queued.reduce((sum,s)=>sum+(Number(s.song_duration_seconds||0)||240),0));
+  const votingOpen=String(state.voting_status||"closed").toLowerCase()==="open";
+  const roundsOn=String(state.rounds_enabled||state.rounds_on||state.round_mode||"off").toLowerCase()==="on";
+  const top=liveVoteStandings&&liveVoteStandings[0]?liveVoteStandings[0]:null;
+
+  const msgs=[
+    {l1:"🎤 NOW PERFORMING",l2:current?`${current.singer_name} — ${bannerSongDisplay(current)}`:"Waiting for singer"},
+    {l1:votingOpen?"⭐ LIVE VOTING OPEN":"⭐ VOTING CLOSED",l2:current?`Current singer: ${current.singer_name}`:"No active singer"},
+    {l1:"⏭ NEXT UP",l2:next?`${next.singer_name} — ${bannerSongDisplay(next)}`:"No one waiting"},
+    {l1:"📋 UPCOMING QUEUE",l2:waiting.length?waiting.join("  •  "):"Queue is empty"},
+    {l1:"🎵 NEXT SONGS",l2:nextSongs||"No upcoming songs selected"},
+    {l1:"⏱ ESTIMATED WAIT",l2:`${formatWait(waitSeconds)} total for ${queued.length} singer${queued.length===1?"":"s"}`}
+  ];
+  if(top)msgs.push({l1:"🏆 CURRENT LEADER",l2:`${top.singer_name} — ${Number(top.avg_rating||0).toFixed(2)}/5`});
+  if(roundsOn)msgs.push({l1:`🎲 ROUND ${state.current_round||1}`,l2:"Rowdy Room competition active"});
+  return msgs;
+}
+function rotateTopBanner(forceBuild=false){
+  const panel=$("topBannerPanel"), l1=$("topBannerLine1"), l2=$("topBannerLine2");
+  if(!panel||!l1||!l2)return;
+  if(forceBuild || !topBannerMessages.length){
+    topBannerMessages=buildTopBannerMessages();
+    topBannerMessageIndex=0;
+  }
+  const msg=topBannerMessages[topBannerMessageIndex % topBannerMessages.length] || {l1:"Rowdy Room",l2:"Loading"};
+  panel.classList.add("fade");
+  setTimeout(()=>{
+    l1.textContent=msg.l1||"";
+    l2.textContent=msg.l2||"";
+    panel.classList.remove("fade");
+  },140);
+  topBannerMessageIndex++;
+}
+
+function updateBanner(){
+  topBannerMessages=buildTopBannerMessages();
+  topBannerMessageIndex=0;
+  rotateTopBanner(true);
+}
+
+function updateQr(){
+  const publicUrl = "https://companion.rowdyroom.site/";
+  $("qrImg").src = "https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=" + encodeURIComponent(publicUrl);
+}
+
+if($("duetToggle"))$("duetToggle").addEventListener("change",()=>{$("duetPartner").style.display=$("duetToggle").checked?"block":"none"});
+if($("songDurationText"))$("songDurationText").addEventListener("input",syncDurationFields);
+
+function getLocalSignups(){try{return JSON.parse(localStorage.getItem("rr_my_signups")||"[]")}catch{return[]}}
+function saveLocalSignups(list){localStorage.setItem("rr_my_signups", JSON.stringify(list.slice(-8)))}
+
+
+
+// Keep regular YouTube playback in a dedicated window, outside host controls.
+let rowdyLyricsWindow = null;
+function openTrack(encodedUrl){
+  let source;
+  try { source = new URL(decodeURIComponent(encodedUrl || "")); }
+  catch (_) { showNotification("No valid track link found.", "error"); return; }
+  const host = source.hostname.toLowerCase();
+  if(source.protocol !== "https:" || !["youtube.com", "www.youtube.com", "m.youtube.com", "music.youtube.com", "youtu.be", "www.youtube-nocookie.com"].includes(host)){
+    showNotification("This track needs a valid HTTPS YouTube video link.", "error"); return;
+  }
+  const videoId = host === "youtu.be" ? source.pathname.split("/")[1] : source.searchParams.get("v") || (/^\/(embed|shorts|live)\//.test(source.pathname) ? source.pathname.split("/")[2] : "");
+  if(!/^[A-Za-z0-9_-]{11}$/.test(videoId || "")){
+    showNotification("This track needs a valid YouTube video link.", "error"); return;
+  }
+  const url = "https://www.youtube.com/watch?v=" + videoId;
+  if((navigator.platform.includes("Mac") && (navigator.maxTouchPoints || 0) < 2) || new URLSearchParams(location.search).get("player") === "mac"){
+    location.href = "rowdylyrics://play/" + videoId;
+    return;
+  }
+  try {
+    if(rowdyLyricsWindow && !rowdyLyricsWindow.closed){
+      rowdyLyricsWindow.location.href = url;
+      rowdyLyricsWindow.focus();
+      return;
+    }
+  } catch (_) { /* Recover from a manually closed or detached window below. */ }
+  rowdyLyricsWindow = window.open(url, "rowdyYouTubeLyrics", "popup=yes,width=1000,height=700,resizable=yes,scrollbars=yes");
+  if(!rowdyLyricsWindow) showNotification("Allow pop-up windows for this site, then click Open Track again.", "error");
+}
+
+
+function openSongFinder(){
+  const title = $("songTitle").value.trim();
+  const artist = $("songArtist").value.trim();
+  const q = new URLSearchParams({ title, artist, returnTo: "queue" });
+  window.open("https://songfinder.rowdyroom.site/?" + q.toString(), "rowdySongFinder", "width=980,height=760");
+}
+
+window.addEventListener("message", event => {
+  if(event.origin !== "https://songfinder.rowdyroom.site" || !event.data || event.data.type !== "ROWDY_SONG_SELECTED") return;
+  const song = event.data.payload || {};
+  if(song.title) $("songTitle").value = song.title;
+  if(song.artist) $("songArtist").value = song.artist;
+  if(song.sourceName) $("songSourceName").value = song.sourceName;
+  if(song.url) $("songSourceUrl").value = song.url;if(song.durationText&&$("songDurationText"))$("songDurationText").value=song.durationText;if(song.durationSeconds&&$("songDurationSeconds"))$("songDurationSeconds").value=song.durationSeconds;if($("songDurationText"))syncDurationFields();
+  if(song.notes) $("songNotes").value = song.notes;
+  showNotification("Song location added from SongFinder.","success");
+});
+
+async function addSinger(){
+  const name=$("singerName").value.trim();
+  const song=$("songTitle").value.trim();
+  const artist=$("songArtist").value.trim();
+  if(!name||!song){$("signupStatus").textContent="Need singer name and song title.";return;}
+  try{
+    const identity=await phpQueueApi("/identity/resolve",{method:"POST",body:JSON.stringify({tiktok_username:name,display_name:name})});
+    const joined=await phpQueueApi("/queue/join",{method:"POST",body:JSON.stringify({user_id:identity.user.user_id,song_title:song,artist,song_source_name:$("songSourceName").value.trim(),song_source_url:$("songSourceUrl").value.trim(),song_duration_seconds:Number($("songDurationSeconds").value||0),song_duration_text:$("songDurationText").value.trim(),song_duration_iso:""})});
+    $("signupStatus").textContent=`Added to the live queue at position ${joined.position}.`;
+    ["singerName","duetPartner","songTitle","songArtist","songSourceName","songSourceUrl","songNotes","songDurationSeconds","songDurationText"].forEach(id=>{if($(id))$(id).value="";});
+    showNotification("Performer added to the live queue.","success");
+    await refresh(true);
+  }catch(error){
+    const message=error&&error.message?error.message:"Unable to join queue.";
+    $("signupStatus").textContent=message;
+    showNotification(message,"error");
+  }
+}
+
+async function removeSelfByCode(){
+  const code=$("removeCode").value.trim().toUpperCase();
+  if(!code){showNotification("Enter your removal code.","error");return}
+  const {error}=await sb.rpc("rr_public_remove_self_by_code",{p_remove_code:code});
+  if(error){showNotification(error.message,"error");return}
+  saveLocalSignups(getLocalSignups().filter(x=>x.code!==code));
+  $("removeCode").value="";
+  showNotification("Your signup was removed.","success");
+  refresh();
+}
+async function removeSelf(id,code){
+  const {error}=await sb.rpc("rr_public_remove_self",{p_singer_id:id,p_remove_code:code});
+  if(error){showNotification(error.message,"error");return}
+  saveLocalSignups(getLocalSignups().filter(x=>x.id!==id));
+  showNotification("Your signup was removed.","success");
+  refresh();
+}
+
+
+function getMemoryOrderForSinger(singerId){
+  return (memoryOrders||[]).find(o=>o.singer_id===singerId && o.order_status!=="completed" && o.order_status!=="cancelled") || null;
+}
+function renderMemoryOrderAlert(singerId){
+  if(!isHost()) return "";
+  const o=getMemoryOrderForSinger(singerId);
+  if(!o) return "";
+  const delivery=[o.delivery_method||"", o.customer_email||"", o.customer_phone||""].filter(Boolean).join(" · ");
+  return `<div class="memoryAlert hostOnly">
+    <div class="memoryAlertTitle">⚠ MEMORY ORDER ACTIVE</div>
+    <div class="small"><b>Package:</b> ${esc(o.package_type||"")}</div>
+    <div class="small"><b>Customer:</b> ${esc(o.customer_name||"")}</div>
+    <div class="small"><b>Delivery:</b> ${esc(delivery||"Not listed")}</div>
+    <div class="small"><b>Status:</b> ${esc(o.payment_status||"unpaid")} · ${esc(o.recording_status||"not_started")}</div><div class="small"><b>Placed:</b> ${o.created_at?new Date(o.created_at).toLocaleString():""}</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px">
+      <button class="good" onclick="markMemoryRecording('${o.id}','recording')">Start Recording</button>
+      <button class="secondary" onclick="markMemoryRecording('${o.id}','recorded')">Stop Recording</button>
+      <button class="secondary" onclick="markMemoryPaid('${o.id}')">Mark Paid</button>
+      <button class="danger" onclick="completeMemoryOrder('${o.id}')">Complete</button>
+    </div>
+  </div>`;
+}
+async function markMemoryRecording(orderId,status){
+  const {error}=await sb.from("rr_memory_orders").update({recording_status:status,order_status:"in_progress"}).eq("id",orderId);
+  if(error){showNotification(error.message,"error");return}
+  showNotification(status==="recording"?"Recording status started.":"Recording marked recorded.","success");
+  refresh(true);
+}
+async function markMemoryPaid(orderId){
+  const {error}=await sb.from("rr_memory_orders").update({payment_status:"paid"}).eq("id",orderId);
+  if(error){showNotification(error.message,"error");return}
+  showNotification("Memory order marked paid.","success");
+  refresh(true);
+}
+async function completeMemoryOrder(orderId){
+  const {error}=await sb.from("rr_memory_orders").update({order_status:"completed",recording_status:"completed"}).eq("id",orderId);
+  if(error){showNotification(error.message,"error");return}
+  showNotification("Memory order completed.","success");
+  refresh(true);
+}
+
+
+
+function renderBoostRequests(){
+  const box=$("boostRequestList");
+  if(!box || !isHost()) return;
+  box.innerHTML=boostTransfers.length?boostTransfers.map(t=>`
+    <div class="boostAlert">
+      <div class="boostAlertTitle">⚡ BOOST REQUEST</div>
+      <div class="small"><b>From:</b> @${esc(t.from_username)}</div>
+      <div class="small"><b>To:</b> ${esc(t.to_singer_name||"Singer")}</div>
+      <div class="small"><b>Points:</b> ${Number(t.points||0)} · Move: ${Math.min(3,Math.max(1,Math.floor(Number(t.points||0)/5)))} spot(s)</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px">
+        <button class="good" onclick="decideBoost('${t.id}','approve')">Approve</button>
+        <button class="danger" onclick="decideBoost('${t.id}','deny')">Deny</button>
+      </div>
+    </div>`).join(""):`<p class="small">No pending boost requests.</p>`;
+}
+async function decideBoost(id,decision){
+  const ok=await callAdmin("rr_boost_decide_transfer",{p_transfer_id:id,p_decision:decision});
+  if(ok){showNotification(`Boost ${decision}d.`,"success");await refresh(true);}
+}
+async function awardBoostPoints(){
+  const u=$("awardBoostUser").value.trim();
+  const pts=Number($("awardBoostPoints").value||0);
+  const reason=$("awardBoostReason").value.trim()||"host bonus";
+  if(!u||!pts){showNotification("Username and points required.","error");return}
+  const {error}=await sb.rpc("rr_boost_award_points",{p_username:u,p_points:pts,p_reason:reason,p_source:"host_award",p_event_ref:null});
+  if(error){showNotification(error.message,"error");return}
+  $("awardBoostUser").value=$("awardBoostPoints").value=$("awardBoostReason").value="";
+  showNotification(`Awarded ${pts} Rowdy Boost Points to ${u}.`,"success");
+}
+
+async function callAdmin(fn,args={}){
+  restoreHostSession();
+  saveAdmin();
+  if(!admin()){showNotification("Log in as host first.","error");return null}
+  const {data,error}=await sb.rpc(fn,{p_admin_key:admin(),...args});
+  if(error){showNotification(error.message,"error");return null}
+  return data ?? true;
+}
+async function saveQueueOrder(ids){
+  try{
+    const current=singers.find(s=>s.status==='performing');
+    const result=await phpQueueApi('/queue/rotation-next',{method:'POST',body:JSON.stringify({action:'reorder',version:nineRotation.version,queue_entry_id:current?.id||'',entry_ids:ids})});
+    nineRotation=result.rotation;
+    showNotification('Singer order updated for everyone.','success');
+    await refresh(true);
+  }catch(error){showNotification(error.message||'Unable to reorder queue.','error');await refresh();}
+}
+async function moveQueuedSinger(id,direction){
+  if(!isHost())return;
+  const waiting=singers.filter(s=>s.source_system==='php_queue' && s.status!=='performing' && isActiveQueueStatus(s.status)).sort((a,b)=>a.queue_position-b.queue_position);
+  const from=waiting.findIndex(s=>s.id===id),to=from+direction;
+  if(from<0 || to<0 || to>=waiting.length)return;
+  [waiting[from],waiting[to]]=[waiting[to],waiting[from]];
+  await saveQueueOrder(waiting.map(s=>s.id));
+}
+
+async function removeQueueEntry(id){
+  showConfirm("Remove this singer from the queue?",async()=>{
+    try{
+      await phpQueueApi("/queue/remove",{method:"POST",body:JSON.stringify({entry_id:id})});
+      showNotification("Singer removed from the queue.","success");
+      await refresh(true);
+    }catch(error){showNotification(error.message||"Unable to remove singer.","error");}
+  });
+}
+
+async function startSinger(id){
+  try{
+    await phpQueueApi("/queue/start-next",{method:"POST",body:JSON.stringify({live_session_id:"live_show"})});
+    showNotification("Next performer started.","success");
+    await refresh(true);
+  }catch(error){showNotification(error.message||"Unable to start performer.","error");}
+}
+let completingPerformance=false;
+async function completeCurrent(rotationAction="remove"){
+  if(completingPerformance)return;
+  const current=singers.find(s=>s.status==="performing");
+  if(!current){showNotification("No current performer to end.","error");return;}
+  completingPerformance=true;
+  document.querySelectorAll("[data-end-performance]").forEach(button=>button.disabled=true);
+  try{
+    await phpQueueApi("/queue/complete-current",{method:"POST",body:JSON.stringify({live_session_id:"live_show",complete:true,queue_entry_id:current.id,rotation_action:rotationAction})});
+    showNotification(rotationAction==="requeue"?"Performance ended. Singer returned to the bottom of the rotation.":"Performance ended. Singer removed from the rotation.","success");
+    await refresh(true);
+  }catch(error){showNotification(error.message||"Unable to end performance.","error");}
+  finally{completingPerformance=false;document.querySelectorAll("[data-end-performance]").forEach(button=>button.disabled=false);}
+}
+async function setRound(n){if(await callAdmin("rr_admin_set_round",{p_round:n})) refresh()}
+async function toggleVoting(){const next=state.voting_status==="open"?"closed":"open";if(await callAdmin("rr_admin_set_voting",{p_status:next})) refresh()}
+async function toggleState(key){const next=state[key]==="on"?"off":"on";if(await callAdmin("rr_admin_set_toggle",{p_key:key,p_value:next})) refresh()}
+async function deleteSinger(id){showConfirm("Finalize this singer and move them to Final Scores?",async()=>{if(await callAdmin("rr_admin_delete_singer",{p_singer_id:id})) refresh()})}
+async function banSinger(id){showConfirm("Ban this singer and remove them from the queue?",async()=>{if(await callAdmin("rr_admin_ban_singer",{p_singer_id:id,p_reason:"Banned by host"})) refresh()})}
+async function banByName(){const name=$("manualBanName").value.trim();if(!name){showNotification("Enter a name to ban.","error");return} if(await callAdmin("rr_admin_ban_name",{p_singer_name:name,p_reason:$("manualBanReason").value.trim()})){ $("manualBanName").value=$("manualBanReason").value=""; refresh();}}
+async function unbanSinger(id){if(await callAdmin("rr_admin_unban_singer",{p_ban_id:id})) refresh()}
+async function resetBoard(){showConfirm("This will delete all singers and votes. Continue?",async()=>{const result=await callAdmin("rr_admin_reset_board",{});if(result){showNotification("Board reset complete.","success");await refresh(true)}})}
+
+function verifyHostLogin(){
+  const password=$("adminKey").value.trim();
+  if(!password){
+    $("loginStatus").textContent="Please enter the host password.";
+    return;
+  }
+
+  // Store first so callAdmin uses this password for rr_admin_ping.
+  storeAdminKey(password);
+  $("adminKey").value="";
+
+  callAdmin("rr_admin_ping",{}).then(ok=>{
+    if(ok){
+      storeAdminKey(password);
+      document.body.classList.add("host");
+      $("loginStatus").textContent="✓ Host login saved on this device.";
+      refresh(true);
+    }else{
+      clearAdminKey();
+      document.body.classList.remove("host");
+      $("loginStatus").textContent="Incorrect password.";
+    }
+  }).catch(err=>{
+    $("loginStatus").textContent="Login failed: "+(err&&err.message?err.message:"unknown error");
+  });
+}
+function logout(){
+  clearAdminKey();
+  document.body.classList.remove("host");
+  if($("loginStatus"))$("loginStatus").textContent="Logged out.";
+  refresh();
+}
+function requestTvFullscreen(){
+  document.documentElement.classList.add("tvFullscreen");
+  const el = document.documentElement;
+  if(el.requestFullscreen){ el.requestFullscreen().catch(()=>{}); }
+}
+function enterTVMode(){
+  document.body.classList.add("tvMode");
+  updateQr();
+  requestTvFullscreen();
+}
+function exitTVMode(){
+  document.body.classList.remove("tvMode");
+  document.documentElement.classList.remove("tvFullscreen");
+  if(document.fullscreenElement && document.exitFullscreen){document.exitFullscreen().catch(()=>{});}
+}
+function toggleTVMode(){
+  if(document.body.classList.contains("tvMode")){exitTVMode();}
+  else{enterTVMode();}
+}
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape" && document.body.classList.contains("tvMode")){
+    exitTVMode();
+  }
+  if((e.key==="f" || e.key==="F") && document.body.classList.contains("tvMode")){
+    requestTvFullscreen();
+    showNotification("TV Mode fullscreen fit requested.","success");
+  }
+});
+
+function attachDragListeners(){
+  document.querySelectorAll('#queueList .queueRow').forEach(row=>{
+    const movable=isHost() && row.dataset.sourceSystem==='php_queue' && singers.some(s=>s.id===row.dataset.singerId && s.status!=='performing');
+    row.draggable=movable;
+    if(!movable)return;
+    row.title='Drag to move this waiting singer';
+    row.addEventListener('dragstart',e=>{
+      draggedSingerId=row.dataset.singerId;
+      isDraggingQueue=true;
+      row.classList.add('dragging');
+      e.dataTransfer.effectAllowed='move';
+      e.dataTransfer.setData('text/plain',draggedSingerId);
+    });
+    row.addEventListener('dragover',e=>{if(draggedSingerId){e.preventDefault();row.classList.add('drag-over');}});
+    row.addEventListener('dragleave',()=>row.classList.remove('drag-over'));
+    row.addEventListener('drop',async e=>{
+      e.preventDefault();row.classList.remove('drag-over');
+      const fromId=draggedSingerId,toId=row.dataset.singerId;
+      isDraggingQueue=false;draggedSingerId=null;
+      if(!fromId || !toId || fromId===toId)return;
+      const waiting=singers.filter(s=>s.source_system==='php_queue' && s.status!=='performing' && isActiveQueueStatus(s.status)).sort((a,b)=>a.queue_position-b.queue_position);
+      const from=waiting.findIndex(s=>s.id===fromId),to=waiting.findIndex(s=>s.id===toId);
+      if(from<0 || to<0)return;
+      const moved=waiting.splice(from,1)[0];waiting.splice(to,0,moved);
+      await saveQueueOrder(waiting.map(s=>s.id));
+    });
+    row.addEventListener('dragend',()=>{row.classList.remove('dragging');document.querySelectorAll('#queueList .queueRow').forEach(r=>r.classList.remove('drag-over'));draggedSingerId=null;isDraggingQueue=false;});
+  });
+}
+
+let rrLiveRefreshTimer=null;
+let rrLiveRefreshBusy=false;
+let rrLastLiveRefresh=0;
+
+function setLiveSyncStatus(text, good=true){
+  const box=$("liveSyncStatus");
+  if(!box)return;
+  box.innerHTML=`<span class="liveSyncDot" style="background:${good?"#22c55e":"#facc15"};box-shadow:0 0 12px ${good?"#22c55e":"#facc15"}"></span>${esc(text)}`;
+  box.style.color=good?"#86efac":"#facc15";
+}
+
+async function liveRefresh(reason="auto"){
+  if(rrLiveRefreshBusy || isDraggingQueue)return;
+  rrLiveRefreshBusy=true;
+  try{
+    restoreHostSession && restoreHostSession();
+    await refresh(false);
+    rrLastLiveRefresh=Date.now();
+    setLiveSyncStatus("Live Sync Active", true);
+  }catch(e){
+    setLiveSyncStatus("Live Sync Waiting", false);
+  }finally{
+    rrLiveRefreshBusy=false;
+  }
+}
+
+function startLiveSync(){
+  if(rrLiveRefreshTimer)clearInterval(rrLiveRefreshTimer);
+  rrLiveRefreshTimer=setInterval(()=>liveRefresh("poll"),2000);
+  document.addEventListener("visibilitychange",()=>{if(!document.hidden)liveRefresh("visible")});
+  window.addEventListener("focus",()=>liveRefresh("focus"));
+  window.addEventListener("online",()=>liveRefresh("online"));
+  setTimeout(()=>liveRefresh("startup"),400);
+}
+
+sb.channel("rr-karaoke-live")
+  .on("postgres_changes",{event:"*",schema:"public",table:"rr_singers"},()=>liveRefresh("rr_singers"))
+  .on("postgres_changes",{event:"*",schema:"public",table:"rr_votes"},()=>liveRefresh("rr_votes"))
+  .on("postgres_changes",{event:"*",schema:"public",table:"rr_performances"},()=>liveRefresh("rr_performances"))
+  .on("postgres_changes",{event:"*",schema:"public",table:"rr_state"},()=>liveRefresh("rr_state"))
+  .on("postgres_changes",{event:"*",schema:"public",table:"rr_memory_orders"},()=>liveRefresh("rr_memory_orders"))
+  .on("postgres_changes",{event:"*",schema:"public",table:"rr_boost_transfers"},()=>liveRefresh("rr_boost_transfers"))
+  .on("postgres_changes",{event:"*",schema:"public",table:"rr_boost_wallets"},()=>liveRefresh("rr_boost_wallets"))
+  .on("postgres_changes",{event:"*",schema:"public",table:"rr_skip_requests"},()=>liveRefresh("rr_skip_requests"))
+  .on("postgres_changes",{event:"*",schema:"public",table:"rr_channel_contributors"},()=>liveRefresh("rr_channel_contributors"))
+  .on("postgres_changes",{event:"*",schema:"public",table:"rr_rumble_state"},()=>liveRefresh("rr_rumble_state"))
+  .subscribe((status)=>{
+    if(status==="SUBSCRIBED"){setLiveSyncStatus("Realtime Connected", true); liveRefresh("subscribed");}
+    else if(status==="CHANNEL_ERROR" || status==="TIMED_OUT" || status==="CLOSED"){setLiveSyncStatus("Polling Backup Active", false);}
+  });
+
+document.addEventListener("DOMContentLoaded",()=>{
+  restoreHostSession();
+  const ak=$("adminKey");
+  if(ak)ak.addEventListener("keydown",e=>{if(e.key==="Enter")verifyHostLogin();});
+});
+restoreHostSession();
+refresh();
+startLiveSync();
+let showBPLoading=false,showBPLast=0,showBPRequestsData=[],showBPError='',showBPDeciding=false;
+function bpEsc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function bpRequestHtml(r){
+ const p=r.payload||{},song=r.action==='play_song',ready=r.status==='approved';
+ const button=(decision,label,cls)=>'<button class="'+cls+'" data-bp-id="'+bpEsc(r.id)+'" data-bp-decision="'+decision+'"'+(showBPDeciding?' disabled':'')+'>'+bpEsc(label)+'</button>';
+ let songLink='';if(song){try{const u=new URL(p.url||'');if(u.protocol==='https:'&&['youtube.com','www.youtube.com','m.youtube.com','youtu.be'].includes(u.hostname))songLink='<a href="'+bpEsc(u.href)+'" target="_blank" rel="noopener">Open song</a>';}catch(e){}}
+ const summary=song?'Play: '+(p.title||'Requested song'):'Move '+(p.target_singer||'selected singer')+' up '+Number(p.spots||0)+' place(s)';
+ return '<div class="bp-request"><div class="bp-request-details"><strong>@'+bpEsc(r.username)+' · '+bpEsc(summary)+'</strong><div class="small">'+Number(r.cost||0)+' BP · '+bpEsc(r.status)+(song&&p.artist?' · '+bpEsc(p.artist):'')+'</div>'+songLink+'</div><div class="bp-request-actions">'+(ready?button('played','Mark Played','secondary'):button('approve',r.status==='processing'?'Finish Approval':'Approve','good')+button('deny','Deny','danger'))+'</div></div>';
+}
+function renderShowBP(){
+ const box=$('showBPRequests'),card=$('showBPCard');if(!box||!card)return;
+ const requests=isHost()?showBPRequestsData:[];
+ const paint=(el,list)=>{const html=list.map(bpRequestHtml).join('');if(el.innerHTML!==html)el.innerHTML=html;el.querySelectorAll('[data-bp-id]').forEach(b=>b.onclick=()=>decideShowBP(b.dataset.bpId,b.dataset.bpDecision));};
+ paint(box,requests);$('showBPCount').textContent=requests.length?'('+requests.length+')':'';
+ $('showBPSync').textContent=showBPError?'BP refresh failed: '+showBPError+' · retrying automatically':showBPDeciding?'Saving decision…':'Auto-updates every 3 seconds · Approve charges BP; Deny leaves the queue unchanged.';
+ card.classList.toggle('bp-empty',!requests.length&&!showBPError);
+ document.querySelectorAll('[data-bp-entry]').forEach(el=>paint(el,requests.filter(r=>r.action==='line_skip'&&String(r.payload?.entry_id||'')===el.dataset.bpEntry)));
+}
+async function refreshShowBP(force=false){
+ if(!admin()){showBPRequestsData=[];showBPError='';renderShowBP();return;}
+ if(showBPLoading||showBPDeciding||(!force&&Date.now()-showBPLast<3000))return;
+ showBPLoading=true;showBPLast=Date.now();
+ try{const data=await phpQueueApi('/bp/host-requests',{cache:'no-store'});showBPRequestsData=Array.isArray(data.requests)?data.requests:[];showBPError='';}
+ catch(e){showBPError=e.message||'Unavailable';}finally{showBPLoading=false;renderShowBP();}
+}
+async function decideShowBP(id,decision){
+ if(showBPDeciding||!['approve','deny','played'].includes(decision))return;
+ showBPDeciding=true;renderShowBP();
+ try{await phpQueueApi('/bp/host-decide',{method:'POST',body:JSON.stringify({id,decision})});showBPRequestsData=showBPRequestsData.filter(r=>String(r.id)!==String(id));showNotification(decision==='approve'?'BP request approved.':decision==='played'?'Song marked played.':'Request denied; queue unchanged.','success');await refresh();}
+ catch(e){showNotification(e.message,'error');}
+ finally{showBPDeciding=false;await refreshShowBP(true);renderShowBP();}
+}
+setInterval(()=>refreshShowBP(),3000);
+</script>
+<script>
+function renderNineRotation(){
+ const box=$('nineTurnPanel');if(!box)return;
+ if(!nineRotation){box.innerHTML='<p>Rotation unavailable. Refresh before advancing.</p>';return;}
+ const absentOpen=box.querySelector('#absentSingerDetails')?.open||false;
+ const r=nineRotation,current=singers.find(s=>s.status==='performing'),slots=r.slots||[],handoff=r.last_rotation||{},turn=Number(r.cursor||0);
+ const pending=!!r.battle_pending,battle=r.enabled!==false&&!pending;
+ $('rotationTitle').textContent=pending?'Battle queued':battle?'Battle Karaoke':'Normal Queue';
+ if(document.activeElement!==$('showMode'))$('showMode').value=r.enabled!==false?'battle':'normal';
+ $('showMode').disabled=nineBusy;
+ const displaySlots=slots.length?slots:['Host','Top rated #1','Top rated #2','Rotation #1','Rotation #2','Rotation #3','Rotation #4','Rotation #5','Rotation #6'].map((role,i)=>({role,name:i===0?'@rowdyroger':'Assigned when round starts',member:i===0?'rowdyroger':null,available:i===0}));
+ const nextSlot=slots.slice(current?turn+1:turn).find(s=>s.member&&s.available);
+ const currentSlot=slots[turn];
+ const nextHtml=`<div class="pill">${pending?'Battle queued · Finishing the existing line':battle?`Battle Karaoke · Round ${Number(r.round)||1} · ${r.round?`${Math.min(turn+1,9)} of 9`:'Ready to begin'}`:'Normal Queue · Signup order'}</div>
+ <p><b>${pending?'Everyone already waiting keeps their turn. Battle starts when the line returns to you.':battle?'You → top two rated → six guests → back to you.':'Everyone takes a turn in queue order, then returns to the bottom.'}</b></p>
+ ${battle&&r.manual_order?'<p class="small">Host order applies for this round. Automatic qualifying positions return next round.</p>':''}
+ ${battle&&!r.round?'<p class="small">Battle begins on your turn after the waiting line finishes. Scores start fresh then; past votes stay in history. Top two update between rounds.</p>':''}
+ ${current?`<p class="song">${esc(current.singer_name)} · ${esc(current.song_title)}</p>${current.song_source_url?`<button class="good" onclick="openTrack('${encodeURIComponent(current.song_source_url)}')">Open Current Track</button>`:''}`:''}
+ <button class="primary nine-primary" id="nineNext" onclick="advanceNineTurn('next')" ${nineBusy?'disabled':''}>${nineBusy?'Saving…':current?'Finish Song / Next Singer':battle&&!r.round?'Start Battle Rotation':'Start Next Singer'}</button>
+ <button class="secondary" onclick="const p=document.getElementById('reorderSingers');p.open=true;p.scrollIntoView({block:'start'})">Rearrange Singers</button>
+ ${battle?`<div class="nine-slots">${displaySlots.map((s,i)=>`<div class="nine-slot ${s.role==='Host'||s.role.startsWith('Top ')?'protected':''} ${r.round&&i<turn?'done':''} ${i===turn?'current':''}"><small>Turn ${i+1} · ${esc(s.role)}</small><b>${esc(s.name)}</b><small>${!r.round?'':i<turn?'Finished':!s.member?'Open — skipped':!s.available?'Absent — will skip':i===turn&&current?'Singing now':s.role==='Host'||s.role.startsWith('Top ')?'STAYS':'Rotates after this round'}</small></div>`).join('')}</div>`:''}
+ ${battle&&((handoff.out||[]).length||(handoff.in||[]).length)?`<div class="nine-handoff"><b>Panel change for this round</b><br>DROP: ${esc((handoff.out||[]).join(', ')||'Nobody')}<br>BRING UP: ${esc((handoff.in||[]).join(', ')||'Nobody')}</div>`:''}
+ <p class="small">${current?`Singing: ${esc(current.singer_name)}`:currentSlot?`Ready: ${esc(currentSlot.name)}`:'Host: @rowdyroger'}${nextSlot?` · Next: ${esc(nextSlot.name)}`:r.round?' · Next round starts with you.':''}</p>
+ <details id="absentSingerDetails" class="nine-details"><summary>Absent singer</summary><p class="small">Skip the current turn and remove that guest from the waiting queue. A stopped song earns no completion credit.</p><button class="secondary" onclick="skipNineTurn()" ${nineBusy?'disabled':''}>Absent / Skip Turn</button></details>`;
+ if(box._nineRenderHtml!==nextHtml){box.innerHTML=nextHtml;box._nineRenderHtml=nextHtml;box.querySelector('#absentSingerDetails').open=absentOpen;}
+}
+async function advanceNineTurn(action='next'){
+ if(nineBusy||!nineRotation||!isHost())return;
+ nineBusy=true;renderNineRotation();
+ try{
+  const current=singers.find(s=>s.status==='performing');
+  const result=await phpQueueApi('/queue/rotation-next',{method:'POST',body:JSON.stringify({action,version:nineRotation.version,queue_entry_id:current?.id||''})});
+  nineRotation=result.rotation;
+  showNotification('Rotation saved. Next singer is ready.','success');
+  await refresh();
+ }catch(e){showNotification(e.message||'Rotation not advanced. Refresh and retry.','error');await refresh();}
+ finally{nineBusy=false;renderNineRotation();}
+}
+function skipNineTurn(){showConfirm('Skip this turn and remove the absent singer?',()=>advanceNineTurn('skip'));}
+async function setNineMode(enabled){
+ if(nineBusy||!nineRotation||!isHost())return;
+ nineBusy=true;renderNineRotation();
+ try{
+  const result=await phpQueueApi('/queue/rotation-next',{method:'POST',body:JSON.stringify({action:'mode',enabled,version:nineRotation.version})});
+  nineRotation=result.rotation;
+  showNotification(enabled?'Battle queued. Everyone already waiting sings before battle starts on your turn.':'Normal Queue on. The current song continues.','success');
+  await refresh();
+ }catch(e){showNotification(e.message||'Mode was not changed.','error');await refresh();}
+ finally{nineBusy=false;renderNineRotation();}
+}
+
+</script>
+<script src="/live-overlay/voting-clock.js?v=20261026"></script></body>
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl508056'},{'dcenter':'p3'},{'cp_id':'10939001'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/traffic-assets/js/tccl.min.js'></script></html>

@@ -1,0 +1,9 @@
+# Room announcements and voting countdown - 2026-10-26
+
+Prepared for deployment: the existing live-overlay URL gains a hidden-by-default manual 60-second voting clock. Host Queue gains Start / Restart 1 minute and Hide timer. The clock uses a shared server deadline, survives overlay reloads, shows Time's up at zero, and hides when its state becomes stale. It is a display timer only: queue and vote acceptance rules remain unchanged. Timer writes require the existing host key validated by the existing admin ping; reads contain only the countdown state and server time. No new credentials or database schema.
+
+Five short room explanations rotate through the existing TikFinity chatbot bridge every three minutes while live activity and a chatbot client are present. Each is below 140 characters. Existing 15-second delivery spacing and duplicate-event handling remain. First announcement follows live activity; no test broadcast required. Desktop must remain signed in and the local bridge running.
+
+Offline validation passed: five distinct short reminders, three-minute spacing, silence without live activity, countdown at 60/30/0 seconds, Hide, and stale timer suppression. Production readback, browser controls, and actual live chat acceptance will be recorded after deployment. No live viewer delivery is claimed.
+
+Public branch: codex/voting-announcements-20261026. Production source baseline fetched before edits; dated local recovery includes original queue and overlay, original bridge module, generated source, and isolated tests. Rollback restores those original files and hides the timer. Existing singer, votes, wallet and rotation are not changed by this feature.

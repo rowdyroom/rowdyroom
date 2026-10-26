@@ -1,5 +1,9 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-26 - Room announcements and manual voting timer
+
+See docs/continuity/VOTING_ANNOUNCEMENTS_2026-10-26.md on codex/voting-announcements-20261026. Prepared countdown and host Start/Hide controls; five live-gated three-minute chatbot reminders. Offline checks passed; production and viewer acceptance pending.
+
 ## 2026-10-19 — Battle fairness and fresh scoring approved
 
 Two vote-protected singers plus six rotating guests; Battle waits for the existing line then starts on the host turn, with fresh scores and preserved history. Deployed with four exact source readbacks, rollback-only MySQL verification and host rendering; 37 local checks passed. Current singer, queue and mode unchanged. See [Battle fairness](BATTLE_FAIRNESS_2026-10-19.md). Private authority: `rowdy-room/battle-fairness-2026-10-19`; protected recovery: `Rowdy_Room_Battle_Fairness_2026-10-19`. Next: refresh host controls and observe the first real queued-battle handoff.
