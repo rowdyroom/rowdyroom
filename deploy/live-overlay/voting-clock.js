@@ -6,7 +6,7 @@
   const host=document.getElementById('votingTimerControls');
   const status=document.getElementById('votingTimerStatus');
   if (!card && !host) return;
-  let timer={visible:false,ends_at:0}, offset=0, lastSuccess=0, busy=false;
+  let timer={visible:false,ends_at:0}, offset=0, lastSuccess=0, busy=false, pending=null, actionError='';
   const buttons=host ? [...host.querySelectorAll('button')] : [];
   function render() {
     const stale=Date.now()-lastSuccess>8000;
@@ -14,12 +14,12 @@
     const seconds=Math.max(0,Math.ceil(timer.ends_at-(Date.now()+offset)/1000));
     const text=seconds ? `${Math.floor(seconds/60)}:${String(seconds%60).padStart(2,'0')}` : "Time's up";
     if (card) {card.hidden=!visible; value.textContent=text;card.classList.toggle('expired',seconds===0);}
-    if (status) status.textContent=stale ? 'Timer connection unavailable' : visible ? text+' · on overlay' : 'Hidden';
+    if (status) status.textContent=actionError || (stale ? 'Timer connection unavailable' : visible ? text+' · on overlay' : 'Hidden');
   }
   async function sync(command) {
-    if (busy) return;
+    if (busy) {if(command)pending=command;return;}
     busy=true;
-    if(command) buttons.forEach(b=>b.disabled=true);
+    if(command) {actionError='';buttons.forEach(b=>b.disabled=true);}
     try {
       const sent=Date.now();
       const options=command ? {method:'POST',headers:{'Content-Type':'application/json','X-Rowdy-Host-Key':admin()},body:JSON.stringify({command})} : {};
@@ -29,9 +29,9 @@
       offset=Number(data.server_now)*1000-(sent+Date.now())/2;
       timer=data.timer; lastSuccess=Date.now(); render();
     } catch(error) {
-      if(command && status) status.textContent=error.message;
-      if(!command)render();
-    } finally {busy=false;buttons.forEach(b=>b.disabled=false);}
+      if(command) actionError=error.message;
+      render();
+    } finally {busy=false;buttons.forEach(b=>b.disabled=false);if(pending){const next=pending;pending=null;sync(next);}}
   }
   buttons.forEach(button=>button.addEventListener('click',()=>sync(button.dataset.timerCommand)));
   sync(); setInterval(()=>sync(),1000); setInterval(render,100);
