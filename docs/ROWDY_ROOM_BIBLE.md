@@ -1,5 +1,9 @@
 # Rowdy Room Project Bible
 
+## 2026-10-26 - Single overall vote
+
+Viewers choose one overall1-5 star rating, then Submit Vote. Separate singing/performance selectors are superseded. Historic results are preserved. See [implementation](continuity/SINGLE_OVERALL_VOTE_2026-10-26.md).
+
 ## Approved Battle Karaoke revision — 2026-10-19
 
 The approved next rules are two singers protected by live-vote average and six rotating guests, with no contributor-protected seats. Battle is queued until everyone already waiting has sung and the turn returns to the host. Battle scores start fresh at actual start and persist until the next Battle start; all history remains saved. This supersedes the older Main 4 and twelve-hour Battle rules below as product intent, and is now deployed with source, MySQL and browser verification; actual audience acceptance remains pending. See [Battle fairness implementation status](continuity/BATTLE_FAIRNESS_2026-10-19.md).

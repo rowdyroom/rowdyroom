@@ -1,5 +1,9 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-26 - One overall five-star vote
+
+Deployed single Overall Rating selector; direct1-5 payload replaces lower-of-two scoring in the client. Existing API, votes and results preserved. Source cdca97b, codex/voting-announcements-20261026 (unmerged). See SINGLE_OVERALL_VOTE_2026-10-26.md; private rowdy-room/single-overall-vote-2026-10-26 v1/hashf2a04ee664d969422f2e8ab0a074952050e3cc195c459e16891599f8146eb468. Recovery Rowdy_Room_One_Star_Score_2026-10-26. Source/payload/browser/API boundary checks passed; next real audience submission unobserved. Refresh Companion.
+
 ## 2026-10-26 - Deployed centered voting timer and room reminders
 
 Authority: docs/continuity/VOTING_ANNOUNCEMENTS_2026-10-26.md, codex/voting-announcements-20261026 (unmerged), implementation8917d2e. Private rowdy-room/voting-announcements-2026-10-26 v4/history3187/hash20adb65db513e0d4a5f1fab27918671d3032a3c8a1ffa1facd000a9af4845393. Recovery Rowdy_Room_Voting_Announcements_2026-10-26. Timer and centered Live Studio source preview verified; next-LIVE chat acceptance pending.
