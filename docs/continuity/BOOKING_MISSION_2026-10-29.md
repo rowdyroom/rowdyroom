@@ -9,10 +9,11 @@ This supersedes the research-only process for mission tracking, while retaining 
 - A second normal-chat mission used workflow v3, acquired and finished a run lease, saved five local introductions and repeated the same preparation payload. The same five IDs were reused: five drafts, zero sends, zero human replies.
 - The ChatGPT UI showed 2m 3s for the baseline and 1m 54s for acceptance. Shorter internal checkpoint timings exclude model/preflight time and are not full request duration.
 - Final loaded module hash was read through the live connector and matched the saved implementation. The final connector reload preserved app, hub, workers and Vivaldi.
-- Forty-nine integration tests passed across the pipeline, contact research, report publisher and existing connector suites. They are not forty-nine real customer interactions.
+- Fifty integration tests passed across the pipeline, contact research, report publisher and existing connector suites. They are not forty-nine real customer interactions.
 
 ## Improvements now in place
 - Persistent local outbox and evidence receipts. One introduction per venue/purpose; repeated preparation does not silently revise or duplicate a campaign.
+- Explicit hash-checked revisions preserve prior unsent wording and reject stale or already-provider-linked edits.
 - Run leases exclude overlapping scheduled/manual work and completed-slot reruns.
 - Follow-ups become due only after an actual send receipt: five days after introduction, seven days after first follow-up, maximum two. Human replies stop the sequence; automatic replies pause for review. Opt-out, bounce and decline suppress the route.
 - Matching mailbox, sender, thread, chronology and content hashes are required for corresponding receipt types. Receipts are coordinator attestations, not independently fetched mail-provider proof.
@@ -22,7 +23,7 @@ This supersedes the research-only process for mission tracking, while retaining 
 
 ## Limits and outstanding gates
 - No outbound messages, Gmail drafts, applications, purchases, contracts or calendar writes were made in these tests. No new booking was obtained.
-- Sending needs explicit authorization for the concrete recipients/messages and an approved business mailing address. No home address may be inferred.
+- Roger explicitly placed outreach on hold while the system is finished. Delivery capability remains available through the existing connected Gmail tools; no credentials or separate SMTP service are added. Do not send, create external outreach drafts or ask for campaign approval until Roger explicitly releases the hold. Later activation also needs concrete authorization and an approved business mailing footer; no home address may be inferred.
 - Actual deliverability, customer reply handling, quote acceptance, a new confirmed booking and the first scheduled heartbeat execution remain untested.
 - Local outbox and external mail cannot commit atomically. An ambiguous send must be reconciled in Sent before any retry.
 - Daily research limits and classification rely on the executing coordinator. This is not an independent always-on mail daemon.
@@ -30,6 +31,6 @@ This supersedes the research-only process for mission tracking, while retaining 
 - Final entertainment-hiring authority remains unconfirmed for the five prospects. Ownership is not proof of hiring authority; exact route verification remains required where absent.
 
 ## Recovery and next action
-The dated private recovery package contains pre-change configuration/connector, activated code, database snapshots, exact saved drafts, report and visible chat evidence. Its manifest SHA256 is `b279e98fd9467e46296f73f78498bf9c583e51ab4b8906971e4793acc61e3a43`. The protected record contains its location and live-build evidence.
+The dated private recovery package contains pre-change configuration/connector, activated code, database snapshots, exact saved drafts, report and visible chat evidence. Its manifest SHA256 is `e3f8aad8e77ba426d65ebb9654f443b323ed9a48cd30e856119de964b7904560`. The protected record contains its location and live-build evidence.
 
-Next safe action: obtain the one outbound authorization and approved mailing address, add the approved footer to a reviewed revision, reconcile existing correspondence, then test the first real introduction without inventing a send/reply/booking receipt.
+Next safe action: finish internal system readiness and permit research/local drafts while honoring the owner hold. When Roger explicitly chooses to activate outreach, confirm approved scope and mailing footer, revise the unsent copy with its current hash, reconcile correspondence and execute through the existing Gmail connector. Live sending/replies remain untested while held.
