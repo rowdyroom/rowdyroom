@@ -1,5 +1,14 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-29 — Grok conversation and blank restore tabs fixed
+
+- Bridge 0.6.32 passed actual closed-browser startup after owner reload: saved Grok conversation restored automatically, thirty services reused, zero new service tabs, two restore blanks removed. Final thirty-five web tabs, zero blanks/duplicate pages; three panes intact. Repeat check also created zero tabs. Seventeen targeted tests passed.
+- Startup now requires explicit Grok conversation evidence and minimum bridge version. Protected active/pinned tabs and real pending pages remain untouched; no new permissions.
+- Main authority: `docs/continuity/DESKTOP_WORKSPACE_2026-10-29.md`, commit `f90acf2d4374f19cb405568db35b7ed0b32f7265`.
+- Protected authority: `psyche/desktop-workspace-2026-10-29`, v6, SHA256 `e14463297785cc1b606dfde71675a643c2b60f4bced62c12d97e25256d0cf9d5`. Test/source recovery paths are protected there; recovery manifest SHA256 `a21db7e7fc50c172815b1a6fdc70169baac8637faa229b380e9fbf368a6e2485`.
+- Production booking/policy hashes unchanged; no messages or Calendar writes. Earlier Grok-home/blank-tab activation warnings are superseded. PC reboot/crash recovery and permanent provider availability are not tested here.
+- Next: use the single Start Psyche shortcut; keep outreach held.
+
 ## 2026-10-29 — Actual closed-browser startup tested
 
 - Normal Vivaldi exit verified zero processes before launching the actual single Start Psyche desktop shortcut. All readiness checks passed, thirty required services found and zero new service tabs created; three panes restored.
