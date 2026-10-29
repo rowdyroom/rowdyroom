@@ -1,5 +1,17 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-29 — Normal Vivaldi cloud connector fixed and verified
+
+- Resolved the earlier cloud simulator failure: its child inherited the persistent MCP input pipe. Unused stdin is now detached, encoding is explicit, and an open-connection regression covers the actual live-session condition.
+- Added explicit unexpected-error responses, malformed-request recovery, metadata-only request tracing and local readiness checks after connector reloads.
+- Four real simulator calls from normal ChatGPT in the existing Vivaldi conversation passed, including one after a connector-only cold restart. Each passed 55 scenarios with no local fallback, no real mail/calendar calls and unchanged production data.
+- Fifty-seven automated test methods passed. Workflow defaults are v5. Real outbox remains five drafts / zero sends / zero replies; owner outreach hold remains active.
+- Public authority on main: `docs/continuity/CLOUD_CONNECTOR_RECOVERY_2026-10-29.md`, commit `7324c5ce43951ea6336bfe4f6838a0dc47b65e6b`.
+- Protected authority: `psyche/booking-mission-2026-10-29`, v4, SHA256 `13be85df1c2f438c655c2beda76c16a9ab4588043be71c123c490ab5fea2f508`.
+- Protected recovery path is in that record; manifest SHA256 `436741498f63cba90f8edb0f50a328394d5d0858f8a642fbe95ff6e75194a23c`.
+- The separate Codex app-tool gateway was not accepted as repaired. Actual external delivery/real booking writes remain held and untested; bounded cloud acceptance is not a permanent-uptime guarantee.
+- Next safe action: use the verified normal Vivaldi ChatGPT route for permitted research/local drafts and retain the outreach hold.
+
 ## 2026-10-29 — Isolated booking simulation and workflow v4
 
 - Fifty-five offline scenarios passed: eight simulated sends, fictional replies/quote acceptance and one fake booking. Fifty-four integration test methods passed; counts overlap.
