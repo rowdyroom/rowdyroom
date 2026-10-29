@@ -1,5 +1,16 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-29 — Contact discovery and five-venue research
+
+- Contact-first research is now the default: retained leads, hidden email/phone links, JSON-LD, relevant-page crawling and actual owner/decision-maker research through web/social sources.
+- Five venues tested; nine named people; all five have published phone and email routes. Final entertainment-hiring authority remains unconfirmed. No outreach, purchase or calendar change.
+- 41 integration tests passed. Normal Vivaldi ChatGPT read the new defaults/retained contacts and published the free report. One tunnel timeout recovered with a bounded single-source retry.
+- Public authority on main: `docs/continuity/CONTACT_DISCOVERY_2026-10-29.md`, source commit `1ec0db2a07302bce0ab29f7048eded2c75c616ce`.
+- Protected authority: `psyche/contact-discovery-2026-10-29`, v1, SHA256 `88fa51ab7160adaf042d274320983220eb35a0a4530c14c9435ca28f1013092d`.
+- Recovery path is protected there; manifest SHA256 `da42d8ba497a8ff0c72dd0456332df2bd0cacb090555436cd87bbf9cd90adb65`. Individual contacts are private, not in this public document.
+- Next safe action: review the named contacts and authorize a specific introduction. Owner identity does not automatically establish entertainment-booking responsibility.
+
+
 ## 2026-10-29 — Free browser mission workflow and source evidence
 
 - Free browser HTML is the persistent report default; direct known-calendar reads verified all 12 confirmed 2027 bookings without a reconnect prompt.
