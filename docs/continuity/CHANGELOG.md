@@ -1,5 +1,14 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-29 — Consultant tab reuse verified
+
+- Bridge 0.6.28 reuses a persistent Claude/Grok tab instead of opening one per assignment; Gemini retains its pane.
+- 24 redundant tabs removed; one each Claude/Grok/Gemini/Suno/Flow remained after four successful repeated-use tasks. 36 JavaScript checks passed.
+- Authority: `docs/continuity/SERVICE_TABS_2026-10-29.md`; protected key: `psyche/service-tabs-2026-10-29`.
+- Prior source, tab inventories, live receipts and recovery hashes are protected. No chat history was deleted.
+- Job-profile account gates remain as recorded in `BOOKING_WORK_PROFILES_2026-10-29.md`. Bring those pages forward one at a time.
+
+
 ## 2026-10-29 — Live booking inquiry and work profiles
 
 - Live homepage now links to https://rowdyroom.site/booking.php; minimum $75/hour, quote and availability confirmed before reservation.
