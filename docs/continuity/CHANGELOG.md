@@ -1,5 +1,15 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-29 — Desktop Start All service tabs verified
+
+- Existing desktop button now reconciles thirty required services in the paired Vivaldi profile, including Facebook, research/social, shopping and work sites, Gmail and Calendar. Missing tabs open in the background; existing pages and tiled panes are preserved.
+- Full launcher passed all recorded readiness checks with eleven registered worker connections ready. First request reused 23 tabs and opened 7; repeated live request opened zero. Thirteen targeted automated tests passed. Cold browser restore and next scheduled heartbeat run remain unverified.
+- Authority on main: `docs/continuity/DESKTOP_WORKSPACE_2026-10-29.md`, commit `8eaca1c07cad20215def3ee8011e8c98cc23b332`.
+- Protected authority: `psyche/desktop-workspace-2026-10-29`, v1, SHA256 `2b7b312400bd0d380597b347c2d0a2cac1dca5933dc7f9a818a51ab3d90c238a`.
+- Recovery path is protected in that record; manifest SHA256 `4bf164c739de9ecd55bd4919e11cd96562cd334309a5eba441abda544bac179e`.
+- Outreach remains held. Open tabs do not establish authentication or autonomous execution. Existing 08/12/16/20 Central research heartbeat remains active and requires available PC/Codex/local services. No message or calendar change.
+- Next: use the same desktop button; continue research and local preparation only.
+
 ## 2026-10-29 — Full real-research to isolated cloud rehearsal verified
 
 - Normal ChatGPT in Vivaldi refreshed five real venue/contact records, then consumed those version-pinned records in two seeded cloud rehearsals. Each passed 28 checks with seven simulated sends and one fake booking. The separate 55-check regression and 64 local test methods passed; counts overlap.
