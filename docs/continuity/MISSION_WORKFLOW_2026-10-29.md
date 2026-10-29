@@ -16,7 +16,10 @@
 - Validation: 25 worker Python tests, 34 integration Python tests and 39 bridge JavaScript tests passed.
 - Normal ChatGPT in the existing Vivaldi conversation successfully reread all 12 first-Saturday bookings for 2027, with correct overnight hours and daylight-saving offsets. No event was changed.
 - Normal ChatGPT published a free browser report directly through the connector. The first repaired run took about eight minutes, but exposed two provider capture failures; those failures remain in the audit rather than being erased.
-- Subsequent retries, provider limits, exact job receipts, routes and final report addresses are retained in the protected operational record. Do not infer full-team success from a heartbeat or unit test.
+- Two apparent repaired retries still used the old Vivaldi bridge. A separate instance's version was not activation proof. Native Vivaldi Extensions verification then confirmed 0.6.30.
+- A bounded Cody/Claude live acceptance then completed successfully in 30.38 seconds with a 0.6.30 provider receipt, full response and five readable public-source captures. The acceptance was Lucian-dispatched; the mission and report were performed in normal ChatGPT.
+- Grok displayed a real High Demand / try-later / upgrade notice. It remains provider-limited, not an all-green path; no paid upgrade or further repeated retry was attempted.
+- Exact job receipts, routes, final report addresses and recovery hashes are retained in the protected operational record. Do not infer full-team success from a heartbeat or unit test.
 
 ## Authority and recovery
 
