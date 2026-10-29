@@ -1,5 +1,17 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-29 — Live booking inquiry and work profiles
+
+- Live homepage now links to https://rowdyroom.site/booking.php; minimum $75/hour, quote and availability confirmed before reservation.
+- Real system inquiry reached the business inbox with SPF and DMARC passing. CSRF and required-field rejection checks passed.
+- Public authority: `docs/continuity/BOOKING_WORK_PROFILES_2026-10-29.md`; source: `tools/server/rowdy-booking.php`.
+- Protected authority: `rowdy-room/booking-work-profiles-2026-10-29`; private recovery manifest and account details are stored there.
+- LinkedIn services and Glassdoor profile changes verified; Indeed terms, ZipRecruiter email verification, Upwork payment restriction and Fiverr onboarding remain unfinished.
+- This record supersedes the legacy appointment-calendar booking instructions only. Older team topology entries below are historical.
+- Branch: `codex/booking-work-profiles-20261029`; source commit `2e099fbca80c26642a712f11402ef8e14669d9b0`. Merge status must be read from the pull request.
+- Next safe action: clear the account gates and verify remaining profile publication; do not claim all sites complete.
+
+
 ## 2026-08-01 — Rowdy Robots full-team commissioning complete
 
 - Commissioned every one of the 22 local Robots through a bounded real task before activation.
