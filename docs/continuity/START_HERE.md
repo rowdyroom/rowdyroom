@@ -1,5 +1,13 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-29 — Actual closed-browser startup tested
+
+- Normal Vivaldi exit verified zero processes before launching the actual single Start Psyche desktop shortcut. All readiness checks passed, thirty required services found and zero new service tabs created; three panes restored.
+- Thirty-five web tabs remained. Total count 37 to 36: separate Downloads utility window did not reopen; Extensions became New Tab. Grok initially returned home and its existing conversation was recovered through the sidebar. Exact utility-window/provider-conversation restoration is not guaranteed. No messages or Calendar writes; booking/policy hashes unchanged.
+- Authority on main: `docs/continuity/DESKTOP_WORKSPACE_2026-10-29.md`, commit `657c3b6b838b0b6c9faede2e41d565a534fc49a2`.
+- Protected authority: `psyche/desktop-workspace-2026-10-29`, v4, SHA256 `62cd54504524aa27411196595803620ec1b927e73b6ce3e7e8152828ff702a1b`. Test evidence, screenshot and session recovery paths are protected there.
+- Next: use the single startup shortcut for the service workspace; preserve the outreach hold. PC reboot/crash recovery and next scheduled run remain untested.
+
 ## 2026-10-29 — Desktop Start All service tabs verified
 
 - Existing desktop button now reconciles thirty required services in the paired Vivaldi profile, including Facebook, research/social, shopping and work sites, Gmail and Calendar. Missing tabs open in the background; existing pages and tiled panes are preserved.
