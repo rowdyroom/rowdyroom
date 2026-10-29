@@ -3,10 +3,10 @@
 ## 2026-10-29 — Desktop Start All service tabs verified
 
 - Existing desktop button now reconciles thirty required services in the paired Vivaldi profile, including Facebook, research/social, shopping and work sites, Gmail and Calendar. Missing tabs open in the background; existing pages and tiled panes are preserved.
-- Full launcher passed all recorded readiness checks with eleven registered worker connections ready. First request reused 23 tabs and opened 7; repeated live request opened zero. Thirteen targeted automated tests passed. Cold browser restore and next scheduled heartbeat run remain unverified.
-- Authority on main: `docs/continuity/DESKTOP_WORKSPACE_2026-10-29.md`, commit `8eaca1c07cad20215def3ee8011e8c98cc23b332`.
-- Protected authority: `psyche/desktop-workspace-2026-10-29`, v1, SHA256 `2b7b312400bd0d380597b347c2d0a2cac1dca5933dc7f9a818a51ab3d90c238a`.
-- Recovery path is protected in that record; manifest SHA256 `4bf164c739de9ecd55bd4919e11cd96562cd334309a5eba441abda544bac179e`.
+- The launcher also ensures the installed Codex heartbeat runtime is running. Two full launcher runs passed all recorded readiness checks with eleven registered worker connections ready. First request reused 23 tabs and opened 7; repeated live request opened zero. Thirteen targeted automated tests passed. Cold browser restore and next scheduled heartbeat run remain unverified.
+- Authority on main: `docs/continuity/DESKTOP_WORKSPACE_2026-10-29.md`, commit `c725e6d23db1d6656832548fc53d7dda6f1c3359`.
+- Protected authority: `psyche/desktop-workspace-2026-10-29`, v2, SHA256 `5a4cc388dfbbc48c39a2fb4cb8253827e422ae753ac5d4c6031078571ab6f21c`.
+- Recovery path is protected in that record; manifest SHA256 `1e50ffbd8e2fcb3dc206d7778b6993c866bf14988b0a50079ee31b32fa530745`.
 - Outreach remains held. Open tabs do not establish authentication or autonomous execution. Existing 08/12/16/20 Central research heartbeat remains active and requires available PC/Codex/local services. No message or calendar change.
 - Next: use the same desktop button; continue research and local preparation only.
 
