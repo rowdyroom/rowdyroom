@@ -10,6 +10,7 @@ Roger's existing Start All desktop button now opens missing required service tab
 - First reconciliation reused twenty-three tabs and created seven missing background tabs. A second live request found all thirty and created zero tabs. Thirteen targeted automated tests passed.
 - The existing three-pane workspace was visibly retained. No browser shutdown/cold session restore was performed.
 - Reconciliation is explicit per desktop launch, expires after five minutes and is restricted to the selected browser identity. It recognizes pending navigation and does not navigate existing tabs. A local authenticated status receipt is required; a silent bridge failure cannot count as startup success.
+- The launcher also starts the installed Codex desktop runtime if it is closed, because the existing research heartbeat depends on it. The final full launcher passed with `CodexProcess` true and zero new service tabs. Starting from Codex closed was not exercised in this active chat.
 - Browser startup now precedes browser-bridge readiness checks, fixing the old ordering problem when Vivaldi is closed.
 
 ## Operational limits
@@ -22,6 +23,6 @@ Research and local preparation only: outreach remains held; no external draft, m
 
 ## Authority and recovery
 
-Protected record: `psyche/desktop-workspace-2026-10-29`. Local implementation, status receipts, screenshot and prior-source recovery locations are recorded there. Recovery manifest SHA256: `4bf164c739de9ecd55bd4919e11cd96562cd334309a5eba441abda544bac179e` (14 files).
+Protected record: `psyche/desktop-workspace-2026-10-29`. Local implementation, status receipts, screenshot and prior-source recovery locations are recorded there. Recovery manifest SHA256: `1e50ffbd8e2fcb3dc206d7778b6993c866bf14988b0a50079ee31b32fa530745` (15 files).
 
 Next safe action: use the existing desktop button; continue permitted research while holding outreach. Review a future failed readiness receipt before retrying startup.
