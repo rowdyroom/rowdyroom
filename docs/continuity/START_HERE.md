@@ -1,5 +1,17 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-29 — Full real-research to isolated cloud rehearsal verified
+
+- Normal ChatGPT in Vivaldi refreshed five real venue/contact records, then consumed those version-pinned records in two seeded cloud rehearsals. Each passed 28 checks with seven simulated sends and one fake booking. The separate 55-check regression and 64 local test methods passed; counts overlap.
+- Closed fresh-contact and route gaps through the existing Vivaldi research tab. All five observed Driving routes were within thirty minutes from Rolla town center; one private-road/load-in warning was preserved.
+- Added a real-lead snapshot bridge with invalid-domain fake delivery, strict person/email/version matching, stale Calendar evidence rejection, safe route merges, authoritative DB version listing and blocked-host retry limits.
+- Real research records legitimately changed. The real outbox stayed byte-for-byte unchanged at five drafts / zero sends / zero replies. Independent read-only Calendar verification matched the initial empty rehearsal window. No real outreach, external draft, form, application, purchase or Calendar write.
+- Public authority on main: `docs/continuity/FULL_BOOKING_REHEARSAL_2026-10-29.md`, commit `308da1a80c0cc21351984369d291ccdb589e8726`.
+- Protected booking authority: `psyche/booking-mission-2026-10-29`, v6, SHA256 `f90445e444fc8c86b5ebdac970add2e60b1cda374577a8c1e4faee671faaee00`.
+- Protected contact authority: `psyche/contact-discovery-2026-10-29`, v3, SHA256 `d64adf47b1346fbeb57fa6337b41177374364a730cfa840780e7312884ec7c40`.
+- Protected recovery path is in those records; manifest SHA256 `ccdc5fc26228cdb1c92d1076bf1367509b77651ced946924a39946a7367c94bb`.
+- Next: continue permitted research/local preparation with outreach held. Final entertainment-hiring authority and real customer interest remain unconfirmed; hypothetical replies/bookings never upgrade real records.
+
 ## 2026-10-29 — Normal Vivaldi cloud connector fixed and verified
 
 - Resolved the earlier cloud simulator failure: its child inherited the persistent MCP input pipe. Unused stdin is now detached, encoding is explicit, and an open-connection regression covers the actual live-session condition.
