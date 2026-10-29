@@ -362,7 +362,7 @@ Rowdy Room offers:
 - festivals/community events
 - school events
 
-Booking uses a Google appointment calendar opened as a normal external link rather than an embedded calendar when embedding is blocked.
+As of 2026-10-29, booking inquiries use https://rowdyroom.site/booking.php, linked from the homepage. The base minimum is $75/hour; equipment, travel, event scope and availability are confirmed in the quote. This is an inquiry, not an automatic reservation or payment. Email delivery was verified in the business inbox with SPF and DMARC passing. See `docs/continuity/BOOKING_WORK_PROFILES_2026-10-29.md` for source and verification.
 
 Intake should collect:
 
