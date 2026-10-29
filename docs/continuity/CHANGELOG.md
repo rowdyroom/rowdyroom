@@ -1,5 +1,14 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-29 — Grok capture repaired; two actual collaboration rounds passed
+
+- Bridge 0.6.33 now returns primitive JSON across both consultant injection boundaries and preserves diagnostic failure reasons. Fifty-one targeted checks passed.
+- Existing normal Vivaldi ChatGPT completed two consecutive Seth/Gemini + Gwen/Grok -> Cody/Claude rounds: all six managers and required partners completed with task/prompt/new-response evidence. Cody consumed actual upstream results. Grok durations were 61.33s and 63.67s; earlier 0.6.32 failures remain historical.
+- Source verification remained separate from model execution: inaccessible Facebook evidence was not accepted as a factual result. No current paid opening was established. No outreach/Calendar action, lead/outbox edit, simulation or schedule change; production data/policy hashes unchanged. Thirty-five web tabs remained.
+- Authority on main: `docs/continuity/GROK_CAPTURE_2026-10-29.md`, commit `a0774cc89eb5be184f1982fdb87de0985ad391ab`.
+- Protected authority: `psyche/grok-capture-2026-10-29`, v1, SHA256 `26fdf50ba0a30695cc95a877d95d43bcfeb98f68d7003afdad36751e28b33894`. Protected recovery location is in that record; source/receipt manifest SHA256 `5b972a8bb0226425ddf6b35e946e2394c4c185405e77bc19688a20679dfeea79`.
+- Next: use repaired manager/service paths for relevant research with outreach held. Two bounded runs do not guarantee future provider uptime, quotas or source access.
+
 ## 2026-10-29 — Hands-free normal ChatGPT booking mission verified
 
 - Actual normal Vivaldi ChatGPT run completed fresh research and isolated real-lead rehearsal without owner clicks. One new prospect retained; six total leads. No confirmed current paid opening was established.
