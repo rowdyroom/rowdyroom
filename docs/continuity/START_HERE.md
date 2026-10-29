@@ -1,5 +1,16 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-29 — Isolated booking simulation and workflow v4
+
+- Fifty-five offline scenarios passed: eight simulated sends, fictional replies/quote acceptance and one fake booking. Fifty-four integration test methods passed; counts overlap.
+- Fixed prepared-followup races, past-date/malformed-calendar acceptance, all-day/DST handling, exact quote/customer/owner-approval binding and approved setup buffers. Synthetic production receipts are blocked.
+- Real contacts/outbox remained byte-for-byte unchanged for the entire task; no real mail, external draft or Calendar write calls. Owner outreach hold remains active.
+- Local MCP stdio simulation passed. Normal Vivaldi ChatGPT/cloud connector handoff had timeouts/internal errors; bounded reload/retry did not verify recovery. The stalled retry was stopped. Independent local fallback is explicitly labeled.
+- Public authority on main: `docs/continuity/BOOKING_SIMULATION_2026-10-29.md`, commit `a16d2f772caebea1dbbaf799b13aa9e77d4b8c7d`.
+- Protected authority: `psyche/booking-mission-2026-10-29`, v3, SHA256 `c7028e9f344ef061068573adf287c938e07dee039f92e7d478acc59fd6d7de77`.
+- Protected recovery path is in that record; manifest SHA256 `7b4b3c39ddbbaa44be1a46a3b3ddd5dc5c3a99872baa74659e62b7f36367af34`.
+- Next: resolve the cloud connector warning while permitted independent local work continues. No sending approval requested. Actual provider delivery, real reply classification and real booking writes remain untested.
+
 ## 2026-10-29 — Continuous booking mission and held outreach
 
 - Workflow v3 now retains an outbox, safe draft revisions, provider evidence, run leases, reply/suppression state and due follow-ups. Real normal Vivaldi ChatGPT saved five introductions twice with the same IDs; zero sends/replies/bookings.
