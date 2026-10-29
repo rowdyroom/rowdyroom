@@ -1,5 +1,16 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-29 — Hands-free normal ChatGPT booking mission verified
+
+- Actual normal Vivaldi ChatGPT run completed fresh research and isolated real-lead rehearsal without owner clicks. One new prospect retained; six total leads. No confirmed current paid opening was established.
+- Closed the public-web Maps failure using the existing authenticated Maps tab, returned coordinator observation through the same chat, and saved the new lead at v3 with a thirteen-minute town-center Driving route. Hiring authority/direct email remain unconfirmed.
+- Rehearsal: 28 checks passed, seven fake sends, one fake booking, zero real mail/Calendar calls; source versions pinned. Real outbox remains five review-required drafts and zero receipts/sends/replies. Independent Calendar read matched the empty rehearsal window. Tabs stayed 35 with no additions.
+- Existing four-cycle Central research heartbeat remains ACTIVE in the same thread. Verified saved instructions now include overlap avoidance, focused Enter submission for the narrow pane, authenticated Maps fallback, completion/receipt checks and quiet unchanged runs. No second schedule. Future scheduled execution remains unverified.
+- Main authority: `docs/continuity/AUTONOMOUS_BOOKING_2026-10-29.md`, commit `b25891da25e2e765038341ebd737629cd1ebfa52`.
+- Protected mission: `psyche/booking-mission-2026-10-29`, v7, SHA256 `f567c3af95f61fa409eef1d53179fcb7c9e1f9a31f50224bebd70b8d6b24e2c8`.
+- Protected contacts: `psyche/contact-discovery-2026-10-29`, v4, SHA256 `e365ad13df466d4710e8b3f137be732b8f8a561e4ad85e58132638a2b300ed0a`. Recovery paths are protected there; manifest SHA256 `f084221188dee2280efba2a6a20a6f732f13d0a11b1b6882ee6978ddea483ced`.
+- Next: continue scheduled research/local preparation under the outreach hold; actual delivery, genuine acceptance and real booking writes remain untested and unauthorized.
+
 ## 2026-10-29 — Grok conversation and blank restore tabs fixed
 
 - Bridge 0.6.32 passed actual closed-browser startup after owner reload: saved Grok conversation restored automatically, thirty services reused, zero new service tabs, two restore blanks removed. Final thirty-five web tabs, zero blanks/duplicate pages; three panes intact. Repeat check also created zero tabs. Seventeen targeted tests passed.
