@@ -1,5 +1,14 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-29 — Full booking research through all three managers
+
+- Actual normal Vivaldi ChatGPT used Seth/Gemini, corrected Gwen/Grok and dependent Cody/Claude. No explicit open paid role verified; ranked contact-backed prospects and two unsent introductions returned in the free browser report. No outreach, Calendar mutation, external draft, simulation or schedule change.
+- Longer Markdown-list prompts exposed a second Grok correlation gap: two failed attempts, then a plain-paragraph request completed with real bridge 0.6.33 evidence. Plain paragraphs are the current verified workaround; unordered-list normalization remains unfixed. Earlier short passes are not all-prompt reliability proof.
+- Fresh official schedule and authenticated browser observations are retained separately with provenance. Three evidence/scope updates remain pending a version-safe merge; full-lead replacement lacks an atomic version guard. Six retained leads and five review-required drafts remain unchanged; zero receipts/sends/replies. Thirty-five web tabs remained.
+- Main authority: `docs/continuity/BOOKING_TEAM_RESEARCH_2026-10-29.md`, commit `a1667f9d881e6b26c7f3f2e9173ef98ca4d0a6fe`.
+- Protected authority: `psyche/booking-team-research-2026-10-29`, v1, SHA256 `a25bf52e106cca38076e8c91f270fb88fc4751c8ca8f7aa098f41d2062a254c9`. Protected evidence/recovery path is there; manifest SHA256 `bc214ed87e5b7d479b996632b43deecd8b738643b6badaad9662fd28b83b3674`.
+- Next: use plain-paragraph manager prompts for permitted research; preserve the send hold. Add version-safe evidence merging and repair long-prompt list correlation before claiming unrestricted workflow reliability. Final performer hiring authority/current paid openings remain unverified.
+
 ## 2026-10-29 — Grok capture repaired; two actual collaboration rounds passed
 
 - Bridge 0.6.33 now returns primitive JSON across both consultant injection boundaries and preserves diagnostic failure reasons. Fifty-one targeted checks passed.
