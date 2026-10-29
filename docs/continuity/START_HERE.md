@@ -1,5 +1,16 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-29 — Continuous booking mission and held outreach
+
+- Workflow v3 now retains an outbox, safe draft revisions, provider evidence, run leases, reply/suppression state and due follow-ups. Real normal Vivaldi ChatGPT saved five introductions twice with the same IDs; zero sends/replies/bookings.
+- Fifty tests passed. Final live connector build matched activated code; one post-reload timeout recovered on a bounded retry.
+- A thread heartbeat is active at 08:00, 12:00, 16:00 and 20:00 Central for bounded research/local drafts. First scheduled execution remains unverified; PC/Codex/local services must be available.
+- Roger explicitly placed outreach on hold: keep Gmail delivery capability available, send nothing and create no external outreach drafts. Do not ask for campaign authorization again until Roger releases the hold.
+- Public authority on main: `docs/continuity/BOOKING_MISSION_2026-10-29.md`, commit `b2b199302c4f896e2f25a1cbe4b05f4b5e6051da`.
+- Protected authority: `psyche/booking-mission-2026-10-29`, v1, SHA256 `f41e7a0c4896678788f62328ae24431c3a87e2a3a4fe2525f33574584252d350`.
+- Protected recovery location is in that record; manifest SHA256 `e3f8aad8e77ba426d65ebb9654f443b323ed9a48cd30e856119de964b7904560`.
+- Remaining gates: approved sending scope/footer after hold release, actual delivery/reply/quote acceptance/new booking. Local receipt attestations are not independent provider verification. Continue internal readiness and research while held.
+
 ## 2026-10-29 — Contact discovery and five-venue research
 
 - Contact-first research is now the default: retained leads, hidden email/phone links, JSON-LD, relevant-page crawling and actual owner/decision-maker research through web/social sources.
