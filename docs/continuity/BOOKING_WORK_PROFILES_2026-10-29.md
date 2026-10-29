@@ -22,7 +22,7 @@ Submitting the form does not reserve a date, accept payment, or create a confirm
 Glassdoor has the selected TikTok portrait, a DJ/karaoke/emcee summary, $75/hour minimum and enabled employer discovery.
 LinkedIn has the selected portrait, updated headline, booking website, and a published services page for DJing and Live Events starting at $75/hour.
 Indeed onboarding shows Disc Jockey/Emcee and $75/hour; its updated legal terms remain a user action.
-Fiverr's onboarding draft contains the DJ/event-host identity, $75/hour bio, English and DJ mixing; publication and portrait persistence remain unverified after its human-verification gate returned.
+Fiverr's onboarding draft contains the DJ/event-host identity, $75/hour bio and DJ mixing, which survived a reload. English was selected before the tab failed but persistence is unverified. Publication and portrait persistence remain unverified after a human-verification gate and browser-tab failure.
 Upwork is authenticated but editing is disabled by an account payment-method restriction. Its established profile and $26/hour rate have not been overwritten.
 ZipRecruiter remains at email-code verification.
 
