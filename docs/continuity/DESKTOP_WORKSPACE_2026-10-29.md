@@ -1,5 +1,17 @@
 # Desktop workspace startup — 2026-10-29
 
+## Grok conversation and blank-tab repair — verified October 29, 2026
+
+- Bridge 0.6.32 now checks the configured Grok conversation after initial page loading/redirects. A home-page landing is corrected in the same tab, without activating it or submitting a prompt. An already-correct conversation is retained; a different owner conversation is preserved rather than overwritten.
+- Startup closes inactive, unpinned blank restore tabs only in the paired workspace window. Active/pinned tabs, real pending navigations and the three-pane workspace are protected. Downloads/Extensions are not required startup services; the final utility tab was closed after verification.
+- Actual closed-browser test after owner extension reload: zero Vivaldi processes before launching the desktop shortcut; all startup checks passed. Thirty services reused, zero new service tabs, two blank restore tabs removed. Grok's saved conversation restored automatically. Final inventory: thirty-five web tabs, zero blanks, zero duplicate pages; all web pages preserved and three panes visually intact.
+- A repeated reconciliation also created zero tabs and retained the correct Grok conversation. Seventeen targeted automated tests passed.
+- Readiness now requires a version at least 0.6.32 and explicit Grok conversation-restored evidence. The initial cached-code activation failure was not accepted as success; the owner reloaded once before the passing test.
+- Booking database and outreach-policy hashes stayed unchanged. No messages, external drafts, forms or Calendar writes. PC reboot/crash recovery and permanent provider availability are outside this test.
+- Protected authority: `psyche/desktop-workspace-2026-10-29`. Local before/after source, actual receipts, tab inventory, screenshot and result are protected there. Recovery manifest SHA256 `a21db7e7fc50c172815b1a6fdc70169baac8637faa229b380e9fbf368a6e2485`.
+
+Earlier test limitations below are historical; this section supersedes the Grok-home/blank-tab activation gaps. Next safe action: use the single Start Psyche desktop shortcut, keep outreach held and retain the existing browser workspace.
+
 Roger's existing Start All desktop button now opens missing required service tabs through the paired browser bridge, instead of relying only on the previous session. It preserves existing pages, forms, conversations and tiled panes. Existing duplicates are not closed automatically.
 
 ## Verified behavior
