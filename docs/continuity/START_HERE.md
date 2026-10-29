@@ -1,5 +1,16 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-29 — Free browser mission workflow and source evidence
+
+- Free browser HTML is the persistent report default; direct known-calendar reads verified all 12 confirmed 2027 bookings without a reconnect prompt.
+- Source receipts carry URL, capture time, hash and excerpts; unsupported vacancies/pay and unknown routes remain unverified. Three town-center driving routes were read.
+- Vivaldi bridge 0.6.30 is verified in native UI and a successful Cody/Claude live receipt (30.38 seconds, five readable source captures). Grok is externally demand-limited; no upgrade purchased and no all-provider success claimed.
+- Authority on main: `docs/continuity/MISSION_WORKFLOW_2026-10-29.md`, commit `78c058f273bef9b14664c636f6c38cc6c5fafa29`.
+- Protected authority: `psyche/mission-workflow-2026-10-29`, v1, SHA256 `9ec1941d8e9b121c22d937db5eefd08220a415dbf5232d8238bbc9384f988434`.
+- Private recovery path is recorded there; recovery manifest SHA256 `5cb49a040ae34299e39700c01b74dd75adf8eb39e1e73dce7050ce97dd6603aa`.
+- Remaining limits: Grok demand, unavailable source pages and one reserve venue's route. Review the free report; authorize specific outreach separately. No outreach or new calendar booking occurred.
+
+
 ## 2026-10-29 — Consultant tab reuse verified
 
 - Bridge 0.6.28 reuses a persistent Claude/Grok tab instead of opening one per assignment; Gemini retains its pane.
@@ -15,7 +26,7 @@
 - Real system inquiry reached the business inbox with SPF and DMARC passing. CSRF and required-field rejection checks passed.
 - Public authority: `docs/continuity/BOOKING_WORK_PROFILES_2026-10-29.md`; source: `tools/server/rowdy-booking.php`.
 - Protected authority: `rowdy-room/booking-work-profiles-2026-10-29`; private recovery manifest and account details are stored there.
-- LinkedIn services and Glassdoor profile changes verified; Indeed terms, ZipRecruiter email verification, Upwork payment restriction and Fiverr onboarding remain unfinished.
+- LinkedIn services and Glassdoor profile changes verified; ZipRecruiter email verification, Upwork payment restriction and Fiverr onboarding remain unfinished.
 - This record supersedes the legacy appointment-calendar booking instructions only. Older team topology entries below are historical.
 - Branch: `codex/booking-work-profiles-20261029`; source commit `2e099fbca80c26642a712f11402ef8e14669d9b0`. Merge status must be read from the pull request.
 - Next safe action: clear the account gates and verify remaining profile publication; do not claim all sites complete.
