@@ -1,5 +1,14 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-29 — Safe evidence merge accepted; long-prompt repair awaiting activation
+
+- Atomic additive merge and guarded existing-lead replacement are implemented; workflow v7 and reloaded connector passed actual normal Vivaldi ChatGPT acceptance. Three reviewed merges saved once, current-version repeats were no-ops, stale input was rejected, and exactly three history rows were added while routes/people/contact values/statuses/stages stayed intact. Seth/Gemini also completed fresh research.
+- Bridge source 0.6.34 fixes unordered/nested-list correlation and detached-clone block boundaries. Fifty-nine Python and fifty-two browser/workspace checks passed. Against the real previously failed Grok turn: old match false, fixed match true, changed instructions rejected.
+- **Pending:** normal bridge status popup still shows loaded 0.6.33. Owner reload was requested because extension-management automation is blocked. Actual 0.6.34 long-prompt Grok and dependent Claude/full rerun are not yet accepted. Do not equate prepared source or local tests with a completed rerun.
+- Main authority: `docs/continuity/BOOKING_REPAIR_2026-10-29.md`, commit `8f1845e33c6b4d55ffd53ff627321a6123f9eb8c`.
+- Protected authority: `psyche/booking-repair-2026-10-29`, v1, SHA256 `23e30276a2527baa3bc68218eb4f9850417fef6ee0bbc2d310c324009e9572ed`. Recovery path is protected there; source/data manifest SHA256 `2c3fb70da5cf07577f174eecd9e008bbe0f19d1e3abb3ba8ee6ec9dd9b73d209`.
+- No outreach or Calendar mutation; five review-required drafts and zero receipts remain. Next: after owner reload, continue the same normal chat with a real long bulleted Gwen/Grok task and Cody/Claude consuming actual Seth/Gwen results; publish the free report. No further connector restart is needed.
+
 ## 2026-10-29 — Full booking research through all three managers
 
 - Actual normal Vivaldi ChatGPT used Seth/Gemini, corrected Gwen/Grok and dependent Cody/Claude. No explicit open paid role verified; ranked contact-backed prospects and two unsent introductions returned in the free browser report. No outreach, Calendar mutation, external draft, simulation or schedule change.
