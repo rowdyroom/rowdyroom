@@ -1,0 +1,11 @@
+# Grok Bot payload repair — October 30, 2026
+
+The scheduled Gwen consultation failed after 252.64 seconds. The provider routine reported that incoming webhook text was cut off before callback fields arrived; the original relay contained no requests. HTTP acceptance was correctly retained as failure, not completion.
+
+The adapter now rejects tasks exceeding 2,000 UTF-8 bytes before dispatch, bounds compact webhook JSON to 2,600 bytes and places callback metadata before task text. Source-bound research assignments retain their exact evidence packet and completion marker while removing redundant discovery objectives. Grok's evidence contract is compact and is not duplicated for source-bound analysis. Oversized evidence fails closed instead of being silently truncated or retried.
+
+Fifty-three targeted tests passed. An actual existing normal Vivaldi ChatGPT conversation dispatched the repaired Gwen/Grok Bot task automatically. It completed in **31.73 seconds** with matching task/prompt, fresh response, requested completion marker and authenticated signed callback. Independent callback audit verified signature, task/hash and marker, with no secret or Authorization header exposed to the relay. The accepted task was 636 bytes. This confirms the bounded repaired path, not unlimited prompt support or a reliability guarantee.
+
+The reconciled browser report distinguishes the original failed Gwen job, completed Seth analysis (56.75 seconds, no new entertainment-buyer authority), and repaired Gwen result. The Facebook reunion material describes completed or already-filled work, not a current unfilled customer request. **Zero new qualified opportunities or bookings.** No new source reads in the repaired analysis. No outreach, external drafts, purchases or Calendar operations; existing three-pane layout preserved.
+
+Private authority: `psyche/private-event-research-2026-10-30`, version19, SHA-256 `8f08ecc038130a952a32ba63fc964ab0685440e0a8f815a7c2d59119bd64df1e`. Detailed receipts and dated recovery are protected. No owner activation pending. Next: use compact source-bound assignments; explicitly shorten or decompose an oversized task, never silently truncate evidence or count supplier ads as customer demand.
