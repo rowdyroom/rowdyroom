@@ -1,3 +1,7 @@
+## 2026-10-30 — Reply monitoring local response queue
+
+Added persistent automatic local response starters, coordinator tailoring with stale-write protection, suppression and provider-time ordering. 44 regression tests and55offline journey checks passed; actual Cody/Claude hypothetical reply analysis completed. Existing schedule updated without adding jobs; no outreach or calendar writes. See [acceptance](REPLY_MONITORING_2026-10-30.md) and START_HERE for protected authority and limitations.
+
 ## Grok Bot payload cutoff repaired — 2026-10-30
 
 [Bounded payload repair](GROK_BOT_PAYLOAD_REPAIR_2026-10-30.md): the scheduled Gwen job failed after252.64s because the provider received truncated task JSON without callback fields. Task/wire byte guards, callback-first ordering and compact source-bound assignments are active; no silent evidence truncation. Fifty-three targeted tests pass. A real normal Vivaldi ChatGPT repaired Gwen/Grok Bot run completed in31.73s with matching signed callback and independent audit. The reconciled report records0qualified requests,0new buyer authority and0bookings. No outreach, Calendar writes, paid services or owner activation. Private authority `psyche/private-event-research-2026-10-30` v19, SHA256 `8f08ecc038130a952a32ba63fc964ab0685440e0a8f815a7c2d59119bd64df1e`; public repair commit `d808072a6b80ab5f190c4d4697f8722eaf30245e` on main. Detailed receipts/recovery protected. Next: bounded source-first research; shorten/decompose oversized tasks rather than retrying them unchanged.
