@@ -1,3 +1,4 @@
+<!-- Acceptance addendum: Seth/Gemini completed a real source-bound task in 39.3 seconds on executed bridge 0.6.40; matching prompt, fresh answer and completion marker verified; protocol2 analysis, zero collector reads. Public business contacts are not proved direct personal contacts. -->
 # Paid service and desktop handoff acceptance — 2026-10-30
 
 Signed-in account screens verified Grok Premium, Google AI Pro and Claude Pro. Monthly prices remain owner-reported; no invoice audit or new purchase was performed. Official installed Claude Desktop and Grok Bot identities were checked against vendor distribution. Native applications are companion interfaces, not additional local-model workers.
