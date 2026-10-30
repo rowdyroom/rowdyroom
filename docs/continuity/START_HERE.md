@@ -1,5 +1,13 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-30 — Individual-event research and approved-origin routes
+
+Workflow v9 adds public individual wedding/birthday/private-party/one-time requests alongside venue/referral research, a retained source-attempt ledger, five-capture limit and actual authenticated social/browser fallback requirements. Eleven source channels are configured; GigSalad's free supplier plan and five-percent booking fee were browser-verified, while other unverified channels remain labeled. No qualified current individual request or new buyer was proved. Eight actual routes now use the private owner-approved origin and all remain within forty minutes; private address/report privacy checks passed. Sixty-six route tests, twenty-three guard tests and three launcher checks passed.
+
+**Remaining gate:** the Grok false-completion guard is prepared, not active. Automatic approval review blocked an idle Gwen restart; the first manual PowerShell launcher was refused by Restricted policy. A corrected Python launcher has passed read-only preflight and awaits the owner. No outreach or Calendar mutation; eight leads, five local drafts, zero receipts.
+
+Authority: `docs/continuity/PRIVATE_EVENT_RESEARCH_2026-10-30.md`, main commit `ae82d2eb42b50a66f1fb4fa4c4c6603f0678ab49`; protected record `psyche/private-event-research-2026-10-30` v1, SHA256 `8407e0b220760cb310b1b6da11e3b23001a6e0c480a9fbbab56b14938f13a095`. Recovery manifest SHA256 `20cafa850758b9b129e9824a31a2f4040574ca4d205b1cebf40438553f955f39`; exact private locations, jobs and reports are protected. Next: perform the pending activation, verify one live result, then continue the configured bounded dual-lane cycles.
+
 ## 2026-10-30 — Grok capture repaired; deeper team contact review
 
 Bridge 0.6.35 passed 57 targeted checks and a real normal Vivaldi ChatGPT -> Gwen/Grok job (77.95s, matched task/prompt, fresh 2,858-character Markdown answer and source captures). Seth/Gemini and Cody/Claude also completed actual jobs. The later completed DOM does not reproduce the earlier timeout; exact transient cause remains unproved. Eight venues were covered, but no new entertainment buyer or person-direct contact was confirmed. Alternate business link targets on one venue site remain unassigned and need verification. No outreach or Calendar mutation; five local drafts and zero receipts. Research-source quality/budget limits are recorded honestly.
