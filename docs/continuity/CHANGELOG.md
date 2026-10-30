@@ -1,8 +1,9 @@
+<!-- Acceptance addendum: Seth/Gemini completed a real source-bound task in 39.3 seconds on executed bridge 0.6.40; matching prompt, fresh answer and completion marker verified; protocol2 analysis, zero collector reads. Public business contacts are not proved direct personal contacts. -->
 ## Paid service/native companion acceptance — 2026-10-30
 
 [Verified plans and desktop handoff](PAID_SERVICE_DESKTOP_HANDOFF_2026-10-30.md): Grok Premium, Google AI Pro and Claude Pro account labels verified. Normal Vivaldi ChatGPT queued and read two completed native companion tasks through coordinator-observed screenshot receipts. Existing Vivaldi routing remains default; no unattended desktop worker, private-app access or unlimited usage is implied. Sixty-eight tests passed; direct connector activation required no owner click. Zero fresh qualified requests; Wildwood named general-manager contact remains a prospect, not proven DJ purchasing authority. No outreach or Calendar operations.
 
-Protected record `psyche/private-event-research-2026-10-30`, version15, SHA-256 `215e5bdd0563e8e5051a128cdc2c2690d1a8e2502864ee0f01771ce8299ae588`. Public acceptance commit `0a3c3353b98f33e7f43579120e4e39e2dc7281e2` on main. Dated recovery and detailed receipts are private. Next: use source-backed tasks and verify entertainment purchasing authority; do not count known clients or supplier listings as fresh jobs. No owner activation pending.
+Protected record `psyche/private-event-research-2026-10-30`, version16, SHA-256 `78e39553c29bfe4ca1ebfd77fcf855f32a7360e55fd6a47d8ce794c75f341e00`. Public acceptance commit `0a3c3353b98f33e7f43579120e4e39e2dc7281e2` on main. Dated recovery and detailed receipts are private. Next: use source-backed tasks and verify entertainment purchasing authority; do not count known clients or supplier listings as fresh jobs. No owner activation pending.
 
 ## Source-first booking discovery repair — 2026-10-30
 
