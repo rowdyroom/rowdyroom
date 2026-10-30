@@ -1,3 +1,9 @@
+## Normal-chat partner failure reporting repaired — 2026-10-30
+
+The connector now attaches bounded, task-correlated partnerDiagnostics to failed cloud-manager job reads. Normal ChatGPT can see retained provider error, task ID, executed bridge version, failure phase, usage-limit classification, current local cooldown and retry delay, evidence provenance and researchCompleted=false without coordinator file inspection. Success remains success. Provider reset time stays UNKNOWN when not captured; expired local cooldown is not proof of provider availability. The read path does not dispatch provider work or reveal task/answer/credential files.
+
+Forty connector tests passed. Canonical connector reload succeeded without an owner click or worker/app/browser restart. Actual normal Vivaldi ChatGPT readbacks of retained Claude/Grok failures exposed the requested fields; a Gemini control remained completed. No new provider request, outreach or Calendar mutation occurred. The prior failure-detail reporting gap is closed for this verified read path. Public-safe records are on main; protected authority remains `psyche/private-event-research-2026-10-30`, with detailed acceptance and recovery evidence private.
+
 ## Live provider-limit handling accepted — 2026-10-30
 
 Owner reloaded bridge 0.6.37. A bounded test initiated through the existing normal Vivaldi ChatGPT conversation reached terminal outcomes for all three managers: Claude failed at prompt-entry phase in 7.95 seconds with an actual 0.6.37 usage-limit refusal; Grok failed at prompt-entry phase in 23.78 seconds with the same explicit refusal. Neither is completed research. Existing unsent drafts were preserved and no upgrade was attempted. A Gemini control then completed in 14.98 seconds on executed bridge 0.6.37, with Protocol 2 analysis-only status and zero collector reads, demonstrating queue continuation.
