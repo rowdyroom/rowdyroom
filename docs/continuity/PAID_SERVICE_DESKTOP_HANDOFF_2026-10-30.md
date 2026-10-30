@@ -1,0 +1,11 @@
+# Paid service and desktop handoff acceptance — 2026-10-30
+
+Signed-in account screens verified Grok Premium, Google AI Pro and Claude Pro. Monthly prices remain owner-reported; no invoice audit or new purchase was performed. Official installed Claude Desktop and Grok Bot identities were checked against vendor distribution. Native applications are companion interfaces, not additional local-model workers.
+
+Workflow v15 retains the existing Vivaldi manager routing and adds explicit desktop-research-request/status operations. A request is pending-coordinator until Lucian operates the authenticated native app and records actual UI evidence. Stable IDs prevent duplicate task replay. Remote callers cannot manufacture completion receipts or grant account/file permissions. No unattended native execution is claimed. Grok Bot uses its own cloud computer; installing it does not connect local private apps or the Psyche hub automatically.
+
+Actual normal Vivaldi ChatGPT initiated both native requests and read completed version-2 receipts. Claude produced a supplied-evidence booking-intake analysis. Grok Bot returned a bounded search response reporting zero qualifying requests; it said original pages were not opened, so search claims remain advisory. Native foreground refresh was necessary to distinguish a stale working indicator from the finished answer. Sixty-eight targeted connector/planner/desktop tests passed. Canonical connector reload succeeded directly without an owner click; no bridge reload was needed.
+
+Browser research found no verified current customer request. An official Wildwood Springs Lodge General Manager contact is a venue/event prospect, not established entertainment purchasing authority or a paid opening. Existing clients and retained prospects were not recounted as discoveries. A paid plan is not proof of better lead yield, unlimited capacity or broader permissions.
+
+No sends, DMs, external drafts, forms, account connections, extra credits, purchases, commitments or Calendar operations. Permanent travel policy remains forty minutes; sixty minutes was test-only. Exact locations, native session details, job receipts and recovery evidence remain protected under psyche/private-event-research-2026-10-30. No owner activation is pending.
