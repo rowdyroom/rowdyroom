@@ -97,3 +97,7 @@ For Songfinder and live-show tools, the default workflow must be:
 ## Standing Preference
 
 Roger is paying for execution, not repeated explanation. Mission Control should maximize done-work and minimize back-and-forth.
+
+## Approved AI Task Routing Policy
+
+For Psyche team assignments, read [AI Task Routing Policy v1](AI_TASK_ROUTING_POLICY_V1.md), approved by Roger on October 30, 2026. It is the standing authority for manager/specialist roles, evidence handoffs and execution boundaries. Roger authorizes commitments; Lucian coordinates, verifies and owns final review. Use the smallest useful team, batch independent work and keep dependencies sequential. Role assignments do not grant new tool/account permissions. Current outreach and Calendar-write holds remain in force. Model rankings and advertised capabilities are not permanent core facts or proof of a working integration. Follow START_HERE for actual live acceptance and provider availability.
