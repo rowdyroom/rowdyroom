@@ -1,3 +1,11 @@
+## AI task roles and core operating rules activated — 2026-10-30
+
+[AI Task Routing Policy v1](../AI_TASK_ROUTING_POLICY_V1.md) is owner-approved and active, bound into the Operator Law and Project Bible. Roger authorizes objectives/commitments; Lucian coordinates, verifies, implements through verified tools and owns final review. Gwen/Grok leads social intelligence; Seth/Gemini leads research and information organization; Cody/Claude leads engineering analysis, documents and detailed planning. Use the smallest useful team, independent batches, sequential dependencies, retained evidence and exact entity/section checks. Role assignments do not grant account, terminal, native-media input or outreach permissions. Unverified model rankings are not core truths.
+
+Runtime roles, profiles, capability mappings and purpose-routing configuration were updated under workflow v13 and manager configuration v3. Thirty routing/manager tests passed. The actual normal Vivaldi ChatGPT test submitted three unpinned general jobs: documents/proposal routed to Cody, social intelligence to Gwen, Google-oriented information organization to Seth. Grok and Gemini returned verified fresh answers on bridge 0.6.40 with zero source reads; Cody routing passed but Claude inference remained usage-limited. No retries, sends, external drafts, purchases or Calendar mutations. All three manager profiles/capabilities were rechecked online; this is not proof of all-provider availability.
+
+Authoritative protected record: `psyche/ai-task-routing-policy`, initial version 1. Detailed jobs, source hashes, local recovery and live report are protected. Public policy commit: `29beecd5024809f3c76182ad743ce381325fbc3c` on main. Existing booking authorization hold and Mac media/default reserve boundaries remain unchanged. No further manual activation is required.
+
 ## Parallel manager/service execution accepted — 2026-10-30
 
 Independent manager assignments can now be queued together with one bounded dispatch-manager-batch operation. Stable batch IDs prevent blind replay; ambiguous enqueue outcomes require reconciliation. Use batches only for two or three substantively useful independent tasks, never dependency chains or campus busywork. Existing source budgets, provider cooldowns and Lucian's final review remain in force.
