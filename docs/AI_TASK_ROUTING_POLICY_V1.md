@@ -41,6 +41,7 @@ These are preferred task assignments, not permanent model-quality rankings. Past
 - Cody/Claude proposes technical work; Lucian applies authorized changes and performs verification. This policy does not grant a browser service terminal, deployment, account or file-modification authority.
 - Lucian uses verified connectors/browser paths for Gmail, Drive, Maps, Calendar and account operations. Assigning Google-related analysis does not create permissions or prove integrations exist.
 - Grok does not imply direct access to all Facebook, LinkedIn or private social information. Actual platform access and identity must be observed.
+- The current manager bridge accepts text prompts and supplied evidence packets. Native image/audio/video/PDF attachment handling is not established by a role label; use an actually supported specialist input pipeline.
 - The Mac remains the default local media-production device. Suno and Flow are used only where their actual supported and approved workflows add value. Likeness and artistic quality remain separate acceptance gates.
 - Device workers and PC GPUs receive useful, verified specialist processing or explicit reserve work. No automatic additional local reasoning models; PC voice and lip-sync work remain disabled.
 
