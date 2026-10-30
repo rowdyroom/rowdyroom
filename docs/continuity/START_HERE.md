@@ -1,5 +1,14 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-29 — Long Grok task and safe merge repairs accepted in full rerun
+
+- The exact previously failed long manager task (1,770 characters, three hyphen-list source items) completed through normal Vivaldi ChatGPT -> Gwen/Grok on executed bridge 0.6.34. Matching task/prompt, fresh assistant response, source captures and completion marker verified. Cody/Claude then consumed actual Seth/Gwen results and the merged evidence, completing on 0.6.34. Stage-1 Seth/Gemini executed on 0.6.33 before the owner reload; versions are separate.
+- Atomic merge/live no-op/stale-rejection acceptance passed; exactly three history additions, preserving people/contact values/statuses/routes/stages. All three pending updates resolved. Workflow v7 documents the version-checked operation. Fifty-nine Python and fifty-two browser/workspace checks passed; no new code change after tests.
+- Full rerun returned ranked contact-backed prospects and two unsent introductions; zero explicit open paid roles verified. Real outbox remains five review-required drafts / zero receipts; independent signed-in Sent audit found no messages in the work period. No Calendar mutation, external outreach draft, forms, purchases, simulations or schedule change. Thirty-five web tabs; tiled workspace preserved. One owner bridge reload preceded Stage 2; subsequent execution needed no owner clicks.
+- Main authority: `docs/continuity/BOOKING_REPAIR_2026-10-29.md`, commit `dca0fb04dc0713c2bad890d88d7fe2e692789e6e`.
+- Protected authority: `psyche/booking-repair-2026-10-29`, v2, SHA256 `8a6c5f538623155d258ed1f4642a1a6600feafd89a654b4709a255554aa8da3c`. Exact jobs/report/recovery path are protected there; final 42-file manifest SHA256 `f1c7c15ceda5b7018b8a105635e70f4407145293a419fe2327ababbcc1d5bee7`.
+- This supersedes the activation-pending state below. Next: continue relevant bounded research/local preparation under outreach hold. Source access, actual entertainer-buying authority and paid openings remain research gaps; provider uptime is not guaranteed. No activation or pending-merge gate remains from this repair.
+
 ## 2026-10-29 — Safe evidence merge accepted; long-prompt repair awaiting activation
 
 - Atomic additive merge and guarded existing-lead replacement are implemented; workflow v7 and reloaded connector passed actual normal Vivaldi ChatGPT acceptance. Three reviewed merges saved once, current-version repeats were no-ops, stale input was rejected, and exactly three history rows were added while routes/people/contact values/statuses/stages stayed intact. Seth/Gemini also completed fresh research.
