@@ -1,3 +1,13 @@
+## Parallel manager/service execution accepted — 2026-10-30
+
+Independent manager assignments can now be queued together with one bounded dispatch-manager-batch operation. Stable batch IDs prevent blind replay; ambiguous enqueue outcomes require reconciliation. Use batches only for two or three substantively useful independent tasks, never dependency chains or campus busywork. Existing source budgets, provider cooldowns and Lucian's final review remain in force.
+
+Bridge 0.6.40 provides up to three independent service lanes, one task at a time per service, bounded pending work, and an exclusive barrier for other browser actions. Short serialized focus/DOM leases replace whole-generation focus ownership. A document-readiness check handles deferred background pages, and an active-task pump checks for other queued service work without waiting for the thirty-second idle alarm. Existing tabs and three-pane workspace are reused.
+
+Tests: 78 bridge tests and 46 connector tests pass. The actual normal Vivaldi ChatGPT final batch produced verified fresh Grok and Gemini answers on executed 0.6.40, with zero source reads. Their bridge-task windows overlapped by 8.594 seconds; Grok's receipt records Gemini active at its start. This proves concurrent functioning service lanes, not instrumented hardware inference. Earlier live checks exposed and corrected background page readiness and delayed polling; manager overlap alone was not accepted as provider overlap. Claude remains quota-limited, so three healthy services generating together remains unverified. No outreach, external drafts or Calendar mutations.
+
+The accepted parallel policy and protected live receipts are retained under `psyche/private-event-research-2026-10-30`. No additional manual activation is pending. Roger wants routine activation handled directly wherever available tools permit; do not ask for steps Lucian can perform. Public-safe records are on main, with private recovery evidence retained.
+
 ## Normal-chat partner failure reporting repaired — 2026-10-30
 
 The connector now attaches bounded, task-correlated partnerDiagnostics to failed cloud-manager job reads. Normal ChatGPT can see retained provider error, task ID, executed bridge version, failure phase, usage-limit classification, current local cooldown and retry delay, evidence provenance and researchCompleted=false without coordinator file inspection. Success remains success. Provider reset time stays UNKNOWN when not captured; expired local cooldown is not proof of provider availability. The read path does not dispatch provider work or reveal task/answer/credential files.
