@@ -405,3 +405,7 @@ Older PayPal membership-page variants with $5, $10, and $25 tiers exist. They ar
 8. Run a security and performance advisor review after any database change.
 9. Verify booking links, contact identity, and monetization status.
 10. Require backup, change record, verification, and rollback notes for every deployment.
+
+## Approved AI team roles and operating truths — October 30, 2026
+
+[AI Task Routing Policy v1](AI_TASK_ROUTING_POLICY_V1.md) is the owner-approved authority for the Psyche command structure, task roles and handoffs. Roger sets objectives/authorization; Lucian owns coordination, implementation through verified tools, source/entity verification and final review. Gwen/Grok leads social intelligence; Seth/Gemini leads research and information organization; Cody/Claude leads engineering analysis, documents and detailed planning. Specialists advise within actual supported capabilities; they do not acquire new account, terminal, purchase or communication authority. Use useful independent parallel work and sequential dependencies, evidence reuse and honest provider-limit handling. Preserve the current no-outreach/no-Calendar-write hold. Runtime acceptance and protected operational records are linked from START_HERE; changing model rankings are not core truths.
