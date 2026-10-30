@@ -1,5 +1,9 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-30 — Expanded-area results checked
+
+The normal Vivaldi ChatGPT search added two researched prospects to six retained venues. Coordinator-observed Google Maps Driving routes to exact addresses were then passed back into the same chat and saved with version checks: 27 minutes and 32 minutes from Rolla town center, both within the owner-approved forty-minute limit. Contact buyer authority remains unconfirmed; zero current open paid gigs were verified. A Grok manager attempt failed and was not treated as research proof. No outreach or Calendar mutation occurred. Protected result authority remains `psyche/booking-scope-2026-10-30`; source evidence and local recovery snapshot retain exact venue/contact/route details. Next: enrich actual entertainment-buying contacts under the existing hold, rather than treating venue fit as a booked job.
+
 ## 2026-10-30 — Booking search expanded to forty minutes
 
 Roger expanded the booking research area to **40 minutes Driving from Rolla town center**. Workflow v8 sets maxDriveMinutes=40; recurring mission instructions were updated without changing its four daily slots. The legacy withinThirtyMinutes annotation remains literal and must not be used as the current eligibility filter. Unknown route time remains unqualified. Existing normal Vivaldi ChatGPT accepted the updated research request; a response was observed in progress. No completed result is claimed by this policy record. Outreach and Calendar mutation remain on hold; existing daily research limits remain. Protected authority: `psyche/booking-scope-2026-10-30`. Next: review the same chat's actual results, verify exact venue routes against forty minutes, and retain source-backed contacts without sending.
