@@ -1,3 +1,9 @@
+## Automatic manager transport acceptance — 2026-10-30
+
+[Automatic native managers](AUTOMATIC_NATIVE_MANAGERS_2026-10-30.md): Cody now uses restricted subscription Claude Code automatically. The real normal Vivaldi ChatGPT test completed in 20.73 seconds with matching task/prompt, fresh answer, successful exit and no tool/MCP access. Gwen's Grok Bot webhook routine and encrypted key are prepared, but the routine is paused and native routing remains disabled: the free callback pilot hit HTTP429 and was stopped. Existing Gwen browser routing remains available; zero native Grok webhook results are accepted. Do not repeat completed Claude sign-in or webhook-key approval questions. Forty-one worker and forty connector tests passed. No outreach, external drafts, purchases or Calendar operations.
+
+Protected authority `psyche/private-event-research-2026-10-30`, version17, SHA-256 `63d30a5142e3d3539546bc81ce86f03c87df9502258206c7bc5e0d2984421055`. Public acceptance commit `2937d143cca79d89b18afc62de59d70ff40eea51` on main. Dated recovery evidence remains private. Next: verify a usable authenticated Grok Bot result callback before activation; do not claim the entire native integration is complete.
+
 ## AI task roles and core operating rules activated — 2026-10-30
 
 [AI Task Routing Policy v1](../AI_TASK_ROUTING_POLICY_V1.md) is owner-approved and active, bound into the Operator Law and Project Bible. Roger authorizes objectives/commitments; Lucian coordinates, verifies, implements through verified tools and owns final review. Gwen/Grok leads social intelligence; Seth/Gemini leads research and information organization; Cody/Claude leads engineering analysis, documents and detailed planning. Use the smallest useful team, independent batches, sequential dependencies, retained evidence and exact entity/section checks. Role assignments do not grant account, terminal, native-media input or outreach permissions. Unverified model rankings are not core truths.
