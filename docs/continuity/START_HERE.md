@@ -1,5 +1,11 @@
 # Rowdy Room Continuity — START HERE
 
+## 2026-10-30 — Grok capture repaired; deeper team contact review
+
+Bridge 0.6.35 passed 57 targeted checks and a real normal Vivaldi ChatGPT -> Gwen/Grok job (77.95s, matched task/prompt, fresh 2,858-character Markdown answer and source captures). Seth/Gemini and Cody/Claude also completed actual jobs. The later completed DOM does not reproduce the earlier timeout; exact transient cause remains unproved. Eight venues were covered, but no new entertainment buyer or person-direct contact was confirmed. Alternate business link targets on one venue site remain unassigned and need verification. No outreach or Calendar mutation; five local drafts and zero receipts. Research-source quality/budget limits are recorded honestly.
+
+Authority: `docs/continuity/GROK_CAPTURE_CONTACTS_2026-10-30.md`, main commit `f0f32acd1867b5ca9b433d813482b48969674690`; protected record `psyche/grok-capture-deep-contacts-2026-10-30` v1, SHA256 `9705cf384af5f5c6392e3ce3dde7bd4f3a2be4e11d1d23bc4f2bb02aeae858ed`. Dated recovery manifest SHA256 `cb1e0f60b06b1f73d106db972ea6f9fe30070d0ab029a5134ddd47f01a430c8c`; location is protected. Next: review the same chat's final source-backed report; keep unknown buying authority and the no-send/no-Calendar-write hold.
+
 ## 2026-10-30 — Expanded-area results checked
 
 The normal Vivaldi ChatGPT search added two researched prospects to six retained venues. Coordinator-observed Google Maps Driving routes to exact addresses were then passed back into the same chat and saved with version checks: 27 minutes and 32 minutes from Rolla town center, both within the owner-approved forty-minute limit. Contact buyer authority remains unconfirmed; zero current open paid gigs were verified. A Grok manager attempt failed and was not treated as research proof. No outreach or Calendar mutation occurred. Protected result authority remains `psyche/booking-scope-2026-10-30`; source evidence and local recovery snapshot retain exact venue/contact/route details. Next: enrich actual entertainment-buying contacts under the existing hold, rather than treating venue fit as a booked job.
