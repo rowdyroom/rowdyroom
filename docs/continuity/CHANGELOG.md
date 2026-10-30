@@ -1,3 +1,11 @@
+## Live provider-limit handling accepted — 2026-10-30
+
+Owner reloaded bridge 0.6.37. A bounded test initiated through the existing normal Vivaldi ChatGPT conversation reached terminal outcomes for all three managers: Claude failed at prompt-entry phase in 7.95 seconds with an actual 0.6.37 usage-limit refusal; Grok failed at prompt-entry phase in 23.78 seconds with the same explicit refusal. Neither is completed research. Existing unsent drafts were preserved and no upgrade was attempted. A Gemini control then completed in 14.98 seconds on executed bridge 0.6.37, with Protocol 2 analysis-only status and zero collector reads, demonstrating queue continuation.
+
+Both actual refusals created service-specific fifteen-minute cooldowns. Coordinator local checks against those real records returned immediately and verified zero provider HTTP calls; these checks are local evidence, not another normal-chat provider dispatch. Provider availability remains limited; acceptance covers prompt termination and queue progress, not successful Claude/Grok inference or universal future reliability. The normal-chat connector omits detailed partner errors from failed-job results, so detailed version/phase proof required coordinator inspection of retained partner receipts. This reporting gap remains explicit.
+
+Public/private records and recovery checkpoint distinguish successful research, failed consultation and coordinator verification. No outreach or Calendar mutation. Protected authority: `psyche/private-event-research-2026-10-30`; live evidence retained privately. Previous activation-pending status is superseded.
+
 ## Research quality protocol 2 — 2026-10-30
 
 Source-first manifests now prevent assignment URLs, rejected candidates and generic navigation from being fetched as research. Persistent source caching retains original capture dates; shared collector budgets apply across jobs using the same run key. Analysis-only work makes no collector reads. Contact display/link conflicts remain explicit, and social sources request an existing authenticated-browser fallback instead of repeated unauthenticated fetches. Lucian remains final reviewer; manager roles remain complementary.
