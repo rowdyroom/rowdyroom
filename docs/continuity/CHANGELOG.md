@@ -1,3 +1,9 @@
+## Paid service/native companion acceptance — 2026-10-30
+
+[Verified plans and desktop handoff](PAID_SERVICE_DESKTOP_HANDOFF_2026-10-30.md): Grok Premium, Google AI Pro and Claude Pro account labels verified. Normal Vivaldi ChatGPT queued and read two completed native companion tasks through coordinator-observed screenshot receipts. Existing Vivaldi routing remains default; no unattended desktop worker, private-app access or unlimited usage is implied. Sixty-eight tests passed; direct connector activation required no owner click. Zero fresh qualified requests; Wildwood named general-manager contact remains a prospect, not proven DJ purchasing authority. No outreach or Calendar operations.
+
+Protected record `psyche/private-event-research-2026-10-30`, version15, SHA-256 `215e5bdd0563e8e5051a128cdc2c2690d1a8e2502864ee0f01771ce8299ae588`. Public acceptance commit `0a3c3353b98f33e7f43579120e4e39e2dc7281e2` on main. Dated recovery and detailed receipts are private. Next: use source-backed tasks and verify entertainment purchasing authority; do not count known clients or supplier listings as fresh jobs. No owner activation pending.
+
 ## Source-first booking discovery repair — 2026-10-30
 
 [Research Discovery Protocol 3](RESEARCH_DISCOVERY_PROTOCOL_3.md) is active under workflow v14. Persisted plans rotate event/location segments, retain exclusions and one exact venue-authority gap. Actual web/browser observations are required before manager dispatch; empty packets are rejected, and source-bound analyses add no collector reads. Normal ChatGPT receives task-correlated packet/quality diagnostics. Routing/provider links and encoded private-origin data are blocked from further partner handoffs; the first diagnostic trial exposed and led to correction of a route-link copy. No historical external submission is claimed erased.
