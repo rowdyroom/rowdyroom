@@ -1,5 +1,11 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-30 — Grok capture repaired; deeper team contact review
+
+Bridge 0.6.35 passed 57 targeted checks and a real normal Vivaldi ChatGPT -> Gwen/Grok job (77.95s, matched task/prompt, fresh 2,858-character Markdown answer and source captures). Seth/Gemini and Cody/Claude also completed actual jobs. The later completed DOM does not reproduce the earlier timeout; exact transient cause remains unproved. Eight venues were covered, but no new entertainment buyer or person-direct contact was confirmed. Alternate business link targets on one venue site remain unassigned and need verification. No outreach or Calendar mutation; five local drafts and zero receipts. Research-source quality/budget limits are recorded honestly.
+
+Authority: `docs/continuity/GROK_CAPTURE_CONTACTS_2026-10-30.md`, main commit `f0f32acd1867b5ca9b433d813482b48969674690`; protected record `psyche/grok-capture-deep-contacts-2026-10-30` v1, SHA256 `9705cf384af5f5c6392e3ce3dde7bd4f3a2be4e11d1d23bc4f2bb02aeae858ed`. Dated recovery manifest SHA256 `cb1e0f60b06b1f73d106db972ea6f9fe30070d0ab029a5134ddd47f01a430c8c`; location is protected. Next: review the same chat's final source-backed report; keep unknown buying authority and the no-send/no-Calendar-write hold.
+
 ## 2026-10-30 — Booking search expanded to forty minutes
 
 Roger expanded the booking research area to **40 minutes Driving from Rolla town center**. Workflow v8 sets maxDriveMinutes=40; recurring mission instructions were updated without changing its four daily slots. The legacy withinThirtyMinutes annotation remains literal and must not be used as the current eligibility filter. Unknown route time remains unqualified. Existing normal Vivaldi ChatGPT accepted the updated research request; a response was observed in progress. No completed result is claimed by this policy record. Outreach and Calendar mutation remain on hold; existing daily research limits remain. Protected authority: `psyche/booking-scope-2026-10-30`. Next: review the same chat's actual results, verify exact venue routes against forty minutes, and retain source-backed contacts without sending.
