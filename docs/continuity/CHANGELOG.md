@@ -1,3 +1,9 @@
+## Automatic manager transport acceptance — 2026-10-30
+
+[Automatic native managers](AUTOMATIC_NATIVE_MANAGERS_2026-10-30.md): Cody now uses restricted subscription Claude Code automatically. The real normal Vivaldi ChatGPT test completed in 20.73 seconds with matching task/prompt, fresh answer, successful exit and no tool/MCP access. Gwen's Grok Bot webhook routine and encrypted key are prepared, but the routine is paused and native routing remains disabled: the free callback pilot hit HTTP429 and was stopped. Existing Gwen browser routing remains available; zero native Grok webhook results are accepted. Do not repeat completed Claude sign-in or webhook-key approval questions. Forty-one worker and forty connector tests passed. No outreach, external drafts, purchases or Calendar operations.
+
+Protected authority `psyche/private-event-research-2026-10-30`, version17, SHA-256 `63d30a5142e3d3539546bc81ce86f03c87df9502258206c7bc5e0d2984421055`. Public acceptance commit `2937d143cca79d89b18afc62de59d70ff40eea51` on main. Dated recovery evidence remains private. Next: verify a usable authenticated Grok Bot result callback before activation; do not claim the entire native integration is complete.
+
 <!-- Acceptance addendum: Seth/Gemini completed a real source-bound task in 39.3 seconds on executed bridge 0.6.40; matching prompt, fresh answer and completion marker verified; protocol2 analysis, zero collector reads. Public business contacts are not proved direct personal contacts. -->
 ## Paid service/native companion acceptance — 2026-10-30
 
