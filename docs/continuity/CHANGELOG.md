@@ -1,5 +1,9 @@
 # Rowdy Room Continuity Changelog
 
+## 2026-10-30 — Booking search expanded to forty minutes
+
+Roger expanded the booking research area to **40 minutes Driving from Rolla town center**. Workflow v8 sets maxDriveMinutes=40; recurring mission instructions were updated without changing its four daily slots. The legacy withinThirtyMinutes annotation remains literal and must not be used as the current eligibility filter. Unknown route time remains unqualified. Existing normal Vivaldi ChatGPT accepted the updated research request; a response was observed in progress. No completed result is claimed by this policy record. Outreach and Calendar mutation remain on hold; existing daily research limits remain. Protected authority: `psyche/booking-scope-2026-10-30`. Next: review the same chat's actual results, verify exact venue routes against forty minutes, and retain source-backed contacts without sending.
+
 ## 2026-10-29 — Long Grok task and safe merge repairs accepted in full rerun
 
 - The exact previously failed long manager task (1,770 characters, three hyphen-list source items) completed through normal Vivaldi ChatGPT -> Gwen/Grok on executed bridge 0.6.34. Matching task/prompt, fresh assistant response, source captures and completion marker verified. Cody/Claude then consumed actual Seth/Gwen results and the merged evidence, completing on 0.6.34. Stage-1 Seth/Gemini executed on 0.6.33 before the owner reload; versions are separate.
