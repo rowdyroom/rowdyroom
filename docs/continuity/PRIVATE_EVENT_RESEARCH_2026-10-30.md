@@ -1,3 +1,7 @@
+## Live verification update — 2026-10-30
+
+Owner-run activation succeeded at 10:40 AM Central; fresh Gwen process/heartbeat and matching tested guard source were verified. The bounded live test took 55.19 seconds and failed with: Grok capture contained no verified substantive assistant body; provider UI is not research evidence. This proves the guard rejected unusable capture; successful substantive Grok research remains unresolved. Activation-pending instructions below are superseded; no further owner activation is required. Additional authenticated Facebook post-only and public Craigslist checks established no new qualified individual DJ request in inspected results. No sends or Calendar changes. The current free report records this limitation.
+
 # Broader booking research and approved-origin routing — 2026-10-30
 
 Workflow v9 now covers two lanes: retained venue/decision-maker/referral relationships, and public individual-client wedding, birthday, anniversary, reunion, private/corporate-party and one-time DJ/KJ/MC requests. Existing four bounded daily cycles are unchanged: morning/afternoon focus individuals and free channels; noon/evening focus venues/referrals. No unattended 24/7 or booking guarantee is claimed.
