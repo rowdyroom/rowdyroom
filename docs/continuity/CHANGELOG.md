@@ -1,3 +1,7 @@
+## 2026-10-30 — Workflow19 booking integration repair and accepted rerun
+
+Consolidated nine retained prospects, added fixed artifact readback and local unsolicited/alternate-sender inquiry operations, source-preserving manager packets and negative-source filtering.146checks passed and actual normal Vivaldi ChatGPT rerun completed; no sends or Calendar writes. After report delivery that normal conversation reached maximum length. Prepared private continuation packet; existing automation skips exhausted handoff pending owner authorization, preserving permitted independent monitoring. See [repair acceptance](WORKFLOW19_BOOKING_REPAIR_2026-10-30.md) and START_HERE.
+
 ## 2026-10-30 — Reply monitoring local response queue
 
 Added persistent automatic local response starters, coordinator tailoring with stale-write protection, suppression and provider-time ordering. 44 regression tests and55offline journey checks passed; actual Cody/Claude hypothetical reply analysis completed. Existing schedule updated without adding jobs; no outreach or calendar writes. See [acceptance](REPLY_MONITORING_2026-10-30.md) and START_HERE for protected authority and limitations.
