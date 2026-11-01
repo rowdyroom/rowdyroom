@@ -1,3 +1,23 @@
+# Primary owner return plan — November 1, 2026
+
+**This supersedes the required shortcut/four-script owner workflow below.** The owner asked for the simplest return and explicitly asked Lucian to save exactly where to resume.
+
+Roger's part: install the parts while keeping all three original drives and normal network adapter, check cooling in BIOS with help if needed, boot the existing Windows installation, return to the same chat and say **“Windows is back.”**
+
+Lucian then resumes the authorized software work using available PC tools: verify live hardware and drive roles, network reachability, actual driver needs, GPU/model bindings, canonical Psyche/team startup, the saved source-bound manager/helper test, real memory/paging/latency/quality, and stability across a controlled restart. Do not ask Roger to select drivers, inspect logs, run four scripts or launch the optional assistant before taking over. Preserve the original Windows/profile, worker identities and cloud-manager authority. Install only what is needed; do not assume a better CPU or registered readiness proves improved AI performance.
+
+If the chat resumes from a phone/Mac without access to PC tools, do not pretend PC administration is available. Ask only for the unavoidable action of opening this existing chat on the Windows PC when necessary. Windows elevation approval, physical actions, BIOS interaction and a normal restart/sign-in may still require the owner.
+
+The Windows USB is a recovery fallback if Windows fails to boot. No automatic Windows reinstall, disk format/repair, BIOS flash, GPU reassignment, worker identity reset or local-manager fallback is authorized by this return plan. Existing outreach/Calendar holds remain.
+
+The optional upgrade shortcut has been preserved off the Desktop, and the USB-root launcher is explicitly labeled optional. Primary PC/USB instructions now say “Windows is back.” No installer/startup/resume action was registered merely by saving this plan. Earlier assistant testing remains evidence only for that optional fallback; new-hardware installation and final acceptance remain unverified.
+
+Protected authority: `psyche/platform-upgrade-preparation-2026-11-01`; latest version takes precedence. A dated exact Lucian handoff is saved locally and on the Mac, with an encrypted external-SSD copy fully decrypted/hash-checked. An owner-requested continuity memory note points to the authoritative handoff. No large backups were rebuilt.
+
+---
+
+## Earlier preparation and optional fallback details
+
 # Platform upgrade preparation — 2026-11-01
 
 Recovery preparation for the recommended Ryzen 9 9950X, ASUS ProArt X870E-CREATOR WIFI and 32 GB DDR5-6000 bundle. This records preparation, not receipt, installation or post-upgrade acceptance.
