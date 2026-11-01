@@ -1,3 +1,7 @@
+## 2026-11-01 — Owner-minimal return plan takes precedence
+
+[Primary return plan](PLATFORM_UPGRADE_PREPARATION_2026-11-01.md): after the physical swap/BIOS cooling check and normal Windows boot, Roger says **Windows is back** in this same chat. Lucian handles available PC inspection, needed drivers, GPU bindings, canonical startup, same-source tests and actual stability/quality review. No required script, driver selection or log interpretation by the owner. Optional launcher moved off Desktop and USB entry relabeled; primary guides replaced. Exact protected handoff, dated local/Mac/encrypted external copies and owner-requested memory note saved. No new driver or startup/resume action performed. Physical/post-upgrade acceptance and actual PC tool access remain verification gates.
+
 ## 2026-11-01 — Simplified post-install assistant staged
 
 [Upgrade assistant addendum](PLATFORM_UPGRADE_PREPARATION_2026-11-01.md): one desktop/USB action coordinates gated driver setup, one transient sign-in continuation, checks, canonical startup and the saved source-bound test. Changed GPU locations stop for Lucian review. Twelve checks passed, including actual old-hardware rejection without driver/workflow/test/resume changes. Driver installer publisher signature/version verified; USB update copies hash-match. New-board installation, restart continuation, inference and final upgrade acceptance remain untested. Cloud managers retain authority. Protected preparation record v2; no live drivers or resume entry installed during preparation.
