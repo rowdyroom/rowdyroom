@@ -1,3 +1,11 @@
+## 2026-11-01 — Firmware baseline and longer screening verified
+
+Windows-visible checks confirm BIOS2402, Secure Boot enabled, TPM present/enabled/ready, SATA AHCI, original GPT drive roles, firmware virtualization enabled and both NVIDIA cards at x8 links.32GB RAM remains at4800MT/s; EXPO setting and DIMM slots have not been directly read in firmware. No BIOS settings, security, storage or GPU-link settings were changed; no restart scheduled.
+
+A180-second16-process moderate CPU screen and2GiB four-pattern memory screen passed,183.407seconds overall, no hash/pattern errors and zero WHEA events in the checked window. Radiograph sampled about80-85C during load; continuous peak not captured. This is a screening result, not full-RAM or extended stability acceptance. Radiograph's unlabeled fan aggregate is not credible evidence of actual pump/header RPM. Direct BIOS overview, pump/CPU-fan control and memory-profile review remain pending with the owner using this same chat on a phone. Retain current settings until reviewed; no defaults reset, automatic EXPO, firmware flash or TPM reset.
+
+Protected preparation v9 SHA256 `f2f028fde4048dc0db9f0f040bfb328494036ad3dd467fb9a431b42f17565780`; dated baseline report SHA256 `40771ac685ea5c149aeb2fc70c784520189bb313bf832756cb40d6bf975b98bc` has two local copies and a saved direct-BIOS visit checklist. Activation/seller reply, external-volume status mismatch and actual microphone/playback acceptance remain separate open items. Cloud managers retain control.
+
 ## 2026-11-01 — Remaining recovery checks and voice round trip
 
 Owner contacted the Windows-key seller; activation remains pending reply. No product key is retained in these records. Read-only elevated exFAT CHKDSK passed with exit0, no errors and zero bad-sector KB across231755files/26043folders. Storage status still reports Full Repair Needed; no repair or formatting was performed. An additional dirty-flag/cache-refresh check was blocked by automatic approval review; no reason beyond blocked-by-policy was supplied. Treat this as an unresolved status mismatch, not proved filesystem corruption or a cleared warning.
