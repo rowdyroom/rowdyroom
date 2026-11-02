@@ -1,3 +1,11 @@
+## 2026-11-01 — Remaining recovery checks and voice round trip
+
+Owner contacted the Windows-key seller; activation remains pending reply. No product key is retained in these records. Read-only elevated exFAT CHKDSK passed with exit0, no errors and zero bad-sector KB across231755files/26043folders. Storage status still reports Full Repair Needed; no repair or formatting was performed. An additional dirty-flag/cache-refresh check was blocked by automatic approval review; no reason beyond blocked-by-policy was supplied. Treat this as an unresolved status mismatch, not proved filesystem corruption or a cleared warning.
+
+A bounded30-second,16-process CPU check and512MiB two-pattern memory check passed. Radiograph observations were approximately61C light load,83C during load and69C afterward; continuous maximum and extended stability were not measured. Roger Voice generated6.481seconds of22050Hz mono WAV in15.188seconds on the intended RTX3070. Local Whisper on the RTX5060Ti transcribed the exact supplied sentence, confidence0.9235, inference6.457seconds after a several-minute cold load. This proves a local generated-audio round trip, not microphone/browser playback or subjective voice-fidelity acceptance. Temporary speech processes exited and GPU memory was released; current cloud-led speech settings remain unchanged. Eleven workers online.
+
+Protected preparation record v8 SHA256 `1949ea6fa560035a5795fc5200b672b6eb27fd001f1f26e73e8e2b293b119435`; dated local report SHA256 `f59bcf73ddafd77ccd95abbd5bfad07d62ad030a4eef3d4a3c81f672ceda737b` has two local copies, plus retained audio/transcript. Remaining: seller/license resolution, external-drive status mismatch, extended thermal/memory testing and actual owner microphone/playback acceptance. The prior successful cloud-manager/local-helper comparison and logon startup acceptance remain valid. No outreach or Calendar change.
+
 ## 2026-11-01 — Post-restart drivers and team test verified
 
 AMD chipset8.09.10.2141 is installed; Windows reports zero device faults. Actual logon startup finished ready on attempt1, exit0. Correction to the earlier preliminary diagnosis: startup entries were present and initialization was still underway during the first health check; a missing autostart entry was not proved. Eleven of eleven workers report online after restart.
