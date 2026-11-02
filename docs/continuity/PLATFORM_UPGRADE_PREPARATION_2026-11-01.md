@@ -1,3 +1,11 @@
+## 2026-11-01 — Post-upgrade recovery underway
+
+Existing Windows booted on the Ryzen 9 9950X / ProArt X870E platform with 32 GB DDR5 at4800MT/s; original three drive roles and both GPU identities verified. Owner reports BIOS cooling looked normal. Three Wi-Fi/USB device faults cleared using verified staged drivers; AMD chipset setup awaits owner completion. Speech/avatar/voice startup now selects permanent GPU identities after card order changed; parser passed, actual service restart acceptance remains pending.
+
+The retained source-bound test stopped at required Gemini partner failure: existing Gemini tab is visibly signed out. S23 completed in6.856seconds, cloud-manager accepted all fields with no repetition, added wait0.016seconds. Full manager stage127.48seconds failed; dependent stage was not submitted. This is not full-team or upgrade acceptance. Nine of eleven workers report online; iPhone and S21 FE offline. Windows activation notification and an external exFAT volume warning remain unresolved; no disk repair/formatting performed. Next: owner completes AMD setup with Restart Later and signs into usual Gemini account; Lucian verifies driver result, reconciles failed test before retry, then completes stability/voice/restart checks. Cloud managers retain control and outreach/Calendar holds persist.
+
+Protected preparation record v5 SHA256 `5fe6294bd7513c3e6b22533ddbcc3203bd39add9c6ddaa6d172aeb369086ecc3`; dated local recovery progress SHA256 `6d711856d2f982ee3389d02e961b40b67064f994b62f2cc1482e28fc36c2ecc4`, with separate local recovery copy. Detailed private paths and job receipts stay protected.
+
 # Primary owner return plan — November 1, 2026
 
 **This supersedes the required shortcut/four-script owner workflow below.** The owner asked for the simplest return and explicitly asked Lucian to save exactly where to resume.
