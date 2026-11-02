@@ -1,3 +1,13 @@
+## 2026-11-01 — Post-restart drivers and team test verified
+
+AMD chipset8.09.10.2141 is installed; Windows reports zero device faults. Actual logon startup finished ready on attempt1, exit0. Correction to the earlier preliminary diagnosis: startup entries were present and initialization was still underway during the first health check; a missing autostart entry was not proved. Eleven of eleven workers report online after restart.
+
+The retained source-bound two-stage comparison completed in76.536seconds versus98.055seconds baseline, about22percent faster in this run. Seth/Gemini31.42seconds and Cody/Claude40.02seconds both completed. S23 extraction2.599seconds was accepted with complete exact fields and no repetition. iPhone review9.666seconds was revised for vague missing evidence and missing attribution; Cody corrected it. Both helper waits were zero. Source packet and dependent findings were preserved; no new discovery, outreach or Calendar writes. One run does not isolate hardware gains or establish blanket model improvement.
+
+Windows activation remains unresolved (0xC004C008; troubleshooter did not activate). External exFAT volume reports Full Repair Needed; no disk repair/formatting performed. CPU thermal/extended memory stability and actual speech/avatar synthesis remain unverified; those services are disabled in the current cloud-led profile. About12GB RAM remained available and current pagefile usage was zero during the test. Full hardware acceptance is not claimed.
+
+Protected preparation record v6 SHA256 `c39eb3ffea755acd26018f07325e4787efc52def524e6d27d44a6ae41fe5aac3`; dated post-restart report SHA256 `06af16ec1a48f6e6ec40868867223093ca2347fa6e7cdef5263edc30066924d4` has two local copies. Next: resolve activation through existing license/hardware-change recovery, assess the external volume safely, and verify actual thermal/stability and voice operation before full acceptance. Cloud managers remain in charge.
+
 ## 2026-11-01 — Post-upgrade recovery underway
 
 Existing Windows booted on the Ryzen 9 9950X / ProArt X870E platform with 32 GB DDR5 at4800MT/s; original three drive roles and both GPU identities verified. Owner reports BIOS cooling looked normal. Three Wi-Fi/USB device faults cleared using verified staged drivers; AMD chipset setup awaits owner completion. Speech/avatar/voice startup now selects permanent GPU identities after card order changed; parser passed, actual service restart acceptance remains pending.
