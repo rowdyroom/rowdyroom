@@ -18,3 +18,11 @@ Protected record: `rowdy-room/queue-table-signup-2026-11-03`. Existing live queu
 ## Optional support follow-up
 
 Roger additionally requested restoration of tipping and a review invitation. SongFinder return now reaches the optional support step before confirmation. Existing Cash App tipping and the no-support path are retained. Roger accepted an optional honest Google review link with no queue reward after the platform policy was checked. The supplied listing was verified as Rowdy Room DJ service with the correct business website and calendar; its review dialog opens. Tracking parameters are omitted. No review is posted by automation. Thirteen local checks now pass. Final live acceptance and deployed readback remain to be recorded.
+
+## Paid queue-priority follow-up prepared
+
+Owner-authorized prices: $5 for five places, $10 for ten places, and $20 to move directly behind the person up next. Current singer and the next waiting singer stay protected. Fixed-place options are offered only when the full move is available. Cash App is the same verified destination used for tips. Opening a payment page never confirms payment.
+
+Pending requests use the existing private action ledger with zero BP. Approval requires the existing host credential, a confirmed Cash App receipt and a unique transaction ID. Server-side tier prices, current eligibility, rotation version and queue membership are checked under the existing MySQL rotation lock. Queue movement, receipt deduplication, request completion and rotation state are one transaction. A preview exercises those writes and rolls the whole transaction back. Declining a request does not issue or claim a refund. Any changed-line or already-singing case requires host reconciliation of money received.
+
+Thirteen JavaScript behavioral checks and 32 PHP checks pass locally. PHP checks execute with an in-memory SQLite adapter, so deployed MySQL behavior remains a separate live-preview gate. No live payment has been collected, sent, or marked paid for testing. Prior plain signup reached the live host table; its labeled test entry was removed without starting a performance. The original queue was empty. Final paid-request UI and production integration are pending.
