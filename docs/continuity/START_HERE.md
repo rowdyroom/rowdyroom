@@ -697,3 +697,7 @@ Pilot v2 verification: source27c9f74; protected psyche/performance-pilot-review-
 ## Queue signup and host table - 2026-11-03
 
 Current implementation and acceptance trail: [QUEUE_TABLE_SIGNUP_2026-11-03.md](QUEUE_TABLE_SIGNUP_2026-11-03.md), branch `codex/queue-table-20261103` (not merged into main). Protected record `rowdy-room/queue-table-signup-2026-11-03` contains private availability and recovery details. Read the latest acceptance entry before treating deployment as verified.
+
+### Queue acceptance update - 2026-11-03
+
+The [queue table and signup record](QUEUE_TABLE_SIGNUP_2026-11-03.md#production-acceptance) now contains deployed acceptance, proof and the remaining real-payment gate. Read protected record `rowdy-room/queue-table-signup-2026-11-03` for exact availability, current version/hash and recovery location. Manifest hash: `fe7fb2a4b2d4ac0754e4d881c465e90dfbeaaadb482c82634c8846eddc198627`. Branch `codex/queue-table-20261103` is not merged into main.

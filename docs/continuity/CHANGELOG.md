@@ -801,3 +801,7 @@ Larger landscape performance layout and concise captions; audio retained without
 ## 2026-11-03 - Queue signup repair and host table prepared
 
 See [queue signup and host table](QUEUE_TABLE_SIGNUP_2026-11-03.md). Local tests passed; production acceptance is recorded separately. Private availability details are retained only in the protected record. Branch: `codex/queue-table-20261103`.
+
+## 2026-11-03 - Queue table, signup and Cash App priority deployed and verified
+
+[Acceptance and limits](QUEUE_TABLE_SIGNUP_2026-11-03.md): 46 local behavioral checks; live three-singer signup, request, rollback-preview, position-change and cleanup proof; seven deployed files matched by SHA-256. Host confirms real Cash App receipts; no real transfer was tested. Optional tips and honest reviews are available. Private availability details and recovery receipts remain in the protected record. Documentation branch remains unmerged.
