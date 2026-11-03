@@ -1,3 +1,7 @@
+## 2026-11-03 - Production and live DJ focus; streaming retired
+
+Roger retired TikTok LIVE, TikFinity, BP/Boost Points and gift/chatbot automation. Preserve live voting and free Rowdy Room Rumble. See [retirement record](TIKTOK_RETIREMENT_2026-11-03.md), branch codex/local-studio-rerun-20261103 (unmerged). Seventeen isolated UI/game checks pass; no live show mutations performed. Protected psyche/tiktok-live-retirement-2026-11-03 v1; recovery tiktok_retirement_20261103, original manifest SHA256 `efe9f8a28fd85975ee400c4100908a82ef410efa1dbce22d1f4152e57c1fcda2`. Warning: Windows canceled LIVE Studio uninstall; binary remains installed, with no running process or shared launch action. Older streaming tasks are superseded. Next: owner review; complete uninstaller only if owner elects to finish that remaining app-removal gate.
+
 ## 2026-11-03 - Unified Control Center
 
 Campus, missions, chat/history, creation and settings now share the existing Notes/Google-app workspace, with no live-chat avatar. Sixteen UI checks pass and campus/chat render in the existing browser tile. See [unified workspace](UNIFIED_WORKSPACE_2026-11-03.md), branch codex/local-studio-rerun-20261103 (unmerged). Protected psyche/unified-workspace-2026-11-03 v1; recovery unified_workspace_20261103, manifest SHA256 `dd7f0210d683d827aa2456f6ae7a777ac65771dfe4b37318b32c180694df57a1`. Owner visual acceptance and fresh inference/media tests are not claimed. Next: owner review.

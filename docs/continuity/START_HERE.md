@@ -1,3 +1,7 @@
+## 2026-11-03 - Production and live DJ focus; streaming retired
+
+Roger retired TikTok LIVE, TikFinity, BP/Boost Points and gift/chatbot automation. Preserve live voting and free Rowdy Room Rumble. See [retirement record](TIKTOK_RETIREMENT_2026-11-03.md), branch codex/local-studio-rerun-20261103 (unmerged). Seventeen isolated UI/game checks pass; no live show mutations performed. Protected psyche/tiktok-live-retirement-2026-11-03 v1; recovery tiktok_retirement_20261103, original manifest SHA256 `efe9f8a28fd85975ee400c4100908a82ef410efa1dbce22d1f4152e57c1fcda2`. Warning: Windows canceled LIVE Studio uninstall; binary remains installed, with no running process or shared launch action. Older streaming tasks are superseded. Next: owner review; complete uninstaller only if owner elects to finish that remaining app-removal gate.
+
 ## 2026-11-03 - Psyche Team terminology
 
 Owner-approved: the combined Psyche Team consists of two independent teams, Cloud Team and Local Team. A worker is an individual AI member; role and device are separate concepts. See [team structure](PSYCHE_TEAM_STRUCTURE.md). Organizational terminology only; existing routing, identities, permissions and cloud management authority remain unchanged. Saved on codex/local-studio-rerun-20261103 (unmerged); protected record psyche/team-structure v1.

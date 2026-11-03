@@ -14,3 +14,11 @@ revoke insert, update, delete, truncate, references, trigger on table public.rr_
 revoke insert, update, delete, truncate, references, trigger on table public.rr_boost_transactions from public, anon, authenticated;
 revoke insert, update, delete, truncate, references, trigger on table public.rr_boost_transfers from public, anon, authenticated;
 revoke insert, update, delete, truncate, references, trigger on table public.rr_boost_wallets from public, anon, authenticated;
+
+revoke insert, update, delete, truncate, references, trigger on table public.rr_show_bp_requests from public, anon, authenticated;
+revoke insert, update, delete, truncate, references, trigger on table public.rr_show_bp_server from public, anon, authenticated;
+revoke insert, update, delete, truncate, references, trigger on table public.rr_show_bp_credits from public, anon, authenticated;
+revoke insert, update, delete, truncate, references, trigger on table public.rr_show_bp_watch from public, anon, authenticated;
+revoke insert, update, delete, truncate, references, trigger on table public.rr_panel_gift_events from public, anon, authenticated;
+revoke insert, update, delete, truncate, references, trigger on table public.rr_channel_contributors from public, anon, authenticated;
+revoke insert, update, delete, truncate, references, trigger on table public.rr_skip_requests from public, anon, authenticated;

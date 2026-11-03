@@ -1,3 +1,7 @@
+## Current owner direction - 2026-11-03
+
+Focus: production studio and live DJ/karaoke shows. TikTok livestreaming, TikFinity, BP/Boost Points and gift/chatbot automation are retired. Live voting and Rowdy Room Rumble stay, without BP costs or awards. This supersedes older streaming goals below. See [verified retirement](continuity/TIKTOK_RETIREMENT_2026-11-03.md).
+
 # Rowdy Room Project Bible
 
 **Status:** Active source of truth  
