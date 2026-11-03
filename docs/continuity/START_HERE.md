@@ -693,3 +693,7 @@ Owner selected the existing rehearsal recording for the pilot. This supersedes t
 
 
 Pilot v2 verification: source27c9f74; protected psyche/performance-pilot-review-2026-11-03 v1/hash0c6a0b9ba4be4df881bc58664f3e4d676b7eafcd54b8ad54736622bf70255a41. Recovery Performance_Pilot_Review_20261103 archive hash35df8bcb096fbf499dde81fd3a57e1150c8b35983b5f77ef564bf890791d971e. Checks25cc33be-a3b7-48ef-a3f5-8fc94c2e807f. File/saves/tests pass; critic activation and subjective audition remain unverified; audience-provider review failed.
+
+## Queue signup and host table - 2026-11-03
+
+Current implementation and acceptance trail: [QUEUE_TABLE_SIGNUP_2026-11-03.md](QUEUE_TABLE_SIGNUP_2026-11-03.md), branch `codex/queue-table-20261103` (not merged into main). Protected record `rowdy-room/queue-table-signup-2026-11-03` contains private availability and recovery details. Read the latest acceptance entry before treating deployment as verified.

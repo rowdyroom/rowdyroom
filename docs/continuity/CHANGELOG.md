@@ -797,3 +797,7 @@ Owner chose the existing rehearsal source; cleared source blocker. Delivered vid
 
 ## 2026-11-03 - Pilot v2 review and scoped-critic repair
 Larger landscape performance layout and concise captions; audio retained without reencoding. Local contributions audited. Generic-review source fixed/tested, activation blocked. See PERFORMANCE_PILOT_REVIEW_2026-11-03.md.
+
+## 2026-11-03 - Queue signup repair and host table prepared
+
+See [queue signup and host table](QUEUE_TABLE_SIGNUP_2026-11-03.md). Local tests passed; production acceptance is recorded separately. Private availability details are retained only in the protected record. Branch: `codex/queue-table-20261103`.
