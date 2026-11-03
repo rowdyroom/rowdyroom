@@ -61,3 +61,8 @@ Protected operational authority: `psyche/ai-task-routing-policy`. Live acceptanc
 ## Owner terminology amendment - November 3, 2026
 
 The combined organization is the **Psyche Team**, consisting of two independent teams: **Cloud Team** and **Local Team**. Individual AI members are **workers**; management or specialist responsibility is a **role**, not a third team. This terminology amendment does not alter the routing and authority rules above. See [team structure](continuity/PSYCHE_TEAM_STRUCTURE.md).
+
+
+## Owner job-finding amendment — November 3, 2026
+
+Job finding uses the Cloud Team independently of Local Team inference and practice outputs. Gwen/Grok performs original social research; Seth/Gemini performs Google/browser/web research. Cody/Claude also performs independent public buyer-requirement, outside-vendor eligibility and referral-channel research, in addition to substantive planning/writing/technical work. Do not use Grok or Claude as a routine review/approval stage. Lucian owns integration, verification and final review. Use specialist lanes, actual tool/task receipts and no local fallback. Public-tool access is distinct from Roger’s signed-in Vivaldi session; observe browser blockers rather than assume them. See [actual acceptance and limits](continuity/CLOUD_ONLY_JOB_FINDING_2026-11-03.md).
