@@ -631,3 +631,5 @@ Verified protected snapshot:
 
 An older laptop is not part of the authoritative equipment inventory and is not part of this build plan. No further purchase/cart action, production show system change, or Scheduled Task change is authorized by this record.
 
+
+Studio rerun verification: source a24222d; private v1/hash 1399a9d714d9df43cd6bb5a621bf13701023f77d10f17078d4c8fcff81492e9b; recovery Local_Studio_Rerun_20261103 report hash 19aaf5caccd6fa5cb371641bf866c136dd3fc3e52cf4283d3c4e0b3e80045a52. Check run c71c4a13-3646-43ba-8768-384c6a8fab79. Image review and owner acceptance remain warnings.
