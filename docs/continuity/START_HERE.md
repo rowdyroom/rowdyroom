@@ -4,6 +4,8 @@ All three existing Gigs now have provisional packages, descriptions, two FAQs an
 
 Protected `psyche/workspace-business-profiles-2026-11-03` v4 SHA256 `cd3d5ae59edf49a737602459ed6f1082fbbe6c6f5360bb3cb58ab222e3ffb5b9`; `rowdy-room/business-profile-image` v4 SHA256 `495891cfe0f2464bb5e4a523625b8ceac889df990771fde65b7f31130e5687dc`. Private recovery `business_profiles_completion_20261103`; branch `codex/local-studio-rerun-20261103`, unmerged. Next: resolve remaining account gates and final package/sample decisions before publication. Prior entries below are historical.
 
+Verified source commit `3bf7c41fd433b00e64630cb148b7d1bcc06847c8`; dated recovery manifest SHA256 `c86cfb05e041a86b59ce11a945be26c69455b5f6f3867b5a4ba545d3b1ded0c6`. Local evidence, GitHub readback and private record/history checks pass; overall setup retains the listed account and launch warnings.
+
 ## 2026-11-03 — Business profiles, Fiverr offers and native Vivaldi stacks
 
 Approved Rowdy Room business portrait accepted by Fiverr and Google; personal profiles excluded. Twenty-eight tabs verified in six existing native stacks; restored five missing services and removed the obsolete standalone Campus launcher requirement. Three Fiverr overviews saved as unpublished account drafts, with complete local service copy, proposed prices and production gates; no publication or subscription purchase. Seller identity/tax steps, correct LinkedIn login and remaining per-service photo checks are pending. Automatic native stack placement is not implemented. See [account/workspace status](WORKSPACE_AND_BUSINESS_PROFILES_2026-11-03.md).
