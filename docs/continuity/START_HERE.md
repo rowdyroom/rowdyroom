@@ -1,3 +1,7 @@
+## 2026-11-03 - Psyche Team terminology
+
+Owner-approved: the combined Psyche Team consists of two independent teams, Cloud Team and Local Team. A worker is an individual AI member; role and device are separate concepts. See [team structure](PSYCHE_TEAM_STRUCTURE.md). Organizational terminology only; existing routing, identities, permissions and cloud management authority remain unchanged. Saved on codex/local-studio-rerun-20261103 (unmerged); protected record psyche/team-structure v1.
+
 ## 2026-11-03 - Unified Control Center
 
 Campus, missions, chat/history, creation and settings now share the existing Notes/Google-app workspace, with no live-chat avatar. Sixteen UI checks pass and campus/chat render in the existing browser tile. See [unified workspace](UNIFIED_WORKSPACE_2026-11-03.md), branch codex/local-studio-rerun-20261103 (unmerged). Protected psyche/unified-workspace-2026-11-03 v1; recovery unified_workspace_20261103, manifest SHA256 `dd7f0210d683d827aa2456f6ae7a777ac65771dfe4b37318b32c180694df57a1`. Owner visual acceptance and fresh inference/media tests are not claimed. Next: owner review.

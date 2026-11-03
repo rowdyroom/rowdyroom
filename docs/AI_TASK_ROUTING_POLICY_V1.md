@@ -56,3 +56,8 @@ Every manager returns actual completed work, evidence/provenance, findings and u
 The runtime policy, manager responsibilities, worker profiles and routing configuration must describe this approved division. Normal ChatGPT receives the policy through Psyche team workflow defaults. Explicit manager batches are for independent work; implicit routing uses the actual assignment text, including the managerTask envelope.
 
 Protected operational authority: `psyche/ai-task-routing-policy`. Live acceptance, source hashes, versions and recovery evidence remain private. Consult START_HERE for the latest acceptance state. This document supplies standing task rules, not a guarantee that every provider or advertised capability is currently available.
+
+
+## Owner terminology amendment - November 3, 2026
+
+The combined organization is the **Psyche Team**, consisting of two independent teams: **Cloud Team** and **Local Team**. Individual AI members are **workers**; management or specialist responsibility is a **role**, not a third team. This terminology amendment does not alter the routing and authority rules above. See [team structure](continuity/PSYCHE_TEAM_STRUCTURE.md).
