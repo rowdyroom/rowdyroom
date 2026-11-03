@@ -758,3 +758,6 @@ Status: Implemented with equipment recovery still open.
 
 
 
+
+## 2026-11-03 - Private studio rerun
+Cloud-directed pilot draft; repaired persistent job lookup and bounded advisory wait. Seven director tests pass. Artistic acceptance and automated image review remain unresolved. See LOCAL_STUDIO_RERUN_2026-11-03.md.

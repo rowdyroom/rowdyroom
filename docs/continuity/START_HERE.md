@@ -1,3 +1,7 @@
+## 2026-11-03 - Private local studio rerun
+
+Cloud-directed draft only; job tracking repaired, image review unresolved. See [studio rerun](LOCAL_STUDIO_RERUN_2026-11-03.md), branch codex/local-studio-rerun-20261103 (unmerged). Private record psyche/local-studio-rerun-2026-11-03; recovery Local_Studio_Rerun_20261103. No production cutover.
+
 ## 2026-11-02 — S23 repair staged; local PC benchmark established
 
 Native bridge inspection found a real failure path: watchdog-stopped nonempty fragments could be reported as successful results. The specific trigger of the last brace-only S23 run remains unproved. Staged repair uses required-key JSON-schema decoding for recognized S23 contracts without inserting answer values; rejects incomplete fields, interrupted/context-full/token-limit outputs; uses a20s post-output idle watchdog and60s local-support deadline; removes S23 empty-result retries; waits for canceled generation settlement before context reuse and retains stop flags/raw fragment. Eight regression checks pass. Android build passed; packaged guards and matching retained-APK signer verified. APK SHA256 `771fbd5b8c3d2bc08f19c4dd8b5db3be5d9d6874c1136c709c2c37976114cc5f`. Owner declined connecting the S23 now, so NO deployment or native live acceptance is claimed. Cody/Claude supplied a substantive design review; staged safeguards address its findings, while target-device acceptance remains mandatory.
@@ -626,3 +630,4 @@ Verified protected snapshot:
 - workbook regeneration before the next equipment intake or workbook-led edit
 
 An older laptop is not part of the authoritative equipment inventory and is not part of this build plan. No further purchase/cart action, production show system change, or Scheduled Task change is authorized by this record.
+
