@@ -647,3 +647,6 @@ Production comparison verification: source783eadf; private psyche/production-com
 
 
 Performance edit verification: sourceb911443; protected psyche/real-performance-edit-2026-11-03 v1/hash c7f0f4f66ea58f7505d103ac81a35af021d444f823c3d094fc4088dc64a50d9e; recovery Real_Performance_Edit_20261103 archive hash f34f9646f3ed9e246c37292c7d3e9fcddfa8898afc99258336844a46f87b0301. Checks c1e31548-d043-4e91-9099-c71b5a5c7800. Private demo file checks pass; actual event source and audition remain pending.
+
+## 2026-11-03 - Performance pilot source confirmed
+Owner selected the existing rehearsal recording for the pilot. This supersedes the earlier pending-source breadcrumb. Private20-second demo delivered for review; subjective acceptance and audition remain pending. See REAL_PERFORMANCE_EDIT_2026-11-03.md and protected psyche/real-performance-edit-2026-11-03. No replacement source is required.

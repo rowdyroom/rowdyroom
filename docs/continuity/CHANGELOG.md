@@ -767,3 +767,6 @@ Cloud-led same-asset promo A/B completed: simple assembly about half a second; l
 
 ## 2026-11-03 - Recorded-performance pilot; intended source pending
 Private20-second rehearsal edit created under cloud direction using local transcription and GPU encoding. File/audio checks pass; actual event source, audition and owner acceptance remain unresolved. See REAL_PERFORMANCE_EDIT_2026-11-03.md.
+
+## 2026-11-03 - Pilot source confirmation
+Owner chose the existing rehearsal source; cleared source blocker. Delivered video unchanged; acceptance/publishing not implied.
