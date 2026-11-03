@@ -2,6 +2,8 @@
 
 Campus, missions, chat/history, creation and settings now share the existing Notes/Google-app workspace, with no live-chat avatar. Sixteen UI checks pass and campus/chat render in the existing browser tile. See [unified workspace](UNIFIED_WORKSPACE_2026-11-03.md), branch codex/local-studio-rerun-20261103 (unmerged). Protected psyche/unified-workspace-2026-11-03 v1; recovery unified_workspace_20261103, manifest SHA256 `dd7f0210d683d827aa2456f6ae7a777ac65771dfe4b37318b32c180694df57a1`. Owner visual acceptance and fresh inference/media tests are not claimed. Next: owner review.
 
+Verified save: implementation record commit 71f5932869768de657fad50e1c1d0e1767143930; protected v1 SHA256 2d6ccbc50622b86d26c4311ab147b2194a10f4eb4aed930af0ffc682f5b1bf48; continuity checks 812d745a-637f-436f-9ee5-b1d634e188ca.
+
 ## 2026-11-03 - Performance pilot v2 reviewed
 
 Cloud-led landscape revision delivered for review. See [pilot review](PERFORMANCE_PILOT_REVIEW_2026-11-03.md), codex/local-studio-rerun-20261103 (unmerged). Protected psyche/performance-pilot-review-2026-11-03; recovery Performance_Pilot_Review_20261103. Generic critic source fix passes38tests; activation blocked by automatic approval review. Subjective listening/owner acceptance remain unverified.
