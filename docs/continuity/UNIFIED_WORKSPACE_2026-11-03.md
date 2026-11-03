@@ -1,0 +1,7 @@
+# Unified owner workspace - 2026-11-03
+
+The existing Control Center now combines campus, missions, Psyche chat and saved chats, creation tools, libraries and settings with its existing Notes and Google app launch links. The live-chat avatar panel is removed. The same conversation remains mounted when switching work areas, and chat can sit beside campus on larger screens. Original entry bookmarks forward into this workspace; standalone recovery entries remain available.
+
+Sixteen isolated UI integration checks pass, including preserved app/notes navigation, draft retention across views, correct campus/creation sizing, side-by-side chat, narrow-screen app access, Notes open/close and old-chat forwarding. Direct inspection also confirmed campus and chat in the existing browser center tile, retaining the manager browser panes. No note/chat data migration or model/worker routing change was performed. Cloud managers retain authority. UI results do not establish fresh media/inference acceptance; owner visual acceptance is pending.
+
+Status: live local implementation; documentation on codex/local-studio-rerun-20261103, unmerged. Protected record: psyche/unified-workspace-2026-11-03, version 1. Recovery identifier: unified_workspace_20261103. Exact source paths, recovery files, screenshots and hashes remain in the protected record. Next: owner review and scoped visual corrections if needed.
