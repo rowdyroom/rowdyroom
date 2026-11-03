@@ -1,3 +1,7 @@
+## 2026-11-03 - Recorded-performance edit: source pending
+
+Requested event promo remains incomplete pending source confirmation. A private rehearsal demo exercises local transcription and editing. See [performance edit](REAL_PERFORMANCE_EDIT_2026-11-03.md), codex/local-studio-rerun-20261103 (unmerged). Private key psyche/real-performance-edit-2026-11-03; recovery Real_Performance_Edit_20261103. Next: obtain the intended recording source; no live-show or owner-acceptance claim.
+
 ## 2026-11-03 - Practical production comparison
 
 Two private promo drafts completed. Cloud manager selects the simple version by default; local generation reserved for meaningful motion. See [production comparison](PRODUCTION_COMPARE_2026-11-03.md), codex/local-studio-rerun-20261103 (unmerged). Protected key psyche/production-compare-2026-11-03; recovery Production_Compare_20261103. Owner preference and real-time playback remain unverified.
@@ -640,3 +644,4 @@ Studio rerun verification: source a24222d; private v1/hash 1399a9d714d9df43cd6bb
 
 
 Production comparison verification: source783eadf; private psyche/production-compare-2026-11-03 v1/hash b82286ac58e6d235061e60c4d058407b9e4704bd779abc5afa670424c471445a. Recovery Production_Compare_20261103 archive hash b38c4d237c75541db8ddf2af808f36b2eff61f676eafb905732da6c2b6e4c4de. Checks8e6047b6-0670-4d48-8390-810756179189. Saves/file checks pass; real-time playback and owner preference remain warnings.
+

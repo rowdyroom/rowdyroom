@@ -764,3 +764,6 @@ Cloud-directed pilot draft; repaired persistent job lookup and bounded advisory 
 
 ## 2026-11-03 - Practical production comparison
 Cloud-led same-asset promo A/B completed: simple assembly about half a second; local motion about six minutes including startup. Defaults to simple for this brief. No production cutover. See PRODUCTION_COMPARE_2026-11-03.md.
+
+## 2026-11-03 - Recorded-performance pilot; intended source pending
+Private20-second rehearsal edit created under cloud direction using local transcription and GPU encoding. File/audio checks pass; actual event source, audition and owner acceptance remain unresolved. See REAL_PERFORMANCE_EDIT_2026-11-03.md.
