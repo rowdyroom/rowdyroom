@@ -655,3 +655,5 @@ Performance edit verification: sourceb911443; protected psyche/real-performance-
 ## 2026-11-03 - Performance pilot source confirmed
 Owner selected the existing rehearsal recording for the pilot. This supersedes the earlier pending-source breadcrumb. Private20-second demo delivered for review; subjective acceptance and audition remain pending. See REAL_PERFORMANCE_EDIT_2026-11-03.md and protected psyche/real-performance-edit-2026-11-03. No replacement source is required.
 
+
+Pilot v2 verification: source27c9f74; protected psyche/performance-pilot-review-2026-11-03 v1/hash0c6a0b9ba4be4df881bc58664f3e4d676b7eafcd54b8ad54736622bf70255a41. Recovery Performance_Pilot_Review_20261103 archive hash35df8bcb096fbf499dde81fd3a57e1150c8b35983b5f77ef564bf890791d971e. Checks25cc33be-a3b7-48ef-a3f5-8fc94c2e807f. File/saves/tests pass; critic activation and subjective audition remain unverified; audience-provider review failed.
