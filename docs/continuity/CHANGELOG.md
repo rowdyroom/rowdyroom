@@ -770,3 +770,6 @@ Private20-second rehearsal edit created under cloud direction using local transc
 
 ## 2026-11-03 - Pilot source confirmation
 Owner chose the existing rehearsal source; cleared source blocker. Delivered video unchanged; acceptance/publishing not implied.
+
+## 2026-11-03 - Pilot v2 review and scoped-critic repair
+Larger landscape performance layout and concise captions; audio retained without reencoding. Local contributions audited. Generic-review source fixed/tested, activation blocked. See PERFORMANCE_PILOT_REVIEW_2026-11-03.md.

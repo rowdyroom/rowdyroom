@@ -1,3 +1,7 @@
+## 2026-11-03 - Performance pilot v2 reviewed
+
+Cloud-led landscape revision delivered for review. See [pilot review](PERFORMANCE_PILOT_REVIEW_2026-11-03.md), codex/local-studio-rerun-20261103 (unmerged). Protected psyche/performance-pilot-review-2026-11-03; recovery Performance_Pilot_Review_20261103. Generic critic source fix passes38tests; activation blocked by automatic approval review. Subjective listening/owner acceptance remain unverified.
+
 ## 2026-11-03 - Recorded-performance edit: source pending
 
 Requested event promo remains incomplete pending source confirmation. A private rehearsal demo exercises local transcription and editing. See [performance edit](REAL_PERFORMANCE_EDIT_2026-11-03.md), codex/local-studio-rerun-20261103 (unmerged). Private key psyche/real-performance-edit-2026-11-03; recovery Real_Performance_Edit_20261103. Next: obtain the intended recording source; no live-show or owner-acceptance claim.
@@ -650,3 +654,4 @@ Performance edit verification: sourceb911443; protected psyche/real-performance-
 
 ## 2026-11-03 - Performance pilot source confirmed
 Owner selected the existing rehearsal recording for the pilot. This supersedes the earlier pending-source breadcrumb. Private20-second demo delivered for review; subjective acceptance and audition remain pending. See REAL_PERFORMANCE_EDIT_2026-11-03.md and protected psyche/real-performance-edit-2026-11-03. No replacement source is required.
+
