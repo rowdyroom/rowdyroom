@@ -1,3 +1,7 @@
+## 2026-11-03 - Practical production comparison
+
+Two private promo drafts completed. Cloud manager selects the simple version by default; local generation reserved for meaningful motion. See [production comparison](PRODUCTION_COMPARE_2026-11-03.md), codex/local-studio-rerun-20261103 (unmerged). Protected key psyche/production-compare-2026-11-03; recovery Production_Compare_20261103. Owner preference and real-time playback remain unverified.
+
 ## 2026-11-03 - Private local studio rerun
 
 Cloud-directed draft only; job tracking repaired, image review unresolved. See [studio rerun](LOCAL_STUDIO_RERUN_2026-11-03.md), branch codex/local-studio-rerun-20261103 (unmerged). Private record psyche/local-studio-rerun-2026-11-03; recovery Local_Studio_Rerun_20261103. No production cutover.
@@ -633,3 +637,4 @@ An older laptop is not part of the authoritative equipment inventory and is not 
 
 
 Studio rerun verification: source a24222d; private v1/hash 1399a9d714d9df43cd6bb5a621bf13701023f77d10f17078d4c8fcff81492e9b; recovery Local_Studio_Rerun_20261103 report hash 19aaf5caccd6fa5cb371641bf866c136dd3fc3e52cf4283d3c4e0b3e80045a52. Check run c71c4a13-3646-43ba-8768-384c6a8fab79. Image review and owner acceptance remain warnings.
+

@@ -761,3 +761,6 @@ Status: Implemented with equipment recovery still open.
 
 ## 2026-11-03 - Private studio rerun
 Cloud-directed pilot draft; repaired persistent job lookup and bounded advisory wait. Seven director tests pass. Artistic acceptance and automated image review remain unresolved. See LOCAL_STUDIO_RERUN_2026-11-03.md.
+
+## 2026-11-03 - Practical production comparison
+Cloud-led same-asset promo A/B completed: simple assembly about half a second; local motion about six minutes including startup. Defaults to simple for this brief. No production cutover. See PRODUCTION_COMPARE_2026-11-03.md.
