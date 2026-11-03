@@ -638,3 +638,5 @@ An older laptop is not part of the authoritative equipment inventory and is not 
 
 Studio rerun verification: source a24222d; private v1/hash 1399a9d714d9df43cd6bb5a621bf13701023f77d10f17078d4c8fcff81492e9b; recovery Local_Studio_Rerun_20261103 report hash 19aaf5caccd6fa5cb371641bf866c136dd3fc3e52cf4283d3c4e0b3e80045a52. Check run c71c4a13-3646-43ba-8768-384c6a8fab79. Image review and owner acceptance remain warnings.
 
+
+Production comparison verification: source783eadf; private psyche/production-compare-2026-11-03 v1/hash b82286ac58e6d235061e60c4d058407b9e4704bd779abc5afa670424c471445a. Recovery Production_Compare_20261103 archive hash b38c4d237c75541db8ddf2af808f36b2eff61f676eafb905732da6c2b6e4c4de. Checks8e6047b6-0670-4d48-8390-810756179189. Saves/file checks pass; real-time playback and owner preference remain warnings.
