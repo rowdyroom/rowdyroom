@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import styles from "./LiveLinksPanel.module.css";
 
-type LinkKey = "watch" | "signup" | "vote" | "boost" | "discord" | "book";
+type LinkKey = "signup" | "vote" | "discord" | "book";
 
 type LinkField = {
   key: LinkKey;
@@ -13,10 +13,8 @@ type LinkField = {
 };
 
 const fields: LinkField[] = [
-  { key: "watch", label: "Watch Live", fallback: "https://www.tiktok.com/@rowdyroom/live", hostLine: "Watch live here" },
   { key: "signup", label: "Sign Up to Sing", fallback: "https://rowdyroom.site", hostLine: "Sign up to sing here" },
   { key: "vote", label: "Live Vote", fallback: "https://rowdyroom.site", hostLine: "Vote live here" },
-  { key: "boost", label: "Get Boost Points", fallback: "https://rowdyroom.site", hostLine: "Get boost points here" },
   { key: "discord", label: "Discord / Rowdy Bunch", fallback: "", hostLine: "Join the Rowdy Bunch Discord here" },
   { key: "book", label: "Book a Show", fallback: "https://rowdyroom.site", hostLine: "Book Rowdy Room for an event here" },
 ];
@@ -102,7 +100,7 @@ export function LiveLinksPanel() {
       <div className="panelHeader">
         <p className="eyebrow">Live Operations</p>
         <h2>Live Links</h2>
-        <p className="panelIntro">Keep the links you say on stream in one place: watch, sing, vote, boost, Discord, and booking.</p>
+        <p className="panelIntro">Keep DJ and karaoke show links in one place: singing signup, audience voting, community, and booking.</p>
       </div>
 
       <div className={styles.grid}>

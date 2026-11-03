@@ -21,7 +21,7 @@ const storageKey = "rowdyroom-run-sheet";
 const defaults: RunSheetState = {
   showName: "Rowdy Room Live",
   startTime: "",
-  preshow: "Check audio, camera, links, queue, TikFinity, and Show Mode gate.",
+  preshow: "Check audio, projection, links, queue, and Show Mode gate.",
   opening: "Welcome everyone, explain sing/vote/boost/connect, and pin the key links.",
   warmup: "First singers get the room moving. Keep voting simple and chat active.",
   mainSet: "Run the queue, call next singers early, push votes after each performance, and let the audience shape the pace.",

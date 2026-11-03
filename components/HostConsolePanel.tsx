@@ -29,7 +29,7 @@ const defaults: HostState = {
   song: "",
   prize: "",
   theme: "Live Karaoke. Real Votes. Real Community.",
-  command: "!boost",
+  command: "",
   customNote: "",
 };
 
@@ -38,28 +38,23 @@ function buildLines(state: HostState): HostLine[] {
   const nextSinger = state.nextSinger.trim() || "the next singer";
   const song = state.song.trim() || "their song";
   const prize = state.prize.trim() || "bragging rights and the spotlight";
-  const command = state.command.trim() || "!boost";
+
 
   return [
     {
       id: "opening",
       title: "Opening",
-      text: `Welcome to ${state.roomName}. ${state.theme} If you want in, get signed up, stay active in chat, and help pick who owns the room tonight.`,
+      text: `Welcome to ${state.roomName}. ${state.theme} If you want in, get signed up, join the singing queue, and help pick who owns the room tonight.`,
     },
     {
       id: "singer-intro",
       title: "Singer Intro",
-      text: `Up now: ${currentSinger} with ${song}. Chat, give them a clean count-in and let them know you are listening.`,
+      text: `Up now: ${currentSinger} with ${song}. Everyone, give them a clean count-in and let them know you are listening.`,
     },
     {
       id: "vote",
       title: "Voting Push",
       text: `Lock in your vote now. Do not just watch the room happen. Vote, react, and help decide who climbs tonight.`,
-    },
-    {
-      id: "boost",
-      title: "Boost Push",
-      text: `Use ${command} if you want to boost the energy. Boosts help the room move, help singers stand out, and keep the show alive.`,
     },
     {
       id: "next-up",
@@ -79,7 +74,7 @@ function buildLines(state: HostState): HostLine[] {
     {
       id: "close",
       title: "Close",
-      text: `That is the Rowdy Room for tonight. Follow, join the Rowdy Bunch, and come back ready to sing, vote, boost, and connect.`,
+      text: `That is the Rowdy Room for tonight. Follow, join the Rowdy Bunch, and come back ready to sing, enjoy the music, and connect.`,
     },
   ];
 }

@@ -12,12 +12,11 @@ import { RunSheetPanel } from "../components/RunSheetPanel";
 import { ShowModePanel } from "../components/ShowModePanel";
 import { SongfinderGuardFinal } from "../components/SongfinderGuardFinal";
 import { SupabaseSetup } from "../components/SupabaseSetup";
-import { TikTokControlPlan } from "../components/TikTokControlPlan";
 
 const providers = [
   { name: "ChatGPT", status: "Ready for key", route: "Planning + tools" },
   { name: "Claude", status: "Ready for key", route: "Code + review" },
-  { name: "Grok", status: "Ready for key", route: "Stream host" },
+  { name: "Grok", status: "Ready for key", route: "Production research" },
   { name: "Gemini", status: "Ready for key", route: "Research + vision" },
 ];
 
@@ -26,7 +25,7 @@ const agents = [
   "Mission Control",
   "Connector SDK",
   "AI Router",
-  "Stream Host AI",
+  "Production Studio AI",
   "Supabase Memory",
 ];
 
@@ -38,7 +37,7 @@ export default function HomePage() {
           <p className="eyebrow">Rowdy Room Enterprise Engine</p>
           <h1>AI Mission Control</h1>
           <p className="lead">
-            Your local command center for ChatGPT, Grok, Claude, Gemini, stream tools, memory, and automation.
+            Your local command center for ChatGPT, Grok, Claude, Gemini, production tools, live DJ shows, memory, and automation.
           </p>
           <div className="heroActions">
             <a href="#mission-status">Status</a>
@@ -90,7 +89,6 @@ export default function HomePage() {
         <MissionMemory />
         <SongfinderGuardFinal />
         <ApiReliabilityPanel />
-        <TikTokControlPlan />
 
         <article className="panel large" id="providers">
           <div className="panelHeader">

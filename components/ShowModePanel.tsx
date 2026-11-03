@@ -25,10 +25,7 @@ type ManualItem = {
 
 const manualItems: ManualItem[] = [
   { id: "mic", label: "Mic, mixer, headphones, and monitoring checked" },
-  { id: "live-studio", label: "TikTok LIVE Studio scene and camera checked" },
   { id: "audio", label: "Music audio, vocal audio, and delay checked" },
-  { id: "tiktok-chat", label: "TikTok chat visible and readable" },
-  { id: "tikfinity", label: "TikFinity connected and overlay screen ready" },
   { id: "queue", label: "Queue link, sign-up flow, and backup direct links ready" },
   { id: "mods", label: "Mods or trusted helpers know tonight’s rules" },
 ];
@@ -151,7 +148,7 @@ export function ShowModePanel() {
         <div>
           <p className="eyebrow">Live Operations</p>
           <h2>Show Mode</h2>
-          <p className="panelIntro">A single pre-show gate for Rowdy Room live nights. Use it before TikTok LIVE Studio goes live.</p>
+          <p className="panelIntro">A single pre-show gate for Rowdy Room live nights. Use it before an in-person DJ or karaoke show.</p>
         </div>
         <div className={gateClass(status?.overall, manualReady)}>
           <strong>{gateText}</strong>
@@ -163,7 +160,6 @@ export function ShowModePanel() {
         <button className={styles.button} disabled={busy} type="button" onClick={runCheck}>{busy ? "Checking..." : "Run Pre-Show Check"}</button>
         <button className={styles.buttonAlt} disabled={busy} type="button" onClick={saveCurrentReport}>Save Show Report</button>
         <button className={styles.buttonAlt} type="button" onClick={reset}>Reset Checklist</button>
-        <a className={styles.buttonAlt} href="#tiktok-control-plan">TikTok Setup</a>
         <a className={styles.buttonAlt} href="#songfinder-guard">Songfinder</a>
       </div>
 
