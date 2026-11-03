@@ -805,3 +805,8 @@ See [queue signup and host table](QUEUE_TABLE_SIGNUP_2026-11-03.md). Local tests
 ## 2026-11-03 - Queue table, signup and Cash App priority deployed and verified
 
 [Acceptance and limits](QUEUE_TABLE_SIGNUP_2026-11-03.md): 47 local behavioral checks; live three-singer signup, request, rollback-preview, position-change and cleanup proof; seven deployed files matched by SHA-256. Host confirms real Cash App receipts; no real transfer was tested. Optional tips and honest reviews are available. Private availability details and recovery receipts remain in the protected record. Documentation branch remains unmerged.
+
+
+## 2026-11-03 - On-demand Cash App checks prepared
+
+[Receipt check authority](CASHAPP_BROWSER_CHECKS_2026-11-03.md): customer-triggered browser receipt verification and guarded automatic queue movement are prepared on `codex/cash-app-receipts-20261103`. Current and next stay protected; no payment is approved from a customer claim. Protected record `rowdy-room/cashapp-browser-checks-2026-11-03` v1 hash `e41d80ef2333f6b3daea46066308c434919124cb5873815e941a9de8b12bf656`. Local tests pass; production deployment, extension activation, live no-match and genuine paid-skip acceptance remain pending. Detailed recovery is protected.
