@@ -804,4 +804,4 @@ See [queue signup and host table](QUEUE_TABLE_SIGNUP_2026-11-03.md). Local tests
 
 ## 2026-11-03 - Queue table, signup and Cash App priority deployed and verified
 
-[Acceptance and limits](QUEUE_TABLE_SIGNUP_2026-11-03.md): 46 local behavioral checks; live three-singer signup, request, rollback-preview, position-change and cleanup proof; seven deployed files matched by SHA-256. Host confirms real Cash App receipts; no real transfer was tested. Optional tips and honest reviews are available. Private availability details and recovery receipts remain in the protected record. Documentation branch remains unmerged.
+[Acceptance and limits](QUEUE_TABLE_SIGNUP_2026-11-03.md): 47 local behavioral checks; live three-singer signup, request, rollback-preview, position-change and cleanup proof; seven deployed files matched by SHA-256. Host confirms real Cash App receipts; no real transfer was tested. Optional tips and honest reviews are available. Private availability details and recovery receipts remain in the protected record. Documentation branch remains unmerged.

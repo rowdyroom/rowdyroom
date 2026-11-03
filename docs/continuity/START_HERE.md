@@ -700,4 +700,4 @@ Current implementation and acceptance trail: [QUEUE_TABLE_SIGNUP_2026-11-03.md](
 
 ### Queue acceptance update - 2026-11-03
 
-The [queue table and signup record](QUEUE_TABLE_SIGNUP_2026-11-03.md#production-acceptance) now contains deployed acceptance, proof and the remaining real-payment gate. Read protected record `rowdy-room/queue-table-signup-2026-11-03` for exact availability, current version/hash and recovery location. Manifest hash: `fe7fb2a4b2d4ac0754e4d881c465e90dfbeaaadb482c82634c8846eddc198627`. Branch `codex/queue-table-20261103` is not merged into main.
+The [queue table and signup record](QUEUE_TABLE_SIGNUP_2026-11-03.md#production-acceptance) now contains deployed acceptance, proof and the remaining real-payment gate. Read protected record `rowdy-room/queue-table-signup-2026-11-03` for exact availability, current version/hash and recovery location. Manifest hash: `97e77f4da7fdfd0905728fd72be8ba9f19eab2f9a9da07628ad105b5d73e9cfa`. Branch `codex/queue-table-20261103` is not merged into main.
