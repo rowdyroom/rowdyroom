@@ -14,3 +14,7 @@ Roger requested repair of final-step audience signup and a compact spreadsheet-s
 Eleven local behavioral checks passed, covering signup success/failure/duplicate prevention, preserved voting contract, full waiting-order payloads, and protection of the current singer. Browser preview verified row positioning and name/song/note filtering. Dated originals were downloaded; protected server rollback copies were verified by name and size. Production deployment and live signup acceptance are pending until the dated follow-up below.
 
 Protected record: `rowdy-room/queue-table-signup-2026-11-03`. Existing live queue, voting, Rumble, and lyrics-player URLs remain in place. No real waiting/current singer is to be moved or deleted for proof. A test entry must be identifiable and cleaned up alone.
+
+## Optional support follow-up
+
+Roger additionally requested restoration of tipping and a review invitation. SongFinder return now reaches the optional support step before confirmation. Existing Cash App tipping and the no-support path are retained. Roger accepted an optional honest Google review link with no queue reward after the platform policy was checked. The supplied listing was verified as Rowdy Room DJ service with the correct business website and calendar; its review dialog opens. Tracking parameters are omitted. No review is posted by automation. Thirteen local checks now pass. Final live acceptance and deployed readback remain to be recorded.
