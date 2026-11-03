@@ -38,3 +38,7 @@ The first live pass caught a missing host credential on the new protected reques
 All seven deployed files were downloaded again and matched their expected SHA-256 hashes. Original 0644 file modes and valid modification times were verified. Recovery manifest SHA-256: `fe7fb2a4b2d4ac0754e4d881c465e90dfbeaaadb482c82634c8846eddc198627`. Exact private calendar dates, event identifiers, deployment paths, protected-record versions/hashes and local recovery location are held under `rowdy-room/queue-table-signup-2026-11-03` and its local receipt.
 
 Cash App remains a manual receipt-confirmation workflow. No real-money transfer was tested. Host checks the actual Cash App payment and enters its transaction ID before approval; duplicate IDs cannot be used twice. Changed-line cases require host reconciliation. Google reviews carry no queue reward and no automated review is posted. Documentation is on `codex/queue-table-20261103`, not merged into `main`.
+
+### Long-show lifecycle correction
+
+Final review found that stable table rows could receive duplicate drag listeners on each refresh. The staged correction binds each row and its select controls once. A regression check performs 100 repeated refresh bindings and verifies one handler per event. Fifteen JavaScript checks and 32 PHP checks pass; final deployed readback follows this correction.
