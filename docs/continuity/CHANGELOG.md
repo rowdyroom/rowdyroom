@@ -2,6 +2,10 @@
 
 ## 2026-11-03 - Psyche Tower campus
 
+**Hierarchy revision.** [Psyche Tower](PSYCHE_TOWER_2026-11-03.md) documents the current six-floor animated campus and existing Control Center navigation. Public-safe record on `codex/psyche-tower-20261103`. Protected `psyche/campus-tower-2026-11-03` v2 SHA-256 `1341e5ad360fc16d3e04e156ff23b406a39774d3813ea639fe7bfb2b0b7494ae`. Revision recovery manifest SHA-256 `b593089ba1051a971efa9f3f19de4f4305201638ad396fe44e45affb9d9227a1`. Check run `6cc1a1ec-f00d-4c49-b636-fb4bf550c18b`. Next: use Campus from the existing Control Center.
+
+**Original layout.**
+
 [Psyche Tower](PSYCHE_TOWER_2026-11-03.md) documents the live local campus elevation, eight floor levels, animated residents, and existing Control Center navigation. Public-safe record on `codex/psyche-tower-20261103`. Protected `psyche/campus-tower-2026-11-03` v1 SHA-256 `8171b65267a03d30e498ac40b1ce93c13634e4f0350db211d9519bf56bdd74c8`. Recovery manifest SHA-256 `501d51c30a3ee3eacd3488f4985fe91a8552e9b00803283080929f0ab067ee38`. Check run `5c40879e-981f-47fd-b7a9-480d393abbee`. Next: use Campus from the existing Control Center.
 
 Native bridge inspection found a real failure path: watchdog-stopped nonempty fragments could be reported as successful results. The specific trigger of the last brace-only S23 run remains unproved. Staged repair uses required-key JSON-schema decoding for recognized S23 contracts without inserting answer values; rejects incomplete fields, interrupted/context-full/token-limit outputs; uses a20s post-output idle watchdog and60s local-support deadline; removes S23 empty-result retries; waits for canceled generation settlement before context reuse and retains stop flags/raw fragment. Eight regression checks pass. Android build passed; packaged guards and matching retained-APK signer verified. APK SHA256 `771fbd5b8c3d2bc08f19c4dd8b5db3be5d9d6874c1136c709c2c37976114cc5f`. Owner declined connecting the S23 now, so NO deployment or native live acceptance is claimed. Cody/Claude supplied a substantive design review; staged safeguards address its findings, while target-device acceptance remains mandatory.
