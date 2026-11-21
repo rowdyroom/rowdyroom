@@ -1,6 +1,6 @@
 # Independent video quality team commissioning
 
-November 21, 2026. Status: limited reviewer calibration passed; fresh normal ChatGPT production acceptance remains pending. Existing production evidence is separate.
+November 21, 2026. Status: the bounded six-second 360p proof passed through normal ChatGPT after commissioning repairs. Larger autonomous and multi-character scope remain unaccepted.
 
 The request-triggered producer snapshots a total credit cap, requires actual character/voice/settings/cost preflight, and authorizes one exact generation task once. Missing reviewers, changed settings, replayed authorization and uncertain results hold before spending or final delivery. A historical or planning-only mission cannot bypass the new reservation. No automatic creative retakes or publishing.
 
@@ -12,4 +12,8 @@ Review resources use an owner-approved idle-only memory lease. The existing reas
 
 The commissioning scope is one six-second 16:9 360p output, at most six included generation credits total, registered original music, no new music-provider action and no retakes. Larger autonomous and multi-character review remain unaccepted. Initial normal-ChatGPT routing used an older manual entry; the exact-task budget gate rejected its unauthorized generation attempt locally. No provider generation was submitted by that rejected attempt.
 
-Protected authority: `psyche/video-independent-quality-team-2026-11-21`. Detailed receipts, paths, resource ownership, calibration failures and recovery files remain private. Next: resume the same commissioning mission through the bounded producer, reconcile original receipts, verify actual final-media gates and native export, then record the exact acceptance or hold. Documentation on `codex/video-multiscene-20261121` is unmerged.
+Protected authority: `psyche/video-independent-quality-team-2026-11-21`. Detailed receipts, paths, resource ownership, calibration failures and recovery files remain private. The accepted proof used one actual generation, six included video credits, existing original registered music and zero new music-provider actions. All five actual-media roles passed; planned-script ASR had zero word errors and the timing screen measured a one-frame offset. The native downloaded MP4 matched the final hash; browser playback reached its end unmuted with no media error. The restored reasoning service answered an authenticated inference check. Twenty-one targeted automated checks passed. Documentation on `codex/video-multiscene-20261121` is unmerged.
+
+## Commissioning repairs and limits
+
+The first natural-language run required setup repairs; this is not a claim of pristine first-attempt reliability. Repairs addressed stale manual routing, explicit voice-picker selection, resuming a planning-only mission with pinned script/music provenance, completed-but-unverified status handling, and recovery of original results. One generation response expired and was not accepted or replayed; fresh authenticated observation and collection recovered the original clip. Confirmed no-submission recovery preserves the same reserved funds; uncertain accepted calls can only observe their original task. No second paid-render allowance or creative retake was introduced. The tested result is a short private proof, not acceptance of every longer workflow or universal visual/voice quality.
