@@ -626,3 +626,8 @@ Verified protected snapshot:
 - workbook regeneration before the next equipment intake or workbook-led edit
 
 An older laptop is not part of the authoritative equipment inventory and is not part of this build plan. No further purchase/cart action, production show system change, or Scheduled Task change is authorized by this record.
+
+
+## November 21, 2026 — Multi-scene speech and timed titles
+
+Draft documentation checkpoint: [Multi-scene video production acceptance](VIDEO_MULTISCENE_2026-11-21.md), on `codex/video-multiscene-20261121`. The private 32-second acceptance uses one registered announcer across four scenes, speech-preserving audio assembly, timed literal captions and per-track music provenance. Private record key: `psyche/video-multiscene-production-2026-11-21`. Source/output hashes, actual usage, stock-voice license, provider failure/refund, recovery and owner-review limits remain protected. No media was published and no retired local renderer was reactivated. This branch is not merged into main.
