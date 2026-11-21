@@ -1,3 +1,14 @@
+## Natural native-pitch host revision — November21,2026
+
+The15.42s Tater Patch revision now restores the original actor's native pitch/formants/timing and removes the rejected pitch-shifting path entirely. Only gentle2dB low-shelf support and moderate2.5:1compression remain. Matched voiced-window measurement gives pitch ratio1.00to the exact original,while the rejected-3semitone source measures.842and fails the preservation guard. Encoded prepared AND final video packets are identical to the previous precisely corrected visual edit;the full2027/oneeight/8:30PM–1AM speech,licensed music and graphics are retained.
+
+All five actual-media local roles and three fresh creative roles passed on new output SHA256 `b834045fb0a0df3218f752c6604a5804820ea4968f7b0ce705a74c1828b3f30a`. Actual isolated-voice review reports low chest resonance,energy,clear speech and no obvious robotic distortion. Native Save accepted the identical4403437byte file. Owner creative approval remains pending;machinePASS is not a claim that Roger likes the voice.
+
+The normal connected dialogue preparation path now skips RubberBand when pitch is0. Current owner policy blocks artificial lowering,and a real connected-3semitone request was rejected before rendering. The previously rejected shifted source and final remain blocked from reuse/delivery;all original/failure evidence is preserved. Actual authenticated Editor→automatic finish/mix→five local→three creative→changed-feedback resolution→native delivery passed in one reviewer round. No newFlow orSuno credits;1Grok Editor task and3Codex reviews(101474input/1667outputtokens),plus local measured checks. Mac reasoning restored. Recorded Tater generation total remains126Flow credits. Active-chat/Psyche/session requirements,existing Flow security hold,music attribution,no paid retakes/publishing and sampled-visual-review limitations remain.
+
+Protected authority `psyche/normal-chat-video-workflow-2026-11-21`;private verification SHA256 `33129a2d702479ac630a57fb384ce5d2b46edd8e9c710b3d0b9a8a6e03661d49`. Technical branch `codex/video-multiscene-20261121` remains unmerged. Next:owner listens to this new natural-voice revision;never restore the rejected artificially lowered voice.
+
+
 ## Tater Patch audio reliability and normal-chat acceptance — November21,2026
 
 The15.42s reused-footage promo passes all five local roles and three fresh creative roles on output SHA256 `ffee70fee71b0cf8bb74d634763a2d40b7e61b15525706764644db42ef944021`. Connected native Save accepted the identical4400737byte file. The full spoken2027/8:30PM/1AM schedule is restored with one eight. Owner creative approval remains pending;all earlier owner-rejected files and raw failures remain blocked/historical.
