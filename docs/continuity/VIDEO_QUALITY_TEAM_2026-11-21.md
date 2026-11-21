@@ -65,7 +65,7 @@ Thirty-four production and six monitor checks passed. Recorded commissioning usa
 Protected authority `psyche/video-permanent-creative-review-2026-11-21` holds private paths and evidence. Final verification SHA256 `bb50799f7b18c413d7222a4925207085f30e27c7c5d763048d9171b08fa5a258`; implementation manifest SHA256 `19698549c5f52e9147686409641d4fcf105dc6dbd0847753c80d5ffb3d8347f1`. This supersedes earlier no-dispatcher statements for the newly connected Psyche route only. Existing rights, generation cap and publishing/purchase holds remain. This documentation branch is unmerged.
 
 
-## Zero-credit local host repair and positive delivery — November 21, 2026
+## Historical automated host repair — OWNER REJECTED
 
 The owner requested fixing the cropped fictional host and reference mismatch without new video-generation spending. The revised ten-second edit now passes all five local checks and all three creative reviewers on the identical final file. Actual normal ChatGPT read the receipts and returned native Save; the downloaded 1,510,949-byte MP4 matched SHA256 `f547a27292837945b801d865a8a584841092eec17da4ffdba6fc594d0bd3ddda`. Browser playback reached ten seconds unmuted without error. This establishes the bounded positive delivery that the prior negative commissioning test did not.
 
@@ -78,3 +78,14 @@ Thirty-eight production and six monitor tests plus two actual-media negative che
 The repair entry is owner-triggered and pinned to this known approved fictional source and ten-second layout. It cannot replace real-person references or silently apply a hardcoded crown composite to arbitrary footage. General automatic repair, new-character likeness, and larger timelines remain outside acceptance. Existing rights and publishing/purchase/spending holds remain.
 
 Protected authority `psyche/video-host-repair-2026-11-21` holds exact local evidence/recovery paths. Verification report SHA256 `a13eff0adc52fbbd01ec8148c44279bbca11ce77053910869166fb9d3d349a55`; implementation manifest SHA256 `136a1b4f6a6b214746b3f858937efba168d46af42009d67c31186141bb94383c`. This supersedes the previous held-output state only for the new reviewed output. Documentation remains on this unmerged branch.
+
+
+## Owner rejection and motion safety correction — November 21, 2026
+
+Roger rejected the delivered crown composite because the top of the head moved independently. Automated eight-role PASS and successful transport/hash/playback did not establish acceptable movement. The prior positive creative acceptance is revoked. Artifact SHA256 `f547a27292837945b801d865a8a584841092eec17da4ffdba6fc594d0bd3ddda` and its crown-motion derivative are blocked from delivery and reuse. Rehashed reconstructed-anatomy descendants are also prohibited. The crown queue and renderer are retired; originals and failed reports remain evidence. Actual connected native Save and crown-operation negative readbacks passed.
+
+Creative review v5 adds an ordered eighteen-frame sequence at twelve samples per second around the motion entrance, plus an explicit temporal assessment. Missing, incomplete or defect assessments hold; false claims of continuous video viewing are prohibited. This adds temporal samples, not a verified native continuous-video capability. No new temporal model calibration was performed. Existing local audio, ASR, synchronization and technical checks remain; frame similarity and mouth preservation cannot approve natural hair motion. Owner rejection overrides every automatic PASS.
+
+Eight saved files representing four performances were inspected in sampled frames. An untouched wide talking shot is a better framing candidate, with retained dialogue about first Saturdays in 2027 and show hours. It is not a newly completed or motion-approved promo; its different words must not be placed under unrelated mouth motion. No new Flow/Suno credits or Grok/Codex reviewer requests were used. Forty-three production and six monitor tests passed. Future polished acceptance still needs stronger motion evaluation; that limitation remains explicit.
+
+Protected authority `psyche/video-motion-safety-2026-11-21` holds the current rejection, source audit and private recovery paths. The earlier `psyche/video-host-repair-2026-11-21` record is superseded by owner rejection. Correction report SHA256 `28b82062463f58667378561efd36bf88ed8a4906ae3fe622769e5ae85c6ced6c`; implementation manifest SHA256 `340c55206b8ea5c17c6df0c651764852c18394a49f07ce3a9ba8c3650426e802`. This branch remains unmerged.
