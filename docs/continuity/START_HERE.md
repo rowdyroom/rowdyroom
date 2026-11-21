@@ -642,3 +642,8 @@ Verified protected snapshot:
 - workbook regeneration before the next equipment intake or workbook-led edit
 
 An older laptop is not part of the authoritative equipment inventory and is not part of this build plan. No further purchase/cart action, production show system change, or Scheduled Task change is authorized by this record.
+
+
+## Video reliability and reviewer checkpoint — November 21, 2026
+
+Durable generation holds/serialization, private verified assets, silent local storyboard and receipt-aware monitoring are tested. Three owner-authorized Codex task agents completed a comparison: crop/title flaws found; direct audio listening unavailable. Keep actual-audio/local measured gates; no standing normal-ChatGPT dispatcher. Provider unusual activity remains unresolved; local browser checked read-only, no new render acceptance or paid retry. [Technical evidence on unmerged codex/video-multiscene-20261121](https://github.com/rowdyroom/rowdyroom/blob/codex/video-multiscene-20261121/docs/continuity/VIDEO_QUALITY_TEAM_2026-11-21.md), commit `0dab6c3b40ab0ded315e2de855df2b0372942db1`. Protected `psyche/video-reliability-2026-11-21` v1 SHA256 `febf57c8d4fb8c4d86bfec6f781a791756d649e437b3a2813650291faea41b0b`; private recovery locator and report hash in that record. Next: local edit of crop/title, preserve dialogue, and verify actual media before promotional acceptance; no automatic paid retake.
