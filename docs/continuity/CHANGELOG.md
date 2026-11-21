@@ -758,3 +758,8 @@ Status: Implemented with equipment recovery still open.
 
 
 
+
+
+## 2026-11-21 — Character dialogue and music continuity
+
+Superseded rejected stock off-screen narration with saved fictional character/voice references, protected source dialogue and blocked narrator substitution. Added a continuous music floor with a real audio regression. Four-scene output remains an owner-review candidate; exact lip sync and subjective quality are not certified. See [current production policy](VIDEO_MULTISCENE_2026-11-21.md) and private record `psyche/video-multiscene-production-2026-11-21`. Documentation branch only; no media published.
