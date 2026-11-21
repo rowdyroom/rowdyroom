@@ -1,3 +1,9 @@
+## Owner rejected processed promo voice; cost audit — November21,2026
+
+Roger rejected the latest15.42s promo voice as gas/DarthVader-like. The-3semitone treatment is not accepted natural announcer delivery. Output `ffee70fee71b0cf8bb74d634763a2d40b7e61b15525706764644db42ef944021` is held and durably blocked despite its earlier machinePASS. Preserve the precise speech cut and all original/failure evidence;do not reuse the rejected pitch treatment as a default.
+
+Recorded Tater Patch generation usage is126Flow credits:30net for original narrated version,96for talking-character version,0new for later edits. The reused wide host cost24within that96,not an additional charge.0newSuno credits/downloads for these versions. At least15explicitly recorded Tater revision review tasks used440143input/8056output tokens;general workflow commissioning and coordinator chat usage are excluded. No extra purchases by Lucian;subscription-dollar allocation,Grok totalquota cost and electricity are unmetered/UNKNOWN. Protected workflowv4 SHA256 `08c12c2e666e94481cbc2bcbb299826e32f6a16719270815adacd1006dda618f`;cost/rejection evidence remains in its private recovery record. No new render was made for this cost audit.
+
 ## Tater Patch audio reliability and normal-chat acceptance — November21,2026
 
 The15.42s reused-footage promo passes all five local roles and three fresh creative roles on output SHA256 `ffee70fee71b0cf8bb74d634763a2d40b7e61b15525706764644db42ef944021`. Connected native Save accepted the identical4400737byte file. The full spoken2027/8:30PM/1AM schedule is restored with one eight. Owner creative approval remains pending;all earlier owner-rejected files and raw failures remain blocked/historical.
