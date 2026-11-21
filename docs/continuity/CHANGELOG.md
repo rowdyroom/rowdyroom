@@ -798,3 +798,8 @@ Connected three request-triggered Codex reviewers through the normal ChatGPT/Psy
 ## 2026-11-21 — Zero-credit local host repair delivered
 
 Repaired the known fictional-host ten-second preview with source-matched portrait, explicit short speech lead-in and deterministic same-source crown/headroom compositing. Original eyes/mouth and full audio retained. All eight reviews passed; actual normal ChatGPT native Save download hash and unmuted playback passed.46checks total;0newFlow/Suno credits,1Editor request and6Codex review runs. [Technical record](VIDEO_QUALITY_TEAM_2026-11-21.md) commit `6b8e95f79d3f047d1e75281c986216ec74b84eaf` remains unmerged. Protected `psyche/video-host-repair-2026-11-21` v1. Earlier held outputs remain preserved; new likeness/general-source acceptance is not implied.
+
+
+## 2026-11-21 — Owner rejects crown-motion artifact
+
+Revoked creative acceptance of the crown-composited preview after owner reported independent hair motion. Native delivery, asset reuse and anatomy reconstruction are blocked; original evidence preserved. Added dense ordered temporal samples and explicit incomplete/defect holds without claiming continuous-video perception. Audited8saved files/4performances; untouched wide shot remains a candidate.49tests passed,0newprovider tasks or media credits. [Correction](VIDEO_QUALITY_TEAM_2026-11-21.md) commit `9dfa6d6394bf2a0c91b1cb5fdb9dd8e232e0a246` unmerged. Protected `psyche/video-motion-safety-2026-11-21` v1; host-repair record v2 rejects prior acceptance.
