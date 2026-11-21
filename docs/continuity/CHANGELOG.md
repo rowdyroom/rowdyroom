@@ -1,3 +1,14 @@
+## Standing idea-only normal ChatGPT defaults — November21,2026
+
+Future video ideas now snapshot the saved idea-only contract. Roger supplies the idea;active ChatGPT coordinates the faithful script/shot plan,appropriate natural voices,suitable track-specific licensed music,polished local text/graphics,source acquisition and source binding. No routine owner filenames,workbench steps or prompt-only delivery. Native pitch/formants are preserved;artificial lowering and rejected voices/sources stay blocked. Use a suitable natural performance rather than manufacturing depth.
+
+After actual source binding,the authenticated Editor triggers finishing/mixing,five local technical/actual-audio roles,three evidence-bound creative roles,and gated delivery. Missing/held/stale reviews and owner-rejected files block. Music remains continuous under clear speech;rights and creative-fit checks remain. Local supported corrections require the affected checks again;no automatic paid retakes,purchases or publishing. Ask the owner only for a material creative gap or genuine account/security/rights/credit decision.
+
+Live normal-ChatGPT status returned preserveNativePitch:true and contract2026-11-21-standing-idea-defaults-v1;new-mission snapshot verification and15existing workflow checks passed. No new generation,cloud review jobs,Flow orSuno credits. This is active-chat coordination,not an unattended arbitrary-generation API. Existing Flow security hold remains unresolved;new cloud generation is blocked pending a separate valid provider/owner decision. Available Psyche PC and provider sessions are required. Prior15.42s native-voice proof remains machine-verified with owner creative approval pending;no new media or universal quality acceptance is claimed.
+
+Protected authority `psyche/normal-chat-video-workflow-2026-11-21`;private verification SHA256 `512ce0835cd1b20469d2082fc8c9b72e34cc8ae6d688cd7e34981f865efb3a78`. Technical branch `codex/video-multiscene-20261121` remains unmerged.
+
+
 ## Natural native-pitch host revision — November21,2026
 
 The15.42s Tater Patch revision now restores the original actor's native pitch/formants/timing and removes the rejected pitch-shifting path entirely. Only gentle2dB low-shelf support and moderate2.5:1compression remain. Matched voiced-window measurement gives pitch ratio1.00to the exact original,while the rejected-3semitone source measures.842and fails the preservation guard. Encoded prepared AND final video packets are identical to the previous precisely corrected visual edit;the full2027/oneeight/8:30PM–1AM speech,licensed music and graphics are retained.
