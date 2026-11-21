@@ -783,3 +783,8 @@ Status: Implemented with equipment recovery still open.
 ## 2026-11-21 — Character dialogue and music continuity
 
 Superseded rejected stock off-screen narration with saved fictional character/voice references, protected source dialogue and blocked narrator substitution. Added a continuous music floor with a real audio regression. Four-scene output remains an owner-review candidate; exact lip sync and subjective quality are not certified. See [current production policy](VIDEO_MULTISCENE_2026-11-21.md) and private record `psyche/video-multiscene-production-2026-11-21`. Documentation branch only; no media published.
+
+
+## 2026-11-21 — Video reliability and actual ChatGPT reviewer comparison
+
+Added durable generation stops, serialized operator access, verified-asset indexing, silent local storyboards and receipt-aware reliability metrics. Three actual task agents reviewed the same preview: two found crop/layout flaws; direct audio listening was unavailable. Retained actual-audio and measured local checks. No new media credits; provider issue remains unresolved. See [quality-team evidence](VIDEO_QUALITY_TEAM_2026-11-21.md), unmerged branch commit `0dab6c3b40ab0ded315e2de855df2b0372942db1`, and protected `psyche/video-reliability-2026-11-21` v1. No standing ChatGPT reviewer dispatcher was installed.
