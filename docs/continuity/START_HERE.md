@@ -631,3 +631,8 @@ An older laptop is not part of the authoritative equipment inventory and is not 
 ## November 21, 2026 — Multi-scene speech and timed titles
 
 Draft documentation checkpoint: [Multi-scene video production acceptance](VIDEO_MULTISCENE_2026-11-21.md), on `codex/video-multiscene-20261121`. The private 32-second acceptance uses one registered announcer across four scenes, speech-preserving audio assembly, timed literal captions and per-track music provenance. Private record key: `psyche/video-multiscene-production-2026-11-21`. Source/output hashes, actual usage, stock-voice license, provider failure/refund, recovery and owner-review limits remain protected. No media was published and no retired local renderer was reactivated. This branch is not merged into main.
+
+
+## November 21, 2026 — On-camera speech and continuous music correction
+
+[Current video production policy](VIDEO_MULTISCENE_2026-11-21.md), branch `codex/video-multiscene-20261121`, document commit `f34170e7d44fa5f53ca64977fdd393f8d66b5177`. Owner rejected the stock off-screen narrator; saved character/voice ingredients, speech preservation, rejected-voice guards and a continuous music floor replace that approach. New four-scene output is a review candidate, not owner creative acceptance or perfect lip-sync certification. Private authoritative key: `psyche/video-multiscene-production-2026-11-21`; version/hash/recovery evidence are in the protected record and consolidated reference. Earlier narrator acceptance wording is historical and superseded. No private media or infrastructure published; this branch is not merged.
