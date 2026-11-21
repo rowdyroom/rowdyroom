@@ -17,3 +17,12 @@ Protected authority: `psyche/video-independent-quality-team-2026-11-21`. Detaile
 ## Commissioning repairs and limits
 
 The first natural-language run required setup repairs; this is not a claim of pristine first-attempt reliability. Repairs addressed stale manual routing, explicit voice-picker selection, resuming a planning-only mission with pinned script/music provenance, completed-but-unverified status handling, and recovery of original results. One generation response expired and was not accepted or replayed; fresh authenticated observation and collection recovered the original clip. Confirmed no-submission recovery preserves the same reserved funds; uncertain accepted calls can only observe their original task. No second paid-render allowance or creative retake was introduced. The tested result is a short private proof, not acceptance of every longer workflow or universal visual/voice quality.
+
+
+## Hybrid motion-only spending policy
+
+November 21, 2026 owner correction: paid video generation is reserved for realistic people, visible dialogue, physical action and necessary complex camera motion. Exact titles, dates, captions, cards, still backgrounds and simple pan/zoom effects use graphics and deterministic editing first. Director now requests per-shot timing, route and justification for paid motion; new missions snapshot the policy. Existing graphics/editor task functions are reused, rather than provisioning extra bots for every operation.
+
+Review key images before paid animation. Google documents separate daily image quotas rather than unlimited images. Reference images/videos and start/end frames are provider-supported, but automatic chat-attachment handoff and general hybrid assembly remain unaccepted. Saved voice ingredients must not be lost when changing generation modes. The existing bounded credit gate and actual-media delivery gates remain unchanged. Offline compilation and worst-case task/context size checks passed; no provider dispatch or new media credits were used. Running-service activation and mixed-timeline acceptance must be tracked separately.
+
+Protected authority: `psyche/video-hybrid-production-2026-11-21`. Existing larger autonomous and multi-character limitations remain.
