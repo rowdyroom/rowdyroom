@@ -793,3 +793,8 @@ Added durable generation stops, serialized operator access, verified-asset index
 ## 2026-11-21 — Permanent creative review before video delivery
 
 Connected three request-triggered Codex reviewers through the normal ChatGPT/Psyche production hook, retaining all five local audio/technical checks. Same-hash eight-role delivery gate, one bounded local title repair and full re-review; no paid retakes. Actual test repaired title/audio preservation and held source cropping/reference conflict; native Save refused delivery.40checks passed,9commissioning task runs,0newFlow/Suno credits. [Technical record](VIDEO_QUALITY_TEAM_2026-11-21.md) commit `3344a1bc038e118621ef24dbac4f18871e768a08` remains unmerged; protected `psyche/video-permanent-creative-review-2026-11-21` v1.
+
+
+## 2026-11-21 — Zero-credit local host repair delivered
+
+Repaired the known fictional-host ten-second preview with source-matched portrait, explicit short speech lead-in and deterministic same-source crown/headroom compositing. Original eyes/mouth and full audio retained. All eight reviews passed; actual normal ChatGPT native Save download hash and unmuted playback passed.46checks total;0newFlow/Suno credits,1Editor request and6Codex review runs. [Technical record](VIDEO_QUALITY_TEAM_2026-11-21.md) commit `6b8e95f79d3f047d1e75281c986216ec74b84eaf` remains unmerged. Protected `psyche/video-host-repair-2026-11-21` v1. Earlier held outputs remain preserved; new likeness/general-source acceptance is not implied.
