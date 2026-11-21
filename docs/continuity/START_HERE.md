@@ -1,3 +1,17 @@
+## Revised Tater Patch promo and evidence-scoped checks — November 21, 2026
+
+The revised 15s720p24fps promo reuses the intact wide host, removes the repeated eight with a linked picture/audio cut, and replaces the rejected music with a developed licensed128BPM club track. Animated local opening/closing graphics add a participation hook, games/prizes, accurate schedule and crowd-voting drink-prize conditions. No anatomy reconstruction or new video generation. All five local checks and all three creative roles pass on output SHA256 `53995a0c03676ece12f384a67786e0da4240ea7accc57c95d375f2942751b6eb`. Native connected Save accepted the identical4223806byte artifact. Owner creative approval remains pending; old rejected files and failures stay historical.
+
+Actual-audio transcription is now blind to planned words; exact script comparison occurs afterwards. Invalid/empty model output holds rather than treating reasoning text as approval. Source-hash-bound editorial partitions let unchanged sync standards inspect every uninterrupted take without skipping intervals. Required voice traits apply to the actual speaking scene; full-mix review still requires clear artifact-free exact speech and continuous developed music. Original conflicting reports remain preserved. Visual roles use sampled frames, not continuous playback; Codex audio role reviews actual-audio evidence without independent listening. Mac reasoning restored.
+
+Usage:0newFlow credits,0Suno generation/download credits. Authenticated Sound/Editor tasks and three Codex reviews were used; Director planning failed before dispatch. Remaining cloud allowances unknown. Twenty-five targeted checks/assertions passed. Track-specific CC BY4.0 attribution/edit notice retained; SunoFree rights unchanged. Existing Flow security hold and no automatic paid retakes/publishing remain.
+
+Protected authority `psyche/tater-promo-revision-2026-11-21`; private verification SHA256 `d9fcc282b9fba3db8055dd85b795683e580a5fd105ad7528b270c6487a5e64dc`. Technical branch `codex/video-multiscene-20261121` remains unmerged.
+
+Protected record v1 SHA256 `d90674c1987298f607e6063362abe9f406026b568419f0d6da90d645b4ce4a5d`; technical commit `79f32feb003fa7c80b58522973768b2b9c6b75b2`. [Technical authority](https://github.com/rowdyroom/rowdyroom/blob/codex/video-multiscene-20261121/docs/continuity/VIDEO_QUALITY_TEAM_2026-11-21.md). Next: owner review of the new revision; never restore prior rejected media.
+
+Earlier checkpoints below are historical and superseded where contradicted.
+
 ## Current owner correction and normal video workflow — November21,2026
 
 **The wide-shot promo is held for revision:** Roger reported “eight eight thirty,” basic/lame music and basic/lame text. Previous automated PASS below is historical,not creative acceptance. Approval of framing did not approve voice/dialogue/music. Native Save refuses the held video. The revised local critic caught both actual audio defects. Normal ChatGPT now supports source-bound automatic Editor→finish→local checks→three creative roles; strict verbatim repetition checks,music creative-fit/production checks and a design/copy rubric. Rejected procedural music is blocked.37targeted tests pass;0newFlow/Suno credits orGrok/Codex jobs. New creative rubric is not universally calibrated;continuous-video perception remains unavailable. Cloud Flow holds and music-rights requirements remain.
