@@ -1,3 +1,11 @@
+## Flow security recovery remains held — November 21, 2026
+
+One explicitly authorized same-session recovery test, capped at6included credits after a cooldown of over6hours and authenticated live settings/voice inspection, was again rejected by the provider security check. The verified balance was886before and886after:0Flow credits,0Suno credits/downloads;no new video. Absence of a banner before submission did not establish recovery. No render retry, account/network/browser identity change or publishing was performed. Browser diagnostic details and task receipts remain protected;the possible browser contributor is not a confirmed cause.
+
+The one-use recovery authorization remains consumed/failed;the durable security hold is active. Callback creation now observes a shared65s minimum interval and provider Retry-After,with no rapid creation POST retry. Callback readiness precedes consuming generation permission/budget;proven local non-dispatch is distinguished from uncertain provider submission. Read-only quotations no longer replace the actual generation failure receipt. Thirteen targeted checks passed. Existing native-voice,music,graphics and eight-role delivery gates remain unchanged. Normal ChatGPT still cannot make fresh Flow videos until legitimate provider recovery succeeds.
+
+Prepared support report is saved privately and has not been sent. Next:obtain provider-approved browser/account recovery;any support send needs explicit owner authorization. No automatic new test. Protected authority `psyche/flow-security-recovery-2026-11-21`;private verification SHA256 `a598a3b608162ad59ab1d17c3f930ef00eda95d731ad2061a17e51f3fbf85c45`. Technical branch `codex/video-multiscene-20261121` remains unmerged.
+
 # Independent video quality team commissioning
 
 November 21, 2026. Status: the bounded six-second 360p proof passed through normal ChatGPT after commissioning repairs. Larger autonomous and multi-character scope remain unaccepted.
