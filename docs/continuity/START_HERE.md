@@ -1,3 +1,16 @@
+## Natural native-pitch host revision — November21,2026
+
+The15.42s Tater Patch revision now restores the original actor's native pitch/formants/timing and removes the rejected pitch-shifting path entirely. Only gentle2dB low-shelf support and moderate2.5:1compression remain. Matched voiced-window measurement gives pitch ratio1.00to the exact original,while the rejected-3semitone source measures.842and fails the preservation guard. Encoded prepared AND final video packets are identical to the previous precisely corrected visual edit;the full2027/oneeight/8:30PM–1AM speech,licensed music and graphics are retained.
+
+All five actual-media local roles and three fresh creative roles passed on new output SHA256 `b834045fb0a0df3218f752c6604a5804820ea4968f7b0ce705a74c1828b3f30a`. Actual isolated-voice review reports low chest resonance,energy,clear speech and no obvious robotic distortion. Native Save accepted the identical4403437byte file. Owner creative approval remains pending;machinePASS is not a claim that Roger likes the voice.
+
+The normal connected dialogue preparation path now skips RubberBand when pitch is0. Current owner policy blocks artificial lowering,and a real connected-3semitone request was rejected before rendering. The previously rejected shifted source and final remain blocked from reuse/delivery;all original/failure evidence is preserved. Actual authenticated Editor→automatic finish/mix→five local→three creative→changed-feedback resolution→native delivery passed in one reviewer round. No newFlow orSuno credits;1Grok Editor task and3Codex reviews(101474input/1667outputtokens),plus local measured checks. Mac reasoning restored. Recorded Tater generation total remains126Flow credits. Active-chat/Psyche/session requirements,existing Flow security hold,music attribution,no paid retakes/publishing and sampled-visual-review limitations remain.
+
+Protected authority `psyche/normal-chat-video-workflow-2026-11-21`;private verification SHA256 `33129a2d702479ac630a57fb384ce5d2b46edd8e9c710b3d0b9a8a6e03661d49`. Technical branch `codex/video-multiscene-20261121` remains unmerged. Next:owner listens to this new natural-voice revision;never restore the rejected artificially lowered voice.
+
+Protected workflowv5 SHA256 `69290915ce4b5bc532c4f8c3065c12232acbd09284bfed0b7b4d8e7bbc524b7a`;technical commit `2c8c33f6b4548a51a5adaa3c21da53023cc64175` remains unmerged. Earlier owner rejection applies to the shifted voice,not approval of this new native-pitch revision. Human creative approval is pending.
+
+
 ## Owner rejected processed promo voice; cost audit — November21,2026
 
 Roger rejected the latest15.42s promo voice as gas/DarthVader-like. The-3semitone treatment is not accepted natural announcer delivery. Output `ffee70fee71b0cf8bb74d634763a2d40b7e61b15525706764644db42ef944021` is held and durably blocked despite its earlier machinePASS. Preserve the precise speech cut and all original/failure evidence;do not reuse the rejected pitch treatment as a default.
