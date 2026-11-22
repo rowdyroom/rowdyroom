@@ -1,3 +1,7 @@
+## 2026-11-21 — Ginger same-chat follow-through and reliable conversation
+
+Finished the same8s promo with licensed music and all8same-hash gates,0newFlow/Suno credits. Added durable acknowledged-update notices,tested61.501s repeat,live Yamaha meter and states,quieter speech pickup,and bounded persistent recent conversation history;owner confirmed two spoken turns/recall.66targeted tests pass. See VOICE_COMPANION_2026-11-21.md and VIDEO_QUALITY_TEAM_2026-11-21.md on their respective unmerged technical branches. Private acceptance:voicev6,video workflowv7;recovery ginger-video-followthrough-20261121.
+
 ## November21,2026 — Ginger name and female voice
 
 Renamed Nora to Ginger;official Phonon37voice catalog and explicit native adult-female Delia selection,no male/default fallback or pitch effects. Actual introduction,canonical samples/full decode and browser playback pass;48regression checks. Existing pause/routing/chat policies retained. Owner subjective voice approval pending;Everly alternate sample provided. Protected voice-companionv5;technical99c5cfdd6ccb55a8d83446afbfdafd04bd17fdf3 remains unmerged.
