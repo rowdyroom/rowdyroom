@@ -1,3 +1,7 @@
+## November21,2026 — Ginger name and female voice
+
+Renamed Nora to Ginger;official Phonon37voice catalog and explicit native adult-female Delia selection,no male/default fallback or pitch effects. Actual introduction,canonical samples/full decode and browser playback pass;48regression checks. Existing pause/routing/chat policies retained. Owner subjective voice approval pending;Everly alternate sample provided. Protected voice-companionv5;technical99c5cfdd6ccb55a8d83446afbfdafd04bd17fdf3 remains unmerged.
+
 ## November21,2026 — Nora local secretary connected
 
 Local conversation with broad explicit ChatGPT handoffs,owner-authorized verbatim uncertainty escalation,and local-only veto. Grounded plain-language reply explanations with safe fallback;52targeted checks and real selected-chat handoffs/playback pass.1200ms pause retained,Yamaha hands-free active. Warm local responses0.996–2.450s;recognition0.754s;human speech/taste not newly accepted.2ChatGPT tests,0Flow/Suno/API generation or downloads. Technical588caffc04c4d1b9df11a92fa2eddf72ea3854f0 remains unmerged;protected voice-companionv4.
