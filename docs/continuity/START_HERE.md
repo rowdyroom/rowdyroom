@@ -1,3 +1,11 @@
+## Owner Yamaha acceptance and saved speaker output — November 22, 2026
+
+The owner confirmed all three real microphone replies were audible and recalled the corrected purple car. All three messages were automatically confirmed in the selected normal ChatGPT conversation. Explicit speaker selection now routes browser speech to the approved audio device and persists across page reload; the chosen Miles voice also persists. Local synthesis files had real audio, and operating-system output/session volume and mute checks passed. Browser playback events alone were not treated as physical audibility proof. The earlier physical-trial-pending qualification below is superseded for this bounded three-turn test, not for arbitrary noise or long-duration reliability. Hands-free was restored;the 1.2-second pause remains. Sixteen actual ordinary ChatGPT messages were used across implementation tests and owner trials;allowance quantity is unknown. Zero built-in Voice, paid API, Flow or Suno usage.
+
+Recovery verification SHA256 `4335a3414a9c5c85a8edcaadf8b7ead699246ac1b3c865898d34ed5e05123a48`. Recovery identifier `lucian-direct-voice-20261122`. The technical documentation branch remains unmerged.
+
+Protected authority `psyche/voice-companion-2026-11-21` v14 SHA256 `595111489a3db90f8385762fd2375f6f02126ccfd863921ea96a0a5c1840d250`. Technical commit `218cf0d50828c3805c59b291cb5447bcffb07fed` on unmerged `codex/voice-companion-20261121`. Next: use the selected chat normally; retain variable latency and acoustic qualifications.
+
 ## Lucian direct text-chat voice and simplified interface — November 22, 2026
 
 The voice interface now uses the selected normal ChatGPT text conversation as Lucian's conversation authority. Local speech recognition supplies text; ChatGPT writes a bounded natural spoken section and separate technical details; local selectable speech renders that section without a second model rewriting it. The former independent secretary and Grok conversation adviser are inactive in this route. No built-in ChatGPT Voice or paid API is used. Voice selection persists; 38 catalog entries were read, not all synthesized. The interface now prioritizes chat, one microphone control, an input meter, explicit activity states and a voice picker; advanced controls are in a drawer. The 1.2-second speaking pause remains.
