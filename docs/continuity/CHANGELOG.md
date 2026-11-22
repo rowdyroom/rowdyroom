@@ -1,3 +1,7 @@
+## November21,2026 — Voice latency corrected without shortening pauses
+
+Kept1200ms end-of-speech silence;event-driven completed-reply detection,250ms stability,immediate command wakeups,faster playback and timing diagnostics. Wake-word/historical-refresh guards retained/tested.40checks pass. Final short typed live test10.043s total,0.346s observed-completion→playback;synthetic recognition0.760s. Human-mic timing and fixed latency unclaimed;ChatGPT time varies. Yamaha hands-free restored.3short ChatGPT tests,0Flow/Suno/API generation. Protected voice-companionv3;technicalbe2d93966e8417b9cdef1111220a46256ff1d584 remains unmerged.
+
 ## November21,2026 — Yamaha microphone explicitly selected
 
 Replaced browser-default capture with exact physical Yamaha input selection,returned-track verification and no fallback. Actual browser track Line(Yamaha AG06MK2) confirmed;owner's already-enabled hands-free mode restored. Six focused tests pass;physical speech/gain acceptance remains pending. Protected voice-companion recordv2;technical9eeec77a51dc8b819cec7de0f80d0ff7ab93bb96.
