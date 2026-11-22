@@ -1,3 +1,7 @@
+## November21,2026 — Nora local secretary connected
+
+Local conversation with broad explicit ChatGPT handoffs,owner-authorized verbatim uncertainty escalation,and local-only veto. Grounded plain-language reply explanations with safe fallback;52targeted checks and real selected-chat handoffs/playback pass.1200ms pause retained,Yamaha hands-free active. Warm local responses0.996–2.450s;recognition0.754s;human speech/taste not newly accepted.2ChatGPT tests,0Flow/Suno/API generation or downloads. Technical588caffc04c4d1b9df11a92fa2eddf72ea3854f0 remains unmerged;protected voice-companionv4.
+
 ## November21,2026 — Voice latency corrected without shortening pauses
 
 Kept1200ms end-of-speech silence;event-driven completed-reply detection,250ms stability,immediate command wakeups,faster playback and timing diagnostics. Wake-word/historical-refresh guards retained/tested.40checks pass. Final short typed live test10.043s total,0.346s observed-completion→playback;synthetic recognition0.760s. Human-mic timing and fixed latency unclaimed;ChatGPT time varies. Yamaha hands-free restored.3short ChatGPT tests,0Flow/Suno/API generation. Protected voice-companionv3;technicalbe2d93966e8417b9cdef1111220a46256ff1d584 remains unmerged.
