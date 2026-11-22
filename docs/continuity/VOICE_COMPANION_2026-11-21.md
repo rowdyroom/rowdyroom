@@ -1,3 +1,11 @@
+## Ginger hands-free capture and attention correction — November 21, 2026
+
+Owner reports that repeated hands-free turns still fall back to ChatGPT;complete conversational acceptance remains pending. Captures included background singing,while several clear local turns worked. Yamaha INPUT MIX is owner-confirmed;dedicated USB loopback is not established. Added approximately320ms PCM pre-roll while retaining1200ms pause allowance,local clarification for short fragments,and local social/update handling. New attention gate requires the recognized name Ginger to start a60-second renewable hands-free conversation;manual input bypasses it,and attention notices open an acknowledgment window. This is not speaker authentication;ambient audio can still enter while the window is open.
+
+Three attention and three PCM tests plus12personalization methods pass;40unaffected earlier methods passed in the preceding task segment. Ten quick-access files remain mirrored on the voice device. No weight training/model replacement. Existing Grok adviser passed6/6public synthetic routing cases with authenticated receipt;it is not connected to private live conversation history. Claude/ChatGPT research and the failed Gemini submission remain separately recorded. No new Flow/Suno credits. Physical owner acceptance and further local-model abstention calibration remain unresolved.
+
+Protected record `psyche/voice-companion-2026-11-21` updated afterv7. Recovery `ginger-personalization-20261121/FINAL_VERIFICATION.json`,SHA256 `aef871f383d9ac28e6e68762c90cd6c8c20bc76d525d355b6150652827c839da`. Branch remains unmerged.
+
 ## Ginger quick-access profile,learning and quiet states — November21,2026
 
 Ginger now has a ten-file quick-access pack mirrored on her voice device and coordinator,with byte-matching readback. The voice service loads her core rules and current owner reference on each conversation,plus a bounded current profile snapshot. Files cover rules,owner goals,238classified phrase examples,26contextual vocabulary entries,learning instructions,conversation scenarios,research and non-executing training/held-out fixtures. No model weights were trained.
