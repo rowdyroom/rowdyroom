@@ -1,3 +1,7 @@
+## November 21, 2026 — Selected ChatGPT voice relay connected
+
+Owner approved ongoing selected-chat access. One exact command submitted once through the real composer;actual completed reply detected and synthesized back to PC.75targeted checks pass. Microphone defaults off;live owner microphone/voice taste pending. [Technical record](VOICE_COMPANION_2026-11-21.md);protected `psyche/voice-companion-2026-11-21`v1. Earlier staging/permission-pending entry below is historical.
+
 ## November 21, 2026 — Voice companion staged; live chat activation pending
 
 Local Mac speech,recognition and source-sentence summarization are installed/tested. Existing bridge update scopes monitoring/sending to one owner-selected ChatGPT chat with no new manifest permissions.73targeted checks pass. Live microphone and selected-chat end-to-end acceptance remain pending;ongoing-access confirmation required before activation. [Technical record](VOICE_COMPANION_2026-11-21.md);protected authority `psyche/voice-companion-2026-11-21`. No paid API,Flow orSuno generation.
