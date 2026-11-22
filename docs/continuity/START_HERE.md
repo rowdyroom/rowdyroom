@@ -1,3 +1,9 @@
+## Normal ChatGPT local Chrome source verified — November 21, 2026
+
+One6s360p16:9 source was generated in ordinary Chrome using the existing Flow subscription;6included credits,remaining880,Suno0. Exact original authenticated read-only collection/hash/full-decode passed;native browser download unaccepted. Cloud fresh generation and automatic fallback remain disabled;original security hold preserved. Same-source title/attribution correction exported,but final delivery remains quality-held for reference/speech-recognition conflicts;no further tests or paid retakes.30targeted checks pass. Source-generation acceptance is distinct from eight-role delivery and owner creative approval.
+
+Authority:[technical record](https://github.com/rowdyroom/rowdyroom/blob/codex/video-multiscene-20261121/docs/continuity/VIDEO_QUALITY_TEAM_2026-11-21.md),unmerged commit `b2b10e78c488eb3ae72b0df1aec7a69514cb5586`. Protected `psyche/local-chrome-video-workflow-2026-11-21` v1 SHA256 `4d9dcca1b553fabc1a3e5efd11a230b0dfb46cebbb61a1cb47ef59c4f7bf8152`. Private recovery package `local-chrome-flow-20261121`,verification SHA256 `7566bb09bc42e945232cba6ad9e03d23a21b872ae2b70aef6c6bc470b81386ad`. Next: resolve actual quality holds using existing footage/local work;never override failed checks or repeat commissioning generation.
+
 ## Flow security recovery remains held — November 21, 2026
 
 One explicitly authorized same-session recovery test, capped at6included credits after a cooldown of over6hours and authenticated live settings/voice inspection, was again rejected by the provider security check. The verified balance was886before and886after:0Flow credits,0Suno credits/downloads;no new video. Absence of a banner before submission did not establish recovery. No render retry, account/network/browser identity change or publishing was performed. Browser diagnostic details and task receipts remain protected;the possible browser contributor is not a confirmed cause.
