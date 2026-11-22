@@ -1,3 +1,9 @@
+## Ginger name and female voice active — November 21, 2026
+
+Nora is now Ginger. The local secretary uses native Phonon Delia,an adult female preset;Everly is a softer comparison sample. No artificial pitch/formant changes or fallback to male/default. Actual Ginger introduction,voice selection and browser sample playback passed;48regression checks pass.1200ms pause,Yamaha routing,selected chat and handoff policies retained;observed hands-free-off state preserved. Subjective voice preference awaits Roger.0newChatGPT/Flow/Suno/API usage;official small TTS catalog package pulled.
+
+[Technical record](VOICE_COMPANION_2026-11-21.md) on unmerged `codex/voice-companion-20261121`,commit `99c5cfdd6ccb55a8d83446afbfdafd04bd17fdf3`. Protected `psyche/voice-companion-2026-11-21`v5 SHA256 `c29751b2f6e02a9d3063aa98389c1e3549cc379abb64102b4ea5deab041ad853`. Private recovery `ginger-voice-20261121`,verification SHA256 `2027f36624134523f948c6901959c7c7ebe665e3a5e0c6eba6c32cff8887d663`. Next:listen to the actual Delia/Everly samples and confirm preference.
+
 ## Nora local secretary operational — November 21, 2026
 
 Nora now converses locally,accepts broad natural requests to pass work to Lucian/normal ChatGPT,and explains completed replies plainly. Roger also authorized one verbatim handoff when Nora cannot understand/answer;keep-this-local overrides it. No generated prompts,automatic retries or approval clicks. Selected-chat/draft/one-send safeguards remain.1200ms pause allowance unchanged;hands-free Yamaha input visibly enabled.52targeted tests plus actual explicit/uncertainty handoffs and returned playback pass. Warm local answer preparation0.996–2.450s;synthetic recognition0.754s. Human speech/voice taste remains pending;ChatGPT task time varies.12in-memory turns;restart clears context and disconnects chat.2short ChatGPT tests,0Flow/Suno/API generation or model downloads.
