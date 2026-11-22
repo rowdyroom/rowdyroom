@@ -1,3 +1,7 @@
+## 2026-11-21 — Ginger attention and capture correction
+
+Added320ms hands-free pre-roll,sixty-second name-initiated attention window,manual bypass and local fragment/social handling;1200ms pause unchanged.18latest methods and40prior unaffected methods passed. Yamaha INPUT MIX confirmed. Grok adviser6/6synthetic cases;no live private-history connection. Owner repeated-turn acceptance remains pending. Protected voicev8;unmerged technical commitcfb90a856924312a82d575f6a0a892efbceefff6. Recovery ginger-personalization-20261121.
+
 ## 2026-11-21 — Ginger personalization and reminder-loop repair
 
 Deployed contextual readiness acknowledgments,238phrase examples,26vocabulary entries,ten mirrored quick-access files,confirmed/candidate learning and persistent quiet/work states. Live sleep/wake/held-update delivery passed without new ChatGPT sends;Yamaha hands-free restored.50test methods plus phrase/held-out fixtures pass. Research receipts distinguish two Claude jobs and ChatGPT research from failed Gemini submission. No weight training or model change. Protected voicev7;technical record remains on unmerged codex/voice-companion-20261121. Recovery ginger-personalization-20261121.
