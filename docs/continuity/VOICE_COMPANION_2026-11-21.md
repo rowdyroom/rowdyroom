@@ -1,3 +1,7 @@
+## Yamaha microphone correction — November21,2026
+
+The companion previously requested browser-default audio and therefore did not guarantee the mixer input. It now selects the actual physical Yamaha audioinput with exact deviceId,excludes default/communications aliases,verifies the returned track identity,and stops rather than substituting another microphone. Disconnect discards a partial utterance. Live browser capture confirmed Line(Yamaha AG06MK2);the owner's already-enabled hands-free mode was restored and visibly listening. Six focused tests pass. This proves browser input routing,not physical microphone gain/channel audibility or Roger's spoken-recognition acceptance. Evidence is in the existing private voice-companion recovery package. Protected authority `psyche/voice-companion-2026-11-21` has the latest routing amendment.
+
 # Local voice companion — November 21, 2026
 
 Roger authorized a conversational voice companion that passes spoken commands to an explicitly selected normal ChatGPT conversation and relays concise replies. The PC provides microphone/playback; Apple Silicon handles local speech recognition,summarization and synthesis. This does not reopen retired production generators/personas or grant new general device roles.
