@@ -1,3 +1,7 @@
+## 2026-11-21 — Yamaha live monitoring and full-context handoffs
+
+Observed23retained microphone turns/replies with delayed recall and no new actual ChatGPT requests. Found model-generated false queue/save claims and repeated vocative name;added reply guards,real receipt answers,natural explicit memory save,and restart readback. Owner now requires conversation since the previous confirmed handoff plus current request;durable journal/confirmed cursor/overflow-without-truncation tests pass.47-turn8687-character private packet prepared,not sent live.50focused checks pass. Protected voicev12;technical commit59b45fef87bb6e325ddb8112f1c0512bee1f5d54 remains unmerged. Recovery ginger-yamaha-live-monitor-20261121.4B quality/acoustic limits remain.
+
 ## 2026-11-21 — Ginger sustained conversation and live Grok adviser
 
 22backend turns passed without attempted external handoffs,including correction/recall and history/preference reload;5synthetic voice turns passed;64regression methods pass. Local answers and clarification are separate from genuine external facts;50-message/12000-character history budget and8192-token local context. Connected asynchronous Grok adviser:grammar-only minimized input,no action authority,bounded cache/rate/timeout. Two actual authenticated provider requests;3/3routing cases correct. Physical Yamaha repeated-turn trial pending. Technical commit6c1af72e1d05ffe8595fc28a528ebb208e947614 remains unmerged. Protected voicev11. Recovery ginger-conversation-reliability-20261121.
