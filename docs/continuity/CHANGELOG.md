@@ -1,3 +1,7 @@
+## November21,2026 — Yamaha microphone explicitly selected
+
+Replaced browser-default capture with exact physical Yamaha input selection,returned-track verification and no fallback. Actual browser track Line(Yamaha AG06MK2) confirmed;owner's already-enabled hands-free mode restored. Six focused tests pass;physical speech/gain acceptance remains pending. Protected voice-companion recordv2;technical9eeec77a51dc8b819cec7de0f80d0ff7ab93bb96.
+
 ## November 21, 2026 — Selected ChatGPT voice relay connected
 
 Owner approved ongoing selected-chat access. One exact command submitted once through the real composer;actual completed reply detected and synthesized back to PC.75targeted checks pass. Microphone defaults off;live owner microphone/voice taste pending. [Technical record](VOICE_COMPANION_2026-11-21.md);protected `psyche/voice-companion-2026-11-21`v1. Earlier staging/permission-pending entry below is historical.
