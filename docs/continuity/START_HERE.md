@@ -1,3 +1,11 @@
+## Live wake confirmed;ambiguous follow-up repaired — November 21, 2026
+
+Owner confirmed the new wake-and-answer worked,then reported another Lucian handoff. The recognized phrase was “okay good can you apply this.” Added deterministic local clarification for underspecified apply/do/fix/save/change/use/send requests. The exact live API trial returned route local,clarificationRequired true,taskApproval false;no ChatGPT request.13personalization methods pass,including4ambiguous variants;6PCM/attention methods pass. The earlier40unaffected methods were not needlessly rerun. Prior unread update retained;extended repeated-turn spoken acceptance remains pending.
+
+Protected voice recordv10 SHA256 `4fe78a5944aba808b19372c5d48591f8228458a0ff39d887d012b8b7b644405a`. Current recovery verification SHA256 `2de65c3829e104a5c0706dc0b89eec5c7033be6c9abf1bc20c5185f108ea2607`;owner wake receipt and ambiguous live trial are in the same ginger-personalization-20261121 recovery package. Technical branch remains unmerged.
+
+Authority:[Ginger technical record](https://github.com/rowdyroom/rowdyroom/blob/codex/voice-companion-20261121/docs/continuity/VOICE_COMPANION_2026-11-21.md),unmerged commit `0f72d63bf39e10f39182e72c43503a95b6f9bb9e`. Next:verify sustained owner back-and-forth and attention expiry;retain explicit/uncertainty permission boundaries.
+
 ## Ginger profile and hands-free correction — November 21, 2026
 
 Ginger has ten mirrored quick-access files,238phrase examples,26contextual vocabulary entries,confirmed/candidate preference learning and persistent quiet/work states. Reminder readiness acknowledgments are handled locally. Added320ms capture pre-roll and a sixty-second name-initiated hands-free attention window;1200ms pause unchanged. Background sound may still enter while that window is open. Owner reports earlier repeated-turn uncertainty fallbacks;physical acceptance of the latest gate remains pending. No model training/replacement or new Flow/Suno credits.
