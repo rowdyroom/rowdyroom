@@ -1,3 +1,9 @@
+## Voice delay corrected;pause allowance retained — November 21, 2026
+
+The deployed selected-chat voice bridge keeps1200ms end-of-speech silence while reacting to completed replies,with250ms text stability,immediate command wakeups and faster playback polling. Yamaha hands-free listening restored. Wake-word and historical-hydration safeguards tested. Final short live typed test queue→playback10.043s;observed completed reply→playback0.346s. Separate synthetic conversion/STT0.760s;no new human-mic timing or fixed-latency guarantee.40targeted checks pass;3short ChatGPT test messages,0Flow/Suno/API generation. ChatGPT generation time remains variable.
+
+[Technical record](VOICE_COMPANION_2026-11-21.md) on unmerged `codex/voice-companion-20261121`,commit `be2d93966e8417b9cdef1111220a46256ff1d584`. Protected `psyche/voice-companion-2026-11-21`v3 SHA256 `7e0ffc4c90d9de75eff8da0b3a5835e1b743e8f0f946f13b6bbd6fa3ff1b9ff6`. Private recovery `voice-latency-20261121`,verification SHA256 `fb4142a7201d7b5379329c52f18fdbb8241fa1f77919ed6d4add6face4479593`. Next:normal speech trial;use saved timing stages if slow replies recur.
+
 ## Local voice companion connected — November 21, 2026
 
 Roger approved ongoing access to one selected existing normal ChatGPT conversation. Yamaha AG06MK2 microphone input is now explicitly pinned and verified;no fallback to other microphones. PC microphone/playback interface,Mac Phonon31M speech,Whisper turbo recognition and Qwen3.5 4B source-sentence summaries are installed. One real command was sent once,UI-confirmed,and its completed ChatGPT reply was detected/synthesized back to the PC interface.75targeted tests pass. Microphone stays off until the visible Enable microphone action;Roger's real microphone and subjective voice quality remain pending. Preserve drafts,uncertainty/costs and no-retry safeguards. This does not monitor Codex desktop chats or guarantee operation while devices/browser sleep.
