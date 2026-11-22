@@ -1,3 +1,7 @@
+## 2026-11-21 — Ginger personalization and reminder-loop repair
+
+Deployed contextual readiness acknowledgments,238phrase examples,26vocabulary entries,ten mirrored quick-access files,confirmed/candidate learning and persistent quiet/work states. Live sleep/wake/held-update delivery passed without new ChatGPT sends;Yamaha hands-free restored.50test methods plus phrase/held-out fixtures pass. Research receipts distinguish two Claude jobs and ChatGPT research from failed Gemini submission. No weight training or model change. Protected voicev7;technical record remains on unmerged codex/voice-companion-20261121. Recovery ginger-personalization-20261121.
+
 ## 2026-11-21 — Ginger same-chat follow-through and reliable conversation
 
 Finished the same8s promo with licensed music and all8same-hash gates,0newFlow/Suno credits. Added durable acknowledged-update notices,tested61.501s repeat,live Yamaha meter and states,quieter speech pickup,and bounded persistent recent conversation history;owner confirmed two spoken turns/recall.66targeted tests pass. See VOICE_COMPANION_2026-11-21.md and VIDEO_QUALITY_TEAM_2026-11-21.md on their respective unmerged technical branches. Private acceptance:voicev6,video workflowv7;recovery ginger-video-followthrough-20261121.
