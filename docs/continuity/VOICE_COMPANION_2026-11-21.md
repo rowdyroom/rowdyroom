@@ -1,3 +1,11 @@
+## Ginger rename and native female voice — November 21, 2026
+
+Roger renamed Nora to Ginger and requested a warm,sultry female voice. Updated the live secretary identity,UI and current per-device role. The prior checkpoint exposed only default;the official Phonon catalog package now exposes37voices. Ginger explicitly uses the adult female Delia preset with native pitch/formants;unavailable selection fails rather than falling back to the male/default voice. Everly is retained as a softer comparison sample. Catalog gender/style metadata and actual synthesis are verified;Roger's subjective voice approval remains pending.
+
+48targeted regression checks pass,including Ginger handoff phrasing. Actual local-model introduction named Ginger and returned voice Delia in1.473s. Both8.4s samples fully decoded;the companion's new-name voice sample reached browser playback.1200ms pause,existing chat,Yamaha routing and explicit/uncertainty/local-only policies remain. Hands-free was off at the start and was preserved. No new ChatGPT test messages,Flow/Suno credits or paid API calls;official small TTS catalog package pulled,no large reasoning-service change.
+
+Private recovery `ginger-voice-20261121`;the latest verification hash and protected record are linked by START_HERE. This supersedes Nora/default-voice identity statements below. Technical branch remains unmerged. Next:Roger listens to Delia/Everly samples and gives subjective preference.
+
 ## Nora local secretary — November 21, 2026
 
 Roger authorized the local model as his named secretary,Nora. Ordinary dialogue now runs locally with bounded conversational context;it is no longer automatically forwarded. Broad natural explicit handoffs include tell,ask,have,get,relay,pass along,let Lucian know,and polite/gerund variants. Roger also explicitly authorized one verbatim handoff of the current recognized utterance when Nora cannot understand or answer. Model-generated text never becomes a forwarding prompt. A current keep-this-local/do-not-forward veto overrides uncertainty. Preserve one-send journaling,drafts,selected-chat binding and no automatic retry. Uncertainty judgment is model-based and fallible,not a guarantee of perfect routing.
