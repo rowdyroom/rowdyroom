@@ -1,3 +1,7 @@
+## 2026-11-21 — Ginger sustained conversation and live Grok adviser
+
+22backend turns passed without attempted external handoffs,including correction/recall and history/preference reload;5synthetic voice turns passed;64regression methods pass. Local answers and clarification are separate from genuine external facts;50-message/12000-character history budget and8192-token local context. Connected asynchronous Grok adviser:grammar-only minimized input,no action authority,bounded cache/rate/timeout. Two actual authenticated provider requests;3/3routing cases correct. Physical Yamaha repeated-turn trial pending. Technical commit6c1af72e1d05ffe8595fc28a528ebb208e947614 remains unmerged. Protected voicev11. Recovery ginger-conversation-reliability-20261121.
+
 ## Live wake confirmed;ambiguous follow-up repaired — November 21, 2026
 
 Owner confirmed the new wake-and-answer worked,then reported another Lucian handoff. The recognized phrase was “okay good can you apply this.” Added deterministic local clarification for underspecified apply/do/fix/save/change/use/send requests. The exact live API trial returned route local,clarificationRequired true,taskApproval false;no ChatGPT request.13personalization methods pass,including4ambiguous variants;6PCM/attention methods pass. The earlier40unaffected methods were not needlessly rerun. Prior unread update retained;extended repeated-turn spoken acceptance remains pending.
