@@ -1,3 +1,17 @@
+## Ginger quick-access profile,learning and quiet states — November21,2026
+
+Ginger now has a ten-file quick-access pack mirrored on her voice device and coordinator,with byte-matching readback. The voice service loads her core rules and current owner reference on each conversation,plus a bounded current profile snapshot. Files cover rules,owner goals,238classified phrase examples,26contextual vocabulary entries,learning instructions,conversation scenarios,research and non-executing training/held-out fixtures. No model weights were trained.
+
+The reported reminder loop was caused by missing readiness aliases. “I'm ready”,“I am ready”,polite variants and other contextual acknowledgments now read the retained update directly rather than entering uncertainty forwarding. Actual running-interface tests delivered the update and produced no new ChatGPT command.
+
+Explicit remember statements become sourced,reversible preferences. Inferred preference statements remain candidates. Confirmed local-only/clarify corrections restrict exact future wording;they cannot create send/spending permission. Recent50messages remain local and latest12enter the model. Availability is persistent:available,working,resting,asleep,DND. Quiet modes suppress notices,casual responses and relays;directed wake or a visible control restores availability. Hands-free can remain on solely for local wake-phrase recognition;microphone-off requires a visible wake control. Wake recognition is not authentication. Work mode is not task approval.
+
+Actual sleep/wake tests held an unread demo at zero notices,read back the sleep snapshot from the voice device,woke explicitly,and delivered the held update with “I am ready” without a new chat command. Yamaha hands-free restored.50targeted test methods passed,including238phrase examples and12held-out cases. Full20consecutive-human-turn benchmark remains pending;do not generalize this bounded acceptance.
+
+Research:one independent ChatGPT agent and two authenticated Cody/Claude jobs produced material. Seth/Gemini failed before verified submission;no Gemini research is accepted. Lucian independently checked official memory,prompting,speech and training docs. Keep4B/Delia/Whisper baseline;streaming/VAD/pre-roll and future LoRA are proposed comparisons,not deployed upgrades. No model downloads,Flow/Suno credits,weight training or paid API use;cloud research/Codex allowance used,exact totalUNKNOWN.
+
+Protected `psyche/voice-companion-2026-11-21`v7 SHA256 `6973f540e675160fbe1ddedcd5638aa16b7fbe12c9f364d1bba351f83c8cb319`. Private recovery `ginger-personalization-20261121`,verification SHA256 `3fc35a655da6491f7da5d9006738aa721984ba8bcdb4ef11368f322833ce0694`. Technical branch remains unmerged. Next:collect corrected examples and evaluate sustained natural use;no automatic fine-tuning or broader cloud delegation.
+
 ## Ginger follow-through, pending alerts and conversational recall — November 21, 2026
 
 Ginger now watches the same saved video request,waits while workers run,and issues bounded same-chat continuations after premature stops. Up to three continuations;never replay an ambiguous command,replace a mission or authorize generation. Verified completion triggers delivery into the original normal ChatGPT conversation. The existing eight-second promo was delivered there with native Save after five local and three creative checks passed on final SHA256 `c7a0e3817adb6d52e14e4b7b81913fa50efdb744ff040d69bbb576f073480b2d`. No new Flow/Suno credits. Owner creative approval remains pending.
